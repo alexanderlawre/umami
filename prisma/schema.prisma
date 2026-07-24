@@ -1,0 +1,294 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- Enums ----------
+
+enum CookingFor {
+  SELF
+  PARTNER
+  FAMILY
+  MIXED
+  HOSTING
+}
+
+enum CookFrequency {
+  DAILY
+  EVERY_OTHER_DAY
+  FEW_TIMES_WEEK
+  MEAL_PREP
+  WEEKENDS_ONLY
+}
+
+enum Goal {
+  EAT_MORE_VEG
+  MORE_PROTEIN
+  LESS_TIME
+  SPEND_LESS
+  LEARN_TECHNIQUE
+  EAT_WIDER
+}
+
+enum FoodGroupCategory {
+  PRODUCE
+  PROTEIN
+  GRAIN
+  DAIRY
+  FLAVOR
+  OTHER
+}
+
+enum PreferenceSource {
+  ONBOARDING
+  LEARNED
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  INVOLVED
+}
+
+enum MealSlot {
+  BREAKFAST
+  LUNCH
+  DINNER
+  SNACK
+}
+
+enum EffortTier {
+  WEEKNIGHT
+  WEEKEND
+  PROJECT
+}
+
+enum AllergenReviewStatus {
+  UNVERIFIED
+  VERIFIED
+}
+
+enum InteractionType {
+  IMPRESSION
+  OPEN
+  DISMISS
+  MUTE
+  COOK
+  STAR
+  UNSTAR
+  COSIGN
+}
+
+enum CooldownReason {
+  SHOWN
+  DISMISSED
+  COOKED
+  MUTED
+}
+
+// ---------- Core ----------
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  country      String
+  isAdmin      Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  lastActiveAt DateTime @default(now())
+
+  preferences         UserPreferences?
+  foodGroupPreferences FoodGroupPreference[]
+  interactions        Interaction[]
+  cookLogs            CookLog[]
+  cooldowns           Cooldown[]
+  servedCards         ServedCard[]
+}
+
+model UserPreferences {
+  id     String @id @default(cuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  diets            Diet[]
+  allergens        Allergen[]
+  customAllergens  String[] @default([])
+
+  cookingFor    CookingFor?
+  cookFrequency CookFrequency?
+  favoriteFoods String[]       @default([])
+  goals         Goal[]         @default([])
+
+  updatedAt DateTime @updatedAt
+}
+
+model FoodGroupPreference {
+  id            String           @id @default(cuid())
+  userId        String
+  user          User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  foodGroupId   String
+  foodGroup     FoodGroup        @relation(fields: [foodGroupId], references: [id], onDelete: Cascade)
+  declaredValue Int // 0-100, immutable snapshot from onboarding
+  learnedValue  Int // 0-100, drifts from behavior
+  source        PreferenceSource @default(ONBOARDING)
+  updatedAt     DateTime         @updatedAt
+
+  @@unique([userId, foodGroupId])
+}
+
+model FoodGroup {
+  id          String             @id @default(cuid())
+  name        String             @unique
+  category    FoodGroupCategory
+  description String
+
+  foodGroupPreferences FoodGroupPreference[]
+  recipeProfiles       RecipeFoodGroup[]
+}
+
+model Diet {
+  id   String @id @default(cuid())
+  name String @unique
+
+  userPreferences UserPreferences[]
+  recipes         Recipe[]
+}
+
+model Allergen {
+  id   String @id @default(cuid())
+  name String @unique
+
+  userPreferences UserPreferences[]
+  recipes         Recipe[]
+}
+
+// ---------- Recipes ----------
+
+model Recipe {
+  id          String @id @default(cuid())
+  slug        String @unique
+  title       String
+
+  shortDescription String
+  note             String
+  introCopy        String
+
+  servings     Int
+  prepMinutes  Int
+  cookMinutes  Int
+  difficulty   Difficulty
+  cuisine      String
+  mealSlot     MealSlot[]
+  effortTier   EffortTier
+  batchFriendly Boolean @default(false)
+
+  attributes String[] @default([])
+  heroColor  String
+
+  allergenReviewStatus AllergenReviewStatus @default(UNVERIFIED)
+  isActive             Boolean              @default(true)
+  createdAt            DateTime             @default(now())
+
+  ingredients      Ingredient[]
+  steps            Step[]
+  foodGroupProfile RecipeFoodGroup[]
+  dietTags         Diet[]
+  allergenTags     Allergen[]
+
+  interactions Interaction[]
+  cookLogs     CookLog[]
+  cooldowns    Cooldown[]
+  servedCards  ServedCard[]
+}
+
+model Ingredient {
+  id        String  @id @default(cuid())
+  recipeId  String
+  recipe    Recipe  @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  component String? // e.g. "For the sauce" grouping, null = main list
+  order     Int
+  quantity  String
+  unit      String?
+  item      String
+  prepNote  String?
+  optional  Boolean @default(false)
+}
+
+model Step {
+  id              String  @id @default(cuid())
+  recipeId        String
+  recipe          Recipe  @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  order           Int
+  text            String
+  durationMinutes Int?
+}
+
+model RecipeFoodGroup {
+  id          String    @id @default(cuid())
+  recipeId    String
+  recipe      Recipe    @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  foodGroupId String
+  foodGroup   FoodGroup @relation(fields: [foodGroupId], references: [id], onDelete: Cascade)
+  weight      Int // 0-100
+
+  @@unique([recipeId, foodGroupId])
+}
+
+// ---------- Behavioral log (append-only) ----------
+
+model Interaction {
+  id             String          @id @default(cuid())
+  userId         String
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  recipeId       String
+  recipe         Recipe          @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  type           InteractionType
+  createdAt      DateTime        @default(now())
+  localHour      Int
+  localDayOfWeek Int
+  metadata       Json?
+
+  @@index([userId, type, createdAt])
+  @@index([recipeId, type])
+}
+
+model Cooldown {
+  id              String         @id @default(cuid())
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  recipeId        String
+  recipe          Recipe         @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  suppressedUntil DateTime?
+  reason          CooldownReason
+
+  @@unique([userId, recipeId])
+}
+
+model CookLog {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  recipeId    String
+  recipe      Recipe   @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  cookedAt    DateTime @default(now())
+  servings    Int
+  isPublic    Boolean  @default(false)
+  cosignNote  String?
+}
+
+model ServedCard {
+  id             String   @id @default(cuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  recipeId       String
+  recipe         Recipe   @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  servedAt       DateTime @default(now())
+  scoreBreakdown Json?
+
+  @@index([userId, servedAt])
+}

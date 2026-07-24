@@ -1,0 +1,243 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { logInteraction } from "@/lib/log-interaction";
+
+type Ingredient = {
+  id: string;
+  component: string | null;
+  order: number;
+  quantity: string;
+  unit: string | null;
+  item: string;
+  prepNote: string | null;
+  optional: boolean;
+};
+
+type Step = {
+  id: string;
+  order: number;
+  text: string;
+  durationMinutes: number | null;
+};
+
+export type RecipeDetail = {
+  id: string;
+  title: string;
+  shortDescription: string;
+  note: string;
+  introCopy: string;
+  servings: number;
+  prepMinutes: number;
+  cookMinutes: number;
+  difficulty: string;
+  cuisine: string;
+  effortTier: string;
+  ingredients: Ingredient[];
+  steps: Step[];
+};
+
+function scaleQuantity(quantity: string, factor: number): string {
+  const num = Number(quantity);
+  if (Number.isNaN(num)) return quantity;
+  const scaled = Math.round(num * factor * 100) / 100;
+  return String(scaled);
+}
+
+export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
+  const [servings, setServings] = useState(recipe.servings);
+  const [starred, setStarred] = useState(false);
+  const [cookLogId, setCookLogId] = useState<string | null>(null);
+  const [showCosign, setShowCosign] = useState(false);
+  const [cosignNote, setCosignNote] = useState("");
+  const [cooking, setCooking] = useState(false);
+
+  useEffect(() => {
+    // Log OPEN once when the detail page is actually reached, not on link hover/prefetch.
+    logInteraction(recipe.id, "OPEN");
+  }, [recipe.id]);
+
+  const factor = servings / recipe.servings;
+
+  const grouped = recipe.ingredients.reduce<Record<string, Ingredient[]>>(
+    (acc, ing) => {
+      const key = ing.component ?? "__main";
+      (acc[key] ??= []).push(ing);
+      return acc;
+    },
+    {},
+  );
+
+  function toggleStar() {
+    const next = !starred;
+    setStarred(next);
+    logInteraction(recipe.id, next ? "STAR" : "UNSTAR");
+  }
+
+  async function handleCook() {
+    setCooking(true);
+    try {
+      const res = await fetch("/api/cook", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ recipeId: recipe.id, servings }),
+      });
+      const data = await res.json();
+      setCookLogId(data.cookLogId ?? null);
+      setShowCosign(true);
+    } finally {
+      setCooking(false);
+    }
+  }
+
+  async function submitCosign(share: boolean) {
+    if (!cookLogId) {
+      setShowCosign(false);
+      return;
+    }
+    await fetch("/api/cook/cosign", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        cookLogId,
+        note: share ? cosignNote || undefined : undefined,
+        isPublic: share,
+      }),
+    });
+    setShowCosign(false);
+    setCosignNote("");
+  }
+
+  return (
+    <div className="pb-28">
+      <p className="text-xs uppercase tracking-wide text-[#6B7370]">{recipe.cuisine}</p>
+      <h1 className="mt-1 text-2xl font-bold text-[#1A1D1B]">{recipe.title}</h1>
+      <p className="mt-2 text-sm text-[#1A1D1B]">{recipe.introCopy}</p>
+      <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.note}</p>
+
+      <div className="mt-4 flex flex-wrap gap-2 text-xs text-[#6B7370]">
+        <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{recipe.difficulty}</span>
+        <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{recipe.effortTier}</span>
+        <span className="rounded-full bg-[#EDF3EF] px-2 py-1">
+          {recipe.prepMinutes} min prep / {recipe.cookMinutes} min cook
+        </span>
+      </div>
+
+      <section className="mt-6">
+        <div className="flex items-center justify-between">
+          <h2 className="text-lg font-semibold text-[#1A1D1B]">Ingredients</h2>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setServings((s) => Math.max(1, s - 1))}
+              className="h-7 w-7 rounded-full border border-[#E8E6E0] text-sm"
+              aria-label="Decrease servings"
+            >
+              −
+            </button>
+            <span className="text-sm text-[#1A1D1B]">{servings} servings</span>
+            <button
+              onClick={() => setServings((s) => s + 1)}
+              className="h-7 w-7 rounded-full border border-[#E8E6E0] text-sm"
+              aria-label="Increase servings"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        {Object.entries(grouped).map(([component, items]) => (
+          <div key={component} className="mt-3">
+            {component !== "__main" && (
+              <p className="text-xs font-medium uppercase tracking-wide text-[#6B7370]">
+                {component}
+              </p>
+            )}
+            <ul className="mt-1 space-y-1">
+              {[...items]
+                .sort((a, b) => a.order - b.order)
+                .map((ing) => (
+                  <li key={ing.id} className="text-sm text-[#1A1D1B]">
+                    {scaleQuantity(ing.quantity, factor)} {ing.unit ?? ""} {ing.item}
+                    {ing.optional && <span className="text-[#6B7370]"> (optional)</span>}
+                    {ing.prepNote && (
+                      <span className="text-[#6B7370]">, {ing.prepNote}</span>
+                    )}
+                  </li>
+                ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+
+      <section className="mt-6">
+        <h2 className="text-lg font-semibold text-[#1A1D1B]">Method</h2>
+        <ol className="mt-2 space-y-3">
+          {[...recipe.steps]
+            .sort((a, b) => a.order - b.order)
+            .map((step) => (
+              <li key={step.id} className="text-sm text-[#1A1D1B]">
+                <span className="font-medium">{step.order}.</span> {step.text}
+                {step.durationMinutes && (
+                  <span className="ml-2 text-xs text-[#6B7370]">
+                    ~{step.durationMinutes} min
+                  </span>
+                )}
+              </li>
+            ))}
+        </ol>
+      </section>
+
+      <div className="fixed inset-x-0 bottom-0 flex items-center justify-center gap-3 border-t border-[#E8E6E0] bg-[#FBFAF7] p-4">
+        <button
+          onClick={toggleStar}
+          className={`rounded-xl border px-4 py-2 text-sm font-medium ${
+            starred
+              ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
+              : "border-[#E8E6E0] text-[#1A1D1B]"
+          }`}
+        >
+          {starred ? "★ Again soon" : "☆ Again soon"}
+        </button>
+        <button
+          onClick={handleCook}
+          disabled={cooking}
+          className="rounded-xl bg-[#1F5F45] px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+        >
+          {cooking ? "Logging..." : "I cooked this"}
+        </button>
+      </div>
+
+      {showCosign && (
+        <div className="fixed inset-0 flex items-end justify-center bg-black/30 sm:items-center">
+          <div className="w-full max-w-sm rounded-t-2xl bg-white p-5 sm:rounded-2xl">
+            <h3 className="text-lg font-semibold text-[#1A1D1B]">Nice cooking!</h3>
+            <p className="mt-1 text-sm text-[#6B7370]">
+              Want to leave a note about how it went?
+            </p>
+            <textarea
+              value={cosignNote}
+              onChange={(e) => setCosignNote(e.target.value)}
+              rows={3}
+              className="mt-3 w-full rounded-xl border border-[#E8E6E0] p-2 text-sm"
+              placeholder="Optional note..."
+            />
+            <div className="mt-4 flex justify-end gap-2">
+              <button
+                onClick={() => submitCosign(false)}
+                className="rounded-xl border border-[#E8E6E0] px-4 py-2 text-sm text-[#1A1D1B]"
+              >
+                Skip
+              </button>
+              <button
+                onClick={() => submitCosign(true)}
+                className="rounded-xl bg-[#1F5F45] px-4 py-2 text-sm font-medium text-white"
+              >
+                Share cosign
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
