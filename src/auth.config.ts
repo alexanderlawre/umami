@@ -35,6 +35,7 @@ export const authConfig: NextAuthConfig = {
       if (user) {
         token.id = user.id;
         token.onboarded = (user as { onboarded?: boolean }).onboarded ?? false;
+        token.isAdmin = (user as { isAdmin?: boolean }).isAdmin ?? false;
       }
       if (trigger === "update" && session?.onboarded) {
         token.onboarded = true;
@@ -45,6 +46,7 @@ export const authConfig: NextAuthConfig = {
       if (session.user) {
         session.user.id = token.id as string;
         session.user.onboarded = token.onboarded as boolean;
+        session.user.isAdmin = token.isAdmin as boolean;
       }
       return session;
     },

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { logInteraction } from "@/lib/log-interaction";
 
@@ -16,6 +17,8 @@ export type RecipeCardData = {
   prepMinutes: number;
   cookMinutes: number;
   attributes: string[];
+  imageUrl: string | null;
+  imageCredit: string | null;
 };
 
 function RecipeCard({
@@ -61,48 +64,62 @@ function RecipeCard({
   return (
     <div
       ref={ref}
-      className="rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-sm"
+      className="overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-sm"
     >
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-xs uppercase tracking-wide text-[#6B7370]">
-            {recipe.cuisine}
-          </p>
-          <h3 className="mt-1 text-lg font-semibold text-[#1A1D1B]">
-            {recipe.title}
-          </h3>
+      {recipe.imageUrl ? (
+        <div className="relative h-40 w-full">
+          <Image
+            src={recipe.imageUrl}
+            alt={recipe.title}
+            fill
+            sizes="(min-width: 640px) 50vw, 100vw"
+            className="object-cover"
+          />
         </div>
-        <button
-          onClick={() => onDismiss(recipe.id)}
-          aria-label="Dismiss recipe"
-          className="shrink-0 rounded-full border border-[#E8E6E0] px-3 py-1 text-xs text-[#6B7370] hover:bg-[#EDF3EF]"
-        >
-          Dismiss
-        </button>
-      </div>
+      ) : null}
 
-      <p className="mt-2 text-sm text-[#1A1D1B]">{recipe.shortDescription}</p>
-      <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.note}</p>
+      <div className="p-5">
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <p className="text-xs uppercase tracking-wide text-[#6B7370]">
+              {recipe.cuisine}
+            </p>
+            <h3 className="mt-1 text-lg font-semibold text-[#1A1D1B]">
+              {recipe.title}
+            </h3>
+          </div>
+          <button
+            onClick={() => onDismiss(recipe.id)}
+            aria-label="Dismiss recipe"
+            className="shrink-0 rounded-full border border-[#E8E6E0] px-3 py-2 text-xs text-[#6B7370] hover:bg-[#EDF3EF]"
+          >
+            Dismiss
+          </button>
+        </div>
 
-      <div className="mt-3 flex flex-wrap gap-2 text-xs text-[#6B7370]">
-        <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{recipe.difficulty}</span>
-        <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{recipe.effortTier}</span>
-        <span className="rounded-full bg-[#EDF3EF] px-2 py-1">
-          {recipe.prepMinutes + recipe.cookMinutes} min
-        </span>
-        {recipe.attributes.map((a) => (
-          <span key={a} className="rounded-full bg-[#EDF3EF] px-2 py-1">
-            {a}
+        <p className="mt-2 text-sm text-[#1A1D1B]">{recipe.shortDescription}</p>
+        <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.note}</p>
+
+        <div className="mt-3 flex flex-wrap gap-2 text-xs text-[#6B7370]">
+          <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{recipe.difficulty}</span>
+          <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{recipe.effortTier}</span>
+          <span className="rounded-full bg-[#EDF3EF] px-2 py-1">
+            {recipe.prepMinutes + recipe.cookMinutes} min
           </span>
-        ))}
-      </div>
+          {recipe.attributes.map((a) => (
+            <span key={a} className="rounded-full bg-[#EDF3EF] px-2 py-1">
+              {a}
+            </span>
+          ))}
+        </div>
 
-      <Link
-        href={`/recipe/${recipe.slug}`}
-        className="mt-4 inline-block text-sm font-medium text-[#2C5A87] underline"
-      >
-        View recipe
-      </Link>
+        <Link
+          href={`/recipe/${recipe.slug}`}
+          className="mt-4 inline-block py-1 text-sm font-medium text-[#2C5A87] underline"
+        >
+          View recipe
+        </Link>
+      </div>
     </div>
   );
 }

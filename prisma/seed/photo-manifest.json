@@ -1,0 +1,422 @@
+[
+  {
+    "slug": "spaghetti-aglio-e-olio",
+    "title": "Spaghetti Aglio e Olio",
+    "query": "Spaghetti Aglio e Olio",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Spaghetti aglio e olio KB.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Spaghetti_aglio_e_olio_KB.jpg",
+      "width": 2714,
+      "height": 2035,
+      "license": "CC BY-SA 4.0",
+      "artist": "Bairuilong"
+    }
+  },
+  {
+    "slug": "baked-ziti",
+    "title": "Baked Ziti",
+    "query": "Baked Ziti food dish",
+    "candidatesConsidered": 2,
+    "chosen": {
+      "fileTitle": "File:Baked Ziti.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Baked_Ziti.jpg",
+      "width": 800,
+      "height": 531,
+      "license": "CC BY 2.0",
+      "artist": "Lili from NY, United States"
+    }
+  },
+  {
+    "slug": "chicken-piccata",
+    "title": "Chicken Piccata",
+    "query": "Chicken Piccata",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Chicken piccata made with fresh lemons and jarred capers.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Chicken_piccata_made_with_fresh_lemons_and_jarred_capers.jpg",
+      "width": 3024,
+      "height": 4032,
+      "license": "CC BY-SA 4.0",
+      "artist": "Infrogmation of New Orleans"
+    }
+  },
+  {
+    "slug": "black-bean-tacos",
+    "title": "Black Bean Tacos",
+    "query": "Black Bean Tacos food dish",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:La Casa Restaurant - Stierch - April 2019 03.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/La_Casa_Restaurant_-_Stierch_-_April_2019_03.jpg",
+      "width": 2708,
+      "height": 2799,
+      "license": "CC BY 4.0",
+      "artist": "Missvain"
+    }
+  },
+  {
+    "slug": "chicken-tinga-tacos",
+    "title": "Chicken Tinga Tacos",
+    "query": "Chicken Tinga Tacos",
+    "candidatesConsidered": 3,
+    "chosen": {
+      "fileTitle": "File:El Pavo Real Lunch Chicken Tinga Tacos.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/El_Pavo_Real_Lunch_Chicken_Tinga_Tacos.jpg",
+      "width": 4376,
+      "height": 2607,
+      "license": "CC BY 2.0",
+      "artist": "Infrogmation of New Orleans"
+    }
+  },
+  {
+    "slug": "carne-asada",
+    "title": "Carne Asada",
+    "query": "Carne Asada food dish",
+    "candidatesConsidered": 8,
+    "chosen": {
+      "fileTitle": "File:001 Tacos de carnitas, carne asada y al pastor.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg",
+      "width": 4799,
+      "height": 3600,
+      "license": "CC BY-SA 2.0",
+      "artist": "Larry Miller"
+    }
+  },
+  {
+    "slug": "miso-glazed-salmon",
+    "title": "Miso-Glazed Salmon",
+    "query": "Miso-Glazed Salmon",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:Roasted Miso-Glazed Salmon.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Roasted_Miso-Glazed_Salmon.png",
+      "width": 1092,
+      "height": 680,
+      "license": "CC BY-SA 4.0",
+      "artist": "Kittycataclysm"
+    }
+  },
+  {
+    "slug": "vegetable-yaki-udon",
+    "title": "Vegetable Yaki Udon",
+    "query": "vegetable yakisoba",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Vegetable Yakisoba.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Vegetable_Yakisoba.jpg",
+      "width": 4032,
+      "height": 3024,
+      "license": "CC BY-SA 4.0",
+      "artist": "HeatherMarieKosur"
+    }
+  },
+  {
+    "slug": "chicken-katsu",
+    "title": "Chicken Katsu",
+    "query": "Chicken Katsu food dish",
+    "candidatesConsidered": 4,
+    "chosen": {
+      "fileTitle": "File:Chicken Katsu Curry on Rice - Kintochi (2170458239).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Chicken_Katsu_Curry_on_Rice_-_Kintochi_%282170458239%29.jpg",
+      "width": 2048,
+      "height": 1536,
+      "license": "CC BY-SA 2.0",
+      "artist": "Alpha from Melbourne, Australia"
+    }
+  },
+  {
+    "slug": "chana-masala",
+    "title": "Chana Masala",
+    "query": "Chana Masala food dish",
+    "candidatesConsidered": 5,
+    "chosen": {
+      "fileTitle": "File:Chana Masala- OLd Rao Hotel- Haryana.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Chana_Masala-_OLd_Rao_Hotel-_Haryana.jpg",
+      "width": 4000,
+      "height": 3000,
+      "license": "CC BY-SA 4.0",
+      "artist": "Jnuite"
+    }
+  },
+  {
+    "slug": "butter-chicken",
+    "title": "Butter Chicken",
+    "query": "Butter Chicken food dish",
+    "candidatesConsidered": 8,
+    "chosen": {
+      "fileTitle": "File:Chicken butter masala.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Chicken_butter_masala.jpg",
+      "width": 3024,
+      "height": 4032,
+      "license": "CC BY-SA 4.0",
+      "artist": "Marajozkee"
+    }
+  },
+  {
+    "slug": "saag-paneer",
+    "title": "Saag Paneer",
+    "query": "Saag Paneer",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Saag paneer.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Saag_paneer.jpg",
+      "width": 3648,
+      "height": 2736,
+      "license": "CC BY-SA 2.0",
+      "artist": "Jeff Warren"
+    }
+  },
+  {
+    "slug": "vegetable-green-curry",
+    "title": "Vegetable Green Curry",
+    "query": "Thai green curry vegetables",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Vegetable in thai green curry at lunch of WCI 2023 Day-1.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Vegetable_in_thai_green_curry_at_lunch_of_WCI_2023_Day-1.jpg",
+      "width": 6000,
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "artist": "Wasiul Bahar"
+    }
+  },
+  {
+    "slug": "pad-see-ew",
+    "title": "Pad See Ew with Chicken",
+    "query": "Pad See Ew with Chicken",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Pad see ew with chicken, Rice & Spice.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Pad_see_ew_with_chicken%2C_Rice_%26_Spice.jpg",
+      "width": 8160,
+      "height": 6120,
+      "license": "CC BY-SA 4.0",
+      "artist": "Ser Amantio di Nicolao"
+    }
+  },
+  {
+    "slug": "tom-yum-goong",
+    "title": "Tom Yum Goong",
+    "query": "Tom Yum Goong",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Tom Yum Goong Noodle Soup - Nok Nok Kitchen at The Cow 2024-03-28.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Tom_Yum_Goong_Noodle_Soup_-_Nok_Nok_Kitchen_at_The_Cow_2024-03-28.jpg",
+      "width": 4032,
+      "height": 3024,
+      "license": "CC0",
+      "artist": "Andy Li"
+    }
+  },
+  {
+    "slug": "baked-falafel-bowl",
+    "title": "Baked Falafel Bowl",
+    "query": "falafel bowl",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Bowl of falafel.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Bowl_of_falafel.jpg",
+      "width": 3024,
+      "height": 4032,
+      "license": "CC BY-SA 4.0",
+      "artist": "EvanProdromou"
+    }
+  },
+  {
+    "slug": "shakshuka",
+    "title": "Shakshuka",
+    "query": "Shakshuka food dish",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Shakshuka by Calliopejen1.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Shakshuka_by_Calliopejen1.jpg",
+      "width": 3984,
+      "height": 2988,
+      "license": "CC BY-SA 3.0",
+      "artist": "Calliopejen1"
+    }
+  },
+  {
+    "slug": "lamb-kofta",
+    "title": "Lamb Kofta",
+    "query": "Lamb Kofta food dish",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:20240809 Kabab koobideh & Kabuli Pulao Restaurant Safrani Berlin anagoria.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/20240809_Kabab_koobideh_%26_Kabuli_Pulao_Restaurant_Safrani_Berlin_anagoria.jpg",
+      "width": 11595,
+      "height": 8696,
+      "license": "CC BY-SA 4.0",
+      "artist": "Anagoria"
+    }
+  },
+  {
+    "slug": "turkey-chili",
+    "title": "Turkey Chili",
+    "query": "manual override (chili con carne)",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Chili con carne with beef, beans, chili peppers, garlic, black pepper, and a soft-boiled egg - Massachusetts.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Chili_con_carne_with_beef%2C_beans%2C_chili_peppers%2C_garlic%2C_black_pepper%2C_and_a_soft-boiled_egg_-_Massachusetts.jpg",
+      "width": 2611,
+      "height": 2611,
+      "license": "CC0",
+      "artist": ""
+    }
+  },
+  {
+    "slug": "sheet-pan-salmon-and-asparagus",
+    "title": "Sheet-Pan Salmon and Asparagus",
+    "query": "roasted salmon asparagus",
+    "candidatesConsidered": 3,
+    "chosen": {
+      "fileTitle": "File:Liat Portal for Foodie Disorder - Grilled Salmon with Roasted Potatoes and Asparagus.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Liat_Portal_for_Foodie_Disorder_-_Grilled_Salmon_with_Roasted_Potatoes_and_Asparagus.jpg",
+      "width": 3024,
+      "height": 4032,
+      "license": "CC BY-SA 4.0",
+      "artist": "HaJunkiyada"
+    }
+  },
+  {
+    "slug": "classic-smash-burger",
+    "title": "Classic Smash Burger",
+    "query": "Classic Smash Burger",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:Burger meal at Smashburger, Brighton, England 2023-11-18.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Burger_meal_at_Smashburger%2C_Brighton%2C_England_2023-11-18.jpg",
+      "width": 3024,
+      "height": 4032,
+      "license": "CC0",
+      "artist": "Andy Li"
+    }
+  },
+  {
+    "slug": "mapo-tofu",
+    "title": "Mapo Tofu",
+    "query": "Mapo Tofu",
+    "candidatesConsidered": 2,
+    "chosen": {
+      "fileTitle": "File:Billyfoodmabodofu3.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Billyfoodmabodofu3.jpg",
+      "width": 2304,
+      "height": 3456,
+      "license": "CC BY-SA 3.0",
+      "artist": "Archon6812"
+    }
+  },
+  {
+    "slug": "kung-pao-chicken",
+    "title": "Kung Pao Chicken",
+    "query": "Kung Pao Chicken food dish",
+    "candidatesConsidered": 5,
+    "chosen": {
+      "fileTitle": "File:2016-08-14 Kung Pao Chicken dish in Beijing anagoria.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/2016-08-14_Kung_Pao_Chicken_dish_in_Beijing_anagoria.jpg",
+      "width": 4032,
+      "height": 3856,
+      "license": "CC BY 3.0",
+      "artist": "Anagoria"
+    }
+  },
+  {
+    "slug": "beef-and-broccoli",
+    "title": "Beef and Broccoli",
+    "query": "Beef and Broccoli",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Broccoli beef (5457397534).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Broccoli_beef_%285457397534%29.jpg",
+      "width": 1600,
+      "height": 1069,
+      "license": "CC BY 2.0",
+      "artist": "jeffreyw"
+    }
+  },
+  {
+    "slug": "ratatouille",
+    "title": "Ratatouille",
+    "query": "Ratatouille food dish",
+    "candidatesConsidered": 3,
+    "chosen": {
+      "fileTitle": "File:Ratatouille, Mazatlán, 21 de junio de 2023.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Ratatouille%2C_Mazatl%C3%A1n%2C_21_de_junio_de_2023.jpg",
+      "width": 3653,
+      "height": 2322,
+      "license": "CC0",
+      "artist": "El Nuevo Doge"
+    }
+  },
+  {
+    "slug": "coq-au-vin",
+    "title": "Coq au Vin",
+    "query": "Coq au Vin food dish",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Coq au Vin 6of7 (8735164745).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Coq_au_Vin_6of7_%288735164745%29.jpg",
+      "width": 826,
+      "height": 1024,
+      "license": "CC BY 2.0",
+      "artist": "Breville USA"
+    }
+  },
+  {
+    "slug": "salade-nicoise",
+    "title": "Salade Niçoise",
+    "query": "Salade Niçoise",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Salade niçoise (7545098258).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Salade_ni%C3%A7oise_%287545098258%29.jpg",
+      "width": 4288,
+      "height": 2848,
+      "license": "CC BY-SA 2.0",
+      "artist": "cyclonebill from Copenhagen, Denmark"
+    }
+  },
+  {
+    "slug": "bibimbap",
+    "title": "Bibimbap",
+    "query": "Bibimbap food dish",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Bibimbap with egg.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Bibimbap_with_egg.jpg",
+      "width": 2448,
+      "height": 3264,
+      "license": "CC BY-SA 4.0",
+      "artist": "Cjkennedy15"
+    }
+  },
+  {
+    "slug": "korean-beef-bowl",
+    "title": "Korean BBQ Beef Bowl",
+    "query": "bulgogi rice bowl",
+    "candidatesConsidered": 4,
+    "chosen": {
+      "fileTitle": "File:Korean Beef Bulgogi Rice Bowl (34817154336).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Korean_Beef_Bulgogi_Rice_Bowl_%2834817154336%29.jpg",
+      "width": 5184,
+      "height": 3456,
+      "license": "CC BY-SA 2.0",
+      "artist": "A Healthier Michigan from Detroit, United States"
+    }
+  },
+  {
+    "slug": "kimchi-fried-rice",
+    "title": "Kimchi Fried Rice",
+    "query": "Kimchi Fried Rice",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Kimchi-bokkeum-bap (Kimchi fried rice) - Kogi 2023-09-11.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Kimchi-bokkeum-bap_%28Kimchi_fried_rice%29_-_Kogi_2023-09-11.jpg",
+      "width": 4032,
+      "height": 3024,
+      "license": "CC0",
+      "artist": "Andy Li"
+    }
+  }
+]

@@ -41,6 +41,8 @@ export default async function DashboardPage() {
     prepMinutes: r.prepMinutes,
     cookMinutes: r.cookMinutes,
     attributes: r.attributes,
+    imageUrl: r.imageUrl,
+    imageCredit: r.imageCredit,
     isActive: r.isActive,
     allergenReviewStatus: r.allergenReviewStatus,
     dietTags: r.dietTags.map((d) => d.name),

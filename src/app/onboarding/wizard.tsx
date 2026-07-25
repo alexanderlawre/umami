@@ -184,12 +184,12 @@ export function OnboardingWizard({ diets, allergens, foodGroups }: Props) {
                       }
                     }}
                     placeholder="e.g. kiwi"
-                    className="flex-1 rounded-xl border border-[#E8E6E0] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+                    className="flex-1 rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
                   />
                   <button
                     type="button"
                     onClick={addCustomAllergen}
-                    className="rounded-xl border border-[#E8E6E0] px-3 py-2 text-sm font-medium"
+                    className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium"
                   >
                     Add
                   </button>
@@ -207,7 +207,7 @@ export function OnboardingWizard({ diets, allergens, foodGroups }: Props) {
                           onClick={() =>
                             setCustomAllergens(customAllergens.filter((c) => c !== a))
                           }
-                          className="text-[#6B7370]"
+                          className="px-1 text-[#6B7370]"
                         >
                           ×
                         </button>
@@ -245,12 +245,12 @@ export function OnboardingWizard({ diets, allergens, foodGroups }: Props) {
                     }
                   }}
                   placeholder="e.g. birria tacos"
-                  className="flex-1 rounded-xl border border-[#E8E6E0] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+                  className="flex-1 rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
                 />
                 <button
                   type="button"
                   onClick={addFavorite}
-                  className="rounded-xl border border-[#E8E6E0] px-3 py-2 text-sm font-medium"
+                  className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium"
                 >
                   Add
                 </button>
@@ -266,7 +266,7 @@ export function OnboardingWizard({ diets, allergens, foodGroups }: Props) {
                       <button
                         type="button"
                         onClick={() => setFavoriteFoods(favoriteFoods.filter((v) => v !== f))}
-                        className="text-[#6B7370]"
+                        className="px-1 text-[#6B7370]"
                       >
                         ×
                       </button>
@@ -315,7 +315,7 @@ export function OnboardingWizard({ diets, allergens, foodGroups }: Props) {
             <button
               type="button"
               onClick={back}
-              className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#1A1D1B]"
+              className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#1A1D1B]"
             >
               Back
             </button>
@@ -324,7 +324,7 @@ export function OnboardingWizard({ diets, allergens, foodGroups }: Props) {
             type="button"
             onClick={next}
             disabled={submitting}
-            className="flex-1 rounded-xl bg-[#1F5F45] py-2.5 text-sm font-medium text-white transition hover:bg-[#2E7D5B] disabled:opacity-50"
+            className="flex-1 rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white transition hover:bg-[#2E7D5B] disabled:opacity-50"
           >
             {submitting ? "Saving..." : step === totalSteps - 1 ? "Finish" : "Continue"}
           </button>
@@ -370,7 +370,7 @@ function ChipGrid({
             key={opt.value}
             type="button"
             onClick={() => onToggle(opt.value)}
-            className={`rounded-full border px-4 py-2 text-sm transition ${
+            className={`rounded-full border px-4 py-2.5 text-sm transition ${
               active
                 ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
                 : "border-[#E8E6E0] bg-white text-[#1A1D1B]"

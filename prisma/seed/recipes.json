@@ -5,33 +5,137 @@
     "shortDescription": "Spaghetti, garlic, olive oil, chili flake, parsley",
     "note": "Save a mugful of starchy pasta water before draining — it's what makes the sauce cling instead of pooling.",
     "introCopy": "The whole dish is really just garlic bloomed slowly in good olive oil until it turns sweet, not sharp. Four ingredients, but the timing matters more than usual.",
-    "servings": 4, "prepMinutes": 10, "cookMinutes": 15,
-    "difficulty": "EASY", "cuisine": "Italian", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["UNDER_30", "ONE_POT"], "heroColor": "#D9A441",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "ONE_POT"
+    ],
+    "heroColor": "#D9A441",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1", "unit": "lb", "item": "spaghetti", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "2/3", "unit": "cup", "item": "olive oil", "prepNote": null, "optional": false},
-      {"component": null, "order": 3, "quantity": "8", "unit": "cloves", "item": "garlic", "prepNote": "thinly sliced", "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": "tsp", "item": "red chili flake", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "1/2", "unit": "cup", "item": "parsley", "prepNote": "chopped", "optional": false},
-      {"component": null, "order": 6, "quantity": "to taste", "unit": null, "item": "salt", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "spaghetti",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2/3",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "8",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "red chili flake",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Bring a large pot of well-salted water to a boil and cook spaghetti until just shy of al dente.", "durationMinutes": 9},
-      {"order": 2, "text": "While pasta cooks, warm the olive oil in a wide skillet over low heat. Add garlic and chili flake.", "durationMinutes": 2},
-      {"order": 3, "text": "Cook garlic slowly, stirring often, until pale gold and fragrant — don't let it brown or it turns bitter.", "durationMinutes": 6},
-      {"order": 4, "text": "Transfer pasta directly into the skillet with tongs, along with a splash of pasta water.", "durationMinutes": 1},
-      {"order": 5, "text": "Toss vigorously over heat, adding pasta water as needed, until the sauce looks glossy and coats the noodles.", "durationMinutes": 2},
-      {"order": 6, "text": "Off heat, stir in parsley, taste for salt, and serve immediately.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Bring a large pot of well-salted water to a boil and cook spaghetti until just shy of al dente.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 2,
+        "text": "While pasta cooks, warm the olive oil in a wide skillet over low heat. Add garlic and chili flake.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Cook garlic slowly, stirring often, until pale gold and fragrant — don't let it brown or it turns bitter.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 4,
+        "text": "Transfer pasta directly into the skillet with tongs, along with a splash of pasta water.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Toss vigorously over heat, adding pasta water as needed, until the sauce looks glossy and coats the noodles.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Off heat, stir in parsley, taste for salt, and serve immediately.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Alliums", "weight": 80}, {"foodGroup": "Refined grains", "weight": 70},
-      {"foodGroup": "Chilli & heat", "weight": 30}, {"foodGroup": "Fresh herbs", "weight": 25}
+      {
+        "foodGroup": "Alliums",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 25
+      }
     ],
-    "dietTags": ["Vegan", "Vegetarian"],
-    "allergenTags": ["Wheat/gluten"]
+    "dietTags": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten"
+    ],
+    "imageUrl": "/recipe-photos/spaghetti-aglio-e-olio.jpg",
+    "imageCredit": "Bairuilong / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "baked-ziti",
@@ -39,34 +143,147 @@
     "shortDescription": "Ziti, ricotta, marinara, mozzarella, basil",
     "note": "Undercook the pasta by two minutes — it finishes in the oven and you want it to still have bite.",
     "introCopy": "The kind of dish you make on a Sunday for a week of Tuesdays. Freezes well before or after baking.",
-    "servings": 6, "prepMinutes": 20, "cookMinutes": 35,
-    "difficulty": "EASY", "cuisine": "Italian", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": true,
-    "attributes": ["MAKE_AHEAD", "CROWD_PLEASER"], "heroColor": "#C24B3E",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 35,
+    "difficulty": "EASY",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#C24B3E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1", "unit": "lb", "item": "ziti", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "3", "unit": "cups", "item": "marinara sauce", "prepNote": null, "optional": false},
-      {"component": null, "order": 3, "quantity": "15", "unit": "oz", "item": "ricotta", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "2", "unit": "cups", "item": "shredded mozzarella", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "1/2", "unit": "cup", "item": "parmesan", "prepNote": "grated", "optional": false},
-      {"component": null, "order": 6, "quantity": "1", "unit": "large", "item": "egg", "prepNote": null, "optional": false},
-      {"component": null, "order": 7, "quantity": "1/4", "unit": "cup", "item": "basil", "prepNote": "torn", "optional": true}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "ziti",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "marinara sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "15",
+        "unit": "oz",
+        "item": "ricotta",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "shredded mozzarella",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "parmesan",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "large",
+        "item": "egg",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "basil",
+        "prepNote": "torn",
+        "optional": true
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Preheat oven to 400°F. Boil ziti two minutes short of package directions.", "durationMinutes": 9},
-      {"order": 2, "text": "Stir ricotta, egg, half the parmesan, and a pinch of salt together in a bowl.", "durationMinutes": 3},
-      {"order": 3, "text": "Toss drained pasta with marinara and the ricotta mixture until evenly coated.", "durationMinutes": 3},
-      {"order": 4, "text": "Spread half into a baking dish, scatter half the mozzarella, then repeat with the rest.", "durationMinutes": 3},
-      {"order": 5, "text": "Top with remaining parmesan and bake uncovered until bubbling and golden at the edges.", "durationMinutes": 25},
-      {"order": 6, "text": "Rest five minutes, scatter with basil, and serve.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Preheat oven to 400°F. Boil ziti two minutes short of package directions.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 2,
+        "text": "Stir ricotta, egg, half the parmesan, and a pinch of salt together in a bowl.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Toss drained pasta with marinara and the ricotta mixture until evenly coated.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Spread half into a baking dish, scatter half the mozzarella, then repeat with the rest.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Top with remaining parmesan and bake uncovered until bubbling and golden at the edges.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 6,
+        "text": "Rest five minutes, scatter with basil, and serve.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Refined grains", "weight": 65}, {"foodGroup": "Dairy", "weight": 75},
-      {"foodGroup": "Nightshades", "weight": 35}, {"foodGroup": "Fresh herbs", "weight": 15}
+      {
+        "foodGroup": "Refined grains",
+        "weight": 65
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      }
     ],
-    "dietTags": ["Vegetarian"],
-    "allergenTags": ["Wheat/gluten", "Milk", "Eggs"]
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Eggs"
+    ],
+    "imageUrl": "/recipe-photos/baked-ziti.jpg",
+    "imageCredit": "Lili from NY, United States / Wikimedia Commons (CC BY 2.0)"
   },
   {
     "slug": "chicken-piccata",
@@ -74,32 +291,128 @@
     "shortDescription": "Chicken breast, capers, lemon, butter, cornstarch dredge",
     "note": "Pound the chicken to an even thickness first — that's what keeps it from drying out before the sauce reduces.",
     "introCopy": "Bright, salty, and quick — a good one for when you want a restaurant dish on a weeknight clock.",
-    "servings": 4, "prepMinutes": 15, "cookMinutes": 20,
-    "difficulty": "MEDIUM", "cuisine": "Italian", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["UNDER_30", "HIGH_PROTEIN"], "heroColor": "#E8D172",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#E8D172",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "4", "unit": null, "item": "chicken breast cutlets", "prepNote": "pounded thin", "optional": false},
-      {"component": null, "order": 2, "quantity": "1/3", "unit": "cup", "item": "cornstarch", "prepNote": "for dredging", "optional": false},
-      {"component": null, "order": 3, "quantity": "4", "unit": "tbsp", "item": "butter", "prepNote": "divided", "optional": false},
-      {"component": null, "order": 4, "quantity": "3", "unit": "tbsp", "item": "capers", "prepNote": "drained", "optional": false},
-      {"component": null, "order": 5, "quantity": "1", "unit": null, "item": "lemon", "prepNote": "juiced", "optional": false},
-      {"component": null, "order": 6, "quantity": "3/4", "unit": "cup", "item": "chicken stock", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "chicken breast cutlets",
+        "prepNote": "pounded thin",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "cornstarch",
+        "prepNote": "for dredging",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": "divided",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "capers",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "juiced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3/4",
+        "unit": "cup",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Season cutlets and dredge lightly in cornstarch, shaking off excess.", "durationMinutes": 5},
-      {"order": 2, "text": "Brown cutlets in 2 tbsp butter over medium-high heat, 3 minutes per side. Set aside.", "durationMinutes": 7},
-      {"order": 3, "text": "Add stock, lemon juice, and capers to the pan, scraping up the browned bits.", "durationMinutes": 2},
-      {"order": 4, "text": "Simmer until reduced by a third, then swirl in remaining butter.", "durationMinutes": 4},
-      {"order": 5, "text": "Return chicken to the pan to warm through and coat in sauce before serving.", "durationMinutes": 2}
+      {
+        "order": 1,
+        "text": "Season cutlets and dredge lightly in cornstarch, shaking off excess.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Brown cutlets in 2 tbsp butter over medium-high heat, 3 minutes per side. Set aside.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 3,
+        "text": "Add stock, lemon juice, and capers to the pan, scraping up the browned bits.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Simmer until reduced by a third, then swirl in remaining butter.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 5,
+        "text": "Return chicken to the pan to warm through and coat in sauce before serving.",
+        "durationMinutes": 2
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Poultry", "weight": 85}, {"foodGroup": "Dairy", "weight": 30},
-      {"foodGroup": "Fruit", "weight": 20}
+      {
+        "foodGroup": "Poultry",
+        "weight": 85
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 20
+      }
     ],
-    "dietTags": ["Gluten-free", "High-protein"],
-    "allergenTags": ["Milk"]
+    "dietTags": [
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Milk"
+    ],
+    "imageUrl": "/recipe-photos/chicken-piccata.jpg",
+    "imageCredit": "Infrogmation of New Orleans / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "black-bean-tacos",
@@ -107,31 +420,127 @@
     "shortDescription": "Black beans, corn tortillas, avocado, lime, cabbage",
     "note": "Smash a portion of the beans against the pan — it thickens the filling so it doesn't fall out of the tortilla.",
     "introCopy": "Pantry tacos that don't taste like a compromise. Good with whatever hot sauce you already have open.",
-    "servings": 4, "prepMinutes": 10, "cookMinutes": 15,
-    "difficulty": "EASY", "cuisine": "Mexican", "mealSlot": ["LUNCH", "DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": true,
-    "attributes": ["UNDER_30", "SPEND_LESS"], "heroColor": "#3E7D4C",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "UNDER_30",
+      "SPEND_LESS"
+    ],
+    "heroColor": "#3E7D4C",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "2", "unit": "cans", "item": "black beans", "prepNote": "drained", "optional": false},
-      {"component": null, "order": 2, "quantity": "8", "unit": null, "item": "corn tortillas", "prepNote": null, "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": null, "item": "avocado", "prepNote": "sliced", "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": "cup", "item": "shredded cabbage", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "1", "unit": null, "item": "lime", "prepNote": "cut into wedges", "optional": false},
-      {"component": null, "order": 6, "quantity": "1", "unit": "tsp", "item": "cumin", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "cans",
+        "item": "black beans",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "8",
+        "unit": null,
+        "item": "corn tortillas",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "avocado",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "shredded cabbage",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "lime",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "cumin",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Warm beans with cumin and a splash of water in a skillet, mashing about half of them.", "durationMinutes": 8},
-      {"order": 2, "text": "Char tortillas directly over a burner flame or in a dry skillet.", "durationMinutes": 3},
-      {"order": 3, "text": "Fill tortillas with bean mash, cabbage, and avocado.", "durationMinutes": 3},
-      {"order": 4, "text": "Squeeze lime over the top and serve with hot sauce.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Warm beans with cumin and a splash of water in a skillet, mashing about half of them.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Char tortillas directly over a burner flame or in a dry skillet.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Fill tortillas with bean mash, cabbage, and avocado.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Squeeze lime over the top and serve with hot sauce.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Legumes & pulses", "weight": 80}, {"foodGroup": "Starchy veg", "weight": 25},
-      {"foodGroup": "Fruit", "weight": 30}, {"foodGroup": "Cruciferous veg", "weight": 20}
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 20
+      }
     ],
-    "dietTags": ["Vegan", "Vegetarian", "Gluten-free"],
-    "allergenTags": []
+    "dietTags": [
+      "Vegan",
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [],
+    "imageUrl": "/recipe-photos/black-bean-tacos.jpg",
+    "imageCredit": "Missvain / Wikimedia Commons (CC BY 4.0)"
   },
   {
     "slug": "chicken-tinga-tacos",
@@ -139,32 +548,130 @@
     "shortDescription": "Shredded chicken, chipotle, tomato, onion, corn tortillas",
     "note": "Poach the chicken in the same broth you'll use for the sauce base — no flavor left behind.",
     "introCopy": "Smoky, a little sweet from the chipotle, and endlessly reheatable — this one gets better on day two.",
-    "servings": 4, "prepMinutes": 15, "cookMinutes": 35,
-    "difficulty": "MEDIUM", "cuisine": "Mexican", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": true,
-    "attributes": ["MAKE_AHEAD", "HIGH_PROTEIN"], "heroColor": "#B5522E",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#B5522E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1.5", "unit": "lb", "item": "chicken thighs", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "3", "unit": null, "item": "roma tomatoes", "prepNote": null, "optional": false},
-      {"component": null, "order": 3, "quantity": "2", "unit": null, "item": "chipotles in adobo", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "1/2", "unit": null, "item": "white onion", "prepNote": "sliced", "optional": false},
-      {"component": null, "order": 5, "quantity": "2", "unit": "cloves", "item": "garlic", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "8", "unit": null, "item": "corn tortillas", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "lb",
+        "item": "chicken thighs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": null,
+        "item": "roma tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "chipotles in adobo",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1/2",
+        "unit": null,
+        "item": "white onion",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "8",
+        "unit": null,
+        "item": "corn tortillas",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Simmer chicken thighs in salted water with half the onion until cooked through, then shred.", "durationMinutes": 20},
-      {"order": 2, "text": "Blend tomatoes, chipotles, garlic, and remaining onion into a smooth sauce.", "durationMinutes": 3},
-      {"order": 3, "text": "Simmer the sauce in a skillet until it deepens in color and thickens slightly.", "durationMinutes": 10},
-      {"order": 4, "text": "Fold shredded chicken into the sauce and warm through.", "durationMinutes": 5},
-      {"order": 5, "text": "Serve in warmed tortillas with your usual taco toppings.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Simmer chicken thighs in salted water with half the onion until cooked through, then shred.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 2,
+        "text": "Blend tomatoes, chipotles, garlic, and remaining onion into a smooth sauce.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Simmer the sauce in a skillet until it deepens in color and thickens slightly.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Fold shredded chicken into the sauce and warm through.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Serve in warmed tortillas with your usual taco toppings.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Poultry", "weight": 80}, {"foodGroup": "Nightshades", "weight": 55},
-      {"foodGroup": "Alliums", "weight": 40}, {"foodGroup": "Chilli & heat", "weight": 35}
+      {
+        "foodGroup": "Poultry",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 35
+      }
     ],
-    "dietTags": ["Gluten-free", "High-protein"],
-    "allergenTags": []
+    "dietTags": [
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": [],
+    "imageUrl": "/recipe-photos/chicken-tinga-tacos.jpg",
+    "imageCredit": "Infrogmation of New Orleans / Wikimedia Commons (CC BY 2.0)"
   },
   {
     "slug": "carne-asada",
@@ -172,31 +679,127 @@
     "shortDescription": "Skirt steak, lime, garlic, cilantro, orange",
     "note": "Slice against the grain — with skirt steak this matters more than almost anything else you do to it.",
     "introCopy": "A weekend grill dish. Marinate in the morning, cook it fast and hot in the evening.",
-    "servings": 4, "prepMinutes": 15, "cookMinutes": 10,
-    "difficulty": "MEDIUM", "cuisine": "Mexican", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKEND", "batchFriendly": false,
-    "attributes": ["HIGH_PROTEIN", "LOW_CARB"], "heroColor": "#7A2E20",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 10,
+    "difficulty": "MEDIUM",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "LOW_CARB"
+    ],
+    "heroColor": "#7A2E20",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "2", "unit": "lb", "item": "skirt steak", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "3", "unit": null, "item": "limes", "prepNote": "juiced", "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": null, "item": "orange", "prepNote": "juiced", "optional": false},
-      {"component": null, "order": 4, "quantity": "4", "unit": "cloves", "item": "garlic", "prepNote": "minced", "optional": false},
-      {"component": null, "order": 5, "quantity": "1/2", "unit": "cup", "item": "cilantro", "prepNote": "chopped", "optional": false},
-      {"component": null, "order": 6, "quantity": "3", "unit": "tbsp", "item": "olive oil", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "lb",
+        "item": "skirt steak",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": null,
+        "item": "limes",
+        "prepNote": "juiced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "orange",
+        "prepNote": "juiced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Whisk citrus juices, garlic, cilantro, and olive oil together for the marinade.", "durationMinutes": 5},
-      {"order": 2, "text": "Marinate steak at least 2 hours, or overnight in the fridge.", "durationMinutes": null},
-      {"order": 3, "text": "Grill or sear over very high heat, about 3 minutes per side for medium-rare.", "durationMinutes": 6},
-      {"order": 4, "text": "Rest 5 minutes, then slice thin against the grain.", "durationMinutes": 5}
+      {
+        "order": 1,
+        "text": "Whisk citrus juices, garlic, cilantro, and olive oil together for the marinade.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Marinate steak at least 2 hours, or overnight in the fridge.",
+        "durationMinutes": null
+      },
+      {
+        "order": 3,
+        "text": "Grill or sear over very high heat, about 3 minutes per side for medium-rare.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 4,
+        "text": "Rest 5 minutes, then slice thin against the grain.",
+        "durationMinutes": 5
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Red meat", "weight": 90}, {"foodGroup": "Fruit", "weight": 30},
-      {"foodGroup": "Fresh herbs", "weight": 25}, {"foodGroup": "Alliums", "weight": 25}
+      {
+        "foodGroup": "Red meat",
+        "weight": 90
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 25
+      }
     ],
-    "dietTags": ["Low-carb", "Gluten-free", "High-protein", "Paleo"],
-    "allergenTags": []
+    "dietTags": [
+      "Low-carb",
+      "Gluten-free",
+      "High-protein",
+      "Paleo"
+    ],
+    "allergenTags": [],
+    "imageUrl": "/recipe-photos/carne-asada.jpg",
+    "imageCredit": "Larry Miller / Wikimedia Commons (CC BY-SA 2.0)"
   },
   {
     "slug": "miso-glazed-salmon",
@@ -204,32 +807,130 @@
     "shortDescription": "Salmon, white miso, mirin, ginger, scallion",
     "note": "Broil close to the top rack for the last two minutes to get real char on the glaze — don't walk away.",
     "introCopy": "A four-ingredient glaze that does a lot of work. Good over rice, good over greens, good cold the next day.",
-    "servings": 4, "prepMinutes": 10, "cookMinutes": 15,
-    "difficulty": "EASY", "cuisine": "Japanese", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["UNDER_30", "HIGH_PROTEIN"], "heroColor": "#D97E5C",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Japanese",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#D97E5C",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "4", "unit": null, "item": "salmon fillets", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "3", "unit": "tbsp", "item": "white miso", "prepNote": null, "optional": false},
-      {"component": null, "order": 3, "quantity": "2", "unit": "tbsp", "item": "mirin", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": "tbsp", "item": "tamari", "prepNote": "gluten-free soy sauce", "optional": false},
-      {"component": null, "order": 5, "quantity": "1", "unit": "tsp", "item": "ginger", "prepNote": "grated", "optional": false},
-      {"component": null, "order": 6, "quantity": "2", "unit": null, "item": "scallions", "prepNote": "sliced", "optional": true}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "salmon fillets",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "white miso",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "mirin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "tamari",
+        "prepNote": "gluten-free soy sauce",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ginger",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "sliced",
+        "optional": true
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Whisk miso, mirin, tamari, and ginger into a glaze.", "durationMinutes": 3},
-      {"order": 2, "text": "Coat salmon in the glaze and let sit 10 minutes at room temperature.", "durationMinutes": 10},
-      {"order": 3, "text": "Bake at 400°F until nearly cooked through.", "durationMinutes": 8},
-      {"order": 4, "text": "Switch to broil for the final 2 minutes to char the glaze.", "durationMinutes": 2},
-      {"order": 5, "text": "Scatter with scallions and serve.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Whisk miso, mirin, tamari, and ginger into a glaze.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Coat salmon in the glaze and let sit 10 minutes at room temperature.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Bake at 400°F until nearly cooked through.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "Switch to broil for the final 2 minutes to char the glaze.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Scatter with scallions and serve.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Oily fish", "weight": 90}, {"foodGroup": "Soy & tofu", "weight": 30},
-      {"foodGroup": "Alliums", "weight": 15}
+      {
+        "foodGroup": "Oily fish",
+        "weight": 90
+      },
+      {
+        "foodGroup": "Soy & tofu",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      }
     ],
-    "dietTags": ["Pescatarian", "Gluten-free", "High-protein"],
-    "allergenTags": ["Fish", "Soy"]
+    "dietTags": [
+      "Pescatarian",
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Fish",
+      "Soy"
+    ],
+    "imageUrl": "/recipe-photos/miso-glazed-salmon.png",
+    "imageCredit": "Kittycataclysm / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "vegetable-yaki-udon",
@@ -237,31 +938,128 @@
     "shortDescription": "Udon noodles, cabbage, carrot, mushroom, tamari",
     "note": "Fresh or vacuum-packed udon works far better here than dried — dried needs a separate boil first.",
     "introCopy": "A stir-fry that comes together in one pan once the vegetables are cut. Good vehicle for whatever's wilting in the crisper.",
-    "servings": 4, "prepMinutes": 15, "cookMinutes": 12,
-    "difficulty": "EASY", "cuisine": "Japanese", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["UNDER_30", "ONE_POT"], "heroColor": "#7C9E5B",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 12,
+    "difficulty": "EASY",
+    "cuisine": "Japanese",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "ONE_POT"
+    ],
+    "heroColor": "#7C9E5B",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "14", "unit": "oz", "item": "fresh udon noodles", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "2", "unit": "cups", "item": "cabbage", "prepNote": "sliced", "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": null, "item": "carrot", "prepNote": "julienned", "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": "cup", "item": "shiitake mushrooms", "prepNote": "sliced", "optional": false},
-      {"component": null, "order": 5, "quantity": "3", "unit": "tbsp", "item": "tamari", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "1", "unit": "tbsp", "item": "neutral oil", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "14",
+        "unit": "oz",
+        "item": "fresh udon noodles",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "cabbage",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "carrot",
+        "prepNote": "julienned",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "shiitake mushrooms",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "tamari",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "neutral oil",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Loosen udon noodles under warm water to separate the strands.", "durationMinutes": 2},
-      {"order": 2, "text": "Stir-fry carrot and mushroom in oil over high heat until just tender.", "durationMinutes": 4},
-      {"order": 3, "text": "Add cabbage and cook until it wilts but keeps some bite.", "durationMinutes": 3},
-      {"order": 4, "text": "Add noodles and tamari, tossing until everything is glossy and heated through.", "durationMinutes": 3}
+      {
+        "order": 1,
+        "text": "Loosen udon noodles under warm water to separate the strands.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Stir-fry carrot and mushroom in oil over high heat until just tender.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 3,
+        "text": "Add cabbage and cook until it wilts but keeps some bite.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Add noodles and tamari, tossing until everything is glossy and heated through.",
+        "durationMinutes": 3
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Refined grains", "weight": 55}, {"foodGroup": "Cruciferous veg", "weight": 40},
-      {"foodGroup": "Mushrooms", "weight": 35}, {"foodGroup": "Root veg", "weight": 20}
+      {
+        "foodGroup": "Refined grains",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Mushrooms",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 20
+      }
     ],
-    "dietTags": ["Vegan", "Vegetarian"],
-    "allergenTags": ["Wheat/gluten", "Soy"]
+    "dietTags": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Soy"
+    ],
+    "imageUrl": "/recipe-photos/vegetable-yaki-udon.jpg",
+    "imageCredit": "HeatherMarieKosur / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "chicken-katsu",
@@ -269,31 +1067,124 @@
     "shortDescription": "Chicken thigh, panko, katsu sauce, cabbage",
     "note": "Rest the breaded cutlets for five minutes before frying — it helps the crust stay put in the oil.",
     "introCopy": "The crunch is the whole point. Double-dredge if you want it extra thick.",
-    "servings": 4, "prepMinutes": 20, "cookMinutes": 15,
-    "difficulty": "MEDIUM", "cuisine": "Japanese", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKEND", "batchFriendly": false,
-    "attributes": ["FRIED"], "heroColor": "#E3B23C",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "Japanese",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "FRIED"
+    ],
+    "heroColor": "#E3B23C",
     "allergenReviewStatus": "UNVERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "4", "unit": null, "item": "chicken thighs", "prepNote": "boneless, pounded flat", "optional": false},
-      {"component": null, "order": 2, "quantity": "1.5", "unit": "cups", "item": "panko breadcrumbs", "prepNote": null, "optional": false},
-      {"component": null, "order": 3, "quantity": "1/2", "unit": "cup", "item": "flour", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "2", "unit": null, "item": "eggs", "prepNote": "beaten", "optional": false},
-      {"component": null, "order": 5, "quantity": "1/2", "unit": "cup", "item": "store-bought katsu sauce", "prepNote": "check label for allergens", "optional": false},
-      {"component": null, "order": 6, "quantity": "2", "unit": "cups", "item": "cabbage", "prepNote": "shredded", "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "chicken thighs",
+        "prepNote": "boneless, pounded flat",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "panko breadcrumbs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "store-bought katsu sauce",
+        "prepNote": "check label for allergens",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "cabbage",
+        "prepNote": "shredded",
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Dredge chicken in flour, then egg, then panko, pressing to adhere.", "durationMinutes": 10},
-      {"order": 2, "text": "Fry in 1/2 inch of oil at 340°F until deeply golden, about 4 minutes per side.", "durationMinutes": 8},
-      {"order": 3, "text": "Drain on a rack, then slice into strips.", "durationMinutes": 3},
-      {"order": 4, "text": "Serve over shredded cabbage with katsu sauce.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Dredge chicken in flour, then egg, then panko, pressing to adhere.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Fry in 1/2 inch of oil at 340°F until deeply golden, about 4 minutes per side.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Drain on a rack, then slice into strips.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Serve over shredded cabbage with katsu sauce.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Poultry", "weight": 75}, {"foodGroup": "Refined grains", "weight": 40},
-      {"foodGroup": "Fried & rich", "weight": 55}, {"foodGroup": "Cruciferous veg", "weight": 20}
+      {
+        "foodGroup": "Poultry",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 20
+      }
     ],
     "dietTags": [],
-    "allergenTags": ["Wheat/gluten", "Eggs"]
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs"
+    ],
+    "imageUrl": "/recipe-photos/chicken-katsu.jpg",
+    "imageCredit": "Alpha from Melbourne, Australia / Wikimedia Commons (CC BY-SA 2.0)"
   },
   {
     "slug": "chana-masala",
@@ -301,31 +1192,127 @@
     "shortDescription": "Chickpeas, tomato, onion, garam masala, ginger",
     "note": "Bloom the garam masala in the oil for thirty seconds before adding liquid — dry spices need fat and heat to open up.",
     "introCopy": "A pantry curry that scales up without any trouble. Better the day after it's made.",
-    "servings": 4, "prepMinutes": 10, "cookMinutes": 25,
-    "difficulty": "EASY", "cuisine": "Indian", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": true,
-    "attributes": ["MAKE_AHEAD", "SPEND_LESS"], "heroColor": "#C97B2E",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "Indian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "SPEND_LESS"
+    ],
+    "heroColor": "#C97B2E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "2", "unit": "cans", "item": "chickpeas", "prepNote": "drained", "optional": false},
-      {"component": null, "order": 2, "quantity": "1", "unit": null, "item": "onion", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": "can", "item": "crushed tomatoes", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": "tbsp", "item": "ginger-garlic paste", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "2", "unit": "tsp", "item": "garam masala", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "1", "unit": "tsp", "item": "ground cumin", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "cans",
+        "item": "chickpeas",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "can",
+        "item": "crushed tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "ginger-garlic paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "garam masala",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Sauté onion in oil until deeply golden, not just soft.", "durationMinutes": 10},
-      {"order": 2, "text": "Add ginger-garlic paste and dry spices, stirring until fragrant.", "durationMinutes": 1},
-      {"order": 3, "text": "Add crushed tomatoes and simmer until the oil starts to separate at the edges.", "durationMinutes": 8},
-      {"order": 4, "text": "Add chickpeas and a splash of water, then simmer to thicken.", "durationMinutes": 10}
+      {
+        "order": 1,
+        "text": "Sauté onion in oil until deeply golden, not just soft.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Add ginger-garlic paste and dry spices, stirring until fragrant.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 3,
+        "text": "Add crushed tomatoes and simmer until the oil starts to separate at the edges.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "Add chickpeas and a splash of water, then simmer to thicken.",
+        "durationMinutes": 10
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Legumes & pulses", "weight": 85}, {"foodGroup": "Nightshades", "weight": 45},
-      {"foodGroup": "Alliums", "weight": 40}, {"foodGroup": "Warm spices", "weight": 40}
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 85
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 40
+      }
     ],
-    "dietTags": ["Vegan", "Vegetarian", "Gluten-free", "High-protein"],
-    "allergenTags": []
+    "dietTags": [
+      "Vegan",
+      "Vegetarian",
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": [],
+    "imageUrl": "/recipe-photos/chana-masala.jpg",
+    "imageCredit": "Jnuite / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "butter-chicken",
@@ -333,32 +1320,132 @@
     "shortDescription": "Chicken thigh, tomato, cream, butter, garam masala",
     "note": "Marinate the chicken in yogurt overnight if you have time — it tenderizes as much as it flavors.",
     "introCopy": "Rich and a little sweet from the cream. Worth the extra ten minutes of simmering for the sauce to deepen.",
-    "servings": 4, "prepMinutes": 20, "cookMinutes": 35,
-    "difficulty": "MEDIUM", "cuisine": "Indian", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKEND", "batchFriendly": true,
-    "attributes": ["HIGH_PROTEIN", "CROWD_PLEASER"], "heroColor": "#D9762E",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "Indian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#D9762E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1.5", "unit": "lb", "item": "chicken thighs", "prepNote": "cubed", "optional": false},
-      {"component": null, "order": 2, "quantity": "1/2", "unit": "cup", "item": "yogurt", "prepNote": "for marinating", "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": "can", "item": "tomato puree", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "1/2", "unit": "cup", "item": "heavy cream", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "4", "unit": "tbsp", "item": "butter", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "2", "unit": "tsp", "item": "garam masala", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "lb",
+        "item": "chicken thighs",
+        "prepNote": "cubed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "yogurt",
+        "prepNote": "for marinating",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "can",
+        "item": "tomato puree",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "heavy cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "garam masala",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Marinate chicken in yogurt and half the garam masala at least 30 minutes.", "durationMinutes": 30},
-      {"order": 2, "text": "Sear chicken in a hot pan until browned, then set aside.", "durationMinutes": 8},
-      {"order": 3, "text": "Melt butter in the same pan and add tomato puree and remaining spices.", "durationMinutes": 2},
-      {"order": 4, "text": "Simmer sauce until it deepens in color, about 15 minutes.", "durationMinutes": 15},
-      {"order": 5, "text": "Stir in cream and return chicken to the pan to finish cooking through.", "durationMinutes": 10}
+      {
+        "order": 1,
+        "text": "Marinate chicken in yogurt and half the garam masala at least 30 minutes.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 2,
+        "text": "Sear chicken in a hot pan until browned, then set aside.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Melt butter in the same pan and add tomato puree and remaining spices.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Simmer sauce until it deepens in color, about 15 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Stir in cream and return chicken to the pan to finish cooking through.",
+        "durationMinutes": 10
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Poultry", "weight": 80}, {"foodGroup": "Nightshades", "weight": 45},
-      {"foodGroup": "Dairy", "weight": 55}, {"foodGroup": "Warm spices", "weight": 35}
+      {
+        "foodGroup": "Poultry",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 35
+      }
     ],
-    "dietTags": ["Gluten-free", "High-protein"],
-    "allergenTags": ["Milk"]
+    "dietTags": [
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Milk"
+    ],
+    "imageUrl": "/recipe-photos/butter-chicken.jpg",
+    "imageCredit": "Marajozkee / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "saag-paneer",
@@ -366,31 +1453,126 @@
     "shortDescription": "Spinach, paneer, garlic, ginger, cream",
     "note": "Blanch the spinach briefly before blending — it keeps the color bright instead of turning drab olive.",
     "introCopy": "Iron-rich and creamy without being heavy. Paneer holds its shape well, so don't overcook it once it's in the sauce.",
-    "servings": 4, "prepMinutes": 15, "cookMinutes": 20,
-    "difficulty": "MEDIUM", "cuisine": "Indian", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": true,
-    "attributes": ["EAT_MORE_VEG"], "heroColor": "#4C7A3E",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "Indian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#4C7A3E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1", "unit": "lb", "item": "spinach", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "8", "unit": "oz", "item": "paneer", "prepNote": "cubed", "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": null, "item": "onion", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": "tbsp", "item": "ginger-garlic paste", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "1/4", "unit": "cup", "item": "cream", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "1", "unit": "tsp", "item": "garam masala", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "spinach",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "8",
+        "unit": "oz",
+        "item": "paneer",
+        "prepNote": "cubed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "ginger-garlic paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "garam masala",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Blanch spinach 1 minute, then blend into a rough puree.", "durationMinutes": 5},
-      {"order": 2, "text": "Sauté onion, ginger, and garlic until soft.", "durationMinutes": 6},
-      {"order": 3, "text": "Add spinach puree and garam masala, simmering 5 minutes.", "durationMinutes": 5},
-      {"order": 4, "text": "Fold in paneer and cream, warming through without a hard boil.", "durationMinutes": 4}
+      {
+        "order": 1,
+        "text": "Blanch spinach 1 minute, then blend into a rough puree.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Sauté onion, ginger, and garlic until soft.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 3,
+        "text": "Add spinach puree and garam masala, simmering 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Fold in paneer and cream, warming through without a hard boil.",
+        "durationMinutes": 4
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Leafy greens", "weight": 85}, {"foodGroup": "Dairy", "weight": 55},
-      {"foodGroup": "Alliums", "weight": 35}, {"foodGroup": "Warm spices", "weight": 25}
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 85
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 25
+      }
     ],
-    "dietTags": ["Vegetarian", "Gluten-free"],
-    "allergenTags": ["Milk"]
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk"
+    ],
+    "imageUrl": "/recipe-photos/saag-paneer.jpg",
+    "imageCredit": "Jeff Warren / Wikimedia Commons (CC BY-SA 2.0)"
   },
   {
     "slug": "vegetable-green-curry",
@@ -398,32 +1580,129 @@
     "shortDescription": "Green curry paste, coconut milk, eggplant, bell pepper, basil",
     "note": "Fry the curry paste in the thick coconut cream that rises to the top of the can — it blooms the flavor far more than adding it to thin liquid.",
     "introCopy": "As fast as takeout once the vegetables are chopped, and you control how much heat goes in.",
-    "servings": 4, "prepMinutes": 15, "cookMinutes": 20,
-    "difficulty": "EASY", "cuisine": "Thai", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": true,
-    "attributes": ["UNDER_30", "EAT_MORE_VEG"], "heroColor": "#5B8A4A",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Thai",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "UNDER_30",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#5B8A4A",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "3", "unit": "tbsp", "item": "green curry paste", "prepNote": "check for shrimp paste if strict vegan", "optional": false},
-      {"component": null, "order": 2, "quantity": "1", "unit": "can", "item": "coconut milk", "prepNote": null, "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": null, "item": "japanese eggplant", "prepNote": "sliced", "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": null, "item": "bell pepper", "prepNote": "sliced", "optional": false},
-      {"component": null, "order": 5, "quantity": "1", "unit": "tbsp", "item": "tamari", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "1/2", "unit": "cup", "item": "thai basil", "prepNote": null, "optional": true}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "green curry paste",
+        "prepNote": "check for shrimp paste if strict vegan",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "can",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "japanese eggplant",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "bell pepper",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "tamari",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "thai basil",
+        "prepNote": null,
+        "optional": true
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Scoop the thick cream from the top of the coconut milk can and fry with curry paste until fragrant.", "durationMinutes": 3},
-      {"order": 2, "text": "Add remaining coconut milk and bring to a simmer.", "durationMinutes": 2},
-      {"order": 3, "text": "Add eggplant and simmer until nearly tender.", "durationMinutes": 8},
-      {"order": 4, "text": "Add bell pepper and tamari, cooking until the pepper is just tender.", "durationMinutes": 5},
-      {"order": 5, "text": "Stir in basil off heat and serve over rice.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Scoop the thick cream from the top of the coconut milk can and fry with curry paste until fragrant.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Add remaining coconut milk and bring to a simmer.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Add eggplant and simmer until nearly tender.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "Add bell pepper and tamari, cooking until the pepper is just tender.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Stir in basil off heat and serve over rice.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Nightshades", "weight": 65}, {"foodGroup": "Chilli & heat", "weight": 45},
-      {"foodGroup": "Fresh herbs", "weight": 25}
+      {
+        "foodGroup": "Nightshades",
+        "weight": 65
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 25
+      }
     ],
-    "dietTags": ["Vegan", "Vegetarian", "Gluten-free"],
-    "allergenTags": ["Soy"]
+    "dietTags": [
+      "Vegan",
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Soy"
+    ],
+    "imageUrl": "/recipe-photos/vegetable-green-curry.jpg",
+    "imageCredit": "Wasiul Bahar / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "pad-see-ew",
@@ -431,31 +1710,128 @@
     "shortDescription": "Wide rice noodles, chicken, chinese broccoli, dark soy",
     "note": "Get the pan smoking hot before the noodles go in — that's where the char flavor comes from, not from the sauce.",
     "introCopy": "A high-heat, fast-moving stir-fry. Have every ingredient measured out before the pan goes on.",
-    "servings": 4, "prepMinutes": 20, "cookMinutes": 15,
-    "difficulty": "MEDIUM", "cuisine": "Thai", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["HIGH_PROTEIN"], "heroColor": "#8A5A2E",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "Thai",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#8A5A2E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1", "unit": "lb", "item": "fresh wide rice noodles", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "1", "unit": "lb", "item": "chicken thigh", "prepNote": "sliced thin", "optional": false},
-      {"component": null, "order": 3, "quantity": "2", "unit": "cups", "item": "chinese broccoli", "prepNote": "chopped", "optional": false},
-      {"component": null, "order": 4, "quantity": "2", "unit": null, "item": "eggs", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "2", "unit": "tbsp", "item": "dark soy sauce", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "1", "unit": "tbsp", "item": "oyster sauce", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "fresh wide rice noodles",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "chicken thigh",
+        "prepNote": "sliced thin",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "chinese broccoli",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "dark soy sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "oyster sauce",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Sear chicken in a very hot wok until just cooked, then push to one side.", "durationMinutes": 4},
-      {"order": 2, "text": "Crack eggs into the empty side and scramble briefly.", "durationMinutes": 2},
-      {"order": 3, "text": "Add noodles, broccoli, dark soy, and oyster sauce, tossing constantly.", "durationMinutes": 6},
-      {"order": 4, "text": "Cook until noodles pick up some char and broccoli is tender-crisp.", "durationMinutes": 3}
+      {
+        "order": 1,
+        "text": "Sear chicken in a very hot wok until just cooked, then push to one side.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 2,
+        "text": "Crack eggs into the empty side and scramble briefly.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Add noodles, broccoli, dark soy, and oyster sauce, tossing constantly.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 4,
+        "text": "Cook until noodles pick up some char and broccoli is tender-crisp.",
+        "durationMinutes": 3
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Refined grains", "weight": 60}, {"foodGroup": "Poultry", "weight": 55},
-      {"foodGroup": "Cruciferous veg", "weight": 35}, {"foodGroup": "Eggs", "weight": 25}
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Poultry",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 25
+      }
     ],
-    "dietTags": ["High-protein"],
-    "allergenTags": ["Wheat/gluten", "Eggs", "Shellfish", "Soy"]
+    "dietTags": [
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Shellfish",
+      "Soy"
+    ],
+    "imageUrl": "/recipe-photos/pad-see-ew.jpg",
+    "imageCredit": "Ser Amantio di Nicolao / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "tom-yum-goong",
@@ -463,31 +1839,130 @@
     "shortDescription": "Shrimp, lemongrass, lime leaf, mushroom, chili",
     "note": "Bruise the lemongrass and lime leaves instead of chopping them fine — you want the aromatics infused, not eaten.",
     "introCopy": "Sour, hot, and fast. The broth should taste sharp enough to make your eyes water a little.",
-    "servings": 4, "prepMinutes": 15, "cookMinutes": 15,
-    "difficulty": "EASY", "cuisine": "Thai", "mealSlot": ["LUNCH", "DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["UNDER_30", "LOW_CARB"], "heroColor": "#C2432E",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Thai",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "LOW_CARB"
+    ],
+    "heroColor": "#C2432E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1", "unit": "lb", "item": "shrimp", "prepNote": "peeled, shells reserved", "optional": false},
-      {"component": null, "order": 2, "quantity": "2", "unit": "stalks", "item": "lemongrass", "prepNote": "bruised", "optional": false},
-      {"component": null, "order": 3, "quantity": "4", "unit": null, "item": "kaffir lime leaves", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": "cup", "item": "mushrooms", "prepNote": "halved", "optional": false},
-      {"component": null, "order": 5, "quantity": "3", "unit": "tbsp", "item": "fish sauce", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "3", "unit": "tbsp", "item": "lime juice", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "shrimp",
+        "prepNote": "peeled, shells reserved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "stalks",
+        "item": "lemongrass",
+        "prepNote": "bruised",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": null,
+        "item": "kaffir lime leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "mushrooms",
+        "prepNote": "halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "fish sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "lime juice",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Simmer shrimp shells in water 10 minutes to build a quick stock, then strain.", "durationMinutes": 10},
-      {"order": 2, "text": "Add lemongrass, lime leaves, and mushrooms to the stock and simmer.", "durationMinutes": 5},
-      {"order": 3, "text": "Add shrimp and cook just until pink and opaque.", "durationMinutes": 3},
-      {"order": 4, "text": "Off heat, stir in fish sauce and lime juice to taste.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Simmer shrimp shells in water 10 minutes to build a quick stock, then strain.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Add lemongrass, lime leaves, and mushrooms to the stock and simmer.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Add shrimp and cook just until pink and opaque.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Off heat, stir in fish sauce and lime juice to taste.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Shellfish", "weight": 85}, {"foodGroup": "Mushrooms", "weight": 40},
-      {"foodGroup": "Chilli & heat", "weight": 40}, {"foodGroup": "Fresh herbs", "weight": 20}
+      {
+        "foodGroup": "Shellfish",
+        "weight": 85
+      },
+      {
+        "foodGroup": "Mushrooms",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      }
     ],
-    "dietTags": ["Pescatarian", "Gluten-free", "Low-carb"],
-    "allergenTags": ["Shellfish", "Fish"]
+    "dietTags": [
+      "Pescatarian",
+      "Gluten-free",
+      "Low-carb"
+    ],
+    "allergenTags": [
+      "Shellfish",
+      "Fish"
+    ],
+    "imageUrl": "/recipe-photos/tom-yum-goong.jpg",
+    "imageCredit": "Andy Li / Wikimedia Commons (CC0)"
   },
   {
     "slug": "baked-falafel-bowl",
@@ -495,31 +1970,125 @@
     "shortDescription": "Chickpeas, parsley, cumin, tahini, cucumber",
     "note": "Don't skip the resting time for the batter — dry chickpea flour needs it to bind, or the falafel fall apart in the oven.",
     "introCopy": "Baked instead of fried, which trades a little crunch for a lot less cleanup.",
-    "servings": 4, "prepMinutes": 25, "cookMinutes": 25,
-    "difficulty": "MEDIUM", "cuisine": "Middle Eastern", "mealSlot": ["LUNCH", "DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": true,
-    "attributes": ["EAT_MORE_VEG", "MAKE_AHEAD"], "heroColor": "#8A9E4A",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#8A9E4A",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": "For the falafel", "order": 1, "quantity": "2", "unit": "cups", "item": "dried chickpeas", "prepNote": "soaked overnight, not canned", "optional": false},
-      {"component": "For the falafel", "order": 2, "quantity": "1", "unit": "cup", "item": "parsley", "prepNote": null, "optional": false},
-      {"component": "For the falafel", "order": 3, "quantity": "1", "unit": "tsp", "item": "cumin", "prepNote": null, "optional": false},
-      {"component": "For the bowl", "order": 4, "quantity": "1", "unit": "cup", "item": "cucumber", "prepNote": "diced", "optional": false},
-      {"component": "For the bowl", "order": 5, "quantity": "1/4", "unit": "cup", "item": "tahini", "prepNote": "thinned with water and lemon", "optional": false},
-      {"component": "For the bowl", "order": 6, "quantity": "2", "unit": "cups", "item": "cooked rice or greens", "prepNote": null, "optional": true}
+      {
+        "component": "For the falafel",
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "dried chickpeas",
+        "prepNote": "soaked overnight, not canned",
+        "optional": false
+      },
+      {
+        "component": "For the falafel",
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "parsley",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For the falafel",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For the bowl",
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "cucumber",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "For the bowl",
+        "order": 5,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "tahini",
+        "prepNote": "thinned with water and lemon",
+        "optional": false
+      },
+      {
+        "component": "For the bowl",
+        "order": 6,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "cooked rice or greens",
+        "prepNote": null,
+        "optional": true
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Pulse soaked (uncooked) chickpeas, parsley, and cumin in a food processor to a coarse paste.", "durationMinutes": 5},
-      {"order": 2, "text": "Rest the mixture in the fridge to firm up.", "durationMinutes": 30},
-      {"order": 3, "text": "Form into balls, brush with oil, and bake at 400°F, turning once.", "durationMinutes": 25},
-      {"order": 4, "text": "Assemble bowls with rice or greens, cucumber, falafel, and tahini sauce.", "durationMinutes": 5}
+      {
+        "order": 1,
+        "text": "Pulse soaked (uncooked) chickpeas, parsley, and cumin in a food processor to a coarse paste.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Rest the mixture in the fridge to firm up.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 3,
+        "text": "Form into balls, brush with oil, and bake at 400°F, turning once.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 4,
+        "text": "Assemble bowls with rice or greens, cucumber, falafel, and tahini sauce.",
+        "durationMinutes": 5
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Legumes & pulses", "weight": 85}, {"foodGroup": "Fresh herbs", "weight": 30},
-      {"foodGroup": "Nuts & seeds", "weight": 25}
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 85
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 25
+      }
     ],
-    "dietTags": ["Vegan", "Vegetarian", "Gluten-free"],
-    "allergenTags": ["Sesame"]
+    "dietTags": [
+      "Vegan",
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Sesame"
+    ],
+    "imageUrl": "/recipe-photos/baked-falafel-bowl.jpg",
+    "imageCredit": "EvanProdromou / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "shakshuka",
@@ -527,32 +2096,136 @@
     "shortDescription": "Eggs poached in tomato, bell pepper, cumin, feta",
     "note": "Crack the eggs into small cups first before sliding them in — it keeps the yolks intact and evenly spaced.",
     "introCopy": "Breakfast, lunch, or dinner, eaten straight from the pan with something to mop up the sauce.",
-    "servings": 4, "prepMinutes": 10, "cookMinutes": 25,
-    "difficulty": "EASY", "cuisine": "Middle Eastern", "mealSlot": ["BREAKFAST", "LUNCH", "DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["ONE_POT", "UNDER_30"], "heroColor": "#C24B2E",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "ONE_POT",
+      "UNDER_30"
+    ],
+    "heroColor": "#C24B2E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1", "unit": null, "item": "onion", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 2, "quantity": "1", "unit": null, "item": "bell pepper", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": "can", "item": "crushed tomatoes", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "6", "unit": null, "item": "eggs", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "1", "unit": "tsp", "item": "cumin", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "1/3", "unit": "cup", "item": "feta", "prepNote": "crumbled", "optional": true}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "bell pepper",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "can",
+        "item": "crushed tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "6",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "feta",
+        "prepNote": "crumbled",
+        "optional": true
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Sauté onion and pepper until soft.", "durationMinutes": 8},
-      {"order": 2, "text": "Add crushed tomatoes and cumin, simmering until thickened.", "durationMinutes": 10},
-      {"order": 3, "text": "Make wells in the sauce and slide in the eggs.", "durationMinutes": 2},
-      {"order": 4, "text": "Cover and cook until whites are set but yolks are still soft.", "durationMinutes": 6},
-      {"order": 5, "text": "Scatter feta over the top and serve straight from the pan.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Sauté onion and pepper until soft.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Add crushed tomatoes and cumin, simmering until thickened.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Make wells in the sauce and slide in the eggs.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Cover and cook until whites are set but yolks are still soft.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 5,
+        "text": "Scatter feta over the top and serve straight from the pan.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Nightshades", "weight": 65}, {"foodGroup": "Eggs", "weight": 60},
-      {"foodGroup": "Alliums", "weight": 30}, {"foodGroup": "Dairy", "weight": 20}
+      {
+        "foodGroup": "Nightshades",
+        "weight": 65
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      }
     ],
-    "dietTags": ["Vegetarian", "Gluten-free", "High-protein"],
-    "allergenTags": ["Eggs", "Milk"]
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Milk"
+    ],
+    "imageUrl": "/recipe-photos/shakshuka.jpg",
+    "imageCredit": "Calliopejen1 / Wikimedia Commons (CC BY-SA 3.0)"
   },
   {
     "slug": "lamb-kofta",
@@ -560,31 +2233,127 @@
     "shortDescription": "Ground lamb, cumin, cinnamon, onion, parsley",
     "note": "Wet your hands before shaping the kofta — the mixture is sticky and this keeps it from clumping to your fingers.",
     "introCopy": "Skewered and grilled, spiced with a warmth that leans more toward cinnamon than heat.",
-    "servings": 4, "prepMinutes": 20, "cookMinutes": 12,
-    "difficulty": "MEDIUM", "cuisine": "Middle Eastern", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKEND", "batchFriendly": true,
-    "attributes": ["HIGH_PROTEIN", "LOW_CARB"], "heroColor": "#7A3E2E",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 12,
+    "difficulty": "MEDIUM",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "LOW_CARB"
+    ],
+    "heroColor": "#7A3E2E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1.5", "unit": "lb", "item": "ground lamb", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "1", "unit": null, "item": "onion", "prepNote": "grated and squeezed dry", "optional": false},
-      {"component": null, "order": 3, "quantity": "1/2", "unit": "cup", "item": "parsley", "prepNote": "minced", "optional": false},
-      {"component": null, "order": 4, "quantity": "1.5", "unit": "tsp", "item": "cumin", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "1/2", "unit": "tsp", "item": "cinnamon", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "4", "unit": null, "item": "skewers", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "lb",
+        "item": "ground lamb",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "grated and squeezed dry",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "parsley",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1.5",
+        "unit": "tsp",
+        "item": "cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "4",
+        "unit": null,
+        "item": "skewers",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Mix lamb, onion, parsley, and spices thoroughly by hand.", "durationMinutes": 8},
-      {"order": 2, "text": "Shape into logs around skewers, chilling 15 minutes if the mixture feels soft.", "durationMinutes": 15},
-      {"order": 3, "text": "Grill or sear over high heat, turning to brown all sides.", "durationMinutes": 10},
-      {"order": 4, "text": "Rest a few minutes before serving.", "durationMinutes": 3}
+      {
+        "order": 1,
+        "text": "Mix lamb, onion, parsley, and spices thoroughly by hand.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Shape into logs around skewers, chilling 15 minutes if the mixture feels soft.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Grill or sear over high heat, turning to brown all sides.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Rest a few minutes before serving.",
+        "durationMinutes": 3
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Red meat", "weight": 90}, {"foodGroup": "Alliums", "weight": 30},
-      {"foodGroup": "Warm spices", "weight": 35}, {"foodGroup": "Fresh herbs", "weight": 20}
+      {
+        "foodGroup": "Red meat",
+        "weight": 90
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      }
     ],
-    "dietTags": ["Low-carb", "Gluten-free", "High-protein", "Paleo"],
-    "allergenTags": []
+    "dietTags": [
+      "Low-carb",
+      "Gluten-free",
+      "High-protein",
+      "Paleo"
+    ],
+    "allergenTags": [],
+    "imageUrl": "/recipe-photos/lamb-kofta.jpg",
+    "imageCredit": "Anagoria / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "turkey-chili",
@@ -592,31 +2361,125 @@
     "shortDescription": "Ground turkey, kidney beans, tomato, chili powder, bell pepper",
     "note": "Let it simmer uncovered for the last stretch — that's what thickens it instead of leaving it soupy.",
     "introCopy": "A weeknight staple that's easy to double for the freezer. Leaner than beef chili but doesn't skimp on flavor if the spices are generous.",
-    "servings": 6, "prepMinutes": 15, "cookMinutes": 35,
-    "difficulty": "EASY", "cuisine": "American", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": true,
-    "attributes": ["MAKE_AHEAD", "HIGH_PROTEIN"], "heroColor": "#A8422E",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 35,
+    "difficulty": "EASY",
+    "cuisine": "American",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#A8422E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1.5", "unit": "lb", "item": "ground turkey", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "2", "unit": "cans", "item": "kidney beans", "prepNote": "drained", "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": "can", "item": "crushed tomatoes", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": null, "item": "bell pepper", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 5, "quantity": "2", "unit": "tbsp", "item": "chili powder", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "1", "unit": null, "item": "onion", "prepNote": "diced", "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "lb",
+        "item": "ground turkey",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "cans",
+        "item": "kidney beans",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "can",
+        "item": "crushed tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "bell pepper",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "chili powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Brown turkey with onion and bell pepper, breaking it up as it cooks.", "durationMinutes": 10},
-      {"order": 2, "text": "Stir in chili powder and cook 1 minute until fragrant.", "durationMinutes": 1},
-      {"order": 3, "text": "Add tomatoes and beans, bringing to a simmer.", "durationMinutes": 4},
-      {"order": 4, "text": "Simmer uncovered, stirring occasionally, until thickened.", "durationMinutes": 20}
+      {
+        "order": 1,
+        "text": "Brown turkey with onion and bell pepper, breaking it up as it cooks.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Stir in chili powder and cook 1 minute until fragrant.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 3,
+        "text": "Add tomatoes and beans, bringing to a simmer.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 4,
+        "text": "Simmer uncovered, stirring occasionally, until thickened.",
+        "durationMinutes": 20
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Poultry", "weight": 60}, {"foodGroup": "Legumes & pulses", "weight": 55},
-      {"foodGroup": "Nightshades", "weight": 45}, {"foodGroup": "Alliums", "weight": 25}
+      {
+        "foodGroup": "Poultry",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 25
+      }
     ],
-    "dietTags": ["Gluten-free", "High-protein"],
-    "allergenTags": []
+    "dietTags": [
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": [],
+    "imageUrl": "/recipe-photos/turkey-chili.jpg",
+    "imageCredit": "Wikimedia Commons contributor / Wikimedia Commons (CC0)"
   },
   {
     "slug": "sheet-pan-salmon-and-asparagus",
@@ -624,30 +2487,121 @@
     "shortDescription": "Salmon, asparagus, lemon, olive oil, dill",
     "note": "Add the asparagus to the pan a few minutes after the salmon starts — it cooks faster and turns to mush if it goes in at the same time.",
     "introCopy": "One pan, minimal cleanup, and on the table in under thirty minutes.",
-    "servings": 4, "prepMinutes": 10, "cookMinutes": 18,
-    "difficulty": "EASY", "cuisine": "American", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["UNDER_30", "LOW_CARB"], "heroColor": "#E0A05C",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 18,
+    "difficulty": "EASY",
+    "cuisine": "American",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "LOW_CARB"
+    ],
+    "heroColor": "#E0A05C",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "4", "unit": null, "item": "salmon fillets", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "1", "unit": "bunch", "item": "asparagus", "prepNote": "trimmed", "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": null, "item": "lemon", "prepNote": "sliced", "optional": false},
-      {"component": null, "order": 4, "quantity": "3", "unit": "tbsp", "item": "olive oil", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "2", "unit": "tbsp", "item": "dill", "prepNote": "chopped", "optional": true}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "salmon fillets",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "asparagus",
+        "prepNote": "trimmed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "dill",
+        "prepNote": "chopped",
+        "optional": true
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Preheat oven to 425°F. Place salmon on a sheet pan, drizzle with oil, season.", "durationMinutes": 5},
-      {"order": 2, "text": "Roast salmon alone for 4 minutes.", "durationMinutes": 4},
-      {"order": 3, "text": "Add asparagus and lemon slices to the pan and continue roasting.", "durationMinutes": 10},
-      {"order": 4, "text": "Scatter with dill and serve.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Preheat oven to 425°F. Place salmon on a sheet pan, drizzle with oil, season.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Roast salmon alone for 4 minutes.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 3,
+        "text": "Add asparagus and lemon slices to the pan and continue roasting.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Scatter with dill and serve.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Oily fish", "weight": 85}, {"foodGroup": "Cruciferous veg", "weight": 30},
-      {"foodGroup": "Fruit", "weight": 20}, {"foodGroup": "Fresh herbs", "weight": 15}
+      {
+        "foodGroup": "Oily fish",
+        "weight": 85
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      }
     ],
-    "dietTags": ["Pescatarian", "Gluten-free", "Low-carb", "High-protein", "Mediterranean"],
-    "allergenTags": ["Fish"]
+    "dietTags": [
+      "Pescatarian",
+      "Gluten-free",
+      "Low-carb",
+      "High-protein",
+      "Mediterranean"
+    ],
+    "allergenTags": [
+      "Fish"
+    ],
+    "imageUrl": "/recipe-photos/sheet-pan-salmon-and-asparagus.jpg",
+    "imageCredit": "HaJunkiyada / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "classic-smash-burger",
@@ -655,30 +2609,116 @@
     "shortDescription": "Ground beef, American cheese, brioche bun, pickles",
     "note": "Smash the patty within seconds of it hitting the pan — waiting even a minute means it won't get the crust.",
     "introCopy": "Thin, crispy-edged patties beat a thick one for flavor almost every time. Two per bun if you're hungry.",
-    "servings": 4, "prepMinutes": 10, "cookMinutes": 10,
-    "difficulty": "EASY", "cuisine": "American", "mealSlot": ["LUNCH", "DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["UNDER_30"], "heroColor": "#8A3E2E",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 10,
+    "difficulty": "EASY",
+    "cuisine": "American",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30"
+    ],
+    "heroColor": "#8A3E2E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1.25", "unit": "lb", "item": "ground beef", "prepNote": "80/20", "optional": false},
-      {"component": null, "order": 2, "quantity": "4", "unit": null, "item": "brioche buns", "prepNote": null, "optional": false},
-      {"component": null, "order": 3, "quantity": "4", "unit": "slices", "item": "American cheese", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": null, "item": "onion", "prepNote": "thinly sliced", "optional": false},
-      {"component": null, "order": 5, "quantity": "1/4", "unit": "cup", "item": "pickles", "prepNote": "sliced", "optional": true}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.25",
+        "unit": "lb",
+        "item": "ground beef",
+        "prepNote": "80/20",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": null,
+        "item": "brioche buns",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": "slices",
+        "item": "American cheese",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "pickles",
+        "prepNote": "sliced",
+        "optional": true
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Divide beef into loose balls, season, and place on a screaming hot griddle.", "durationMinutes": 2},
-      {"order": 2, "text": "Smash flat immediately with a spatula and let sear undisturbed.", "durationMinutes": 3},
-      {"order": 3, "text": "Flip, add cheese, and cook until melted.", "durationMinutes": 2},
-      {"order": 4, "text": "Build burgers on toasted buns with onion and pickles.", "durationMinutes": 3}
+      {
+        "order": 1,
+        "text": "Divide beef into loose balls, season, and place on a screaming hot griddle.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Smash flat immediately with a spatula and let sear undisturbed.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Flip, add cheese, and cook until melted.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Build burgers on toasted buns with onion and pickles.",
+        "durationMinutes": 3
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Red meat", "weight": 85}, {"foodGroup": "Dairy", "weight": 35},
-      {"foodGroup": "Refined grains", "weight": 30}, {"foodGroup": "Alliums", "weight": 20}
+      {
+        "foodGroup": "Red meat",
+        "weight": 85
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      }
     ],
     "dietTags": [],
-    "allergenTags": ["Wheat/gluten", "Milk"]
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk"
+    ],
+    "imageUrl": "/recipe-photos/classic-smash-burger.jpg",
+    "imageCredit": "Andy Li / Wikimedia Commons (CC0)"
   },
   {
     "slug": "mapo-tofu",
@@ -686,32 +2726,131 @@
     "shortDescription": "Silken tofu, doubanjiang, sichuan peppercorn, scallion",
     "note": "Slide the tofu in gently and stop stirring hard once it's added — silken tofu breaks apart if you're rough with it.",
     "introCopy": "Numbing, savory, and fast once the sauce base is built. The vegetable version below skips the usual ground pork.",
-    "servings": 4, "prepMinutes": 10, "cookMinutes": 15,
-    "difficulty": "MEDIUM", "cuisine": "Chinese", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["UNDER_30"], "heroColor": "#B23A32",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "Chinese",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30"
+    ],
+    "heroColor": "#B23A32",
     "allergenReviewStatus": "UNVERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "14", "unit": "oz", "item": "silken tofu", "prepNote": "cubed", "optional": false},
-      {"component": null, "order": 2, "quantity": "2", "unit": "tbsp", "item": "doubanjiang", "prepNote": "fermented bean paste", "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": "tsp", "item": "sichuan peppercorn", "prepNote": "ground", "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": "cup", "item": "vegetable stock", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "2", "unit": null, "item": "scallions", "prepNote": "sliced", "optional": false},
-      {"component": null, "order": 6, "quantity": "1", "unit": "tbsp", "item": "cornstarch slurry", "prepNote": "to thicken", "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "14",
+        "unit": "oz",
+        "item": "silken tofu",
+        "prepNote": "cubed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "doubanjiang",
+        "prepNote": "fermented bean paste",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "sichuan peppercorn",
+        "prepNote": "ground",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "vegetable stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "cornstarch slurry",
+        "prepNote": "to thicken",
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Fry doubanjiang in oil until the oil turns red and fragrant.", "durationMinutes": 2},
-      {"order": 2, "text": "Add stock and bring to a simmer.", "durationMinutes": 3},
-      {"order": 3, "text": "Gently slide in tofu cubes and simmer 5 minutes without stirring hard.", "durationMinutes": 5},
-      {"order": 4, "text": "Stir in cornstarch slurry to thicken slightly.", "durationMinutes": 2},
-      {"order": 5, "text": "Top with scallions and ground Sichuan peppercorn.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Fry doubanjiang in oil until the oil turns red and fragrant.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Add stock and bring to a simmer.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Gently slide in tofu cubes and simmer 5 minutes without stirring hard.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Stir in cornstarch slurry to thicken slightly.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Top with scallions and ground Sichuan peppercorn.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Soy & tofu", "weight": 85}, {"foodGroup": "Fermented foods", "weight": 40},
-      {"foodGroup": "Chilli & heat", "weight": 40}, {"foodGroup": "Alliums", "weight": 15}
+      {
+        "foodGroup": "Soy & tofu",
+        "weight": 85
+      },
+      {
+        "foodGroup": "Fermented foods",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      }
     ],
-    "dietTags": ["Vegan", "Vegetarian"],
-    "allergenTags": ["Soy"]
+    "dietTags": [
+      "Vegan",
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Soy"
+    ],
+    "imageUrl": "/recipe-photos/mapo-tofu.jpg",
+    "imageCredit": "Archon6812 / Wikimedia Commons (CC BY-SA 3.0)"
   },
   {
     "slug": "kung-pao-chicken",
@@ -719,31 +2858,126 @@
     "shortDescription": "Chicken, peanuts, dried chili, scallion, sichuan peppercorn",
     "note": "Marinate the chicken in a little cornstarch and soy — it's the classic velveting trick that keeps stir-fried chicken tender.",
     "introCopy": "Sweet, savory, and numbing all at once. Toast the peanuts separately for the best crunch.",
-    "servings": 4, "prepMinutes": 20, "cookMinutes": 12,
-    "difficulty": "MEDIUM", "cuisine": "Chinese", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["HIGH_PROTEIN"], "heroColor": "#A8332E",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 12,
+    "difficulty": "MEDIUM",
+    "cuisine": "Chinese",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#A8332E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1.5", "unit": "lb", "item": "chicken thigh", "prepNote": "cubed", "optional": false},
-      {"component": null, "order": 2, "quantity": "1/2", "unit": "cup", "item": "roasted peanuts", "prepNote": null, "optional": false},
-      {"component": null, "order": 3, "quantity": "8", "unit": null, "item": "dried red chilies", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "2", "unit": "tbsp", "item": "soy sauce", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "1", "unit": "tbsp", "item": "black vinegar", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "3", "unit": null, "item": "scallions", "prepNote": "cut into pieces", "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "lb",
+        "item": "chicken thigh",
+        "prepNote": "cubed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "roasted peanuts",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "8",
+        "unit": null,
+        "item": "dried red chilies",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "soy sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "black vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "cut into pieces",
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Marinate chicken briefly in soy sauce and a little cornstarch.", "durationMinutes": 10},
-      {"order": 2, "text": "Stir-fry dried chilies in oil until fragrant and dark.", "durationMinutes": 2},
-      {"order": 3, "text": "Add chicken and stir-fry until cooked through.", "durationMinutes": 6},
-      {"order": 4, "text": "Add vinegar, scallions, and peanuts, tossing to combine.", "durationMinutes": 2}
+      {
+        "order": 1,
+        "text": "Marinate chicken briefly in soy sauce and a little cornstarch.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Stir-fry dried chilies in oil until fragrant and dark.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Add chicken and stir-fry until cooked through.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 4,
+        "text": "Add vinegar, scallions, and peanuts, tossing to combine.",
+        "durationMinutes": 2
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Poultry", "weight": 75}, {"foodGroup": "Nuts & seeds", "weight": 40},
-      {"foodGroup": "Chilli & heat", "weight": 45}, {"foodGroup": "Alliums", "weight": 20}
+      {
+        "foodGroup": "Poultry",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      }
     ],
-    "dietTags": ["High-protein"],
-    "allergenTags": ["Peanuts", "Soy"]
+    "dietTags": [
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Peanuts",
+      "Soy"
+    ],
+    "imageUrl": "/recipe-photos/kung-pao-chicken.jpg",
+    "imageCredit": "Anagoria / Wikimedia Commons (CC BY 3.0)"
   },
   {
     "slug": "beef-and-broccoli",
@@ -751,30 +2985,117 @@
     "shortDescription": "Flank steak, broccoli, garlic, tamari, oyster sauce",
     "note": "Slice the beef against the grain and freeze it for 15 minutes first — makes paper-thin slices much easier.",
     "introCopy": "Faster than delivery once the beef is sliced, and a lot less salty.",
-    "servings": 4, "prepMinutes": 15, "cookMinutes": 12,
-    "difficulty": "EASY", "cuisine": "Chinese", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["UNDER_30", "HIGH_PROTEIN", "LOW_CARB"], "heroColor": "#5B7A3E",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 12,
+    "difficulty": "EASY",
+    "cuisine": "Chinese",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN",
+      "LOW_CARB"
+    ],
+    "heroColor": "#5B7A3E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1", "unit": "lb", "item": "flank steak", "prepNote": "sliced thin against the grain", "optional": false},
-      {"component": null, "order": 2, "quantity": "3", "unit": "cups", "item": "broccoli florets", "prepNote": null, "optional": false},
-      {"component": null, "order": 3, "quantity": "3", "unit": "cloves", "item": "garlic", "prepNote": "minced", "optional": false},
-      {"component": null, "order": 4, "quantity": "3", "unit": "tbsp", "item": "tamari", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "1", "unit": "tbsp", "item": "oyster sauce", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "flank steak",
+        "prepNote": "sliced thin against the grain",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "broccoli florets",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "tamari",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "oyster sauce",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Blanch broccoli briefly, then shock in cold water.", "durationMinutes": 3},
-      {"order": 2, "text": "Sear beef in a hot wok in batches, then set aside.", "durationMinutes": 4},
-      {"order": 3, "text": "Stir-fry garlic briefly, then add broccoli and sauces.", "durationMinutes": 3},
-      {"order": 4, "text": "Return beef to the wok and toss to coat.", "durationMinutes": 2}
+      {
+        "order": 1,
+        "text": "Blanch broccoli briefly, then shock in cold water.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Sear beef in a hot wok in batches, then set aside.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 3,
+        "text": "Stir-fry garlic briefly, then add broccoli and sauces.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Return beef to the wok and toss to coat.",
+        "durationMinutes": 2
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Red meat", "weight": 80}, {"foodGroup": "Cruciferous veg", "weight": 55},
-      {"foodGroup": "Alliums", "weight": 25}
+      {
+        "foodGroup": "Red meat",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 25
+      }
     ],
-    "dietTags": ["Gluten-free", "Low-carb", "High-protein"],
-    "allergenTags": ["Soy", "Shellfish"]
+    "dietTags": [
+      "Gluten-free",
+      "Low-carb",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Soy",
+      "Shellfish"
+    ],
+    "imageUrl": "/recipe-photos/beef-and-broccoli.jpg",
+    "imageCredit": "jeffreyw / Wikimedia Commons (CC BY 2.0)"
   },
   {
     "slug": "ratatouille",
@@ -782,31 +3103,125 @@
     "shortDescription": "Eggplant, zucchini, tomato, bell pepper, herbes de provence",
     "note": "Cook each vegetable separately before combining — it's slower, but it's the only way to keep them from turning to mush.",
     "introCopy": "A slow Sunday project that rewards patience. Just as good, maybe better, the next day.",
-    "servings": 6, "prepMinutes": 30, "cookMinutes": 50,
-    "difficulty": "INVOLVED", "cuisine": "French", "mealSlot": ["DINNER"],
-    "effortTier": "PROJECT", "batchFriendly": true,
-    "attributes": ["EAT_MORE_VEG", "MAKE_AHEAD"], "heroColor": "#7A4A2E",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 50,
+    "difficulty": "INVOLVED",
+    "cuisine": "French",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#7A4A2E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1", "unit": null, "item": "eggplant", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 2, "quantity": "2", "unit": null, "item": "zucchini", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 3, "quantity": "2", "unit": null, "item": "bell peppers", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 4, "quantity": "4", "unit": null, "item": "tomatoes", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 5, "quantity": "1", "unit": null, "item": "onion", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 6, "quantity": "1", "unit": "tbsp", "item": "herbes de provence", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": null,
+        "item": "eggplant",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": null,
+        "item": "zucchini",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "bell peppers",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "herbes de provence",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Sauté eggplant separately in olive oil until golden, then set aside.", "durationMinutes": 10},
-      {"order": 2, "text": "Repeat with zucchini, then with bell peppers, setting each aside separately.", "durationMinutes": 15},
-      {"order": 3, "text": "Sauté onion until soft, then add tomatoes and herbes de provence, simmering into a sauce.", "durationMinutes": 15},
-      {"order": 4, "text": "Fold all the vegetables back into the tomato sauce and simmer gently to marry the flavors.", "durationMinutes": 10}
+      {
+        "order": 1,
+        "text": "Sauté eggplant separately in olive oil until golden, then set aside.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Repeat with zucchini, then with bell peppers, setting each aside separately.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Sauté onion until soft, then add tomatoes and herbes de provence, simmering into a sauce.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Fold all the vegetables back into the tomato sauce and simmer gently to marry the flavors.",
+        "durationMinutes": 10
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Nightshades", "weight": 75}, {"foodGroup": "Alliums", "weight": 30},
-      {"foodGroup": "Fresh herbs", "weight": 20}
+      {
+        "foodGroup": "Nightshades",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      }
     ],
-    "dietTags": ["Vegan", "Vegetarian", "Gluten-free", "Mediterranean", "Whole30", "Paleo"],
-    "allergenTags": []
+    "dietTags": [
+      "Vegan",
+      "Vegetarian",
+      "Gluten-free",
+      "Mediterranean",
+      "Whole30",
+      "Paleo"
+    ],
+    "allergenTags": [],
+    "imageUrl": "/recipe-photos/ratatouille.jpg",
+    "imageCredit": "El Nuevo Doge / Wikimedia Commons (CC0)"
   },
   {
     "slug": "coq-au-vin",
@@ -814,32 +3229,132 @@
     "shortDescription": "Chicken thighs, red wine, bacon, mushroom, pearl onion",
     "note": "Use a wine you'd actually drink — it reduces down to nearly a third of its volume, so any flaws concentrate too.",
     "introCopy": "A weekend project, not a weeknight one. The braise does most of the work once it's in the oven.",
-    "servings": 6, "prepMinutes": 30, "cookMinutes": 90,
-    "difficulty": "INVOLVED", "cuisine": "French", "mealSlot": ["DINNER"],
-    "effortTier": "PROJECT", "batchFriendly": true,
-    "attributes": ["MAKE_AHEAD", "HIGH_PROTEIN"], "heroColor": "#5A2E3E",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 90,
+    "difficulty": "INVOLVED",
+    "cuisine": "French",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#5A2E3E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "8", "unit": null, "item": "chicken thighs", "prepNote": "bone-in", "optional": false},
-      {"component": null, "order": 2, "quantity": "6", "unit": "oz", "item": "bacon", "prepNote": "diced", "optional": false},
-      {"component": null, "order": 3, "quantity": "2", "unit": "cups", "item": "red wine", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": "cup", "item": "pearl onions", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "8", "unit": "oz", "item": "mushrooms", "prepNote": "quartered", "optional": false},
-      {"component": null, "order": 6, "quantity": "2", "unit": "tbsp", "item": "flour", "prepNote": "for thickening, use cornstarch for gluten-free", "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "8",
+        "unit": null,
+        "item": "chicken thighs",
+        "prepNote": "bone-in",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "6",
+        "unit": "oz",
+        "item": "bacon",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "red wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "pearl onions",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "8",
+        "unit": "oz",
+        "item": "mushrooms",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "flour",
+        "prepNote": "for thickening, use cornstarch for gluten-free",
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Render bacon in a Dutch oven, then brown chicken in the fat and set both aside.", "durationMinutes": 15},
-      {"order": 2, "text": "Sauté pearl onions and mushrooms until browned.", "durationMinutes": 10},
-      {"order": 3, "text": "Stir in flour, then add wine, scraping up browned bits.", "durationMinutes": 5},
-      {"order": 4, "text": "Return chicken and bacon to the pot and braise, covered, in a 325°F oven.", "durationMinutes": 55},
-      {"order": 5, "text": "Uncover and reduce the sauce on the stovetop until it coats a spoon.", "durationMinutes": 5}
+      {
+        "order": 1,
+        "text": "Render bacon in a Dutch oven, then brown chicken in the fat and set both aside.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Sauté pearl onions and mushrooms until browned.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Stir in flour, then add wine, scraping up browned bits.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Return chicken and bacon to the pot and braise, covered, in a 325°F oven.",
+        "durationMinutes": 55
+      },
+      {
+        "order": 5,
+        "text": "Uncover and reduce the sauce on the stovetop until it coats a spoon.",
+        "durationMinutes": 5
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Poultry", "weight": 75}, {"foodGroup": "Pork", "weight": 35},
-      {"foodGroup": "Mushrooms", "weight": 40}, {"foodGroup": "Alliums", "weight": 30}
+      {
+        "foodGroup": "Poultry",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Mushrooms",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 30
+      }
     ],
-    "dietTags": ["High-protein"],
-    "allergenTags": ["Wheat/gluten", "Sulphites"]
+    "dietTags": [
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Sulphites"
+    ],
+    "imageUrl": "/recipe-photos/coq-au-vin.jpg",
+    "imageCredit": "Breville USA / Wikimedia Commons (CC BY 2.0)"
   },
   {
     "slug": "salade-nicoise",
@@ -847,30 +3362,122 @@
     "shortDescription": "Seared tuna, green beans, egg, olives, potato",
     "note": "Sear the tuna hard and fast — a rare center is traditional and it dries out quickly past that point.",
     "introCopy": "A composed salad, not a tossed one — each ingredient gets its own spot on the plate.",
-    "servings": 4, "prepMinutes": 25, "cookMinutes": 15,
-    "difficulty": "MEDIUM", "cuisine": "French", "mealSlot": ["LUNCH", "DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["LOW_CARB", "UNDER_30"], "heroColor": "#2C5A87",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "LOW_CARB",
+      "UNDER_30"
+    ],
+    "heroColor": "#2C5A87",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1", "unit": "lb", "item": "tuna steak", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "1", "unit": "cup", "item": "green beans", "prepNote": "trimmed", "optional": false},
-      {"component": null, "order": 3, "quantity": "4", "unit": null, "item": "eggs", "prepNote": "soft-boiled", "optional": false},
-      {"component": null, "order": 4, "quantity": "1/2", "unit": "cup", "item": "niçoise olives", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "1", "unit": "lb", "item": "baby potatoes", "prepNote": "boiled", "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "tuna steak",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "green beans",
+        "prepNote": "trimmed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "soft-boiled",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "niçoise olives",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "baby potatoes",
+        "prepNote": "boiled",
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Boil potatoes until tender, then set aside to cool slightly.", "durationMinutes": 15},
-      {"order": 2, "text": "Blanch green beans until bright and just tender.", "durationMinutes": 3},
-      {"order": 3, "text": "Sear tuna very hot, about 90 seconds per side for a rare center.", "durationMinutes": 3},
-      {"order": 4, "text": "Slice tuna and arrange everything on a platter with olives and soft-boiled eggs.", "durationMinutes": 5}
+      {
+        "order": 1,
+        "text": "Boil potatoes until tender, then set aside to cool slightly.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Blanch green beans until bright and just tender.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Sear tuna very hot, about 90 seconds per side for a rare center.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Slice tuna and arrange everything on a platter with olives and soft-boiled eggs.",
+        "durationMinutes": 5
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "White fish", "weight": 75}, {"foodGroup": "Eggs", "weight": 35},
-      {"foodGroup": "Starchy veg", "weight": 30}, {"foodGroup": "Cruciferous veg", "weight": 20}
+      {
+        "foodGroup": "White fish",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 20
+      }
     ],
-    "dietTags": ["Pescatarian", "Gluten-free", "Low-carb", "Mediterranean"],
-    "allergenTags": ["Fish", "Eggs"]
+    "dietTags": [
+      "Pescatarian",
+      "Gluten-free",
+      "Low-carb",
+      "Mediterranean"
+    ],
+    "allergenTags": [
+      "Fish",
+      "Eggs"
+    ],
+    "imageUrl": "/recipe-photos/salade-nicoise.jpg",
+    "imageCredit": "cyclonebill from Copenhagen, Denmark / Wikimedia Commons (CC BY-SA 2.0)"
   },
   {
     "slug": "bibimbap",
@@ -878,31 +3485,129 @@
     "shortDescription": "Rice, spinach, carrot, mushroom, fried egg, gochujang",
     "note": "Cook each vegetable separately and season individually — that's the difference between bibimbap and a stir-fry over rice.",
     "introCopy": "Mix everything together at the table right before eating, not before. Half the appeal is the reveal.",
-    "servings": 4, "prepMinutes": 25, "cookMinutes": 20,
-    "difficulty": "MEDIUM", "cuisine": "Korean", "mealSlot": ["LUNCH", "DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["EAT_MORE_VEG"], "heroColor": "#C97B2E",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "Korean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#C97B2E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "3", "unit": "cups", "item": "cooked rice", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "1", "unit": "bunch", "item": "spinach", "prepNote": "blanched", "optional": false},
-      {"component": null, "order": 3, "quantity": "1", "unit": null, "item": "carrot", "prepNote": "julienned and sautéed", "optional": false},
-      {"component": null, "order": 4, "quantity": "1", "unit": "cup", "item": "shiitake mushrooms", "prepNote": "sautéed", "optional": false},
-      {"component": null, "order": 5, "quantity": "4", "unit": null, "item": "eggs", "prepNote": "fried sunny-side up", "optional": false},
-      {"component": null, "order": 6, "quantity": "3", "unit": "tbsp", "item": "gochujang", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "cooked rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "spinach",
+        "prepNote": "blanched",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "carrot",
+        "prepNote": "julienned and sautéed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "shiitake mushrooms",
+        "prepNote": "sautéed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "fried sunny-side up",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "gochujang",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Season spinach with sesame oil and a pinch of salt after blanching.", "durationMinutes": 3},
-      {"order": 2, "text": "Sauté carrot and mushrooms separately, seasoning each lightly.", "durationMinutes": 10},
-      {"order": 3, "text": "Fry eggs sunny-side up with crisp edges.", "durationMinutes": 4},
-      {"order": 4, "text": "Arrange rice in bowls topped with each vegetable in its own section, egg on top, gochujang on the side.", "durationMinutes": 5}
+      {
+        "order": 1,
+        "text": "Season spinach with sesame oil and a pinch of salt after blanching.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Sauté carrot and mushrooms separately, seasoning each lightly.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Fry eggs sunny-side up with crisp edges.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 4,
+        "text": "Arrange rice in bowls topped with each vegetable in its own section, egg on top, gochujang on the side.",
+        "durationMinutes": 5
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Refined grains", "weight": 55}, {"foodGroup": "Leafy greens", "weight": 35},
-      {"foodGroup": "Eggs", "weight": 30}, {"foodGroup": "Mushrooms", "weight": 25}
+      {
+        "foodGroup": "Refined grains",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Mushrooms",
+        "weight": 25
+      }
     ],
-    "dietTags": ["Vegetarian", "Gluten-free"],
-    "allergenTags": ["Eggs", "Soy", "Sesame"]
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Soy",
+      "Sesame"
+    ],
+    "imageUrl": "/recipe-photos/bibimbap.jpg",
+    "imageCredit": "Cjkennedy15 / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "korean-beef-bowl",
@@ -910,31 +3615,128 @@
     "shortDescription": "Ground beef, gochujang, garlic, sesame, rice",
     "note": "Cook the beef in batches if the pan looks crowded — steaming instead of browning is the most common way this goes wrong.",
     "introCopy": "Sweet-savory ground beef that takes about as long as cooking the rice to go with it.",
-    "servings": 4, "prepMinutes": 10, "cookMinutes": 12,
-    "difficulty": "EASY", "cuisine": "Korean", "mealSlot": ["DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": true,
-    "attributes": ["UNDER_30", "HIGH_PROTEIN"], "heroColor": "#8A3E2E",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 12,
+    "difficulty": "EASY",
+    "cuisine": "Korean",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#8A3E2E",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "1.5", "unit": "lb", "item": "ground beef", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "4", "unit": "cloves", "item": "garlic", "prepNote": "minced", "optional": false},
-      {"component": null, "order": 3, "quantity": "3", "unit": "tbsp", "item": "tamari", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "2", "unit": "tbsp", "item": "brown sugar", "prepNote": null, "optional": false},
-      {"component": null, "order": 5, "quantity": "1", "unit": "tsp", "item": "sesame oil", "prepNote": null, "optional": false},
-      {"component": null, "order": 6, "quantity": "3", "unit": "cups", "item": "cooked rice", "prepNote": null, "optional": false}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "lb",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "tamari",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "brown sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "sesame oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "cooked rice",
+        "prepNote": null,
+        "optional": false
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Brown beef in a hot pan in batches so it sears rather than steams.", "durationMinutes": 8},
-      {"order": 2, "text": "Add garlic and cook until fragrant.", "durationMinutes": 1},
-      {"order": 3, "text": "Stir in tamari, brown sugar, and sesame oil, cooking until glossy.", "durationMinutes": 3},
-      {"order": 4, "text": "Serve over rice.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Brown beef in a hot pan in batches so it sears rather than steams.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Add garlic and cook until fragrant.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 3,
+        "text": "Stir in tamari, brown sugar, and sesame oil, cooking until glossy.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Serve over rice.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Red meat", "weight": 80}, {"foodGroup": "Refined grains", "weight": 45},
-      {"foodGroup": "Alliums", "weight": 25}, {"foodGroup": "Added sugar", "weight": 20}
+      {
+        "foodGroup": "Red meat",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 20
+      }
     ],
-    "dietTags": ["Gluten-free", "High-protein"],
-    "allergenTags": ["Soy", "Sesame"]
+    "dietTags": [
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Soy",
+      "Sesame"
+    ],
+    "imageUrl": "/recipe-photos/korean-beef-bowl.jpg",
+    "imageCredit": "A Healthier Michigan from Detroit, United States / Wikimedia Commons (CC BY-SA 2.0)"
   },
   {
     "slug": "kimchi-fried-rice",
@@ -942,29 +3744,120 @@
     "shortDescription": "Day-old rice, kimchi, gochujang, scallion, fried egg",
     "note": "Day-old, cold rice is non-negotiable here — fresh warm rice turns to mush the second it hits the pan.",
     "introCopy": "The kind of thing to make specifically because the kimchi jar is getting low and sour.",
-    "servings": 4, "prepMinutes": 10, "cookMinutes": 12,
-    "difficulty": "EASY", "cuisine": "Korean", "mealSlot": ["LUNCH", "DINNER"],
-    "effortTier": "WEEKNIGHT", "batchFriendly": false,
-    "attributes": ["UNDER_30", "SPEND_LESS"], "heroColor": "#B23A32",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 12,
+    "difficulty": "EASY",
+    "cuisine": "Korean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "SPEND_LESS"
+    ],
+    "heroColor": "#B23A32",
     "allergenReviewStatus": "VERIFIED",
     "ingredients": [
-      {"component": null, "order": 1, "quantity": "4", "unit": "cups", "item": "day-old rice", "prepNote": null, "optional": false},
-      {"component": null, "order": 2, "quantity": "1.5", "unit": "cups", "item": "kimchi", "prepNote": "chopped", "optional": false},
-      {"component": null, "order": 3, "quantity": "2", "unit": "tbsp", "item": "gochujang", "prepNote": null, "optional": false},
-      {"component": null, "order": 4, "quantity": "2", "unit": null, "item": "scallions", "prepNote": "sliced", "optional": false},
-      {"component": null, "order": 5, "quantity": "4", "unit": null, "item": "eggs", "prepNote": "fried", "optional": true}
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "day-old rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "kimchi",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "gochujang",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "fried",
+        "optional": true
+      }
     ],
     "steps": [
-      {"order": 1, "text": "Fry kimchi in oil until slightly caramelized at the edges.", "durationMinutes": 4},
-      {"order": 2, "text": "Add rice and gochujang, breaking up clumps and tossing to coat.", "durationMinutes": 6},
-      {"order": 3, "text": "Fry until the rice picks up some crisp bits at the bottom.", "durationMinutes": 2},
-      {"order": 4, "text": "Top each portion with a fried egg and scallions.", "durationMinutes": null}
+      {
+        "order": 1,
+        "text": "Fry kimchi in oil until slightly caramelized at the edges.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 2,
+        "text": "Add rice and gochujang, breaking up clumps and tossing to coat.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 3,
+        "text": "Fry until the rice picks up some crisp bits at the bottom.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Top each portion with a fried egg and scallions.",
+        "durationMinutes": null
+      }
     ],
     "foodGroupProfile": [
-      {"foodGroup": "Refined grains", "weight": 60}, {"foodGroup": "Fermented foods", "weight": 55},
-      {"foodGroup": "Chilli & heat", "weight": 30}, {"foodGroup": "Eggs", "weight": 20}
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Fermented foods",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 20
+      }
     ],
-    "dietTags": ["Vegetarian", "Gluten-free"],
-    "allergenTags": ["Eggs", "Soy", "Fish"]
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Soy",
+      "Fish"
+    ],
+    "imageUrl": "/recipe-photos/kimchi-fried-rice.jpg",
+    "imageCredit": "Andy Li / Wikimedia Commons (CC0)"
   }
 ]

@@ -20,6 +20,8 @@ type RecipeSeed = {
   batchFriendly: boolean;
   attributes: string[];
   heroColor: string;
+  imageUrl?: string;
+  imageCredit?: string;
   allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
   ingredients: {
     component: string | null;
@@ -76,6 +78,8 @@ async function main() {
         batchFriendly: recipe.batchFriendly,
         attributes: recipe.attributes,
         heroColor: recipe.heroColor,
+        imageUrl: recipe.imageUrl,
+        imageCredit: recipe.imageCredit,
         allergenReviewStatus: recipe.allergenReviewStatus,
         ingredients: { create: recipe.ingredients },
         steps: { create: recipe.steps },
@@ -88,7 +92,10 @@ async function main() {
         dietTags: { connect: recipe.dietTags.map((name) => ({ name })) },
         allergenTags: { connect: recipe.allergenTags.map((name) => ({ name })) },
       },
-      update: {},
+      update: {
+        imageUrl: recipe.imageUrl,
+        imageCredit: recipe.imageCredit,
+      },
     });
   }
 

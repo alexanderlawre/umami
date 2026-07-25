@@ -84,3 +84,48 @@ with a live browser session against the local dev DB. Confirmed:
   inactive recipes, new users, vegan+peanut-allergy fixtures, ALL-diets
   matching, custom free-text allergens (fail-closed to VERIFIED), and
   interaction history being irrelevant to the hard filter.
+
+## Post-Phase-1 prototype pass (photos, admin, mobile, iOS wrapper)
+
+- **Recipe photos: one licensed photo per recipe, no user-uploaded photos.**
+  Sourced Wikimedia Commons images (public domain / CC-licensed, no account
+  needed) for all 30 recipes, added a nullable `imageUrl` (+`imageCredit`)
+  column via migration, and backfilled it via a one-off script. The
+  "let people add their own photo of the dish" idea was descoped for this
+  prototype pass to keep scope tight — no upload UI, storage, or moderation
+  exists yet.
+- **Admin is a single hidden route (`/admin`), not a separate app.** Added a
+  boolean `isAdmin` column, threaded it through the JWT/session (`auth.ts`,
+  `auth.config.ts`, `src/types/next-auth.d.ts`) so it's checked server-side,
+  and built one page with basic stats (user/recipe/interaction counts) plus
+  a recipe list with review-status and active/hidden toggles via a small
+  `PATCH /api/admin/recipes/[id]` route. No role system beyond a single
+  boolean — sufficient for one operator running a prototype.
+  **Note:** an existing session's JWT won't pick up a newly-set `isAdmin`
+  flag until the user signs out and back in, since the `jwt()` callback only
+  re-reads the DB on initial sign-in, not on every request.
+- **Mobile-first pass covered three concrete things**, not a full native
+  redesign: (1) `env(safe-area-inset-*)` padding at the `body` level (via a
+  `viewport-fit=cover` viewport export) so content clears the notch/home
+  indicator on every page, whether or not the app header is present;
+  (2) confirmed single-column-by-default layouts were already correct
+  throughout, no grid changes needed; (3) bumped every interactive control
+  below Apple's 44×44pt guideline (servings stepper, dismiss/chip-remove
+  buttons, admin toggles) and every form input below 16px font-size (which
+  otherwise triggers iOS's auto-zoom-on-focus).
+- **iOS wrapper uses Capacitor's "remote-URL" pattern, not a static bundle.**
+  Umami is a full SSR app with API routes and a Postgres-backed session, so
+  `next export` isn't viable. `capacitor.config.ts` instead points
+  `server.url` at the running Next.js server directly (`localhost` for
+  simulator dev), with `cleartext: true` and a matching `NSAppTransportSecurity`
+  exception for `localhost` in `Info.plist` (plain `http://`, not `https://`).
+  For a real device or production build, `server.url` should point at the
+  deployed HTTPS origin and the ATS exception can be dropped entirely.
+- **Xcode build had to use a DerivedData path outside `~/Desktop`.** This
+  machine has iCloud "Desktop & Documents" sync enabled, which injects a
+  `com.apple.provenance`-style extended attribute into files under Desktop
+  that trips Xcode's codesign step (`resource fork, Finder information, or
+  similar detritus not allowed`). Building with `-derivedDataPath` pointed at
+  `/tmp` instead of the default (inside the project, under synced Desktop)
+  avoided this entirely; this is a machine-local build quirk, not something
+  that affects other developers' machines or CI.

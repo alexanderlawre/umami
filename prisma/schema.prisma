@@ -189,6 +189,8 @@ model Recipe {
 
   attributes String[] @default([])
   heroColor  String
+  imageUrl   String?
+  imageCredit String?
 
   allergenReviewStatus AllergenReviewStatus @default(UNVERIFIED)
   isActive             Boolean              @default(true)

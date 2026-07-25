@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { auth } from "@/auth";
@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   description: "Four recipes. That's the whole surface.",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -34,7 +41,7 @@ export default async function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#FBFAF7] text-[#1A1D1B]">
         <AuthSessionProvider session={session}>
-          {session?.user?.onboarded && <AppHeader />}
+          {session?.user?.onboarded && <AppHeader isAdmin={session.user.isAdmin} />}
           {children}
         </AuthSessionProvider>
       </body>

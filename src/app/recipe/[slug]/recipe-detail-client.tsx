@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { logInteraction } from "@/lib/log-interaction";
 
 type Ingredient = {
@@ -35,6 +36,8 @@ export type RecipeDetail = {
   effortTier: string;
   ingredients: Ingredient[];
   steps: Step[];
+  imageUrl: string | null;
+  imageCredit: string | null;
 };
 
 function scaleQuantity(quantity: string, factor: number): string {
@@ -109,8 +112,28 @@ export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
   }
 
   return (
-    <div className="pb-28">
-      <p className="text-xs uppercase tracking-wide text-[#6B7370]">{recipe.cuisine}</p>
+    <div className="pb-content-safe">
+      {recipe.imageUrl ? (
+        <div className="-mx-6 sm:mx-0">
+          <div className="relative h-56 w-full overflow-hidden sm:rounded-2xl">
+            <Image
+              src={recipe.imageUrl}
+              alt={recipe.title}
+              fill
+              sizes="(min-width: 640px) 42rem, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+          {recipe.imageCredit && (
+            <p className="mt-1 px-6 text-right text-[10px] text-[#6B7370] sm:px-0">
+              Photo: {recipe.imageCredit}
+            </p>
+          )}
+        </div>
+      ) : null}
+
+      <p className="mt-4 text-xs uppercase tracking-wide text-[#6B7370]">{recipe.cuisine}</p>
       <h1 className="mt-1 text-2xl font-bold text-[#1A1D1B]">{recipe.title}</h1>
       <p className="mt-2 text-sm text-[#1A1D1B]">{recipe.introCopy}</p>
       <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.note}</p>
@@ -129,7 +152,7 @@ export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setServings((s) => Math.max(1, s - 1))}
-              className="h-7 w-7 rounded-full border border-[#E8E6E0] text-sm"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E8E6E0] text-base"
               aria-label="Decrease servings"
             >
               −
@@ -137,7 +160,7 @@ export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
             <span className="text-sm text-[#1A1D1B]">{servings} servings</span>
             <button
               onClick={() => setServings((s) => s + 1)}
-              className="h-7 w-7 rounded-full border border-[#E8E6E0] text-sm"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E8E6E0] text-base"
               aria-label="Increase servings"
             >
               +
@@ -187,10 +210,10 @@ export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
         </ol>
       </section>
 
-      <div className="fixed inset-x-0 bottom-0 flex items-center justify-center gap-3 border-t border-[#E8E6E0] bg-[#FBFAF7] p-4">
+      <div className="fixed inset-x-0 bottom-0 flex items-center justify-center gap-3 border-t border-[#E8E6E0] bg-[#FBFAF7] px-4 pt-4 pb-safe-4">
         <button
           onClick={toggleStar}
-          className={`rounded-xl border px-4 py-2 text-sm font-medium ${
+          className={`rounded-xl border px-4 py-3 text-sm font-medium ${
             starred
               ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
               : "border-[#E8E6E0] text-[#1A1D1B]"
@@ -201,7 +224,7 @@ export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
         <button
           onClick={handleCook}
           disabled={cooking}
-          className="rounded-xl bg-[#1F5F45] px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+          className="rounded-xl bg-[#1F5F45] px-4 py-3 text-sm font-medium text-white disabled:opacity-50"
         >
           {cooking ? "Logging..." : "I cooked this"}
         </button>
@@ -209,7 +232,7 @@ export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
 
       {showCosign && (
         <div className="fixed inset-0 flex items-end justify-center bg-black/30 sm:items-center">
-          <div className="w-full max-w-sm rounded-t-2xl bg-white p-5 sm:rounded-2xl">
+          <div className="w-full max-w-sm rounded-t-2xl bg-white px-5 pt-5 pb-safe-5 sm:rounded-2xl">
             <h3 className="text-lg font-semibold text-[#1A1D1B]">Nice cooking!</h3>
             <p className="mt-1 text-sm text-[#6B7370]">
               Want to leave a note about how it went?
@@ -218,19 +241,19 @@ export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
               value={cosignNote}
               onChange={(e) => setCosignNote(e.target.value)}
               rows={3}
-              className="mt-3 w-full rounded-xl border border-[#E8E6E0] p-2 text-sm"
+              className="mt-3 w-full rounded-xl border border-[#E8E6E0] p-2 text-base"
               placeholder="Optional note..."
             />
             <div className="mt-4 flex justify-end gap-2">
               <button
                 onClick={() => submitCosign(false)}
-                className="rounded-xl border border-[#E8E6E0] px-4 py-2 text-sm text-[#1A1D1B]"
+                className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm text-[#1A1D1B]"
               >
                 Skip
               </button>
               <button
                 onClick={() => submitCosign(true)}
-                className="rounded-xl bg-[#1F5F45] px-4 py-2 text-sm font-medium text-white"
+                className="rounded-xl bg-[#1F5F45] px-4 py-3 text-sm font-medium text-white"
               >
                 Share cosign
               </button>

@@ -8,5 +8,8 @@ export function proxy(...args: Parameters<typeof auth>) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+  // Recipe photos live under public/recipe-photos and must be reachable both
+  // directly and via Next's image optimizer (which fetches the local file
+  // through this same middleware chain) without requiring a session.
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|recipe-photos).*)"],
 };
