@@ -16,22 +16,22 @@
   {
     "slug": "baked-ziti",
     "title": "Baked Ziti",
-    "query": "Baked Ziti food dish",
-    "candidatesConsidered": 2,
+    "query": "Baked Ziti",
+    "candidatesConsidered": 6,
     "chosen": {
-      "fileTitle": "File:Baked Ziti.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Baked_Ziti.jpg",
-      "width": 800,
-      "height": 531,
-      "license": "CC BY 2.0",
-      "artist": "Lili from NY, United States"
+      "fileTitle": "File:Baked Ziti and breadsticks, Fazoli's.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Baked_Ziti_and_breadsticks%2C_Fazoli%27s.jpg",
+      "width": 1536,
+      "height": 2048,
+      "license": "CC BY-SA 4.0",
+      "artist": "Michael Rivera"
     }
   },
   {
     "slug": "chicken-piccata",
     "title": "Chicken Piccata",
-    "query": "Chicken Piccata",
-    "candidatesConsidered": 6,
+    "query": "chicken piccata plate lemon capers",
+    "candidatesConsidered": 1,
     "chosen": {
       "fileTitle": "File:Chicken piccata made with fresh lemons and jarred capers.jpg",
       "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Chicken_piccata_made_with_fresh_lemons_and_jarred_capers.jpg",
@@ -58,7 +58,7 @@
   {
     "slug": "chicken-tinga-tacos",
     "title": "Chicken Tinga Tacos",
-    "query": "Chicken Tinga Tacos",
+    "query": "tinga de pollo tacos",
     "candidatesConsidered": 3,
     "chosen": {
       "fileTitle": "File:El Pavo Real Lunch Chicken Tinga Tacos.jpg",
@@ -86,15 +86,15 @@
   {
     "slug": "miso-glazed-salmon",
     "title": "Miso-Glazed Salmon",
-    "query": "Miso-Glazed Salmon",
-    "candidatesConsidered": 1,
+    "query": "Miso Salmon",
+    "candidatesConsidered": 6,
     "chosen": {
-      "fileTitle": "File:Roasted Miso-Glazed Salmon.png",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Roasted_Miso-Glazed_Salmon.png",
-      "width": 1092,
-      "height": 680,
+      "fileTitle": "File:Liat Portal for Foodie Disorder - Oven-baked teriyaki salmon with vegetables.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Liat_Portal_for_Foodie_Disorder_-_Oven-baked_teriyaki_salmon_with_vegetables.jpg",
+      "width": 3024,
+      "height": 4032,
       "license": "CC BY-SA 4.0",
-      "artist": "Kittycataclysm"
+      "artist": "Liat Portal for Foodie Disorder"
     }
   },
   {
@@ -142,43 +142,43 @@
   {
     "slug": "butter-chicken",
     "title": "Butter Chicken",
-    "query": "Butter Chicken food dish",
-    "candidatesConsidered": 8,
+    "query": "butter chicken curry naan",
+    "candidatesConsidered": 6,
     "chosen": {
-      "fileTitle": "File:Chicken butter masala.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Chicken_butter_masala.jpg",
-      "width": 3024,
-      "height": 4032,
-      "license": "CC BY-SA 4.0",
-      "artist": "Marajozkee"
+      "fileTitle": "File:Butter chicken and naan chicken.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Butter_chicken_and_naan_chicken.jpg",
+      "width": 960,
+      "height": 1280,
+      "license": "CC0",
+      "artist": "Rajalakshmi duraikathiresan"
     }
   },
   {
     "slug": "saag-paneer",
     "title": "Saag Paneer",
-    "query": "Saag Paneer",
-    "candidatesConsidered": 6,
+    "query": "palak paneer curry dish",
+    "candidatesConsidered": 3,
     "chosen": {
-      "fileTitle": "File:Saag paneer.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Saag_paneer.jpg",
-      "width": 3648,
-      "height": 2736,
-      "license": "CC BY-SA 2.0",
-      "artist": "Jeff Warren"
+      "fileTitle": "File:Spinach Paneer Curry - Kolkata 2011-02-10 0972.JPG",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Spinach_Paneer_Curry_-_Kolkata_2011-02-10_0972.JPG",
+      "width": 4288,
+      "height": 2848,
+      "license": "CC BY 3.0",
+      "artist": "Biswarup Ganguly"
     }
   },
   {
     "slug": "vegetable-green-curry",
     "title": "Vegetable Green Curry",
-    "query": "Thai green curry vegetables",
-    "candidatesConsidered": 6,
+    "query": "Thai green curry vegetables bowl",
+    "candidatesConsidered": 1,
     "chosen": {
-      "fileTitle": "File:Vegetable in thai green curry at lunch of WCI 2023 Day-1.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Vegetable_in_thai_green_curry_at_lunch_of_WCI_2023_Day-1.jpg",
-      "width": 6000,
-      "height": 4000,
+      "fileTitle": "File:Thai Green Curry with Rice.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Thai_Green_Curry_with_Rice.jpg",
+      "width": 4000,
+      "height": 6000,
       "license": "CC BY-SA 4.0",
-      "artist": "Wasiul Bahar"
+      "artist": "Kenamparo"
     }
   },
   {
@@ -212,15 +212,15 @@
   {
     "slug": "baked-falafel-bowl",
     "title": "Baked Falafel Bowl",
-    "query": "falafel bowl",
-    "candidatesConsidered": 6,
+    "query": "falafel bowl plate hummus",
+    "candidatesConsidered": 1,
     "chosen": {
-      "fileTitle": "File:Bowl of falafel.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Bowl_of_falafel.jpg",
-      "width": 3024,
-      "height": 4032,
+      "fileTitle": "File:Pesto fettucine and a mezze bowl at Hons All-Day Dining, Le Press, Hazratganj, Lucknow (2025-08-03).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Pesto_fettucine_and_a_mezze_bowl_at_Hons_All-Day_Dining%2C_Le_Press%2C_Hazratganj%2C_Lucknow_%282025-08-03%29.jpg",
+      "width": 4096,
+      "height": 3072,
       "license": "CC BY-SA 4.0",
-      "artist": "EvanProdromou"
+      "artist": "Contrapunctus-1"
     }
   },
   {
@@ -254,15 +254,15 @@
   {
     "slug": "turkey-chili",
     "title": "Turkey Chili",
-    "query": "manual override (chili con carne)",
+    "query": "Turkey Chili",
     "candidatesConsidered": 6,
     "chosen": {
-      "fileTitle": "File:Chili con carne with beef, beans, chili peppers, garlic, black pepper, and a soft-boiled egg - Massachusetts.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Chili_con_carne_with_beef%2C_beans%2C_chili_peppers%2C_garlic%2C_black_pepper%2C_and_a_soft-boiled_egg_-_Massachusetts.jpg",
-      "width": 2611,
-      "height": 2611,
-      "license": "CC0",
-      "artist": ""
+      "fileTitle": "File:Chili con carne (4431800858).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Chili_con_carne_%284431800858%29.jpg",
+      "width": 4288,
+      "height": 2848,
+      "license": "CC BY-SA 2.0",
+      "artist": "jeffreyw"
     }
   },
   {
@@ -282,13 +282,13 @@
   {
     "slug": "classic-smash-burger",
     "title": "Classic Smash Burger",
-    "query": "Classic Smash Burger",
-    "candidatesConsidered": 1,
+    "query": "smash burger cheeseburger plate",
+    "candidatesConsidered": 3,
     "chosen": {
-      "fileTitle": "File:Burger meal at Smashburger, Brighton, England 2023-11-18.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Burger_meal_at_Smashburger%2C_Brighton%2C_England_2023-11-18.jpg",
-      "width": 3024,
-      "height": 4032,
+      "fileTitle": "File:Double Classic Smash™ - Smashburger, Brighton 2023-11-18.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Double_Classic_Smash%E2%84%A2_-_Smashburger%2C_Brighton_2023-11-18.jpg",
+      "width": 4032,
+      "height": 3024,
       "license": "CC0",
       "artist": "Andy Li"
     }
@@ -338,15 +338,15 @@
   {
     "slug": "ratatouille",
     "title": "Ratatouille",
-    "query": "Ratatouille food dish",
-    "candidatesConsidered": 3,
+    "query": "Ratatouille",
+    "candidatesConsidered": 15,
     "chosen": {
-      "fileTitle": "File:Ratatouille, Mazatlán, 21 de junio de 2023.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Ratatouille%2C_Mazatl%C3%A1n%2C_21_de_junio_de_2023.jpg",
-      "width": 3653,
-      "height": 2322,
-      "license": "CC0",
-      "artist": "El Nuevo Doge"
+      "fileTitle": "File:Ratatouille-Dish.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Ratatouille-Dish.jpg",
+      "width": 2340,
+      "height": 1787,
+      "license": "Public domain",
+      "artist": "Benoit5656"
     }
   },
   {
@@ -380,15 +380,15 @@
   {
     "slug": "bibimbap",
     "title": "Bibimbap",
-    "query": "Bibimbap food dish",
+    "query": "bibimbap bowl plated",
     "candidatesConsidered": 6,
     "chosen": {
-      "fileTitle": "File:Bibimbap with egg.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Bibimbap_with_egg.jpg",
-      "width": 2448,
-      "height": 3264,
-      "license": "CC BY-SA 4.0",
-      "artist": "Cjkennedy15"
+      "fileTitle": "File:Korean cuisine-Bibimbap-08.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Korean_cuisine-Bibimbap-08.jpg",
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 2.0",
+      "artist": "Agnes Ly (Agnes Ly) at Flickr"
     }
   },
   {
@@ -408,15 +408,15 @@
   {
     "slug": "kimchi-fried-rice",
     "title": "Kimchi Fried Rice",
-    "query": "Kimchi Fried Rice",
+    "query": "kimchi fried rice bokkeumbap plate",
     "candidatesConsidered": 6,
     "chosen": {
-      "fileTitle": "File:Kimchi-bokkeum-bap (Kimchi fried rice) - Kogi 2023-09-11.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Kimchi-bokkeum-bap_%28Kimchi_fried_rice%29_-_Kogi_2023-09-11.jpg",
-      "width": 4032,
-      "height": 3024,
+      "fileTitle": "File:Kimchi fried rice.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Kimchi_fried_rice.jpg",
+      "width": 3456,
+      "height": 2304,
       "license": "CC0",
-      "artist": "Andy Li"
+      "artist": "Sharon Ang"
     }
   }
 ]

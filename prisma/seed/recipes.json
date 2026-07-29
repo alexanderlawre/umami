@@ -283,7 +283,7 @@
       "Eggs"
     ],
     "imageUrl": "/recipe-photos/baked-ziti.jpg",
-    "imageCredit": "Lili from NY, United States / Wikimedia Commons (CC BY 2.0)"
+    "imageCredit": "Michael Rivera / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "chicken-piccata",
@@ -929,8 +929,8 @@
       "Fish",
       "Soy"
     ],
-    "imageUrl": "/recipe-photos/miso-glazed-salmon.png",
-    "imageCredit": "Kittycataclysm / Wikimedia Commons (CC BY-SA 4.0)"
+    "imageUrl": "/recipe-photos/miso-glazed-salmon.jpg",
+    "imageCredit": "Liat Portal for Foodie Disorder / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "vegetable-yaki-udon",
@@ -1445,7 +1445,7 @@
       "Milk"
     ],
     "imageUrl": "/recipe-photos/butter-chicken.jpg",
-    "imageCredit": "Marajozkee / Wikimedia Commons (CC BY-SA 4.0)"
+    "imageCredit": "Rajalakshmi duraikathiresan / Wikimedia Commons (CC0)"
   },
   {
     "slug": "saag-paneer",
@@ -1572,7 +1572,7 @@
       "Milk"
     ],
     "imageUrl": "/recipe-photos/saag-paneer.jpg",
-    "imageCredit": "Jeff Warren / Wikimedia Commons (CC BY-SA 2.0)"
+    "imageCredit": "Biswarup Ganguly / Wikimedia Commons (CC BY 3.0)"
   },
   {
     "slug": "vegetable-green-curry",
@@ -1702,7 +1702,7 @@
       "Soy"
     ],
     "imageUrl": "/recipe-photos/vegetable-green-curry.jpg",
-    "imageCredit": "Wasiul Bahar / Wikimedia Commons (CC BY-SA 4.0)"
+    "imageCredit": "Kenamparo / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "pad-see-ew",
@@ -2088,7 +2088,7 @@
       "Sesame"
     ],
     "imageUrl": "/recipe-photos/baked-falafel-bowl.jpg",
-    "imageCredit": "EvanProdromou / Wikimedia Commons (CC BY-SA 4.0)"
+    "imageCredit": "Contrapunctus-1 / Wikimedia Commons (CC BY-SA 4.0)"
   },
   {
     "slug": "shakshuka",
@@ -2479,7 +2479,7 @@
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/turkey-chili.jpg",
-    "imageCredit": "Wikimedia Commons contributor / Wikimedia Commons (CC0)"
+    "imageCredit": "jeffreyw / Wikimedia Commons (CC BY-SA 2.0)"
   },
   {
     "slug": "sheet-pan-salmon-and-asparagus",
@@ -3221,7 +3221,7 @@
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/ratatouille.jpg",
-    "imageCredit": "El Nuevo Doge / Wikimedia Commons (CC0)"
+    "imageCredit": "Benoit5656 / Wikimedia Commons (Public domain)"
   },
   {
     "slug": "coq-au-vin",
@@ -3607,7 +3607,7 @@
       "Sesame"
     ],
     "imageUrl": "/recipe-photos/bibimbap.jpg",
-    "imageCredit": "Cjkennedy15 / Wikimedia Commons (CC BY-SA 4.0)"
+    "imageCredit": "Agnes Ly (Agnes Ly) at Flickr / Wikimedia Commons (CC BY-SA 2.0)"
   },
   {
     "slug": "korean-beef-bowl",
@@ -3858,6 +3858,6 @@
       "Fish"
     ],
     "imageUrl": "/recipe-photos/kimchi-fried-rice.jpg",
-    "imageCredit": "Andy Li / Wikimedia Commons (CC0)"
+    "imageCredit": "Sharon Ang / Wikimedia Commons (CC0)"
   }
 ]

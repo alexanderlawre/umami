@@ -12,7 +12,7 @@ export default async function DashboardPage() {
   if (!session?.user) redirect("/login");
   if (!session.user.onboarded) redirect("/onboarding");
 
-  const [preferences, recipes] = await Promise.all([
+  const [preferences, recipes, savedRecipes] = await Promise.all([
     prisma.userPreferences.findUnique({
       where: { userId: session.user.id },
       include: { diets: true, allergens: true },
@@ -20,6 +20,10 @@ export default async function DashboardPage() {
     prisma.recipe.findMany({
       where: { isActive: true },
       include: { dietTags: true, allergenTags: true },
+    }),
+    prisma.savedRecipe.findMany({
+      where: { userId: session.user.id },
+      select: { recipeId: true },
     }),
   ]);
 
@@ -29,15 +33,16 @@ export default async function DashboardPage() {
     customAllergens: preferences?.customAllergens ?? [],
   };
 
+  const savedRecipeIds = new Set(savedRecipes.map((s) => s.recipeId));
+
   const candidates: EligibleRecipe[] = recipes.map((r) => ({
     id: r.id,
     slug: r.slug,
     title: r.title,
     shortDescription: r.shortDescription,
     note: r.note,
-    difficulty: r.difficulty,
     cuisine: r.cuisine,
-    effortTier: r.effortTier,
+    mealSlot: r.mealSlot,
     prepMinutes: r.prepMinutes,
     cookMinutes: r.cookMinutes,
     attributes: r.attributes,
@@ -47,6 +52,7 @@ export default async function DashboardPage() {
     allergenReviewStatus: r.allergenReviewStatus,
     dietTags: r.dietTags.map((d) => d.name),
     allergenTags: r.allergenTags.map((a) => a.name),
+    saved: savedRecipeIds.has(r.id),
   }));
 
   const eligible = filterEligibleRecipes(candidates, userProfile);

@@ -13,6 +13,12 @@ export function AppHeader({ isAdmin }: { isAdmin?: boolean }) {
         Umami
       </Link>
       <div className="flex items-center gap-2">
+        <Link
+          href="/cook-later"
+          className="-my-2 rounded-lg px-2 py-2 text-sm text-[#6B7370] underline"
+        >
+          Cook later
+        </Link>
         {isAdmin && (
           <Link
             href="/admin"

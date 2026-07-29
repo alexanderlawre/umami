@@ -100,12 +100,22 @@ for (const recipe of recipes) {
   // the country Turkey; vegan/vegetarian recipes matching photos containing
   // meat or seafood).
   const QUERY_OVERRIDES = {
-    "turkey-chili": ["turkey chili bowl", "chili con carne minced turkey", "ground turkey chili stew"],
-    "vegetable-green-curry": ["Thai green curry vegetables", "green curry tofu vegetables", "Thai vegetable curry"],
-    "vegetable-yaki-udon": ["vegetable yakisoba", "yaki udon vegetables stir fry", "stir fried udon noodles vegetables"],
-    "baked-falafel-bowl": ["falafel bowl", "baked falafel", "falafel plate"],
+    "turkey-chili": ["turkey chili bowl toppings", "ground turkey chili bowl", "chili con carne minced turkey", "Turkey Chili", "chili bowl beans toppings"],
+    "vegetable-green-curry": ["Thai green curry vegetables bowl", "green curry tofu vegetables plate", "Thai vegetable curry rice"],
+    "vegetable-yaki-udon": ["yaki udon noodles plate", "stir fried udon vegetables plate", "vegetable yakisoba"],
+    "baked-falafel-bowl": ["falafel bowl plate hummus", "falafel grain bowl", "baked falafel plate"],
     "sheet-pan-salmon-and-asparagus": ["roasted salmon asparagus", "baked salmon asparagus sheet pan", "salmon asparagus dinner"],
     "korean-beef-bowl": ["bulgogi rice bowl", "Korean beef bulgogi", "Korean beef rice bowl"],
+    "baked-ziti": ["baked ziti pasta casserole close up", "baked ziti tomato sauce mozzarella", "baked ziti slice plate", "Baked Ziti", "ziti pasta bake cheese"],
+    "butter-chicken": ["butter chicken curry naan", "chicken makhani curry dish", "murgh makhani plate"],
+    "chicken-tinga-tacos": ["chicken tinga tacos plate", "tinga de pollo tacos", "shredded chicken tacos plate"],
+    "classic-smash-burger": ["smash burger cheeseburger plate", "smashburger patty cheese", "diner cheeseburger plate"],
+    "kimchi-fried-rice": ["kimchi fried rice bokkeumbap plate", "kimchi bokkeum bap fried egg", "Korean kimchi fried rice bowl"],
+    "miso-glazed-salmon": ["miso glazed salmon plate", "miso salmon fillet dish", "grilled miso salmon dinner", "Miso Salmon", "salmon fillet glaze dinner plate"],
+    "saag-paneer": ["saag paneer plate restaurant", "palak paneer curry dish", "saag paneer bowl"],
+    "bibimbap": ["bibimbap bowl plated", "Korean bibimbap dish", "dolsot bibimbap"],
+    "chicken-piccata": ["chicken piccata plate lemon capers", "chicken piccata dish", "chicken piccata pasta plate"],
+    "ratatouille": ["ratatouille plate vegetables", "ratatouille dish tian", "ratatouille vegetable stew plate"],
   };
 
   const queries = QUERY_OVERRIDES[recipe.slug] ?? [

@@ -47,9 +47,16 @@ function scaleQuantity(quantity: string, factor: number): string {
   return String(scaled);
 }
 
-export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
+export function RecipeDetailClient({
+  recipe,
+  initialSaved = false,
+}: {
+  recipe: RecipeDetail;
+  initialSaved?: boolean;
+}) {
   const [servings, setServings] = useState(recipe.servings);
-  const [starred, setStarred] = useState(false);
+  const [starred, setStarred] = useState(initialSaved);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const [cookLogId, setCookLogId] = useState<string | null>(null);
   const [showCosign, setShowCosign] = useState(false);
   const [cosignNote, setCosignNote] = useState("");
@@ -71,10 +78,30 @@ export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
     {},
   );
 
-  function toggleStar() {
+  async function toggleStar() {
     const next = !starred;
     setStarred(next);
+    setSaveError(null);
     logInteraction(recipe.id, next ? "STAR" : "UNSTAR");
+
+    try {
+      const res = next
+        ? await fetch("/api/saved-recipes", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ recipeId: recipe.id }),
+          })
+        : await fetch(`/api/saved-recipes/${recipe.id}`, { method: "DELETE" });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        setStarred(!next);
+        setSaveError(body?.error ?? "Something went wrong.");
+      }
+    } catch {
+      setStarred(!next);
+      setSaveError("Something went wrong.");
+    }
   }
 
   async function handleCook() {
@@ -210,6 +237,12 @@ export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
         </ol>
       </section>
 
+      {saveError && (
+        <p className="fixed inset-x-0 bottom-20 mx-auto w-fit rounded-lg bg-[#1A1D1B] px-3 py-2 text-xs text-white shadow-sm">
+          {saveError}
+        </p>
+      )}
+
       <div className="fixed inset-x-0 bottom-0 flex items-center justify-center gap-3 border-t border-[#E8E6E0] bg-[#FBFAF7] px-4 pt-4 pb-safe-4">
         <button
           onClick={toggleStar}
@@ -219,7 +252,7 @@ export function RecipeDetailClient({ recipe }: { recipe: RecipeDetail }) {
               : "border-[#E8E6E0] text-[#1A1D1B]"
           }`}
         >
-          {starred ? "★ Again soon" : "☆ Again soon"}
+          {starred ? "★ Cook later" : "☆ Cook later"}
         </button>
         <button
           onClick={handleCook}

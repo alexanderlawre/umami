@@ -4,6 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { logInteraction } from "@/lib/log-interaction";
+import { shuffle } from "@/lib/shuffle";
+import {
+  attributeLabel,
+  dietEmblemClass,
+  formatMealSlot,
+  formatMinutes,
+  visibleDietEmblems,
+} from "@/lib/recipe-tags";
 
 export type RecipeCardData = {
   id: string;
@@ -11,24 +19,104 @@ export type RecipeCardData = {
   title: string;
   shortDescription: string;
   note: string;
-  difficulty: string;
   cuisine: string;
-  effortTier: string;
+  mealSlot: string[];
   prepMinutes: number;
   cookMinutes: number;
   attributes: string[];
+  dietTags: string[];
   imageUrl: string | null;
   imageCredit: string | null;
+  saved: boolean;
 };
+
+function StarButton({
+  recipeId,
+  saved,
+  onSavedChange,
+}: {
+  recipeId: string;
+  saved: boolean;
+  onSavedChange: (saved: boolean) => void;
+}) {
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function toggle() {
+    if (pending) return;
+    const next = !saved;
+    setPending(true);
+    setError(null);
+    onSavedChange(next);
+    logInteraction(recipeId, next ? "STAR" : "UNSTAR");
+
+    try {
+      const res = next
+        ? await fetch("/api/saved-recipes", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ recipeId }),
+          })
+        : await fetch(`/api/saved-recipes/${recipeId}`, { method: "DELETE" });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        onSavedChange(!next);
+        setError(body?.error ?? "Something went wrong.");
+      }
+    } catch {
+      onSavedChange(!next);
+      setError("Something went wrong.");
+    } finally {
+      setPending(false);
+    }
+  }
+
+  return (
+    <div className="absolute left-3 top-3">
+      <button
+        onClick={toggle}
+        aria-label={saved ? "Remove from Cook Later" : "Add to Cook Later"}
+        aria-pressed={saved}
+        disabled={pending}
+        className={`flex h-9 w-9 items-center justify-center rounded-full shadow-sm transition-colors ${
+          saved ? "bg-[#F2B705] text-white" : "bg-white/90 text-[#6B7370]"
+        }`}
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill={saved ? "currentColor" : "none"}
+          stroke="currentColor"
+          strokeWidth={1.75}
+          className="h-5 w-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 21.24a.562.562 0 0 1-.84-.61l1.285-5.386a.563.563 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+          />
+        </svg>
+      </button>
+      {error ? (
+        <p className="absolute top-11 w-40 rounded-lg bg-[#1A1D1B] px-2 py-1 text-xs text-white shadow-sm">
+          {error}
+        </p>
+      ) : null}
+    </div>
+  );
+}
 
 function RecipeCard({
   recipe,
-  onDismiss,
+  onSavedChange,
 }: {
   recipe: RecipeCardData;
-  onDismiss: (id: string) => void;
+  onSavedChange: (id: string, saved: boolean) => void;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
+  const emblems = visibleDietEmblems(recipe.dietTags);
+  const meal = formatMealSlot(recipe.mealSlot);
+  const tags = recipe.attributes.slice(0, 3);
 
   useEffect(() => {
     const el = ref.current;
@@ -66,17 +154,24 @@ function RecipeCard({
       ref={ref}
       className="overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-sm"
     >
-      {recipe.imageUrl ? (
-        <div className="relative h-40 w-full">
-          <Image
-            src={recipe.imageUrl}
-            alt={recipe.title}
-            fill
-            sizes="(min-width: 640px) 50vw, 100vw"
-            className="object-cover"
-          />
-        </div>
-      ) : null}
+      <div className="relative">
+        {recipe.imageUrl ? (
+          <div className="relative h-40 w-full">
+            <Image
+              src={recipe.imageUrl}
+              alt={recipe.title}
+              fill
+              sizes="(min-width: 640px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+        ) : null}
+        <StarButton
+          recipeId={recipe.id}
+          saved={recipe.saved}
+          onSavedChange={(saved) => onSavedChange(recipe.id, saved)}
+        />
+      </div>
 
       <div className="p-5">
         <div className="flex items-start justify-between gap-3">
@@ -88,27 +183,33 @@ function RecipeCard({
               {recipe.title}
             </h3>
           </div>
-          <button
-            onClick={() => onDismiss(recipe.id)}
-            aria-label="Dismiss recipe"
-            className="shrink-0 rounded-full border border-[#E8E6E0] px-3 py-2 text-xs text-[#6B7370] hover:bg-[#EDF3EF]"
-          >
-            Dismiss
-          </button>
+          {emblems.length > 0 && (
+            <div className="flex shrink-0 flex-wrap justify-end gap-1">
+              {emblems.map((diet) => (
+                <span
+                  key={diet}
+                  className={`rounded-full px-2 py-1 text-[11px] font-medium ${dietEmblemClass(diet)}`}
+                >
+                  {diet}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         <p className="mt-2 text-sm text-[#1A1D1B]">{recipe.shortDescription}</p>
         <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.note}</p>
 
         <div className="mt-3 flex flex-wrap gap-2 text-xs text-[#6B7370]">
-          <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{recipe.difficulty}</span>
-          <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{recipe.effortTier}</span>
           <span className="rounded-full bg-[#EDF3EF] px-2 py-1">
-            {recipe.prepMinutes + recipe.cookMinutes} min
+            {formatMinutes(recipe.prepMinutes, recipe.cookMinutes)}
           </span>
-          {recipe.attributes.map((a) => (
+          {meal && (
+            <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{meal}</span>
+          )}
+          {tags.map((a) => (
             <span key={a} className="rounded-full bg-[#EDF3EF] px-2 py-1">
-              {a}
+              {attributeLabel(a)}
             </span>
           ))}
         </div>
@@ -124,22 +225,43 @@ function RecipeCard({
   );
 }
 
+// Takes the first 4 unique-by-id recipes from a pool, in whatever order the
+// pool is already in. The Set guard is a defensive backstop; recipes
+// themselves are never duplicated in the DB (verified via direct
+// inspection), so this is primarily protection against future
+// pool-construction bugs. Deterministic (no randomness) so it's safe to use
+// for the initial render — `recipes` arrives pre-shuffled from the server
+// (see dashboard/page.tsx), and re-shuffling on the client here would cause
+// a hydration mismatch since the server and client would pick different
+// random orders for the same markup.
+function dedupeFirstFour(pool: RecipeCardData[]): RecipeCardData[] {
+  const seen = new Set<string>();
+  const out: RecipeCardData[] = [];
+  for (const recipe of pool) {
+    if (seen.has(recipe.id)) continue;
+    seen.add(recipe.id);
+    out.push(recipe);
+    if (out.length === 4) break;
+  }
+  return out;
+}
+
+// Client-only reshuffle for the Refresh button (post-hydration, no SSR
+// mismatch risk since it only ever runs from a user click).
+function pickFour(pool: RecipeCardData[]): RecipeCardData[] {
+  return dedupeFirstFour(shuffle(pool));
+}
+
 export function DashboardClient({ recipes }: { recipes: RecipeCardData[] }) {
   const [pool] = useState(recipes);
-  const [cursor, setCursor] = useState(Math.min(4, recipes.length));
-  const [visible, setVisible] = useState(() => recipes.slice(0, 4));
+  const [visible, setVisible] = useState(() => dedupeFirstFour(recipes));
 
-  function handleDismiss(id: string) {
-    logInteraction(id, "DISMISS");
-    setVisible((prev) => {
-      const idx = prev.findIndex((r) => r.id === id);
-      if (idx === -1 || pool.length === 0) return prev;
-      const replacement = pool[cursor % pool.length];
-      setCursor((c) => c + 1);
-      const next = [...prev];
-      next[idx] = replacement;
-      return next;
-    });
+  function handleSavedChange(id: string, saved: boolean) {
+    setVisible((prev) => prev.map((r) => (r.id === id ? { ...r, saved } : r)));
+  }
+
+  function handleRefresh() {
+    setVisible(pickFour(pool));
   }
 
   if (pool.length === 0) {
@@ -151,14 +273,25 @@ export function DashboardClient({ recipes }: { recipes: RecipeCardData[] }) {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {visible.map((recipe, i) => (
-        <RecipeCard
-          key={`${recipe.id}-${i}`}
-          recipe={recipe}
-          onDismiss={handleDismiss}
-        />
-      ))}
+    <div>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {visible.map((recipe) => (
+          <RecipeCard
+            key={recipe.id}
+            recipe={recipe}
+            onSavedChange={handleSavedChange}
+          />
+        ))}
+      </div>
+
+      <div className="mt-6 flex justify-center">
+        <button
+          onClick={handleRefresh}
+          className="rounded-full border border-[#E8E6E0] px-5 py-3 text-sm font-medium text-[#1A1D1B] hover:bg-[#EDF3EF]"
+        >
+          Refresh recipes
+        </button>
+      </div>
     </div>
   );
 }

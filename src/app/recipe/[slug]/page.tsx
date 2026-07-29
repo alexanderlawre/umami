@@ -24,9 +24,13 @@ export default async function RecipeDetailPage({
 
   if (!recipe || !recipe.isActive) notFound();
 
+  const saved = await prisma.savedRecipe.findUnique({
+    where: { userId_recipeId: { userId: session.user.id, recipeId: recipe.id } },
+  });
+
   return (
     <main className="mx-auto w-full max-w-2xl flex-1 px-6 py-10">
-      <RecipeDetailClient recipe={recipe} />
+      <RecipeDetailClient recipe={recipe} initialSaved={!!saved} />
     </main>
   );
 }

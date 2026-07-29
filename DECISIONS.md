@@ -129,3 +129,48 @@ with a live browser session against the local dev DB. Confirmed:
   `/tmp` instead of the default (inside the project, under synced Desktop)
   avoided this entirely; this is a machine-local build quirk, not something
   that affects other developers' machines or CI.
+
+## Cook Later, tag redesign, diet emblems (2026-07-28)
+
+- **"Cook Later" is a capped save-list (`SavedRecipe`), not a favorites list
+  with no limit.** Added a `SavedRecipe` model (`userId` + `recipeId`,
+  unique together) and a hard cap of 10 enforced in `POST /api/saved-recipes`
+  (blocks with `409` once at cap, rather than silently evicting the oldest
+  save) — the goal per product feedback was to stop people from stockpiling
+  saves without ever cooking, so a loud block felt more honest than silent
+  eviction. Star buttons exist on both the dashboard card and the recipe
+  detail page and share the same optimistic-update-with-revert pattern.
+- **Dashboard tags were slimmed to a fixed order: time → meal slot → up to 3
+  attribute chips**, replacing the old difficulty/effort-tier tags. A new
+  `src/lib/recipe-tags.ts` is the single source of truth for attribute
+  labels (`HIGH_PROTEIN` → "High protein", etc.) and per-diet emblem colors,
+  shared by the dashboard and Cook Later cards so the two stay visually
+  consistent without duplicating the taxonomy.
+- **Dismiss was removed; diet emblems now occupy that card slot, and a single
+  "Refresh recipes" button replaces per-card cycling.** This also means we
+  no longer log a `DISMISS` interaction from the dashboard — replacing a
+  batch of 4 recipes is a coarser, less individually-meaningful signal than
+  the old per-card dismiss, so we didn't try to preserve it under a new name.
+- **Root-caused and fixed the dashboard "duplicate recipes" bug: it was a
+  React hydration mismatch, not a data problem.** The refresh logic called
+  `shuffle()` (which uses `Math.random()`) inside the `useState` initializer
+  used for the first render, so server-rendered and client-hydrated output
+  disagreed and React silently re-mounted with the client's (different)
+  random order — which could include repeats across the visible 4 depending
+  on timing. Fixed by splitting into `dedupeFirstFour()` (deterministic,
+  used for the initial render since `recipes` already arrives pre-shuffled
+  from the server) and `pickFour()` (shuffle + dedupe, used only inside the
+  client-only Refresh click handler, which never runs during SSR).
+- **Photo curation is manual visual review, not just "did the script find
+  something."** Re-ran `scripts/find-recipe-photos.mjs` for the ~14 recipes
+  whose existing photo looked unappealing or was flat-out wrong (worst
+  offender: `miso-glazed-salmon`'s "photo" was a screenshot of a text recipe
+  card), but the automated Commons search still surfaced a few wrong-subject
+  results that needed a manual follow-up search + `Read`-tool visual check
+  before accepting (e.g. a "Turkey Chili" query matching a photo of the
+  *country* Turkey; a "Miso Salmon" query matching an unrelated Japanese
+  breakfast spread; a "Ratatouille" query matching a raw eggplant plant via
+  its Latin name). All 30 recipes now have a manifest entry + downloaded
+  file + `imageUrl`, verified by cross-checking the three sources agree.
+  Sourcing a real, curated photo set (e.g. from a folder the user provides)
+  is still open and preferred over further automated Commons searches.

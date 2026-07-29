@@ -108,6 +108,7 @@ model User {
   cookLogs            CookLog[]
   cooldowns           Cooldown[]
   servedCards         ServedCard[]
+  savedRecipes        SavedRecipe[]
 }
 
 model UserPreferences {
@@ -206,6 +207,7 @@ model Recipe {
   cookLogs     CookLog[]
   cooldowns    Cooldown[]
   servedCards  ServedCard[]
+  savedBy      SavedRecipe[]
 }
 
 model Ingredient {
@@ -281,6 +283,19 @@ model CookLog {
   servings    Int
   isPublic    Boolean  @default(false)
   cosignNote  String?
+}
+
+// "Cook Later" — user-curated save list, capped at 10 per user (enforced in
+// the API route, not the schema).
+model SavedRecipe {
+  id       String   @id @default(cuid())
+  userId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  recipeId String
+  recipe   Recipe   @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  savedAt  DateTime @default(now())
+
+  @@unique([userId, recipeId])
 }
 
 model ServedCard {
