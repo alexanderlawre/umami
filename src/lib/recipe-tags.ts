@@ -12,12 +12,29 @@ export const ATTRIBUTE_LABELS: Record<string, string> = {
   CROWD_PLEASER: "Crowd-pleaser",
   EAT_MORE_VEG: "Veg-forward",
   FRIED: "Fried",
-  // UNDER_30 is intentionally omitted from card display — it's redundant
-  // with the explicit time chip shown first on every card.
+  UNDER_30: "Under 30 min",
+  KID_FRIENDLY: "Kid-friendly",
+  SPICY: "Spicy",
+  FREEZER_FRIENDLY: "Freezer-friendly",
+  HIGH_FIBER: "High fiber",
+  LOW_SUGAR: "Low sugar",
+  NO_COOK: "No-cook",
+  GRILLED: "Grilled",
+  COMFORT_FOOD: "Comfort food",
+  SHEET_PAN: "Sheet-pan",
 };
 
 export function attributeLabel(code: string): string {
   return ATTRIBUTE_LABELS[code] ?? code;
+}
+
+// Attribute codes suppressed from the card's own bottom chip row (still
+// valid as dashboard filter options) because another chip already conveys
+// the same info more precisely — e.g. UNDER_30 vs. the numeric time chip.
+const CARD_DISPLAY_SUPPRESSED = new Set(["UNDER_30"]);
+
+export function cardDisplayAttributes(attributes: string[], max = 3): string[] {
+  return attributes.filter((a) => !CARD_DISPLAY_SUPPRESSED.has(a)).slice(0, max);
 }
 
 // One Tailwind bg/text pairing per diet, so each diet reads as a distinct

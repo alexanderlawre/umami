@@ -418,5 +418,1237 @@
       "license": "CC0",
       "artist": "Sharon Ang"
     }
+  },
+  {
+    "slug": "margherita-pizza",
+    "title": "Margherita Pizza",
+    "query": "Margherita Pizza",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Margherita Originale.JPG",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Margherita_Originale.JPG",
+      "width": 2048,
+      "height": 1536,
+      "license": "CC BY-SA 3.0",
+      "artist": "Mario56"
+    }
+  },
+  {
+    "slug": "mushroom-risotto",
+    "title": "Mushroom Risotto",
+    "query": "risotto ai funghi porcini",
+    "candidatesConsidered": 2,
+    "chosen": {
+      "fileTitle": "File:Risotto ai funghi porcini.JPG",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Risotto_ai_funghi_porcini.JPG",
+      "width": 3648,
+      "height": 2736,
+      "license": "CC BY-SA 3.0",
+      "artist": "Number55"
+    }
+  },
+  {
+    "slug": "chicken-parmesan",
+    "title": "Chicken Parmesan",
+    "query": "Chicken Parmesan",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Chicken parmesan mise en place.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Chicken_parmesan_mise_en_place.jpg",
+      "width": 2048,
+      "height": 2035,
+      "license": "CC BY-SA 4.0",
+      "artist": "Balise42"
+    }
+  },
+  {
+    "slug": "eggplant-parmesan",
+    "title": "Eggplant Parmesan",
+    "query": "Eggplant Parmesan",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Eggplant parmesan (3849722245).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Eggplant_parmesan_%283849722245%29.jpg",
+      "width": 2272,
+      "height": 1704,
+      "license": "CC BY 2.0",
+      "artist": "Karen and Brad Emerson"
+    }
+  },
+  {
+    "slug": "minestrone-soup",
+    "title": "Minestrone Soup",
+    "query": "Minestrone Soup",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Minestrone soup.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Minestrone_soup.jpg",
+      "width": 2816,
+      "height": 1880,
+      "license": "CC BY-SA 2.0",
+      "artist": "Katrin Morenz from Aachen, Deutschland"
+    }
+  },
+  {
+    "slug": "lemon-ricotta-pasta",
+    "title": "Lemon Ricotta Pasta",
+    "query": "Ricotta pasta",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Pasta mit Brokkoli und Ricotta (6985071365).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Pasta_mit_Brokkoli_und_Ricotta_%286985071365%29.jpg",
+      "width": 3456,
+      "height": 2304,
+      "license": "CC BY-SA 2.0",
+      "artist": "Katrin Gilger"
+    }
+  },
+  {
+    "slug": "chicken-enchiladas-verdes",
+    "title": "Chicken Enchiladas Verdes",
+    "query": "enchiladas verdes plate",
+    "candidatesConsidered": 5,
+    "chosen": {
+      "fileTitle": "File:Feria Gastronomica de la Enchilada 49.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Feria_Gastronomica_de_la_Enchilada_49.jpg",
+      "width": 3264,
+      "height": 2448,
+      "license": "CC BY-SA 4.0",
+      "artist": "Fer.goiba"
+    }
+  },
+  {
+    "slug": "shrimp-ceviche",
+    "title": "Shrimp Ceviche",
+    "query": "Shrimp Ceviche",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Ceviche del Perú.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Ceviche_del_Per%C3%BA.jpg",
+      "width": 2426,
+      "height": 1760,
+      "license": "CC BY 3.0",
+      "artist": "No machine-readable author provided. Manuel González Olaechea assumed (based on copyright claims)."
+    }
+  },
+  {
+    "slug": "pork-carnitas",
+    "title": "Pork Carnitas",
+    "query": "carnitas tacos plate shredded pork",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:DFC 3962 Close-up of savory chopped cooked meat piled on a plate ready to serve.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/DFC_3962_Close-up_of_savory_chopped_cooked_meat_piled_on_a_plate_ready_to_serve.jpg",
+      "width": 5568,
+      "height": 3712,
+      "license": "CC BY-SA 4.0",
+      "artist": "PattayaPatrol"
+    }
+  },
+  {
+    "slug": "veggie-quesadillas",
+    "title": "Veggie Quesadillas",
+    "query": "Vegetable quesadilla",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Veg Quesadilla a Mexican dish - Gujarat - SHAILI 009.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Veg_Quesadilla_a_Mexican_dish_-_Gujarat_-_SHAILI_009.jpg",
+      "width": 4096,
+      "height": 3072,
+      "license": "CC BY-SA 4.0",
+      "artist": "Shaili Sharma"
+    }
+  },
+  {
+    "slug": "mexican-street-corn-salad",
+    "title": "Mexican Street Corn Salad",
+    "query": "Mexican Street Corn Salad",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Esquites con chile de árbol en la Macroplaza.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Esquites_con_chile_de_%C3%A1rbol_en_la_Macroplaza.jpg",
+      "width": 960,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "artist": "B.jars"
+    }
+  },
+  {
+    "slug": "pozole-rojo",
+    "title": "Pozole Rojo",
+    "query": "Pozole Rojo",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Pozole rojo y cerveza.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Pozole_rojo_y_cerveza.jpg",
+      "width": 2096,
+      "height": 3724,
+      "license": "CC BY-SA 4.0",
+      "artist": "Alejandra Mendoza Santillan"
+    }
+  },
+  {
+    "slug": "teriyaki-chicken-donburi",
+    "title": "Teriyaki Chicken Donburi",
+    "query": "teriyaki chicken rice bowl donburi",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:Osaka Teriyaki Rice Bowl.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Osaka_Teriyaki_Rice_Bowl.jpg",
+      "width": 4128,
+      "height": 2322,
+      "license": "CC BY-SA 4.0",
+      "artist": "RoyKabanlit"
+    }
+  },
+  {
+    "slug": "pork-gyoza",
+    "title": "Pork Gyoza",
+    "query": "Pork Gyoza",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Pork gyoza - Massachusetts.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Pork_gyoza_-_Massachusetts.jpg",
+      "width": 3762,
+      "height": 2227,
+      "license": "CC0",
+      "artist": "Daderot"
+    }
+  },
+  {
+    "slug": "salmon-onigiri",
+    "title": "Salmon Onigiri",
+    "query": "Salmon Onigiri",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Salmon onigiri by yomi955.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Salmon_onigiri_by_yomi955.jpg",
+      "width": 800,
+      "height": 600,
+      "license": "CC BY 2.0",
+      "artist": "yomi955"
+    }
+  },
+  {
+    "slug": "beef-sukiyaki",
+    "title": "Beef Sukiyaki",
+    "query": "sukiyaki hot pot Japanese",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Sukiyaki 01.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Sukiyaki_01.jpg",
+      "width": 2048,
+      "height": 1360,
+      "license": "CC BY 2.0",
+      "artist": "ajari"
+    }
+  },
+  {
+    "slug": "tofu-katsu-curry",
+    "title": "Tofu Katsu Curry",
+    "query": "vegetable katsu curry rice plate",
+    "candidatesConsidered": 2,
+    "chosen": {
+      "fileTitle": "File:Curry-Katsu with rice and salad - Momotaro AUD12 (3470404498).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Curry-Katsu_with_rice_and_salad_-_Momotaro_AUD12_%283470404498%29.jpg",
+      "width": 2048,
+      "height": 1370,
+      "license": "CC BY-SA 2.0",
+      "artist": "Alpha from Melbourne, Australia"
+    }
+  },
+  {
+    "slug": "cold-soba-noodles",
+    "title": "Cold Soba Noodles",
+    "query": "Cold Soba Noodles",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Bento with soba noodles 07 03 2013.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Bento_with_soba_noodles_07_03_2013.jpg",
+      "width": 3162,
+      "height": 1572,
+      "license": "CC BY-SA 4.0",
+      "artist": "Andreas F. Borchert"
+    }
+  },
+  {
+    "slug": "chicken-tikka-masala",
+    "title": "Chicken Tikka Masala",
+    "query": "Chicken Tikka Masala",
+    "candidatesConsidered": 5,
+    "chosen": {
+      "fileTitle": "File:Chicken tikka masala at Yeti in Glen Ellen 2015 - Sarah Stierch.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Chicken_tikka_masala_at_Yeti_in_Glen_Ellen_2015_-_Sarah_Stierch.jpg",
+      "width": 960,
+      "height": 960,
+      "license": "CC BY 4.0",
+      "artist": "Missvain"
+    }
+  },
+  {
+    "slug": "vegetable-biryani",
+    "title": "Vegetable Biryani",
+    "query": "Vegetable Biryani",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Vegetable Biryani IMG 001.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Vegetable_Biryani_IMG_001.jpg",
+      "width": 6000,
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "artist": "Phadke09"
+    }
+  },
+  {
+    "slug": "dal-tadka",
+    "title": "Dal Tadka",
+    "query": "Dal Tadka",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Dal Tadka-Delhi.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Dal_Tadka-Delhi.jpg",
+      "width": 6000,
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "artist": "AugustineKajur"
+    }
+  },
+  {
+    "slug": "tandoori-chicken",
+    "title": "Tandoori Chicken",
+    "query": "Tandoori Chicken",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Tandoori chicken Indian.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Tandoori_chicken_Indian.jpg",
+      "width": 3648,
+      "height": 2736,
+      "license": "CC BY-SA 2.0",
+      "artist": "pelican"
+    }
+  },
+  {
+    "slug": "aloo-gobi",
+    "title": "Aloo Gobi",
+    "query": "Aloo Gobi",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Aloo gobi.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Aloo_gobi.jpg",
+      "width": 1024,
+      "height": 683,
+      "license": "CC BY-SA 2.0",
+      "artist": ""
+    }
+  },
+  {
+    "slug": "rajma-masala",
+    "title": "Rajma Masala",
+    "query": "Rajma Masala",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Rajma Masala (32081557778).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Rajma_Masala_%2832081557778%29.jpg",
+      "width": 1395,
+      "height": 933,
+      "license": "CC BY-SA 2.0",
+      "artist": "Gaurav Nemade"
+    }
+  },
+  {
+    "slug": "pad-thai",
+    "title": "Pad Thai",
+    "query": "Pad Thai",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Phat Thai kung Chang Khien street stall.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg",
+      "width": 2500,
+      "height": 2500,
+      "license": "CC BY-SA 3.0",
+      "artist": "Takeaway"
+    }
+  },
+  {
+    "slug": "massaman-beef-curry",
+    "title": "Massaman Beef Curry",
+    "query": "Massaman Beef Curry",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Beef Massaman curry with brown rice.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Beef_Massaman_curry_with_brown_rice.jpg",
+      "width": 3879,
+      "height": 2909,
+      "license": "CC BY-SA 4.0",
+      "artist": "Vee Satayamas"
+    }
+  },
+  {
+    "slug": "thai-basil-chicken",
+    "title": "Thai Basil Chicken",
+    "query": "Thai Basil Chicken",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Thai Green Curry,JasminRice,Chilli Basil Chicken , HomeMade.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Thai_Green_Curry%2CJasminRice%2CChilli_Basil_Chicken_%2C_HomeMade.jpg",
+      "width": 4032,
+      "height": 3024,
+      "license": "CC BY-SA 4.0",
+      "artist": "PallaviKhale"
+    }
+  },
+  {
+    "slug": "mango-sticky-rice",
+    "title": "Mango Sticky Rice",
+    "query": "Mango Sticky Rice",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Mango sticy rice (3859549574).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Mango_sticy_rice_%283859549574%29.jpg",
+      "width": 3888,
+      "height": 2592,
+      "license": "CC BY 2.0",
+      "artist": "Dennis Wong from Hong Kong, Hong Kong"
+    }
+  },
+  {
+    "slug": "som-tum-papaya-salad",
+    "title": "Som Tum Papaya Salad",
+    "query": "Som Tum Papaya Salad",
+    "candidatesConsidered": 2,
+    "chosen": {
+      "fileTitle": "File:Som Tum ส้มตำไทย- mortar pounded green papaya salad with palm sugar, lime juice, bird eye chile, peanuts.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Som_Tum_%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3%E0%B9%84%E0%B8%97%E0%B8%A2-_mortar_pounded_green_papaya_salad_with_palm_sugar%2C_lime_juice%2C_bird_eye_chile%2C_peanuts.jpg",
+      "width": 3264,
+      "height": 2448,
+      "license": "CC BY 2.0",
+      "artist": "T.Tseng"
+    }
+  },
+  {
+    "slug": "panang-curry-chicken",
+    "title": "Panang Curry Chicken",
+    "query": "Panang Curry Chicken",
+    "candidatesConsidered": 2,
+    "chosen": {
+      "fileTitle": "File:Panangbeefcurry.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Panangbeefcurry.jpg",
+      "width": 2048,
+      "height": 1536,
+      "license": "CC BY-SA 2.0",
+      "artist": "Alpha from Melbourne, Australia"
+    }
+  },
+  {
+    "slug": "chicken-shawarma-bowl",
+    "title": "Chicken Shawarma Bowl",
+    "query": "Chicken Shawarma Bowl",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:Chicken Shwarama plate.jpeg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Chicken_Shwarama_plate.jpeg",
+      "width": 3264,
+      "height": 2448,
+      "license": "CC BY-SA 3.0",
+      "artist": "User:CrunchySkies"
+    }
+  },
+  {
+    "slug": "hummus-veggie-mezze",
+    "title": "Hummus & Veggie Mezze",
+    "query": "hummus mezze plate",
+    "candidatesConsidered": 2,
+    "chosen": {
+      "fileTitle": "File:Hummus plate.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Hummus_plate.jpg",
+      "width": 3264,
+      "height": 2448,
+      "license": "CC BY-SA 4.0",
+      "artist": "Orenrosenfeld"
+    }
+  },
+  {
+    "slug": "moroccan-chicken-tagine",
+    "title": "Moroccan Chicken Tagine",
+    "query": "chicken tagine olives preserved lemon",
+    "candidatesConsidered": 2,
+    "chosen": {
+      "fileTitle": "File:Moroccan food-Chicken tagine with preserved lemons and olives-01.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Moroccan_food-Chicken_tagine_with_preserved_lemons_and_olives-01.jpg",
+      "width": 3264,
+      "height": 2448,
+      "license": "CC BY 2.0",
+      "artist": "Foodista"
+    }
+  },
+  {
+    "slug": "tabbouleh-salad",
+    "title": "Tabbouleh Salad",
+    "query": "Tabbouleh Salad",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Flickr - cyclonebill - Tabbouleh.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flickr_-_cyclonebill_-_Tabbouleh.jpg",
+      "width": 3264,
+      "height": 2448,
+      "license": "CC BY-SA 2.0",
+      "artist": "cyclonebill"
+    }
+  },
+  {
+    "slug": "beef-kebabs-with-rice",
+    "title": "Beef Kebabs with Rice",
+    "query": "Beef kebab",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Beef Kebab and Pita.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Beef_Kebab_and_Pita.jpg",
+      "width": 3577,
+      "height": 2385,
+      "license": "CC BY-SA 4.0",
+      "artist": "Cyapoj"
+    }
+  },
+  {
+    "slug": "fattoush-salad",
+    "title": "Fattoush Salad",
+    "query": "Fattoush Salad",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Fattoush.JPG",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Fattoush.JPG",
+      "width": 2048,
+      "height": 1536,
+      "license": "Public domain",
+      "artist": ""
+    }
+  },
+  {
+    "slug": "bbq-pulled-pork-sandwich",
+    "title": "BBQ Pulled Pork Sandwich",
+    "query": "BBQ Pulled Pork Sandwich",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Pulled pork sandwich - \"Naked\".jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Pulled_pork_sandwich_-_%22Naked%22.jpg",
+      "width": 5184,
+      "height": 3888,
+      "license": "CC BY-SA 4.0",
+      "artist": "Infrogmation of New Orleans"
+    }
+  },
+  {
+    "slug": "mac-and-cheese",
+    "title": "Mac and Cheese",
+    "query": "Mac and Cheese",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Mac and cheese - Morelli Zorelli 2024-08-29.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Mac_and_cheese_-_Morelli_Zorelli_2024-08-29.jpg",
+      "width": 3024,
+      "height": 4032,
+      "license": "CC0",
+      "artist": "Andy Li"
+    }
+  },
+  {
+    "slug": "cobb-salad",
+    "title": "Cobb Salad",
+    "query": "Cobb Salad",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Cobb salad from Silver Diner.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Cobb_salad_from_Silver_Diner.jpg",
+      "width": 3553,
+      "height": 3072,
+      "license": "CC BY-SA 4.0",
+      "artist": "Ser Amantio di Nicolao"
+    }
+  },
+  {
+    "slug": "grilled-chicken-caesar-salad",
+    "title": "Grilled Chicken Caesar Salad",
+    "query": "Grilled Chicken Caesar Salad",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Caesar Salad & Grilled Chicken (30548011308).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Caesar_Salad_%26_Grilled_Chicken_%2830548011308%29.jpg",
+      "width": 5000,
+      "height": 4000,
+      "license": "CC BY 2.0",
+      "artist": "Prayitno / Thank you for (12 millions +) view from Los Angeles, USA"
+    }
+  },
+  {
+    "slug": "loaded-baked-potato-soup",
+    "title": "Loaded Baked Potato Soup",
+    "query": "Potato soup bacon",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Parmesan potato soup topped with bacon.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Parmesan_potato_soup_topped_with_bacon.jpg",
+      "width": 4215,
+      "height": 3078,
+      "license": "CC BY 2.0",
+      "artist": "jeffreyw"
+    }
+  },
+  {
+    "slug": "buffalo-cauliflower-bites",
+    "title": "Buffalo Cauliflower Bites",
+    "query": "cauliflower wings",
+    "candidatesConsidered": 4,
+    "chosen": {
+      "fileTitle": "File:Earth Wings - Vegan Food at French Meadow - Minnesota State Fair (30496493128).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Earth_Wings_-_Vegan_Food_at_French_Meadow_-_Minnesota_State_Fair_%2830496493128%29.jpg",
+      "width": 7952,
+      "height": 5304,
+      "license": "CC BY 2.0",
+      "artist": "Tony Webster from Minneapolis, Minnesota, United States"
+    }
+  },
+  {
+    "slug": "vegetable-fried-rice",
+    "title": "Vegetable Fried Rice",
+    "query": "vegetable fried rice plate Chinese",
+    "candidatesConsidered": 3,
+    "chosen": {
+      "fileTitle": "File:Pork chop with two fried eggs rice with vegetables from Happy House HK style restaurant.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Pork_chop_with_two_fried_eggs_rice_with_vegetables_from_Happy_House_HK_style_restaurant.jpg",
+      "width": 5184,
+      "height": 3888,
+      "license": "CC BY-SA 4.0",
+      "artist": "Peachyeung316"
+    }
+  },
+  {
+    "slug": "sweet-and-sour-chicken",
+    "title": "Sweet and Sour Chicken",
+    "query": "Sweet and Sour Chicken",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Sweet and Sour Chicken.JPG",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Sweet_and_Sour_Chicken.JPG",
+      "width": 2816,
+      "height": 2112,
+      "license": "CC0",
+      "artist": "Miansari66"
+    }
+  },
+  {
+    "slug": "dan-dan-noodles",
+    "title": "Dan Dan Noodles",
+    "query": "Dan Dan Noodles",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Dan-dan noodles, Shanghai.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Dan-dan_noodles%2C_Shanghai.jpg",
+      "width": 3008,
+      "height": 2000,
+      "license": "CC BY-SA 3.0",
+      "artist": "Steven G. Johnson"
+    }
+  },
+  {
+    "slug": "chicken-chow-mein",
+    "title": "Chicken Chow Mein",
+    "query": "Chicken Chow Mein",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Chicken Chow mein 1.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Chicken_Chow_mein_1.jpg",
+      "width": 3024,
+      "height": 4032,
+      "license": "CC BY-SA 4.0",
+      "artist": "Gaurav Dhwaj Khadka"
+    }
+  },
+  {
+    "slug": "hot-and-sour-soup",
+    "title": "Hot and Sour Soup",
+    "query": "Hot and Sour Soup",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Hot-and-Sour-Soup-Bowl.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Hot-and-Sour-Soup-Bowl.jpg",
+      "width": 3900,
+      "height": 2600,
+      "license": "Public domain",
+      "artist": "Evan-Amos"
+    }
+  },
+  {
+    "slug": "sichuan-green-beans",
+    "title": "Sichuan Green Beans",
+    "query": "Sichuan Green Beans",
+    "candidatesConsidered": 4,
+    "chosen": {
+      "fileTitle": "File:Sichuan's Spicy Green Beans at Sichuan Restaurant, Acton, London (4466367167).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Sichuan%27s_Spicy_Green_Beans_at_Sichuan_Restaurant%2C_Acton%2C_London_%284466367167%29.jpg",
+      "width": 3432,
+      "height": 2288,
+      "license": "CC BY-SA 2.0",
+      "artist": "Ewan Munro from London, UK"
+    }
+  },
+  {
+    "slug": "french-onion-soup",
+    "title": "French Onion Soup",
+    "query": "French Onion Soup",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:French Onion Soup Sainte-Foy-Tarentaise, Rhône-Alpes, France - 2022-02-16.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/French_Onion_Soup_Sainte-Foy-Tarentaise%2C_Rh%C3%B4ne-Alpes%2C_France_-_2022-02-16.jpg",
+      "width": 3024,
+      "height": 4032,
+      "license": "CC BY-SA 4.0",
+      "artist": "WestportWiki"
+    }
+  },
+  {
+    "slug": "quiche-lorraine",
+    "title": "Quiche Lorraine",
+    "query": "Quiche Lorraine",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Quiche lorraine 01.JPG",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Quiche_lorraine_01.JPG",
+      "width": 2048,
+      "height": 1536,
+      "license": "CC BY-SA 4.0",
+      "artist": "Arnaud 25"
+    }
+  },
+  {
+    "slug": "beef-bourguignon",
+    "title": "Beef Bourguignon",
+    "query": "Beef Bourguignon",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Beef bourguignon-01.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Beef_bourguignon-01.jpg",
+      "width": 2069,
+      "height": 1593,
+      "license": "CC BY-SA 2.0",
+      "artist": "balise42"
+    }
+  },
+  {
+    "slug": "croque-monsieur",
+    "title": "Croque Monsieur",
+    "query": "Croque Monsieur",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Cambodian Croque Monsieur.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Cambodian_Croque_Monsieur.jpg",
+      "width": 2288,
+      "height": 1510,
+      "license": "CC BY-SA 4.0",
+      "artist": "Photogoddle"
+    }
+  },
+  {
+    "slug": "chicken-provencal",
+    "title": "Chicken Provençal",
+    "query": "Chicken provencal",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Roasted Chicken with herbes de Provence 14.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Roasted_Chicken_with_herbes_de_Provence_14.jpg",
+      "width": 5100,
+      "height": 3295,
+      "license": "CC BY-SA 4.0",
+      "artist": "Burkhard Mücke"
+    }
+  },
+  {
+    "slug": "leek-and-potato-soup",
+    "title": "Leek and Potato Soup",
+    "query": "Leek and Potato Soup",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Leek & Potato + celeriac soup.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Leek_%26_Potato_%2B_celeriac_soup.jpg",
+      "width": 4032,
+      "height": 3024,
+      "license": "CC0",
+      "artist": "Andy Li"
+    }
+  },
+  {
+    "slug": "korean-fried-chicken",
+    "title": "Korean Fried Chicken",
+    "query": "Korean Fried Chicken",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Korean fried chicken 240206.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Korean_fried_chicken_240206.jpg",
+      "width": 6000,
+      "height": 3368,
+      "license": "CC0",
+      "artist": "Startandstar"
+    }
+  },
+  {
+    "slug": "japchae-noodles",
+    "title": "Japchae Noodles",
+    "query": "Japchae Noodles",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Japchae 2.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Japchae_2.jpg",
+      "width": 2805,
+      "height": 1863,
+      "license": "CC BY-SA 2.0",
+      "artist": "Jordi Sanchez"
+    }
+  },
+  {
+    "slug": "kimchi-jjigae",
+    "title": "Kimchi Jjigae",
+    "query": "Kimchi Jjigae",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Korean.cuisine-Kimchi jjigae-01.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Korean.cuisine-Kimchi_jjigae-01.jpg",
+      "width": 800,
+      "height": 600,
+      "license": "CC BY-SA 2.0",
+      "artist": "by avlxyz"
+    }
+  },
+  {
+    "slug": "bulgogi-lettuce-wraps",
+    "title": "Bulgogi Lettuce Wraps",
+    "query": "Korean beef lettuce wrap",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:Hapcheongun County 45.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Hapcheongun_County_45.jpg",
+      "width": 3351,
+      "height": 1893,
+      "license": "CC BY-SA 2.0",
+      "artist": "KOREA.NET"
+    }
+  },
+  {
+    "slug": "korean-tofu-soup",
+    "title": "Sundubu Jjigae",
+    "query": "Sundubu Jjigae",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Korean stew-Sundubu jjigae-05.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Korean_stew-Sundubu_jjigae-05.jpg",
+      "width": 3008,
+      "height": 2000,
+      "license": "CC BY-SA 2.0",
+      "artist": "by titanium22"
+    }
+  },
+  {
+    "slug": "gochujang-glazed-salmon",
+    "title": "Gochujang-Glazed Salmon",
+    "query": "gochujang salmon dish",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:Dish based on an AI-generated cooking recipe 13B.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Dish_based_on_an_AI-generated_cooking_recipe_13B.jpg",
+      "width": 3264,
+      "height": 2448,
+      "license": "CC BY-SA 4.0",
+      "artist": "Stilfehler"
+    }
+  },
+  {
+    "slug": "chicken-adobo",
+    "title": "Chicken Adobo",
+    "query": "Chicken Adobo",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Chicken adobo.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Chicken_adobo.jpg",
+      "width": 3072,
+      "height": 2304,
+      "license": "CC BY 2.0",
+      "artist": "dbgg1979 on flickr"
+    }
+  },
+  {
+    "slug": "pork-sinigang",
+    "title": "Pork Sinigang",
+    "query": "Pork Sinigang",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Pork Sinigang, Oct 2025.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Pork_Sinigang%2C_Oct_2025.jpg",
+      "width": 4080,
+      "height": 3072,
+      "license": "CC BY-SA 4.0",
+      "artist": "Ralff Nestor Nacor"
+    }
+  },
+  {
+    "slug": "pancit-bihon",
+    "title": "Pancit Bihon",
+    "query": "Pancit Bihon",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Pancit bihon 1.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Pancit_bihon_1.jpg",
+      "width": 4032,
+      "height": 3024,
+      "license": "CC0",
+      "artist": "Obsidian Soul"
+    }
+  },
+  {
+    "slug": "filipino-lumpia",
+    "title": "Filipino Lumpia",
+    "query": "Filipino Lumpia",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Lumpia(Filipino egg roll) bento.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Lumpia%28Filipino_egg_roll%29_bento.jpg",
+      "width": 800,
+      "height": 600,
+      "license": "CC BY 2.0",
+      "artist": "Maria"
+    }
+  },
+  {
+    "slug": "chicken-pho",
+    "title": "Chicken Pho",
+    "query": "Chicken Pho",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Vietnamese Pho.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Vietnamese_Pho.jpg",
+      "width": 3015,
+      "height": 3016,
+      "license": "CC BY-SA 4.0",
+      "artist": "Nowforever"
+    }
+  },
+  {
+    "slug": "banh-mi-sandwich",
+    "title": "Banh Mi Sandwich",
+    "query": "banh mi sandwich close up",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:20240704 越式烤豬肉法國麵包.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/20240704_%E8%B6%8A%E5%BC%8F%E7%83%A4%E8%B1%AC%E8%82%89%E6%B3%95%E5%9C%8B%E9%BA%B5%E5%8C%85.jpg",
+      "width": 5472,
+      "height": 3648,
+      "license": "CC BY-SA 4.0",
+      "artist": "Junyu-K"
+    }
+  },
+  {
+    "slug": "vietnamese-spring-rolls",
+    "title": "Vietnamese Spring Rolls",
+    "query": "Vietnamese Spring Rolls",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Vietnamese fried spring rolls in Ho Chi Minh City, Vietnam.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Vietnamese_fried_spring_rolls_in_Ho_Chi_Minh_City%2C_Vietnam.jpg",
+      "width": 3984,
+      "height": 2656,
+      "license": "CC BY 4.0",
+      "artist": "Vyacheslav Argenberg"
+    }
+  },
+  {
+    "slug": "vietnamese-caramel-pork",
+    "title": "Vietnamese Caramel Pork",
+    "query": "Vietnamese Caramel Pork",
+    "candidatesConsidered": 3,
+    "chosen": {
+      "fileTitle": "File:Thịt kho hột vịt.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Th%E1%BB%8Bt_kho_h%E1%BB%99t_v%E1%BB%8Bt.jpg",
+      "width": 4128,
+      "height": 2322,
+      "license": "CC BY-SA 4.0",
+      "artist": "Baoothersks"
+    }
+  },
+  {
+    "slug": "greek-chicken-souvlaki",
+    "title": "Greek Chicken Souvlaki",
+    "query": "Greek Chicken Souvlaki",
+    "candidatesConsidered": 5,
+    "chosen": {
+      "fileTitle": "File:Greek chicken souvlaki merida.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Greek_chicken_souvlaki_merida.jpg",
+      "width": 4640,
+      "height": 3472,
+      "license": "CC BY-SA 4.0",
+      "artist": "Leeturtle"
+    }
+  },
+  {
+    "slug": "greek-salad",
+    "title": "Greek Salad",
+    "query": "Greek Salad",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Greek salad and Tzatziki.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Greek_salad_and_Tzatziki.jpg",
+      "width": 2899,
+      "height": 3181,
+      "license": "CC BY-SA 4.0",
+      "artist": "Paasikivi"
+    }
+  },
+  {
+    "slug": "spanakopita",
+    "title": "Spanakopita",
+    "query": "Spanakopita",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Spanakopita.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Spanakopita.jpg",
+      "width": 2048,
+      "height": 1536,
+      "license": "CC BY-SA 2.0",
+      "artist": "Alpha"
+    }
+  },
+  {
+    "slug": "greek-lemon-orzo-soup",
+    "title": "Greek Lemon Orzo Soup",
+    "query": "Avgolemono",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Avgolemono - Sarah Stierch.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Avgolemono_-_Sarah_Stierch.jpg",
+      "width": 3024,
+      "height": 4032,
+      "license": "CC BY 4.0",
+      "artist": "Missvain"
+    }
+  },
+  {
+    "slug": "jollof-rice",
+    "title": "Jollof Rice",
+    "query": "Jollof Rice",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Jollof rice with vegetable.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Jollof_rice_with_vegetable.jpg",
+      "width": 3264,
+      "height": 2448,
+      "license": "CC BY-SA 4.0",
+      "artist": "Segun Famisa"
+    }
+  },
+  {
+    "slug": "west-african-fufu",
+    "title": "West African Fufu",
+    "query": "West African Fufu",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Fufu 1.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Fufu_1.jpg",
+      "width": 1685,
+      "height": 1685,
+      "license": "CC BY-SA 4.0",
+      "artist": "HarunaSylvester"
+    }
+  },
+  {
+    "slug": "peanut-groundnut-stew",
+    "title": "Peanut Groundnut Stew",
+    "query": "Peanut Groundnut Stew",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Mafé Sénégalais.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Maf%C3%A9_S%C3%A9n%C3%A9galais.jpg",
+      "width": 2232,
+      "height": 3696,
+      "license": "CC BY-SA 4.0",
+      "artist": "Nicolas PHULPIN"
+    }
+  },
+  {
+    "slug": "suya-skewers",
+    "title": "Suya Skewers",
+    "query": "Suya Skewers",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Suya Seller.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Suya_Seller.jpg",
+      "width": 2048,
+      "height": 1365,
+      "license": "CC BY-SA 4.0",
+      "artist": "FischerFotos"
+    }
+  },
+  {
+    "slug": "feijoada",
+    "title": "Feijoada",
+    "query": "Feijoada",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Feijoada à brasileira -02.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Feijoada_%C3%A0_brasileira_-02.jpg",
+      "width": 1080,
+      "height": 923,
+      "license": "CC BY-SA 4.0",
+      "artist": "Bradleyzm"
+    }
+  },
+  {
+    "slug": "brazilian-picanha",
+    "title": "Brazilian Picanha",
+    "query": "Brazilian Picanha",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Picanha brazil.JPG",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Picanha_brazil.JPG",
+      "width": 4252,
+      "height": 2835,
+      "license": "CC BY 3.0",
+      "artist": "Sepato"
+    }
+  },
+  {
+    "slug": "brazilian-shrimp-moqueca",
+    "title": "Brazilian Shrimp Moqueca",
+    "query": "moqueca de camarao",
+    "candidatesConsidered": 3,
+    "chosen": {
+      "fileTitle": "File:Moqueca de peixe e camarao (7519822014).jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Moqueca_de_peixe_e_camarao_%287519822014%29.jpg",
+      "width": 1600,
+      "height": 1067,
+      "license": "CC BY 2.0",
+      "artist": "Luca Nebuloni from Milan, Italy"
+    }
+  },
+  {
+    "slug": "pao-de-queijo",
+    "title": "Pão de Queijo",
+    "query": "Pão de Queijo",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Pao de queijo brasil.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Pao_de_queijo_brasil.jpg",
+      "width": 1024,
+      "height": 683,
+      "license": "CC BY-SA 4.0",
+      "artist": "Acfariac"
+    }
+  },
+  {
+    "slug": "turkish-lamb-kebabs",
+    "title": "Turkish Lamb Kebabs",
+    "query": "lamb shish kebab plate grilled",
+    "candidatesConsidered": 1,
+    "chosen": {
+      "fileTitle": "File:Lamb shish kebab - Ankara.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Lamb_shish_kebab_-_Ankara.jpg",
+      "width": 2560,
+      "height": 1920,
+      "license": "CC BY-SA 4.0",
+      "artist": "E4024"
+    }
+  },
+  {
+    "slug": "turkish-lentil-soup",
+    "title": "Turkish Lentil Soup",
+    "query": "Turkish Lentil Soup",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Lentil soup boiling.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Lentil_soup_boiling.jpg",
+      "width": 3328,
+      "height": 1872,
+      "license": "CC BY-SA 4.0",
+      "artist": "Dmitry Bagrov"
+    }
+  },
+  {
+    "slug": "turkish-menemen",
+    "title": "Turkish Menemen",
+    "query": "menemen Turkish eggs tomato pepper",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Menemen in pan.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Menemen_in_pan.jpg",
+      "width": 4608,
+      "height": 2592,
+      "license": "CC BY-SA 4.0",
+      "artist": "FakirNL"
+    }
+  },
+  {
+    "slug": "turkish-pide",
+    "title": "Turkish Pide",
+    "query": "Turkish Pide",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Turkish pide bread from london.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Turkish_pide_bread_from_london.jpg",
+      "width": 2086,
+      "height": 1131,
+      "license": "CC BY-SA 3.0",
+      "artist": "Caroline Ford"
+    }
+  },
+  {
+    "slug": "chicken-satay",
+    "title": "Chicken Satay",
+    "query": "Chicken Satay",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Chicken Satay - Little Thai 2024-09-26.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Chicken_Satay_-_Little_Thai_2024-09-26.jpg",
+      "width": 6144,
+      "height": 8160,
+      "license": "CC0",
+      "artist": "Andy Li"
+    }
+  },
+  {
+    "slug": "nasi-goreng",
+    "title": "Nasi Goreng",
+    "query": "Nasi Goreng",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Nasi goreng pattaya 20231028 120535.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Nasi_goreng_pattaya_20231028_120535.jpg",
+      "width": 2996,
+      "height": 2999,
+      "license": "CC0",
+      "artist": "Wiki Farazi"
+    }
+  },
+  {
+    "slug": "beef-rendang",
+    "title": "Beef Rendang",
+    "query": "Beef Rendang",
+    "candidatesConsidered": 6,
+    "chosen": {
+      "fileTitle": "File:Beef Rendang..JPG",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Beef_Rendang..JPG",
+      "width": 4896,
+      "height": 3672,
+      "license": "CC0",
+      "artist": "Miansari66"
+    }
+  },
+  {
+    "slug": "gado-gado",
+    "title": "Gado-Gado",
+    "query": "Gado-Gado",
+    "candidatesConsidered": 5,
+    "chosen": {
+      "fileTitle": "File:Gado Gado PTG Gourmet IITMandi Nov17 D72 3256.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Gado_Gado_PTG_Gourmet_IITMandi_Nov17_D72_3256.jpg",
+      "width": 6000,
+      "height": 4000,
+      "license": "CC BY-SA 4.0",
+      "artist": "Timothy A. Gonsalves"
+    }
   }
 ]

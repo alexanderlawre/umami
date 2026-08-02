@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { logInteraction } from "@/lib/log-interaction";
 import { shuffle } from "@/lib/shuffle";
 import {
   attributeLabel,
+  cardDisplayAttributes,
   dietEmblemClass,
   formatMealSlot,
   formatMinutes,
@@ -116,7 +117,7 @@ function RecipeCard({
   const ref = useRef<HTMLDivElement | null>(null);
   const emblems = visibleDietEmblems(recipe.dietTags);
   const meal = formatMealSlot(recipe.mealSlot);
-  const tags = recipe.attributes.slice(0, 3);
+  const tags = cardDisplayAttributes(recipe.attributes);
 
   useEffect(() => {
     const el = ref.current;
@@ -174,32 +175,32 @@ function RecipeCard({
       </div>
 
       <div className="p-5">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <p className="text-xs uppercase tracking-wide text-[#6B7370]">
-              {recipe.cuisine}
-            </p>
-            <h3 className="mt-1 text-lg font-semibold text-[#1A1D1B]">
-              {recipe.title}
-            </h3>
+        <p className="text-xs uppercase tracking-wide text-[#6B7370]">
+          {recipe.cuisine}
+        </p>
+        <h3 className="mt-1 text-lg font-semibold text-[#1A1D1B]">
+          {recipe.title}
+        </h3>
+
+        {/* Diet zone: a dedicated full-width row, distinct from the tags
+            zone below, so dietary fit reads at a glance. */}
+        {emblems.length > 0 && (
+          <div className="mt-2 flex flex-wrap gap-1">
+            {emblems.map((diet) => (
+              <span
+                key={diet}
+                className={`rounded-full px-2 py-1 text-[11px] font-medium ${dietEmblemClass(diet)}`}
+              >
+                {diet}
+              </span>
+            ))}
           </div>
-          {emblems.length > 0 && (
-            <div className="flex shrink-0 flex-wrap justify-end gap-1">
-              {emblems.map((diet) => (
-                <span
-                  key={diet}
-                  className={`rounded-full px-2 py-1 text-[11px] font-medium ${dietEmblemClass(diet)}`}
-                >
-                  {diet}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
+        )}
 
         <p className="mt-2 text-sm text-[#1A1D1B]">{recipe.shortDescription}</p>
         <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.note}</p>
 
+        {/* Tags zone: time, meal slot, then descriptive attributes. */}
         <div className="mt-3 flex flex-wrap gap-2 text-xs text-[#6B7370]">
           <span className="rounded-full bg-[#EDF3EF] px-2 py-1">
             {formatMinutes(recipe.prepMinutes, recipe.cookMinutes)}
@@ -233,7 +234,9 @@ function RecipeCard({
 // for the initial render — `recipes` arrives pre-shuffled from the server
 // (see dashboard/page.tsx), and re-shuffling on the client here would cause
 // a hydration mismatch since the server and client would pick different
-// random orders for the same markup.
+// random orders for the same markup. It's also used (still deterministically)
+// whenever the active filter selection changes, so toggling a filter doesn't
+// require a fresh shuffle.
 function dedupeFirstFour(pool: RecipeCardData[]): RecipeCardData[] {
   const seen = new Set<string>();
   const out: RecipeCardData[] = [];
@@ -252,16 +255,116 @@ function pickFour(pool: RecipeCardData[]): RecipeCardData[] {
   return dedupeFirstFour(shuffle(pool));
 }
 
+type FilterTag = { value: string; label: string; kind: "diet" | "attribute" };
+
+function FilterBar({
+  tags,
+  selected,
+  onToggle,
+  onClear,
+}: {
+  tags: FilterTag[];
+  selected: Set<string>;
+  onToggle: (value: string) => void;
+  onClear: () => void;
+}) {
+  if (tags.length === 0) return null;
+
+  return (
+    <div className="mb-6">
+      <div className="flex flex-wrap items-center gap-2">
+        {tags.map((tag) => {
+          const active = selected.has(tag.value);
+          const activeClass =
+            tag.kind === "diet"
+              ? dietEmblemClass(tag.value) ?? "bg-[#1A1D1B] text-white"
+              : "bg-[#1A1D1B] text-white";
+          return (
+            <button
+              key={tag.value}
+              onClick={() => onToggle(tag.value)}
+              aria-pressed={active}
+              className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                active
+                  ? `border-transparent ${activeClass}`
+                  : "border-[#E8E6E0] bg-white text-[#6B7370] hover:bg-[#EDF3EF]"
+              }`}
+            >
+              {tag.label}
+            </button>
+          );
+        })}
+        {selected.size > 0 && (
+          <button
+            onClick={onClear}
+            className="rounded-full px-3 py-1.5 text-xs font-medium text-[#2C5A87] underline"
+          >
+            Clear filters
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export function DashboardClient({ recipes }: { recipes: RecipeCardData[] }) {
   const [pool] = useState(recipes);
   const [visible, setVisible] = useState(() => dedupeFirstFour(recipes));
+  const [selected, setSelected] = useState<Set<string>>(new Set());
+
+  const availableTags = useMemo<FilterTag[]>(() => {
+    const diets = new Set<string>();
+    const attrs = new Set<string>();
+    for (const r of pool) {
+      for (const d of r.dietTags) {
+        if (d !== "Omnivore") diets.add(d);
+      }
+      for (const a of r.attributes) attrs.add(a);
+    }
+    const dietTags: FilterTag[] = [...diets]
+      .sort()
+      .map((value) => ({ value, label: value, kind: "diet" as const }));
+    const attrTags: FilterTag[] = [...attrs]
+      .sort()
+      .map((value) => ({ value, label: attributeLabel(value), kind: "attribute" as const }));
+    return [...dietTags, ...attrTags];
+  }, [pool]);
+
+  const filteredPool = useMemo(() => {
+    if (selected.size === 0) return pool;
+    const tags = [...selected];
+    return pool.filter((r) =>
+      tags.every((tag) => r.attributes.includes(tag) || r.dietTags.includes(tag)),
+    );
+  }, [pool, selected]);
 
   function handleSavedChange(id: string, saved: boolean) {
     setVisible((prev) => prev.map((r) => (r.id === id ? { ...r, saved } : r)));
   }
 
   function handleRefresh() {
-    setVisible(pickFour(pool));
+    setVisible(pickFour(filteredPool));
+  }
+
+  function toggleTag(value: string) {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(value)) next.delete(value);
+      else next.add(value);
+      const nextFiltered =
+        next.size === 0
+          ? pool
+          : pool.filter((r) =>
+              [...next].every((tag) => r.attributes.includes(tag) || r.dietTags.includes(tag)),
+            );
+      setVisible(dedupeFirstFour(nextFiltered));
+      return next;
+    });
+  }
+
+  function clearFilters() {
+    setSelected(new Set());
+    setVisible(dedupeFirstFour(pool));
   }
 
   if (pool.length === 0) {
@@ -274,20 +377,37 @@ export function DashboardClient({ recipes }: { recipes: RecipeCardData[] }) {
 
   return (
     <div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {visible.map((recipe) => (
-          <RecipeCard
-            key={recipe.id}
-            recipe={recipe}
-            onSavedChange={handleSavedChange}
-          />
-        ))}
-      </div>
+      <FilterBar
+        tags={availableTags}
+        selected={selected}
+        onToggle={toggleTag}
+        onClear={clearFilters}
+      />
+
+      {filteredPool.length === 0 ? (
+        <p className="text-sm text-[#6B7370]">
+          No recipes match your selected filters.{" "}
+          <button onClick={clearFilters} className="text-[#2C5A87] underline">
+            Clear filters
+          </button>
+        </p>
+      ) : (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {visible.map((recipe) => (
+            <RecipeCard
+              key={recipe.id}
+              recipe={recipe}
+              onSavedChange={handleSavedChange}
+            />
+          ))}
+        </div>
+      )}
 
       <div className="mt-6 flex justify-center">
         <button
           onClick={handleRefresh}
-          className="rounded-full border border-[#E8E6E0] px-5 py-3 text-sm font-medium text-[#1A1D1B] hover:bg-[#EDF3EF]"
+          disabled={filteredPool.length === 0}
+          className="rounded-full border border-[#E8E6E0] px-5 py-3 text-sm font-medium text-[#1A1D1B] hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
         >
           Refresh recipes
         </button>
