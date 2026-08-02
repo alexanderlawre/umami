@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { savedRecipeExpiryCutoff } from "@/lib/saved-recipes";
 import { CookLaterClient } from "./cook-later-client";
 
 const SAVED_RECIPE_CAP = 10;
@@ -11,7 +12,7 @@ export default async function CookLaterPage() {
   if (!session.user.onboarded) redirect("/onboarding");
 
   const saved = await prisma.savedRecipe.findMany({
-    where: { userId: session.user.id },
+    where: { userId: session.user.id, savedAt: { gte: savedRecipeExpiryCutoff() } },
     include: {
       recipe: { include: { dietTags: true } },
     },

@@ -174,3 +174,41 @@ with a live browser session against the local dev DB. Confirmed:
   file + `imageUrl`, verified by cross-checking the three sources agree.
   Sourcing a real, curated photo set (e.g. from a folder the user provides)
   is still open and preferred over further automated Commons searches.
+
+## Admin photo upload, password reset, saved-recipe expiry (2026-08-02)
+
+- **Admin photo upload writes directly to `public/recipe-photos/`, no
+  external storage.** `POST /api/admin/recipes/[id]/image` validates
+  type/size, writes `{slug}.{ext}` to the existing local photo directory
+  (same convention as the seeded photos), best-effort deletes the old file
+  if the extension changed, and updates `Recipe.imageUrl`. This matches how
+  every other recipe photo is served today; moving to a cloud bucket is a
+  later concern if/when this deploys somewhere without a persistent
+  filesystem.
+- **Password reset built from scratch (no prior email/token infra existed).**
+  Added a `PasswordResetToken` model (SHA-256-hashed token, 1-hour expiry,
+  single-use), two endpoints (`/api/account/forgot-password`,
+  `/api/account/reset-password`), and matching pages. The forgot-password
+  endpoint always returns the same generic response regardless of whether
+  the email exists, to avoid account enumeration. Email delivery goes
+  through Resend; without `RESEND_API_KEY` set, the reset link is logged to
+  the server console instead, so local dev needs zero email setup.
+- **Admin accounts are created via a script, not a signup flag.** There's
+  still no invite-code or admin-signup system — `scripts/create-admin.ts`
+  upserts a user by email (promotes if they exist, creates with a generated
+  password if not). This mirrors the existing `isAdmin` boolean approach
+  from the admin-page decision above.
+- **"Cook Later" recipes disappear after 7 days via a lazy read-time filter,
+  not a deletion job.** All four places that read `SavedRecipe` (dashboard
+  star state, recipe-detail star state, the Cook Later list, and the 10-item
+  cap count) now filter `savedAt >= now - 7 days` via a shared
+  `savedRecipeExpiryCutoff()` helper. Expired rows are left in the DB
+  untouched — no cron/scheduled cleanup exists yet, since simply hiding them
+  was sufficient for the ask and avoids adding scheduled-job infra for a
+  prototype. Re-saving an expired recipe refreshes `savedAt` so it
+  reappears.
+- **Repo cleanup pass**: removed the unused `framer-motion` dependency (zero
+  imports anywhere), the one-off `scripts/debug-image-query.mjs` diagnostic,
+  and the default `create-next-app` SVGs/README boilerplate that were never
+  customized. Added `engines.node` to `package.json` and rewrote `README.md`
+  with actual setup/deployment instructions for this app.

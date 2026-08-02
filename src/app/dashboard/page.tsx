@@ -3,6 +3,7 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { filterEligibleRecipes, type FilterableRecipe } from "@/lib/recommend/filter";
 import { shuffle } from "@/lib/shuffle";
+import { savedRecipeExpiryCutoff } from "@/lib/saved-recipes";
 import { DashboardClient, type RecipeCardData } from "./dashboard-client";
 
 type EligibleRecipe = FilterableRecipe & RecipeCardData;
@@ -22,7 +23,7 @@ export default async function DashboardPage() {
       include: { dietTags: true, allergenTags: true },
     }),
     prisma.savedRecipe.findMany({
-      where: { userId: session.user.id },
+      where: { userId: session.user.id, savedAt: { gte: savedRecipeExpiryCutoff() } },
       select: { recipeId: true },
     }),
   ]);

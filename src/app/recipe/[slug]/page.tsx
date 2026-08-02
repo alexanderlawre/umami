@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { savedRecipeExpiryCutoff } from "@/lib/saved-recipes";
 import { RecipeDetailClient } from "./recipe-detail-client";
 
 export default async function RecipeDetailPage({
@@ -27,10 +28,11 @@ export default async function RecipeDetailPage({
   const saved = await prisma.savedRecipe.findUnique({
     where: { userId_recipeId: { userId: session.user.id, recipeId: recipe.id } },
   });
+  const isSavedAndFresh = !!saved && saved.savedAt >= savedRecipeExpiryCutoff();
 
   return (
     <main className="mx-auto w-full max-w-2xl flex-1 px-6 py-10">
-      <RecipeDetailClient recipe={recipe} initialSaved={!!saved} />
+      <RecipeDetailClient recipe={recipe} initialSaved={isSavedAndFresh} />
     </main>
   );
 }

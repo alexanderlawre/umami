@@ -18,7 +18,11 @@ export const authConfig: NextAuthConfig = {
       const isPublicRoute =
         pathname === "/login" ||
         pathname === "/signup" ||
+        pathname === "/forgot-password" ||
+        pathname === "/reset-password" ||
         pathname.startsWith("/api/signup") ||
+        pathname.startsWith("/api/account/forgot-password") ||
+        pathname.startsWith("/api/account/reset-password") ||
         pathname.startsWith("/api/auth");
 
       if (isPublicRoute) return true;
