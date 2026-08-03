@@ -15,7 +15,11 @@ export async function sendPasswordResetEmail(to: string, resetUrl: string) {
     return;
   }
 
-  await resend.emails.send({
+  // The Resend SDK does not throw on API-level failures (e.g. an
+  // unverified sending domain) — it resolves with `{ data, error }`.
+  // Log the error explicitly so failures are visible instead of being
+  // silently swallowed while the route still reports generic success.
+  const { data, error } = await resend.emails.send({
     from: process.env.EMAIL_FROM || DEFAULT_FROM,
     to,
     subject: "Reset your Umami password",
@@ -25,4 +29,10 @@ export async function sendPasswordResetEmail(to: string, resetUrl: string) {
       <p>If you didn't request this, you can safely ignore this email.</p>
     `,
   });
+
+  if (error) {
+    console.error(`[email] Resend failed to send password reset email to ${to}:`, error);
+  } else {
+    console.log(`[email] Password reset email sent to ${to}, id: ${data?.id}`);
+  }
 }
