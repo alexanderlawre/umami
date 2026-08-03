@@ -6,12 +6,14 @@ declare module "next-auth" {
       id: string;
       onboarded: boolean;
       isAdmin: boolean;
+      isPremium: boolean;
     } & DefaultSession["user"];
   }
 
   interface User {
     onboarded?: boolean;
     isAdmin?: boolean;
+    isPremium?: boolean;
   }
 }
 
@@ -20,5 +22,6 @@ declare module "next-auth/jwt" {
     id: string;
     onboarded: boolean;
     isAdmin: boolean;
+    isPremium: boolean;
   }
 }

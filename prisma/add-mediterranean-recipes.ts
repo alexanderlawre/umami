@@ -1,0 +1,126 @@
+// Standalone, idempotent script to add the ~42 Mediterranean-diet recipes
+// requested by the user. Kept separate from prisma/seed.ts / recipes.json so
+// it can be run independently without touching the existing seed data.
+//
+// Run with: npx tsx prisma/add-mediterranean-recipes.ts
+
+import { PrismaClient } from "@prisma/client";
+import { slugify } from "../src/lib/slugify";
+import recipesData from "./seed/recipes-mediterranean.json";
+
+const prisma = new PrismaClient();
+
+type RecipeSeed = {
+  slug: string;
+  title: string;
+  shortDescription: string;
+  note: string;
+  introCopy: string;
+  servings: number;
+  prepMinutes: number;
+  cookMinutes: number;
+  difficulty: "EASY" | "MEDIUM" | "INVOLVED";
+  cuisine: string;
+  mealSlot: string[];
+  effortTier: "WEEKNIGHT" | "WEEKEND" | "PROJECT";
+  batchFriendly: boolean;
+  attributes: string[];
+  heroColor: string;
+  imageUrl?: string;
+  imageCredit?: string;
+  allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
+  caloriesPerServing?: number | null;
+  proteinGrams?: number | null;
+  carbsGrams?: number | null;
+  fatGrams?: number | null;
+  ingredients: {
+    component: string | null;
+    order: number;
+    quantity: string;
+    unit: string | null;
+    item: string;
+    prepNote: string | null;
+    optional: boolean;
+  }[];
+  steps: { order: number; text: string; durationMinutes: number | null }[];
+  foodGroupProfile: { foodGroup: string; weight: number }[];
+  dietTags: string[];
+  allergenTags: string[];
+};
+
+const recipes = recipesData as RecipeSeed[];
+
+async function main() {
+  const cuisineNames = [...new Set(recipes.map((r) => r.cuisine))];
+  console.log(`Ensuring ${cuisineNames.length} cuisines exist...`);
+  for (const name of cuisineNames) {
+    const slug = slugify(name);
+    await prisma.cuisine.upsert({
+      where: { name },
+      create: { name, slug },
+      update: {},
+    });
+  }
+
+  console.log(`Seeding ${recipes.length} Mediterranean-batch recipes...`);
+
+  for (const recipe of recipes) {
+    await prisma.recipe.upsert({
+      where: { slug: recipe.slug },
+      create: {
+        slug: recipe.slug,
+        title: recipe.title,
+        shortDescription: recipe.shortDescription,
+        note: recipe.note,
+        introCopy: recipe.introCopy,
+        servings: recipe.servings,
+        prepMinutes: recipe.prepMinutes,
+        cookMinutes: recipe.cookMinutes,
+        difficulty: recipe.difficulty,
+        cuisine: { connect: { name: recipe.cuisine } },
+        mealSlot: recipe.mealSlot as never,
+        effortTier: recipe.effortTier,
+        batchFriendly: recipe.batchFriendly,
+        attributes: recipe.attributes,
+        heroColor: recipe.heroColor,
+        imageUrl: recipe.imageUrl,
+        imageCredit: recipe.imageCredit,
+        allergenReviewStatus: recipe.allergenReviewStatus,
+        caloriesPerServing: recipe.caloriesPerServing ?? null,
+        proteinGrams: recipe.proteinGrams ?? null,
+        carbsGrams: recipe.carbsGrams ?? null,
+        fatGrams: recipe.fatGrams ?? null,
+        isActive: true,
+        ingredients: { create: recipe.ingredients },
+        steps: { create: recipe.steps },
+        foodGroupProfile: {
+          create: recipe.foodGroupProfile.map((fgp) => ({
+            weight: fgp.weight,
+            foodGroup: { connect: { name: fgp.foodGroup } },
+          })),
+        },
+        dietTags: { connect: recipe.dietTags.map((name) => ({ name })) },
+        allergenTags: { connect: recipe.allergenTags.map((name) => ({ name })) },
+      },
+      update: {
+        caloriesPerServing: recipe.caloriesPerServing ?? null,
+        proteinGrams: recipe.proteinGrams ?? null,
+        carbsGrams: recipe.carbsGrams ?? null,
+        fatGrams: recipe.fatGrams ?? null,
+        dietTags: { set: recipe.dietTags.map((name) => ({ name })) },
+        allergenTags: { set: recipe.allergenTags.map((name) => ({ name })) },
+      },
+    });
+  }
+
+  console.log("Mediterranean recipe batch complete.");
+}
+
+main()
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });

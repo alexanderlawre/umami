@@ -65,6 +65,12 @@ enum CooldownReason {
   MUTED
 }
 
+enum SubmissionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
 // ---------- Core ----------
 
 model User {
@@ -74,8 +80,10 @@ model User {
   name         String
   country      String
   city         String?
+  timezone     String?
   birthday     DateTime?
   isAdmin      Boolean  @default(false)
+  isPremium    Boolean  @default(false)
   createdAt    DateTime @default(now())
   lastActiveAt DateTime @default(now())
 
@@ -87,6 +95,7 @@ model User {
   servedCards         ServedCard[]
   savedRecipes        SavedRecipe[]
   passwordResetTokens PasswordResetToken[]
+  recipeSubmissions   RecipeSubmission[]
 }
 
 model PasswordResetToken {
@@ -146,6 +155,7 @@ model Diet {
 
   userPreferences UserPreferences[]
   recipes         Recipe[]
+  submissions     RecipeSubmission[] @relation("SubmissionDietTags")
 }
 
 model Allergen {
@@ -154,6 +164,7 @@ model Allergen {
 
   userPreferences UserPreferences[]
   recipes         Recipe[]
+  submissions     RecipeSubmission[] @relation("SubmissionAllergenTags")
 }
 
 model Cuisine {
@@ -161,7 +172,8 @@ model Cuisine {
   name String @unique
   slug String @unique
 
-  recipes Recipe[]
+  recipes     Recipe[]
+  submissions RecipeSubmission[]
 }
 
 // ---------- Recipes ----------
@@ -190,6 +202,14 @@ model Recipe {
   imageUrl   String?
   imageCredit String?
 
+  // Simple, optional per-serving macros. Kept intentionally minimal — no
+  // full nutrition-tracking system. Protein/carbs/fat are gated behind
+  // User.isPremium in the UI; calories stay free for everyone.
+  caloriesPerServing Int?
+  proteinGrams       Int?
+  carbsGrams         Int?
+  fatGrams           Int?
+
   allergenReviewStatus AllergenReviewStatus @default(UNVERIFIED)
   isActive             Boolean              @default(true)
   createdAt            DateTime             @default(now())
@@ -200,11 +220,12 @@ model Recipe {
   dietTags         Diet[]
   allergenTags     Allergen[]
 
-  interactions Interaction[]
-  cookLogs     CookLog[]
-  cooldowns    Cooldown[]
-  servedCards  ServedCard[]
-  savedBy      SavedRecipe[]
+  interactions     Interaction[]
+  cookLogs         CookLog[]
+  cooldowns        Cooldown[]
+  servedCards      ServedCard[]
+  savedBy          SavedRecipe[]
+  submissionSource RecipeSubmission?
 }
 
 model Ingredient {
@@ -238,6 +259,81 @@ model RecipeFoodGroup {
   weight      Int // 0-100
 
   @@unique([recipeId, foodGroupId])
+}
+
+// ---------- User-submitted recipes (pending review) ----------
+// Kept structurally separate from Recipe so unreviewed/rejected content can
+// never leak into the public catalog — dashboard/filter/cook-later/search
+// queries only ever touch Recipe. Mirrors the Ingredient/Step pattern.
+
+model RecipeSubmission {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Same shape as Recipe's own input fields (mirrors recipeFieldsSchema)
+  title            String
+  shortDescription String
+  note             String
+  introCopy        String
+  servings         Int
+  prepMinutes      Int
+  cookMinutes      Int
+  difficulty       Difficulty
+  cuisineId        String
+  cuisine          Cuisine    @relation(fields: [cuisineId], references: [id])
+  mealSlot         MealSlot[]
+  effortTier       EffortTier
+  batchFriendly    Boolean    @default(false)
+  attributes       String[]   @default([])
+  heroColor        String
+  imageUrl         String?
+  imageCredit      String?
+
+  caloriesPerServing Int?
+  proteinGrams       Int?
+  carbsGrams         Int?
+  fatGrams           Int?
+
+  dietTags     Diet[]                 @relation("SubmissionDietTags")
+  allergenTags Allergen[]             @relation("SubmissionAllergenTags")
+  ingredients  SubmissionIngredient[]
+  steps        SubmissionStep[]
+
+  status           SubmissionStatus @default(PENDING)
+  reviewNote       String?
+  reviewedAt       DateTime?
+  reviewedById     String?
+  approvedRecipeId String?          @unique
+  approvedRecipe   Recipe?          @relation(fields: [approvedRecipeId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, status])
+  @@index([status, createdAt])
+}
+
+model SubmissionIngredient {
+  id           String           @id @default(cuid())
+  submissionId String
+  submission   RecipeSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  component    String?
+  order        Int
+  quantity     String
+  unit         String?
+  item         String
+  prepNote     String?
+  optional     Boolean          @default(false)
+}
+
+model SubmissionStep {
+  id              String           @id @default(cuid())
+  submissionId    String
+  submission      RecipeSubmission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  order           Int
+  text            String
+  durationMinutes Int?
 }
 
 // ---------- Behavioral log (append-only) ----------
@@ -302,7 +398,13 @@ model ServedCard {
   recipeId       String
   recipe         Recipe   @relation(fields: [recipeId], references: [id], onDelete: Cascade)
   servedAt       DateTime @default(now())
+  // Identifies the timezone-local meal-slot window this card was served for,
+  // e.g. "2026-08-03:DINNER" (see src/lib/meal-slot.ts). Empty string on rows
+  // created before this field existed — they simply never match a real
+  // window key and become inert history, same as other append-only logs here.
+  windowKey      String   @default("")
   scoreBreakdown Json?
 
   @@index([userId, servedAt])
+  @@index([userId, windowKey])
 }

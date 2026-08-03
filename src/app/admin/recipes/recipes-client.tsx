@@ -2,14 +2,15 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { AddCuisineInline } from "@/components/recipe-form-fields";
 import {
   RecipeEditor,
   type EditorAllergen,
   type EditorCuisine,
   type EditorDiet,
   type EditorRecipe,
-} from "./recipe-editor";
+} from "../recipe-editor";
 
 export type AdminRecipeRow = {
   id: string;
@@ -17,28 +18,20 @@ export type AdminRecipeRow = {
   title: string;
   cuisine: string;
   cuisineId: string;
+  mealSlot: string[];
   isActive: boolean;
   allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
   imageUrl: string | null;
 };
 
-type Stats = {
-  userCount: number;
-  recipeCount: number;
-  activeRecipeCount: number;
-  unverifiedRecipeCount: number;
-  cookLogCount: number;
-  interactionCounts: { type: string; count: number }[];
-};
-
-function StatCard({ label, value }: { label: string; value: number | string }) {
-  return (
-    <div className="rounded-2xl border border-[#E8E6E0] bg-white p-4">
-      <p className="text-2xl font-bold text-[#1A1D1B]">{value}</p>
-      <p className="mt-1 text-xs text-[#6B7370]">{label}</p>
-    </div>
-  );
-}
+// Admin-facing meal categories. SNACK is relabeled "Small Bites" here only —
+// the consumer-facing formatMealSlot() wording elsewhere is untouched.
+const MEAL_CATEGORIES: { key: string; label: string }[] = [
+  { key: "BREAKFAST", label: "Breakfast" },
+  { key: "LUNCH", label: "Lunch" },
+  { key: "DINNER", label: "Dinner" },
+  { key: "SNACK", label: "Small Bites" },
+];
 
 async function patchRecipe(id: string, body: Record<string, unknown>) {
   const res = await fetch(`/api/admin/recipes/${id}`, {
@@ -142,20 +135,20 @@ function RecipeRow({
   );
 }
 
-export function AdminClient({
-  stats,
+export function RecipesClient({
   recipes,
   cuisines,
   diets,
   allergens,
 }: {
-  stats: Stats;
   recipes: AdminRecipeRow[];
   cuisines: EditorCuisine[];
   diets: EditorDiet[];
   allergens: EditorAllergen[];
 }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const filter = searchParams.get("filter");
   const [editorState, setEditorState] = useState<
     | { mode: "create" }
     | { mode: "edit"; recipe: EditorRecipe }
@@ -163,15 +156,27 @@ export function AdminClient({
     | null
   >(null);
 
+  // A recipe with multiple mealSlot tags (e.g. LUNCH + SNACK) appears under
+  // every category it declares.
   const grouped = useMemo(() => {
     const map = new Map<string, AdminRecipeRow[]>();
+    for (const category of MEAL_CATEGORIES) map.set(category.key, []);
     for (const recipe of recipes) {
-      const list = map.get(recipe.cuisine) ?? [];
-      list.push(recipe);
-      map.set(recipe.cuisine, list);
+      for (const slot of recipe.mealSlot) {
+        const list = map.get(slot);
+        if (list) list.push(recipe);
+      }
     }
-    return [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+    return MEAL_CATEGORIES.map((category) => ({
+      ...category,
+      rows: map.get(category.key) ?? [],
+    }));
   }, [recipes]);
+
+  // Since a flagged recipe could live in multiple category groups, a
+  // filter=unverified/active query param expands every section by default
+  // rather than targeting just one.
+  const expandAll = filter === "unverified" || filter === "active";
 
   async function openEdit(id: string) {
     setEditorState({ mode: "loading" });
@@ -202,6 +207,10 @@ export function AdminClient({
         imageCredit: string | null;
         isActive: boolean;
         allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
+        caloriesPerServing: number | null;
+        proteinGrams: number | null;
+        carbsGrams: number | null;
+        fatGrams: number | null;
         dietTags: { id: string }[];
         allergenTags: { id: string }[];
         ingredients: {
@@ -232,25 +241,8 @@ export function AdminClient({
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-        <StatCard label="Users" value={stats.userCount} />
-        <StatCard label="Recipes" value={stats.recipeCount} />
-        <StatCard label="Active recipes" value={stats.activeRecipeCount} />
-        <StatCard label="Unverified allergens" value={stats.unverifiedRecipeCount} />
-        <StatCard label="Cook logs" value={stats.cookLogCount} />
-        {stats.interactionCounts.map((i) => (
-          <StatCard key={i.type} label={i.type} value={i.count} />
-        ))}
-      </div>
-
-      <div className="mt-8 flex items-center justify-between">
-        <div>
-          <h2 className="text-lg font-semibold text-[#1A1D1B]">Recipes</h2>
-          <p className="mt-1 text-xs text-[#6B7370]">
-            Grouped by cuisine. Edit a recipe&apos;s tags, content, and photo, or toggle
-            visibility.
-          </p>
-        </div>
+      <div className="flex items-center justify-between">
+        <div />
         <button
           onClick={() => setEditorState({ mode: "create" })}
           className="shrink-0 rounded-full bg-[#1F5F45] px-4 py-2 text-xs font-medium text-white"
@@ -259,17 +251,41 @@ export function AdminClient({
         </button>
       </div>
 
-      <div className="mt-3 space-y-6">
-        {grouped.map(([cuisine, rows]) => (
-          <div key={cuisine}>
-            <h3 className="text-sm font-semibold text-[#1A1D1B]">{cuisine}</h3>
-            <div className="mt-2 rounded-2xl border border-[#E8E6E0] bg-white px-4">
-              {rows.map((recipe) => (
-                <RecipeRow key={recipe.id} recipe={recipe} onEdit={openEdit} />
-              ))}
-            </div>
-          </div>
-        ))}
+      <div className="mt-3 space-y-3">
+        {grouped.map(({ key, label, rows }) => {
+          const hasUnverified = rows.some((r) => r.allergenReviewStatus === "UNVERIFIED");
+          return (
+            <details
+              key={key}
+              open={expandAll}
+              className="group rounded-2xl border border-[#E8E6E0] bg-white"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-[#1A1D1B]">
+                <span className="flex items-center gap-2">
+                  {label}
+                  {hasUnverified && (
+                    <span className="rounded-full border border-[#B45309] bg-[#FEF3E2] px-2 py-0.5 text-[10px] font-medium text-[#B45309]">
+                      unverified
+                    </span>
+                  )}
+                </span>
+                <span className="text-xs font-normal text-[#6B7370]">
+                  {rows.length} recipe{rows.length === 1 ? "" : "s"}
+                </span>
+              </summary>
+              <div className="border-t border-[#E8E6E0] px-4">
+                {rows.length === 0 && (
+                  <p className="py-3 text-xs text-[#6B7370]">No recipes in this category yet.</p>
+                )}
+                {rows.map((recipe) => (
+                  <RecipeRow key={recipe.id} recipe={recipe} onEdit={openEdit} />
+                ))}
+              </div>
+            </details>
+          );
+        })}
+
+        <AddCuisineInline onCreated={() => router.refresh()} />
       </div>
 
       {editorState?.mode === "create" && (

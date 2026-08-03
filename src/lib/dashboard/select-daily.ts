@@ -1,8 +1,14 @@
 import { prisma } from "@/lib/prisma";
 import { filterEligibleRecipes, type FilterableRecipe } from "@/lib/recommend/filter";
-import { shuffle } from "@/lib/shuffle";
+import { scoreRecipe, weightedShuffle, type ScoringProfile } from "@/lib/recommend/score";
 import { savedRecipeExpiryCutoff } from "@/lib/saved-recipes";
-import { currentWindowStart, nextWindowStart } from "@/lib/dashboard-window";
+import {
+  getCurrentMealSlot,
+  getMealSlotWindowKey,
+  nextMealSlotWindowAt,
+  shouldScatterSnack,
+  type MealSlot,
+} from "@/lib/meal-slot";
 import type { RecipeCardData } from "@/app/dashboard/dashboard-client";
 
 export const DAILY_CARD_COUNT = 4;
@@ -10,8 +16,17 @@ export const MAX_MANUAL_REFRESHES_PER_WINDOW = 1;
 
 export type EligibleRecipe = FilterableRecipe & RecipeCardData;
 
-async function loadEligiblePool(userId: string): Promise<EligibleRecipe[]> {
-  const [preferences, recipes, savedRecipes] = await Promise.all([
+type DashboardContext = {
+  pool: EligibleRecipe[];
+  profile: ScoringProfile;
+  timezone: string | null;
+  currentSlot: MealSlot;
+  windowKey: string;
+};
+
+async function loadDashboardContext(userId: string): Promise<DashboardContext> {
+  const [user, preferences, recipes, savedRecipes] = await Promise.all([
+    prisma.user.findUnique({ where: { id: userId }, select: { timezone: true } }),
     prisma.userPreferences.findUnique({
       where: { userId },
       include: { diets: true, allergens: true },
@@ -60,19 +75,60 @@ async function loadEligiblePool(userId: string): Promise<EligibleRecipe[]> {
     saved: savedRecipeIds.has(r.id),
   }));
 
-  return filterEligibleRecipes(candidates, userProfile);
+  const timezone = user?.timezone ?? null;
+
+  return {
+    pool: filterEligibleRecipes(candidates, userProfile),
+    profile: {
+      diets: userProfile.diets,
+      favoriteCuisines: preferences?.favoriteCuisines ?? [],
+    },
+    timezone,
+    currentSlot: getCurrentMealSlot(timezone),
+    windowKey: getMealSlotWindowKey(timezone),
+  };
 }
 
 // Favorited (saved) recipes get priority for the daily four so a starred
 // recipe is more likely to keep surfacing, without ever being *required* to
 // (saving itself, via SavedRecipe, already persists independent of what the
-// dashboard shows — see cook-later).
-function pickDaily(pool: EligibleRecipe[], exclude: Set<string> = new Set()): EligibleRecipe[] {
+// dashboard shows — see cook-later). Within each priority tier, recipes are
+// weighted-shuffled by soft score (meal-slot match, diet match, favorite
+// cuisine) — nothing here ever excludes a recipe, only re-ranks it.
+function pickDaily(
+  pool: EligibleRecipe[],
+  profile: ScoringProfile,
+  currentSlot: MealSlot,
+  includeSnack: boolean,
+  exclude: Set<string> = new Set(),
+): EligibleRecipe[] {
   const available = pool.filter((r) => !exclude.has(r.id));
   const base = available.length >= DAILY_CARD_COUNT ? available : pool;
-  const favorited = shuffle(base.filter((r) => r.saved));
-  const rest = shuffle(base.filter((r) => !r.saved));
-  return [...favorited, ...rest].slice(0, DAILY_CARD_COUNT);
+  const weight = (r: EligibleRecipe) => scoreRecipe(r, profile, currentSlot);
+
+  const favorited = weightedShuffle(base.filter((r) => r.saved), weight);
+  const rest = weightedShuffle(base.filter((r) => !r.saved), weight);
+  let picks = [...favorited, ...rest].slice(0, DAILY_CARD_COUNT);
+
+  if (includeSnack) {
+    const pickedIds = new Set(picks.map((r) => r.id));
+    const snackCandidates = base.filter((r) => r.mealSlot.includes("SNACK") && !pickedIds.has(r.id));
+    if (snackCandidates.length > 0) {
+      const snack = weightedShuffle(snackCandidates, weight)[0];
+      // Swap in the snack for the last non-saved pick, preserving favorited
+      // recipes whenever possible.
+      let replaceIndex = picks.length - 1;
+      for (let i = picks.length - 1; i >= 0; i--) {
+        if (!picks[i].saved) {
+          replaceIndex = i;
+          break;
+        }
+      }
+      picks = [...picks.slice(0, replaceIndex), snack, ...picks.slice(replaceIndex + 1)];
+    }
+  }
+
+  return picks;
 }
 
 function toCardData(r: EligibleRecipe): RecipeCardData {
@@ -97,17 +153,17 @@ function toCardData(r: EligibleRecipe): RecipeCardData {
 export type DailySelection = {
   pool: RecipeCardData[];
   served: RecipeCardData[];
+  currentSlot: MealSlot;
   refreshAvailable: boolean;
   nextWindowAt: Date;
 };
 
 export async function getDailySelection(userId: string): Promise<DailySelection> {
-  const pool = await loadEligiblePool(userId);
-  const windowStart = currentWindowStart();
+  const { pool, profile, timezone, currentSlot, windowKey } = await loadDashboardContext(userId);
   const poolById = new Map(pool.map((r) => [r.id, r]));
 
   const existing = await prisma.servedCard.findMany({
-    where: { userId, servedAt: { gte: windowStart } },
+    where: { userId, windowKey },
     orderBy: { servedAt: "desc" },
   });
 
@@ -128,15 +184,19 @@ export async function getDailySelection(userId: string): Promise<DailySelection>
     // Top up if some previously-served recipes rotated out of eligibility.
     if (served.length < DAILY_CARD_COUNT && pool.length > 0) {
       const servedIds = new Set(served.map((r) => r.id));
-      const topUp = pickDaily(pool, servedIds).filter((r) => !servedIds.has(r.id));
+      const includeSnack = shouldScatterSnack(`${userId}:${windowKey}`);
+      const topUp = pickDaily(pool, profile, currentSlot, includeSnack, servedIds).filter(
+        (r) => !servedIds.has(r.id)
+      );
       served = [...served, ...topUp].slice(0, DAILY_CARD_COUNT);
     }
   } else if (pool.length > 0) {
-    served = pickDaily(pool);
+    const includeSnack = shouldScatterSnack(`${userId}:${windowKey}`);
+    served = pickDaily(pool, profile, currentSlot, includeSnack);
     if (served.length > 0) {
       const servedAt = new Date();
       await prisma.servedCard.createMany({
-        data: served.map((r) => ({ userId, recipeId: r.id, servedAt })),
+        data: served.map((r) => ({ userId, recipeId: r.id, servedAt, windowKey })),
       });
     }
   } else {
@@ -146,8 +206,9 @@ export async function getDailySelection(userId: string): Promise<DailySelection>
   return {
     pool: pool.map(toCardData),
     served: served.map(toCardData),
+    currentSlot,
     refreshAvailable: refreshesUsedThisWindow < MAX_MANUAL_REFRESHES_PER_WINDOW,
-    nextWindowAt: nextWindowStart(),
+    nextWindowAt: nextMealSlotWindowAt(timezone),
   };
 }
 
@@ -156,28 +217,32 @@ export type RefreshResult =
   | { ok: false; reason: "no-refresh-available"; nextWindowAt: Date };
 
 export async function refreshDailySelection(userId: string): Promise<RefreshResult> {
-  const pool = await loadEligiblePool(userId);
-  const windowStart = currentWindowStart();
+  const { pool, profile, timezone, currentSlot, windowKey } = await loadDashboardContext(userId);
 
   const existing = await prisma.servedCard.findMany({
-    where: { userId, servedAt: { gte: windowStart } },
+    where: { userId, windowKey },
   });
   const distinctServedAt = new Set(existing.map((c) => c.servedAt.getTime()));
   const refreshesUsedThisWindow = Math.max(0, distinctServedAt.size - 1);
 
   if (refreshesUsedThisWindow >= MAX_MANUAL_REFRESHES_PER_WINDOW) {
-    return { ok: false, reason: "no-refresh-available", nextWindowAt: nextWindowStart() };
+    return {
+      ok: false,
+      reason: "no-refresh-available",
+      nextWindowAt: nextMealSlotWindowAt(timezone),
+    };
   }
 
   const currentIds = new Set(existing.map((c) => c.recipeId));
-  const served = pickDaily(pool, currentIds);
+  const includeSnack = shouldScatterSnack(`${userId}:${windowKey}:refresh`);
+  const served = pickDaily(pool, profile, currentSlot, includeSnack, currentIds);
 
   if (served.length > 0) {
     const servedAt = new Date();
     await prisma.servedCard.createMany({
-      data: served.map((r) => ({ userId, recipeId: r.id, servedAt })),
+      data: served.map((r) => ({ userId, recipeId: r.id, servedAt, windowKey })),
     });
   }
 
-  return { ok: true, served: served.map(toCardData), nextWindowAt: nextWindowStart() };
+  return { ok: true, served: served.map(toCardData), nextWindowAt: nextMealSlotWindowAt(timezone) };
 }

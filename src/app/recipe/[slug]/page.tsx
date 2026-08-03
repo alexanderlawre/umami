@@ -71,6 +71,10 @@ export default async function RecipeDetailPage({
     steps: recipe.steps,
     imageUrl: recipe.imageUrl,
     imageCredit: recipe.imageCredit,
+    caloriesPerServing: recipe.caloriesPerServing,
+    proteinGrams: recipe.proteinGrams,
+    carbsGrams: recipe.carbsGrams,
+    fatGrams: recipe.fatGrams,
   };
 
   return (
@@ -85,7 +89,11 @@ export default async function RecipeDetailPage({
           </p>
         </div>
       )}
-      <RecipeDetailClient recipe={recipeDetail} initialSaved={isSavedAndFresh} />
+      <RecipeDetailClient
+        recipe={recipeDetail}
+        initialSaved={isSavedAndFresh}
+        isPremium={session.user.isPremium}
+      />
     </main>
   );
 }

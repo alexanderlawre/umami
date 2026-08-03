@@ -4,6 +4,7 @@ import "./globals.css";
 import { auth } from "@/auth";
 import { AuthSessionProvider } from "@/components/session-provider";
 import { AppHeader } from "@/components/app-header";
+import { TimezoneSync } from "@/components/timezone-sync";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default async function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#FBFAF7] text-[#1A1D1B]">
         <AuthSessionProvider session={session}>
+          <TimezoneSync />
           {session?.user?.onboarded && <AppHeader isAdmin={session.user.isAdmin} />}
           {children}
         </AuthSessionProvider>

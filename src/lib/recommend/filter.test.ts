@@ -53,18 +53,19 @@ describe("isRecipeEligible", () => {
     expect(isRecipeEligible(safeRecipe, vegan)).toBe(true);
   });
 
-  it("excludes a non-vegan recipe for a vegan user even without allergens", () => {
+  // Diet is a soft signal (see score.ts), not a hard filter — a mismatched
+  // recipe still shows, just ranked lower, so the feed never goes empty for
+  // a user with several diets or an under-tagged catalog.
+  it("does NOT exclude a non-vegan recipe for a vegan user (diet is soft, not hard)", () => {
     const vegan = user({ diets: ["Vegan"] });
     const meatRecipe = recipe({ dietTags: ["Gluten-free"] });
-    expect(isRecipeEligible(meatRecipe, vegan)).toBe(false);
+    expect(isRecipeEligible(meatRecipe, vegan)).toBe(true);
   });
 
-  it("requires a recipe to satisfy ALL of the user's declared diets", () => {
+  it("does NOT require a recipe to satisfy every declared diet", () => {
     const both = user({ diets: ["Vegan", "Gluten-free"] });
     const onlyVegan = recipe({ dietTags: ["Vegan", "Vegetarian"] });
-    const veganAndGF = recipe({ dietTags: ["Vegan", "Vegetarian", "Gluten-free"] });
-    expect(isRecipeEligible(onlyVegan, both)).toBe(false);
-    expect(isRecipeEligible(veganAndGF, both)).toBe(true);
+    expect(isRecipeEligible(onlyVegan, both)).toBe(true);
   });
 
   // Fixture: custom free-text allergen case, since it can't be matched
@@ -126,7 +127,7 @@ describe("isRecipeEligible", () => {
 });
 
 describe("filterEligibleRecipes", () => {
-  it("filters a list down to only eligible recipes", () => {
+  it("filters a list down to only allergen-safe recipes (diet mismatch no longer excludes)", () => {
     const vegan = user({ diets: ["Vegan"], allergens: ["Tree nuts"] });
     const recipes = [
       recipe({ id: "a", dietTags: ["Vegan"] }),
@@ -134,6 +135,6 @@ describe("filterEligibleRecipes", () => {
       recipe({ id: "c", dietTags: ["Vegetarian"] }),
     ];
     const result = filterEligibleRecipes(recipes, vegan);
-    expect(result.map((r) => r.id)).toEqual(["a"]);
+    expect(result.map((r) => r.id)).toEqual(["a", "c"]);
   });
 });

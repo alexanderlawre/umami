@@ -38,6 +38,10 @@ export type RecipeDetail = {
   steps: Step[];
   imageUrl: string | null;
   imageCredit: string | null;
+  caloriesPerServing: number | null;
+  proteinGrams: number | null;
+  carbsGrams: number | null;
+  fatGrams: number | null;
 };
 
 function scaleQuantity(quantity: string, factor: number): string {
@@ -50,9 +54,11 @@ function scaleQuantity(quantity: string, factor: number): string {
 export function RecipeDetailClient({
   recipe,
   initialSaved = false,
+  isPremium = false,
 }: {
   recipe: RecipeDetail;
   initialSaved?: boolean;
+  isPremium?: boolean;
 }) {
   const [servings, setServings] = useState(recipe.servings);
   const [starred, setStarred] = useState(initialSaved);
@@ -68,6 +74,12 @@ export function RecipeDetailClient({
   }, [recipe.id]);
 
   const factor = servings / recipe.servings;
+
+  const hasMacros =
+    recipe.caloriesPerServing != null ||
+    recipe.proteinGrams != null ||
+    recipe.carbsGrams != null ||
+    recipe.fatGrams != null;
 
   const grouped = recipe.ingredients.reduce<Record<string, Ingredient[]>>(
     (acc, ing) => {
@@ -172,6 +184,48 @@ export function RecipeDetailClient({
           {recipe.prepMinutes} min prep / {recipe.cookMinutes} min cook
         </span>
       </div>
+
+      {hasMacros && (
+        <section className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-4">
+          <h2 className="text-sm font-semibold text-[#1A1D1B]">Nutrition (per serving)</h2>
+          <div className="mt-3 grid grid-cols-4 gap-2 text-center">
+            <div>
+              <p className="text-base font-semibold text-[#1A1D1B]">
+                {recipe.caloriesPerServing ?? "—"}
+              </p>
+              <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Calories</p>
+            </div>
+            {isPremium ? (
+              <>
+                <div>
+                  <p className="text-base font-semibold text-[#1A1D1B]">
+                    {recipe.proteinGrams ?? "—"}g
+                  </p>
+                  <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Protein</p>
+                </div>
+                <div>
+                  <p className="text-base font-semibold text-[#1A1D1B]">
+                    {recipe.carbsGrams ?? "—"}g
+                  </p>
+                  <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Carbs</p>
+                </div>
+                <div>
+                  <p className="text-base font-semibold text-[#1A1D1B]">
+                    {recipe.fatGrams ?? "—"}g
+                  </p>
+                  <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Fat</p>
+                </div>
+              </>
+            ) : (
+              <div className="col-span-3 flex items-center justify-center rounded-xl bg-[#EDF3EF] px-2 py-2">
+                <p className="text-[11px] text-[#6B7370]">
+                  🔒 Unlock full nutrition breakdown with Premium
+                </p>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       <section className="mt-6">
         <div className="flex items-center justify-between">

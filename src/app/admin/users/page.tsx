@@ -11,6 +11,7 @@ export default async function AdminUsersPage() {
       city: true,
       country: true,
       isAdmin: true,
+      isPremium: true,
       createdAt: true,
       preferences: {
         select: {
@@ -30,6 +31,7 @@ export default async function AdminUsersPage() {
     city: u.city,
     country: u.country,
     isAdmin: u.isAdmin,
+    isPremium: u.isPremium,
     createdAt: u.createdAt.toISOString(),
     diets: u.preferences?.diets.map((d) => d.name) ?? [],
     allergens: u.preferences?.allergens.map((a) => a.name) ?? [],

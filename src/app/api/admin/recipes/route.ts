@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { recipeFieldsSchema } from "@/lib/admin/recipe-schema";
-import { slugify } from "@/lib/slugify";
+import { generateUniqueSlug } from "@/lib/recipe-slug";
 
 export async function POST(request: Request) {
   const session = await auth();
@@ -20,13 +20,7 @@ export async function POST(request: Request) {
 
   const { dietIds, allergenIds, ingredients, steps, cuisineId, ...rest } = parsed.data;
 
-  const baseSlug = slugify(rest.title);
-  let slug = baseSlug;
-  let suffix = 1;
-  while (await prisma.recipe.findUnique({ where: { slug } })) {
-    suffix += 1;
-    slug = `${baseSlug}-${suffix}`;
-  }
+  const slug = await generateUniqueSlug(rest.title);
 
   const recipe = await prisma.recipe.create({
     data: {

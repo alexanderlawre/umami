@@ -9,6 +9,7 @@ export type AdminUserRow = {
   city: string | null;
   country: string;
   isAdmin: boolean;
+  isPremium: boolean;
   createdAt: string;
   diets: string[];
   allergens: string[];
@@ -74,11 +75,32 @@ function PromoteForm({ onPromoted }: { onPromoted: (email: string) => void }) {
 
 export function AdminUsersClient({ users: initial }: { users: AdminUserRow[] }) {
   const [users, setUsers] = useState(initial);
+  const [togglingId, setTogglingId] = useState<string | null>(null);
 
   function handlePromoted(email: string) {
     setUsers((prev) =>
       prev.map((u) => (u.email.toLowerCase() === email.toLowerCase() ? { ...u, isAdmin: true } : u)),
     );
+  }
+
+  async function togglePremium(id: string, current: boolean) {
+    const next = !current;
+    setTogglingId(id);
+    setUsers((prev) => prev.map((u) => (u.id === id ? { ...u, isPremium: next } : u)));
+    try {
+      const res = await fetch(`/api/admin/users/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ isPremium: next }),
+      });
+      if (!res.ok) {
+        setUsers((prev) => prev.map((u) => (u.id === id ? { ...u, isPremium: current } : u)));
+      }
+    } catch {
+      setUsers((prev) => prev.map((u) => (u.id === id ? { ...u, isPremium: current } : u)));
+    } finally {
+      setTogglingId(null);
+    }
   }
 
   return (
@@ -103,7 +125,7 @@ export function AdminUsersClient({ users: initial }: { users: AdminUserRow[] }) 
                   {[u.city, u.country].filter(Boolean).join(", ") || "No location set"}
                 </p>
               </div>
-              <div className="flex gap-4 text-right text-xs text-[#6B7370]">
+              <div className="flex items-center gap-4 text-right text-xs text-[#6B7370]">
                 <div>
                   <p className="text-base font-semibold text-[#1A1D1B]">{u.cookedCount}</p>
                   <p>Cooked</p>
@@ -112,6 +134,18 @@ export function AdminUsersClient({ users: initial }: { users: AdminUserRow[] }) 
                   <p className="text-base font-semibold text-[#1A1D1B]">{u.savedCount}</p>
                   <p>Saved</p>
                 </div>
+                <button
+                  type="button"
+                  onClick={() => togglePremium(u.id, u.isPremium)}
+                  disabled={togglingId === u.id}
+                  className={`rounded-full border px-3 py-2 text-xs disabled:opacity-50 ${
+                    u.isPremium
+                      ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
+                      : "border-[#E8E6E0] text-[#6B7370]"
+                  }`}
+                >
+                  {u.isPremium ? "Premium" : "Free"}
+                </button>
               </div>
             </div>
 

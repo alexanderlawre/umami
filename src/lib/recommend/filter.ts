@@ -1,6 +1,13 @@
-// Hard filter: allergen and diet exclusion. This runs before any scoring and
-// can never be overridden by a high score (see spec §9). Pure and unit-tested
-// so a bug here can't silently leak an unsafe recipe to a user.
+// Hard filter: allergen exclusion only. This runs before any scoring and can
+// never be overridden by a high score — it's the one thing that's a safety
+// concern, not a preference. Pure and unit-tested so a bug here can't
+// silently leak an unsafe recipe to a user.
+//
+// Diet is intentionally NOT a hard filter: a recipe that doesn't match the
+// user's declared diet(s) can still appear, just ranked lower (see
+// src/lib/recommend/score.ts) — otherwise a user with several diets/an
+// under-tagged catalog can get an empty feed. Allergies stay hard because
+// getting those wrong is a safety issue, not a preference mismatch.
 
 export type FilterableRecipe = {
   id: string;
@@ -54,12 +61,6 @@ export function isRecipeEligible(
     });
     if (hasCustomAllergenConflict) return false;
   }
-
-  // A recipe must satisfy every diet the user follows, not just one.
-  const satisfiesAllDiets = user.diets.every((diet) =>
-    recipe.dietTags.includes(diet)
-  );
-  if (!satisfiesAllDiets) return false;
 
   return true;
 }

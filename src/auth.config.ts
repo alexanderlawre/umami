@@ -41,6 +41,7 @@ export const authConfig: NextAuthConfig = {
         token.id = user.id;
         token.onboarded = (user as { onboarded?: boolean }).onboarded ?? false;
         token.isAdmin = (user as { isAdmin?: boolean }).isAdmin ?? false;
+        token.isPremium = (user as { isPremium?: boolean }).isPremium ?? false;
       }
       if (trigger === "update" && session?.onboarded) {
         token.onboarded = true;
@@ -52,6 +53,7 @@ export const authConfig: NextAuthConfig = {
         session.user.id = token.id as string;
         session.user.onboarded = token.onboarded as boolean;
         session.user.isAdmin = token.isAdmin as boolean;
+        session.user.isPremium = token.isPremium as boolean;
       }
       return session;
     },
