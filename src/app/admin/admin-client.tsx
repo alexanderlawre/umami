@@ -1,13 +1,22 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import {
+  RecipeEditor,
+  type EditorAllergen,
+  type EditorCuisine,
+  type EditorDiet,
+  type EditorRecipe,
+} from "./recipe-editor";
 
 export type AdminRecipeRow = {
   id: string;
   slug: string;
   title: string;
   cuisine: string;
+  cuisineId: string;
   isActive: boolean;
   allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
   imageUrl: string | null;
@@ -40,11 +49,15 @@ async function patchRecipe(id: string, body: Record<string, unknown>) {
   if (!res.ok) throw new Error("Update failed");
 }
 
-function RecipeRow({ recipe: initial }: { recipe: AdminRecipeRow }) {
+function RecipeRow({
+  recipe: initial,
+  onEdit,
+}: {
+  recipe: AdminRecipeRow;
+  onEdit: (id: string) => void;
+}) {
   const [recipe, setRecipe] = useState(initial);
   const [saving, setSaving] = useState(false);
-  const [photoError, setPhotoError] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   async function toggleActive() {
     const next = !recipe.isActive;
@@ -56,33 +69,6 @@ function RecipeRow({ recipe: initial }: { recipe: AdminRecipeRow }) {
       setRecipe((r) => ({ ...r, isActive: !next }));
     } finally {
       setSaving(false);
-    }
-  }
-
-  async function handlePhotoChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    setSaving(true);
-    setPhotoError(null);
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
-      const res = await fetch(`/api/admin/recipes/${recipe.id}/image`, {
-        method: "POST",
-        body: formData,
-      });
-      if (!res.ok) {
-        const body = await res.json().catch(() => null);
-        throw new Error(body?.error ?? "Upload failed");
-      }
-      const { imageUrl } = (await res.json()) as { imageUrl: string };
-      setRecipe((r) => ({ ...r, imageUrl: `${imageUrl}?v=${Date.now()}` }));
-    } catch (err) {
-      setPhotoError(err instanceof Error ? err.message : "Upload failed");
-    } finally {
-      setSaving(false);
-      e.target.value = "";
     }
   }
 
@@ -119,19 +105,12 @@ function RecipeRow({ recipe: initial }: { recipe: AdminRecipeRow }) {
         </div>
 
         <div className="flex shrink-0 gap-2">
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/jpeg,image/png,image/webp"
-            className="hidden"
-            onChange={handlePhotoChange}
-          />
           <button
-            onClick={() => fileInputRef.current?.click()}
+            onClick={() => onEdit(recipe.id)}
             disabled={saving}
             className="flex-1 rounded-full border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50 sm:flex-none"
           >
-            Change photo
+            Edit recipe
           </button>
 
           <button
@@ -159,8 +138,6 @@ function RecipeRow({ recipe: initial }: { recipe: AdminRecipeRow }) {
           </button>
         </div>
       </div>
-
-      {photoError && <p className="text-xs text-red-600">{photoError}</p>}
     </div>
   );
 }
@@ -168,10 +145,91 @@ function RecipeRow({ recipe: initial }: { recipe: AdminRecipeRow }) {
 export function AdminClient({
   stats,
   recipes,
+  cuisines,
+  diets,
+  allergens,
 }: {
   stats: Stats;
   recipes: AdminRecipeRow[];
+  cuisines: EditorCuisine[];
+  diets: EditorDiet[];
+  allergens: EditorAllergen[];
 }) {
+  const router = useRouter();
+  const [editorState, setEditorState] = useState<
+    | { mode: "create" }
+    | { mode: "edit"; recipe: EditorRecipe }
+    | { mode: "loading" }
+    | null
+  >(null);
+
+  const grouped = useMemo(() => {
+    const map = new Map<string, AdminRecipeRow[]>();
+    for (const recipe of recipes) {
+      const list = map.get(recipe.cuisine) ?? [];
+      list.push(recipe);
+      map.set(recipe.cuisine, list);
+    }
+    return [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  }, [recipes]);
+
+  async function openEdit(id: string) {
+    setEditorState({ mode: "loading" });
+    const res = await fetch(`/api/admin/recipes/${id}`);
+    if (!res.ok) {
+      setEditorState(null);
+      return;
+    }
+    const { recipe } = (await res.json()) as {
+      recipe: {
+        id: string;
+        slug: string;
+        title: string;
+        shortDescription: string;
+        note: string;
+        introCopy: string;
+        servings: number;
+        prepMinutes: number;
+        cookMinutes: number;
+        difficulty: EditorRecipe["difficulty"];
+        cuisineId: string;
+        mealSlot: string[];
+        effortTier: EditorRecipe["effortTier"];
+        batchFriendly: boolean;
+        attributes: string[];
+        heroColor: string;
+        imageUrl: string | null;
+        imageCredit: string | null;
+        isActive: boolean;
+        allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
+        dietTags: { id: string }[];
+        allergenTags: { id: string }[];
+        ingredients: {
+          component: string | null;
+          quantity: string;
+          unit: string | null;
+          item: string;
+          prepNote: string | null;
+          optional: boolean;
+        }[];
+        steps: { text: string; durationMinutes: number | null }[];
+      };
+    };
+    setEditorState({
+      mode: "edit",
+      recipe: {
+        ...recipe,
+        dietIds: recipe.dietTags.map((d) => d.id),
+        allergenIds: recipe.allergenTags.map((a) => a.id),
+      },
+    });
+  }
+
+  function handleSaved() {
+    setEditorState(null);
+    router.refresh();
+  }
+
   return (
     <div>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -185,16 +243,55 @@ export function AdminClient({
         ))}
       </div>
 
-      <h2 className="mt-8 text-lg font-semibold text-[#1A1D1B]">Recipes</h2>
-      <p className="mt-1 text-xs text-[#6B7370]">
-        Toggle allergen review status or hide a recipe from the dashboard.
-      </p>
+      <div className="mt-8 flex items-center justify-between">
+        <div>
+          <h2 className="text-lg font-semibold text-[#1A1D1B]">Recipes</h2>
+          <p className="mt-1 text-xs text-[#6B7370]">
+            Grouped by cuisine. Edit a recipe&apos;s tags, content, and photo, or toggle
+            visibility.
+          </p>
+        </div>
+        <button
+          onClick={() => setEditorState({ mode: "create" })}
+          className="shrink-0 rounded-full bg-[#1F5F45] px-4 py-2 text-xs font-medium text-white"
+        >
+          + New recipe
+        </button>
+      </div>
 
-      <div className="mt-3 rounded-2xl border border-[#E8E6E0] bg-white px-4">
-        {recipes.map((recipe) => (
-          <RecipeRow key={recipe.id} recipe={recipe} />
+      <div className="mt-3 space-y-6">
+        {grouped.map(([cuisine, rows]) => (
+          <div key={cuisine}>
+            <h3 className="text-sm font-semibold text-[#1A1D1B]">{cuisine}</h3>
+            <div className="mt-2 rounded-2xl border border-[#E8E6E0] bg-white px-4">
+              {rows.map((recipe) => (
+                <RecipeRow key={recipe.id} recipe={recipe} onEdit={openEdit} />
+              ))}
+            </div>
+          </div>
         ))}
       </div>
+
+      {editorState?.mode === "create" && (
+        <RecipeEditor
+          recipe={null}
+          cuisines={cuisines}
+          diets={diets}
+          allergens={allergens}
+          onClose={() => setEditorState(null)}
+          onSaved={handleSaved}
+        />
+      )}
+      {editorState?.mode === "edit" && (
+        <RecipeEditor
+          recipe={editorState.recipe}
+          cuisines={cuisines}
+          diets={diets}
+          allergens={allergens}
+          onClose={() => setEditorState(null)}
+          onSaved={handleSaved}
+        />
+      )}
     </div>
   );
 }

@@ -1,14 +1,7 @@
-import { redirect } from "next/navigation";
-import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { AdminClient, type AdminRecipeRow } from "./admin-client";
 
 export default async function AdminPage() {
-  const session = await auth();
-  if (!session?.user) redirect("/login");
-  if (!session.user.onboarded) redirect("/onboarding");
-  if (!session.user.isAdmin) redirect("/dashboard");
-
   const [
     userCount,
     recipeCount,
@@ -17,6 +10,9 @@ export default async function AdminPage() {
     cookLogCount,
     interactionCounts,
     recipes,
+    cuisines,
+    diets,
+    allergens,
   ] = await Promise.all([
     prisma.user.count(),
     prisma.recipe.count(),
@@ -30,13 +26,22 @@ export default async function AdminPage() {
         id: true,
         slug: true,
         title: true,
-        cuisine: true,
+        cuisine: { select: { id: true, name: true } },
         isActive: true,
         allergenReviewStatus: true,
         imageUrl: true,
       },
     }),
+    prisma.cuisine.findMany({ orderBy: { name: "asc" } }),
+    prisma.diet.findMany({ orderBy: { name: "asc" } }),
+    prisma.allergen.findMany({ orderBy: { name: "asc" } }),
   ]);
+
+  const recipeRows = recipes.map((r) => ({
+    ...r,
+    cuisine: r.cuisine.name,
+    cuisineId: r.cuisine.id,
+  }));
 
   const stats = {
     userCount,
@@ -58,7 +63,13 @@ export default async function AdminPage() {
       </p>
 
       <div className="mt-6">
-        <AdminClient stats={stats} recipes={recipes as AdminRecipeRow[]} />
+        <AdminClient
+          stats={stats}
+          recipes={recipeRows as AdminRecipeRow[]}
+          cuisines={cuisines}
+          diets={diets}
+          allergens={allergens}
+        />
       </div>
     </main>
   );
