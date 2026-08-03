@@ -107,6 +107,49 @@ function StarButton({
   );
 }
 
+function CookedButton({ recipeId }: { recipeId: string }) {
+  const [status, setStatus] = useState<"idle" | "pending" | "done" | "error">("idle");
+
+  async function markCooked() {
+    if (status === "pending" || status === "done") return;
+    setStatus("pending");
+    try {
+      const res = await fetch("/api/cook", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ recipeId, servings: 1 }),
+      });
+      if (!res.ok) {
+        setStatus("error");
+        return;
+      }
+      setStatus("done");
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  return (
+    <button
+      onClick={markCooked}
+      disabled={status === "pending" || status === "done"}
+      className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
+        status === "done"
+          ? "bg-[#1F5F45] text-white"
+          : "bg-[#EDF3EF] text-[#1A1D1B] hover:bg-[#E1E9E3]"
+      } disabled:cursor-not-allowed`}
+    >
+      {status === "done"
+        ? "Cooked \u2713"
+        : status === "pending"
+          ? "Saving\u2026"
+          : status === "error"
+            ? "Try again"
+            : "Cooked this"}
+    </button>
+  );
+}
+
 function RecipeCard({
   recipe,
   onSavedChange,
@@ -215,12 +258,15 @@ function RecipeCard({
           ))}
         </div>
 
-        <Link
-          href={`/recipe/${recipe.slug}`}
-          className="mt-4 inline-block py-1 text-sm font-medium text-[#2C5A87] underline"
-        >
-          View recipe
-        </Link>
+        <div className="mt-4 flex items-center justify-between gap-2">
+          <Link
+            href={`/recipe/${recipe.slug}`}
+            className="py-1 text-sm font-medium text-[#2C5A87] underline"
+          >
+            View recipe
+          </Link>
+          <CookedButton recipeId={recipe.id} />
+        </div>
       </div>
     </div>
   );
@@ -231,12 +277,11 @@ function RecipeCard({
 // themselves are never duplicated in the DB (verified via direct
 // inspection), so this is primarily protection against future
 // pool-construction bugs. Deterministic (no randomness) so it's safe to use
-// for the initial render — `recipes` arrives pre-shuffled from the server
-// (see dashboard/page.tsx), and re-shuffling on the client here would cause
-// a hydration mismatch since the server and client would pick different
-// random orders for the same markup. It's also used (still deterministically)
-// whenever the active filter selection changes, so toggling a filter doesn't
-// require a fresh shuffle.
+// for the initial render — `served` arrives pre-selected from the server
+// (see dashboard/page.tsx / select-daily.ts), and re-shuffling on the client
+// here would cause a hydration mismatch. It's also used (still
+// deterministically) whenever the active filter selection changes, so
+// toggling a filter doesn't require a fresh shuffle.
 function dedupeFirstFour(pool: RecipeCardData[]): RecipeCardData[] {
   const seen = new Set<string>();
   const out: RecipeCardData[] = [];
@@ -249,10 +294,19 @@ function dedupeFirstFour(pool: RecipeCardData[]): RecipeCardData[] {
   return out;
 }
 
-// Client-only reshuffle for the Refresh button (post-hydration, no SSR
-// mismatch risk since it only ever runs from a user click).
+// Client-only reshuffle used only while a filter is active (filtering is a
+// local, ad-hoc browsing affordance and intentionally doesn't consume the
+// user's one server-tracked manual refresh for the window).
 function pickFour(pool: RecipeCardData[]): RecipeCardData[] {
   return dedupeFirstFour(shuffle(pool));
+}
+
+function formatWindowTime(iso: string): string {
+  try {
+    return new Date(iso).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+  } catch {
+    return "later";
+  }
 }
 
 type FilterTag = { value: string; label: string; kind: "diet" | "attribute" };
@@ -307,18 +361,30 @@ function FilterBar({
   );
 }
 
-export function DashboardClient({ recipes }: { recipes: RecipeCardData[] }) {
-  const [pool] = useState(recipes);
-  const [visible, setVisible] = useState(() => dedupeFirstFour(recipes));
+export function DashboardClient({
+  pool,
+  served,
+  refreshAvailable,
+  nextWindowAt,
+}: {
+  pool: RecipeCardData[];
+  served: RecipeCardData[];
+  refreshAvailable: boolean;
+  nextWindowAt: string;
+}) {
+  const [poolState] = useState(pool);
+  const [visible, setVisible] = useState(() => dedupeFirstFour(served));
   const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [canRefresh, setCanRefresh] = useState(refreshAvailable);
+  const [nextAt, setNextAt] = useState(nextWindowAt);
+  const [refreshPending, setRefreshPending] = useState(false);
+  const [refreshMessage, setRefreshMessage] = useState<string | null>(null);
 
   const availableTags = useMemo<FilterTag[]>(() => {
     const diets = new Set<string>();
     const attrs = new Set<string>();
-    for (const r of pool) {
-      for (const d of r.dietTags) {
-        if (d !== "Omnivore") diets.add(d);
-      }
+    for (const r of poolState) {
+      for (const d of r.dietTags) diets.add(d);
       for (const a of r.attributes) attrs.add(a);
     }
     const dietTags: FilterTag[] = [...diets]
@@ -328,22 +394,59 @@ export function DashboardClient({ recipes }: { recipes: RecipeCardData[] }) {
       .sort()
       .map((value) => ({ value, label: attributeLabel(value), kind: "attribute" as const }));
     return [...dietTags, ...attrTags];
-  }, [pool]);
+  }, [poolState]);
 
   const filteredPool = useMemo(() => {
-    if (selected.size === 0) return pool;
+    if (selected.size === 0) return poolState;
     const tags = [...selected];
-    return pool.filter((r) =>
+    return poolState.filter((r) =>
       tags.every((tag) => r.attributes.includes(tag) || r.dietTags.includes(tag)),
     );
-  }, [pool, selected]);
+  }, [poolState, selected]);
 
   function handleSavedChange(id: string, saved: boolean) {
     setVisible((prev) => prev.map((r) => (r.id === id ? { ...r, saved } : r)));
   }
 
-  function handleRefresh() {
-    setVisible(pickFour(filteredPool));
+  async function handleRefresh() {
+    setRefreshMessage(null);
+
+    // While a filter is active, "refresh" is just a local reshuffle within
+    // the filtered pool and doesn't touch the server-tracked manual-refresh
+    // budget for the window.
+    if (selected.size > 0) {
+      setVisible(pickFour(filteredPool));
+      return;
+    }
+
+    if (!canRefresh || refreshPending) return;
+    setRefreshPending(true);
+    try {
+      const res = await fetch("/api/dashboard/refresh", { method: "POST" });
+      const body = await res.json().catch(() => null);
+
+      if (res.status === 429) {
+        setCanRefresh(false);
+        if (body?.nextWindowAt) setNextAt(body.nextWindowAt);
+        setRefreshMessage(
+          `You've used your reshuffle for now. Next one available around ${formatWindowTime(body?.nextWindowAt ?? nextAt)}.`,
+        );
+        return;
+      }
+
+      if (!res.ok || !body?.recipes) {
+        setRefreshMessage("Something went wrong. Try again.");
+        return;
+      }
+
+      setVisible(body.recipes);
+      setCanRefresh(false);
+      if (body.nextWindowAt) setNextAt(body.nextWindowAt);
+    } catch {
+      setRefreshMessage("Something went wrong. Try again.");
+    } finally {
+      setRefreshPending(false);
+    }
   }
 
   function toggleTag(value: string) {
@@ -353,27 +456,30 @@ export function DashboardClient({ recipes }: { recipes: RecipeCardData[] }) {
       else next.add(value);
       const nextFiltered =
         next.size === 0
-          ? pool
-          : pool.filter((r) =>
+          ? poolState
+          : poolState.filter((r) =>
               [...next].every((tag) => r.attributes.includes(tag) || r.dietTags.includes(tag)),
             );
-      setVisible(dedupeFirstFour(nextFiltered));
+      setVisible(next.size === 0 ? dedupeFirstFour(served) : dedupeFirstFour(nextFiltered));
       return next;
     });
   }
 
   function clearFilters() {
     setSelected(new Set());
-    setVisible(dedupeFirstFour(pool));
+    setVisible(dedupeFirstFour(served));
   }
 
-  if (pool.length === 0) {
+  if (poolState.length === 0) {
     return (
       <p className="text-sm text-[#6B7370]">
         No recipes match your preferences yet. Check back soon.
       </p>
     );
   }
+
+  const refreshDisabled =
+    selected.size === 0 ? !canRefresh || refreshPending : filteredPool.length === 0;
 
   return (
     <div>
@@ -384,7 +490,7 @@ export function DashboardClient({ recipes }: { recipes: RecipeCardData[] }) {
         onClear={clearFilters}
       />
 
-      {filteredPool.length === 0 ? (
+      {(selected.size > 0 ? filteredPool.length === 0 : false) ? (
         <p className="text-sm text-[#6B7370]">
           No recipes match your selected filters.{" "}
           <button onClick={clearFilters} className="text-[#2C5A87] underline">
@@ -403,14 +509,28 @@ export function DashboardClient({ recipes }: { recipes: RecipeCardData[] }) {
         </div>
       )}
 
-      <div className="mt-6 flex justify-center">
+      <div className="mt-6 flex flex-col items-center gap-2">
         <button
           onClick={handleRefresh}
-          disabled={filteredPool.length === 0}
+          disabled={refreshDisabled}
           className="rounded-full border border-[#E8E6E0] px-5 py-3 text-sm font-medium text-[#1A1D1B] hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
         >
-          Refresh recipes
+          {refreshPending
+            ? "Shuffling\u2026"
+            : selected.size === 0 && !canRefresh
+              ? "Reshuffle used for now"
+              : "Refresh recipes"}
         </button>
+        {selected.size === 0 && (
+          <p className="text-xs text-[#6B7370]">
+            {canRefresh
+              ? "You have one reshuffle available until the next refresh."
+              : `Next automatic refresh around ${formatWindowTime(nextAt)}.`}
+          </p>
+        )}
+        {refreshMessage && (
+          <p className="text-xs text-[#6B7370]">{refreshMessage}</p>
+        )}
       </div>
     </div>
   );
