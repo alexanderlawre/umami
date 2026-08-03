@@ -28,9 +28,10 @@ export const authConfig: NextAuthConfig = {
       if (isPublicRoute) return true;
       if (!isLoggedIn) return false;
 
-      const needsOnboarding = pathname !== "/onboarding" && !pathname.startsWith("/api/onboarding");
+      const needsOnboarding =
+        !pathname.startsWith("/onboarding") && !pathname.startsWith("/api/onboarding");
       if (!auth?.user.onboarded && needsOnboarding) {
-        return Response.redirect(new URL("/onboarding", request.nextUrl));
+        return Response.redirect(new URL("/onboarding/preferences", request.nextUrl));
       }
 
       return true;

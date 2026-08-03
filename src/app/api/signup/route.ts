@@ -3,12 +3,20 @@ import bcrypt from "bcryptjs";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 
-const signupSchema = z.object({
-  name: z.string().trim().min(1, "Name is required"),
-  email: z.string().trim().toLowerCase().email("Enter a valid email"),
-  password: z.string().min(10, "Password must be at least 10 characters"),
-  country: z.string().trim().min(1, "Country is required"),
-});
+const signupSchema = z
+  .object({
+    name: z.string().trim().min(1, "Name is required"),
+    email: z.string().trim().toLowerCase().email("Enter a valid email"),
+    password: z.string().min(10, "Password must be at least 10 characters"),
+    confirmPassword: z.string(),
+    birthday: z.coerce.date().optional().nullable(),
+    city: z.string().trim().min(1, "City is required"),
+    country: z.string().trim().min(1, "Country is required"),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords don't match",
+    path: ["confirmPassword"],
+  });
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -21,7 +29,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { name, email, password, country } = parsed.data;
+  const { name, email, password, birthday, city, country } = parsed.data;
 
   const existing = await prisma.user.findUnique({ where: { email } });
   if (existing) {
@@ -34,7 +42,7 @@ export async function POST(request: Request) {
   const passwordHash = await bcrypt.hash(password, 12);
 
   await prisma.user.create({
-    data: { name, email, passwordHash, country },
+    data: { name, email, passwordHash, birthday: birthday ?? undefined, city, country },
   });
 
   return NextResponse.json({ ok: true });

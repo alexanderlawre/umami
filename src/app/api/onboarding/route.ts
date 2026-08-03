@@ -8,23 +8,8 @@ const onboardingSchema = z.object({
   allergenIds: z.array(z.string()),
   customAllergens: z.array(z.string()),
   meters: z.record(z.string(), z.number().min(0).max(100)),
-  favoriteFoods: z.array(z.string()).max(10),
-  cookingFor: z
-    .enum(["SELF", "PARTNER", "FAMILY", "MIXED", "HOSTING"])
-    .nullable(),
-  cookFrequency: z
-    .enum(["DAILY", "EVERY_OTHER_DAY", "FEW_TIMES_WEEK", "MEAL_PREP", "WEEKENDS_ONLY"])
-    .nullable(),
-  goals: z.array(
-    z.enum([
-      "EAT_MORE_VEG",
-      "MORE_PROTEIN",
-      "LESS_TIME",
-      "SPEND_LESS",
-      "LEARN_TECHNIQUE",
-      "EAT_WIDER",
-    ])
-  ),
+  favoriteCuisines: z.array(z.string()),
+  foodGroupFeedback: z.string().nullable().optional(),
 });
 
 export async function POST(request: Request) {
@@ -42,16 +27,8 @@ export async function POST(request: Request) {
     );
   }
 
-  const {
-    dietIds,
-    allergenIds,
-    customAllergens,
-    meters,
-    favoriteFoods,
-    cookingFor,
-    cookFrequency,
-    goals,
-  } = parsed.data;
+  const { dietIds, allergenIds, customAllergens, meters, favoriteCuisines, foodGroupFeedback } =
+    parsed.data;
 
   await prisma.$transaction([
     prisma.userPreferences.upsert({
@@ -61,19 +38,15 @@ export async function POST(request: Request) {
         diets: { connect: dietIds.map((id) => ({ id })) },
         allergens: { connect: allergenIds.map((id) => ({ id })) },
         customAllergens,
-        favoriteFoods,
-        cookingFor: cookingFor ?? undefined,
-        cookFrequency: cookFrequency ?? undefined,
-        goals,
+        favoriteCuisines,
+        foodGroupFeedback: foodGroupFeedback ?? undefined,
       },
       update: {
         diets: { set: dietIds.map((id) => ({ id })) },
         allergens: { set: allergenIds.map((id) => ({ id })) },
         customAllergens,
-        favoriteFoods,
-        cookingFor: cookingFor ?? undefined,
-        cookFrequency: cookFrequency ?? undefined,
-        goals,
+        favoriteCuisines,
+        foodGroupFeedback: foodGroupFeedback ?? undefined,
       },
     }),
     ...Object.entries(meters).map(([foodGroupId, value]) =>

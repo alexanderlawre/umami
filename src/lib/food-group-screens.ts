@@ -1,9 +1,16 @@
-// Groups the 27 food groups into 5 onboarding screens of ~5-6 sliders each.
-// This grouping is for onboarding UX pacing only and is independent of the
-// FoodGroup.category field (which is used for admin aggregate views).
-export const FOOD_GROUP_SCREENS: { title: string; groups: string[] }[] = [
+// Onboarding shows one consolidated "personalize" screen with ~12 broad
+// sliders instead of the full 27-row FoodGroup catalog spread across 5
+// screens — narrower/niche groups (e.g. "Nightshades", "Alliums") are
+// clustered under a broader, plain-language label so a new user isn't
+// stalled by unfamiliar categories. Moving a cluster's slider writes the
+// same declared value to every underlying FoodGroup id in that cluster.
+//
+// This clustering is a presentation-layer convenience only — the underlying
+// FoodGroup catalog (used for recipe profiling and admin aggregate views)
+// is untouched and still has all 27 rows.
+export const FOOD_GROUP_CLUSTERS: { title: string; groups: string[] }[] = [
   {
-    title: "Produce",
+    title: "Vegetables",
     groups: [
       "Leafy greens",
       "Cruciferous veg",
@@ -13,27 +20,15 @@ export const FOOD_GROUP_SCREENS: { title: string; groups: string[] }[] = [
       "Mushrooms",
     ],
   },
-  {
-    title: "Grains, legumes & fruit",
-    groups: ["Fruit", "Starchy veg", "Whole grains", "Refined grains", "Legumes & pulses"],
-  },
-  {
-    title: "Proteins",
-    groups: ["Red meat", "Poultry", "Pork", "Oily fish", "White fish", "Shellfish"],
-  },
-  {
-    title: "Dairy, eggs & extras",
-    groups: [
-      "Dairy",
-      "Eggs",
-      "Nuts & seeds",
-      "Soy & tofu",
-      "Fermented foods",
-      "Chilli & heat",
-    ],
-  },
-  {
-    title: "Flavour & indulgence",
-    groups: ["Fresh herbs", "Warm spices", "Added sugar", "Fried & rich"],
-  },
+  { title: "Fruit", groups: ["Fruit"] },
+  { title: "Whole grains", groups: ["Whole grains"] },
+  { title: "Refined grains & starchy sides", groups: ["Refined grains", "Starchy veg"] },
+  { title: "Legumes & plant proteins", groups: ["Legumes & pulses"] },
+  { title: "Red meat", groups: ["Red meat", "Pork"] },
+  { title: "Poultry", groups: ["Poultry"] },
+  { title: "Fish & shellfish", groups: ["Oily fish", "White fish", "Shellfish"] },
+  { title: "Eggs & dairy", groups: ["Eggs", "Dairy", "Fermented foods"] },
+  { title: "Nuts, seeds & soy", groups: ["Nuts & seeds", "Soy & tofu"] },
+  { title: "Spice & heat", groups: ["Fresh herbs", "Warm spices", "Chilli & heat"] },
+  { title: "Sweets & fried indulgence", groups: ["Added sugar", "Fried & rich"] },
 ];
