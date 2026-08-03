@@ -84,6 +84,38 @@ describe("isRecipeEligible", () => {
     expect(isRecipeEligible(unverified, noAllergyUser)).toBe(true);
   });
 
+  // Fixture: custom allergen matched against free-text ingredient names.
+  it("excludes a VERIFIED recipe whose ingredients contain a declared custom allergen", () => {
+    const kiwiAllergyUser = user({ customAllergens: ["kiwi"] });
+    const r = recipe({ ingredientItems: ["2 kiwis, peeled", "1 cup yogurt"] });
+    expect(isRecipeEligible(r, kiwiAllergyUser)).toBe(false);
+  });
+
+  it("matches custom allergens case-insensitively as a substring", () => {
+    const cilantroUser = user({ customAllergens: ["Cilantro"] });
+    const r = recipe({ ingredientItems: ["1/4 cup fresh cilantro, chopped"] });
+    expect(isRecipeEligible(r, cilantroUser)).toBe(false);
+  });
+
+  it("allows a VERIFIED recipe when no ingredient matches the custom allergen", () => {
+    const kiwiAllergyUser = user({ customAllergens: ["kiwi"] });
+    const r = recipe({ ingredientItems: ["1 cup yogurt", "1 tbsp honey"] });
+    expect(isRecipeEligible(r, kiwiAllergyUser)).toBe(true);
+  });
+
+  it("supports multiple comma-derived custom allergen terms", () => {
+    // Matching is literal substring matching against ingredient text (see
+    // filter.ts), not category-level, so the declared terms need to appear
+    // in the ingredient text itself — "shrimp", not the broader "shellfish".
+    const multiUser = user({ customAllergens: ["shrimp", "cilantro"] });
+    const shrimpRecipe = recipe({ ingredientItems: ["1 lb shrimp, peeled"] });
+    const cilantroRecipe = recipe({ ingredientItems: ["2 tbsp cilantro"] });
+    const safeRecipe = recipe({ ingredientItems: ["1 cup rice"] });
+    expect(isRecipeEligible(shrimpRecipe, multiUser)).toBe(false);
+    expect(isRecipeEligible(cilantroRecipe, multiUser)).toBe(false);
+    expect(isRecipeEligible(safeRecipe, multiUser)).toBe(true);
+  });
+
   // Fixture: heavy cook / dormant user — hard filter behaves the same
   // regardless of interaction history, since it doesn't look at it at all.
   it("hard filter ignores interaction history entirely", () => {

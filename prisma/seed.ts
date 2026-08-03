@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { FOOD_GROUPS, DIETS, ALLERGENS } from "./seed/reference";
 import recipesData from "./seed/recipes.json";
+import { slugify } from "../src/lib/slugify";
 
 const prisma = new PrismaClient();
 
@@ -57,6 +58,16 @@ async function main() {
     await prisma.allergen.upsert({ where: { name }, create: { name }, update: {} });
   }
 
+  const cuisineNames = [...new Set((recipesData as RecipeSeed[]).map((r) => r.cuisine))];
+  for (const name of cuisineNames) {
+    const slug = slugify(name);
+    await prisma.cuisine.upsert({
+      where: { name },
+      create: { name, slug },
+      update: { slug },
+    });
+  }
+
   console.log(`Seeding ${(recipesData as RecipeSeed[]).length} recipes...`);
 
   for (const recipe of recipesData as RecipeSeed[]) {
@@ -72,7 +83,7 @@ async function main() {
         prepMinutes: recipe.prepMinutes,
         cookMinutes: recipe.cookMinutes,
         difficulty: recipe.difficulty,
-        cuisine: recipe.cuisine,
+        cuisine: { connect: { name: recipe.cuisine } },
         mealSlot: recipe.mealSlot as never,
         effortTier: recipe.effortTier,
         batchFriendly: recipe.batchFriendly,
@@ -95,6 +106,8 @@ async function main() {
       update: {
         imageUrl: recipe.imageUrl,
         imageCredit: recipe.imageCredit,
+        dietTags: { set: recipe.dietTags.map((name) => ({ name })) },
+        allergenTags: { set: recipe.allergenTags.map((name) => ({ name })) },
       },
     });
   }

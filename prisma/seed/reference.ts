@@ -31,7 +31,6 @@ export const FOOD_GROUPS: { name: string; category: FoodGroupCategory; descripti
 ];
 
 export const DIETS = [
-  "Omnivore",
   "Vegetarian",
   "Vegan",
   "Pescatarian",

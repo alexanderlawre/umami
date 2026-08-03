@@ -8,12 +8,13 @@ export type FilterableRecipe = {
   allergenReviewStatus: "VERIFIED" | "UNVERIFIED";
   dietTags: string[]; // Diet names this recipe satisfies
   allergenTags: string[]; // Allergen names this recipe contains
+  ingredientItems?: string[]; // Free-text ingredient names, used to match custom allergens
 };
 
 export type UserFilterProfile = {
   diets: string[]; // Diet names the user follows
   allergens: string[]; // Built-in allergen names the user declared
-  customAllergens: string[]; // Free-text allergens the user declared
+  customAllergens: string[]; // Free-text allergens/foods the user declared
 };
 
 /**
@@ -26,9 +27,8 @@ export function isRecipeEligible(
 ): boolean {
   if (!recipe.isActive) return false;
 
-  // Fail closed: any declared allergy (built-in or free-text, since free-text
-  // can't be reliably matched against structured tags) restricts the user to
-  // recipes whose allergen tagging has been verified.
+  // Fail closed: any declared allergy (built-in or free-text) restricts the
+  // user to recipes whose allergen tagging has been verified.
   const hasDeclaredAllergies =
     user.allergens.length > 0 || user.customAllergens.length > 0;
   if (hasDeclaredAllergies && recipe.allergenReviewStatus !== "VERIFIED") {
@@ -39,6 +39,21 @@ export function isRecipeEligible(
     user.allergens.includes(tag)
   );
   if (hasAllergenConflict) return false;
+
+  // Custom free-text allergens: substring-match (case-insensitive) each
+  // declared term against every ingredient's item text. This is the primary
+  // safety gate for allergies the built-in catalog doesn't cover, so it
+  // errs toward over-excluding rather than risking a match miss.
+  if (user.customAllergens.length > 0 && recipe.ingredientItems) {
+    const terms = user.customAllergens
+      .map((a) => a.trim().toLowerCase())
+      .filter(Boolean);
+    const hasCustomAllergenConflict = recipe.ingredientItems.some((item) => {
+      const lower = item.toLowerCase();
+      return terms.some((term) => lower.includes(term));
+    });
+    if (hasCustomAllergenConflict) return false;
+  }
 
   // A recipe must satisfy every diet the user follows, not just one.
   const satisfiesAllDiets = user.diets.every((diet) =>

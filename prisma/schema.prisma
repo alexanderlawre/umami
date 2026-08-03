@@ -9,31 +9,6 @@ datasource db {
 
 // ---------- Enums ----------
 
-enum CookingFor {
-  SELF
-  PARTNER
-  FAMILY
-  MIXED
-  HOSTING
-}
-
-enum CookFrequency {
-  DAILY
-  EVERY_OTHER_DAY
-  FEW_TIMES_WEEK
-  MEAL_PREP
-  WEEKENDS_ONLY
-}
-
-enum Goal {
-  EAT_MORE_VEG
-  MORE_PROTEIN
-  LESS_TIME
-  SPEND_LESS
-  LEARN_TECHNIQUE
-  EAT_WIDER
-}
-
 enum FoodGroupCategory {
   PRODUCE
   PROTEIN
@@ -98,6 +73,8 @@ model User {
   passwordHash String
   name         String
   country      String
+  city         String?
+  birthday     DateTime?
   isAdmin      Boolean  @default(false)
   createdAt    DateTime @default(now())
   lastActiveAt DateTime @default(now())
@@ -133,10 +110,8 @@ model UserPreferences {
   allergens        Allergen[]
   customAllergens  String[] @default([])
 
-  cookingFor    CookingFor?
-  cookFrequency CookFrequency?
-  favoriteFoods String[]       @default([])
-  goals         Goal[]         @default([])
+  favoriteCuisines   String[] @default([])
+  foodGroupFeedback  String?
 
   updatedAt DateTime @updatedAt
 }
@@ -181,6 +156,14 @@ model Allergen {
   recipes         Recipe[]
 }
 
+model Cuisine {
+  id   String @id @default(cuid())
+  name String @unique
+  slug String @unique
+
+  recipes Recipe[]
+}
+
 // ---------- Recipes ----------
 
 model Recipe {
@@ -196,7 +179,8 @@ model Recipe {
   prepMinutes  Int
   cookMinutes  Int
   difficulty   Difficulty
-  cuisine      String
+  cuisineId    String
+  cuisine      Cuisine    @relation(fields: [cuisineId], references: [id])
   mealSlot     MealSlot[]
   effortTier   EffortTier
   batchFriendly Boolean @default(false)

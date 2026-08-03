@@ -130,7 +130,10 @@
     ],
     "dietTags": [
       "Vegan",
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten"
@@ -278,7 +281,9 @@
       }
     ],
     "dietTags": [
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -409,7 +414,8 @@
     ],
     "dietTags": [
       "Gluten-free",
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Milk"
@@ -541,7 +547,10 @@
     "dietTags": [
       "Vegan",
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/black-bean-tacos.jpg",
@@ -674,7 +683,9 @@
     ],
     "dietTags": [
       "Gluten-free",
-      "High-protein"
+      "High-protein",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/chicken-tinga-tacos.jpg",
@@ -804,7 +815,11 @@
       "Low-carb",
       "Gluten-free",
       "High-protein",
-      "Paleo"
+      "Paleo",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher",
+      "Whole30"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/carne-asada.jpg",
@@ -933,7 +948,10 @@
     "dietTags": [
       "Pescatarian",
       "Gluten-free",
-      "High-protein"
+      "High-protein",
+      "Flexitarian",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Fish",
@@ -1063,7 +1081,9 @@
     ],
     "dietTags": [
       "Vegan",
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -1191,7 +1211,9 @@
         "weight": 20
       }
     ],
-    "dietTags": [],
+    "dietTags": [
+      "Kosher"
+    ],
     "allergenTags": [
       "Wheat/gluten",
       "Eggs"
@@ -1323,7 +1345,11 @@
       "Vegan",
       "Vegetarian",
       "Gluten-free",
-      "High-protein"
+      "High-protein",
+      "Flexitarian",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/chana-masala.jpg",
@@ -1455,7 +1481,9 @@
     ],
     "dietTags": [
       "Gluten-free",
-      "High-protein"
+      "High-protein",
+      "Low-sodium",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Milk"
@@ -1583,7 +1611,10 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Milk"
@@ -1714,7 +1745,9 @@
     "dietTags": [
       "Vegan",
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy"
@@ -1841,7 +1874,8 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -1975,7 +2009,11 @@
     "dietTags": [
       "Pescatarian",
       "Gluten-free",
-      "Low-carb"
+      "Low-carb",
+      "Flexitarian",
+      "Diabetic-friendly",
+      "Keto",
+      "Whole30"
     ],
     "allergenTags": [
       "Shellfish",
@@ -2104,7 +2142,11 @@
     "dietTags": [
       "Vegan",
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Sesame"
@@ -2241,7 +2283,9 @@
     "dietTags": [
       "Vegetarian",
       "Gluten-free",
-      "High-protein"
+      "High-protein",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Eggs",
@@ -2373,7 +2417,12 @@
       "Low-carb",
       "Gluten-free",
       "High-protein",
-      "Paleo"
+      "Paleo",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher",
+      "Keto",
+      "Whole30"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/lamb-kofta.jpg",
@@ -2501,7 +2550,10 @@
     ],
     "dietTags": [
       "Gluten-free",
-      "High-protein"
+      "High-protein",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/turkey-chili.jpg",
@@ -2622,7 +2674,13 @@
       "Gluten-free",
       "Low-carb",
       "High-protein",
-      "Mediterranean"
+      "Mediterranean",
+      "Flexitarian",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher",
+      "Keto",
+      "Whole30"
     ],
     "allergenTags": [
       "Fish"
@@ -2874,7 +2932,9 @@
     ],
     "dietTags": [
       "Vegan",
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy"
@@ -3001,7 +3061,9 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Peanuts",
@@ -3119,7 +3181,10 @@
     "dietTags": [
       "Gluten-free",
       "Low-carb",
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly",
+      "Keto",
+      "Whole30"
     ],
     "allergenTags": [
       "Soy",
@@ -3250,7 +3315,11 @@
       "Gluten-free",
       "Mediterranean",
       "Whole30",
-      "Paleo"
+      "Paleo",
+      "Flexitarian",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/ratatouille.jpg",
@@ -3381,7 +3450,8 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -3505,7 +3575,10 @@
       "Pescatarian",
       "Gluten-free",
       "Low-carb",
-      "Mediterranean"
+      "Mediterranean",
+      "Flexitarian",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Fish",
@@ -3635,7 +3708,9 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Eggs",
@@ -3765,7 +3840,8 @@
     ],
     "dietTags": [
       "Gluten-free",
-      "High-protein"
+      "High-protein",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy",
@@ -3888,7 +3964,9 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Eggs",
@@ -4023,7 +4101,10 @@
       }
     ],
     "dietTags": [
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -4166,7 +4247,9 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Milk",
@@ -4459,7 +4542,9 @@
       }
     ],
     "dietTags": [
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -4613,7 +4698,10 @@
     "dietTags": [
       "Vegetarian",
       "High-protein",
-      "Mediterranean"
+      "Mediterranean",
+      "Flexitarian",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -4741,7 +4829,9 @@
       }
     ],
     "dietTags": [
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -5029,7 +5119,12 @@
       "Pescatarian",
       "Low-carb",
       "Gluten-free",
-      "Paleo"
+      "Paleo",
+      "Flexitarian",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Keto",
+      "Whole30"
     ],
     "allergenTags": [
       "Shellfish"
@@ -5164,7 +5259,8 @@
     ],
     "dietTags": [
       "High-protein",
-      "Gluten-free"
+      "Gluten-free",
+      "Low-sodium"
     ],
     "allergenTags": [
       "Corn"
@@ -5285,7 +5381,10 @@
       }
     ],
     "dietTags": [
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -5413,7 +5512,9 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Eggs",
@@ -5554,7 +5655,9 @@
     ],
     "dietTags": [
       "High-protein",
-      "Gluten-free"
+      "Gluten-free",
+      "Low-sodium",
+      "Diabetic-friendly"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/pozole-rojo.jpg",
@@ -5677,7 +5780,8 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy",
@@ -5938,7 +6042,11 @@
     ],
     "dietTags": [
       "Pescatarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Fish"
@@ -6080,7 +6188,8 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy",
@@ -6219,7 +6328,9 @@
       }
     ],
     "dietTags": [
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -6354,7 +6465,9 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Low-FODMAP"
+      "Low-FODMAP",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -6509,7 +6622,9 @@
     ],
     "dietTags": [
       "High-protein",
-      "Gluten-free"
+      "Gluten-free",
+      "Low-sodium",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Milk"
@@ -6643,7 +6758,10 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Milk"
@@ -6783,7 +6901,11 @@
       "Vegetarian",
       "Gluten-free",
       "High-protein",
-      "Low-FODMAP"
+      "Low-FODMAP",
+      "Flexitarian",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Milk"
@@ -6912,7 +7034,10 @@
       "High-protein",
       "Low-carb",
       "Gluten-free",
-      "Halal"
+      "Halal",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Keto"
     ],
     "allergenTags": [
       "Milk"
@@ -7042,7 +7167,10 @@
       "Vegetarian",
       "Gluten-free",
       "Whole30",
-      "Paleo"
+      "Paleo",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/aloo-gobi.jpg",
@@ -7170,7 +7298,11 @@
       "Vegan",
       "Vegetarian",
       "Gluten-free",
-      "High-protein"
+      "High-protein",
+      "Flexitarian",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/rajma-masala.jpg",
@@ -7315,7 +7447,8 @@
     ],
     "dietTags": [
       "Pescatarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian"
     ],
     "allergenTags": [
       "Shellfish",
@@ -7463,7 +7596,8 @@
     "dietTags": [
       "High-protein",
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Peanuts",
@@ -7609,7 +7743,9 @@
     ],
     "dietTags": [
       "High-protein",
-      "Gluten-free"
+      "Gluten-free",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Fish",
@@ -7737,7 +7873,10 @@
       "Vegan",
       "Vegetarian",
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Sesame"
@@ -7889,7 +8028,9 @@
       "Pescatarian",
       "Low-carb",
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Peanuts",
@@ -8167,7 +8308,8 @@
     "dietTags": [
       "High-protein",
       "Halal",
-      "Gluten-free"
+      "Gluten-free",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Milk"
@@ -8318,7 +8460,9 @@
     "dietTags": [
       "Vegan",
       "Vegetarian",
-      "Mediterranean"
+      "Mediterranean",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Sesame",
@@ -8474,7 +8618,10 @@
       "High-protein",
       "Halal",
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Diabetic-friendly",
+      "Kosher",
+      "Whole30"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/moroccan-chicken-tagine.jpg",
@@ -8611,7 +8758,10 @@
       "Vegan",
       "Vegetarian",
       "Mediterranean",
-      "Dairy-free"
+      "Dairy-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten"
@@ -8752,7 +8902,10 @@
       "High-protein",
       "Halal",
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/beef-kebabs-with-rice.jpg",
@@ -8888,7 +9041,10 @@
       "Vegan",
       "Vegetarian",
       "Mediterranean",
-      "Dairy-free"
+      "Dairy-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten"
@@ -9142,7 +9298,9 @@
       }
     ],
     "dietTags": [
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -9282,7 +9440,8 @@
       "High-protein",
       "Low-carb",
       "Gluten-free",
-      "Keto"
+      "Keto",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Eggs",
@@ -9399,7 +9558,9 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly",
+      "Keto"
     ],
     "allergenTags": [
       "Milk",
@@ -9646,7 +9807,10 @@
     "dietTags": [
       "Vegetarian",
       "Gluten-free",
-      "Low-carb"
+      "Low-carb",
+      "Flexitarian",
+      "Kosher",
+      "Keto"
     ],
     "allergenTags": [
       "Milk"
@@ -9781,7 +9945,9 @@
       }
     ],
     "dietTags": [
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Eggs",
@@ -9924,7 +10090,8 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/sweet-and-sour-chicken.jpg",
@@ -10050,7 +10217,8 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -10176,7 +10344,8 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -10316,7 +10485,9 @@
     "dietTags": [
       "Vegetarian",
       "Low-carb",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy",
@@ -10439,7 +10610,9 @@
     "dietTags": [
       "Low-carb",
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Flexitarian",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Soy"
@@ -10563,7 +10736,8 @@
       }
     ],
     "dietTags": [
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian"
     ],
     "allergenTags": [
       "Milk",
@@ -10842,7 +11016,8 @@
     "dietTags": [
       "High-protein",
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Sulphites"
@@ -11099,7 +11274,10 @@
       "Low-carb",
       "Gluten-free",
       "Mediterranean",
-      "Dairy-free"
+      "Dairy-free",
+      "Diabetic-friendly",
+      "Kosher",
+      "Keto"
     ],
     "allergenTags": [
       "Sulphites"
@@ -11226,7 +11404,9 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Milk"
@@ -11364,7 +11544,9 @@
         "weight": 10
       }
     ],
-    "dietTags": [],
+    "dietTags": [
+      "Kosher"
+    ],
     "allergenTags": [
       "Soy"
     ],
@@ -11523,7 +11705,8 @@
       }
     ],
     "dietTags": [
-      "Dairy-free"
+      "Dairy-free",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy",
@@ -11934,7 +12117,9 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy",
@@ -12072,7 +12257,8 @@
     "dietTags": [
       "Gluten-free",
       "Dairy-free",
-      "High-protein"
+      "High-protein",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy",
@@ -12210,7 +12396,9 @@
     "dietTags": [
       "Gluten-free",
       "Dairy-free",
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy"
@@ -12348,7 +12536,8 @@
     ],
     "dietTags": [
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Flexitarian"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/pork-sinigang.jpg",
@@ -12480,7 +12669,8 @@
       }
     ],
     "dietTags": [
-      "Dairy-free"
+      "Dairy-free",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy"
@@ -12748,7 +12938,10 @@
     ],
     "dietTags": [
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Fish"
@@ -12885,7 +13078,9 @@
         "weight": 15
       }
     ],
-    "dietTags": [],
+    "dietTags": [
+      "Low-sodium"
+    ],
     "allergenTags": [
       "Wheat/gluten",
       "Eggs"
@@ -13024,7 +13219,9 @@
     ],
     "dietTags": [
       "Dairy-free",
-      "Pescatarian"
+      "Pescatarian",
+      "Flexitarian",
+      "Low-sodium"
     ],
     "allergenTags": [
       "Shellfish",
@@ -13293,7 +13490,8 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Low-sodium"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -13427,7 +13625,11 @@
       "Vegetarian",
       "Gluten-free",
       "Low-carb",
-      "Mediterranean"
+      "Mediterranean",
+      "Flexitarian",
+      "Diabetic-friendly",
+      "Kosher",
+      "Keto"
     ],
     "allergenTags": [
       "Milk"
@@ -13564,7 +13766,9 @@
       }
     ],
     "dietTags": [
-      "Vegetarian"
+      "Vegetarian",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -13691,7 +13895,9 @@
       }
     ],
     "dietTags": [
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten",
@@ -13828,7 +14034,9 @@
     "dietTags": [
       "Vegan",
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/jollof-rice.jpg",
@@ -13929,7 +14137,11 @@
     "dietTags": [
       "Vegan",
       "Gluten-free",
-      "Dairy-free"
+      "Dairy-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher",
+      "Whole30"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/west-african-fufu.jpg",
@@ -14066,7 +14278,8 @@
     "dietTags": [
       "Gluten-free",
       "Dairy-free",
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Peanuts"
@@ -14203,7 +14416,10 @@
     "dietTags": [
       "Gluten-free",
       "Dairy-free",
-      "High-protein"
+      "High-protein",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Peanuts"
@@ -14339,7 +14555,8 @@
     "dietTags": [
       "Gluten-free",
       "Dairy-free",
-      "High-protein"
+      "High-protein",
+      "Diabetic-friendly"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/feijoada.jpg",
@@ -14431,7 +14648,11 @@
       "Dairy-free",
       "Keto",
       "Low-carb",
-      "High-protein"
+      "High-protein",
+      "Low-sodium",
+      "Diabetic-friendly",
+      "Kosher",
+      "Whole30"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/brazilian-picanha.jpg",
@@ -14564,7 +14785,10 @@
     "dietTags": [
       "Gluten-free",
       "Dairy-free",
-      "Pescatarian"
+      "Pescatarian",
+      "Flexitarian",
+      "Low-sodium",
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Shellfish"
@@ -14690,7 +14914,9 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Kosher"
     ],
     "allergenTags": [
       "Milk",
@@ -14825,7 +15051,9 @@
     ],
     "dietTags": [
       "Dairy-free",
-      "High-protein"
+      "High-protein",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Wheat/gluten"
@@ -14961,7 +15189,10 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Diabetic-friendly",
+      "Kosher"
     ],
     "allergenTags": [
       "Milk"
@@ -15086,7 +15317,10 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Gluten-free"
+      "Gluten-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Eggs",
@@ -15214,7 +15448,9 @@
         "weight": 10
       }
     ],
-    "dietTags": [],
+    "dietTags": [
+      "Low-sodium"
+    ],
     "allergenTags": [
       "Wheat/gluten",
       "Milk"
@@ -15483,7 +15719,10 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Dairy-free"
+      "Dairy-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Soy",
@@ -15621,7 +15860,8 @@
       "Gluten-free",
       "Dairy-free",
       "Keto",
-      "Low-carb"
+      "Low-carb",
+      "Low-sodium"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/beef-rendang.jpg",
@@ -15758,7 +15998,10 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Dairy-free"
+      "Dairy-free",
+      "Flexitarian",
+      "Low-sodium",
+      "Kosher"
     ],
     "allergenTags": [
       "Peanuts",
