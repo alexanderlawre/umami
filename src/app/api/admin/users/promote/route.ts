@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { isSuperAdmin } from "@/lib/super-admin";
 
 const schema = z.object({
   email: z.string().trim().email(),
@@ -13,7 +14,9 @@ export async function POST(request: Request) {
   if (!session?.user) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
-  if (!session.user.isAdmin) {
+  // Granting/revoking admin access is restricted to a hardcoded super-admin
+  // allowlist, not every admin — see src/lib/super-admin.ts.
+  if (!isSuperAdmin(session.user.email)) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 

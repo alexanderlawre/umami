@@ -4,7 +4,6 @@ import { useState } from "react";
 import { ATTRIBUTE_LABELS } from "@/lib/recipe-tags";
 import {
   DIFFICULTIES,
-  EFFORT_TIERS,
   MEAL_SLOTS,
   type EditorAllergen,
   type EditorCuisine,
@@ -224,35 +223,19 @@ export function RecipeFormFields({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
-        <div>
-          <label className={labelClass()}>Difficulty</label>
-          <select
-            className={inputClass()}
-            value={form.difficulty}
-            onChange={(e) => update("difficulty", e.target.value as EditorRecipe["difficulty"])}
-          >
-            {DIFFICULTIES.map((d) => (
-              <option key={d} value={d}>
-                {d}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label className={labelClass()}>Effort tier</label>
-          <select
-            className={inputClass()}
-            value={form.effortTier}
-            onChange={(e) => update("effortTier", e.target.value as EditorRecipe["effortTier"])}
-          >
-            {EFFORT_TIERS.map((t) => (
-              <option key={t} value={t}>
-                {t}
-              </option>
-            ))}
-          </select>
-        </div>
+      <div>
+        <label className={labelClass()}>Difficulty</label>
+        <select
+          className={inputClass()}
+          value={form.difficulty}
+          onChange={(e) => update("difficulty", e.target.value as EditorRecipe["difficulty"])}
+        >
+          {DIFFICULTIES.map((d) => (
+            <option key={d} value={d}>
+              {d}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div>

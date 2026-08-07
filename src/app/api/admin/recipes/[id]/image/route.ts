@@ -1,5 +1,4 @@
-import { writeFile, unlink } from "fs/promises";
-import path from "path";
+import { put, del } from "@vercel/blob";
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
@@ -53,24 +52,31 @@ export async function POST(
     return NextResponse.json({ error: "Recipe not found" }, { status: 404 });
   }
 
-  const filename = `${recipe.slug}${ext}`;
-  const filePath = path.join(process.cwd(), "public", "recipe-photos", filename);
+  // Vercel's serverless functions have a read-only filesystem in production
+  // (writes only persist to `public/` at build time, and would silently
+  // fail — or write to an ephemeral /tmp — at request time), so recipe
+  // photos are stored in Vercel Blob storage instead of `public/recipe-photos/`.
+  // `addRandomSuffix` avoids collisions/CDN-cache staleness when a recipe's
+  // photo is swapped for a new one at the same slug.
+  const filename = `recipe-photos/${recipe.slug}${ext}`;
   const buffer = Buffer.from(await file.arrayBuffer());
-  await writeFile(filePath, buffer);
+  const blob = await put(filename, buffer, {
+    access: "public",
+    addRandomSuffix: true,
+    contentType: file.type,
+  });
 
-  const previousFilename = recipe.imageUrl?.startsWith("/recipe-photos/")
-    ? recipe.imageUrl.slice("/recipe-photos/".length)
-    : null;
-  if (previousFilename && previousFilename !== filename) {
+  // Best-effort cleanup of the previous image — never blocks the response
+  // on failure (e.g. the URL predates Blob storage, or was already removed).
+  if (recipe.imageUrl && recipe.imageUrl.includes("blob.vercel-storage.com")) {
     try {
-      await unlink(path.join(process.cwd(), "public", "recipe-photos", previousFilename));
+      await del(recipe.imageUrl);
     } catch {
-      // best-effort cleanup, ignore if missing
+      // ignore
     }
   }
 
-  const imageUrl = `/recipe-photos/${filename}`;
-  await prisma.recipe.update({ where: { id }, data: { imageUrl } });
+  await prisma.recipe.update({ where: { id }, data: { imageUrl: blob.url } });
 
-  return NextResponse.json({ imageUrl });
+  return NextResponse.json({ imageUrl: blob.url });
 }

@@ -24,6 +24,24 @@ html {
   overscroll-behavior-y: contain;
 }
 
+/* Tailwind v4's Preflight resets <button> to `cursor: default`, which makes
+   every button in the app feel inert/non-interactive. Restore the familiar
+   pointer cursor on buttons and other interactive controls. Utility classes
+   like `disabled:cursor-not-allowed` on individual buttons are more specific
+   and continue to win over this base-layer rule. */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  a,
+  summary,
+  select,
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="range"] {
+    cursor: pointer;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

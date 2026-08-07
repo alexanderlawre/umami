@@ -1,7 +1,12 @@
+import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { isSuperAdmin } from "@/lib/super-admin";
 import { AdminUsersClient } from "./admin-users-client";
 
 export default async function AdminUsersPage() {
+  const session = await auth();
+  const canManageAdmins = isSuperAdmin(session?.user?.email);
+
   const users = await prisma.user.findMany({
     orderBy: { createdAt: "desc" },
     select: {
@@ -48,7 +53,7 @@ export default async function AdminUsersPage() {
       </p>
 
       <div className="mt-6">
-        <AdminUsersClient users={rows} />
+        <AdminUsersClient users={rows} canManageAdmins={canManageAdmins} />
       </div>
     </main>
   );

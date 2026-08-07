@@ -1,56 +1,23 @@
 import { redirect } from "next/navigation";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
-import { FOOD_GROUP_CLUSTERS } from "@/lib/food-group-screens";
-import { PreferencesForm } from "./preferences-form";
+import { SettingsClient } from "./settings-client";
 
 export default async function SettingsPage() {
   const session = await auth();
   if (!session?.user) redirect("/login");
   if (!session.user.onboarded) redirect("/onboarding");
 
-  const [diets, allergens, foodGroups, preferences, foodGroupPreferences] = await Promise.all([
-    prisma.diet.findMany({ orderBy: { name: "asc" } }),
-    prisma.allergen.findMany({ orderBy: { name: "asc" } }),
-    prisma.foodGroup.findMany({ orderBy: { name: "asc" } }),
-    prisma.userPreferences.findUnique({
-      where: { userId: session.user.id },
-      include: { diets: true, allergens: true },
-    }),
-    prisma.foodGroupPreference.findMany({
-      where: { userId: session.user.id },
-    }),
-  ]);
-
-  const declaredByFoodGroupId = new Map(
-    foodGroupPreferences.map((fp) => [fp.foodGroupId, fp.declaredValue]),
-  );
-  const foodGroupIdByName = new Map(foodGroups.map((fg) => [fg.name, fg.id]));
-
-  // Same clustering as onboarding's "personalize" step — a cluster's slider
-  // value is the average of its underlying FoodGroup declared values (or 50
-  // if the user has no saved preference for any group in that cluster yet).
-  const initialClusterValues = FOOD_GROUP_CLUSTERS.map((cluster) => {
-    const values = cluster.groups
-      .map((name) => foodGroupIdByName.get(name))
-      .filter((id): id is string => !!id)
-      .map((id) => declaredByFoodGroupId.get(id))
-      .filter((v): v is number => v !== undefined);
-    if (values.length === 0) return 50;
-    return Math.round(values.reduce((a, b) => a + b, 0) / values.length);
+  const user = await prisma.user.findUnique({
+    where: { id: session.user.id },
+    select: { name: true, email: true, timezone: true },
   });
 
   return (
-    <PreferencesForm
-      diets={diets}
-      allergens={allergens}
-      foodGroups={foodGroups}
-      initialDietIds={preferences?.diets.map((d) => d.id) ?? []}
-      initialAllergenIds={preferences?.allergens.map((a) => a.id) ?? []}
-      initialCustomAllergens={preferences?.customAllergens ?? []}
-      initialFavoriteCuisines={preferences?.favoriteCuisines ?? []}
-      initialFoodGroupFeedback={preferences?.foodGroupFeedback ?? ""}
-      initialClusterValues={initialClusterValues}
+    <SettingsClient
+      name={user?.name ?? ""}
+      email={user?.email ?? session.user.email ?? ""}
+      timezone={user?.timezone ?? null}
     />
   );
 }

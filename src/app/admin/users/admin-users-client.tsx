@@ -73,9 +73,16 @@ function PromoteForm({ onPromoted }: { onPromoted: (email: string) => void }) {
   );
 }
 
-export function AdminUsersClient({ users: initial }: { users: AdminUserRow[] }) {
+export function AdminUsersClient({
+  users: initial,
+  canManageAdmins,
+}: {
+  users: AdminUserRow[];
+  canManageAdmins: boolean;
+}) {
   const [users, setUsers] = useState(initial);
   const [togglingId, setTogglingId] = useState<string | null>(null);
+  const [togglingAdminId, setTogglingAdminId] = useState<string | null>(null);
 
   function handlePromoted(email: string) {
     setUsers((prev) =>
@@ -103,9 +110,29 @@ export function AdminUsersClient({ users: initial }: { users: AdminUserRow[] }) 
     }
   }
 
+  async function toggleAdmin(id: string, current: boolean) {
+    const next = !current;
+    setTogglingAdminId(id);
+    setUsers((prev) => prev.map((u) => (u.id === id ? { ...u, isAdmin: next } : u)));
+    try {
+      const res = await fetch(`/api/admin/users/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ isAdmin: next }),
+      });
+      if (!res.ok) {
+        setUsers((prev) => prev.map((u) => (u.id === id ? { ...u, isAdmin: current } : u)));
+      }
+    } catch {
+      setUsers((prev) => prev.map((u) => (u.id === id ? { ...u, isAdmin: current } : u)));
+    } finally {
+      setTogglingAdminId(null);
+    }
+  }
+
   return (
     <div>
-      <PromoteForm onPromoted={handlePromoted} />
+      {canManageAdmins && <PromoteForm onPromoted={handlePromoted} />}
 
       <div className="mt-6 space-y-3">
         {users.map((u) => (
@@ -138,14 +165,28 @@ export function AdminUsersClient({ users: initial }: { users: AdminUserRow[] }) 
                   type="button"
                   onClick={() => togglePremium(u.id, u.isPremium)}
                   disabled={togglingId === u.id}
-                  className={`rounded-full border px-3 py-2 text-xs disabled:opacity-50 ${
+                  className={`rounded-full border px-3 py-2 text-xs transition disabled:opacity-50 ${
                     u.isPremium
                       ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
-                      : "border-[#E8E6E0] text-[#6B7370]"
+                      : "border-[#E8E6E0] text-[#6B7370] hover:bg-[#EDF3EF]"
                   }`}
                 >
                   {u.isPremium ? "Premium" : "Free"}
                 </button>
+                {canManageAdmins && (
+                  <button
+                    type="button"
+                    onClick={() => toggleAdmin(u.id, u.isAdmin)}
+                    disabled={togglingAdminId === u.id}
+                    className={`rounded-full border px-3 py-2 text-xs transition disabled:opacity-50 ${
+                      u.isAdmin
+                        ? "border-[#B45309] bg-[#FBEBE9] text-[#B45309]"
+                        : "border-[#E8E6E0] text-[#6B7370] hover:bg-[#EDF3EF]"
+                    }`}
+                  >
+                    {u.isAdmin ? "Revoke admin" : "Grant admin"}
+                  </button>
+                )}
               </div>
             </div>
 

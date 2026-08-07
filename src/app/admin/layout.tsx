@@ -17,17 +17,29 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   return (
     <div>
       <div className="border-b border-[#E8E6E0] bg-white">
-        <nav className="mx-auto flex w-full max-w-3xl gap-5 px-6 py-3 text-sm font-medium text-[#6B7370]">
-          <Link href="/admin" className="hover:text-[#1A1D1B]">
+        <nav className="mx-auto flex w-full max-w-3xl gap-2 px-6 py-3 text-sm font-medium text-[#6B7370]">
+          <Link
+            href="/admin"
+            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+          >
             Overview
           </Link>
-          <Link href="/admin/recipes" className="hover:text-[#1A1D1B]">
+          <Link
+            href="/admin/recipes"
+            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+          >
             Recipes
           </Link>
-          <Link href="/admin/preferences" className="hover:text-[#1A1D1B]">
+          <Link
+            href="/admin/preferences"
+            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+          >
             Preferences
           </Link>
-          <Link href="/admin/submissions" className="flex items-center gap-1.5 hover:text-[#1A1D1B]">
+          <Link
+            href="/admin/submissions"
+            className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+          >
             Submissions
             {pendingSubmissionCount > 0 && (
               <span className="rounded-full bg-[#B45309] px-1.5 py-0.5 text-[10px] font-semibold text-white">
@@ -35,7 +47,10 @@ export default async function AdminLayout({ children }: { children: ReactNode })
               </span>
             )}
           </Link>
-          <Link href="/admin/users" className="hover:text-[#1A1D1B]">
+          <Link
+            href="/admin/users"
+            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+          >
             Users
           </Link>
         </nav>

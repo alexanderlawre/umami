@@ -80,7 +80,7 @@ function StarButton({
         aria-label={saved ? "Remove from Cook Later" : "Add to Cook Later"}
         aria-pressed={saved}
         disabled={pending}
-        className={`flex h-9 w-9 items-center justify-center rounded-full shadow-sm transition-colors ${
+        className={`flex h-9 w-9 items-center justify-center rounded-full shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ${
           saved ? "bg-[#F2B705] text-white" : "bg-white/90 text-[#6B7370]"
         }`}
       >
@@ -133,11 +133,11 @@ function CookedButton({ recipeId }: { recipeId: string }) {
     <button
       onClick={markCooked}
       disabled={status === "pending" || status === "done"}
-      className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
+      className={`rounded-full px-3 py-1.5 text-xs font-medium shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ${
         status === "done"
           ? "bg-[#1F5F45] text-white"
           : "bg-[#EDF3EF] text-[#1A1D1B] hover:bg-[#E1E9E3]"
-      } disabled:cursor-not-allowed`}
+      } disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-sm`}
     >
       {status === "done"
         ? "Cooked \u2713"
@@ -196,7 +196,7 @@ function RecipeCard({
   return (
     <div
       ref={ref}
-      className="overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-sm"
+      className="overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
     >
       <div className="relative">
         {recipe.imageUrl ? (
@@ -311,6 +311,38 @@ function formatWindowTime(iso: string): string {
 
 type FilterTag = { value: string; label: string; kind: "diet" | "attribute" };
 
+function FilterTagButton({
+  tag,
+  active,
+  onToggle,
+}: {
+  tag: FilterTag;
+  active: boolean;
+  onToggle: (value: string) => void;
+}) {
+  const activeClass =
+    tag.kind === "diet"
+      ? dietEmblemClass(tag.value) ?? "bg-[#1A1D1B] text-white"
+      : "bg-[#1A1D1B] text-white";
+  return (
+    <button
+      onClick={() => onToggle(tag.value)}
+      aria-pressed={active}
+      className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+        active
+          ? `border-transparent ${activeClass}`
+          : "border-[#E8E6E0] bg-white text-[#6B7370] hover:bg-[#EDF3EF]"
+      }`}
+    >
+      {tag.label}
+    </button>
+  );
+}
+
+// Collapsed-by-default: with every diet + attribute tag rendered flat, the
+// bar could grow to dominate the page above the fold. A toggle button with
+// an active-count badge keeps the common case (no filters) compact, while
+// still surfacing an obvious affordance to narrow things down.
 function FilterBar({
   tags,
   selected,
@@ -322,41 +354,93 @@ function FilterBar({
   onToggle: (value: string) => void;
   onClear: () => void;
 }) {
+  const [open, setOpen] = useState(false);
+
   if (tags.length === 0) return null;
+
+  const dietTags = tags.filter((t) => t.kind === "diet");
+  const attrTags = tags.filter((t) => t.kind === "attribute");
 
   return (
     <div className="mb-6">
-      <div className="flex flex-wrap items-center gap-2">
-        {tags.map((tag) => {
-          const active = selected.has(tag.value);
-          const activeClass =
-            tag.kind === "diet"
-              ? dietEmblemClass(tag.value) ?? "bg-[#1A1D1B] text-white"
-              : "bg-[#1A1D1B] text-white";
-          return (
-            <button
-              key={tag.value}
-              onClick={() => onToggle(tag.value)}
-              aria-pressed={active}
-              className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
-                active
-                  ? `border-transparent ${activeClass}`
-                  : "border-[#E8E6E0] bg-white text-[#6B7370] hover:bg-[#EDF3EF]"
-              }`}
-            >
-              {tag.label}
-            </button>
-          );
-        })}
+      <div className="flex items-center gap-2">
+        <button
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          className="flex items-center gap-1.5 rounded-full border border-[#E8E6E0] bg-white px-3 py-1.5 text-xs font-medium text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
+        >
+          Filters
+          {selected.size > 0 && (
+            <span className="rounded-full bg-[#1F5F45] px-1.5 py-0.5 text-[10px] font-semibold text-white">
+              {selected.size}
+            </span>
+          )}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
         {selected.size > 0 && (
           <button
             onClick={onClear}
-            className="rounded-full px-3 py-1.5 text-xs font-medium text-[#2C5A87] underline"
+            className="text-xs font-medium text-[#2C5A87] underline"
           >
             Clear filters
           </button>
         )}
       </div>
+
+      {open && (
+        <div className="mt-3 space-y-3 rounded-2xl border border-[#E8E6E0] bg-white p-4">
+          {dietTags.length > 0 && (
+            <div>
+              <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[#6B7370]">
+                Diet
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {dietTags.map((tag) => (
+                  <FilterTagButton
+                    key={tag.value}
+                    tag={tag}
+                    active={selected.has(tag.value)}
+                    onToggle={onToggle}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+          {attrTags.length > 0 && (
+            <div>
+              <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[#6B7370]">
+                Tags
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {attrTags.map((tag) => (
+                  <FilterTagButton
+                    key={tag.value}
+                    tag={tag}
+                    active={selected.has(tag.value)}
+                    onToggle={onToggle}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+          {selected.size > 0 && (
+            <button
+              onClick={onClear}
+              className="text-xs font-medium text-[#2C5A87] underline"
+            >
+              Clear filters
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 }
