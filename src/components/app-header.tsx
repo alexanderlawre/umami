@@ -17,12 +17,6 @@ export function AppHeader({
         Umami
       </Link>
       <div className="flex items-center gap-4">
-        <Link
-          href="/submit-recipe"
-          className="-my-2 rounded-lg px-2 py-2 text-sm text-[#6B7370] underline"
-        >
-          Submit a recipe
-        </Link>
         <ProfileMenu name={name} isAdmin={isAdmin} />
       </div>
     </header>

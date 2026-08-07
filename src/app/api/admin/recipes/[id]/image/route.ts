@@ -3,11 +3,20 @@ import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 
-const MAX_SIZE_BYTES = 8 * 1024 * 1024;
+// The client (recipe-editor.tsx) compresses/re-encodes photos to WebP before
+// upload, so this is normally hit with a small file — but it falls back to
+// sending the original file untouched if the browser couldn't decode it
+// (e.g. some HEIC photos outside Safari), so keep a broader allowlist here
+// and a limit safely under Vercel's hard 4.5MB serverless request-body cap.
+const MAX_SIZE_BYTES = 4 * 1024 * 1024;
 const MIME_TO_EXT: Record<string, string> = {
   "image/jpeg": ".jpg",
   "image/png": ".png",
   "image/webp": ".webp",
+  "image/gif": ".gif",
+  "image/avif": ".avif",
+  "image/heic": ".heic",
+  "image/heif": ".heif",
 };
 
 export async function POST(
@@ -33,13 +42,16 @@ export async function POST(
   const ext = MIME_TO_EXT[file.type];
   if (!ext) {
     return NextResponse.json(
-      { error: "Unsupported file type. Use JPEG, PNG, or WEBP." },
+      { error: "Unsupported image format. Try saving it as JPEG or PNG first." },
       { status: 400 },
     );
   }
   if (file.size > MAX_SIZE_BYTES) {
     return NextResponse.json(
-      { error: "File too large. Max size is 8MB." },
+      {
+        error:
+          "File too large after processing. Try a smaller photo, or crop/screenshot it before uploading.",
+      },
       { status: 400 },
     );
   }

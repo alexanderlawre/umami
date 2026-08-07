@@ -75,9 +75,6 @@ export default async function AdminPage() {
     recipeCount,
     activeRecipeCount,
     unverifiedRecipeCount,
-    pendingSubmissionCount,
-    approvedSubmissions7d,
-    rejectedSubmissions7d,
     cookLogCount,
     cookLogs7d,
     interactionCounts,
@@ -90,13 +87,6 @@ export default async function AdminPage() {
     prisma.recipe.count(),
     prisma.recipe.count({ where: { isActive: true } }),
     prisma.recipe.count({ where: { allergenReviewStatus: "UNVERIFIED" } }),
-    prisma.recipeSubmission.count({ where: { status: "PENDING" } }),
-    prisma.recipeSubmission.count({
-      where: { status: "APPROVED", updatedAt: { gte: sevenDaysAgo } },
-    }),
-    prisma.recipeSubmission.count({
-      where: { status: "REJECTED", updatedAt: { gte: sevenDaysAgo } },
-    }),
     prisma.cookLog.count(),
     prisma.cookLog.count({ where: { cookedAt: { gte: sevenDaysAgo } } }),
     prisma.interaction.groupBy({ by: ["type"], _count: true }),
@@ -155,9 +145,6 @@ export default async function AdminPage() {
     recipeCount,
     activeRecipeCount,
     unverifiedRecipeCount,
-    pendingSubmissionCount,
-    approvedSubmissions7d,
-    rejectedSubmissions7d,
     cookLogCount,
     cookLogs7d,
     interactionCounts: interactionCounts.map((i) => ({ type: i.type, count: i._count })),
@@ -178,13 +165,6 @@ export default async function AdminPage() {
           value={stats.unverifiedRecipeCount}
           href="/admin/recipes?filter=unverified"
         />
-        <StatCard
-          label="Pending submissions"
-          value={stats.pendingSubmissionCount}
-          href="/admin/submissions"
-        />
-        <StatCard label="Approved submissions (7d)" value={stats.approvedSubmissions7d} />
-        <StatCard label="Rejected submissions (7d)" value={stats.rejectedSubmissions7d} />
         <StatCard label="Cook logs" value={stats.cookLogCount} />
         <StatCard label="Cook logs (7d)" value={stats.cookLogs7d} />
         <StatCard

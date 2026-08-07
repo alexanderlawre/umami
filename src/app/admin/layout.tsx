@@ -2,17 +2,12 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/auth";
-import { prisma } from "@/lib/prisma";
 
 export default async function AdminLayout({ children }: { children: ReactNode }) {
   const session = await auth();
   if (!session?.user) redirect("/login");
   if (!session.user.onboarded) redirect("/onboarding");
   if (!session.user.isAdmin) redirect("/dashboard");
-
-  const pendingSubmissionCount = await prisma.recipeSubmission.count({
-    where: { status: "PENDING" },
-  });
 
   return (
     <div>
@@ -35,17 +30,6 @@ export default async function AdminLayout({ children }: { children: ReactNode })
             className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
           >
             Preferences
-          </Link>
-          <Link
-            href="/admin/submissions"
-            className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
-          >
-            Submissions
-            {pendingSubmissionCount > 0 && (
-              <span className="rounded-full bg-[#B45309] px-1.5 py-0.5 text-[10px] font-semibold text-white">
-                {pendingSubmissionCount}
-              </span>
-            )}
           </Link>
           <Link
             href="/admin/users"
