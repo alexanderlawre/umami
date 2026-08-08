@@ -32,6 +32,12 @@ export default async function AdminLayout({ children }: { children: ReactNode })
             Preferences
           </Link>
           <Link
+            href="/admin/cookbooks"
+            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+          >
+            Cookbooks
+          </Link>
+          <Link
             href="/admin/users"
             className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
           >

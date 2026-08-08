@@ -151,6 +151,12 @@ function toCardData(r: EligibleRecipe): RecipeCardData {
   };
 }
 
+export type CookbookSection = {
+  id: string;
+  name: string;
+  recipes: RecipeCardData[];
+};
+
 export type DailySelection = {
   pool: RecipeCardData[];
   served: RecipeCardData[];
@@ -158,7 +164,34 @@ export type DailySelection = {
   refreshAvailable: boolean;
   nextWindowAt: Date;
   userDiets: string[];
+  cookbooks: CookbookSection[];
 };
+
+// Admin-curated cookbook sections are built by filtering the already
+// eligibility-filtered `pool` by recipe-id membership, so they automatically
+// inherit the same allergy/diet/active filtering as the rest of the
+// dashboard, and never need their own recipe->card mapping logic. A
+// cookbook with zero recipes visible to this user (everything in it got
+// filtered out, or the recipe was deleted/deactivated) is dropped entirely
+// rather than shown empty.
+async function loadCookbookSections(pool: EligibleRecipe[]): Promise<CookbookSection[]> {
+  const poolById = new Map(pool.map((r) => [r.id, r]));
+  const cookbookRows = await prisma.cookbook.findMany({
+    orderBy: { createdAt: "asc" },
+    include: { recipes: { orderBy: { addedAt: "asc" }, select: { recipeId: true } } },
+  });
+
+  return cookbookRows
+    .map((cb) => ({
+      id: cb.id,
+      name: cb.name,
+      recipes: cb.recipes
+        .map((entry) => poolById.get(entry.recipeId))
+        .filter((r): r is EligibleRecipe => Boolean(r))
+        .map(toCardData),
+    }))
+    .filter((cb) => cb.recipes.length > 0);
+}
 
 export async function getDailySelection(userId: string): Promise<DailySelection> {
   const { pool, profile, timezone, currentSlot, windowKey } = await loadDashboardContext(userId);
@@ -205,6 +238,8 @@ export async function getDailySelection(userId: string): Promise<DailySelection>
     served = [];
   }
 
+  const cookbooks = await loadCookbookSections(pool);
+
   return {
     pool: pool.map(toCardData),
     served: served.map(toCardData),
@@ -212,6 +247,7 @@ export async function getDailySelection(userId: string): Promise<DailySelection>
     refreshAvailable: refreshesUsedThisWindow < MAX_MANUAL_REFRESHES_PER_WINDOW,
     nextWindowAt: nextMealSlotWindowAt(timezone),
     userDiets: profile.diets,
+    cookbooks,
   };
 }
 

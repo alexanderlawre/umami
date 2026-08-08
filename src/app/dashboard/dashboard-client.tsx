@@ -439,21 +439,30 @@ function FilterBar({
   );
 }
 
+export type CookbookSection = {
+  id: string;
+  name: string;
+  recipes: RecipeCardData[];
+};
+
 export function DashboardClient({
   pool,
   served,
   refreshAvailable,
   nextWindowAt,
   userDiets,
+  cookbooks,
 }: {
   pool: RecipeCardData[];
   served: RecipeCardData[];
   refreshAvailable: boolean;
   nextWindowAt: string;
   userDiets: string[];
+  cookbooks: CookbookSection[];
 }) {
   const [poolState] = useState(pool);
   const [visible, setVisible] = useState(() => dedupeFirstFour(served));
+  const [cookbooksState, setCookbooksState] = useState(cookbooks);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [canRefresh, setCanRefresh] = useState(refreshAvailable);
   const [nextAt, setNextAt] = useState(nextWindowAt);
@@ -486,6 +495,12 @@ export function DashboardClient({
 
   function handleSavedChange(id: string, saved: boolean) {
     setVisible((prev) => prev.map((r) => (r.id === id ? { ...r, saved } : r)));
+    setCookbooksState((prev) =>
+      prev.map((cb) => ({
+        ...cb,
+        recipes: cb.recipes.map((r) => (r.id === id ? { ...r, saved } : r)),
+      })),
+    );
   }
 
   async function handleRefresh() {
@@ -613,6 +628,27 @@ export function DashboardClient({
           <p className="text-xs text-[#6B7370]">{refreshMessage}</p>
         )}
       </div>
+
+      {cookbooksState.length > 0 && (
+        <div className="mt-10 space-y-8">
+          {cookbooksState.map((cookbook) => (
+            <div key={cookbook.id}>
+              <h2 className="text-lg font-semibold text-[#1A1D1B]">{cookbook.name}</h2>
+              <div className="mt-3 flex gap-4 overflow-x-auto pb-2">
+                {cookbook.recipes.map((recipe) => (
+                  <div key={recipe.id} className="w-72 shrink-0">
+                    <RecipeCard
+                      recipe={recipe}
+                      userDiets={userDiets}
+                      onSavedChange={handleSavedChange}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

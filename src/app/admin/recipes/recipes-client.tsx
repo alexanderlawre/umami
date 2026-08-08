@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AddCuisineInline } from "@/components/recipe-form-fields";
@@ -22,7 +22,10 @@ export type AdminRecipeRow = {
   isActive: boolean;
   allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
   imageUrl: string | null;
+  cookbookIds: string[];
 };
+
+export type AdminCookbookOption = { id: string; name: string };
 
 // Admin-facing meal categories. SNACK is relabeled "Small Bites" here only —
 // the consumer-facing formatMealSlot() wording elsewhere is untouched.
@@ -42,12 +45,127 @@ async function patchRecipe(id: string, body: Record<string, unknown>) {
   if (!res.ok) throw new Error("Update failed");
 }
 
+// Per-row dropdown for adding/removing this recipe from any cookbook,
+// including creating a brand new cookbook inline — the whole "browse all
+// recipes and click to add to a cookbook" workflow stays on this page.
+function CookbookMenu({
+  cookbookIds,
+  cookbooks,
+  onToggle,
+  onCreate,
+}: {
+  cookbookIds: string[];
+  cookbooks: AdminCookbookOption[];
+  onToggle: (cookbookId: string, add: boolean) => void;
+  onCreate: (name: string) => Promise<string | null>;
+}) {
+  const [open, setOpen] = useState(false);
+  const [newName, setNewName] = useState("");
+  const [creating, setCreating] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    document.addEventListener("mousedown", handleClick);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [open]);
+
+  async function handleCreate() {
+    const name = newName.trim();
+    if (!name || creating) return;
+    setCreating(true);
+    const id = await onCreate(name);
+    setCreating(false);
+    setNewName("");
+    if (id) onToggle(id, true);
+  }
+
+  return (
+    <div ref={ref} className="relative flex-1 sm:flex-none">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className={`w-full rounded-full border px-3 py-2 text-xs sm:w-auto ${
+          cookbookIds.length > 0
+            ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
+            : "border-[#E8E6E0] text-[#1A1D1B]"
+        }`}
+      >
+        Cookbooks{cookbookIds.length > 0 ? ` (${cookbookIds.length})` : ""}
+      </button>
+
+      {open && (
+        <div className="absolute right-0 top-11 z-20 w-56 overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white py-1.5 shadow-lg">
+          {cookbooks.length === 0 && (
+            <p className="px-4 py-2 text-xs text-[#6B7370]">No cookbooks yet.</p>
+          )}
+          <div className="max-h-56 overflow-y-auto">
+            {cookbooks.map((cb) => {
+              const checked = cookbookIds.includes(cb.id);
+              return (
+                <label
+                  key={cb.id}
+                  className="flex cursor-pointer items-center gap-2 px-4 py-2 text-sm text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
+                >
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={() => onToggle(cb.id, !checked)}
+                    className="h-4 w-4 rounded border-[#E8E6E0]"
+                  />
+                  {cb.name}
+                </label>
+              );
+            })}
+          </div>
+          <div className="my-1.5 border-t border-[#E8E6E0]" />
+          <div className="flex items-center gap-1 px-3 py-2">
+            <input
+              value={newName}
+              onChange={(e) => setNewName(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  handleCreate();
+                }
+              }}
+              placeholder="New cookbook"
+              className="min-w-0 flex-1 rounded-full border border-[#E8E6E0] px-3 py-1.5 text-xs"
+            />
+            <button
+              onClick={handleCreate}
+              disabled={creating || !newName.trim()}
+              className="shrink-0 rounded-full bg-[#1F5F45] px-3 py-1.5 text-xs font-medium text-white disabled:opacity-50"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function RecipeRow({
   recipe: initial,
   onEdit,
+  cookbooks,
+  onCreateCookbook,
 }: {
   recipe: AdminRecipeRow;
   onEdit: (id: string) => void;
+  cookbooks: AdminCookbookOption[];
+  onCreateCookbook: (name: string) => Promise<string | null>;
 }) {
   const [recipe, setRecipe] = useState(initial);
   const [saving, setSaving] = useState(false);
@@ -78,6 +196,29 @@ function RecipeRow({
       }));
     } finally {
       setSaving(false);
+    }
+  }
+
+  async function toggleCookbook(cookbookId: string, add: boolean) {
+    setRecipe((r) => ({
+      ...r,
+      cookbookIds: add
+        ? [...r.cookbookIds, cookbookId]
+        : r.cookbookIds.filter((id) => id !== cookbookId),
+    }));
+    try {
+      await fetch(`/api/admin/recipes/${recipe.id}/cookbooks`, {
+        method: add ? "POST" : "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cookbookId }),
+      });
+    } catch {
+      setRecipe((r) => ({
+        ...r,
+        cookbookIds: add
+          ? r.cookbookIds.filter((id) => id !== cookbookId)
+          : [...r.cookbookIds, cookbookId],
+      }));
     }
   }
 
@@ -129,6 +270,13 @@ function RecipeRow({
           >
             {recipe.isActive ? "Active" : "Hidden"}
           </button>
+
+          <CookbookMenu
+            cookbookIds={recipe.cookbookIds}
+            cookbooks={cookbooks}
+            onToggle={toggleCookbook}
+            onCreate={onCreateCookbook}
+          />
         </div>
       </div>
     </div>
@@ -140,21 +288,42 @@ export function RecipesClient({
   cuisines,
   diets,
   allergens,
+  cookbooks: initialCookbooks,
 }: {
   recipes: AdminRecipeRow[];
   cuisines: EditorCuisine[];
   diets: EditorDiet[];
   allergens: EditorAllergen[];
+  cookbooks: AdminCookbookOption[];
 }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const filter = searchParams.get("filter");
+  const [cookbooks, setCookbooks] = useState(initialCookbooks);
   const [editorState, setEditorState] = useState<
     | { mode: "create" }
     | { mode: "edit"; recipe: EditorRecipe }
     | { mode: "loading" }
     | null
   >(null);
+
+  async function createCookbook(name: string): Promise<string | null> {
+    try {
+      const res = await fetch("/api/admin/cookbooks", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name }),
+      });
+      if (!res.ok) return null;
+      const { cookbook } = (await res.json()) as { cookbook: { id: string; name: string } };
+      setCookbooks((prev) =>
+        prev.some((c) => c.id === cookbook.id) ? prev : [...prev, cookbook].sort((a, b) => a.name.localeCompare(b.name)),
+      );
+      return cookbook.id;
+    } catch {
+      return null;
+    }
+  }
 
   // A recipe with multiple mealSlot tags (e.g. LUNCH + SNACK) appears under
   // every category it declares.
@@ -278,7 +447,13 @@ export function RecipesClient({
                   <p className="py-3 text-xs text-[#6B7370]">No recipes in this category yet.</p>
                 )}
                 {rows.map((recipe) => (
-                  <RecipeRow key={recipe.id} recipe={recipe} onEdit={openEdit} />
+                  <RecipeRow
+                    key={recipe.id}
+                    recipe={recipe}
+                    onEdit={openEdit}
+                    cookbooks={cookbooks}
+                    onCreateCookbook={createCookbook}
+                  />
                 ))}
               </div>
             </details>

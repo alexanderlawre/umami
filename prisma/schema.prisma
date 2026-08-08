@@ -226,6 +226,7 @@ model Recipe {
   cooldowns        Cooldown[]
   servedCards      ServedCard[]
   savedBy          SavedRecipe[]
+  cookbookEntries  CookbookRecipe[]
   submissionSource RecipeSubmission?
 }
 
@@ -390,6 +391,27 @@ model SavedRecipe {
   savedAt  DateTime @default(now())
 
   @@unique([userId, recipeId])
+}
+
+// Admin-curated, named recipe collections (e.g. "Editor's Picks"), surfaced
+// on the dashboard as highlighted rows — distinct from the per-user "Cook
+// Book" (CookLog-based cooked-history) and from "Cook Later" (SavedRecipe).
+model Cookbook {
+  id        String           @id @default(cuid())
+  name      String           @unique
+  createdAt DateTime         @default(now())
+  recipes   CookbookRecipe[]
+}
+
+model CookbookRecipe {
+  id         String   @id @default(cuid())
+  cookbookId String
+  cookbook   Cookbook @relation(fields: [cookbookId], references: [id], onDelete: Cascade)
+  recipeId   String
+  recipe     Recipe   @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  addedAt    DateTime @default(now())
+
+  @@unique([cookbookId, recipeId])
 }
 
 model ServedCard {
