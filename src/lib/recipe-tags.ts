@@ -111,8 +111,21 @@ export function dietEmblemClass(diet: string): string | null {
   return DIET_COLORS[diet] ?? "bg-[#EDF3EF] text-[#1A1D1B]";
 }
 
+// Diets that imply another, broader diet (e.g. Vegan is by definition also
+// Vegetarian) — the broader diet is redundant to show alongside the
+// stricter one, so it's dropped from the visible emblems when both are
+// present on the same recipe.
+const IMPLIED_DIET_SUPPRESSED: Record<string, string[]> = {
+  Vegan: ["Vegetarian"],
+};
+
 export function visibleDietEmblems(dietTags: string[], max = 3): string[] {
-  return dietTags.filter((d) => d !== "Omnivore").slice(0, max);
+  const suppressed = new Set(
+    dietTags.flatMap((d) => IMPLIED_DIET_SUPPRESSED[d] ?? []),
+  );
+  return dietTags
+    .filter((d) => d !== "Omnivore" && !suppressed.has(d))
+    .slice(0, max);
 }
 
 const MEAL_SLOT_LABELS: Record<string, string> = {
