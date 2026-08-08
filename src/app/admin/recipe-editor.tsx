@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { RecipeFormFields, labelClass } from "@/components/recipe-form-fields";
+import { compressImage } from "@/lib/image-compression";
 import {
   EMPTY_RECIPE,
   type EditorAllergen,
@@ -14,46 +15,6 @@ import {
 } from "@/lib/recipe-form-shared";
 
 export type { EditorAllergen, EditorCuisine, EditorDiet, EditorRecipe };
-
-// Vercel's serverless functions hard-cap request bodies at 4.5MB, and modern
-// phone photos routinely blow past that. Rather than require the uploader to
-// pre-resize/convert their photo, we normalize it client-side first: decode
-// whatever format the browser can read, downscale to a sane max dimension,
-// and re-encode as compressed WebP before it's ever sent to the server.
-const MAX_UPLOAD_DIMENSION = 2400;
-const UPLOAD_QUALITY = 0.85;
-
-async function compressImage(file: File): Promise<Blob> {
-  let bitmap: ImageBitmap;
-  try {
-    bitmap = await createImageBitmap(file);
-  } catch {
-    // Browser couldn't decode this format (e.g. some HEIC files outside
-    // Safari) — fall back to sending the original file and let the server
-    // validate it.
-    return file;
-  }
-
-  const scale = Math.min(1, MAX_UPLOAD_DIMENSION / Math.max(bitmap.width, bitmap.height));
-  const width = Math.round(bitmap.width * scale);
-  const height = Math.round(bitmap.height * scale);
-
-  const canvas = document.createElement("canvas");
-  canvas.width = width;
-  canvas.height = height;
-  const ctx = canvas.getContext("2d");
-  if (!ctx) {
-    bitmap.close();
-    return file;
-  }
-  ctx.drawImage(bitmap, 0, 0, width, height);
-  bitmap.close();
-
-  const blob = await new Promise<Blob | null>((resolve) =>
-    canvas.toBlob(resolve, "image/webp", UPLOAD_QUALITY),
-  );
-  return blob ?? file;
-}
 
 export function RecipeEditor({
   recipe,
@@ -289,7 +250,7 @@ export function RecipeEditor({
                 </button>
               </div>
               <p className="mt-1 text-xs text-[#6B7370]">
-                Any image format or size — it&apos;s automatically resized and cropped for display.
+                Any image format or size works. It&apos;s automatically resized and cropped for display.
               </p>
               {photoError && <p className="mt-1 text-xs text-red-600">{photoError}</p>}
             </div>

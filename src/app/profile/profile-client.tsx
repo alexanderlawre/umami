@@ -1,28 +1,78 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 import { CookedRecipeCard, type CookedRecipeData } from "@/components/recipe-card-shell";
+import { compressImage } from "@/lib/image-compression";
 
 export function ProfileClient({
   initialName,
   email,
+  initialBirthday,
+  initialCity,
+  initialCountry,
+  initialImage,
   cooked,
 }: {
   initialName: string;
   email: string;
+  initialBirthday: string;
+  initialCity: string;
+  initialCountry: string;
+  initialImage: string | null;
   cooked: CookedRecipeData[];
 }) {
   const router = useRouter();
+  const { update } = useSession();
   const [name, setName] = useState(initialName);
+  const [birthday, setBirthday] = useState(initialBirthday);
+  const [city, setCity] = useState(initialCity);
+  const [country, setCountry] = useState(initialCountry);
+  const [photoPreview, setPhotoPreview] = useState<string | null>(initialImage);
+  const [uploadingPhoto, setUploadingPhoto] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  async function handlePhotoSelect(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setUploadingPhoto(true);
+    setError(null);
+    try {
+      const compressed = await compressImage(file);
+      const previewUrl = URL.createObjectURL(compressed);
+      setPhotoPreview(previewUrl);
+
+      const formData = new FormData();
+      formData.append("file", compressed, "photo.webp");
+      const res = await fetch("/api/account/photo", { method: "POST", body: formData });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(data.error ?? "Something went wrong uploading your photo.");
+        return;
+      }
+      setPhotoPreview(data.imageUrl ?? previewUrl);
+      await update({ image: data.imageUrl ?? previewUrl });
+      router.refresh();
+    } catch {
+      setError("Something went wrong uploading your photo.");
+    } finally {
+      setUploadingPhoto(false);
+    }
+  }
 
   async function save() {
-    const trimmed = name.trim();
-    if (!trimmed) {
+    const trimmedName = name.trim();
+    const trimmedCountry = country.trim();
+    if (!trimmedName) {
       setError("Name can't be empty.");
+      return;
+    }
+    if (!trimmedCountry) {
+      setError("Country can't be empty.");
       return;
     }
     setSaving(true);
@@ -32,11 +82,16 @@ export function ProfileClient({
       const res = await fetch("/api/account/profile", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: trimmed }),
+        body: JSON.stringify({
+          name: trimmedName,
+          birthday: birthday || null,
+          city: city.trim() || null,
+          country: trimmedCountry,
+        }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        setError(data.error ?? "Something went wrong saving your name.");
+        setError(data.error ?? "Something went wrong saving your profile.");
         return;
       }
       setSaved(true);
@@ -53,17 +108,88 @@ export function ProfileClient({
       <h1 className="text-2xl font-bold text-[#1A1D1B]">Profile</h1>
 
       <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5">
-        <label className="block text-sm font-medium text-[#1A1D1B]">Name</label>
-        <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:items-center">
+        <div className="flex items-center gap-4">
+          <button
+            type="button"
+            onClick={() => fileInputRef.current?.click()}
+            disabled={uploadingPhoto}
+            className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#E8E6E0] bg-[#EDF3EF] text-xs text-[#6B7370] disabled:opacity-50"
+            aria-label="Change profile photo"
+          >
+            {photoPreview ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={photoPreview} alt="" className="h-full w-full object-cover" />
+            ) : (
+              "Add photo"
+            )}
+          </button>
           <input
-            type="text"
-            value={name}
-            onChange={(e) => {
-              setSaved(false);
-              setName(e.target.value);
-            }}
-            className="w-full max-w-xs rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handlePhotoSelect}
+            className="hidden"
           />
+          <div>
+            <p className="text-sm font-medium text-[#1A1D1B]">Profile photo</p>
+            <p className="text-xs text-[#6B7370]">
+              {uploadingPhoto ? "Uploading..." : "Click to change."}
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label className="block text-sm font-medium text-[#1A1D1B]">Name</label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => {
+                setSaved(false);
+                setName(e.target.value);
+              }}
+              className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-[#1A1D1B]">Birthday</label>
+            <input
+              type="date"
+              value={birthday}
+              onChange={(e) => {
+                setSaved(false);
+                setBirthday(e.target.value);
+              }}
+              className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-[#1A1D1B]">City</label>
+            <input
+              type="text"
+              value={city}
+              onChange={(e) => {
+                setSaved(false);
+                setCity(e.target.value);
+              }}
+              className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-[#1A1D1B]">Country</label>
+            <input
+              type="text"
+              value={country}
+              onChange={(e) => {
+                setSaved(false);
+                setCountry(e.target.value);
+              }}
+              className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+            />
+          </div>
+        </div>
+
+        <div className="mt-4 flex items-center gap-3">
           <button
             type="button"
             onClick={save}

@@ -155,7 +155,7 @@ export default async function AdminPage() {
       <h1 className="text-2xl font-bold text-[#1A1D1B]">Overview</h1>
       <p className="mt-1 text-sm text-[#6B7370]">Usage stats across the catalog and userbase.</p>
 
-      <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <div className="mx-auto mt-6 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
         <StatCard label="Users" value={stats.userCount} href="/admin/users" />
         <StatCard label="New users (7d)" value={stats.newUsers7d} />
         <StatCard label="Recipes" value={stats.recipeCount} href="/admin/recipes" />

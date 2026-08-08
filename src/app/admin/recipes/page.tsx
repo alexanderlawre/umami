@@ -31,7 +31,7 @@ export default async function AdminRecipesPage() {
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-10">
       <h1 className="text-2xl font-bold text-[#1A1D1B]">Recipes</h1>
       <p className="mt-1 text-sm text-[#6B7370]">
-        Grouped by meal category — click a category to expand it. Edit a recipe&apos;s tags,
+        Grouped by meal category. Click a category to expand it, then edit a recipe&apos;s tags,
         content, and photo, or toggle visibility.
       </p>
 

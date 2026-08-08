@@ -144,6 +144,7 @@ function toCardData(r: EligibleRecipe): RecipeCardData {
     cookMinutes: r.cookMinutes,
     attributes: r.attributes,
     dietTags: r.dietTags,
+    ingredientItems: r.ingredientItems ?? [],
     imageUrl: r.imageUrl,
     imageCredit: r.imageCredit,
     saved: r.saved,

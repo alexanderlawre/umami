@@ -29,7 +29,7 @@ export default async function AdminPreferencesPage() {
         onboarding and in Settings. Adding an option here makes it available everywhere
         immediately. Removing a diet, allergen, or food group also detaches it from every
         recipe and user preference that referenced it (you&apos;ll be asked to confirm first).
-        Cuisines are the exception — every recipe requires one, so a cuisine still in use can&apos;t
+        Cuisines are the exception. Every recipe requires one, so a cuisine still in use can&apos;t
         be removed until you reassign those recipes.
       </p>
 

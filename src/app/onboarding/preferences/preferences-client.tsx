@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Allergen, Diet } from "@prisma/client";
-import { OnboardingShell, ChipGrid, TagInput } from "../onboarding-ui";
+import { OnboardingShell, ChipGrid, CategoryItemPicker, TagInput } from "../onboarding-ui";
 import { ONBOARDING_PREFS_KEY } from "../shared";
+import { groupAllergensByCategory, OTHER_ALLERGEN_CATEGORY_LABEL } from "@/lib/allergen-categories";
 
 const TOTAL_STEPS = 3;
 
@@ -20,6 +21,15 @@ export function PreferencesClient({
   const [customAllergenInput, setCustomAllergenInput] = useState("");
   const [customAllergens, setCustomAllergens] = useState<string[]>([]);
   const [dietIds, setDietIds] = useState<string[]>([]);
+
+  const allergenGroups = useMemo(
+    () =>
+      groupAllergensByCategory(allergens).map((group) => ({
+        label: group.label,
+        options: group.allergens.map((a) => ({ value: a.id, label: a.name })),
+      })),
+    [allergens],
+  );
 
   function toggleAllergen(id: string) {
     setAllergenIds((prev) => (prev.includes(id) ? prev.filter((v) => v !== id) : [...prev, id]));
@@ -53,7 +63,7 @@ export function PreferencesClient({
       step={2}
       totalSteps={TOTAL_STEPS}
       title="Allergies and diet"
-      subtitle="Allergies come first — they permanently filter matching ingredients out of everything we show you."
+      subtitle="Allergies come first. They permanently filter matching ingredients out of everything we show you."
       footer={
         <div className="mt-8 flex gap-3">
           <button
@@ -76,12 +86,12 @@ export function PreferencesClient({
       <div>
         <h3 className="text-sm font-semibold text-[#1A1D1B]">Any allergies?</h3>
         <p className="mt-1 text-xs text-[#6B7370]">
-          Pick as many as apply. This is the main safeguard that keeps unsafe recipes off
-          your dashboard.
+          Choose a category, then check off the specific items that apply. This is the main
+          safeguard that keeps unsafe recipes off your dashboard.
         </p>
         <div className="mt-3">
-          <ChipGrid
-            options={allergens.map((a) => ({ value: a.id, label: a.name }))}
+          <CategoryItemPicker
+            groups={allergenGroups}
             selected={allergenIds}
             onToggle={toggleAllergen}
           />
@@ -89,11 +99,11 @@ export function PreferencesClient({
 
         <div className="mt-5">
           <label className="block text-sm font-medium text-[#1A1D1B]">
-            Other allergies
+            {OTHER_ALLERGEN_CATEGORY_LABEL}
           </label>
           <p className="mt-1 text-xs text-[#6B7370]">
-            List specific foods or food groups, separated by commas (e.g. &ldquo;kiwi,
-            shellfish&rdquo;).
+            Not listed above? Add specific foods or food groups, separated by commas (e.g.
+            &ldquo;kiwi, shellfish&rdquo;).
           </p>
           <div className="mt-2">
             <TagInput
@@ -111,7 +121,7 @@ export function PreferencesClient({
       <div className="mt-8 border-t border-[#E8E6E0] pt-6">
         <h3 className="text-sm font-semibold text-[#1A1D1B]">Any diets that apply to you?</h3>
         <p className="mt-1 text-xs text-[#6B7370]">
-          Pick as many as you like. No restrictions is fine too — leave this blank.
+          Pick as many as you like. No restrictions is fine too, you can leave this blank.
         </p>
         <div className="mt-3">
           <ChipGrid

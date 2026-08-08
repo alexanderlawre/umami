@@ -17,9 +17,11 @@ const BASE_LINKS: MenuLink[] = [
 
 export function ProfileMenu({
   name,
+  image,
   isAdmin,
 }: {
   name?: string | null;
+  image?: string | null;
   isAdmin?: boolean;
 }) {
   const [open, setOpen] = useState(false);
@@ -49,9 +51,14 @@ export function ProfileMenu({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label="Profile menu"
-        className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1F5F45] text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+        className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-[#1F5F45] text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
       >
-        {getInitials(name)}
+        {image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={image} alt="" className="h-full w-full object-cover" />
+        ) : (
+          getInitials(name)
+        )}
       </button>
 
       {open && (

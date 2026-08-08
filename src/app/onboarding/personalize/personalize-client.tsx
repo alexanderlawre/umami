@@ -3,13 +3,33 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
-import type { FoodGroup } from "@prisma/client";
-import { FOOD_GROUP_CLUSTERS } from "@/lib/food-group-screens";
-import { OnboardingShell, TagInput } from "../onboarding-ui";
+import type { FoodGroup, FoodGroupCategory } from "@prisma/client";
+import { OnboardingShell, CategoryAccordion, SliderRow, TagInput } from "../onboarding-ui";
 import { ONBOARDING_PREFS_KEY, type OnboardingPreferences } from "../shared";
 
 const TOTAL_STEPS = 3;
 const SUGGESTED_CUISINE_COUNT = 5;
+
+// Display order and labels for the basic food-group categories. Each
+// category starts as a single "Overall" slider; expanding it reveals one
+// slider per individual food group within that category.
+const CATEGORY_ORDER: FoodGroupCategory[] = [
+  "PRODUCE",
+  "PROTEIN",
+  "GRAIN",
+  "DAIRY",
+  "FLAVOR",
+  "OTHER",
+];
+
+const CATEGORY_LABELS: Record<FoodGroupCategory, string> = {
+  PRODUCE: "Fruits and vegetables",
+  PROTEIN: "Proteins",
+  GRAIN: "Grains",
+  DAIRY: "Dairy",
+  FLAVOR: "Flavor and seasonings",
+  OTHER: "Other",
+};
 
 export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
   const router = useRouter();
@@ -20,18 +40,52 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const foodGroupByName = useMemo(() => {
-    const map = new Map<string, FoodGroup>();
-    for (const fg of foodGroups) map.set(fg.name, fg);
-    return map;
+  const categoryGroups = useMemo(() => {
+    const byCategory = new Map<FoodGroupCategory, FoodGroup[]>();
+    for (const fg of foodGroups) {
+      const list = byCategory.get(fg.category) ?? [];
+      list.push(fg);
+      byCategory.set(fg.category, list);
+    }
+    return CATEGORY_ORDER.filter((category) => byCategory.has(category)).map((category) => ({
+      category,
+      label: CATEGORY_LABELS[category],
+      items: byCategory.get(category)!,
+    }));
   }, [foodGroups]);
 
-  const [clusterValues, setClusterValues] = useState<number[]>(() =>
-    FOOD_GROUP_CLUSTERS.map(() => 50),
-  );
+  const [values, setValues] = useState<Record<string, number>>(() => {
+    const init: Record<string, number> = {};
+    for (const fg of foodGroups) init[fg.id] = 50;
+    return init;
+  });
+  const [expanded, setExpanded] = useState<Set<FoodGroupCategory>>(new Set());
   const [feedback, setFeedback] = useState("");
   const [cuisineInput, setCuisineInput] = useState("");
   const [favoriteCuisines, setFavoriteCuisines] = useState<string[]>([]);
+
+  function categoryValue(items: FoodGroup[]) {
+    if (items.length === 0) return 50;
+    const sum = items.reduce((acc, fg) => acc + (values[fg.id] ?? 50), 0);
+    return Math.round(sum / items.length);
+  }
+
+  function setCategoryValue(items: FoodGroup[], value: number) {
+    setValues((prev) => {
+      const next = { ...prev };
+      for (const fg of items) next[fg.id] = value;
+      return next;
+    });
+  }
+
+  function toggleExpanded(category: FoodGroupCategory) {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(category)) next.delete(category);
+      else next.add(category);
+      return next;
+    });
+  }
 
   useEffect(() => {
     const raw = sessionStorage.getItem(ONBOARDING_PREFS_KEY);
@@ -63,14 +117,7 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
     setSubmitting(true);
     setError(null);
 
-    const meters: Record<string, number> = {};
-    FOOD_GROUP_CLUSTERS.forEach((cluster, i) => {
-      const value = clusterValues[i];
-      for (const groupName of cluster.groups) {
-        const fg = foodGroupByName.get(groupName);
-        if (fg) meters[fg.id] = value;
-      }
-    });
+    const meters = values;
 
     try {
       const res = await fetch("/api/onboarding", {
@@ -110,7 +157,7 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
       step={3}
       totalSteps={TOTAL_STEPS}
       title="Personalize"
-      subtitle="Rarely to constantly. Defaults are fine if you're not sure — you can always tweak this later."
+      subtitle="Rarely to constantly. Defaults are fine if you're not sure, you can always tweak this later."
       footer={
         <div className="mt-8 flex gap-3">
           <button
@@ -131,30 +178,25 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
         </div>
       }
     >
-      <div className="space-y-6">
-        {FOOD_GROUP_CLUSTERS.map((cluster, i) => (
-          <div key={cluster.title}>
-            <div className="flex items-center justify-between text-sm">
-              <span className="font-medium text-[#1A1D1B]">{cluster.title}</span>
-              <span className="text-[#6B7370]">{clusterValues[i]}</span>
-            </div>
-            <input
-              type="range"
-              min={0}
-              max={100}
-              value={clusterValues[i]}
-              onChange={(e) => {
-                const next = [...clusterValues];
-                next[i] = Number(e.target.value);
-                setClusterValues(next);
-              }}
-              className="mt-2 w-full accent-[#1F5F45]"
-            />
-            <div className="flex justify-between text-xs text-[#6B7370]">
-              <span>rarely</span>
-              <span>constantly</span>
-            </div>
-          </div>
+      <div className="space-y-4">
+        {categoryGroups.map(({ category, label, items }) => (
+          <CategoryAccordion
+            key={category}
+            label={label}
+            value={categoryValue(items)}
+            onChange={(v) => setCategoryValue(items, v)}
+            expanded={expanded.has(category)}
+            onToggleExpanded={() => toggleExpanded(category)}
+          >
+            {items.map((fg) => (
+              <SliderRow
+                key={fg.id}
+                label={fg.name}
+                value={values[fg.id] ?? 50}
+                onChange={(v) => setValues((prev) => ({ ...prev, [fg.id]: v }))}
+              />
+            ))}
+          </CategoryAccordion>
         ))}
       </div>
 

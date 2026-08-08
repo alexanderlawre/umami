@@ -11,7 +11,7 @@ export default async function ProfilePage() {
   const [user, cookLogs] = await Promise.all([
     prisma.user.findUnique({
       where: { id: session.user.id },
-      select: { name: true, email: true },
+      select: { name: true, email: true, birthday: true, city: true, country: true, image: true },
     }),
     prisma.cookLog.findMany({
       where: { userId: session.user.id },
@@ -66,6 +66,10 @@ export default async function ProfilePage() {
     <ProfileClient
       initialName={user?.name ?? ""}
       email={user?.email ?? session.user.email ?? ""}
+      initialBirthday={user?.birthday ? user.birthday.toISOString().slice(0, 10) : ""}
+      initialCity={user?.city ?? ""}
+      initialCountry={user?.country ?? ""}
+      initialImage={user?.image ?? null}
       cooked={cooked}
     />
   );

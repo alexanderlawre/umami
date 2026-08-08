@@ -142,7 +142,7 @@ export function SubmissionForm({
   if (submitted) {
     return (
       <div className="rounded-2xl border border-[#E8E6E0] bg-white p-6 text-center">
-        <p className="text-sm font-medium text-[#1A1D1B]">Thanks — your recipe was submitted!</p>
+        <p className="text-sm font-medium text-[#1A1D1B]">Thanks! Your recipe was submitted.</p>
         <p className="mt-1 text-sm text-[#6B7370]">
           An admin will review it soon. You can track its status above.
         </p>

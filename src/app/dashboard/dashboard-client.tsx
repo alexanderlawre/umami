@@ -26,6 +26,7 @@ export type RecipeCardData = {
   cookMinutes: number;
   attributes: string[];
   dietTags: string[];
+  ingredientItems: string[];
   imageUrl: string | null;
   imageCredit: string | null;
   saved: boolean;
@@ -208,6 +209,11 @@ function RecipeCard({
         <h3 className="mt-1 text-lg font-semibold text-[#1A1D1B]">
           {recipe.title}
         </h3>
+        {recipe.ingredientItems.length > 0 && (
+          <p className="mt-1 line-clamp-2 text-sm text-[#6B7370]">
+            {recipe.ingredientItems.join(", ")}
+          </p>
+        )}
 
         {/* Diet zone: a dedicated full-width row, distinct from the tags
             zone below, so dietary fit reads at a glance. */}

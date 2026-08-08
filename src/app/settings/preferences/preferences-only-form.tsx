@@ -121,7 +121,7 @@ export function PreferencesOnlyForm({
     <main className="mx-auto w-full max-w-2xl flex-1 px-6 py-10 pb-content-safe">
       <h1 className="text-xl font-bold tracking-tight text-[#1A1D1B]">Preferences</h1>
       <p className="mt-1 text-sm text-[#6B7370]">
-        Update your diet and allergies any time — changes apply to your dashboard right away.
+        Update your diet and allergies any time. Changes apply to your dashboard right away.
       </p>
 
       <div className="mt-8">
@@ -163,7 +163,7 @@ export function PreferencesOnlyForm({
       <div className="mt-8 border-t border-[#E8E6E0] pt-6">
         <h3 className="text-sm font-semibold text-[#1A1D1B]">Any diets that apply to you?</h3>
         <p className="mt-1 text-xs text-[#6B7370]">
-          Pick as many as you like. No restrictions is fine too — leave this blank.
+          Pick as many as you like. No restrictions is fine too, you can leave this blank.
         </p>
         <div className="mt-3">
           <ChipGrid

@@ -1,6 +1,6 @@
 // Computes display initials for the profile-menu avatar from a user's name.
-// No avatar-image upload capability exists (deliberately, per product
-// decision) — initials are the only visual identity shown.
+// Users can upload a profile photo (see src/app/api/account/photo/route.ts);
+// these initials are only the fallback shown when no photo is set.
 export function getInitials(name?: string | null): string {
   const trimmed = name?.trim();
   if (!trimmed) return "?";

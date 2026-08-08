@@ -133,8 +133,8 @@ function CatalogSection({
                 title={
                   inUse
                     ? confirmOnUse
-                      ? "Still in use — removing will also detach it from those references"
-                      : "Still in use — remove references first"
+                      ? "Still in use. Removing will also detach it from those references."
+                      : "Still in use. Remove references first."
                     : "Remove"
                 }
                 className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
@@ -264,7 +264,7 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
                 type="button"
                 onClick={() => remove(row.id)}
                 disabled={deletingId === row.id}
-                title={inUse ? "Still in use — removing will also detach it from those references" : "Remove"}
+                title={inUse ? "Still in use. Removing will also detach it from those references." : "Remove"}
                 className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
               >
                 {deletingId === row.id ? "Removing…" : "Remove"}
@@ -340,7 +340,7 @@ export function PreferencesClient({
       />
       <CatalogSection
         title="Cuisines"
-        description="Used for recipe tagging, favorite-cuisine matching, and the admin Recipes tab. Every recipe requires a cuisine, so one that's still in use can't be removed — reassign those recipes first."
+        description="Used for recipe tagging, favorite-cuisine matching, and the admin Recipes tab. Every recipe requires a cuisine, so one that's still in use can't be removed. Reassign those recipes first."
         endpoint="/api/admin/cuisines"
         items={cuisines}
         confirmOnUse={false}

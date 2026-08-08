@@ -44,7 +44,11 @@ export default async function RootLayout({
         <AuthSessionProvider session={session}>
           <TimezoneSync />
           {session?.user?.onboarded && (
-            <AppHeader isAdmin={session.user.isAdmin} name={session.user.name} />
+            <AppHeader
+              isAdmin={session.user.isAdmin}
+              name={session.user.name}
+              image={session.user.image}
+            />
           )}
           {children}
         </AuthSessionProvider>

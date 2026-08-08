@@ -39,6 +39,7 @@ export const authConfig: NextAuthConfig = {
     jwt({ token, user, trigger, session }) {
       if (user) {
         token.id = user.id;
+        token.picture = (user as { image?: string | null }).image ?? null;
         token.onboarded = (user as { onboarded?: boolean }).onboarded ?? false;
         token.isAdmin = (user as { isAdmin?: boolean }).isAdmin ?? false;
         token.isPremium = (user as { isPremium?: boolean }).isPremium ?? false;
@@ -46,11 +47,15 @@ export const authConfig: NextAuthConfig = {
       if (trigger === "update" && session?.onboarded) {
         token.onboarded = true;
       }
+      if (trigger === "update" && typeof session?.image !== "undefined") {
+        token.picture = session.image;
+      }
       return token;
     },
     session({ session, token }) {
       if (session.user) {
         session.user.id = token.id as string;
+        session.user.image = (token.picture as string | null) ?? null;
         session.user.onboarded = token.onboarded as boolean;
         session.user.isAdmin = token.isAdmin as boolean;
         session.user.isPremium = token.isPremium as boolean;

@@ -3,7 +3,12 @@ import { z } from "zod";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 
-const schema = z.object({ name: z.string().trim().min(1).max(100) });
+const schema = z.object({
+  name: z.string().trim().min(1).max(100),
+  birthday: z.string().trim().min(1).optional().nullable(),
+  city: z.string().trim().max(100).optional().nullable(),
+  country: z.string().trim().min(1).max(100),
+});
 
 export async function PATCH(request: Request) {
   const session = await auth();
@@ -18,8 +23,13 @@ export async function PATCH(request: Request) {
 
   const user = await prisma.user.update({
     where: { id: session.user.id },
-    data: { name: parsed.data.name },
-    select: { id: true, name: true },
+    data: {
+      name: parsed.data.name,
+      birthday: parsed.data.birthday ? new Date(parsed.data.birthday) : null,
+      city: parsed.data.city || null,
+      country: parsed.data.country,
+    },
+    select: { id: true, name: true, birthday: true, city: true, country: true },
   });
 
   return NextResponse.json({ user });

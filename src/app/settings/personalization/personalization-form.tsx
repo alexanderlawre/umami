@@ -116,7 +116,7 @@ export function PersonalizationForm({
       <div className="mt-8">
         <h3 className="text-sm font-semibold text-[#1A1D1B]">How much do you eat these?</h3>
         <p className="mt-1 text-xs text-[#6B7370]">
-          Rarely to constantly — this nudges which recipes we show you first, it never rules
+          Rarely to constantly. This nudges which recipes we show you first, it never rules
           anything out.
         </p>
         <div className="mt-4 space-y-6">
