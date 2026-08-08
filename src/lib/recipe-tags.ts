@@ -30,8 +30,9 @@ export function attributeLabel(code: string): string {
 
 // Attribute codes suppressed from the card's own bottom chip row (still
 // valid as dashboard filter options) because another chip already conveys
-// the same info more precisely — e.g. UNDER_30 vs. the numeric time chip.
-const CARD_DISPLAY_SUPPRESSED = new Set(["UNDER_30"]);
+// the same info more precisely (UNDER_30 vs. the numeric time chip), or
+// because the tag was dropped from card display entirely (FREEZER_FRIENDLY).
+const CARD_DISPLAY_SUPPRESSED = new Set(["UNDER_30", "FREEZER_FRIENDLY"]);
 
 export function cardDisplayAttributes(attributes: string[], max = 3): string[] {
   return attributes.filter((a) => !CARD_DISPLAY_SUPPRESSED.has(a)).slice(0, max);

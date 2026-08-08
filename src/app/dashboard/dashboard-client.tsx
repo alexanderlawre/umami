@@ -121,7 +121,7 @@ function RecipeCard({
   const router = useRouter();
   const ref = useRef<HTMLDivElement | null>(null);
   const emblems = visibleDietEmblems(recipe.dietTags, 2);
-  const tags = rankedCardAttributes(recipe.attributes, userDiets);
+  const tags = rankedCardAttributes(recipe.attributes, userDiets, 2);
   const [cookLaterPending, setCookLaterPending] = useState(false);
 
   useEffect(() => {
@@ -230,13 +230,17 @@ function RecipeCard({
           </div>
         )}
 
-        {/* Tags zone: time, then top relevance-ranked attributes. */}
-        <div className="mt-3 flex flex-wrap gap-2 text-xs text-[#6B7370]">
-          <span className="rounded-full bg-[#EDF3EF] px-2 py-1">
+        {/* Tags zone: time as plain text, then top relevance-ranked
+            attributes, kept on a single non-wrapping line. */}
+        <div className="mt-3 flex flex-nowrap items-center gap-2 overflow-hidden text-xs text-[#6B7370]">
+          <span className="shrink-0 font-medium text-[#1A1D1B]">
             {formatMinutes(recipe.prepMinutes, recipe.cookMinutes)}
           </span>
           {tags.map((a) => (
-            <span key={a} className="rounded-full bg-[#EDF3EF] px-2 py-1">
+            <span
+              key={a}
+              className="shrink-0 truncate rounded-full bg-[#EDF3EF] px-2 py-1"
+            >
               {attributeLabel(a)}
             </span>
           ))}

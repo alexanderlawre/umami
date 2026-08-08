@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   attributeLabel,
+  cardDisplayAttributes,
   dietEmblemClass,
   formatMealSlot,
   formatMinutes,
@@ -45,7 +46,7 @@ export function RecipeCardShell({
 }) {
   const emblems = visibleDietEmblems(recipe.dietTags);
   const meal = formatMealSlot(recipe.mealSlot);
-  const tags = recipe.attributes.slice(0, 3);
+  const tags = cardDisplayAttributes(recipe.attributes, 2);
 
   return (
     <div className="overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
@@ -91,15 +92,20 @@ export function RecipeCardShell({
         <p className="mt-2 text-sm text-[#1A1D1B]">{recipe.shortDescription}</p>
         <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.note}</p>
 
-        <div className="mt-3 flex flex-wrap gap-2 text-xs text-[#6B7370]">
-          <span className="rounded-full bg-[#EDF3EF] px-2 py-1">
+        <div className="mt-3 flex flex-nowrap items-center gap-2 overflow-hidden text-xs text-[#6B7370]">
+          <span className="shrink-0 font-medium text-[#1A1D1B]">
             {formatMinutes(recipe.prepMinutes, recipe.cookMinutes)}
           </span>
           {meal && (
-            <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{meal}</span>
+            <span className="shrink-0 truncate rounded-full bg-[#EDF3EF] px-2 py-1">
+              {meal}
+            </span>
           )}
           {tags.map((a) => (
-            <span key={a} className="rounded-full bg-[#EDF3EF] px-2 py-1">
+            <span
+              key={a}
+              className="shrink-0 truncate rounded-full bg-[#EDF3EF] px-2 py-1"
+            >
               {attributeLabel(a)}
             </span>
           ))}
