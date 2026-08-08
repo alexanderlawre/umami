@@ -13,26 +13,16 @@ export async function DELETE(request: Request, { params }: { params: Promise<{ i
 
   const { id } = await params;
 
-  const diet = await prisma.diet.findUnique({
-    where: { id },
-    include: {
-      _count: { select: { recipes: true, userPreferences: true, submissions: true } },
-    },
-  });
+  const diet = await prisma.diet.findUnique({ where: { id } });
   if (!diet) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
-  const inUse = diet._count.recipes + diet._count.userPreferences + diet._count.submissions;
-  if (inUse > 0) {
-    return NextResponse.json(
-      {
-        error: `"${diet.name}" is still in use by ${diet._count.recipes} recipe(s), ${diet._count.userPreferences} user preference(s), and ${diet._count.submissions} submission(s). Remove those references first.`,
-      },
-      { status: 409 },
-    );
-  }
-
+  // Deleting cascades: the implicit Diet<->Recipe and Diet<->UserPreferences
+  // join tables have ON DELETE CASCADE (Prisma's default for implicit
+  // many-to-many relations), so this automatically detaches the diet from
+  // every recipe and user preference that referenced it. The client shows a
+  // confirmation before calling this endpoint when the diet is in use.
   await prisma.diet.delete({ where: { id } });
   return NextResponse.json({ ok: true });
 }

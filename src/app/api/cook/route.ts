@@ -8,6 +8,8 @@ const schema = z.object({
   servings: z.number().int().positive(),
 });
 
+const COOK_LOG_COOLDOWN_HOURS = 6;
+
 export async function POST(request: Request) {
   const session = await auth();
   if (!session?.user) {
@@ -22,6 +24,27 @@ export async function POST(request: Request) {
   const { recipeId, servings } = parsed.data;
   const userId = session.user.id;
   const now = new Date();
+
+  // Global per-user cooldown (not per-recipe): caps how often "I cooked
+  // this" can be logged at all, regardless of which recipe.
+  const lastLog = await prisma.cookLog.findFirst({
+    where: { userId },
+    orderBy: { cookedAt: "desc" },
+  });
+  if (lastLog) {
+    const nextAvailableAt = new Date(
+      lastLog.cookedAt.getTime() + COOK_LOG_COOLDOWN_HOURS * 60 * 60 * 1000,
+    );
+    if (nextAvailableAt.getTime() > now.getTime()) {
+      return NextResponse.json(
+        {
+          error: "You can log another cook in a little while.",
+          nextAvailableAt: nextAvailableAt.toISOString(),
+        },
+        { status: 429 },
+      );
+    }
+  }
 
   const cookLog = await prisma.$transaction(async (tx) => {
     const log = await tx.cookLog.create({

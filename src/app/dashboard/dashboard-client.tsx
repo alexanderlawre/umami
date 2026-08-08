@@ -3,14 +3,14 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { logInteraction } from "@/lib/log-interaction";
 import { shuffle } from "@/lib/shuffle";
 import {
   attributeLabel,
-  cardDisplayAttributes,
   dietEmblemClass,
-  formatMealSlot,
   formatMinutes,
+  rankedCardAttributes,
   visibleDietEmblems,
 } from "@/lib/recipe-tags";
 
@@ -43,7 +43,8 @@ function StarButton({
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  async function toggle() {
+  async function toggle(e: React.MouseEvent) {
+    e.stopPropagation();
     if (pending) return;
     const next = !saved;
     setPending(true);
@@ -107,60 +108,20 @@ function StarButton({
   );
 }
 
-function CookedButton({ recipeId }: { recipeId: string }) {
-  const [status, setStatus] = useState<"idle" | "pending" | "done" | "error">("idle");
-
-  async function markCooked() {
-    if (status === "pending" || status === "done") return;
-    setStatus("pending");
-    try {
-      const res = await fetch("/api/cook", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ recipeId, servings: 1 }),
-      });
-      if (!res.ok) {
-        setStatus("error");
-        return;
-      }
-      setStatus("done");
-    } catch {
-      setStatus("error");
-    }
-  }
-
-  return (
-    <button
-      onClick={markCooked}
-      disabled={status === "pending" || status === "done"}
-      className={`rounded-full px-3 py-1.5 text-xs font-medium shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ${
-        status === "done"
-          ? "bg-[#1F5F45] text-white"
-          : "bg-[#EDF3EF] text-[#1A1D1B] hover:bg-[#E1E9E3]"
-      } disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-sm`}
-    >
-      {status === "done"
-        ? "Cooked \u2713"
-        : status === "pending"
-          ? "Saving\u2026"
-          : status === "error"
-            ? "Try again"
-            : "Cooked this"}
-    </button>
-  );
-}
-
 function RecipeCard({
   recipe,
+  userDiets,
   onSavedChange,
 }: {
   recipe: RecipeCardData;
+  userDiets: string[];
   onSavedChange: (id: string, saved: boolean) => void;
 }) {
+  const router = useRouter();
   const ref = useRef<HTMLDivElement | null>(null);
-  const emblems = visibleDietEmblems(recipe.dietTags);
-  const meal = formatMealSlot(recipe.mealSlot);
-  const tags = cardDisplayAttributes(recipe.attributes);
+  const emblems = visibleDietEmblems(recipe.dietTags, 2);
+  const tags = rankedCardAttributes(recipe.attributes, userDiets);
+  const [cookLaterPending, setCookLaterPending] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -193,10 +154,33 @@ function RecipeCard({
     };
   }, [recipe.id]);
 
+  async function handleCookLater(e: React.MouseEvent) {
+    e.stopPropagation();
+    if (cookLaterPending) return;
+    setCookLaterPending(true);
+    try {
+      const res = await fetch("/api/saved-recipes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ recipeId: recipe.id }),
+      });
+      if (res.ok) {
+        onSavedChange(recipe.id, true);
+        logInteraction(recipe.id, "STAR");
+      }
+    } catch {
+      // Non-fatal: navigate regardless so the user isn't stuck.
+    } finally {
+      setCookLaterPending(false);
+      router.push("/cook-later");
+    }
+  }
+
   return (
     <div
       ref={ref}
-      className="overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+      onClick={() => router.push(`/recipe/${recipe.slug}`)}
+      className="cursor-pointer overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
     >
       <div className="relative">
         {recipe.imageUrl ? (
@@ -240,17 +224,11 @@ function RecipeCard({
           </div>
         )}
 
-        <p className="mt-2 text-sm text-[#1A1D1B]">{recipe.shortDescription}</p>
-        <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.note}</p>
-
-        {/* Tags zone: time, meal slot, then descriptive attributes. */}
+        {/* Tags zone: time, then top relevance-ranked attributes. */}
         <div className="mt-3 flex flex-wrap gap-2 text-xs text-[#6B7370]">
           <span className="rounded-full bg-[#EDF3EF] px-2 py-1">
             {formatMinutes(recipe.prepMinutes, recipe.cookMinutes)}
           </span>
-          {meal && (
-            <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{meal}</span>
-          )}
           {tags.map((a) => (
             <span key={a} className="rounded-full bg-[#EDF3EF] px-2 py-1">
               {attributeLabel(a)}
@@ -258,14 +236,20 @@ function RecipeCard({
           ))}
         </div>
 
-        <div className="mt-4 flex items-center justify-between gap-2">
+        <div className="mt-4 flex items-center gap-2">
           <Link
             href={`/recipe/${recipe.slug}`}
-            className="py-1 text-sm font-medium text-[#2C5A87] underline"
+            className="flex-1 rounded-full bg-[#1F5F45] px-4 py-2 text-center text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           >
-            View recipe
+            View Recipe
           </Link>
-          <CookedButton recipeId={recipe.id} />
+          <button
+            onClick={handleCookLater}
+            disabled={cookLaterPending}
+            className="flex-1 rounded-full border border-[#E8E6E0] px-4 py-2 text-sm font-medium text-[#1A1D1B] transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {cookLaterPending ? "Saving\u2026" : "Cook Later"}
+          </button>
         </div>
       </div>
     </div>
@@ -450,11 +434,13 @@ export function DashboardClient({
   served,
   refreshAvailable,
   nextWindowAt,
+  userDiets,
 }: {
   pool: RecipeCardData[];
   served: RecipeCardData[];
   refreshAvailable: boolean;
   nextWindowAt: string;
+  userDiets: string[];
 }) {
   const [poolState] = useState(pool);
   const [visible, setVisible] = useState(() => dedupeFirstFour(served));
@@ -587,6 +573,7 @@ export function DashboardClient({
             <RecipeCard
               key={recipe.id}
               recipe={recipe}
+              userDiets={userDiets}
               onSavedChange={handleSavedChange}
             />
           ))}

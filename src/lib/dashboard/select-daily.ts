@@ -156,6 +156,7 @@ export type DailySelection = {
   currentSlot: MealSlot;
   refreshAvailable: boolean;
   nextWindowAt: Date;
+  userDiets: string[];
 };
 
 export async function getDailySelection(userId: string): Promise<DailySelection> {
@@ -209,6 +210,7 @@ export async function getDailySelection(userId: string): Promise<DailySelection>
     currentSlot,
     refreshAvailable: refreshesUsedThisWindow < MAX_MANUAL_REFRESHES_PER_WINDOW,
     nextWindowAt: nextMealSlotWindowAt(timezone),
+    userDiets: profile.diets,
   };
 }
 

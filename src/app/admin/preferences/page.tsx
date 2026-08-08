@@ -27,7 +27,10 @@ export default async function AdminPreferencesPage() {
       <p className="mt-1 text-sm text-[#6B7370]">
         Manage the diet, allergen, cuisine, and food-group options users choose from during
         onboarding and in Settings. Adding an option here makes it available everywhere
-        immediately; removing one is blocked while anything still references it.
+        immediately. Removing a diet, allergen, or food group also detaches it from every
+        recipe and user preference that referenced it (you&apos;ll be asked to confirm first).
+        Cuisines are the exception — every recipe requires one, so a cuisine still in use can&apos;t
+        be removed until you reassign those recipes.
       </p>
 
       <div className="mt-6">

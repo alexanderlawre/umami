@@ -37,6 +37,51 @@ export function cardDisplayAttributes(attributes: string[], max = 3): string[] {
   return attributes.filter((a) => !CARD_DISPLAY_SUPPRESSED.has(a)).slice(0, max);
 }
 
+// Cook-method attributes describe *how* a dish is made (equipment/technique),
+// which reads as redundant/low-value alongside the dashboard's title +
+// diet + time chips — excluded from the dashboard card's ranked tag row
+// (still valid as dashboard filter options via FilterBar, which reads
+// attributes directly rather than through this module).
+const COOK_METHOD_ATTRIBUTES = new Set([
+  "ONE_POT",
+  "NO_COOK",
+  "SHEET_PAN",
+  "GRILLED",
+  "FRIED",
+  "MAKE_AHEAD",
+]);
+
+// Attribute codes mapped to the diet names they're most relevant to, used to
+// rank a recipe's tags by fit with the current user's diets rather than raw
+// array order. Not every attribute has an obvious diet association (e.g.
+// SPEND_LESS, KID_FRIENDLY, CROWD_PLEASER) — those just sort after any
+// diet-matched tags, in their original order.
+const ATTRIBUTE_DIET_HINTS: Record<string, string[]> = {
+  HIGH_PROTEIN: ["High-protein"],
+  LOW_CARB: ["Keto", "Low-carb"],
+  LOW_CALORIE: ["Diabetic-friendly", "Whole30"],
+  LOW_SUGAR: ["Diabetic-friendly", "Whole30"],
+  EAT_MORE_VEG: ["Vegetarian", "Vegan", "Flexitarian", "Mediterranean"],
+  HIGH_FIBER: ["Mediterranean", "Whole30"],
+};
+
+// Dashboard-card tag ranking: drops cook-method tags entirely, then sorts
+// the rest so tags relevant to the user's diets surface first (stable sort —
+// ties keep their original relative order), before truncating to `max`.
+export function rankedCardAttributes(
+  attributes: string[],
+  userDiets: string[],
+  max = 3,
+): string[] {
+  const eligible = attributes.filter(
+    (a) => !CARD_DISPLAY_SUPPRESSED.has(a) && !COOK_METHOD_ATTRIBUTES.has(a),
+  );
+  const isRelevant = (a: string) => (ATTRIBUTE_DIET_HINTS[a] ?? []).some((d) => userDiets.includes(d));
+  const relevant = eligible.filter(isRelevant);
+  const rest = eligible.filter((a) => !isRelevant(a));
+  return [...relevant, ...rest].slice(0, max);
+}
+
 // One Tailwind bg/text pairing per diet, so each diet reads as a distinct
 // colored emblem on the card. "Omnivore" is excluded — it's the default,
 // non-distinguishing case and is never rendered as an emblem.

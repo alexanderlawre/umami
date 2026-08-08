@@ -67,3 +67,20 @@ body {
 .pb-content-safe {
   padding-bottom: calc(7rem + env(safe-area-inset-bottom));
 }
+
+/* Plays once per browser session on the header title (see
+   animated-logo.tsx) when the app is first opened. */
+@keyframes title-intro {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-title-intro {
+  animation: title-intro 0.5s ease-out;
+}

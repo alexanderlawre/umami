@@ -35,11 +35,18 @@ function CatalogSection({
   description,
   endpoint,
   items,
+  confirmOnUse = true,
 }: {
   title: string;
   description: string;
   endpoint: string;
   items: WithCount[];
+  // When true (the default), removing a row that's still in use asks for
+  // confirmation before deleting, since the server will cascade-detach it
+  // from everything referencing it rather than blocking. Set to false for
+  // catalogs (Cuisines) whose DELETE route still blocks server-side, where a
+  // client confirm wouldn't do anything useful.
+  confirmOnUse?: boolean;
 }) {
   const router = useRouter();
   const [rows, setRows] = useState(items);
@@ -71,6 +78,14 @@ function CatalogSection({
   }
 
   async function remove(id: string) {
+    const row = rows.find((r) => r.id === id);
+    if (confirmOnUse && row && usageCount(row) > 0) {
+      const ok = window.confirm(
+        `"${row.name}" is still referenced by ${usageLabel(row)}. Removing it will delete those references too. Continue?`,
+      );
+      if (!ok) return;
+    }
+
     setDeletingId(id);
     setDeleteError((prev) => ({ ...prev, [id]: "" }));
     try {
@@ -115,7 +130,13 @@ function CatalogSection({
                 type="button"
                 onClick={() => remove(row.id)}
                 disabled={deletingId === row.id}
-                title={inUse ? "Still in use — remove references first" : "Remove"}
+                title={
+                  inUse
+                    ? confirmOnUse
+                      ? "Still in use — removing will also detach it from those references"
+                      : "Still in use — remove references first"
+                    : "Remove"
+                }
                 className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
               >
                 {deletingId === row.id ? "Removing…" : "Remove"}
@@ -182,6 +203,17 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
   }
 
   async function remove(id: string) {
+    const row = rows.find((r) => r.id === id);
+    if (row) {
+      const inUse = row._count.foodGroupPreferences + row._count.recipeProfiles > 0;
+      if (inUse) {
+        const ok = window.confirm(
+          `"${row.name}" is still referenced by ${row._count.foodGroupPreferences} user preference(s) and ${row._count.recipeProfiles} recipe profile(s). Removing it will delete those references too. Continue?`,
+        );
+        if (!ok) return;
+      }
+    }
+
     setDeletingId(id);
     setDeleteError((prev) => ({ ...prev, [id]: "" }));
     try {
@@ -232,7 +264,7 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
                 type="button"
                 onClick={() => remove(row.id)}
                 disabled={deletingId === row.id}
-                title={inUse ? "Still in use — remove references first" : "Remove"}
+                title={inUse ? "Still in use — removing will also detach it from those references" : "Remove"}
                 className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
               >
                 {deletingId === row.id ? "Removing…" : "Remove"}
@@ -308,9 +340,10 @@ export function PreferencesClient({
       />
       <CatalogSection
         title="Cuisines"
-        description="Used for recipe tagging, favorite-cuisine matching, and the admin Recipes tab."
+        description="Used for recipe tagging, favorite-cuisine matching, and the admin Recipes tab. Every recipe requires a cuisine, so one that's still in use can't be removed — reassign those recipes first."
         endpoint="/api/admin/cuisines"
         items={cuisines}
+        confirmOnUse={false}
       />
       <FoodGroupSection items={foodGroups} />
     </div>

@@ -67,6 +67,7 @@ export function RecipeDetailClient({
   const [showCosign, setShowCosign] = useState(false);
   const [cosignNote, setCosignNote] = useState("");
   const [cooking, setCooking] = useState(false);
+  const [cookError, setCookError] = useState<string | null>(null);
 
   useEffect(() => {
     // Log OPEN once when the detail page is actually reached, not on link hover/prefetch.
@@ -118,15 +119,36 @@ export function RecipeDetailClient({
 
   async function handleCook() {
     setCooking(true);
+    setCookError(null);
     try {
       const res = await fetch("/api/cook", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ recipeId: recipe.id, servings }),
       });
-      const data = await res.json();
-      setCookLogId(data.cookLogId ?? null);
+      const data = await res.json().catch(() => null);
+
+      if (res.status === 429) {
+        const nextAvailableAt = data?.nextAvailableAt as string | undefined;
+        const when = nextAvailableAt
+          ? new Date(nextAvailableAt).toLocaleTimeString([], {
+              hour: "numeric",
+              minute: "2-digit",
+            })
+          : "later";
+        setCookError(`You can log another cook around ${when}.`);
+        return;
+      }
+
+      if (!res.ok) {
+        setCookError("Something went wrong. Try again.");
+        return;
+      }
+
+      setCookLogId(data?.cookLogId ?? null);
       setShowCosign(true);
+    } catch {
+      setCookError("Something went wrong. Try again.");
     } finally {
       setCooking(false);
     }
@@ -178,7 +200,6 @@ export function RecipeDetailClient({
       <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.note}</p>
 
       <div className="mt-4 flex flex-wrap gap-2 text-xs text-[#6B7370]">
-        <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{recipe.difficulty}</span>
         <span className="rounded-full bg-[#EDF3EF] px-2 py-1">{recipe.effortTier}</span>
         <span className="rounded-full bg-[#EDF3EF] px-2 py-1">
           {recipe.prepMinutes} min prep / {recipe.cookMinutes} min cook
@@ -291,9 +312,9 @@ export function RecipeDetailClient({
         </ol>
       </section>
 
-      {saveError && (
+      {(saveError || cookError) && (
         <p className="fixed inset-x-0 bottom-20 mx-auto w-fit rounded-lg bg-[#1A1D1B] px-3 py-2 text-xs text-white shadow-sm">
-          {saveError}
+          {saveError || cookError}
         </p>
       )}
 

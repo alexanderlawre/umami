@@ -13,26 +13,16 @@ export async function DELETE(request: Request, { params }: { params: Promise<{ i
 
   const { id } = await params;
 
-  const foodGroup = await prisma.foodGroup.findUnique({
-    where: { id },
-    include: {
-      _count: { select: { foodGroupPreferences: true, recipeProfiles: true } },
-    },
-  });
+  const foodGroup = await prisma.foodGroup.findUnique({ where: { id } });
   if (!foodGroup) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
-  const inUse = foodGroup._count.foodGroupPreferences + foodGroup._count.recipeProfiles;
-  if (inUse > 0) {
-    return NextResponse.json(
-      {
-        error: `"${foodGroup.name}" is still referenced by ${foodGroup._count.foodGroupPreferences} user preference(s) and ${foodGroup._count.recipeProfiles} recipe profile(s). Deleting it would silently drop that data, so it's blocked here — remove those references first if you're sure.`,
-      },
-      { status: 409 },
-    );
-  }
-
+  // Deleting cascades: FoodGroupPreference and RecipeFoodGroup both declare
+  // onDelete: Cascade in the schema, so this automatically removes the food
+  // group from every user preference and recipe profile that referenced it.
+  // The client shows a confirmation before calling this endpoint when the
+  // food group is in use.
   await prisma.foodGroup.delete({ where: { id } });
   return NextResponse.json({ ok: true });
 }

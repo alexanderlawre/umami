@@ -28,6 +28,7 @@ export default async function DashboardPage() {
           served={selection.served}
           refreshAvailable={selection.refreshAvailable}
           nextWindowAt={selection.nextWindowAt.toISOString()}
+          userDiets={selection.userDiets}
         />
       </div>
     </main>
