@@ -12,7 +12,10 @@ import {
 import type { RecipeCardData } from "@/app/dashboard/dashboard-client";
 
 export const DAILY_CARD_COUNT = 4;
-export const MAX_MANUAL_REFRESHES_PER_WINDOW = 1;
+// Temporarily unlimited (was 1) — revisit reintroducing a per-window cap
+// later. Left as a real constant rather than ripping out the surrounding
+// mechanism so it's a one-line revert.
+export const MAX_MANUAL_REFRESHES_PER_WINDOW = Infinity;
 
 export type EligibleRecipe = FilterableRecipe & RecipeCardData;
 

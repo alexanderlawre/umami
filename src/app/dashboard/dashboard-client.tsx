@@ -620,7 +620,7 @@ export function DashboardClient({
         {selected.size === 0 && (
           <p className="text-xs text-[#6B7370]">
             {canRefresh
-              ? "You have one reshuffle available until the next refresh."
+              ? "Refresh as many times as you'd like."
               : `Next automatic refresh around ${formatWindowTime(nextAt)}.`}
           </p>
         )}
