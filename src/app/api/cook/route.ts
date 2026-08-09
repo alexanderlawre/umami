@@ -8,7 +8,10 @@ const schema = z.object({
   servings: z.number().int().positive(),
 });
 
-const COOK_LOG_COOLDOWN_HOURS = 6;
+// Temporarily disabled (was 6) so cooks can be logged back-to-back; revisit
+// reintroducing a cooldown later. Left as a real constant rather than
+// ripping out the surrounding mechanism so it's a one-line revert.
+const COOK_LOG_COOLDOWN_HOURS = 0;
 
 export async function POST(request: Request) {
   const session = await auth();
