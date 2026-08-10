@@ -4,6 +4,8 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { PageTransition } from "@/components/page-transition";
+import { MotionButton } from "@/components/motion-button";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -35,53 +37,55 @@ export default function LoginPage() {
 
   return (
     <main className="flex flex-1 items-center justify-center px-6 py-12">
-      <div className="w-full max-w-sm">
-        <h1 className="text-center text-2xl font-bold tracking-tight text-[#1A1D1B]">
-          Umami
-        </h1>
-        <p className="mt-1 text-center text-sm text-[#6B7370]">Welcome back.</p>
+      <PageTransition className="w-full max-w-sm">
+        <div className="rounded-2xl border border-[#E8E6E0] bg-white p-8 shadow-soft">
+          <h1 className="text-center text-2xl font-bold tracking-tight text-[#1A1D1B]">
+            Umami
+          </h1>
+          <p className="mt-1 text-center text-sm text-[#6B7370]">Welcome back.</p>
 
-        <form onSubmit={handleSubmit} className="mt-8 space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-[#1A1D1B]">
-              Email
-            </label>
-            <input
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
-            />
-          </div>
-          <div>
-            <div className="flex items-center justify-between">
+          <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+            <div>
               <label className="block text-sm font-medium text-[#1A1D1B]">
-                Password
+                Email
               </label>
-              <Link href="/forgot-password" className="text-xs text-[#2C5A87] underline">
-                Forgot password?
-              </Link>
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+              />
             </div>
-            <input
-              type="password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
-            />
-          </div>
+            <div>
+              <div className="flex items-center justify-between">
+                <label className="block text-sm font-medium text-[#1A1D1B]">
+                  Password
+                </label>
+                <Link href="/forgot-password" className="text-xs text-[#2C5A87] underline">
+                  Forgot password?
+                </Link>
+              </div>
+              <input
+                type="password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+              />
+            </div>
 
-          {error && <p className="text-sm text-[#B23A32]">{error}</p>}
+            {error && <p className="text-sm text-[#B23A32]">{error}</p>}
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white transition hover:bg-[#2E7D5B] disabled:opacity-50"
-          >
-            {loading ? "Logging in..." : "Log in"}
-          </button>
-        </form>
+            <MotionButton
+              type="submit"
+              disabled={loading}
+              className="w-full rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2E7D5B] disabled:opacity-50"
+            >
+              {loading ? "Logging in..." : "Log in"}
+            </MotionButton>
+          </form>
+        </div>
 
         <p className="mt-6 text-center text-sm text-[#6B7370]">
           New here?{" "}
@@ -89,7 +93,7 @@ export default function LoginPage() {
             Create an account
           </Link>
         </p>
-      </div>
+      </PageTransition>
     </main>
   );
 }

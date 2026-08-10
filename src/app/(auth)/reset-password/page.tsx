@@ -3,6 +3,8 @@
 import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { PageTransition } from "@/components/page-transition";
+import { MotionButton } from "@/components/motion-button";
 
 function ResetPasswordForm() {
   const router = useRouter();
@@ -76,7 +78,7 @@ function ResetPasswordForm() {
           minLength={10}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+          className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
         />
       </div>
       <div>
@@ -89,19 +91,19 @@ function ResetPasswordForm() {
           minLength={10}
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
-          className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+          className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
         />
       </div>
 
       {error && <p className="text-sm text-[#B23A32]">{error}</p>}
 
-      <button
+      <MotionButton
         type="submit"
         disabled={loading}
-        className="w-full rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white transition hover:bg-[#2E7D5B] disabled:opacity-50"
+        className="w-full rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2E7D5B] disabled:opacity-50"
       >
         {loading ? "Updating..." : "Update password"}
-      </button>
+      </MotionButton>
     </form>
   );
 }
@@ -109,18 +111,20 @@ function ResetPasswordForm() {
 export default function ResetPasswordPage() {
   return (
     <main className="flex flex-1 items-center justify-center px-6 py-12">
-      <div className="w-full max-w-sm">
-        <h1 className="text-2xl font-bold tracking-tight text-[#1A1D1B]">
-          Set a new password
-        </h1>
-        <p className="mt-1 text-sm text-[#6B7370]">
-          Choose a new password for your account.
-        </p>
+      <PageTransition className="w-full max-w-sm">
+        <div className="rounded-2xl border border-[#E8E6E0] bg-white p-8 shadow-soft">
+          <h1 className="text-2xl font-bold tracking-tight text-[#1A1D1B]">
+            Set a new password
+          </h1>
+          <p className="mt-1 text-sm text-[#6B7370]">
+            Choose a new password for your account.
+          </p>
 
-        <Suspense fallback={null}>
-          <ResetPasswordForm />
-        </Suspense>
-      </div>
+          <Suspense fallback={null}>
+            <ResetPasswordForm />
+          </Suspense>
+        </div>
+      </PageTransition>
     </main>
   );
 }

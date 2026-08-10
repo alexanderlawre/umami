@@ -2,8 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 import { logInteraction } from "@/lib/log-interaction";
 import { attributeLabel, dietEmblemClass } from "@/lib/recipe-tags";
+import { MotionButton } from "@/components/motion-button";
+import { PageTransition } from "@/components/page-transition";
+import { SheetModal } from "@/components/sheet-modal";
 
 type Ingredient = {
   id: string;
@@ -71,6 +75,8 @@ export function RecipeDetailClient({
   const [cosignNote, setCosignNote] = useState("");
   const [cooking, setCooking] = useState(false);
   const [cookError, setCookError] = useState<string | null>(null);
+  const [tagsOpen, setTagsOpen] = useState(false);
+  const [justCooked, setJustCooked] = useState(false);
 
   useEffect(() => {
     // Log OPEN once when the detail page is actually reached, not on link hover/prefetch.
@@ -150,6 +156,8 @@ export function RecipeDetailClient({
 
       setCookLogId(data?.cookLogId ?? null);
       setShowCosign(true);
+      setJustCooked(true);
+      setTimeout(() => setJustCooked(false), 1400);
     } catch {
       setCookError("Something went wrong. Try again.");
     } finally {
@@ -176,10 +184,15 @@ export function RecipeDetailClient({
   }
 
   return (
-    <div className="pb-content-safe">
+    <PageTransition className="pb-content-safe">
       {recipe.imageUrl ? (
         <div className="-mx-6 sm:mx-0">
-          <div className="relative h-56 w-full overflow-hidden sm:rounded-2xl">
+          <motion.div
+            className="relative h-56 w-full overflow-hidden sm:rounded-2xl"
+            initial={{ opacity: 0, scale: 1.04 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
             <Image
               src={recipe.imageUrl}
               alt={recipe.title}
@@ -188,7 +201,7 @@ export function RecipeDetailClient({
               className="object-cover"
               priority
             />
-          </div>
+          </motion.div>
           {recipe.imageCredit && (
             <p className="mt-1 px-6 text-right text-[10px] text-[#6B7370] sm:px-0">
               Photo: {recipe.imageCredit}
@@ -210,37 +223,55 @@ export function RecipeDetailClient({
       </div>
 
       {(recipe.attributes.length > 0 || recipe.dietTags.length > 0) && (
-        <details className="group mt-3">
-          <summary className="flex cursor-pointer list-none items-center gap-1 text-xs font-medium text-[#2C5A87]">
+        <div className="mt-3">
+          <button
+            onClick={() => setTagsOpen((v) => !v)}
+            aria-expanded={tagsOpen}
+            className="flex cursor-pointer list-none items-center gap-1 text-xs font-medium text-[#2C5A87]"
+          >
             Tags & dietary info
-            <svg
+            <motion.svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
-              className="h-3.5 w-3.5 transition-transform group-open:rotate-180"
+              className="h-3.5 w-3.5"
+              animate={{ rotate: tagsOpen ? 180 : 0 }}
+              transition={{ duration: 0.2 }}
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-            </svg>
-          </summary>
-          <div className="mt-2 flex flex-wrap gap-2 text-xs">
-            {recipe.dietTags
-              .filter((d) => d !== "Omnivore")
-              .map((diet) => (
-                <span
-                  key={diet}
-                  className={`rounded-full px-2 py-1 font-medium ${dietEmblemClass(diet)}`}
-                >
-                  {diet}
-                </span>
-              ))}
-            {recipe.attributes.map((a) => (
-              <span key={a} className="rounded-full bg-[#EDF3EF] px-2 py-1 text-[#6B7370]">
-                {attributeLabel(a)}
-              </span>
-            ))}
-          </div>
-        </details>
+            </motion.svg>
+          </button>
+          <AnimatePresence initial={false}>
+            {tagsOpen && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                className="overflow-hidden"
+              >
+                <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                  {recipe.dietTags
+                    .filter((d) => d !== "Omnivore")
+                    .map((diet) => (
+                      <span
+                        key={diet}
+                        className={`rounded-full px-2 py-1 font-medium ${dietEmblemClass(diet)}`}
+                      >
+                        {diet}
+                      </span>
+                    ))}
+                  {recipe.attributes.map((a) => (
+                    <span key={a} className="rounded-full bg-[#EDF3EF] px-2 py-1 text-[#6B7370]">
+                      {attributeLabel(a)}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       )}
 
       {hasMacros && (
@@ -289,21 +320,29 @@ export function RecipeDetailClient({
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold text-[#1A1D1B]">Ingredients</h2>
           <div className="flex items-center gap-2">
-            <button
+            <MotionButton
               onClick={() => setServings((s) => Math.max(1, s - 1))}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E8E6E0] text-base"
               aria-label="Decrease servings"
             >
               −
-            </button>
-            <span className="text-sm text-[#1A1D1B]">{servings} servings</span>
-            <button
+            </MotionButton>
+            <motion.span
+              key={servings}
+              initial={{ scale: 1.25, opacity: 0.5 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 500, damping: 24 }}
+              className="inline-block text-sm text-[#1A1D1B]"
+            >
+              {servings} servings
+            </motion.span>
+            <MotionButton
               onClick={() => setServings((s) => s + 1)}
               className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E8E6E0] text-base"
               aria-label="Increase servings"
             >
               +
-            </button>
+            </MotionButton>
           </div>
         </div>
 
@@ -355,9 +394,10 @@ export function RecipeDetailClient({
         </p>
       )}
 
-      <div className="fixed inset-x-0 bottom-0 flex items-center justify-center gap-3 border-t border-[#E8E6E0] bg-[#FBFAF7] px-4 pt-4 pb-safe-4">
-        <button
+      <div className="glass-surface fixed inset-x-0 bottom-0 flex items-center justify-center gap-3 border-x-0 border-b-0 px-4 pt-4 pb-safe-4">
+        <MotionButton
           onClick={toggleStar}
+          whileTap={{ scale: 0.94 }}
           className={`rounded-xl border px-4 py-3 text-sm font-medium ${
             starred
               ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
@@ -365,47 +405,45 @@ export function RecipeDetailClient({
           }`}
         >
           {starred ? "★ Cook later" : "☆ Cook later"}
-        </button>
-        <button
+        </MotionButton>
+        <MotionButton
           onClick={handleCook}
           disabled={cooking}
-          className="rounded-xl bg-[#1F5F45] px-4 py-3 text-sm font-medium text-white disabled:opacity-50"
+          animate={justCooked ? { scale: [1, 1.08, 1] } : { scale: 1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="rounded-xl bg-[#1F5F45] px-4 py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
         >
-          {cooking ? "Logging..." : "I cooked this"}
-        </button>
+          {cooking ? "Logging..." : justCooked ? "✓ Logged!" : "I cooked this"}
+        </MotionButton>
       </div>
 
-      {showCosign && (
-        <div className="fixed inset-0 flex items-end justify-center bg-black/30 sm:items-center">
-          <div className="w-full max-w-sm rounded-t-2xl bg-white px-5 pt-5 pb-safe-5 sm:rounded-2xl">
-            <h3 className="text-lg font-semibold text-[#1A1D1B]">Nice cooking!</h3>
-            <p className="mt-1 text-sm text-[#6B7370]">
-              Want to leave a note about how it went?
-            </p>
-            <textarea
-              value={cosignNote}
-              onChange={(e) => setCosignNote(e.target.value)}
-              rows={3}
-              className="mt-3 w-full rounded-xl border border-[#E8E6E0] p-2 text-base"
-              placeholder="Optional note..."
-            />
-            <div className="mt-4 flex justify-end gap-2">
-              <button
-                onClick={() => submitCosign(false)}
-                className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm text-[#1A1D1B]"
-              >
-                Skip
-              </button>
-              <button
-                onClick={() => submitCosign(true)}
-                className="rounded-xl bg-[#1F5F45] px-4 py-3 text-sm font-medium text-white"
-              >
-                Share cosign
-              </button>
-            </div>
-          </div>
+      <SheetModal open={showCosign} onClose={() => submitCosign(false)}>
+        <h3 className="text-lg font-semibold text-[#1A1D1B]">Nice cooking!</h3>
+        <p className="mt-1 text-sm text-[#6B7370]">
+          Want to leave a note about how it went?
+        </p>
+        <textarea
+          value={cosignNote}
+          onChange={(e) => setCosignNote(e.target.value)}
+          rows={3}
+          className="mt-3 w-full rounded-xl border border-[#E8E6E0] p-2 text-base"
+          placeholder="Optional note..."
+        />
+        <div className="mt-4 flex justify-end gap-2">
+          <MotionButton
+            onClick={() => submitCosign(false)}
+            className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm text-[#1A1D1B]"
+          >
+            Skip
+          </MotionButton>
+          <MotionButton
+            onClick={() => submitCosign(true)}
+            className="rounded-xl bg-[#1F5F45] px-4 py-3 text-sm font-medium text-white"
+          >
+            Share cosign
+          </MotionButton>
         </div>
-      )}
-    </div>
+      </SheetModal>
+    </PageTransition>
   );
 }

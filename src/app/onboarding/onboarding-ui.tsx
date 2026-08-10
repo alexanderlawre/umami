@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { PageTransition } from "@/components/page-transition";
+import { MotionButton } from "@/components/motion-button";
 
 // Small shared presentational primitives reused across the onboarding
 // preferences and personalize pages, so both pages look and feel like one
@@ -25,11 +28,13 @@ export function OnboardingShell({
 
   return (
     <main className="flex flex-1 flex-col px-6 py-8">
-      <div className="mx-auto w-full max-w-md flex-1 flex flex-col">
+      <PageTransition className="mx-auto flex w-full max-w-md flex-1 flex-col">
         <div className="h-1.5 w-full rounded-full bg-[#E8E6E0]">
-          <div
-            className="h-1.5 rounded-full bg-[#1F5F45] transition-all"
-            style={{ width: `${progress}%` }}
+          <motion.div
+            className="h-1.5 rounded-full bg-[#1F5F45]"
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+            transition={{ type: "spring", stiffness: 200, damping: 30 }}
           />
         </div>
         <p className="mt-3 text-xs font-medium uppercase tracking-wide text-[#6B7370]">
@@ -43,7 +48,7 @@ export function OnboardingShell({
         </div>
 
         {footer}
-      </div>
+      </PageTransition>
     </main>
   );
 }
@@ -62,10 +67,11 @@ export function ChipGrid({
       {options.map((opt) => {
         const active = selected.includes(opt.value);
         return (
-          <button
+          <MotionButton
             key={opt.value}
             type="button"
             onClick={() => onToggle(opt.value)}
+            whileTap={{ scale: 0.9 }}
             className={`rounded-full border px-4 py-2.5 text-sm transition ${
               active
                 ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
@@ -73,7 +79,7 @@ export function ChipGrid({
             }`}
           >
             {opt.label}
-          </button>
+          </MotionButton>
         );
       })}
     </div>
@@ -102,7 +108,7 @@ export function CategoryItemPicker({
       <select
         value={active?.label ?? ""}
         onChange={(e) => setActiveLabel(e.target.value)}
-        className="w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+        className="w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
       >
         {groups.map((g) => {
           const count = g.options.filter((o) => selected.includes(o.value)).length;
@@ -170,17 +176,20 @@ export function CategoryAccordion({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-[#E8E6E0] bg-white p-4">
+    <div className="rounded-2xl border border-[#E8E6E0] bg-white p-4 shadow-soft">
       <button
         type="button"
         onClick={onToggleExpanded}
+        aria-expanded={expanded}
         className="flex items-center gap-1.5 text-sm font-semibold text-[#1A1D1B]"
       >
-        <span
-          className={`inline-block text-xs transition-transform ${expanded ? "rotate-90" : ""}`}
+        <motion.span
+          className="inline-block text-xs"
+          animate={{ rotate: expanded ? 90 : 0 }}
+          transition={{ duration: 0.2 }}
         >
           &rsaquo;
-        </span>
+        </motion.span>
         {label}
       </button>
       <div className="mt-3">
@@ -190,9 +199,19 @@ export function CategoryAccordion({
           <span>constantly</span>
         </div>
       </div>
-      {expanded && (
-        <div className="mt-4 space-y-4 border-t border-[#E8E6E0] pt-4">{children}</div>
-      )}
+      <AnimatePresence initial={false}>
+        {expanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="mt-4 space-y-4 border-t border-[#E8E6E0] pt-4">{children}</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -229,16 +248,16 @@ export function TagInput({
           }}
           placeholder={placeholder}
           disabled={cap !== undefined && value.length >= cap}
-          className="flex-1 rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45] disabled:opacity-50"
+          className="flex-1 rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1F5F45] disabled:opacity-50"
         />
-        <button
+        <MotionButton
           type="button"
           onClick={onAdd}
           disabled={cap !== undefined && value.length >= cap}
           className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium disabled:opacity-50"
         >
           Add
-        </button>
+        </MotionButton>
       </div>
       {value.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-2">
@@ -248,13 +267,14 @@ export function TagInput({
               className="flex items-center gap-1 rounded-full bg-[#EDF3EF] px-3 py-1 text-xs text-[#1A1D1B]"
             >
               {v}
-              <button
+              <MotionButton
                 type="button"
                 onClick={() => onRemove(v)}
+                whileTap={{ scale: 0.9 }}
                 className="px-1 text-[#6B7370]"
               >
                 ×
-              </button>
+              </MotionButton>
             </span>
           ))}
         </div>

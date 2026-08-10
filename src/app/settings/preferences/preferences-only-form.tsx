@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import type { Allergen, Diet, FoodGroup } from "@prisma/client";
 import { ChipGrid, TagInput } from "../../onboarding/onboarding-ui";
 import { FOOD_GROUP_CLUSTERS } from "@/lib/food-group-screens";
+import { PageTransition } from "@/components/page-transition";
+import { MotionButton } from "@/components/motion-button";
 
 // Allergies + Diets only — the food-group sliders / feedback / favorite
 // cuisines live on the Personalization page (settings/personalization).
@@ -119,74 +121,76 @@ export function PreferencesOnlyForm({
 
   return (
     <main className="mx-auto w-full max-w-2xl flex-1 px-6 py-10 pb-content-safe">
-      <h1 className="text-xl font-bold tracking-tight text-[#1A1D1B]">Preferences</h1>
-      <p className="mt-1 text-sm text-[#6B7370]">
-        Update your diet and allergies any time. Changes apply to your dashboard right away.
-      </p>
-
-      <div className="mt-8">
-        <h3 className="text-sm font-semibold text-[#1A1D1B]">Any allergies?</h3>
-        <p className="mt-1 text-xs text-[#6B7370]">
-          Pick as many as apply. This is the main safeguard that keeps unsafe recipes off your
-          dashboard.
+      <PageTransition>
+        <h1 className="text-xl font-bold tracking-tight text-[#1A1D1B]">Preferences</h1>
+        <p className="mt-1 text-sm text-[#6B7370]">
+          Update your diet and allergies any time. Changes apply to your dashboard right away.
         </p>
-        <div className="mt-3">
-          <ChipGrid
-            options={allergens.map((a) => ({ value: a.id, label: a.name }))}
-            selected={allergenIds}
-            onToggle={toggleAllergen}
-          />
+
+        <div className="mt-8 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#1A1D1B]">Any allergies?</h3>
+          <p className="mt-1 text-xs text-[#6B7370]">
+            Pick as many as apply. This is the main safeguard that keeps unsafe recipes off your
+            dashboard.
+          </p>
+          <div className="mt-3">
+            <ChipGrid
+              options={allergens.map((a) => ({ value: a.id, label: a.name }))}
+              selected={allergenIds}
+              onToggle={toggleAllergen}
+            />
+          </div>
+
+          <div className="mt-5">
+            <label className="block text-sm font-medium text-[#1A1D1B]">Other allergies</label>
+            <p className="mt-1 text-xs text-[#6B7370]">
+              List specific foods or food groups, separated by commas (e.g. &ldquo;kiwi,
+              shellfish&rdquo;).
+            </p>
+            <div className="mt-2">
+              <TagInput
+                value={customAllergens}
+                onAdd={addCustomAllergen}
+                onRemove={(v) => {
+                  setSaved(false);
+                  setCustomAllergens((prev) => prev.filter((c) => c !== v));
+                }}
+                input={customAllergenInput}
+                onInputChange={setCustomAllergenInput}
+                placeholder="e.g. kiwi, cilantro"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="mt-5">
-          <label className="block text-sm font-medium text-[#1A1D1B]">Other allergies</label>
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#1A1D1B]">Any diets that apply to you?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
-            List specific foods or food groups, separated by commas (e.g. &ldquo;kiwi,
-            shellfish&rdquo;).
+            Pick as many as you like. No restrictions is fine too, you can leave this blank.
           </p>
-          <div className="mt-2">
-            <TagInput
-              value={customAllergens}
-              onAdd={addCustomAllergen}
-              onRemove={(v) => {
-                setSaved(false);
-                setCustomAllergens((prev) => prev.filter((c) => c !== v));
-              }}
-              input={customAllergenInput}
-              onInputChange={setCustomAllergenInput}
-              placeholder="e.g. kiwi, cilantro"
+          <div className="mt-3">
+            <ChipGrid
+              options={diets.map((d) => ({ value: d.id, label: d.name }))}
+              selected={dietIds}
+              onToggle={toggleDiet}
             />
           </div>
         </div>
-      </div>
 
-      <div className="mt-8 border-t border-[#E8E6E0] pt-6">
-        <h3 className="text-sm font-semibold text-[#1A1D1B]">Any diets that apply to you?</h3>
-        <p className="mt-1 text-xs text-[#6B7370]">
-          Pick as many as you like. No restrictions is fine too, you can leave this blank.
-        </p>
-        <div className="mt-3">
-          <ChipGrid
-            options={diets.map((d) => ({ value: d.id, label: d.name }))}
-            selected={dietIds}
-            onToggle={toggleDiet}
-          />
+        {error && <p className="mt-6 text-sm text-[#B23A32]">{error}</p>}
+
+        <div className="mt-8 flex items-center gap-3 border-t border-[#E8E6E0] pt-6">
+          <MotionButton
+            type="button"
+            onClick={save}
+            disabled={saving}
+            className="rounded-xl bg-[#1F5F45] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#2E7D5B] disabled:opacity-50"
+          >
+            {saving ? "Saving..." : "Save changes"}
+          </MotionButton>
+          {saved && <span className="text-sm text-[#1F5F45]">Saved!</span>}
         </div>
-      </div>
-
-      {error && <p className="mt-6 text-sm text-[#B23A32]">{error}</p>}
-
-      <div className="mt-8 flex items-center gap-3 border-t border-[#E8E6E0] pt-6">
-        <button
-          type="button"
-          onClick={save}
-          disabled={saving}
-          className="rounded-xl bg-[#1F5F45] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#2E7D5B] disabled:opacity-50"
-        >
-          {saving ? "Saving..." : "Save changes"}
-        </button>
-        {saved && <span className="text-sm text-[#1F5F45]">Saved!</span>}
-      </div>
+      </PageTransition>
     </main>
   );
 }

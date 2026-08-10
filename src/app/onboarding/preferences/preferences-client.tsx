@@ -6,6 +6,7 @@ import type { Allergen, Diet } from "@prisma/client";
 import { OnboardingShell, ChipGrid, CategoryItemPicker, TagInput } from "../onboarding-ui";
 import { ONBOARDING_PREFS_KEY } from "../shared";
 import { groupAllergensByCategory, OTHER_ALLERGEN_CATEGORY_LABEL } from "@/lib/allergen-categories";
+import { MotionButton } from "@/components/motion-button";
 
 const TOTAL_STEPS = 3;
 
@@ -66,20 +67,20 @@ export function PreferencesClient({
       subtitle="Allergies come first. They permanently filter matching ingredients out of everything we show you."
       footer={
         <div className="mt-8 flex gap-3">
-          <button
+          <MotionButton
             type="button"
             onClick={() => router.back()}
             className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#1A1D1B]"
           >
             Back
-          </button>
-          <button
+          </MotionButton>
+          <MotionButton
             type="button"
             onClick={handleContinue}
-            className="flex-1 rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white transition hover:bg-[#2E7D5B]"
+            className="flex-1 rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2E7D5B]"
           >
             Continue
-          </button>
+          </MotionButton>
         </div>
       }
     >

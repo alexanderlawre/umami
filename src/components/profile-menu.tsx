@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { getInitials } from "@/lib/avatar";
+import { MotionButton } from "@/components/motion-button";
 
 type MenuLink = { href: string; label: string };
 
@@ -47,11 +49,13 @@ export function ProfileMenu({
 
   return (
     <div ref={ref} className="relative">
-      <button
+      <MotionButton
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label="Profile menu"
-        className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-[#1F5F45] text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+        whileHover={{ y: -2, scale: 1.04 }}
+        whileTap={{ scale: 0.92 }}
+        className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-[#1F5F45] text-sm font-semibold text-white shadow-sm"
       >
         {image ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -59,29 +63,37 @@ export function ProfileMenu({
         ) : (
           getInitials(name)
         )}
-      </button>
+      </MotionButton>
 
-      {open && (
-        <div className="absolute right-0 top-11 z-20 w-48 overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white py-1.5 shadow-lg">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block px-4 py-2 text-sm text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
-            >
-              {link.label}
-            </Link>
-          ))}
-          <div className="my-1.5 border-t border-[#E8E6E0]" />
-          <button
-            onClick={() => signOut({ callbackUrl: "/login" })}
-            className="block w-full px-4 py-2 text-left text-sm text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="absolute right-0 top-11 z-20 w-48 origin-top-right overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white py-1.5 shadow-lifted"
+            initial={{ opacity: 0, scale: 0.92, y: -6 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.92, y: -6 }}
+            transition={{ type: "spring", stiffness: 420, damping: 30 }}
           >
-            Sign out
-          </button>
-        </div>
-      )}
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block px-4 py-2 text-sm text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="my-1.5 border-t border-[#E8E6E0]" />
+            <button
+              onClick={() => signOut({ callbackUrl: "/login" })}
+              className="block w-full px-4 py-2 text-left text-sm text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
+            >
+              Sign out
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react";
 import type { FoodGroup, FoodGroupCategory } from "@prisma/client";
 import { OnboardingShell, CategoryAccordion, SliderRow, TagInput } from "../onboarding-ui";
 import { ONBOARDING_PREFS_KEY, type OnboardingPreferences } from "../shared";
+import { MotionButton } from "@/components/motion-button";
 
 const TOTAL_STEPS = 3;
 const SUGGESTED_CUISINE_COUNT = 5;
@@ -160,21 +161,21 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
       subtitle="Rarely to constantly. Defaults are fine if you're not sure, you can always tweak this later."
       footer={
         <div className="mt-8 flex gap-3">
-          <button
+          <MotionButton
             type="button"
             onClick={() => router.push("/onboarding/preferences")}
             className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#1A1D1B]"
           >
             Back
-          </button>
-          <button
+          </MotionButton>
+          <MotionButton
             type="button"
             onClick={finish}
             disabled={submitting}
-            className="flex-1 rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white transition hover:bg-[#2E7D5B] disabled:opacity-50"
+            className="flex-1 rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2E7D5B] disabled:opacity-50"
           >
             {submitting ? "Saving..." : "Finish"}
-          </button>
+          </MotionButton>
         </div>
       }
     >
@@ -211,7 +212,7 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
           value={feedback}
           onChange={(e) => setFeedback(e.target.value)}
           rows={2}
-          className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+          className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
         />
       </div>
 
