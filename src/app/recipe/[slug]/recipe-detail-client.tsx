@@ -55,6 +55,14 @@ export type RecipeDetail = {
   allergenReviewStatus: string;
 };
 
+function LockIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm-3 8V6a3 3 0 1 1 6 0v3H9Z" />
+    </svg>
+  );
+}
+
 function scaleQuantity(quantity: string, factor: number): string {
   const num = Number(quantity);
   if (Number.isNaN(num)) return quantity;
@@ -99,7 +107,10 @@ export function RecipeDetailClient({
 
   const dietEmblems = visibleDietEmblems(recipe.dietTags);
   const isAllergenUnverified = recipe.allergenReviewStatus !== "VERIFIED";
-  const scaledTotal = (perServing: number | null) =>
+  // Nutrition totals scale directly with the servings stepper, same as the
+  // ingredient quantities below — these are the totals for however many
+  // servings you're currently making, not fixed per-serving figures.
+  const scaledMacro = (perServing: number | null) =>
     perServing == null ? null : Math.round(perServing * servings);
 
   const grouped = recipe.ingredients.reduce<Record<string, Ingredient[]>>(
@@ -303,69 +314,67 @@ export function RecipeDetailClient({
 
       {hasMacros && (
         <section className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-4">
-          <h2 className="text-sm font-semibold text-[#1A1D1B]">Nutrition (per serving)</h2>
-          <div className="mt-3 grid grid-cols-3 gap-2 text-center sm:grid-cols-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm font-semibold text-[#1A1D1B]">Nutrition</h2>
+            <span className="text-[11px] text-[#6B7370]">
+              for {servings} serving{servings === 1 ? "" : "s"}
+            </span>
+          </div>
+          <div className="mt-3 grid grid-cols-3 gap-2 text-center">
             <div>
               <p className="text-base font-semibold text-[#1A1D1B]">
-                {recipe.caloriesPerServing ?? "—"}
+                {scaledMacro(recipe.caloriesPerServing) ?? "—"}
               </p>
               <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Calories</p>
             </div>
-            {isPremium ? (
-              <>
-                <div>
-                  <p className="text-base font-semibold text-[#1A1D1B]">
-                    {recipe.proteinGrams ?? "—"}g
-                  </p>
-                  <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Protein</p>
-                </div>
-                <div>
-                  <p className="text-base font-semibold text-[#1A1D1B]">
-                    {recipe.carbsGrams ?? "—"}g
-                  </p>
-                  <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Carbs</p>
-                </div>
-                <div>
-                  <p className="text-base font-semibold text-[#1A1D1B]">
-                    {recipe.fatGrams ?? "—"}g
-                  </p>
-                  <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Fat</p>
-                </div>
-                <div>
-                  <p className="text-base font-semibold text-[#1A1D1B]">
-                    {recipe.fiberGrams ?? "—"}g
-                  </p>
-                  <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Fiber</p>
-                </div>
-                <div>
-                  <p className="text-base font-semibold text-[#1A1D1B]">
-                    {recipe.cholesterolMg ?? "—"}mg
-                  </p>
-                  <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Cholesterol</p>
-                </div>
-              </>
-            ) : (
-              <div className="col-span-2 flex items-center justify-center rounded-xl bg-[#EDF3EF] px-2 py-2 sm:col-span-5">
-                <p className="text-[11px] text-[#6B7370]">
-                  🔒 Unlock full nutrition breakdown with Premium
-                </p>
-              </div>
-            )}
+            <div>
+              <p className="text-base font-semibold text-[#1A1D1B]">
+                {scaledMacro(recipe.proteinGrams) ?? "—"}g
+              </p>
+              <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Protein</p>
+            </div>
+            <div>
+              <p className="text-base font-semibold text-[#1A1D1B]">
+                {scaledMacro(recipe.carbsGrams) ?? "—"}g
+              </p>
+              <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Carbs</p>
+            </div>
           </div>
-          {recipe.caloriesPerServing != null && servings !== recipe.servings && (
-            <p className="mt-3 text-center text-[11px] text-[#6B7370]">
-              Total for {servings} serving{servings === 1 ? "" : "s"}:{" "}
-              {scaledTotal(recipe.caloriesPerServing)} cal
-              {isPremium && recipe.proteinGrams != null && (
-                <> · {scaledTotal(recipe.proteinGrams)}g protein</>
+
+          {(recipe.fatGrams != null || recipe.fiberGrams != null || recipe.cholesterolMg != null) && (
+            <div className="mt-2 grid grid-cols-3 gap-2 text-center">
+              {isPremium ? (
+                <>
+                  <div>
+                    <p className="text-base font-semibold text-[#1A1D1B]">
+                      {scaledMacro(recipe.fatGrams) ?? "—"}g
+                    </p>
+                    <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Fat</p>
+                  </div>
+                  <div>
+                    <p className="text-base font-semibold text-[#1A1D1B]">
+                      {scaledMacro(recipe.fiberGrams) ?? "—"}g
+                    </p>
+                    <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Fiber</p>
+                  </div>
+                  <div>
+                    <p className="text-base font-semibold text-[#1A1D1B]">
+                      {scaledMacro(recipe.cholesterolMg) ?? "—"}mg
+                    </p>
+                    <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">
+                      Cholesterol
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <div className="col-span-3 flex items-center justify-center gap-1.5 rounded-xl bg-[#EDF3EF] px-2 py-2">
+                  <LockIcon className="h-3 w-3 shrink-0 text-[#6B7370]" />
+                  <p className="text-[11px] text-[#6B7370]">
+                    Unlock fat, fiber & cholesterol with Premium
+                  </p>
+                </div>
               )}
-              {isPremium && recipe.carbsGrams != null && (
-                <> · {scaledTotal(recipe.carbsGrams)}g carbs</>
-              )}
-              {isPremium && recipe.fatGrams != null && (
-                <> · {scaledTotal(recipe.fatGrams)}g fat</>
-              )}
-            </p>
+            </div>
           )}
         </section>
       )}
