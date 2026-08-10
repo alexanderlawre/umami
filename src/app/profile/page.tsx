@@ -16,7 +16,7 @@ export default async function ProfilePage() {
     prisma.cookLog.findMany({
       where: { userId: session.user.id },
       include: {
-        recipe: { include: { dietTags: true, cuisine: true } },
+        recipe: { include: { dietTags: true, cuisine: true, attributeTags: { select: { code: true } } } },
       },
       orderBy: { cookedAt: "desc" },
     }),
@@ -54,7 +54,7 @@ export default async function ProfilePage() {
       mealSlot: recipe.mealSlot,
       prepMinutes: recipe.prepMinutes,
       cookMinutes: recipe.cookMinutes,
-      attributes: recipe.attributes,
+      attributes: recipe.attributeTags.map((t) => t.code),
       dietTags: recipe.dietTags.map((d) => d.name),
       imageUrl: recipe.imageUrl,
       imageCredit: recipe.imageCredit,

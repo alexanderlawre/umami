@@ -10,7 +10,6 @@ import {
   attributeLabel,
   dietEmblemClass,
   formatMinutes,
-  rankedCardAttributes,
   visibleDietEmblems,
 } from "@/lib/recipe-tags";
 
@@ -121,7 +120,6 @@ function RecipeCard({
   const router = useRouter();
   const ref = useRef<HTMLDivElement | null>(null);
   const emblems = visibleDietEmblems(recipe.dietTags, 2);
-  const tags = rankedCardAttributes(recipe.attributes, userDiets, 2);
   const [cookLaterPending, setCookLaterPending] = useState(false);
 
   useEffect(() => {
@@ -230,20 +228,12 @@ function RecipeCard({
           </div>
         )}
 
-        {/* Tags zone: time as plain text, then top relevance-ranked
-            attributes, kept on a single non-wrapping line. */}
+        {/* Time zone: attribute tag chips were moved off the card and are
+            now shown only in a dropdown on the recipe detail page. */}
         <div className="mt-3 flex flex-nowrap items-center gap-2 overflow-hidden text-xs text-[#6B7370]">
           <span className="shrink-0 font-medium text-[#1A1D1B]">
             {formatMinutes(recipe.prepMinutes, recipe.cookMinutes)}
           </span>
-          {tags.map((a) => (
-            <span
-              key={a}
-              className="shrink-0 truncate rounded-full bg-[#EDF3EF] px-2 py-1"
-            >
-              {attributeLabel(a)}
-            </span>
-          ))}
         </div>
 
         <div className="mt-4 flex items-center gap-2">
@@ -620,7 +610,7 @@ export function DashboardClient({
         {selected.size === 0 && (
           <p className="text-xs text-[#6B7370]">
             {canRefresh
-              ? "Refresh as many times as you'd like."
+              ? "You have one reshuffle available until the next refresh."
               : `Next automatic refresh around ${formatWindowTime(nextAt)}.`}
           </p>
         )}

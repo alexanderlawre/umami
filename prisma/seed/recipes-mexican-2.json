@@ -1,0 +1,3607 @@
+[
+  {
+    "slug": "mole-poblano-chicken",
+    "title": "Mole Poblano with Chicken",
+    "shortDescription": "Rich chocolate-chile sauce with tender chicken and rice",
+    "note": "Mole paste can be made ahead and frozen for up to 3 months",
+    "introCopy": "Mole poblano is Mexico's most celebrated sauce, a complex blend of chiles, chocolate, spices, and nuts that transforms simple chicken into a feast. Traditionally served at weddings and celebrations in Puebla, this iconic dish balances bitter, sweet, spicy, and savory notes in every spoonful. The rice is essential to soak up the luxurious sauce.",
+    "servings": 6,
+    "prepMinutes": 45,
+    "cookMinutes": 90,
+    "difficulty": "INVOLVED",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "FREEZER_FRIENDLY",
+      "MAKE_AHEAD",
+      "SPICY"
+    ],
+    "heroColor": "#5C3317",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Chicken",
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "chicken thighs, bone-in",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 3,
+        "quantity": "4",
+        "unit": null,
+        "item": "dried ancho chiles",
+        "prepNote": "stemmed and seeded",
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 4,
+        "quantity": "3",
+        "unit": null,
+        "item": "dried mulato chiles",
+        "prepNote": "stemmed and seeded",
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "dried pasilla chiles",
+        "prepNote": "stemmed and seeded",
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 6,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 7,
+        "quantity": "80",
+        "unit": "g",
+        "item": "blanched almonds",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 8,
+        "quantity": "60",
+        "unit": "g",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "sesame seeds",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 10,
+        "quantity": "1",
+        "unit": null,
+        "item": "corn tortilla",
+        "prepNote": "torn into pieces",
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 11,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 12,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 13,
+        "quantity": "2",
+        "unit": null,
+        "item": "ripe tomatoes",
+        "prepNote": "halved",
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 14,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 15,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground cloves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 16,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 17,
+        "quantity": "50",
+        "unit": "g",
+        "item": "dark chocolate",
+        "prepNote": "roughly chopped",
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 18,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lard or vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 19,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mole Sauce",
+        "order": 20,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": "or to taste",
+        "optional": false
+      },
+      {
+        "component": "Rice (essential)",
+        "order": 21,
+        "quantity": "400",
+        "unit": "g",
+        "item": "white rice",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": "Rice (essential)",
+        "order": 22,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice (essential)",
+        "order": 23,
+        "quantity": "1/2",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": "Rice (essential)",
+        "order": 24,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Rice (essential)",
+        "order": 25,
+        "quantity": "800",
+        "unit": "ml",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice (essential)",
+        "order": 26,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 27,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "sesame seeds",
+        "prepNote": "toasted",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Season chicken thighs with salt and set aside at room temperature.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Toast the dried chiles in a dry skillet over medium heat for 2-3 minutes until fragrant, turning frequently to avoid burning. Transfer to a bowl and cover with 2 cups hot chicken stock. Let soak for 20 minutes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 3,
+        "text": "In the same skillet, toast almonds, raisins, and sesame seeds until golden and fragrant, about 3-4 minutes. Transfer to a blender.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 4,
+        "text": "Toast the torn tortilla pieces until crisp, then add to the blender. Char the onion, garlic, and tomatoes in the skillet until blackened in spots, about 8 minutes. Add to the blender.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Add the soaked chiles with their soaking liquid, cinnamon, cloves, black pepper, and remaining 2 cups stock to the blender. Blend on high speed until completely smooth, working in batches if needed. Strain through a fine-mesh sieve.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 6,
+        "text": "Heat lard or oil in a large heavy pot over medium-high heat. Pour in the mole sauce (it will sputter) and fry, stirring constantly, for 10 minutes until darkened and thickened. Stir in chocolate, sugar, and salt until chocolate melts.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 7,
+        "text": "Add the chicken thighs to the mole, nestling them into the sauce. Reduce heat to low, cover, and simmer for 50 minutes, turning chicken halfway through, until tender and cooked through.",
+        "durationMinutes": 50
+      },
+      {
+        "order": 8,
+        "text": "While chicken cooks, make the rice: Heat oil in a saucepan over medium heat. Add rice and cook, stirring constantly, until lightly golden, about 5 minutes. Add onion and garlic, cook 2 minutes more.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 9,
+        "text": "Add chicken stock and salt to the rice. Bring to a boil, then reduce heat to low, cover tightly, and cook for 18 minutes without lifting the lid. Remove from heat and let stand, covered, for 10 minutes. Fluff with a fork.",
+        "durationMinutes": 28
+      },
+      {
+        "order": 10,
+        "text": "Taste mole and adjust seasoning with salt and sugar as needed. The sauce should be thick enough to coat a spoon but pourable; thin with stock if needed.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 11,
+        "text": "Serve chicken with generous spoonfuls of mole sauce over rice. Sprinkle with toasted sesame seeds.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 8
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 2
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Tree nuts",
+      "Sesame",
+      "Wheat/gluten",
+      "Corn"
+    ]
+  },
+  {
+    "slug": "chiles-rellenos-queso",
+    "title": "Chiles Rellenos with Cheese",
+    "shortDescription": "Poblano peppers stuffed with cheese, battered and fried",
+    "note": "Roast and peel chiles the day before to save time",
+    "introCopy": "Chiles rellenos are a beloved Mexican classic where mild poblano peppers are roasted, stuffed with melty cheese, coated in airy egg batter, and fried until golden. The contrast between the silky pepper, gooey cheese, and crispy coating is irresistible. Serve in warm tomato sauce for an authentic experience.",
+    "servings": 4,
+    "prepMinutes": 40,
+    "cookMinutes": 30,
+    "difficulty": "MEDIUM",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "FRIED",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#3D5A2C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Chiles",
+        "order": 1,
+        "quantity": "8",
+        "unit": null,
+        "item": "poblano peppers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chiles",
+        "order": 2,
+        "quantity": "350",
+        "unit": "g",
+        "item": "Oaxaca cheese or mozzarella",
+        "prepNote": "cut into strips",
+        "optional": false
+      },
+      {
+        "component": "Batter",
+        "order": 3,
+        "quantity": "6",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": "separated",
+        "optional": false
+      },
+      {
+        "component": "Batter",
+        "order": 4,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Batter",
+        "order": 5,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tomato Sauce",
+        "order": 6,
+        "quantity": "800",
+        "unit": "g",
+        "item": "ripe tomatoes",
+        "prepNote": "roughly chopped",
+        "optional": false
+      },
+      {
+        "component": "Tomato Sauce",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Tomato Sauce",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tomato Sauce",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tomato Sauce",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "chicken or vegetable stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tomato Sauce",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": "or to taste",
+        "optional": false
+      },
+      {
+        "component": "For frying",
+        "order": 12,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 13,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "Mexican crema or sour cream",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Garnish",
+        "order": 14,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Roast poblanos directly over a gas flame or under the broiler, turning frequently, until skin is charred all over, about 8-10 minutes. Place in a bowl, cover with plastic wrap, and let steam for 15 minutes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Make the tomato sauce: Blend tomatoes, onion, and garlic until smooth. Heat oil in a saucepan over medium-high heat, add the tomato mixture, and fry for 5 minutes, stirring. Add stock and salt, bring to a simmer, reduce heat to low, and cook for 15 minutes. Keep warm.",
+        "durationMinutes": 22
+      },
+      {
+        "order": 3,
+        "text": "Carefully peel the charred skin from the poblanos (it's okay if some remains). Make a lengthwise slit in each pepper and carefully remove seeds and membranes, keeping the stem intact. Pat dry inside and out.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Stuff each poblano with cheese strips, being careful not to overfill. Use toothpicks to close the opening if needed.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Heat oil in a large deep skillet to 180°C (350°F). Meanwhile, beat egg whites with an electric mixer until stiff peaks form. Gently fold in egg yolks, flour, and salt until just combined.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Dust each stuffed chile lightly with flour. Holding by the stem, dip each chile into the egg batter to coat completely, then carefully lower into the hot oil. Fry 2-3 at a time until golden brown, about 2-3 minutes per side. Drain on paper towels.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 7,
+        "text": "Remove toothpicks. Serve immediately in warm tomato sauce, drizzled with crema and cilantro if desired.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "cochinita-pibil-yucatan",
+    "title": "Cochinita Pibil",
+    "shortDescription": "Yucatecan slow-roasted pork in achiote and citrus marinade",
+    "note": "Banana leaves add authentic flavor but foil works in a pinch",
+    "introCopy": "Cochinita pibil is the crown jewel of Yucatecan cuisine, featuring pork shoulder marinated in vibrant achiote paste, bitter orange juice, and spices, then slow-roasted until impossibly tender. Traditionally cooked in an underground pit, this oven version delivers the same succulent results. Serve with pickled red onions and warm tortillas for an unforgettable feast.",
+    "servings": 8,
+    "prepMinutes": 30,
+    "cookMinutes": 240,
+    "difficulty": "MEDIUM",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "MAKE_AHEAD",
+      "SPICY"
+    ],
+    "heroColor": "#C84E28",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Pork",
+        "order": 1,
+        "quantity": "2",
+        "unit": "kg",
+        "item": "pork shoulder",
+        "prepNote": "cut into large chunks",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 2,
+        "quantity": "100",
+        "unit": "g",
+        "item": "achiote paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 3,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh orange juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 4,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "lime juice",
+        "prepNote": "fresh",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 5,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "white vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 6,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "dried oregano",
+        "prepNote": "preferably Mexican",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For cooking",
+        "order": 11,
+        "quantity": "2",
+        "unit": null,
+        "item": "banana leaves",
+        "prepNote": "fresh or frozen, thawed",
+        "optional": true
+      },
+      {
+        "component": "Pickled Onions",
+        "order": 12,
+        "quantity": "2",
+        "unit": "medium",
+        "item": "red onions",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": "Pickled Onions",
+        "order": 13,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "white vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pickled Onions",
+        "order": 14,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pickled Onions",
+        "order": 15,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pickled Onions",
+        "order": 16,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 17,
+        "quantity": "16",
+        "unit": null,
+        "item": "corn tortillas",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 18,
+        "quantity": "2",
+        "unit": null,
+        "item": "habanero chiles",
+        "prepNote": "sliced",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a blender, combine achiote paste, orange juice, lime juice, vinegar, garlic, oregano, cumin, black pepper, and salt. Blend until smooth.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Place pork chunks in a large bowl and pour marinade over, tossing to coat thoroughly. Cover and refrigerate for at least 4 hours or overnight.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Make pickled onions: Bring vinegar, water, salt, and oregano to a boil. Place sliced onions in a bowl, pour hot liquid over, and let sit at room temperature for at least 1 hour.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Preheat oven to 160°C (325°F). If using banana leaves, quickly pass them over an open flame or hot burner to make them pliable.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Line a large roasting pan with banana leaves (or heavy-duty foil). Add marinated pork with all the marinade. Fold banana leaves over to completely enclose the pork, then cover tightly with foil.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Roast for 4 hours, until pork is extremely tender and falling apart. Check at 3.5 hours and add a splash of water if the liquid has dried up.",
+        "durationMinutes": 240
+      },
+      {
+        "order": 7,
+        "text": "Remove from oven and let rest, covered, for 15 minutes. Uncover and shred the pork with two forks, mixing it with the pan juices.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 8,
+        "text": "Serve the shredded cochinita pibil on warm tortillas, topped with pickled red onions and habanero slices if using.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Pork",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Corn"
+    ]
+  },
+  {
+    "slug": "tamales-rojos-pork",
+    "title": "Tamales Rojos with Pork",
+    "shortDescription": "Masa parcels filled with red chile pork, steamed in corn husks",
+    "note": "Make assembly a party by inviting friends to help wrap tamales",
+    "introCopy": "Tamales are a labor of love, bundled packets of fluffy masa dough embracing savory fillings, all steamed to perfection in corn husks. These tamales rojos feature tender pork in a rich red chile sauce. While they take time, the process is meditative and the results are spectacular. Freeze extras for quick meals later.",
+    "servings": 24,
+    "prepMinutes": 90,
+    "cookMinutes": 120,
+    "difficulty": "INVOLVED",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "FREEZER_FRIENDLY",
+      "MAKE_AHEAD",
+      "SPICY"
+    ],
+    "heroColor": "#8B3A2C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Filling",
+        "order": 1,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "pork shoulder",
+        "prepNote": "cubed",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 2,
+        "quantity": "6",
+        "unit": null,
+        "item": "dried guajillo chiles",
+        "prepNote": "stemmed and seeded",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 3,
+        "quantity": "3",
+        "unit": null,
+        "item": "dried ancho chiles",
+        "prepNote": "stemmed and seeded",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Masa",
+        "order": 9,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "masa harina",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Masa",
+        "order": 10,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Masa",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Masa",
+        "order": 12,
+        "quantity": "400",
+        "unit": "g",
+        "item": "lard or vegetable shortening",
+        "prepNote": "room temperature",
+        "optional": false
+      },
+      {
+        "component": "Masa",
+        "order": 13,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": "warm",
+        "optional": false
+      },
+      {
+        "component": "For assembly",
+        "order": 14,
+        "quantity": "30",
+        "unit": null,
+        "item": "dried corn husks",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Soak corn husks in hot water for 1 hour until pliable. Weigh down with a plate to keep submerged.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Place pork in a pot, cover with water, add 1 tsp salt, and bring to a boil. Reduce heat and simmer until tender, about 75 minutes. Drain, cool, and shred.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 3,
+        "text": "Toast chiles in a dry skillet for 2 minutes, then soak in hot stock for 15 minutes. Transfer chiles and stock to a blender with garlic, cumin, oregano, and salt. Blend until smooth.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 4,
+        "text": "Pour chile sauce into a skillet and simmer for 10 minutes until thickened. Add shredded pork and cook together for 5 minutes. Set aside to cool.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Make masa: Beat lard with an electric mixer until fluffy, about 3 minutes. In a separate bowl, mix masa harina, baking powder, and salt.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Gradually add masa mixture to whipped lard alternating with warm stock, beating well after each addition. Beat for 5 minutes until light and fluffy. A small piece should float in water when ready.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 7,
+        "text": "Drain corn husks and pat dry. Spread 3 tablespoons masa in the center of each husk (wide end), leaving a 2-inch border at the bottom and sides. Add 2 tablespoons pork filling down the center.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 8,
+        "text": "Fold sides of husk inward to enclose filling, then fold up the narrow bottom. Arrange tamales upright in a steamer basket, open ends up.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 9,
+        "text": "Fill steamer pot with water to just below the basket. Cover tamales with extra husks and a damp towel, then lid. Steam for 90 minutes, checking water level periodically and adding more if needed.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 10,
+        "text": "Tamales are done when masa pulls away cleanly from the husk. Let rest for 10 minutes before serving.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Pork",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Corn"
+    ]
+  },
+  {
+    "slug": "birria-de-res-consomme",
+    "title": "Birria de Res with Consommé",
+    "shortDescription": "Rich beef stew with aromatic chiles, served with tortillas",
+    "note": "Save leftover birria for quesabirria tacos the next day",
+    "introCopy": "Birria is a celebratory dish from Jalisco, featuring beef simmered for hours in a complex chile broth until melt-in-your-mouth tender. The resulting consommé is rich, aromatic, and perfect for dipping tortillas. This recipe has become wildly popular in recent years, and one taste will tell you why.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 210,
+    "difficulty": "MEDIUM",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "FREEZER_FRIENDLY",
+      "MAKE_AHEAD",
+      "SPICY",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#6B2F1F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Meat",
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "beef chuck roast",
+        "prepNote": "cut into large chunks",
+        "optional": false
+      },
+      {
+        "component": "Meat",
+        "order": 2,
+        "quantity": "500",
+        "unit": "g",
+        "item": "beef short ribs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 3,
+        "quantity": "5",
+        "unit": null,
+        "item": "dried guajillo chiles",
+        "prepNote": "stemmed and seeded",
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 4,
+        "quantity": "3",
+        "unit": null,
+        "item": "dried ancho chiles",
+        "prepNote": "stemmed and seeded",
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "dried chipotle chiles",
+        "prepNote": "stemmed",
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 6,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 7,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 8,
+        "quantity": "2",
+        "unit": null,
+        "item": "ripe tomatoes",
+        "prepNote": "halved",
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": "preferably Mexican",
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 12,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "ground cloves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 13,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "beef stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 14,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "apple cider vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chile Sauce",
+        "order": 15,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For cooking",
+        "order": 16,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 17,
+        "quantity": "18",
+        "unit": null,
+        "item": "corn tortillas",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 18,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 19,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 20,
+        "quantity": "3",
+        "unit": null,
+        "item": "limes",
+        "prepNote": "cut into wedges",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Toast the dried chiles in a dry skillet over medium heat for 2 minutes until fragrant. Transfer to a bowl, cover with 2 cups boiling water, and soak for 20 minutes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Char the onion and tomatoes in the skillet until blackened in spots, about 8 minutes. Transfer to a blender. Add garlic, toasted chiles with soaking liquid, cumin, oregano, cinnamon, cloves, 1 cup beef stock, vinegar, and salt. Blend until completely smooth.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 3,
+        "text": "Season beef chunks and short ribs generously with salt. Place in a large heavy pot or Dutch oven.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Pour the chile sauce over the meat, add remaining 2 cups beef stock and bay leaves. Bring to a boil over high heat.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Reduce heat to low, cover, and simmer gently for 3 hours, stirring occasionally, until beef is extremely tender and falling apart. Skim any fat from the surface.",
+        "durationMinutes": 180
+      },
+      {
+        "order": 6,
+        "text": "Remove meat from consommé and shred with two forks, discarding any bones and excess fat. Return shredded meat to the pot and stir to combine. Taste consommé and adjust salt.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 7,
+        "text": "Serve birria in bowls with generous consommé. Accompany with warm tortillas, diced onion, cilantro, and lime wedges. Dip tortillas into the consommé before eating.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 8
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 2
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Corn"
+    ]
+  },
+  {
+    "slug": "sopes-beans-chorizo",
+    "title": "Sopes with Beans and Chorizo",
+    "shortDescription": "Thick corn masa cakes topped with refried beans and chorizo",
+    "note": "Form the pinched edges while masa is still warm and pliable",
+    "introCopy": "Sopes are small, thick corn cakes with pinched edges that hold toppings like edible bowls. The base is griddled until golden and slightly crisp, then loaded with refried beans, spicy chorizo, and fresh garnishes. They're perfect for parties or a fun weeknight dinner that's interactive and delicious.",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 30,
+    "difficulty": "MEDIUM",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#C9A960",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Sopes",
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "masa harina",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sopes",
+        "order": 2,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sopes",
+        "order": 3,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sopes",
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": "for cooking",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 5,
+        "quantity": "300",
+        "unit": "g",
+        "item": "Mexican chorizo",
+        "prepNote": "casing removed",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 6,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "refried beans",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 7,
+        "quantity": "200",
+        "unit": "g",
+        "item": "queso fresco",
+        "prepNote": "crumbled",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 8,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "shredded lettuce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 9,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "Mexican crema",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 10,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "salsa verde",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 11,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make the masa: Mix masa harina and salt in a bowl. Gradually add warm water, mixing with your hands until a soft, pliable dough forms. Cover with a damp cloth and let rest for 10 minutes.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 2,
+        "text": "Cook chorizo in a skillet over medium-high heat, breaking it up with a spoon, until browned and cooked through, about 8 minutes. Drain excess fat and keep warm.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Divide masa into 12 equal balls. Flatten each between plastic wrap or in a tortilla press to form 4-inch circles, about 1/4-inch thick.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "Heat a comal or large griddle over medium heat. Cook each masa circle for 2 minutes per side until lightly golden but still pliable. As you remove each one, while still warm, pinch up the edges all around to form a shallow rim. Set aside.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Heat oil in the same griddle over medium heat. Return sopes to the griddle and cook for 1-2 minutes per side until golden and slightly crisp. Work in batches if needed.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "To assemble: Spread warm refried beans on each sope, top with chorizo, then add queso fresco, lettuce, a drizzle of crema, salsa verde, and cilantro.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 7,
+        "text": "Serve immediately while the sopes are still warm and crisp.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 12
+      },
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 3
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Milk",
+      "Corn"
+    ]
+  },
+  {
+    "slug": "tlayudas-oaxaca-style",
+    "title": "Tlayudas Oaxaca-Style",
+    "shortDescription": "Giant crispy tortillas with beans, cheese, and toppings",
+    "note": "Use the largest tortillas you can find, or make your own",
+    "introCopy": "Tlayudas are Oaxaca's answer to pizza: enormous, crispy tortillas spread with refried beans and asiento (pork lard), then topped with Oaxacan cheese, cabbage, avocado, and your choice of meat. They're grilled until the cheese melts and the edges crisp up. This street food favorite is messy, delicious, and utterly satisfying.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "GRILLED",
+      "UNDER_30"
+    ],
+    "heroColor": "#8B6F47",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Base",
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "large flour tortillas (12-inch)",
+        "prepNote": "or Oaxacan tlayuda tortillas",
+        "optional": false
+      },
+      {
+        "component": "Base",
+        "order": 2,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "refried black beans",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "Base",
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lard or vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 4,
+        "quantity": "300",
+        "unit": "g",
+        "item": "Oaxaca cheese or mozzarella",
+        "prepNote": "shredded",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 5,
+        "quantity": "400",
+        "unit": "g",
+        "item": "cooked chicken, pork, or beef",
+        "prepNote": "shredded",
+        "optional": true
+      },
+      {
+        "component": "Toppings",
+        "order": 6,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "thinly sliced cabbage",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 7,
+        "quantity": "2",
+        "unit": null,
+        "item": "ripe avocados",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 8,
+        "quantity": "4",
+        "unit": null,
+        "item": "radishes",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 9,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "salsa",
+        "prepNote": "your choice",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 10,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 11,
+        "quantity": "2",
+        "unit": null,
+        "item": "limes",
+        "prepNote": "cut into wedges",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat a large comal, griddle, or cast iron skillet over medium-high heat. Lightly brush one side of each tortilla with lard or oil.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Place one tortilla, oiled side down, on the hot griddle. Cook for 2 minutes until lightly charred and beginning to crisp. Flip and cook the other side for 1 minute.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Spread a thin layer of refried beans over the entire surface of the tortilla. Sprinkle cheese over half of the tortilla.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "If using meat, add a portion over the cheese. Continue cooking until the cheese melts and the bottom is crispy, about 3-4 minutes.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 5,
+        "text": "Remove from heat. Top the cheese-covered half with cabbage, avocado slices, radishes, salsa, and cilantro.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Fold the plain bean-covered half over the topped half, or leave open-faced. Cut into wedges and serve immediately with lime wedges.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 7,
+        "text": "Repeat with remaining tortillas, working one at a time for best results.",
+        "durationMinutes": 12
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 18
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 8
+      },
+      {
+        "foodGroup": "Poultry",
+        "weight": 6
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 3
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "chilaquiles-verdes-breakfast",
+    "title": "Chilaquiles Verdes",
+    "shortDescription": "Fried tortilla chips simmered in tangy green salsa",
+    "note": "Use day-old tortillas for the best texture",
+    "introCopy": "Chilaquiles are the ultimate Mexican breakfast comfort food, transforming yesterday's tortillas into something spectacular. Crispy chips are gently simmered in vibrant salsa verde until they soften just slightly, then topped with crema, cheese, onion, and a fried egg. It's the perfect balance of textures and the ideal way to start your day.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "FRIED",
+      "UNDER_30",
+      "SPICY"
+    ],
+    "heroColor": "#5A7D3C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Chips",
+        "order": 1,
+        "quantity": "12",
+        "unit": null,
+        "item": "corn tortillas",
+        "prepNote": "cut into triangles",
+        "optional": false
+      },
+      {
+        "component": "Chips",
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "Chips",
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Salsa Verde",
+        "order": 4,
+        "quantity": "600",
+        "unit": "g",
+        "item": "tomatillos",
+        "prepNote": "husked and rinsed",
+        "optional": false
+      },
+      {
+        "component": "Salsa Verde",
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "jalapeño peppers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Salsa Verde",
+        "order": 6,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Salsa Verde",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "roughly chopped",
+        "optional": false
+      },
+      {
+        "component": "Salsa Verde",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "packed",
+        "optional": false
+      },
+      {
+        "component": "Salsa Verde",
+        "order": 9,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Salsa Verde",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": "or to taste",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 11,
+        "quantity": "4",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 12,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "Mexican crema or sour cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 13,
+        "quantity": "100",
+        "unit": "g",
+        "item": "queso fresco",
+        "prepNote": "crumbled",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 14,
+        "quantity": "1/4",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 15,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make salsa verde: Boil tomatillos, jalapeños, and garlic in water for 10 minutes until softened. Drain and transfer to a blender with onion, cilantro, stock, and salt. Blend until smooth. Set aside.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Heat oil in a large deep skillet to 180°C (350°F). Fry tortilla triangles in batches until golden and crispy, about 2-3 minutes per batch. Drain on paper towels and sprinkle with salt.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Pour most of the oil from the skillet, leaving about 1 tablespoon. Heat over medium-high, add the salsa verde, and cook for 5 minutes until slightly thickened.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 4,
+        "text": "Add the fried tortilla chips to the salsa and toss gently to coat. Cook for 2-3 minutes until chips are just beginning to soften but still have some crunch. Remove from heat.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "In a separate skillet, fry the eggs to your preference (traditionally sunny-side up or over easy).",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Divide chilaquiles among four plates. Top each with a fried egg, drizzle with crema, and sprinkle with queso fresco, sliced onion, and cilantro. Serve immediately.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 18
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 12
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 8
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 2
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Milk",
+      "Corn",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "tacos-al-pastor-pineapple",
+    "title": "Tacos al Pastor",
+    "shortDescription": "Spit-roasted pork with pineapple, onion, and cilantro",
+    "note": "Marinate overnight for the most authentic flavor",
+    "introCopy": "Tacos al pastor are Mexico City's iconic street food, inspired by Lebanese shawarma but transformed into something uniquely Mexican. Thin slices of chile-marinated pork are traditionally cooked on a vertical spit, then served with caramelized pineapple, onion, and cilantro. This oven version delivers the same addictive sweet-savory-spicy combination that has made al pastor tacos legendary worldwide.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 90,
+    "difficulty": "MEDIUM",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "MAKE_AHEAD",
+      "SPICY"
+    ],
+    "heroColor": "#A83C2F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Marinade",
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "pork shoulder",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 2,
+        "quantity": "4",
+        "unit": null,
+        "item": "dried guajillo chiles",
+        "prepNote": "stemmed and seeded",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "dried ancho chiles",
+        "prepNote": "stemmed and seeded",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 4,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "pineapple juice",
+        "prepNote": "fresh",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 5,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "white vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 6,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 9,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground cloves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "achiote paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Essential toppings",
+        "order": 12,
+        "quantity": "1/2",
+        "unit": null,
+        "item": "fresh pineapple",
+        "prepNote": "cut into chunks",
+        "optional": false
+      },
+      {
+        "component": "Essential toppings",
+        "order": 13,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": "Essential toppings",
+        "order": 14,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 15,
+        "quantity": "24",
+        "unit": null,
+        "item": "small corn tortillas",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 16,
+        "quantity": "3",
+        "unit": null,
+        "item": "limes",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 17,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "salsa roja or salsa verde",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Toast the dried chiles in a dry skillet for 2 minutes, then soak in hot water for 15 minutes until soft.",
+        "durationMinutes": 18
+      },
+      {
+        "order": 2,
+        "text": "Drain chiles and transfer to a blender with pineapple juice, vinegar, garlic, cumin, oregano, cloves, achiote paste, and salt. Blend until completely smooth.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Place sliced pork in a large bowl and pour marinade over, tossing to coat every piece. Cover and refrigerate for at least 4 hours, preferably overnight.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Preheat oven to 200°C (400°F). Arrange marinated pork slices on a foil-lined baking sheet, overlapping slightly. Pour any remaining marinade over the top.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Roast for 60 minutes, then increase heat to 220°C (425°F) and roast for 15-20 more minutes until edges are crispy and caramelized.",
+        "durationMinutes": 80
+      },
+      {
+        "order": 6,
+        "text": "While pork roasts, char the pineapple chunks in a hot skillet or under the broiler until caramelized on all sides, about 8 minutes. Chop into small pieces.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 7,
+        "text": "Remove pork from oven and let rest for 5 minutes, then chop into small pieces, mixing the crispy edges with the tender center.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 8,
+        "text": "Serve pork on warm tortillas, topped with caramelized pineapple, diced onion, and cilantro (these are essential, not optional garnishes). Accompany with lime wedges and salsa.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Pork",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 12
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 3
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Corn"
+    ]
+  },
+  {
+    "slug": "pipian-verde-chicken",
+    "title": "Pipián Verde with Chicken",
+    "shortDescription": "Chicken in pumpkin seed and green chile sauce",
+    "note": "Toast seeds until fragrant but not burnt for best flavor",
+    "introCopy": "Pipián verde is one of Mexico's most ancient sauces, predating the Spanish conquest. This vibrant green sauce made from toasted pumpkin seeds, tomatillos, and green chiles is nutty, tangy, and utterly delicious. It coats tender chicken pieces in a velvety embrace. Serve with rice to soak up every drop of this pre-Hispanic treasure.",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 45,
+    "difficulty": "MEDIUM",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#5C8A3D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Chicken",
+        "order": 1,
+        "quantity": "1.2",
+        "unit": "kg",
+        "item": "chicken thighs and drumsticks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 3,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 4,
+        "quantity": "300",
+        "unit": "g",
+        "item": "hulled pumpkin seeds (pepitas)",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 5,
+        "quantity": "500",
+        "unit": "g",
+        "item": "tomatillos",
+        "prepNote": "husked and rinsed",
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 6,
+        "quantity": "2",
+        "unit": null,
+        "item": "jalapeño or serrano peppers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 7,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "roughly chopped",
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 9,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh cilantro leaves",
+        "prepNote": "packed",
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 10,
+        "quantity": "4",
+        "unit": null,
+        "item": "romaine lettuce leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 12,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 13,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": "or to taste",
+        "optional": false
+      },
+      {
+        "component": "Pipián Sauce",
+        "order": 14,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 15,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "cooked white rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 16,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "pumpkin seeds",
+        "prepNote": "toasted",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Place chicken in a large pot with 4 cups stock and 1 tsp salt. Bring to a boil, reduce heat, and simmer for 25 minutes until cooked through. Remove chicken and set aside, reserving the stock.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 2,
+        "text": "Toast pumpkin seeds in a dry skillet over medium heat, stirring constantly, until they puff and turn golden, about 5 minutes. Be careful not to burn. Set aside to cool.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 3,
+        "text": "Char tomatillos, jalapeños, garlic, and onion in the same skillet until blackened in spots, about 8 minutes total.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "Transfer charred vegetables to a blender with toasted pumpkin seeds, cilantro, lettuce leaves, cumin, 2 cups stock (from cooking the chicken), and salt. Blend on high speed until completely smooth and vibrant green. This may take several minutes.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 5,
+        "text": "Heat oil in a large deep skillet or pot over medium-high heat. Pour in the pipián sauce (it will sputter) and fry, stirring frequently, for 10 minutes until darkened slightly and thickened.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 6,
+        "text": "Add the cooked chicken pieces to the sauce, reduce heat to low, and simmer for 15 minutes, turning chicken occasionally. The sauce should coat the chicken thickly; add more reserved stock if it's too thick.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 7,
+        "text": "Taste and adjust salt. Serve chicken with generous sauce over rice, garnished with toasted pumpkin seeds.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 12
+      },
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 3
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "huevos-rancheros-classic",
+    "title": "Huevos Rancheros",
+    "shortDescription": "Fried eggs on tortillas with ranchero sauce and beans",
+    "note": "Lightly fry tortillas to prevent them from getting soggy",
+    "introCopy": "Huevos rancheros is the quintessential Mexican ranch breakfast, featuring sunny-side-up eggs served on crispy tortillas and smothered in warm, spicy tomato-chile sauce. Add refried beans, a sprinkle of cheese, and you have a hearty, satisfying meal that will fuel your entire morning. It's simple comfort food at its finest.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "BREAKFAST"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "FRIED",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#B34431",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Ranchero Sauce",
+        "order": 1,
+        "quantity": "600",
+        "unit": "g",
+        "item": "ripe tomatoes",
+        "prepNote": "roughly chopped",
+        "optional": false
+      },
+      {
+        "component": "Ranchero Sauce",
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "jalapeño pepper",
+        "prepNote": "stemmed",
+        "optional": false
+      },
+      {
+        "component": "Ranchero Sauce",
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Ranchero Sauce",
+        "order": 4,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Ranchero Sauce",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Ranchero Sauce",
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Ranchero Sauce",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "water or chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Ranchero Sauce",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": "or to taste",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 9,
+        "quantity": "8",
+        "unit": null,
+        "item": "corn tortillas",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 10,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 11,
+        "quantity": "8",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 12,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "refried beans",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 13,
+        "quantity": "100",
+        "unit": "g",
+        "item": "queso fresco or feta",
+        "prepNote": "crumbled",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 14,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "Mexican crema or sour cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 15,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 16,
+        "quantity": "1",
+        "unit": null,
+        "item": "avocado",
+        "prepNote": "sliced",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make ranchero sauce: Blend tomatoes, jalapeño, onion, and garlic until smooth. Heat oil in a saucepan over medium-high heat, add cumin, then pour in the tomato mixture. Fry for 5 minutes, stirring.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Add water or stock and salt to the sauce. Simmer for 15 minutes until slightly thickened. Taste and adjust seasoning. Keep warm.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Heat 2 tablespoons oil in a large skillet over medium heat. Lightly fry each tortilla for about 30 seconds per side until just beginning to crisp but still pliable. Drain on paper towels.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "In the same skillet, add remaining tablespoon of oil and fry the eggs to your preference (traditionally sunny-side up with runny yolks). Season with salt and pepper.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 5,
+        "text": "To assemble: Place 2 tortillas on each plate. Spread a layer of refried beans on each tortilla, then top with a fried egg.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Spoon warm ranchero sauce generously over the eggs. Top with crumbled cheese, a drizzle of crema, cilantro, and avocado slices if using. Serve immediately.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Eggs",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 18
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 12
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 6
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 4
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Milk",
+      "Corn",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "elote-mexican-street-corn",
+    "title": "Elote (Mexican Street Corn)",
+    "shortDescription": "Grilled corn with mayo, cheese, chile, and lime",
+    "note": "Char the corn well for the best smoky flavor",
+    "introCopy": "Elote is Mexican street food at its most irresistible: whole corn on the cob grilled until charred, then slathered with creamy mayo, rolled in salty cotija cheese, dusted with chile powder, and finished with a squeeze of lime. It's messy, indulgent, and utterly addictive. Perfect as a side dish or a snack on its own.",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "SNACK",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "GRILLED",
+      "UNDER_30",
+      "SPICY"
+    ],
+    "heroColor": "#E8C547",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "6",
+        "unit": null,
+        "item": "ears of corn",
+        "prepNote": "husked",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "mayonnaise",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "Mexican crema or sour cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "150",
+        "unit": "g",
+        "item": "cotija cheese",
+        "prepNote": "finely crumbled",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "chili powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "smoked paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": null,
+        "item": "limes",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat grill to medium-high heat. Brush corn with melted butter.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Grill corn, turning frequently, until charred all over and kernels are tender, about 12-15 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Meanwhile, mix mayonnaise and crema together in a small bowl. Combine cotija cheese, chili powder, and smoked paprika in a shallow dish.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Remove corn from grill. While still hot, brush or spread the mayo-crema mixture generously all over each ear.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Roll each ear in the cheese-chile mixture to coat completely.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Squeeze lime juice over each ear, sprinkle with cilantro if using, and serve immediately with extra lime wedges.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Corn"
+    ]
+  },
+  {
+    "slug": "aguachile-shrimp-verde",
+    "title": "Aguachile Verde with Shrimp",
+    "shortDescription": "Raw shrimp cured in spicy lime and chile marinade",
+    "note": "Use only the freshest shrimp for this raw preparation",
+    "introCopy": "Aguachile is the bold, fiery cousin of ceviche from Sinaloa. Ultra-fresh shrimp are briefly marinated in an intense lime and serrano chile mixture that \"cooks\" them through acidity. The result is bright, spicy, and incredibly refreshing. Serve ice-cold with crispy tostadas for scooping. This is summer in a bowl.",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 0,
+    "difficulty": "EASY",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "NO_COOK",
+      "SPICY",
+      "HIGH_PROTEIN",
+      "UNDER_30"
+    ],
+    "heroColor": "#2E7D4E",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "600",
+        "unit": "g",
+        "item": "fresh raw shrimp",
+        "prepNote": "peeled and deveined",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh lime juice",
+        "prepNote": "about 8-10 limes",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": null,
+        "item": "serrano chiles",
+        "prepNote": "stemmed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "packed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": "ice cold",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "cucumber",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1/2",
+        "unit": "medium",
+        "item": "red onion",
+        "prepNote": "very thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": null,
+        "item": "avocado",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "8",
+        "unit": null,
+        "item": "tostadas",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "If shrimp are large, slice them in half lengthwise (butterfly style). Place in a non-reactive bowl and refrigerate while preparing the chile water.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "In a blender, combine lime juice, serrano chiles, cilantro, garlic, ice water, and salt. Blend on high speed until completely smooth and bright green.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Pour the chile-lime mixture over the shrimp and stir gently. Refrigerate for 15-20 minutes, stirring once halfway through, until shrimp turn pink and opaque.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 4,
+        "text": "Arrange cucumber and red onion slices on a serving platter or in shallow bowls. Top with the cured shrimp and pour the aguachile liquid over everything.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Garnish with avocado slices and serve immediately with tostadas for scooping. Keep chilled until serving.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Shellfish",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 12
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 8
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "High-protein",
+      "Low-carb"
+    ],
+    "allergenTags": [
+      "Shellfish",
+      "Corn"
+    ]
+  },
+  {
+    "slug": "tostadas-tinga-chicken",
+    "title": "Tostadas de Tinga",
+    "shortDescription": "Crispy tortillas topped with smoky chipotle chicken",
+    "note": "Shred chicken while warm for the easiest preparation",
+    "introCopy": "Tostadas are one of Mexico's most versatile dishes, featuring crispy fried tortillas piled high with toppings. This version showcases tinga, a smoky-sweet shredded chicken simmered in tomato-chipotle sauce. Add refried beans, lettuce, crema, and cheese for a satisfying crunch-and-flavor bomb that's both casual and impressive.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 35,
+    "difficulty": "EASY",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "FRIED",
+      "MAKE_AHEAD",
+      "SPICY"
+    ],
+    "heroColor": "#A8563F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Tinga",
+        "order": 1,
+        "quantity": "600",
+        "unit": "g",
+        "item": "boneless chicken breasts or thighs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tinga",
+        "order": 2,
+        "quantity": "400",
+        "unit": "g",
+        "item": "ripe tomatoes",
+        "prepNote": "roughly chopped",
+        "optional": false
+      },
+      {
+        "component": "Tinga",
+        "order": 3,
+        "quantity": "3",
+        "unit": null,
+        "item": "chipotle chiles in adobo",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tinga",
+        "order": 4,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": "Tinga",
+        "order": 5,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Tinga",
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tinga",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tinga",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tinga",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": "or to taste",
+        "optional": false
+      },
+      {
+        "component": "Tostadas",
+        "order": 10,
+        "quantity": "12",
+        "unit": null,
+        "item": "corn tortillas",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tostadas",
+        "order": 11,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 12,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "refried beans",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 13,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "shredded lettuce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 14,
+        "quantity": "100",
+        "unit": "g",
+        "item": "queso fresco",
+        "prepNote": "crumbled",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 15,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "Mexican crema or sour cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 16,
+        "quantity": "1",
+        "unit": null,
+        "item": "avocado",
+        "prepNote": "sliced",
+        "optional": true
+      },
+      {
+        "component": "Toppings",
+        "order": 17,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Cook chicken: Place chicken in a pot, cover with water, add 1/2 tsp salt, and bring to a boil. Reduce heat and simmer for 20 minutes until cooked through. Remove, let cool slightly, then shred. Reserve 1/2 cup cooking liquid.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Blend tomatoes and chipotle chiles (with some adobo sauce) until smooth. Set aside.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Heat 2 tbsp oil in a large skillet over medium heat. Sauté sliced onion until softened, about 5 minutes. Add garlic and cook 1 minute more.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 4,
+        "text": "Add the tomato-chipotle mixture, oregano, cumin, and remaining salt to the skillet. Cook for 8 minutes, stirring occasionally, until thickened.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 5,
+        "text": "Add shredded chicken and reserved cooking liquid to the sauce. Simmer for 10 minutes, stirring occasionally, until chicken is well coated and mixture is moist but not soupy. Taste and adjust seasoning.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Make tostadas: Heat 1 cup oil in a skillet to 180°C (350°F). Fry tortillas one at a time until golden and crispy, about 1 minute per side. Drain on paper towels.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 7,
+        "text": "To assemble: Spread refried beans on each tostada, top with tinga, then add lettuce, queso fresco, crema, avocado, and cilantro. Serve immediately.",
+        "durationMinutes": 8
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 12
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 3
+      }
+    ],
+    "dietTags": [
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Corn",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "caldo-de-res-beef-soup",
+    "title": "Caldo de Res",
+    "shortDescription": "Hearty Mexican beef and vegetable soup",
+    "note": "This soup tastes even better the next day",
+    "introCopy": "Caldo de res is Mexican comfort in a bowl, a nourishing beef soup loaded with corn, potatoes, carrots, cabbage, and squash. Simmered slowly until the beef is tender and the broth is rich, it's the kind of meal that warms you from the inside out. Serve with lime, cilantro, and warm tortillas for a complete, soul-satisfying experience.",
+    "servings": 8,
+    "prepMinutes": 25,
+    "cookMinutes": 120,
+    "difficulty": "EASY",
+    "cuisine": "Mexican",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_FIBER",
+      "HIGH_PROTEIN",
+      "MAKE_AHEAD",
+      "ONE_POT"
+    ],
+    "heroColor": "#8B4C2F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "beef shank or short ribs",
+        "prepNote": "cut into pieces",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "10",
+        "unit": "cups",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "white onion",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "smashed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "salt",
+        "prepNote": "or to taste",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "whole black peppercorns",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "3",
+        "unit": "medium",
+        "item": "potatoes",
+        "prepNote": "peeled and cut into large chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "3",
+        "unit": "large",
+        "item": "carrots",
+        "prepNote": "peeled and cut into large pieces",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "2",
+        "unit": "ears",
+        "item": "corn",
+        "prepNote": "cut into thirds",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1/4",
+        "unit": "medium",
+        "item": "green cabbage",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "2",
+        "unit": "medium",
+        "item": "zucchini or chayote",
+        "prepNote": "cut into large pieces",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "3",
+        "unit": "medium",
+        "item": "ripe tomatoes",
+        "prepNote": "halved",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 14,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 15,
+        "quantity": "3",
+        "unit": null,
+        "item": "limes",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 16,
+        "quantity": "8",
+        "unit": null,
+        "item": "corn tortillas",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 17,
+        "quantity": "1",
+        "unit": null,
+        "item": "serrano chile",
+        "prepNote": "sliced",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Place beef in a large pot with water, onion, garlic, bay leaves, salt, and peppercorns. Bring to a boil over high heat.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Reduce heat to low, cover partially, and simmer for 90 minutes, skimming foam from the surface occasionally, until beef is very tender.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 3,
+        "text": "Add potatoes, carrots, corn, and tomatoes to the pot. Simmer for 15 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Add cabbage and zucchini. Continue simmering for 10 more minutes until all vegetables are tender but not mushy.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Taste broth and adjust salt as needed. Remove bay leaves.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Serve hot in large bowls with a piece of beef, corn, and assorted vegetables in each. Garnish with cilantro and serve with lime wedges, sliced chile, and warm tortillas.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 18
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 12
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Corn"
+    ]
+  }
+]

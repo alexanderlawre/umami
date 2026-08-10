@@ -1,0 +1,5222 @@
+[
+  {
+    "slug": "moroccan-lamb-tagine-with-apricots",
+    "title": "Moroccan Lamb Tagine with Apricots",
+    "shortDescription": "Tender lamb slow-cooked with warm spices, dried apricots, and almonds",
+    "note": "Serve with fluffy couscous to soak up the fragrant sauce",
+    "introCopy": "This classic Moroccan tagine balances savory lamb with sweet apricots and warm spices like cinnamon and ginger. The slow braising creates fall-apart tender meat in a silky sauce.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 120,
+    "difficulty": "MEDIUM",
+    "cuisine": "North African",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "MAKE_AHEAD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#8B4513",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "lamb shoulder",
+        "prepNote": "cut into 5cm chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "onions",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground coriander",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground ginger",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "saffron threads",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "400",
+        "unit": "g",
+        "item": "canned tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "lamb or chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "200",
+        "unit": "g",
+        "item": "dried apricots",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "honey",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "75",
+        "unit": "g",
+        "item": "flaked almonds",
+        "prepNote": "toasted",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 15,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 16,
+        "quantity": "500",
+        "unit": "g",
+        "item": "couscous",
+        "prepNote": "cooked",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a tagine or heavy-based pot over medium-high heat. Brown lamb pieces in batches until golden on all sides. Remove and set aside.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Reduce heat to medium. Add onions and cook until softened, about 8 minutes. Add garlic and cook for 1 minute.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 3,
+        "text": "Stir in cumin, coriander, ginger, cinnamon, and saffron. Cook until fragrant, about 1 minute.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 4,
+        "text": "Return lamb to the pot. Add tomatoes and stock. Bring to a boil, then reduce heat to low. Cover and simmer for 1.5 hours.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 5,
+        "text": "Add apricots and honey. Continue simmering uncovered for 30 minutes until lamb is very tender and sauce has thickened.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 6,
+        "text": "Season with salt and pepper. Garnish with toasted almonds and fresh coriander. Serve over fluffy couscous.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Tree nuts",
+      "Wheat/gluten",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "classic-moroccan-chicken-tagine-preserved-lemons",
+    "title": "Classic Moroccan Chicken Tagine with Preserved Lemons",
+    "shortDescription": "Aromatic chicken braised with olives and tangy preserved lemons",
+    "note": "The preserved lemons are essential for authentic flavor",
+    "introCopy": "This iconic Moroccan dish features chicken slow-cooked with briny olives and the unique tang of preserved lemons. It's one of Morocco's most beloved tagines.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 75,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "ONE_POT",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#DAA520",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "chicken pieces",
+        "prepNote": "thighs and drumsticks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "large onion",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground ginger",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground turmeric",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "saffron threads",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "400",
+        "unit": "ml",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "preserved lemons",
+        "prepNote": "quartered, pulp removed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "150",
+        "unit": "g",
+        "item": "green olives",
+        "prepNote": "pitted",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 12,
+        "quantity": "400",
+        "unit": "g",
+        "item": "couscous",
+        "prepNote": "cooked",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a tagine or large pot over medium heat. Brown chicken pieces on all sides, about 8 minutes. Remove and set aside.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Add onion to the pot and cook until softened, about 5 minutes. Add garlic, ginger, turmeric, and saffron. Cook for 1 minute.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 3,
+        "text": "Return chicken to pot. Add stock and bring to a boil. Reduce heat, cover, and simmer for 45 minutes.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 4,
+        "text": "Add preserved lemons and olives. Continue cooking uncovered for 15 minutes until chicken is very tender and sauce has reduced.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Season with salt and pepper. Garnish with fresh coriander and serve with couscous.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 30
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "moroccan-vegetable-couscous",
+    "title": "Moroccan Vegetable Couscous",
+    "shortDescription": "Seven-vegetable couscous with chickpeas and aromatic broth",
+    "note": "Traditionally served on Fridays in Morocco",
+    "introCopy": "This vegetarian couscous royale features seven vegetables symbolizing good fortune, simmered in a fragrant broth and served over fluffy couscous with chickpeas.",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 60,
+    "difficulty": "MEDIUM",
+    "cuisine": "North African",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_FIBER",
+      "ONE_POT"
+    ],
+    "heroColor": "#CD853F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": null,
+        "item": "onions",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": null,
+        "item": "carrots",
+        "prepNote": "halved lengthwise",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "turnips",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "small",
+        "item": "butternut squash",
+        "prepNote": "peeled and chunked",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": null,
+        "item": "courgettes",
+        "prepNote": "halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "small",
+        "item": "white cabbage",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "400",
+        "unit": "g",
+        "item": "canned chickpeas",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground coriander",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground turmeric",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "1.5",
+        "unit": "L",
+        "item": "vegetable stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "400",
+        "unit": "g",
+        "item": "canned tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 15,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 16,
+        "quantity": "500",
+        "unit": "g",
+        "item": "couscous",
+        "prepNote": "cooked",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 17,
+        "quantity": "100",
+        "unit": "g",
+        "item": "raisins",
+        "prepNote": "soaked in warm water",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large pot or couscousier. Add onions and cook for 5 minutes until softened.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Add cumin, coriander, turmeric, and cinnamon. Cook for 1 minute until fragrant.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 3,
+        "text": "Add carrots, turnips, squash, stock, and tomatoes. Bring to a boil, then reduce heat and simmer for 20 minutes.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 4,
+        "text": "Add chickpeas, courgettes, and cabbage. Continue simmering for 25 minutes until all vegetables are tender.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 5,
+        "text": "Season with salt and pepper. Stir in fresh coriander.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 6,
+        "text": "Fluff couscous and mound on a large platter. Arrange vegetables on top. Ladle some broth over the couscous. Scatter with raisins if using. Serve remaining broth alongside.",
+        "durationMinutes": 8
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Root veg",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "harira-moroccan-lentil-soup",
+    "title": "Harira - Moroccan Lentil Soup",
+    "shortDescription": "Hearty tomato-based soup with lentils, chickpeas, and fresh herbs",
+    "note": "Traditionally breaks the fast during Ramadan",
+    "introCopy": "This fragrant Moroccan soup is rich with lentils, chickpeas, tomatoes, and warming spices. Often served with dates and chebakia during Ramadan.",
+    "servings": 8,
+    "prepMinutes": 15,
+    "cookMinutes": 60,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_FIBER",
+      "HIGH_PROTEIN",
+      "ONE_POT",
+      "FREEZER_FRIENDLY"
+    ],
+    "heroColor": "#B22222",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "large onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": null,
+        "item": "celery stalks",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "500",
+        "unit": "g",
+        "item": "lamb neck or shoulder",
+        "prepNote": "diced small",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "200",
+        "unit": "g",
+        "item": "dried green lentils",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "400",
+        "unit": "g",
+        "item": "canned chickpeas",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "800",
+        "unit": "g",
+        "item": "canned tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "L",
+        "item": "lamb or chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground ginger",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground turmeric",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "75",
+        "unit": "g",
+        "item": "vermicelli",
+        "prepNote": "broken into pieces",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "50",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 15,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 16,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 17,
+        "quantity": "2",
+        "unit": null,
+        "item": "lemons",
+        "prepNote": "juiced",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large pot. Add onion and celery, cook until softened, about 8 minutes.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Add lamb and brown on all sides, about 5 minutes. Add ginger, turmeric, cinnamon, and pepper. Stir for 1 minute.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 3,
+        "text": "Add lentils, chickpeas, tomatoes, and stock. Bring to a boil, then reduce heat and simmer for 40 minutes until lentils and lamb are tender.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 4,
+        "text": "Mix flour with 100ml cold water to make a smooth paste. Stir into soup to thicken. Add vermicelli and cook for 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Stir in fresh coriander, parsley, and lemon juice. Season with salt. Simmer for 5 more minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Serve hot with additional lemon wedges.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Celery"
+    ]
+  },
+  {
+    "slug": "tunisian-shakshuka",
+    "title": "Tunisian Shakshuka",
+    "shortDescription": "Eggs poached in spicy tomato and pepper sauce",
+    "note": "Best served with crusty bread for dipping",
+    "introCopy": "Tunisia's version of shakshuka features harissa for heat and is packed with peppers and tomatoes. Perfect for breakfast, lunch, or dinner.",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "ONE_POT",
+      "SPICY",
+      "EAT_MORE_VEG",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#DC143C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "large onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "red peppers",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "harissa paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "caraway seeds",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "800",
+        "unit": "g",
+        "item": "canned tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "6",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "100",
+        "unit": "g",
+        "item": "feta cheese",
+        "prepNote": "crumbled",
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 12,
+        "quantity": "1",
+        "unit": "loaf",
+        "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large deep frying pan over medium heat. Add onion and peppers, cook for 8 minutes until softened.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Add garlic, harissa, cumin, and caraway seeds. Cook for 1 minute until fragrant.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 3,
+        "text": "Add tomatoes and simmer for 10 minutes until sauce has thickened. Season with salt and pepper.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Make 6 wells in the sauce. Crack an egg into each well. Cover and cook for 5-6 minutes until whites are set but yolks still runny.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 5,
+        "text": "Scatter with feta if using and fresh parsley. Serve immediately with crusty bread.",
+        "durationMinutes": 0
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nightshades",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal",
+      "Gluten-free",
+      "Low-carb"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "moroccan-pastilla-chicken",
+    "title": "Moroccan Pastilla with Chicken",
+    "shortDescription": "Sweet and savory pie with spiced chicken, almonds, and phyllo",
+    "note": "A showstopper dish for special occasions",
+    "introCopy": "This elaborate Moroccan pie balances sweet and savory with layers of spiced chicken, toasted almonds, eggs, and cinnamon sugar, all wrapped in crispy phyllo pastry.",
+    "servings": 8,
+    "prepMinutes": 45,
+    "cookMinutes": 60,
+    "difficulty": "INVOLVED",
+    "cuisine": "North African",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": false,
+    "attributes": [
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#D4AF37",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Chicken filling",
+        "order": 1,
+        "quantity": "1.2",
+        "unit": "kg",
+        "item": "chicken thighs",
+        "prepNote": "boneless",
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "onions",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 4,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground ginger",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 7,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "saffron threads",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 8,
+        "quantity": "400",
+        "unit": "ml",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 9,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 10,
+        "quantity": "6",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Almond layer",
+        "order": 11,
+        "quantity": "300",
+        "unit": "g",
+        "item": "blanched almonds",
+        "prepNote": "toasted and ground",
+        "optional": false
+      },
+      {
+        "component": "Almond layer",
+        "order": 12,
+        "quantity": "100",
+        "unit": "g",
+        "item": "icing sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Almond layer",
+        "order": 13,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 14,
+        "quantity": "400",
+        "unit": "g",
+        "item": "phyllo pastry",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 15,
+        "quantity": "150",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 16,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "icing sugar",
+        "prepNote": "for dusting",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 17,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": "for dusting",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large pot. Cook onions until softened, 8 minutes. Add chicken, garlic, ginger, cinnamon, saffron, and stock. Simmer covered for 35 minutes until chicken is very tender.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 2,
+        "text": "Remove chicken and shred finely. Return to pot with coriander. Reduce liquid over high heat until nearly evaporated, about 10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Add beaten eggs to the chicken mixture. Stir constantly over low heat until eggs are scrambled and mixture is dry, about 5 minutes. Set aside to cool.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Mix ground almonds with icing sugar and cinnamon. Set aside.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Preheat oven to 180°C. Brush a 30cm round baking tin with butter. Layer 8 sheets of phyllo in the tin, brushing each with butter and letting edges overhang.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 6,
+        "text": "Spread half the chicken mixture over phyllo. Top with almond mixture, then remaining chicken. Fold overhanging phyllo over the filling.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 7,
+        "text": "Top with 6 more buttered phyllo sheets, tucking edges down into the tin. Brush top generously with butter.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 8,
+        "text": "Bake for 35-40 minutes until golden and crisp. Let rest 10 minutes, then invert onto a serving platter.",
+        "durationMinutes": 50
+      },
+      {
+        "order": 9,
+        "text": "Dust with icing sugar and make decorative cinnamon lines across the top. Serve warm, cut into wedges.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Halal"
+    ],
+    "allergenTags": [
+      "Tree nuts",
+      "Eggs",
+      "Wheat/gluten",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "merguez-sausages-with-peppers",
+    "title": "Merguez Sausages with Peppers",
+    "shortDescription": "Spicy lamb sausages with roasted peppers and harissa yogurt",
+    "note": "Serve in flatbreads for an authentic street food experience",
+    "introCopy": "These fiery North African lamb sausages are loaded with cumin, paprika, and harissa. Paired with sweet roasted peppers and cooling yogurt, they're utterly addictive.",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "SPICY",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#8B0000",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "8",
+        "unit": null,
+        "item": "merguez sausages",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": null,
+        "item": "red peppers",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "red onions",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Harissa yogurt",
+        "order": 6,
+        "quantity": "200",
+        "unit": "g",
+        "item": "Greek yogurt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Harissa yogurt",
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "harissa paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Harissa yogurt",
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "juiced",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "4",
+        "unit": null,
+        "item": "flatbreads",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 200°C. Toss peppers and onions with olive oil and cumin on a large baking tray. Season with salt and pepper.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Nestle merguez sausages among the vegetables. Roast for 25 minutes, turning sausages halfway, until sausages are cooked through and vegetables are charred.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 3,
+        "text": "Meanwhile, mix yogurt with harissa and lemon juice. Season with salt.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Serve merguez and peppers in warm flatbreads with harissa yogurt and fresh coriander.",
+        "durationMinutes": 0
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Gluten-free",
+      "Low-carb"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "chermoula-baked-fish",
+    "title": "Chermoula Baked Fish",
+    "shortDescription": "White fish marinated in herb and spice paste, then baked",
+    "note": "Chermoula also works brilliantly with prawns or chicken",
+    "introCopy": "Chermoula is Morocco's zesty marinade packed with coriander, parsley, lemon, and spices. It transforms simple white fish into something spectacular.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN",
+      "LOW_CARB"
+    ],
+    "heroColor": "#228B22",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Chermoula",
+        "order": 1,
+        "quantity": "1",
+        "unit": "large bunch",
+        "item": "fresh coriander",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chermoula",
+        "order": 2,
+        "quantity": "1",
+        "unit": "large bunch",
+        "item": "fresh parsley",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chermoula",
+        "order": 3,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chermoula",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chermoula",
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chermoula",
+        "order": 6,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "cayenne pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chermoula",
+        "order": 7,
+        "quantity": "2",
+        "unit": null,
+        "item": "lemons",
+        "prepNote": "juiced",
+        "optional": false
+      },
+      {
+        "component": "Chermoula",
+        "order": 8,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "4",
+        "unit": null,
+        "item": "white fish fillets",
+        "prepNote": "such as sea bass or bream, 180g each",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "400",
+        "unit": "g",
+        "item": "couscous",
+        "prepNote": "cooked",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "cut into wedges",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make chermoula by blending coriander, parsley, garlic, cumin, paprika, cayenne, lemon juice, and olive oil in a food processor until smooth. Season with salt.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Place fish fillets in a baking dish. Coat generously with chermoula, reserving 3 tablespoons. Marinate for 10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Preheat oven to 200°C. Bake fish for 15-18 minutes until cooked through and flaking easily.",
+        "durationMinutes": 18
+      },
+      {
+        "order": 4,
+        "text": "Serve fish over couscous, drizzled with reserved chermoula and lemon wedges on the side.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "White fish",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 30
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Pescatarian",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Fish",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "tunisian-brik-egg-tuna",
+    "title": "Tunisian Brik with Egg and Tuna",
+    "shortDescription": "Crispy phyllo parcels with egg, tuna, capers, and harissa",
+    "note": "Eat immediately while the egg is still runny",
+    "introCopy": "Brik is Tunisia's favorite street food - ultra-crispy pastry filled with a whole egg that stays runny inside. Breaking into it is the best part.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "North African",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "FRIED",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#FFD700",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "8",
+        "unit": "sheets",
+        "item": "phyllo pastry",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "canned tuna",
+        "prepNote": "drained and flaked",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "capers",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": null,
+        "item": "spring onions",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "harissa paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "cut into wedges",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Mix tuna with capers, spring onions, parsley, and harissa. Season with salt and pepper.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Take 2 sheets of phyllo and place them slightly offset to create a larger surface. Place a quarter of the tuna mixture on one side, leaving a border.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Make a small well in the tuna mixture. Carefully crack an egg into the well, keeping the yolk intact.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 4,
+        "text": "Fold the phyllo over to form a half-moon, pressing edges to seal tightly. Repeat with remaining phyllo and filling to make 4 briks.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 5,
+        "text": "Heat oil in a large frying pan over medium-high heat (about 2cm deep). Fry each brik for 2-3 minutes per side until golden and crisp. The egg white should set but yolk remain runny.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 6,
+        "text": "Drain on paper towels and serve immediately with lemon wedges.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Eggs",
+        "weight": 40
+      },
+      {
+        "foodGroup": "White fish",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 40
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Pescatarian",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Fish",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "egyptian-koshari",
+    "title": "Egyptian Koshari",
+    "shortDescription": "Layered rice, lentils, pasta, and chickpeas with spiced tomato sauce",
+    "note": "Egypt's beloved street food - hearty and completely vegan",
+    "introCopy": "Koshari is Cairo's ultimate comfort food: a glorious mix of rice, lentils, pasta, and chickpeas topped with spicy tomato sauce and crispy fried onions.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 45,
+    "difficulty": "MEDIUM",
+    "cuisine": "North African",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "HIGH_FIBER",
+      "COMFORT_FOOD",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#8B4513",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Base",
+        "order": 1,
+        "quantity": "300",
+        "unit": "g",
+        "item": "basmati rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Base",
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "brown lentils",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Base",
+        "order": 3,
+        "quantity": "200",
+        "unit": "g",
+        "item": "small pasta",
+        "prepNote": "such as ditalini or macaroni",
+        "optional": false
+      },
+      {
+        "component": "Base",
+        "order": 4,
+        "quantity": "400",
+        "unit": "g",
+        "item": "canned chickpeas",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 5,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 6,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 7,
+        "quantity": "800",
+        "unit": "g",
+        "item": "canned tomatoes",
+        "prepNote": "blended",
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "white wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 10,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "cayenne pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Crispy onions",
+        "order": 11,
+        "quantity": "3",
+        "unit": null,
+        "item": "large onions",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": "Crispy onions",
+        "order": 12,
+        "quantity": "200",
+        "unit": "ml",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Cook lentils in boiling water for 20 minutes until tender. Drain. Cook rice according to package instructions. Cook pasta until al dente. Heat chickpeas.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "For the sauce: heat olive oil in a pan. Add garlic and cook for 1 minute. Add tomatoes, vinegar, cumin, and cayenne. Simmer for 15 minutes until thickened. Season with salt.",
+        "durationMinutes": 16
+      },
+      {
+        "order": 3,
+        "text": "For crispy onions: heat vegetable oil in a frying pan. Fry onions in batches, stirring frequently, until deep golden brown and crispy, about 12 minutes per batch. Drain on paper towels and sprinkle with salt.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 4,
+        "text": "To assemble: layer rice in serving bowls. Top with lentils, then pasta, then chickpeas.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Pour hot tomato sauce over each bowl and top generously with crispy onions. Serve immediately.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Whole grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "egyptian-ful-medames",
+    "title": "Egyptian Ful Medames",
+    "shortDescription": "Slow-cooked fava beans with garlic, lemon, and olive oil",
+    "note": "Egypt's national breakfast dish",
+    "introCopy": "Ful medames has sustained Egyptians for thousands of years. These creamy fava beans flavored with garlic, cumin, and lemon are simple perfection.",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "UNDER_30",
+      "EAT_MORE_VEG",
+      "HIGH_FIBER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#6B4423",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "800",
+        "unit": "g",
+        "item": "canned fava beans",
+        "prepNote": "drained, liquid reserved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "lemons",
+        "prepNote": "juiced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "80",
+        "unit": "ml",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 6,
+        "quantity": "4",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "red onion",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "4",
+        "unit": null,
+        "item": "hard-boiled eggs",
+        "prepNote": "quartered",
+        "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "4",
+        "unit": null,
+        "item": "pita breads",
+        "prepNote": "warmed",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat fava beans in a pot with about 100ml of their reserved liquid. Simmer gently for 10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Mash about half the beans roughly with a potato masher, leaving the rest whole. Stir in garlic and cumin. Cook for 2 minutes.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Remove from heat. Stir in lemon juice and half the olive oil. Season generously with salt and pepper.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 4,
+        "text": "Divide ful among bowls. Drizzle with remaining olive oil. Top with tomatoes, red onion, and parsley.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Serve with hard-boiled eggs if using and warm pita bread for scooping.",
+        "durationMinutes": 0
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Dairy-free",
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "moroccan-msemen-flatbread",
+    "title": "Moroccan Msemen Flatbread",
+    "shortDescription": "Flaky layered flatbread cooked on a griddle",
+    "note": "Serve warm with honey and butter for breakfast",
+    "introCopy": "Msemen are Morocco's beloved square flatbreads with layers of flaky goodness. They're folded and cooked on a griddle until golden and crisp outside, tender inside.",
+    "servings": 8,
+    "prepMinutes": 30,
+    "cookMinutes": 40,
+    "difficulty": "MEDIUM",
+    "cuisine": "North African",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [],
+    "heroColor": "#DEB887",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "fine semolina",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "350",
+        "unit": "ml",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "100",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "50",
+        "unit": "ml",
+        "item": "vegetable oil",
+        "prepNote": "plus extra for cooking",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "honey",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "butter",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Mix flour, semolina, salt, and sugar in a large bowl. Gradually add warm water, kneading to form a soft, slightly sticky dough. Knead for 10 minutes until smooth and elastic.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 2,
+        "text": "Divide dough into 8 equal balls. Coat each with oil and let rest covered for 20 minutes.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 3,
+        "text": "Mix melted butter with vegetable oil. On an oiled surface, flatten each ball and stretch it into a very thin rectangle (almost translucent), using your fingers.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Brush the stretched dough generously with the butter-oil mixture. Fold in thirds lengthwise, then fold in thirds again to create a square. Let rest for 10 minutes.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 5,
+        "text": "Heat a griddle or large frying pan over medium heat. Gently flatten each square slightly and cook for 3-4 minutes per side until golden brown with crispy edges.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 6,
+        "text": "Serve warm with honey and butter.",
+        "durationMinutes": 0
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "zaalouk-moroccan-eggplant-dip",
+    "title": "Zaalouk - Moroccan Eggplant Dip",
+    "shortDescription": "Smoky roasted eggplant and tomato salad with cumin and paprika",
+    "note": "Serve as part of a mezze spread with bread",
+    "introCopy": "Zaalouk is Morocco's addictive eggplant salad, cooked down with tomatoes, garlic, and warm spices until jammy and rich. Perfect for dipping bread.",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 40,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#8B4789",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "3",
+        "unit": null,
+        "item": "large eggplants",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "400",
+        "unit": "g",
+        "item": "canned tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground coriander",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "cayenne pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "lemons",
+        "prepNote": "juiced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "1",
+        "unit": "loaf",
+        "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Prick eggplants all over with a fork. Roast over an open flame or under a hot grill, turning regularly, until skin is charred and flesh is very soft, about 20 minutes. Let cool.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Peel away charred skin and roughly chop the flesh. Discard excess liquid.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Heat olive oil in a large pan over medium heat. Add garlic and cook for 1 minute. Add cumin, paprika, coriander, and cayenne. Cook for 1 minute.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Add eggplant and tomatoes. Cook, stirring frequently and breaking up the eggplant, for 15 minutes until mixture is thick and jammy.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Remove from heat. Stir in lemon juice and fresh coriander. Season generously with salt and pepper.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 6,
+        "text": "Serve warm or at room temperature with crusty bread. Zaalouk keeps well in the fridge for up to 5 days.",
+        "durationMinutes": 0
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nightshades",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Dairy-free",
+      "Gluten-free",
+      "Low-carb"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "taktouka-moroccan-pepper-tomato-salad",
+    "title": "Taktouka - Moroccan Pepper and Tomato Salad",
+    "shortDescription": "Roasted peppers and tomatoes cooked into a smoky dip",
+    "note": "Delicious warm or cold as part of a mezze",
+    "introCopy": "Taktouka is a Moroccan cooked salad where charred peppers and tomatoes are simmered with garlic and spices into a silky, smoky dip.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 35,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#FF6347",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "red peppers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": null,
+        "item": "green peppers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "6",
+        "unit": null,
+        "item": "ripe tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "cayenne pepper",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "1",
+        "unit": null,
+        "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Char peppers over an open flame or under a hot grill until blackened all over, about 15 minutes. Place in a covered bowl to steam for 10 minutes, then peel, deseed, and dice.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Score tomatoes, blanch in boiling water for 1 minute, then peel and dice.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Heat olive oil in a large pan. Add garlic and cook for 1 minute. Add cumin, paprika, and cayenne if using. Cook for 30 seconds.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Add peppers and tomatoes. Cook over medium heat, stirring occasionally, for 20 minutes until mixture has thickened and flavors have melded.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 5,
+        "text": "Stir in fresh parsley. Season with salt and pepper. Serve warm or at room temperature with bread.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nightshades",
+        "weight": 90
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Dairy-free",
+      "Gluten-free",
+      "Low-carb"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "moroccan-beef-kefta-tagine",
+    "title": "Moroccan Beef Kefta Tagine",
+    "shortDescription": "Spiced meatballs in rich tomato sauce with eggs",
+    "note": "The eggs poached on top make this extra special",
+    "introCopy": "Kefta tagine features seasoned beef meatballs cooked in a fragrant tomato sauce, finished with eggs poached right in the sauce. It's pure comfort.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "North African",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "COMFORT_FOOD"
+    ],
+    "heroColor": "#A0522D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Kefta",
+        "order": 1,
+        "quantity": "600",
+        "unit": "g",
+        "item": "beef mince",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Kefta",
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "finely grated",
+        "optional": false
+      },
+      {
+        "component": "Kefta",
+        "order": 3,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh parsley",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Kefta",
+        "order": 4,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Kefta",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Kefta",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Kefta",
+        "order": 7,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 10,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 11,
+        "quantity": "800",
+        "unit": "g",
+        "item": "canned tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tomato sauce",
+        "order": 13,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 15,
+        "quantity": "400",
+        "unit": "g",
+        "item": "couscous",
+        "prepNote": "cooked",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Mix beef mince with grated onion, parsley, coriander, cumin, paprika, cinnamon, and salt. Form into walnut-sized meatballs (about 20).",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Heat olive oil in a tagine or large deep pan. Add chopped onion and cook until softened, 8 minutes. Add garlic and cook for 1 minute.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 3,
+        "text": "Add tomatoes, paprika, and cumin. Simmer for 10 minutes until sauce has thickened. Season with salt and pepper.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Nestle meatballs into the sauce. Cover and simmer gently for 15 minutes until meatballs are cooked through.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Make 4 wells in the sauce between meatballs. Crack an egg into each well. Cover and cook for 5 minutes until egg whites are set but yolks still runny.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Serve immediately with couscous.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 30
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Wheat/gluten",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "algerian-chorba",
+    "title": "Algerian Chorba",
+    "shortDescription": "Hearty lamb and vegetable soup with vermicelli and chickpeas",
+    "note": "A Ramadan favorite throughout Algeria",
+    "introCopy": "Chorba is Algeria's beloved soup, rich with lamb, vegetables, and aromatic spices. It's traditionally the first thing eaten to break the fast during Ramadan.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 75,
+    "difficulty": "MEDIUM",
+    "cuisine": "North African",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN",
+      "ONE_POT",
+      "FREEZER_FRIENDLY"
+    ],
+    "heroColor": "#CD5C5C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "500",
+        "unit": "g",
+        "item": "lamb shoulder",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "onions",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": null,
+        "item": "celery stalks",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "carrots",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "turnip",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "400",
+        "unit": "g",
+        "item": "canned tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "tomato paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "400",
+        "unit": "g",
+        "item": "canned chickpeas",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "2",
+        "unit": "L",
+        "item": "lamb or chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground coriander",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 15,
+        "quantity": "100",
+        "unit": "g",
+        "item": "vermicelli",
+        "prepNote": "broken into pieces",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 16,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 17,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "cut into wedges",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large pot. Brown lamb on all sides, about 8 minutes. Remove and set aside.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Add onions and celery to the pot. Cook until softened, about 8 minutes. Add cumin, coriander, paprika, and cinnamon. Cook for 1 minute.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 3,
+        "text": "Return lamb to pot. Add carrots, turnip, tomatoes, tomato paste, chickpeas, and stock. Bring to a boil.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Reduce heat and simmer covered for 60 minutes until lamb is very tender and vegetables are soft.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 5,
+        "text": "Add vermicelli and cook for 5 minutes until tender. Stir in fresh coriander. Season with salt and pepper.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Serve hot with lemon wedges for squeezing.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Celery",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "moroccan-couscous-tfaya",
+    "title": "Moroccan Couscous with Tfaya",
+    "shortDescription": "Sweet caramelized onions with raisins and cinnamon over couscous",
+    "note": "Tfaya is the ultimate sweet-savory Moroccan topping",
+    "introCopy": "Tfaya is Morocco's magical caramelized onion topping, slow-cooked with raisins, honey, and warm spices. It's traditionally served over chicken and couscous for celebrations.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 50,
+    "difficulty": "MEDIUM",
+    "cuisine": "North African",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#B8860B",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Chicken",
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "chicken pieces",
+        "prepNote": "thighs and drumsticks",
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground ginger",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 4,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "saffron threads",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 5,
+        "quantity": "400",
+        "unit": "ml",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tfaya",
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tfaya",
+        "order": 7,
+        "quantity": "6",
+        "unit": null,
+        "item": "large onions",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": "Tfaya",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tfaya",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground ginger",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tfaya",
+        "order": 10,
+        "quantity": "150",
+        "unit": "g",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tfaya",
+        "order": 11,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "honey",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tfaya",
+        "order": 12,
+        "quantity": "100",
+        "unit": "g",
+        "item": "flaked almonds",
+        "prepNote": "toasted",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "500",
+        "unit": "g",
+        "item": "couscous",
+        "prepNote": "cooked",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large pot. Season chicken with ginger, saffron, salt, and pepper. Brown chicken pieces, about 8 minutes. Add stock and simmer covered for 35 minutes until tender.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 2,
+        "text": "Meanwhile, make tfaya: heat olive oil in a large pan. Add onions and cook over medium-low heat, stirring regularly, for 30 minutes until very soft and golden.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 3,
+        "text": "Add cinnamon, ginger, raisins, and honey to the onions. Continue cooking for 15 minutes until onions are caramelized and sticky. Stir in toasted almonds.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Mound couscous on a large serving platter. Arrange chicken pieces on top. Spoon tfaya over the chicken.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Drizzle with some of the chicken cooking liquid and serve immediately.",
+        "durationMinutes": 0
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Tree nuts",
+      "Wheat/gluten",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "moroccan-bissara-fava-bean-soup",
+    "title": "Moroccan Bissara - Fava Bean Soup",
+    "shortDescription": "Creamy dried fava bean soup with cumin and olive oil",
+    "note": "A warming winter breakfast in Morocco",
+    "introCopy": "Bissara is Morocco's silky fava bean soup, finished with a generous drizzle of olive oil and dusting of cumin. It's simple, nourishing, and utterly comforting.",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 60,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "HIGH_FIBER",
+      "HIGH_PROTEIN",
+      "COMFORT_FOOD",
+      "ONE_POT"
+    ],
+    "heroColor": "#9ACD32",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "dried split fava beans",
+        "prepNote": "soaked overnight",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "peeled",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1.5",
+        "unit": "L",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 6,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "1",
+        "unit": "loaf",
+        "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Drain soaked fava beans. Place in a large pot with garlic and water. Bring to a boil.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Reduce heat and simmer for 50-60 minutes until beans are completely tender and falling apart.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 3,
+        "text": "Add cumin and paprika. Blend the soup until completely smooth using an immersion blender or regular blender. The consistency should be like thick cream.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Season generously with salt. If too thick, add a little water.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Ladle into bowls. Drizzle generously with olive oil and sprinkle with cumin and paprika. Serve hot with crusty bread.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 25
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Dairy-free",
+      "Gluten-free",
+      "High-protein"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "basbousa-semolina-cake",
+    "title": "Basbousa - Semolina Cake",
+    "shortDescription": "Sweet semolina cake soaked in orange blossom syrup",
+    "note": "Popular across North Africa and the Middle East",
+    "introCopy": "Basbousa is a beloved North African dessert - a tender semolina cake soaked in fragrant syrup. Each piece is studded with an almond and utterly irresistible.",
+    "servings": 16,
+    "prepMinutes": 15,
+    "cookMinutes": 40,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#FFD700",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Cake",
+        "order": 1,
+        "quantity": "400",
+        "unit": "g",
+        "item": "semolina",
+        "prepNote": "fine",
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "caster sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 3,
+        "quantity": "200",
+        "unit": "g",
+        "item": "desiccated coconut",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 4,
+        "quantity": "200",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 5,
+        "quantity": "250",
+        "unit": "ml",
+        "item": "Greek yogurt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 6,
+        "quantity": "3",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 7,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 9,
+        "quantity": "24",
+        "unit": null,
+        "item": "blanched almonds",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 10,
+        "quantity": "300",
+        "unit": "g",
+        "item": "caster sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 11,
+        "quantity": "250",
+        "unit": "ml",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 12,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 13,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "orange blossom water",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 180°C. Grease and line a 23x33cm baking tin.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Mix semolina, sugar, coconut, and baking powder in a large bowl. Add melted butter, yogurt, eggs, and vanilla. Mix until well combined.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Pour into prepared tin and smooth the top. Cut into diamond or square shapes (don't cut all the way through). Press an almond into the center of each piece.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Bake for 35-40 minutes until golden brown and a skewer comes out clean.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 5,
+        "text": "While cake bakes, make syrup: combine sugar, water, and lemon juice in a pan. Bring to a boil, then simmer for 10 minutes. Remove from heat and stir in orange blossom water.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 6,
+        "text": "As soon as the cake comes out of the oven, pour the hot syrup evenly over it. Let it soak in completely as the cake cools.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 7,
+        "text": "Once cool, cut along the scored lines and serve. Basbousa keeps well for 5 days.",
+        "durationMinutes": 0
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Whole grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Eggs",
+      "Tree nuts"
+    ]
+  },
+  {
+    "slug": "chebakia-moroccan-sesame-honey-cookies",
+    "title": "Chebakia - Moroccan Sesame Honey Cookies",
+    "shortDescription": "Fried flower-shaped cookies coated in honey and sesame",
+    "note": "A Ramadan specialty requiring patience and skill",
+    "introCopy": "Chebakia are Morocco's most intricate cookies - delicate dough shaped into flowers, fried until crisp, then soaked in warm honey and coated with sesame seeds.",
+    "servings": 30,
+    "prepMinutes": 60,
+    "cookMinutes": 45,
+    "difficulty": "INVOLVED",
+    "cuisine": "North African",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "FRIED"
+    ],
+    "heroColor": "#DAA520",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "100",
+        "unit": "g",
+        "item": "sesame seeds",
+        "prepNote": "toasted and ground",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground anise",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 5,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "saffron threads",
+        "prepNote": "dissolved in 2 tbsp warm water",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 6,
+        "quantity": "3",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 7,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "orange blossom water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 8,
+        "quantity": "150",
+        "unit": "ml",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "white wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For frying and coating",
+        "order": 10,
+        "quantity": "1",
+        "unit": "L",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For frying and coating",
+        "order": 11,
+        "quantity": "400",
+        "unit": "g",
+        "item": "honey",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For frying and coating",
+        "order": 12,
+        "quantity": "100",
+        "unit": "g",
+        "item": "sesame seeds",
+        "prepNote": "toasted",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Mix flour, ground sesame, cinnamon, and anise in a large bowl. Make a well in the center.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Add eggs, saffron water, orange blossom water, oil, and vinegar to the well. Gradually incorporate flour until a smooth, elastic dough forms. Knead for 10 minutes. Rest for 30 minutes.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 3,
+        "text": "Roll dough very thin (2mm). Cut into rectangles about 10x6cm. Make 4 lengthwise slits in each rectangle, leaving the ends intact. Fold into a flower shape by weaving strips through each other.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 4,
+        "text": "Heat oil for frying to 170°C. Fry chebakia in batches until golden brown, about 3 minutes per batch. Drain on paper towels.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 5,
+        "text": "Warm honey in a wide pan. Dip each fried chebakia in honey for 10 seconds, coating well. Remove and immediately coat with sesame seeds.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 6,
+        "text": "Let chebakia dry on a rack. Store in an airtight container for up to 2 weeks.",
+        "durationMinutes": 0
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 70
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Sesame"
+    ]
+  },
+  {
+    "slug": "libyan-bazeen",
+    "title": "Libyan Bazeen",
+    "shortDescription": "Traditional barley dough served with rich lamb and tomato stew",
+    "note": "Eaten communally, breaking pieces from the central dome",
+    "introCopy": "Bazeen is Libya's national dish - a smooth barley dough dome surrounded by a rich lamb and vegetable stew. It's traditionally eaten with your hands.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 90,
+    "difficulty": "INVOLVED",
+    "cuisine": "North African",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#8B7355",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Stew",
+        "order": 1,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 2,
+        "quantity": "800",
+        "unit": "g",
+        "item": "lamb shoulder",
+        "prepNote": "cubed",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "onions",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 4,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 5,
+        "quantity": "800",
+        "unit": "g",
+        "item": "canned tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "tomato paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 7,
+        "quantity": "2",
+        "unit": null,
+        "item": "potatoes",
+        "prepNote": "cubed",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 8,
+        "quantity": "2",
+        "unit": null,
+        "item": "carrots",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 11,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "lamb stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Bazeen dough",
+        "order": 12,
+        "quantity": "400",
+        "unit": "g",
+        "item": "barley flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Bazeen dough",
+        "order": 13,
+        "quantity": "800",
+        "unit": "ml",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Bazeen dough",
+        "order": 14,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large pot. Brown lamb cubes on all sides, about 10 minutes. Remove and set aside.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Add onions to the pot and cook until softened, 8 minutes. Add garlic, cumin, and paprika. Cook for 1 minute.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 3,
+        "text": "Return lamb to pot. Add tomatoes, tomato paste, potatoes, carrots, and stock. Bring to a boil, then simmer covered for 60 minutes until lamb is very tender.",
+        "durationMinutes": 65
+      },
+      {
+        "order": 4,
+        "text": "Meanwhile, make bazeen: bring salted water to a boil in a large pot. Gradually add barley flour while stirring constantly with a wooden spoon to prevent lumps.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Reduce heat to low. Continue stirring vigorously for 15-20 minutes until mixture is very thick, smooth, and pulls away from the sides of the pot. This requires significant arm strength.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 6,
+        "text": "Form the hot bazeen into a smooth dome shape on a large serving platter using wet hands or a wet spoon.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 7,
+        "text": "Arrange lamb and vegetables around the bazeen dome. Pour stew sauce over everything. Serve immediately, breaking off pieces of bazeen to dip in the stew.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Whole grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "moroccan-rfissa",
+    "title": "Moroccan Rfissa",
+    "shortDescription": "Shredded msemen with chicken, lentils, and fenugreek sauce",
+    "note": "Traditionally served to new mothers for strength",
+    "introCopy": "Rfissa is a deeply nourishing Moroccan dish of tender chicken and lentils over shredded flatbread, all infused with the distinctive flavor of fenugreek and ras el hanout.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 75,
+    "difficulty": "INVOLVED",
+    "cuisine": "North African",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#A0826D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Chicken and lentils",
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "chicken pieces",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken and lentils",
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "green lentils",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": "Chicken and lentils",
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "onions",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": "Chicken and lentils",
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "fenugreek seeds",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken and lentils",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "ras el hanout",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken and lentils",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground ginger",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken and lentils",
+        "order": 7,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "saffron threads",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken and lentils",
+        "order": 8,
+        "quantity": "100",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken and lentils",
+        "order": 9,
+        "quantity": "1",
+        "unit": "L",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken and lentils",
+        "order": 10,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Base",
+        "order": 11,
+        "quantity": "8",
+        "unit": null,
+        "item": "msemen flatbreads",
+        "prepNote": "or substitute with thin flatbreads",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Toast fenugreek seeds in a dry pan until fragrant, about 2 minutes. Grind to a powder.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Place chicken in a large pot with onions, ground fenugreek, ras el hanout, ginger, saffron, butter, and stock. Bring to a boil.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Reduce heat and simmer covered for 45 minutes until chicken is tender. Remove chicken and set aside.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 4,
+        "text": "Add lentils to the pot. Simmer for 25 minutes until lentils are tender and sauce has reduced.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 5,
+        "text": "Shred the chicken, discarding bones. Return meat to the pot with fresh coriander. Season with salt and pepper.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Tear msemen into bite-sized pieces. Arrange on a large platter. Ladle the chicken, lentils, and plenty of sauce over the bread. Let it soak for 5 minutes before serving.",
+        "durationMinutes": 7
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "tunisian-slata-mechouia",
+    "title": "Tunisian Slata Mechouia",
+    "shortDescription": "Grilled vegetable salad with peppers, tomatoes, and tuna",
+    "note": "A classic Tunisian mezze - smoky, spicy, and addictive",
+    "introCopy": "Slata mechouia means grilled salad in Tunisian Arabic. Charred peppers and tomatoes are finely chopped and mixed with tuna, capers, and olive oil for an intensely flavorful dip.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "SNACK",
+      "LUNCH"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "MAKE_AHEAD",
+      "GRILLED"
+    ],
+    "heroColor": "#FF4500",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "red peppers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": null,
+        "item": "green peppers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "6",
+        "unit": null,
+        "item": "ripe tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "fresh chillies",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "peeled",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "200",
+        "unit": "g",
+        "item": "canned tuna in oil",
+        "prepNote": "drained and flaked",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "capers",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "caraway seeds",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground coriander",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "2",
+        "unit": null,
+        "item": "lemons",
+        "prepNote": "juiced",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 12,
+        "quantity": "4",
+        "unit": null,
+        "item": "hard-boiled eggs",
+        "prepNote": "quartered",
+        "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "1",
+        "unit": "loaf",
+        "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Grill or broil peppers, tomatoes, chillies, and garlic until charred all over, about 20 minutes. Place peppers and chillies in a covered bowl to steam for 10 minutes.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 2,
+        "text": "Peel and deseed peppers and chillies. Peel tomatoes and squeeze out excess seeds. Peel garlic.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Finely chop all the grilled vegetables and garlic by hand or pulse briefly in a food processor - you want a coarse texture, not a puree.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Transfer to a bowl. Add tuna, capers, caraway seeds, ground coriander, olive oil, and lemon juice. Mix well. Season generously with salt.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Let sit for at least 30 minutes for flavors to meld. Serve at room temperature, garnished with hard-boiled egg quarters if using. Accompany with crusty bread.",
+        "durationMinutes": 30
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nightshades",
+        "weight": 80
+      },
+      {
+        "foodGroup": "White fish",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Pescatarian",
+      "Dairy-free",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Fish"
+    ]
+  },
+  {
+    "slug": "moroccan-maakouda-potato-fritters",
+    "title": "Moroccan Maakouda - Potato Fritters",
+    "shortDescription": "Crispy fried potato patties with cumin and parsley",
+    "note": "Perfect as a snack or served in sandwiches",
+    "introCopy": "Maakouda are Morocco's beloved potato fritters - crispy on the outside, fluffy inside, and flavored with cumin, parsley, and garlic. Often served in sandwiches or as mezze.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "North African",
+    "mealSlot": [
+      "SNACK",
+      "LUNCH"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "FRIED",
+      "EAT_MORE_VEG",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#DAA520",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "potatoes",
+        "prepNote": "peeled and cubed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "large bunch",
+        "item": "fresh parsley",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "large bunch",
+        "item": "fresh coriander",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "100",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "1",
+        "unit": null,
+        "item": "harissa",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "cut into wedges",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Boil potatoes in salted water for 15-20 minutes until very tender. Drain well and mash until smooth. Let cool slightly.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Add garlic, parsley, coriander, cumin, and paprika to the mashed potatoes. Mix well. Season generously with salt and pepper.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Stir in beaten eggs, then add flour gradually until mixture is firm enough to shape but still moist.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Shape mixture into small patties about 6cm wide and 1.5cm thick. You should get about 16 patties.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Heat oil in a large frying pan over medium-high heat (about 2cm deep). Fry patties in batches for 3-4 minutes per side until golden brown and crispy. Drain on paper towels.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 6,
+        "text": "Serve hot with harissa for dipping and lemon wedges. Maakouda are also excellent in sandwiches with salad and harissa.",
+        "durationMinutes": 0
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 50
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "egyptian-mahshi-stuffed-vegetables",
+    "title": "Egyptian Mahshi - Stuffed Vegetables",
+    "shortDescription": "Tomatoes, peppers, and courgettes stuffed with herbed rice",
+    "note": "A labor of love that's worth every minute",
+    "introCopy": "Mahshi means stuffed in Arabic. This Egyptian version features vegetables filled with aromatic rice, herbs, and sometimes meat, then simmered in tomato broth until tender.",
+    "servings": 6,
+    "prepMinutes": 45,
+    "cookMinutes": 60,
+    "difficulty": "INVOLVED",
+    "cuisine": "North African",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "COMFORT_FOOD"
+    ],
+    "heroColor": "#228B22",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Vegetables",
+        "order": 1,
+        "quantity": "6",
+        "unit": null,
+        "item": "large tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Vegetables",
+        "order": 2,
+        "quantity": "4",
+        "unit": null,
+        "item": "bell peppers",
+        "prepNote": "mixed colors",
+        "optional": false
+      },
+      {
+        "component": "Vegetables",
+        "order": 3,
+        "quantity": "4",
+        "unit": null,
+        "item": "courgettes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "400",
+        "unit": "g",
+        "item": "short grain rice",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "400",
+        "unit": "g",
+        "item": "beef or lamb mince",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "1",
+        "unit": "large bunch",
+        "item": "fresh parsley",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh dill",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "tomato paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 10,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground coriander",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 12,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 13,
+        "quantity": "800",
+        "unit": "g",
+        "item": "canned tomatoes",
+        "prepNote": "blended",
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 14,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "vegetable or chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 15,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "tomato paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 16,
+        "quantity": "2",
+        "unit": null,
+        "item": "garlic cloves",
+        "prepNote": "minced",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Prepare vegetables: slice tops off tomatoes and peppers, scoop out insides (save tomato flesh for sauce). Trim courgette ends and hollow out centers with an apple corer, leaving 0.5cm walls.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 2,
+        "text": "Make filling: mix rice, mince if using, onion, parsley, dill, tomato paste, cumin, coriander, and olive oil. Season generously with salt and pepper.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Stuff vegetables about 3/4 full with filling (rice will expand). Replace tomato and pepper tops.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Arrange stuffed vegetables snugly in a large pot. Mix blended tomatoes, stock, tomato paste, and garlic. Pour over vegetables - liquid should come halfway up.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Place an inverted plate on top of vegetables to keep them submerged. Bring to a boil, then reduce heat to low. Cover and simmer for 60 minutes until vegetables are tender and rice is cooked.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 6,
+        "text": "Carefully transfer mahshi to serving plates. Spoon sauce over the top. Serve hot with crusty bread or alongside a salad.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nightshades",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Sulphites"
+    ]
+  }
+]

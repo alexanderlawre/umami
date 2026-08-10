@@ -1,0 +1,2814 @@
+[
+  {
+    "slug": "pastel-de-choclo-chilean-corn-pie",
+    "title": "Pastel de Choclo",
+    "shortDescription": "Sweet corn and beef casserole baked to golden perfection",
+    "note": "Chile's beloved summer comfort dish with a sweet-savory contrast",
+    "introCopy": "Pastel de choclo is a cornerstone of Chilean home cooking, combining a rich beef and chicken filling (pino) with a sweet fresh corn topping. Traditionally baked in clay dishes and served during corn season, this casserole balances savory meat, briny olives, sweet raisins, and creamy corn in every spoonful.",
+    "servings": 6,
+    "prepMinutes": 40,
+    "cookMinutes": 45,
+    "difficulty": "MEDIUM",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#F4C430",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Pino (filling)",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino (filling)",
+        "order": 2,
+        "quantity": "2",
+        "unit": "whole",
+        "item": "onions",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": "Pino (filling)",
+        "order": 3,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Pino (filling)",
+        "order": 4,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino (filling)",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino (filling)",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino (filling)",
+        "order": 7,
+        "quantity": "60",
+        "unit": "g",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino (filling)",
+        "order": 8,
+        "quantity": "12",
+        "unit": "whole",
+        "item": "black olives",
+        "prepNote": "pitted",
+        "optional": false
+      },
+      {
+        "component": "Pino (filling)",
+        "order": 9,
+        "quantity": "3",
+        "unit": "whole",
+        "item": "hard-boiled eggs",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": "Pino (filling)",
+        "order": 10,
+        "quantity": "2",
+        "unit": "whole",
+        "item": "chicken thighs",
+        "prepNote": "cooked and shredded",
+        "optional": false
+      },
+      {
+        "component": "Pino (filling)",
+        "order": 11,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Corn topping",
+        "order": 12,
+        "quantity": "6",
+        "unit": "cups",
+        "item": "fresh corn kernels",
+        "prepNote": "from about 8 ears",
+        "optional": false
+      },
+      {
+        "component": "Corn topping",
+        "order": 13,
+        "quantity": "120",
+        "unit": "ml",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Corn topping",
+        "order": 14,
+        "quantity": "40",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Corn topping",
+        "order": 15,
+        "quantity": "8",
+        "unit": "leaves",
+        "item": "fresh basil",
+        "prepNote": "torn",
+        "optional": false
+      },
+      {
+        "component": "Corn topping",
+        "order": 16,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Corn topping",
+        "order": 17,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For topping",
+        "order": 18,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "sugar",
+        "prepNote": "for caramelizing",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Sauté the onions in oil over medium heat until golden and soft, about 10 minutes. Add garlic, cumin, paprika, and oregano, cooking for 1 minute until fragrant.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 2,
+        "text": "Add the ground beef, breaking it up with a spoon. Cook until browned, about 8 minutes. Season with salt and pepper, then stir in the shredded chicken and raisins. Remove from heat and let cool slightly.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Preheat the oven to 200°C (400°F). Divide the meat filling among individual clay dishes or a large baking dish. Nestle the hard-boiled egg quarters and olives into the filling.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "For the corn topping, blend the corn kernels, milk, butter, basil, sugar, and salt in a food processor until you have a thick, slightly chunky paste.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Transfer the corn mixture to a saucepan and cook over medium heat, stirring constantly, until thickened like soft polenta, about 8 minutes.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 6,
+        "text": "Spread the corn mixture evenly over the meat filling, smoothing the top. Sprinkle with the 2 tablespoons of sugar.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 7,
+        "text": "Bake for 35-45 minutes until the top is golden brown and slightly caramelized. Let rest for 10 minutes before serving.",
+        "durationMinutes": 55
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Poultry",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 20
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "empanadas-de-pino-chilean-beef-empanadas",
+    "title": "Empanadas de Pino",
+    "shortDescription": "Flaky baked pastries filled with spiced beef, onions, and olives",
+    "note": "Chile's national dish, traditionally eaten on Independence Day",
+    "introCopy": "Empanadas de pino are to Chile what apple pie is to America—a symbol of home and celebration. The filling (pino) features heavily seasoned ground beef with caramelized onions, raisins, olives, and a wedge of hard-boiled egg. The golden, flaky crust is brushed with egg wash and often marked with fork indentations.",
+    "servings": 12,
+    "prepMinutes": 45,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "FREEZER_FRIENDLY",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#D4A373",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "600",
+        "unit": "g",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "cold, cubed",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "180",
+        "unit": "ml",
+        "item": "cold water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino filling",
+        "order": 5,
+        "quantity": "600",
+        "unit": "g",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino filling",
+        "order": 6,
+        "quantity": "3",
+        "unit": "whole",
+        "item": "onions",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Pino filling",
+        "order": 7,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Pino filling",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino filling",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino filling",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino filling",
+        "order": 11,
+        "quantity": "80",
+        "unit": "g",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pino filling",
+        "order": 12,
+        "quantity": "24",
+        "unit": "whole",
+        "item": "black olives",
+        "prepNote": "pitted",
+        "optional": false
+      },
+      {
+        "component": "Pino filling",
+        "order": 13,
+        "quantity": "3",
+        "unit": "whole",
+        "item": "hard-boiled eggs",
+        "prepNote": "each cut into 4 wedges",
+        "optional": false
+      },
+      {
+        "component": "Pino filling",
+        "order": 14,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For assembly",
+        "order": 15,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "egg",
+        "prepNote": "beaten, for egg wash",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make the dough: combine flour and salt in a large bowl. Rub in the cold butter with your fingertips until the mixture resembles breadcrumbs. Add cold water gradually, mixing until a dough forms. Wrap in plastic and refrigerate for 30 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "For the filling, heat oil in a large pan and cook the onions over medium-low heat until deeply golden and caramelized, about 15 minutes. Add garlic and spices, cooking for 1 minute.",
+        "durationMinutes": 16
+      },
+      {
+        "order": 3,
+        "text": "Add the ground beef and cook, breaking it up, until browned and cooked through, about 8 minutes. Stir in raisins, season generously with salt and pepper, and let cool completely.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Preheat the oven to 190°C (375°F) and line two baking sheets with parchment paper.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Divide the dough into 12 equal portions. Roll each into a circle about 15cm in diameter.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 6,
+        "text": "Place a generous spoonful of filling on one half of each circle, then add 2 olives and 1 egg wedge. Fold the dough over to create a half-moon, sealing the edges by crimping with a fork.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 7,
+        "text": "Place empanadas on the prepared baking sheets, brush with beaten egg, and poke a small vent hole in the top of each.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 8,
+        "text": "Bake for 22-25 minutes until golden brown and crisp. Serve warm.",
+        "durationMinutes": 25
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 30
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "cazuela-chilean-chicken-stew",
+    "title": "Cazuela",
+    "shortDescription": "Hearty chicken and vegetable stew with corn, pumpkin, and potatoes",
+    "note": "A beloved Chilean comfort stew served year-round",
+    "introCopy": "Cazuela is Chile's answer to chicken soup, a nourishing one-pot meal that showcases the country's agricultural bounty. Each bowl holds a piece of chicken, chunks of pumpkin and potato, corn on the cob, green beans, and rice in a fragrant, clear broth. It's simple, wholesome, and deeply satisfying.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 60,
+    "difficulty": "EASY",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "ONE_POT",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#E8A87C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "chicken pieces",
+        "prepNote": "thighs and drumsticks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "litres",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "onion",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "smashed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "whole",
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": "whole",
+        "item": "medium potatoes",
+        "prepNote": "peeled and halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "400",
+        "unit": "g",
+        "item": "pumpkin or butternut squash",
+        "prepNote": "cut into large chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": "whole",
+        "item": "corn on the cob",
+        "prepNote": "cut into thirds",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "150",
+        "unit": "g",
+        "item": "green beans",
+        "prepNote": "trimmed and halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "100",
+        "unit": "g",
+        "item": "white rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "1",
+        "unit": "handful",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Place the chicken pieces in a large pot with the water, onion, garlic, oregano, and bay leaves. Bring to a boil, then reduce heat and simmer for 30 minutes, skimming off any foam.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 2,
+        "text": "Add the potatoes, pumpkin, and corn. Season the broth with salt and pepper. Continue simmering for 15 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Stir in the rice and green beans. Cook for another 15 minutes until the rice is tender and the vegetables are cooked through.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Taste and adjust seasoning. Ladle into deep bowls, ensuring each serving has a piece of chicken, corn, and a variety of vegetables. Garnish with fresh cilantro.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "curanto-chilean-seafood-meat-earth-oven",
+    "title": "Curanto",
+    "shortDescription": "Traditional Chiloé seafood and meat feast cooked in an earth pit",
+    "note": "An ancient Mapuche technique adapted for stovetop cooking",
+    "introCopy": "Curanto is one of South America's oldest cooking traditions, originating on the island of Chiloé. Traditionally prepared in a stone-lined earth pit, layers of shellfish, meats, potatoes, and milcao (potato bread) steam together under nalca leaves. This stovetop version captures the spirit with a large pot, delivering smoky, briny flavors in every layer.",
+    "servings": 8,
+    "prepMinutes": 30,
+    "cookMinutes": 50,
+    "difficulty": "INVOLVED",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": false,
+    "attributes": [
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#8B4513",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "mussels",
+        "prepNote": "scrubbed and debearded",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "500",
+        "unit": "g",
+        "item": "clams",
+        "prepNote": "scrubbed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "6",
+        "unit": "whole",
+        "item": "chicken thighs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "6",
+        "unit": "pieces",
+        "item": "pork ribs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "whole",
+        "item": "chorizo sausages",
+        "prepNote": "cut into chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "small potatoes",
+        "prepNote": "whole",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "head",
+        "item": "cabbage",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "chicken or seafood stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "smashed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "3",
+        "unit": "whole",
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "1",
+        "unit": "batch",
+        "item": "pebre",
+        "prepNote": "Chilean salsa",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Season the chicken and pork ribs with salt and pepper. In a very large, heavy-bottomed pot or Dutch oven, brown the chicken and ribs in batches over medium-high heat. Remove and set aside.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Add the chorizo to the pot and brown briefly. Remove and set aside with the other meats.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Layer the potatoes at the bottom of the pot. Add the garlic and bay leaves, then arrange the browned meats on top.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Pour in the white wine and stock. Bring to a boil, then reduce heat to low, cover tightly, and simmer for 25 minutes.",
+        "durationMinutes": 28
+      },
+      {
+        "order": 5,
+        "text": "Add the cabbage wedges, mussels, and clams on top. Cover again and steam for 10-12 minutes until the shellfish open and the cabbage is tender.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 6,
+        "text": "Discard any shellfish that haven't opened. Serve family-style in large bowls, spooning the cooking broth over everything. Accompany with pebre.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Shellfish",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Poultry",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Shellfish"
+    ]
+  },
+  {
+    "slug": "completo-chilean-loaded-hot-dog",
+    "title": "Completo",
+    "shortDescription": "Chile's iconic hot dog piled high with avocado, tomatoes, and mayo",
+    "note": "Street food royalty: messy, indulgent, and utterly Chilean",
+    "introCopy": "The completo is a maximalist take on the hot dog, embodying Chile's love for abundant toppings. A soft bun cradles a grilled sausage, then gets buried under mashed avocado, diced tomatoes, sauerkraut, and generous squiggles of mayonnaise. It's messy, it's massive, and it's perfect.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 10,
+    "difficulty": "EASY",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#FFD700",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": "whole",
+        "item": "large hot dog sausages",
+        "prepNote": "vienesas",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": "whole",
+        "item": "soft hot dog buns",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "whole",
+        "item": "ripe avocados",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "whole",
+        "item": "tomatoes",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "150",
+        "unit": "g",
+        "item": "sauerkraut",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "120",
+        "unit": "ml",
+        "item": "mayonnaise",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "optional",
+        "unit": null,
+        "item": "hot sauce or aji",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Grill or pan-fry the hot dog sausages over medium-high heat until browned and heated through, about 8 minutes. Toast the buns lightly if desired.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Mash the avocados with a fork and season with salt.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Place each sausage in a bun. Spread a generous layer of mashed avocado on top.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Top with diced tomatoes and sauerkraut, then drizzle liberally with mayonnaise. Add hot sauce if using.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Serve immediately with plenty of napkins.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Pork",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fermented foods",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 40
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "porotos-granados-chilean-bean-corn-squash-stew",
+    "title": "Porotos Granados",
+    "shortDescription": "Creamy summer stew of cranberry beans, corn, and squash",
+    "note": "Chile's quintessential vegetarian comfort dish",
+    "introCopy": "Porotos granados celebrates the Chilean summer harvest with fresh cranberry beans, sweet corn, and tender squash simmered into a thick, comforting stew. Flavored with sofrito and basil, this humble dish is rustic, nourishing, and utterly satisfying—often served with a side of pebre and fresh bread.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 40,
+    "difficulty": "EASY",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "EAT_MORE_VEG",
+      "ONE_POT",
+      "HIGH_FIBER"
+    ],
+    "heroColor": "#C87533",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "fresh cranberry beans",
+        "prepNote": "or 2 x 400g cans, drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "400",
+        "unit": "g",
+        "item": "butternut squash",
+        "prepNote": "peeled and diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "fresh corn kernels",
+        "prepNote": "from about 3 ears",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "750",
+        "unit": "ml",
+        "item": "vegetable stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "10",
+        "unit": "leaves",
+        "item": "fresh basil",
+        "prepNote": "torn",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "If using fresh cranberry beans, cook them in boiling water until tender, about 25 minutes. Drain and set aside. If using canned, rinse and drain.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Heat the oil in a large pot and sauté the onion over medium heat until soft and translucent, about 8 minutes. Add garlic and paprika, cooking for 1 minute.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 3,
+        "text": "Add the squash, corn, cooked beans, and stock. Bring to a boil, then reduce heat and simmer until the squash is tender, about 15 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Use the back of a spoon to mash some of the beans and squash against the side of the pot to thicken the stew.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Stir in the fresh basil and season generously with salt and pepper. Simmer for another 5 minutes, then serve hot.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Gluten-free",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "sopaipillas-chilean-fried-pumpkin-bread",
+    "title": "Sopaipillas",
+    "shortDescription": "Crispy fried pumpkin dough rounds, sweet or savory",
+    "note": "Chile's beloved street snack for rainy days",
+    "introCopy": "Sopaipillas are golden, puffy discs of fried dough made with mashed pumpkin, creating a tender interior and crisp exterior. Sold on street corners during Chile's rainy winters, they're eaten plain, drizzled with chancaca (spiced molasses syrup), or topped with pebre for a savory kick.",
+    "servings": 20,
+    "prepMinutes": 25,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "FRIED",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#E09E45",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "60",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 5,
+        "quantity": "250",
+        "unit": "g",
+        "item": "pumpkin or butternut squash",
+        "prepNote": "cooked and mashed",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 6,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "warm water",
+        "prepNote": "approximately",
+        "optional": false
+      },
+      {
+        "component": "For frying",
+        "order": 7,
+        "quantity": "1",
+        "unit": "litre",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large bowl, combine the flour, baking powder, and salt. Add the melted butter and mashed pumpkin, mixing to combine.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Gradually add warm water, kneading until you have a smooth, elastic dough that's not sticky. You may not need all the water. Cover and rest for 20 minutes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 3,
+        "text": "Roll the dough out on a floured surface to about 3mm thickness. Cut into circles using a cookie cutter or glass (about 8cm diameter). Poke each circle a few times with a fork to prevent excessive puffing.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Heat the oil in a deep pot to 180°C (350°F). Test with a small piece of dough—it should sizzle and rise immediately.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Fry the sopaipillas in batches, turning once, until golden brown on both sides, about 2-3 minutes per batch. Drain on paper towels.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 6,
+        "text": "Serve warm, plain or with chancaca syrup, honey, or pebre.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "humitas-chilean-corn-tamales",
+    "title": "Humitas",
+    "shortDescription": "Sweet fresh corn parcels steamed in corn husks",
+    "note": "Chile's answer to tamales, delicate and naturally sweet",
+    "introCopy": "Humitas are tender parcels of fresh corn paste, seasoned with basil and onion, wrapped in corn husks, and steamed until set. Unlike Mexican tamales, Chilean humitas are made entirely from fresh corn, giving them a naturally sweet, creamy texture. They're a summer staple, enjoyed warm with a sprinkle of sugar or a side of tomato salad.",
+    "servings": 12,
+    "prepMinutes": 40,
+    "cookMinutes": 45,
+    "difficulty": "MEDIUM",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#F4E5C2",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "8",
+        "unit": "cups",
+        "item": "fresh corn kernels",
+        "prepNote": "from about 12 ears, husks reserved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "10",
+        "unit": "leaves",
+        "item": "fresh basil",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "120",
+        "unit": "ml",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Carefully remove the husks from the corn, keeping them whole. Rinse the husks and soak in warm water for 20 minutes to soften.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "In a pan, melt the butter and sauté the onion until soft and translucent, about 8 minutes. Set aside to cool.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Blend the corn kernels in a food processor until you have a thick, slightly chunky paste. Transfer to a large bowl.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Stir in the sautéed onion, basil, salt, sugar, and milk. Mix until well combined. The mixture should be thick but spreadable.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Take two overlapping corn husks and spoon about 3 tablespoons of the corn mixture into the center. Fold the sides over, then fold the top and bottom to create a parcel. Tie with kitchen string or a thin strip of husk. Repeat with remaining husks and filling.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 6,
+        "text": "Arrange the humitas upright in a large steamer basket. Steam over simmering water for 40-45 minutes until firm and cooked through.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 7,
+        "text": "Let cool slightly before serving. Unwrap and enjoy warm, optionally with a sprinkle of sugar.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "pebre-chilean-cilantro-tomato-salsa",
+    "title": "Pebre",
+    "shortDescription": "Fresh cilantro, tomato, and onion salsa with a tangy kick",
+    "note": "Chile's ubiquitous condiment, served with everything",
+    "introCopy": "Pebre is to Chile what salsa is to Mexico—a bright, herbaceous condiment that appears on every table. Made with heaps of fresh cilantro, diced tomatoes, onions, and aji verde (green chili), it's punchy, fresh, and addictive. Serve it with bread, empanadas, grilled meats, or straight from the bowl with a spoon.",
+    "servings": 8,
+    "prepMinutes": 15,
+    "cookMinutes": 0,
+    "difficulty": "EASY",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "NO_COOK",
+      "UNDER_30",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#6B8E23",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "large bunch",
+        "item": "fresh cilantro",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "whole",
+        "item": "tomatoes",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "whole",
+        "item": "green chilies",
+        "prepNote": "aji verde or jalapeño, minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "60",
+        "unit": "ml",
+        "item": "white wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "80",
+        "unit": "ml",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Combine the cilantro, tomatoes, onion, chilies, and garlic in a bowl.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Stir in the vinegar and olive oil. Season generously with salt.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Let sit for at least 10 minutes to allow the flavors to meld. Pebre tastes best when made a few hours ahead. Serve at room temperature.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Gluten-free",
+      "Dairy-free",
+      "Low-carb",
+      "Paleo",
+      "Whole30",
+      "Keto"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "charquican-chilean-beef-potato-pumpkin-hash",
+    "title": "Charquicán",
+    "shortDescription": "Rustic beef and vegetable hash with pumpkin and potatoes",
+    "note": "A hearty, one-pot peasant dish full of history",
+    "introCopy": "Charquicán is a humble, soul-warming dish born from Chile's rural kitchens. Originally made with charqui (dried meat), it's now a thick stew-like hash of ground beef, potatoes, pumpkin, corn, and green beans. Everything is cooked down until soft, then partially mashed for a rustic, comforting texture. It's simple food at its best.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 40,
+    "difficulty": "EASY",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "ONE_POT",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#B87333",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": "whole",
+        "item": "medium potatoes",
+        "prepNote": "peeled and diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "300",
+        "unit": "g",
+        "item": "pumpkin or butternut squash",
+        "prepNote": "peeled and diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh or frozen corn kernels",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "150",
+        "unit": "g",
+        "item": "green beans",
+        "prepNote": "trimmed and chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "beef stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "fried egg per person",
+        "prepNote": "optional",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat the oil in a large pot and sauté the onion over medium heat until soft, about 8 minutes. Add the garlic, cumin, and paprika, cooking for 1 minute.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 2,
+        "text": "Add the ground beef, breaking it up with a spoon, and cook until browned, about 8 minutes. Season with salt and pepper.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Add the potatoes, pumpkin, corn, green beans, and stock. Bring to a boil, then reduce heat and simmer, covered, until the vegetables are very tender, about 25 minutes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 4,
+        "text": "Using a potato masher or the back of a spoon, roughly mash some of the vegetables to thicken the mixture. It should be chunky and hearty, not smooth.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Taste and adjust seasoning. Serve hot in bowls, topped with a fried egg if desired.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "mariscal-chilean-seafood-stew",
+    "title": "Mariscal",
+    "shortDescription": "Rich tomato-based seafood stew with white fish and shellfish",
+    "note": "Coastal Chile in a bowl, robust and briny",
+    "introCopy": "Mariscal is a hearty fisherman's stew that showcases Chile's incredible Pacific bounty. White fish, mussels, clams, and shrimp simmer in a rich tomato and white wine broth spiked with garlic and paprika. It's warming, deeply flavorful, and perfect with crusty bread to soak up every drop.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 30,
+    "difficulty": "MEDIUM",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "ONE_POT"
+    ],
+    "heroColor": "#DC143C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "can (400g)",
+        "item": "crushed tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "250",
+        "unit": "ml",
+        "item": "white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "fish stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "500",
+        "unit": "g",
+        "item": "firm white fish fillets",
+        "prepNote": "such as cod or hake, cut into chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "300",
+        "unit": "g",
+        "item": "mussels",
+        "prepNote": "scrubbed and debearded",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "300",
+        "unit": "g",
+        "item": "clams",
+        "prepNote": "scrubbed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "200",
+        "unit": "g",
+        "item": "raw prawns",
+        "prepNote": "peeled and deveined",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "1",
+        "unit": "handful",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 14,
+        "quantity": "1",
+        "unit": "loaf",
+        "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat the olive oil in a large, deep pot over medium heat. Sauté the onion until soft, about 8 minutes. Add the garlic and paprika, cooking for 1 minute until fragrant.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 2,
+        "text": "Pour in the crushed tomatoes, white wine, and fish stock. Bring to a simmer and cook for 10 minutes to let the flavors meld.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Season the broth with salt and pepper. Add the fish chunks and simmer gently for 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Add the mussels, clams, and prawns. Cover and cook for 5-7 minutes until the shellfish open and the prawns are pink and cooked through. Discard any shellfish that don't open.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 5,
+        "text": "Taste and adjust seasoning. Ladle into bowls, garnish with parsley, and serve with plenty of crusty bread.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "White fish",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Shellfish",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "Pescatarian"
+    ],
+    "allergenTags": [
+      "Fish",
+      "Shellfish"
+    ]
+  },
+  {
+    "slug": "chupe-de-mariscos-chilean-shellfish-casserole",
+    "title": "Chupe de Mariscos",
+    "shortDescription": "Creamy baked shellfish casserole with cheese and breadcrumbs",
+    "note": "A rich, indulgent celebration of the sea",
+    "introCopy": "Chupe de mariscos is Chile's version of a seafood gratin, layering tender shellfish, shrimp, and fish in a creamy white wine sauce, then topping it with cheese and breadcrumbs before baking. The result is bubbly, golden, and utterly decadent—a dish reserved for special occasions and Sunday family lunches.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#FFD39B",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "300",
+        "unit": "g",
+        "item": "mussels",
+        "prepNote": "scrubbed and debearded",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "300",
+        "unit": "g",
+        "item": "clams",
+        "prepNote": "scrubbed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "200",
+        "unit": "g",
+        "item": "raw prawns",
+        "prepNote": "peeled and deveined",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "250",
+        "unit": "g",
+        "item": "white fish fillets",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "60",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "40",
+        "unit": "g",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "150",
+        "unit": "ml",
+        "item": "white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "100",
+        "unit": "g",
+        "item": "grated cheese",
+        "prepNote": "such as Gruyère or Cheddar",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "2",
+        "unit": "whole",
+        "item": "hard-boiled eggs",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt, black pepper, and nutmeg",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For topping",
+        "order": 14,
+        "quantity": "50",
+        "unit": "g",
+        "item": "breadcrumbs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For topping",
+        "order": 15,
+        "quantity": "30",
+        "unit": "g",
+        "item": "grated Parmesan",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For topping",
+        "order": 16,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "melted butter",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Steam the mussels and clams in a covered pot with a splash of water until they open, about 5 minutes. Strain and reserve the cooking liquid. Remove most shellfish from their shells, keeping a few in shells for presentation. Discard any that didn't open.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Preheat the oven to 190°C (375°F). Butter a large baking dish.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "In a large saucepan, melt the butter over medium heat. Sauté the onion until soft, about 8 minutes. Add the garlic and cook for 1 minute.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 4,
+        "text": "Stir in the flour and cook for 2 minutes. Gradually whisk in the milk, white wine, and 100ml of the reserved shellfish cooking liquid. Bring to a simmer, stirring constantly, until thickened, about 5 minutes. Season with salt, pepper, and a pinch of nutmeg.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 5,
+        "text": "Stir in half the cheese until melted. Gently fold in the shellfish, prawns, and fish.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Pour the mixture into the prepared baking dish. Arrange the sliced hard-boiled eggs on top.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 7,
+        "text": "Mix the breadcrumbs, Parmesan, and melted butter. Sprinkle evenly over the top.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 8,
+        "text": "Bake for 25-30 minutes until golden, bubbly, and cooked through. Let rest for 5 minutes before serving.",
+        "durationMinutes": 35
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Shellfish",
+        "weight": 50
+      },
+      {
+        "foodGroup": "White fish",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 30
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Shellfish",
+      "Fish",
+      "Milk",
+      "Eggs",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "pan-amasado-chilean-kneaded-bread",
+    "title": "Pan Amasado",
+    "shortDescription": "Soft, rustic hand-kneaded bread baked until golden",
+    "note": "Chile's everyday bread, tender and slightly sweet",
+    "introCopy": "Pan amasado is the bread of Chilean childhood—soft, pillowy, and baked fresh daily. Lightly sweetened and enriched with a touch of lard or butter, these hand-shaped rounds emerge from the oven with a golden crust and fluffy interior. They're perfect for breakfast with butter and jam, or alongside a bowl of cazuela.",
+    "servings": 10,
+    "prepMinutes": 20,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD"
+    ],
+    "heroColor": "#F5DEB3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "7",
+        "unit": "g",
+        "item": "instant yeast",
+        "prepNote": "1 packet",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "80",
+        "unit": "g",
+        "item": "lard or butter",
+        "prepNote": "softened",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "280",
+        "unit": "ml",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large bowl, combine the flour, sugar, salt, and yeast. Rub in the lard or butter with your fingertips until the mixture resembles breadcrumbs.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Gradually add the warm water, mixing until a soft dough forms. Knead on a floured surface for 8-10 minutes until smooth and elastic.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Place the dough in a lightly greased bowl, cover with a damp cloth, and let rise in a warm place for 1 hour until doubled in size.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 4,
+        "text": "Preheat the oven to 200°C (400°F) and line a baking sheet with parchment paper.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Punch down the dough and divide into 10 equal pieces. Shape each into a round, flatten slightly, and place on the baking sheet. Poke the surface a few times with a fork.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 6,
+        "text": "Bake for 18-20 minutes until golden brown and hollow-sounding when tapped. Serve warm.",
+        "durationMinutes": 20
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "alfajores-chilean-dulce-de-leche-cookies",
+    "title": "Alfajores",
+    "shortDescription": "Tender shortbread cookies sandwiched with dulce de leche",
+    "note": "Chile's beloved sweet treat, delicate and irresistible",
+    "introCopy": "Alfajores are a South American treasure, and Chile's version is wonderfully tender and crumbly. Two soft, cornstarch-based cookies are sandwiched with manjar (Chilean dulce de leche), then often rolled in shredded coconut or dusted with powdered sugar. They're the perfect accompaniment to afternoon tea or coffee.",
+    "servings": 18,
+    "prepMinutes": 25,
+    "cookMinutes": 12,
+    "difficulty": "EASY",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#F4E8D8",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Cookies",
+        "order": 1,
+        "quantity": "200",
+        "unit": "g",
+        "item": "cornstarch",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 2,
+        "quantity": "100",
+        "unit": "g",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 4,
+        "quantity": "200",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "softened",
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 5,
+        "quantity": "100",
+        "unit": "g",
+        "item": "icing sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 6,
+        "quantity": "2",
+        "unit": "whole",
+        "item": "egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling and coating",
+        "order": 8,
+        "quantity": "300",
+        "unit": "g",
+        "item": "dulce de leche",
+        "prepNote": "manjar",
+        "optional": false
+      },
+      {
+        "component": "Filling and coating",
+        "order": 9,
+        "quantity": "100",
+        "unit": "g",
+        "item": "shredded coconut or icing sugar",
+        "prepNote": "for coating",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat the oven to 170°C (340°F) and line two baking sheets with parchment paper.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Sift together the cornstarch, flour, and baking powder.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "In a large bowl, beat the butter and icing sugar until light and fluffy, about 3 minutes. Add the egg yolks and vanilla, beating until combined.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 4,
+        "text": "Gently fold in the dry ingredients until a soft dough forms. Do not overmix.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Roll the dough out on a lightly floured surface to about 5mm thickness. Cut out circles using a 5cm cookie cutter. Re-roll scraps as needed.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Place the cookies on the prepared baking sheets and bake for 10-12 minutes until just set but not browned. Let cool completely on a wire rack.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 7,
+        "text": "Spread a generous layer of dulce de leche on the flat side of one cookie, then sandwich with another cookie. Roll the edges in shredded coconut or dust with icing sugar.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 8,
+        "text": "Store in an airtight container for up to 1 week. The cookies soften and improve after a day.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "mote-con-huesillo-chilean-wheat-peach-drink",
+    "title": "Mote con Huesillo",
+    "shortDescription": "Sweet drink of husked wheat and dried peaches in syrup",
+    "note": "Chile's most iconic refreshment, served ice-cold",
+    "introCopy": "Mote con huesillo is Chile's national drink, a sweet, refreshing beverage made from husked wheat (mote) and whole dried peaches (huesillos) steeped in spiced sugar syrup. Served ice-cold, it's part drink, part snack—you sip the syrup and spoon out the chewy wheat and tender peach. It's sold from street carts across Chile, especially in summer.",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 40,
+    "difficulty": "EASY",
+    "cuisine": "Chilean",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#F28C28",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "300",
+        "unit": "g",
+        "item": "husked wheat",
+        "prepNote": "mote",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "12",
+        "unit": "whole",
+        "item": "dried peaches",
+        "prepNote": "huesillos",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "300",
+        "unit": "g",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "litres",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "stick",
+        "item": "cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "whole",
+        "item": "cloves",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Rinse the husked wheat and soak in water for at least 4 hours or overnight. Drain.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "In a large pot, combine the drained wheat with 1.5 litres of water. Bring to a boil, then reduce heat and simmer until tender, about 30 minutes. Drain and set aside.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 3,
+        "text": "Rinse the dried peaches. In the same pot, combine the peaches, sugar, remaining 500ml water, cinnamon stick, and cloves. Bring to a boil, then reduce heat and simmer for 15 minutes until the peaches are plump and the syrup is fragrant.",
+        "durationMinutes": 18
+      },
+      {
+        "order": 4,
+        "text": "Remove from heat and let the syrup cool completely. Remove the cinnamon stick and cloves.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 5,
+        "text": "To serve, place a generous spoonful of cooked wheat and one or two peaches in a tall glass. Pour the cold syrup over the top and add ice if desired.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Serve with a spoon and straw. Best enjoyed ice-cold.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Whole grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten"
+    ]
+  }
+]

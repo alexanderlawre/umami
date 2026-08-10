@@ -1,0 +1,4024 @@
+[
+  {
+    "slug": "soufflé-au-fromage",
+    "title": "Soufflé au Fromage",
+    "shortDescription": "Classic French cheese soufflé with Gruyère",
+    "note": "Serve immediately; soufflés deflate quickly after baking.",
+    "introCopy": "This ethereal cheese soufflé is a cornerstone of French bistro cooking. The key is a well-made béchamel base, stiffly beaten egg whites, and confidence—don't open the oven door during baking.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#F4E4C1",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "butter, plus extra for greasing",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "300",
+        "unit": "ml",
+        "item": "whole milk",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "150",
+        "unit": "g",
+        "item": "Gruyère cheese",
+        "prepNote": "finely grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": "separated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "nutmeg",
+        "prepNote": "freshly grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "white pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 200°C (400°F). Generously butter a 1.5-litre soufflé dish and dust with grated Parmesan or breadcrumbs.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Melt butter in a saucepan over medium heat. Stir in flour and cook for 1 minute to form a roux. Gradually whisk in warm milk until smooth. Cook, stirring, until thick, about 3-4 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Remove from heat. Stir in grated Gruyère, nutmeg, salt, and pepper until cheese melts. Beat in egg yolks one at a time.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "In a clean bowl, whisk egg whites to stiff peaks. Fold a spoonful into the cheese base to lighten, then gently fold in remaining whites.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 5,
+        "text": "Pour into prepared dish. Run your thumb around the rim to create a 'top hat' effect. Bake for 20-25 minutes until risen and golden. Serve immediately.",
+        "durationMinutes": 25
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "steak-au-poivre",
+    "title": "Steak au Poivre",
+    "shortDescription": "Peppercorn-crusted steak with cognac cream sauce",
+    "note": "Use a heavy-bottomed pan for the best crust.",
+    "introCopy": "This luxurious Parisian bistro classic pairs a perfectly seared steak with a rich, creamy cognac and peppercorn sauce. It's indulgent, impressive, and ready in minutes.",
+    "servings": 2,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "UNDER_30"
+    ],
+    "heroColor": "#8B4513",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": null,
+        "item": "filet mignon or ribeye steaks",
+        "prepNote": "about 200g each, room temperature",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "black peppercorns",
+        "prepNote": "coarsely crushed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "sea salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "60",
+        "unit": "ml",
+        "item": "cognac or brandy",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "beef stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "double cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "frites or mashed potatoes",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Pat steaks dry. Press crushed peppercorns into both sides of each steak, then season with salt.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Heat oil and 1 tbsp butter in a heavy pan over high heat. Sear steaks for 3-4 minutes per side for medium-rare. Remove and rest.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Reduce heat to medium. Add cognac to the pan (be careful—it may flame). Scrape up browned bits, then add stock and simmer until reduced by half.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Stir in cream and any resting juices. Simmer until thickened. Swirl in remaining butter. Taste and adjust seasoning.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Plate steaks, spoon sauce over, and serve immediately with frites or mash.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 50
+      }
+    ],
+    "dietTags": [
+      "High-protein",
+      "Low-carb",
+      "Keto"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "salade-lyonnaise",
+    "title": "Salade Lyonnaise",
+    "shortDescription": "Frisée salad with bacon, croutons, and poached egg",
+    "note": "The runny yolk acts as additional dressing.",
+    "introCopy": "From Lyon, the gastronomic capital of France, this composed salad combines bitter frisée, crisp bacon lardons, crunchy croutons, and a perfectly poached egg with a warm vinaigrette.",
+    "servings": 2,
+    "prepMinutes": 15,
+    "cookMinutes": 10,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "UNDER_30"
+    ],
+    "heroColor": "#9ACD32",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Salad",
+        "order": 1,
+        "quantity": "1",
+        "unit": null,
+        "item": "frisée lettuce",
+        "prepNote": "washed and torn",
+        "optional": false
+      },
+      {
+        "component": "Salad",
+        "order": 2,
+        "quantity": "150",
+        "unit": "g",
+        "item": "thick-cut bacon or lardons",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Salad",
+        "order": 3,
+        "quantity": "2",
+        "unit": "slices",
+        "item": "day-old bread",
+        "prepNote": "cubed",
+        "optional": false
+      },
+      {
+        "component": "Salad",
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Salad",
+        "order": 5,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "white wine vinegar",
+        "prepNote": "for poaching water",
+        "optional": false
+      },
+      {
+        "component": "Dressing",
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "red wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dressing",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "Dijon mustard",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dressing",
+        "order": 8,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dressing",
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "shallot",
+        "prepNote": "finely minced",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Cook bacon in a pan until crisp. Remove and set aside. In the bacon fat, fry bread cubes until golden and crisp. Drain on paper towels.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 2,
+        "text": "Bring a pan of water to a gentle simmer with 1 tbsp white wine vinegar. Poach eggs for 3-4 minutes until whites are set but yolks runny. Remove with a slotted spoon.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "In a small bowl, whisk together red wine vinegar, mustard, and shallot. Slowly whisk in olive oil. Season with salt and pepper.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Toss frisée with half the dressing. Divide between plates. Top with bacon, croutons, and a poached egg.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Drizzle remaining dressing over. Serve immediately, encouraging diners to break the yolk into the salad.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 20
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Eggs",
+      "Wheat/gluten",
+      "Mustard"
+    ]
+  },
+  {
+    "slug": "crème-brûlée",
+    "title": "Crème Brûlée",
+    "shortDescription": "Silky vanilla custard with caramelized sugar crust",
+    "note": "Use a kitchen torch for the best caramelization.",
+    "introCopy": "This iconic French dessert features a rich, creamy vanilla custard beneath a brittle, caramelized sugar shell. The contrast between the silky custard and the crackling topping is pure magic.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 40,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#F5DEB3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "600",
+        "unit": "ml",
+        "item": "double cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "vanilla pod",
+        "prepNote": "split and seeds scraped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "6",
+        "unit": null,
+        "item": "large egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "100",
+        "unit": "g",
+        "item": "caster sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "6",
+        "unit": "tsp",
+        "item": "demerara or caster sugar",
+        "prepNote": "for topping",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 150°C (300°F). Heat cream with vanilla pod and seeds until just simmering. Remove from heat and let infuse for 10 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Whisk egg yolks and sugar until pale. Remove vanilla pod from cream, then gradually whisk cream into yolk mixture.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Strain mixture through a fine sieve. Divide between 6 ramekins. Place in a deep roasting tin and pour hot water halfway up the sides.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Bake for 35-40 minutes until set but still slightly wobbly in the center. Remove and cool, then refrigerate for at least 4 hours or overnight.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 5,
+        "text": "Just before serving, sprinkle 1 tsp sugar evenly over each custard. Caramelize with a blowtorch until golden and bubbling. Let set for 1 minute before serving.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 60
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "moules-frites",
+    "title": "Moules Frites",
+    "shortDescription": "Steamed mussels in white wine with crispy fries",
+    "note": "Discard any mussels that don't open after cooking.",
+    "introCopy": "A beloved Belgian-French brasserie dish, moules frites pairs plump mussels steamed in white wine, shallots, and herbs with crispy golden fries for dipping in the fragrant broth.",
+    "servings": 2,
+    "prepMinutes": 20,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30"
+    ],
+    "heroColor": "#FFD700",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Mussels",
+        "order": 1,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "fresh mussels",
+        "prepNote": "cleaned and debearded",
+        "optional": false
+      },
+      {
+        "component": "Mussels",
+        "order": 2,
+        "quantity": "2",
+        "unit": null,
+        "item": "shallots",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Mussels",
+        "order": 3,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Mussels",
+        "order": 4,
+        "quantity": "200",
+        "unit": "ml",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mussels",
+        "order": 5,
+        "quantity": "50",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mussels",
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Mussels",
+        "order": 7,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "French fries",
+        "prepNote": "homemade or frozen",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "crusty baguette",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Scrub mussels under cold water. Remove beards and discard any that are open and don't close when tapped.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "In a large pot with a lid, melt butter over medium heat. Add shallots and garlic, cook until softened, about 3 minutes.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Add wine and bring to a boil. Add mussels, cover tightly, and steam for 4-5 minutes, shaking the pot occasionally, until mussels open.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Discard any unopened mussels. Stir in parsley and pepper. Divide mussels and broth between bowls.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Serve immediately with hot fries and baguette for soaking up the broth.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Shellfish",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 40
+      }
+    ],
+    "dietTags": [
+      "Pescatarian"
+    ],
+    "allergenTags": [
+      "Shellfish",
+      "Milk",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "madeleines",
+    "title": "Madeleines",
+    "shortDescription": "Classic French shell-shaped sponge cakes",
+    "note": "Chilling the batter creates the signature hump.",
+    "introCopy": "These delicate, buttery little cakes from Commercy in Lorraine are famous for their distinctive shell shape and tender crumb. Proust made them legendary in literature.",
+    "servings": 24,
+    "prepMinutes": 15,
+    "cookMinutes": 10,
+    "difficulty": "EASY",
+    "cuisine": "French",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#FFE4B5",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "3",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "150",
+        "unit": "g",
+        "item": "caster sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "150",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "150",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "melted and cooled, plus extra for pan",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "zest only",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "icing sugar",
+        "prepNote": "for dusting",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Whisk eggs and sugar until pale and thick, about 3-4 minutes. Sift in flour and baking powder, fold gently.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Fold in melted butter, vanilla, and lemon zest until just combined. Cover and refrigerate for at least 1 hour or overnight.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Preheat oven to 200°C (400°F). Generously butter and flour a madeleine tin.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Spoon batter into molds, filling each about 3/4 full. Bake for 8-10 minutes until golden with a signature hump.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Turn out immediately onto a wire rack. Dust with icing sugar if desired. Best served warm or same day.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 50
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "pissaladière",
+    "title": "Pissaladière",
+    "shortDescription": "Provençal onion tart with anchovies and olives",
+    "note": "The onions should be soft and jammy, not browned.",
+    "introCopy": "This savory tart from Nice is topped with sweet caramelized onions, briny anchovies, and black olives on a tender, pizza-like crust. It's perfect for lunch or as an apéritif.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 60,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#D4A76A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "300",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "7",
+        "unit": "g",
+        "item": "instant yeast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "150",
+        "unit": "ml",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 6,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "onions",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 7,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 8,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "fresh thyme leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 10,
+        "quantity": "12",
+        "unit": null,
+        "item": "anchovy fillets in oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 11,
+        "quantity": "20",
+        "unit": null,
+        "item": "black olives",
+        "prepNote": "pitted",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make dough: combine flour, salt, and yeast. Add water and oil, mix to a soft dough. Knead for 5 minutes. Cover and let rise for 1 hour.",
+        "durationMinutes": 70
+      },
+      {
+        "order": 2,
+        "text": "Meanwhile, heat 4 tbsp olive oil in a large pan. Add onions, garlic, and thyme. Cook gently for 40-45 minutes, stirring often, until very soft and golden. Season and cool.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 3,
+        "text": "Preheat oven to 220°C (425°F). Roll dough into a rectangle and place on an oiled baking sheet. Prick all over with a fork.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Spread onion mixture evenly over dough. Arrange anchovies in a lattice pattern, placing an olive in each diamond.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Bake for 20-25 minutes until crust is golden. Cool slightly, slice, and serve warm or at room temperature.",
+        "durationMinutes": 25
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Alliums",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Oily fish",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Pescatarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Fish"
+    ]
+  },
+  {
+    "slug": "éclair-au-chocolat",
+    "title": "Éclair au Chocolat",
+    "shortDescription": "Chocolate-glazed choux pastry with vanilla cream",
+    "note": "Don't open the oven door while baking choux pastry.",
+    "introCopy": "These elegant French pastries feature light, airy choux filled with luscious vanilla crème pâtissière and topped with glossy chocolate icing. They're a Parisian pâtisserie staple.",
+    "servings": 12,
+    "prepMinutes": 45,
+    "cookMinutes": 30,
+    "difficulty": "INVOLVED",
+    "cuisine": "French",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [],
+    "heroColor": "#6F4E37",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Choux pastry",
+        "order": 1,
+        "quantity": "125",
+        "unit": "ml",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Choux pastry",
+        "order": 2,
+        "quantity": "50",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Choux pastry",
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Choux pastry",
+        "order": 4,
+        "quantity": "75",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Choux pastry",
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Crème pâtissière",
+        "order": 6,
+        "quantity": "400",
+        "unit": "ml",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Crème pâtissière",
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "vanilla pod",
+        "prepNote": "split",
+        "optional": false
+      },
+      {
+        "component": "Crème pâtissière",
+        "order": 8,
+        "quantity": "4",
+        "unit": null,
+        "item": "egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Crème pâtissière",
+        "order": 9,
+        "quantity": "75",
+        "unit": "g",
+        "item": "caster sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Crème pâtissière",
+        "order": 10,
+        "quantity": "25",
+        "unit": "g",
+        "item": "cornflour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chocolate glaze",
+        "order": 11,
+        "quantity": "100",
+        "unit": "g",
+        "item": "dark chocolate",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Chocolate glaze",
+        "order": 12,
+        "quantity": "25",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make choux: heat water, butter, and salt to a rolling boil. Remove from heat, add flour all at once, beat vigorously. Return to heat and stir for 1 minute. Cool 5 minutes, then beat in eggs gradually until glossy.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Preheat oven to 200°C (400°F). Pipe 12 x 10cm logs onto lined baking sheets. Bake 25-30 minutes until golden and crisp. Cool completely.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 3,
+        "text": "Make crème pâtissière: heat milk with vanilla pod. Whisk yolks, sugar, and cornflour. Pour in hot milk, whisk, then return to pan. Cook, stirring, until thick. Strain, cover with cling film, cool.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Make glaze: melt chocolate and butter together until smooth. Let cool slightly.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Pierce éclair bottoms, pipe in crème pâtissière. Dip tops in chocolate glaze. Refrigerate until set, at least 30 minutes. Serve chilled.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 50
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "tarte-aux-poireaux",
+    "title": "Tarte aux Poireaux",
+    "shortDescription": "Creamy leek tart with Gruyère and bacon",
+    "note": "Blind-bake the pastry to prevent a soggy bottom.",
+    "introCopy": "This elegant savory tart showcases the sweet, delicate flavor of leeks in a creamy custard with Gruyère and bacon. It's a French bistro classic, perfect for lunch with a green salad.",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 50,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#E6E8D1",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Pastry",
+        "order": 1,
+        "quantity": "1",
+        "unit": "sheet",
+        "item": "shortcrust pastry",
+        "prepNote": "shop-bought or homemade",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 2,
+        "quantity": "500",
+        "unit": "g",
+        "item": "leeks",
+        "prepNote": "white and light green parts, sliced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 3,
+        "quantity": "100",
+        "unit": "g",
+        "item": "bacon or lardons",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "30",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "3",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "200",
+        "unit": "ml",
+        "item": "double cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "100",
+        "unit": "g",
+        "item": "Gruyère cheese",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "nutmeg",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 190°C (375°F). Line a 23cm tart tin with pastry, prick base, and blind-bake for 15 minutes. Remove beans/paper, bake 5 more minutes.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 2,
+        "text": "Cook bacon until crisp, remove. In the same pan, melt butter and gently cook leeks for 10-12 minutes until very soft but not colored. Season.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 3,
+        "text": "Whisk together eggs, cream, Gruyère, nutmeg, salt, and pepper.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Spread leeks and bacon in pastry case. Pour over egg mixture. Bake for 30-35 minutes until set and golden.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 5,
+        "text": "Cool for 10 minutes before slicing. Serve warm or at room temperature.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Alliums",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "macaron-framboise",
+    "title": "Macaron Framboise",
+    "shortDescription": "Raspberry-filled French almond meringue cookies",
+    "note": "Age egg whites for 24 hours for best results.",
+    "introCopy": "These iconic Parisian treats feature crisp almond meringue shells with ruffled 'feet' and a tender interior, sandwiched with vibrant raspberry buttercream or ganache.",
+    "servings": 24,
+    "prepMinutes": 60,
+    "cookMinutes": 15,
+    "difficulty": "INVOLVED",
+    "cuisine": "French",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#E30B5C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Shells",
+        "order": 1,
+        "quantity": "100",
+        "unit": "g",
+        "item": "ground almonds",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Shells",
+        "order": 2,
+        "quantity": "100",
+        "unit": "g",
+        "item": "icing sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Shells",
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "large egg whites",
+        "prepNote": "aged 24 hours",
+        "optional": false
+      },
+      {
+        "component": "Shells",
+        "order": 4,
+        "quantity": "50",
+        "unit": "g",
+        "item": "caster sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Shells",
+        "order": 5,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "pink food coloring",
+        "prepNote": "gel or powder",
+        "optional": true
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "100",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "softened",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "150",
+        "unit": "g",
+        "item": "icing sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "50",
+        "unit": "g",
+        "item": "raspberry purée",
+        "prepNote": "seedless",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Sift ground almonds and icing sugar together twice. Set aside.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Whisk egg whites to soft peaks. Gradually add caster sugar, whisking to stiff, glossy peaks. Add food coloring if using.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Fold almond mixture into meringue in three additions using a gentle macaronage technique until mixture flows like lava. Pipe 3cm circles onto lined baking sheets. Tap firmly to release air bubbles. Rest 30-60 minutes until a skin forms.",
+        "durationMinutes": 70
+      },
+      {
+        "order": 4,
+        "text": "Preheat oven to 150°C (300°F). Bake for 12-14 minutes. Cool completely on sheets.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Make filling: beat butter, icing sugar, raspberry purée, and lemon juice until fluffy. Pipe onto half the shells, sandwich with remaining shells. Refrigerate 24 hours to mature. Serve at room temperature.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Milk",
+      "Tree nuts"
+    ]
+  },
+  {
+    "slug": "terrine-de-campagne",
+    "title": "Terrine de Campagne",
+    "shortDescription": "Rustic French country pâté with pork and liver",
+    "note": "Age for 2-3 days before serving for best flavor.",
+    "introCopy": "This rustic pâté is a French charcuterie staple, rich with pork, liver, brandy, and aromatics. Serve sliced with cornichons, mustard, and crusty bread.",
+    "servings": 12,
+    "prepMinutes": 30,
+    "cookMinutes": 90,
+    "difficulty": "INVOLVED",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#8B6F47",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "pork shoulder",
+        "prepNote": "minced or finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "250",
+        "unit": "g",
+        "item": "pork liver",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "250",
+        "unit": "g",
+        "item": "fatty bacon or pancetta",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "shallots",
+        "prepNote": "finely minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "crushed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "50",
+        "unit": "ml",
+        "item": "brandy or cognac",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "fresh thyme leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground allspice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "12",
+        "unit": "rashers",
+        "item": "streaky bacon",
+        "prepNote": "for lining terrine",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 14,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "cornichons, mustard, baguette",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 160°C (325°F). Line a terrine mold or loaf tin with overlapping bacon rashers, leaving overhang.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Combine pork, liver, minced bacon, shallots, garlic, eggs, brandy, thyme, allspice, salt, and pepper. Mix thoroughly.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Pack mixture into terrine, press out air pockets. Top with bay leaves. Fold bacon overhang over top. Cover tightly with foil.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Place terrine in a deep roasting tin. Pour hot water halfway up the sides. Bake for 1.5 hours until internal temperature reaches 70°C.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 5,
+        "text": "Remove from water bath, cool to room temperature. Weight down with cans or a brick, refrigerate for 2-3 days. Slice and serve with cornichons, mustard, and baguette.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Pork",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Eggs",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "gougères",
+    "title": "Gougères",
+    "shortDescription": "Savory cheese puffs made with choux pastry",
+    "note": "Serve warm straight from the oven for best texture.",
+    "introCopy": "These airy, golden cheese puffs from Burgundy are made with choux pastry and Gruyère. They're a classic French apéritif, perfect with champagne or wine.",
+    "servings": 24,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "FREEZER_FRIENDLY"
+    ],
+    "heroColor": "#FFD700",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "125",
+        "unit": "ml",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "125",
+        "unit": "ml",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "100",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "150",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "4",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "150",
+        "unit": "g",
+        "item": "Gruyère cheese",
+        "prepNote": "finely grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "nutmeg",
+        "prepNote": "grated",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 200°C (400°F). Line two baking sheets with parchment.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Bring water, milk, butter, and salt to a rolling boil. Remove from heat, add flour all at once, beat vigorously until smooth. Return to heat and stir for 1 minute.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Cool for 5 minutes. Beat in eggs one at a time until glossy and smooth. Stir in 120g Gruyère, pepper, and nutmeg.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "Pipe or spoon walnut-sized mounds onto baking sheets, spacing well. Top each with a pinch of remaining cheese.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Bake for 20-25 minutes until puffed, golden, and crisp. Serve warm.",
+        "durationMinutes": 25
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "rillettes-de-porc",
+    "title": "Rillettes de Porc",
+    "shortDescription": "Slow-cooked shredded pork spread from Tours",
+    "note": "The fat layer on top preserves the rillettes.",
+    "introCopy": "This rustic pork spread from the Loire Valley is made by slow-cooking pork in fat until tender, then shredding and potting it. Serve on crusty bread with cornichons.",
+    "servings": 8,
+    "prepMinutes": 20,
+    "cookMinutes": 240,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#C19A6B",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "pork shoulder",
+        "prepNote": "cut into 5cm chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "pork belly",
+        "prepNote": "cut into chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "200",
+        "unit": "g",
+        "item": "lard or duck fat",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "crushed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "sprigs",
+        "item": "fresh thyme",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground allspice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "ground cloves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "baguette and cornichons",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 140°C (285°F). Place pork, lard, garlic, thyme, bay leaves, allspice, cloves, salt, and pepper in a heavy casserole.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Cover tightly and cook for 4 hours, stirring occasionally, until pork is meltingly tender and falling apart.",
+        "durationMinutes": 240
+      },
+      {
+        "order": 3,
+        "text": "Remove herbs and bay leaves. Using two forks, shred the meat finely. Taste and adjust seasoning.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Pack into sterilized jars or a terrine, pressing out air pockets. Pour a layer of melted fat over the top to seal. Cool to room temperature.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Refrigerate for at least 2 days to mature. Serve at room temperature with baguette and cornichons. Keeps for 2 weeks.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Pork",
+        "weight": 90
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": []
+  },
+  {
+    "slug": "kouign-amann",
+    "title": "Kouign-Amann",
+    "shortDescription": "Caramelized Breton butter cake with flaky layers",
+    "note": "Best eaten warm on the day of baking.",
+    "introCopy": "This legendary Breton pastry from Douarnenez features layers of buttery, laminated dough caramelized with sugar. The result is crispy, sticky, and utterly irresistible.",
+    "servings": 8,
+    "prepMinutes": 45,
+    "cookMinutes": 40,
+    "difficulty": "INVOLVED",
+    "cuisine": "French",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": false,
+    "attributes": [],
+    "heroColor": "#DAA520",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "250",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "7",
+        "unit": "g",
+        "item": "instant yeast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "150",
+        "unit": "ml",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Lamination",
+        "order": 5,
+        "quantity": "200",
+        "unit": "g",
+        "item": "cold butter",
+        "prepNote": "preferably salted Breton butter",
+        "optional": false
+      },
+      {
+        "component": "Lamination",
+        "order": 6,
+        "quantity": "200",
+        "unit": "g",
+        "item": "caster sugar",
+        "prepNote": "divided",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make dough: combine flour, salt, and yeast. Add water and mix to a soft dough. Knead briefly, then rest for 30 minutes.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 2,
+        "text": "Roll dough into a 30cm square. Flatten butter between parchment to a 15cm square. Place butter in center of dough, fold corners over to enclose. Roll into a 20x40cm rectangle.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Sprinkle with 50g sugar. Fold into thirds like a letter. Turn 90°, roll out again. Repeat sugar, fold, turn, roll process twice more. Chill 30 minutes if needed.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 4,
+        "text": "Preheat oven to 200°C (400°F). Butter a 20cm round cake tin and sprinkle with 50g sugar. Roll dough to fit tin, press in, sprinkle remaining sugar on top.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Bake for 35-40 minutes until deeply caramelized and golden. Cool 5 minutes, invert onto a plate (caramel side up). Serve warm, torn into pieces.",
+        "durationMinutes": 40
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 60
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "vichyssoise",
+    "title": "Vichyssoise",
+    "shortDescription": "Chilled leek and potato soup with cream",
+    "note": "Serve ice-cold in chilled bowls.",
+    "introCopy": "This elegant chilled soup, despite its French name, was created in New York but celebrates French technique. Silky-smooth leeks and potatoes are enriched with cream and served cold.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 30,
+    "difficulty": "EASY",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#F5F5DC",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "leeks",
+        "prepNote": "white and light green parts, sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "50",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "500",
+        "unit": "g",
+        "item": "potatoes",
+        "prepNote": "peeled and diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "litre",
+        "item": "chicken or vegetable stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "200",
+        "unit": "ml",
+        "item": "double cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and white pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh chives",
+        "prepNote": "finely chopped, for garnish",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Melt butter in a large pot. Add leeks and cook gently for 10 minutes until very soft but not colored.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Add potatoes and stock. Bring to a boil, then simmer for 20 minutes until potatoes are tender.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 3,
+        "text": "Blend soup until completely smooth using an immersion or jug blender. Strain through a fine sieve for extra silkiness.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Stir in cream. Season with salt and white pepper. Cool to room temperature, then refrigerate for at least 4 hours or overnight.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Serve ice-cold in chilled bowls, garnished with chives.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Alliums",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Celery"
+    ]
+  },
+  {
+    "slug": "gratin-savoyard",
+    "title": "Gratin Savoyard",
+    "shortDescription": "Alpine potato gratin with Beaufort cheese and stock",
+    "note": "Unlike Dauphinois, this uses stock instead of cream.",
+    "introCopy": "From the Savoie region in the French Alps, this gratin layers thinly sliced potatoes with nutty Beaufort cheese and rich stock. It's hearty, comforting, and perfect après-ski.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 75,
+    "difficulty": "EASY",
+    "cuisine": "French",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#F4E4C1",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "waxy potatoes",
+        "prepNote": "peeled and thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "Beaufort or Comté cheese",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "chicken or vegetable stock",
+        "prepNote": "hot",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "50",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "nutmeg",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 180°C (350°F). Rub a gratin dish generously with the cut garlic, then butter the dish.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Layer half the potatoes in the dish, season with salt, pepper, and nutmeg. Scatter over half the cheese. Repeat with remaining potatoes and cheese.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Pour over hot stock until it almost reaches the top layer. Dot with butter.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Bake for 60-75 minutes until potatoes are tender and the top is golden and bubbling. Test with a knife.",
+        "durationMinutes": 75
+      },
+      {
+        "order": 5,
+        "text": "Rest for 5 minutes before serving.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Celery"
+    ]
+  },
+  {
+    "slug": "profiteroles",
+    "title": "Profiteroles",
+    "shortDescription": "Choux buns filled with ice cream and chocolate sauce",
+    "note": "Assemble just before serving to keep buns crisp.",
+    "introCopy": "These delightful French dessert puffs are filled with vanilla ice cream and drizzled with warm chocolate sauce. They're elegant, playful, and surprisingly easy.",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [],
+    "heroColor": "#6F4E37",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Choux buns",
+        "order": 1,
+        "quantity": "125",
+        "unit": "ml",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Choux buns",
+        "order": 2,
+        "quantity": "50",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Choux buns",
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Choux buns",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "caster sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Choux buns",
+        "order": 5,
+        "quantity": "75",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Choux buns",
+        "order": 6,
+        "quantity": "2",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Filling & sauce",
+        "order": 7,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "vanilla ice cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling & sauce",
+        "order": 8,
+        "quantity": "200",
+        "unit": "g",
+        "item": "dark chocolate",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling & sauce",
+        "order": 9,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "double cream",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 200°C (400°F). Make choux: bring water, butter, salt, and sugar to a rolling boil. Remove from heat, add flour all at once, beat until smooth. Return to heat, stir for 1 minute. Cool 5 minutes.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Beat in eggs gradually until glossy. Pipe or spoon 18 walnut-sized mounds onto lined baking sheets.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Bake for 20-25 minutes until puffed, golden, and crisp. Pierce each to release steam. Cool completely.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 4,
+        "text": "Make chocolate sauce: heat cream until just simmering. Pour over chocolate, let sit 1 minute, then stir until smooth.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "To serve: slice buns in half, fill with a scoop of ice cream, replace tops. Stack 3 per person, drizzle generously with warm chocolate sauce. Serve immediately.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 50
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "lapin-à-la-moutarde",
+    "title": "Lapin à la Moutarde",
+    "shortDescription": "Rabbit braised in Dijon mustard cream sauce",
+    "note": "Chicken can substitute if rabbit is unavailable.",
+    "introCopy": "This classic French dish from Burgundy features tender rabbit pieces braised with white wine, Dijon mustard, and cream. It's rich, tangy, and deeply satisfying.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 60,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD"
+    ],
+    "heroColor": "#D4A76A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": null,
+        "item": "rabbit",
+        "prepNote": "jointed into 8 pieces",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "Dijon mustard",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "30",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "shallots",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "200",
+        "unit": "ml",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "200",
+        "unit": "ml",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "150",
+        "unit": "ml",
+        "item": "double cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "2",
+        "unit": "sprigs",
+        "item": "fresh tarragon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 12,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "boiled potatoes or pasta",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Pat rabbit dry, season with salt and pepper, then coat each piece with mustard.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Heat oil and butter in a large casserole. Brown rabbit pieces on all sides, about 8 minutes. Remove and set aside.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Add shallots and garlic to the pan, cook for 2 minutes. Add wine and stock, bring to a boil, scraping up browned bits.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Return rabbit to the pan with tarragon. Cover and simmer gently for 45-50 minutes until rabbit is tender.",
+        "durationMinutes": 50
+      },
+      {
+        "order": 5,
+        "text": "Remove rabbit to a serving dish. Stir cream into sauce, simmer until thickened. Taste and adjust seasoning. Pour over rabbit and serve with potatoes or pasta.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Milk",
+      "Mustard",
+      "Sulphites",
+      "Celery"
+    ]
+  },
+  {
+    "slug": "financiers",
+    "title": "Financiers",
+    "shortDescription": "Almond and brown butter mini cakes",
+    "note": "Brown butter (beurre noisette) is the flavor secret.",
+    "introCopy": "These elegant little French cakes, traditionally baked in rectangular molds, are made with ground almonds and brown butter. They're moist, nutty, and utterly moreish.",
+    "servings": 12,
+    "prepMinutes": 15,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "French",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "UNDER_30"
+    ],
+    "heroColor": "#F5DEB3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "100",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": null,
+        "item": "large egg whites",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "100",
+        "unit": "g",
+        "item": "icing sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "50",
+        "unit": "g",
+        "item": "ground almonds",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "30",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "pinch",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 200°C (400°F). Generously butter a 12-hole financier or mini muffin tin.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Make brown butter: melt butter in a small pan over medium heat. Continue cooking, swirling, until golden brown with a nutty aroma, about 4-5 minutes. Cool slightly.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 3,
+        "text": "Whisk egg whites until frothy but not stiff. Sift in icing sugar, ground almonds, flour, and salt. Fold gently. Fold in brown butter and vanilla.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Divide batter between molds, filling each 3/4 full. Bake for 12-15 minutes until golden and springy.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Cool in tin for 2 minutes, then turn out onto a wire rack. Serve warm or at room temperature.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 40
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Tree nuts",
+      "Eggs",
+      "Milk",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "poulet-rôti-au-citron",
+    "title": "Poulet Rôti au Citron",
+    "shortDescription": "Classic French roast chicken with lemon and herbs",
+    "note": "Let the chicken rest before carving for juicier meat.",
+    "introCopy": "A perfect roast chicken is a cornerstone of French home cooking. This version is scented with lemon, garlic, and herbs, with crispy golden skin and tender, juicy meat.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 75,
+    "difficulty": "EASY",
+    "cuisine": "French",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#F4A460",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": null,
+        "item": "whole chicken",
+        "prepNote": "about 1.5kg",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": null,
+        "item": "lemons",
+        "prepNote": "1 halved, 1 quartered",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "head",
+        "item": "garlic",
+        "prepNote": "halved horizontally",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": "sprigs",
+        "item": "fresh thyme",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "sprigs",
+        "item": "fresh rosemary",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "50",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "softened",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "sea salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "roasted vegetables or salad",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 200°C (400°F). Pat chicken dry inside and out. Season cavity generously with salt and pepper.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Stuff cavity with lemon quarters, garlic halves, thyme, and rosemary. Rub chicken all over with butter, then drizzle with olive oil. Season skin well.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Place chicken breast-side up in a roasting tin. Squeeze the halved lemon over the top.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Roast for 1 hour 15 minutes, basting every 20 minutes, until skin is golden and juices run clear (internal temp 75°C).",
+        "durationMinutes": 75
+      },
+      {
+        "order": 5,
+        "text": "Rest for 15 minutes before carving. Serve with pan juices and roasted vegetables or salad.",
+        "durationMinutes": 15
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 90
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "oeufs-en-cocotte",
+    "title": "Oeufs en Cocotte",
+    "shortDescription": "Baked eggs with cream and herbs in ramekins",
+    "note": "Watch carefully to avoid overcooking the yolks.",
+    "introCopy": "These delicate baked eggs are a French breakfast or brunch classic. Cooked gently in a water bath with cream and fresh herbs, they're silky, rich, and elegant.",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 12,
+    "difficulty": "EASY",
+    "cuisine": "French",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#FFF8DC",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "butter",
+        "prepNote": "for greasing",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "double cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh chives",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "Gruyère cheese",
+        "prepNote": "grated",
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "sea salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "toasted baguette slices",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 180°C (350°F). Generously butter 4 ramekins.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Pour 1 tbsp cream into each ramekin. Crack an egg into each. Season with salt and pepper. Top with chives and Gruyère if using.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Place ramekins in a deep baking dish. Pour hot water into the dish to come halfway up the sides of the ramekins.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Bake for 10-12 minutes until whites are just set but yolks are still runny. Check at 10 minutes—they cook quickly.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 5,
+        "text": "Carefully remove ramekins from water bath. Serve immediately with toasted baguette for dipping.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Eggs",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Low-carb"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "crêpes-salées-complètes",
+    "title": "Crêpes Salées Complètes",
+    "shortDescription": "Buckwheat galettes with ham, cheese, and egg",
+    "note": "Buckwheat batter benefits from resting overnight.",
+    "introCopy": "These savory buckwheat crêpes from Brittany are traditionally filled with ham, Gruyère, and a fried egg. They're rustic, satisfying, and naturally gluten-free.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "French",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [],
+    "heroColor": "#8B7355",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Batter",
+        "order": 1,
+        "quantity": "200",
+        "unit": "g",
+        "item": "buckwheat flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Batter",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Batter",
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "large egg",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Batter",
+        "order": 4,
+        "quantity": "400",
+        "unit": "ml",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Batter",
+        "order": 5,
+        "quantity": "20",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "melted, plus extra for cooking",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "8",
+        "unit": "slices",
+        "item": "cooked ham",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "150",
+        "unit": "g",
+        "item": "Gruyère cheese",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make batter: whisk buckwheat flour, salt, and egg. Gradually whisk in water until smooth. Stir in melted butter. Rest for at least 1 hour or overnight.",
+        "durationMinutes": 65
+      },
+      {
+        "order": 2,
+        "text": "Heat a crêpe pan or non-stick frying pan over medium-high heat. Brush with butter.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Pour a ladleful of batter into the pan, swirl to coat thinly. Cook for 1-2 minutes until edges lift. Flip and cook 30 seconds.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Place 2 slices ham and a handful of Gruyère in the center. Crack an egg onto the cheese. Season with pepper. Fold edges to form a square, leaving egg visible. Cover and cook until egg white is set but yolk runny, 2-3 minutes.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 5,
+        "text": "Slide onto a plate. Repeat with remaining batter and fillings. Serve immediately.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Whole grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 30
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "pistou-soup",
+    "title": "Soupe au Pistou",
+    "shortDescription": "Provençal vegetable soup with basil pistou",
+    "note": "The pistou (basil paste) is stirred in at the end.",
+    "introCopy": "This vibrant vegetable soup from Provence is loaded with summer beans, courgettes, and tomatoes, then finished with a punchy basil and garlic pistou similar to pesto.",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 40,
+    "difficulty": "EASY",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "MAKE_AHEAD",
+      "ONE_POT"
+    ],
+    "heroColor": "#228B22",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Soup",
+        "order": 1,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "carrots",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "courgettes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 5,
+        "quantity": "200",
+        "unit": "g",
+        "item": "green beans",
+        "prepNote": "trimmed and cut into 2cm pieces",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 6,
+        "quantity": "400",
+        "unit": "g",
+        "item": "tinned chopped tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tin",
+        "item": "white beans",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 8,
+        "quantity": "1.5",
+        "unit": "litres",
+        "item": "vegetable stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 9,
+        "quantity": "100",
+        "unit": "g",
+        "item": "small pasta",
+        "prepNote": "e.g. ditalini or broken spaghetti",
+        "optional": false
+      },
+      {
+        "component": "Pistou",
+        "order": 10,
+        "quantity": "50",
+        "unit": "g",
+        "item": "fresh basil leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pistou",
+        "order": 11,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pistou",
+        "order": 12,
+        "quantity": "50",
+        "unit": "g",
+        "item": "Parmesan",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": "Pistou",
+        "order": 13,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pistou",
+        "order": 14,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat oil in a large pot. Add onion and carrots, cook gently for 5 minutes. Add courgettes and green beans, cook 5 more minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Add tomatoes, white beans, and stock. Bring to a boil, then simmer for 20 minutes.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 3,
+        "text": "Add pasta and cook until tender, about 10 minutes. Season with salt and pepper.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Meanwhile, make pistou: pound basil, garlic, and a pinch of salt in a mortar and pestle (or use a food processor). Stir in Parmesan, then gradually add olive oil until you have a thick paste.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 5,
+        "text": "Ladle soup into bowls. Stir a generous spoonful of pistou into each bowl at the table.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Mediterranean"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Wheat/gluten",
+      "Celery"
+    ]
+  },
+  {
+    "slug": "pan-bagnat",
+    "title": "Pan Bagnat",
+    "shortDescription": "Provençal tuna and vegetable sandwich from Nice",
+    "note": "Press the sandwich for at least 30 minutes before serving.",
+    "introCopy": "This iconic Niçoise sandwich is essentially a salade niçoise stuffed into a crusty roll, then pressed and weighted so the olive oil-dressed ingredients meld together beautifully. Perfect for picnics.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 0,
+    "difficulty": "EASY",
+    "cuisine": "French",
+    "mealSlot": [
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "NO_COOK",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#CD853F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "crusty round rolls",
+        "prepNote": "halved horizontally",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "clove",
+        "item": "garlic",
+        "prepNote": "halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "red wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "200",
+        "unit": "g",
+        "item": "tinned tuna in olive oil",
+        "prepNote": "drained and flaked",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": null,
+        "item": "ripe tomatoes",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": null,
+        "item": "hard-boiled eggs",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "red onion",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "green pepper",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "8",
+        "unit": null,
+        "item": "anchovy fillets",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "50",
+        "unit": "g",
+        "item": "black olives",
+        "prepNote": "pitted and halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "1",
+        "unit": "handful",
+        "item": "fresh basil leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Rub the cut sides of the rolls with the garlic halves. Drizzle the bottom halves generously with olive oil and vinegar.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Layer on the tuna, tomatoes, eggs, onion, pepper, anchovies (if using), olives, and basil. Season each layer with salt and pepper.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Drizzle the remaining olive oil over the top. Replace the top halves of the rolls and press down firmly.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Wrap each sandwich tightly in parchment or foil. Weight down with a heavy pan or cans and refrigerate for at least 30 minutes, ideally 2-3 hours.",
+        "durationMinutes": null
+      },
+      {
+        "order": 5,
+        "text": "Unwrap and cut into wedges to serve.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Oily fish",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Pescatarian",
+      "Mediterranean"
+    ],
+    "allergenTags": [
+      "Fish",
+      "Eggs",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "canelés-bordelais",
+    "title": "Canelés Bordelais",
+    "shortDescription": "Caramelized custard cakes from Bordeaux",
+    "note": "Traditional copper molds produce the best crust.",
+    "introCopy": "These stunning little cakes from Bordeaux have a dark, caramelized exterior and a soft, custardy center flavored with rum and vanilla. They require special fluted molds but are worth the effort.",
+    "servings": 16,
+    "prepMinutes": 20,
+    "cookMinutes": 60,
+    "difficulty": "INVOLVED",
+    "cuisine": "French",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#6F4E37",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "50",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "plus extra for molds",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "vanilla pod",
+        "prepNote": "split and seeds scraped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "egg yolk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "250",
+        "unit": "g",
+        "item": "caster sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "125",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "dark rum",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat milk, butter, and vanilla pod with seeds until butter melts. Remove from heat and let cool to room temperature. Remove vanilla pod.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Whisk eggs, yolk, and sugar until pale. Sift in flour and whisk until smooth. Gradually whisk in the cooled milk mixture and rum. Strain through a fine sieve.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Cover and refrigerate for at least 24 hours, ideally 48 hours. This rest is essential for texture.",
+        "durationMinutes": null
+      },
+      {
+        "order": 4,
+        "text": "Preheat oven to 250°C (480°F). Generously butter canelé molds. Pour batter into molds, filling 3/4 full.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Bake for 15 minutes, then reduce heat to 180°C (350°F) and bake for 45-50 minutes more until very dark brown and caramelized. Turn out immediately onto a wire rack. Best eaten the same day.",
+        "durationMinutes": 60
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 70
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Wheat/gluten"
+    ]
+  }
+]

@@ -2,7 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { PreferencesClient } from "./preferences-client";
 
 export default async function AdminPreferencesPage() {
-  const [diets, allergens, cuisines, foodGroups] = await Promise.all([
+  const [diets, allergens, cuisines, foodGroups, attributeTags] = await Promise.all([
     prisma.diet.findMany({
       orderBy: { name: "asc" },
       include: { _count: { select: { recipes: true, userPreferences: true, submissions: true } } },
@@ -18,6 +18,10 @@ export default async function AdminPreferencesPage() {
     prisma.foodGroup.findMany({
       orderBy: [{ category: "asc" }, { name: "asc" }],
       include: { _count: { select: { foodGroupPreferences: true, recipeProfiles: true } } },
+    }),
+    prisma.attributeTag.findMany({
+      orderBy: { name: "asc" },
+      include: { _count: { select: { recipes: true } } },
     }),
   ]);
 
@@ -39,6 +43,7 @@ export default async function AdminPreferencesPage() {
           allergens={allergens}
           cuisines={cuisines}
           foodGroups={foodGroups}
+          attributeTags={attributeTags}
         />
       </div>
     </main>

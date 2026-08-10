@@ -1,0 +1,2918 @@
+[
+  {
+    "slug": "coxinha",
+    "title": "Coxinha",
+    "shortDescription": "Brazilian chicken croquettes with a creamy shredded chicken filling and crispy coating",
+    "note": "Shape into teardrop forms for authentic presentation",
+    "introCopy": "These iconic Brazilian street food snacks feature tender shredded chicken enveloped in a smooth dough, breaded and fried until golden. The name means 'little thigh' due to their traditional shape.",
+    "servings": 20,
+    "prepMinutes": 60,
+    "cookMinutes": 30,
+    "difficulty": "INVOLVED",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "FREEZER_FRIENDLY",
+      "FRIED",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#D4A574",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Filling",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "chicken breast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 3,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "200",
+        "unit": "g",
+        "item": "cream cheese",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "½",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 8,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 10,
+        "quantity": "300",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Coating",
+        "order": 12,
+        "quantity": "2",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Coating",
+        "order": 13,
+        "quantity": "200",
+        "unit": "g",
+        "item": "breadcrumbs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Coating",
+        "order": 14,
+        "quantity": "1",
+        "unit": "litre",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Poach chicken breasts in water for 20 minutes until cooked through. Cool and shred finely.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Heat olive oil in a pan and sauté onion and garlic until soft. Add shredded chicken, cream cheese, salt, and pepper. Mix until creamy and set aside to cool completely.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "For the dough, bring chicken stock, butter, and salt to a boil. Remove from heat and add all the flour at once, stirring vigorously until a smooth dough forms.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Knead the dough on a clean surface for 2-3 minutes until smooth. Let rest for 10 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Take a small portion of dough, flatten it in your palm, place a spoonful of filling in the center, and shape into a teardrop (chicken thigh shape). Repeat with remaining dough and filling.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 6,
+        "text": "Dip each coxinha in beaten egg, then roll in breadcrumbs to coat completely.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 7,
+        "text": "Heat oil to 180°C (350°F) and deep-fry coxinhas in batches until golden brown, about 4-5 minutes. Drain on paper towels.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 8,
+        "text": "Serve hot with your choice of hot sauce or ketchup.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "brigadeiro",
+    "title": "Brigadeiro",
+    "shortDescription": "Classic Brazilian chocolate truffle made with condensed milk and cocoa powder",
+    "note": "Roll while still slightly warm for best texture",
+    "introCopy": "Brazil's most beloved sweet treat, these fudgy chocolate balls are a staple at every birthday party and celebration. Simple ingredients transform into irresistible confections.",
+    "servings": 30,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "UNDER_30"
+    ],
+    "heroColor": "#4A2C2A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "can (395g)",
+        "item": "sweetened condensed milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "cocoa powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "pinch",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For coating",
+        "order": 5,
+        "quantity": "100",
+        "unit": "g",
+        "item": "chocolate sprinkles",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a medium saucepan, combine condensed milk, cocoa powder, butter, and salt. Mix well.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Cook over medium-low heat, stirring constantly with a wooden spoon, until the mixture thickens and starts to pull away from the bottom of the pan, about 10-12 minutes.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 3,
+        "text": "Transfer to a greased plate and let cool for 30 minutes until you can handle it.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 4,
+        "text": "Grease your hands with butter and roll tablespoon-sized portions into balls.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Roll each ball in chocolate sprinkles to coat completely. Place in mini paper cups if desired.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Refrigerate until ready to serve. Best served at room temperature.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 90
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "acaraje",
+    "title": "Acarajé",
+    "shortDescription": "Bahian black-eyed pea fritters filled with vatapá and shrimp",
+    "note": "Traditional street food from Salvador, Bahia",
+    "introCopy": "This iconic Afro-Brazilian street food features crispy fried black-eyed pea fritters split and filled with a spicy shrimp paste. A taste of Bahia's rich cultural heritage.",
+    "servings": 12,
+    "prepMinutes": 45,
+    "cookMinutes": 30,
+    "difficulty": "INVOLVED",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "SNACK",
+      "LUNCH"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "FRIED",
+      "SPICY",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#C47A3B",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Fritters",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "dried black-eyed peas",
+        "prepNote": "soaked overnight, skins removed",
+        "optional": false
+      },
+      {
+        "component": "Fritters",
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Fritters",
+        "order": 3,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Fritters",
+        "order": 4,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "palm oil or vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "300",
+        "unit": "g",
+        "item": "prawns",
+        "prepNote": "peeled and deveined",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "palm oil or olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground ginger",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "malagueta pepper or cayenne",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 12,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 13,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Drain soaked black-eyed peas and rub between hands to remove skins. Rinse well.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Blend peas with onion and salt in a food processor until a smooth, thick paste forms. Beat the mixture for 3-4 minutes to incorporate air.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "For the filling, heat oil and sauté onion and garlic until soft. Add prawns, tomatoes, ginger, pepper, and salt. Cook for 5 minutes, then add coconut milk and simmer until thickened, about 10 minutes.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 4,
+        "text": "Heat oil to 180°C (350°F). Using two spoons, shape bean paste into oval patties and carefully drop into hot oil. Fry until golden brown, about 5 minutes per batch.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 5,
+        "text": "Drain fritters on paper towels. While still warm, cut each one partially open like a pita pocket.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Fill each acarajé with a generous spoonful of the shrimp mixture. Serve immediately.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Shellfish",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Shellfish"
+    ]
+  },
+  {
+    "slug": "farofa-completa",
+    "title": "Farofa Completa",
+    "shortDescription": "Rich toasted cassava flour with bacon, vegetables, and eggs",
+    "note": "Essential accompaniment to feijoada and grilled meats",
+    "introCopy": "This elaborate version of Brazil's beloved toasted cassava flour side dish is loaded with bacon, sausage, vegetables, and hard-boiled eggs. A feast in itself.",
+    "servings": 8,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#D9B777",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "200",
+        "unit": "g",
+        "item": "bacon",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "calabresa sausage or chorizo",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "carrot",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "100",
+        "unit": "g",
+        "item": "green beans",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "hard-boiled and chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "500",
+        "unit": "g",
+        "item": "cassava flour (farinha de mandioca)",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "50",
+        "unit": "g",
+        "item": "black olives",
+        "prepNote": "sliced",
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "¼",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": "or to taste",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "½",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large skillet, cook bacon over medium heat until crispy. Remove and set aside, leaving fat in pan.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Add sausage to the same pan and cook until browned. Remove and set aside.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "In the remaining fat, sauté onion and garlic until soft. Add carrot and green beans, cooking until just tender, about 5 minutes.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "Add butter to the pan. Once melted, gradually add cassava flour, stirring constantly to toast evenly until golden and fragrant, about 8-10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Return bacon and sausage to the pan. Add chopped eggs, olives, and parsley. Mix well and season with salt and pepper.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Adjust seasoning if needed. Serve warm as a side dish.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 40
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "bobo-de-camarao",
+    "title": "Bobó de Camarão",
+    "shortDescription": "Creamy cassava and coconut shrimp stew from Bahia",
+    "note": "Serve with white rice and farofa",
+    "introCopy": "This luxurious Bahian dish blends cassava (yuca) into a velvety purée enriched with coconut milk and studded with succulent shrimp. Comfort food from Brazil's northeast coast.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 40,
+    "difficulty": "MEDIUM",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#E8C89F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "800",
+        "unit": "g",
+        "item": "cassava (yuca)",
+        "prepNote": "peeled and cubed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "600",
+        "unit": "g",
+        "item": "large prawns",
+        "prepNote": "peeled and deveined",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "red bell pepper",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "400",
+        "unit": "ml",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "palm oil or olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lime juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "½",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "1",
+        "unit": null,
+        "item": "white rice",
+        "prepNote": "cooked",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Boil cassava in salted water until very tender, about 25-30 minutes. Drain and mash or blend until smooth.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 2,
+        "text": "Season prawns with lime juice, salt, and pepper. Set aside for 15 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Heat oil in a large pan and sauté onion and garlic until golden. Add bell pepper and tomatoes, cooking until softened, about 8 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Add the mashed cassava and coconut milk to the pan, stirring until well combined and creamy. Simmer for 10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Add prawns and cook until they turn pink and are cooked through, about 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Stir in fresh coriander and adjust seasoning. Serve hot over white rice with farofa on the side.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Shellfish",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 35
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "Pescatarian"
+    ],
+    "allergenTags": [
+      "Shellfish"
+    ]
+  },
+  {
+    "slug": "vatapa",
+    "title": "Vatapá",
+    "shortDescription": "Creamy Bahian bread and nut paste with shrimp and coconut",
+    "note": "Traditional filling for acarajé or served with rice",
+    "introCopy": "This rich, thick paste from Bahia blends bread, shrimp, peanuts, cashews, and coconut milk into a complex, aromatic dish that showcases African-Brazilian culinary heritage.",
+    "servings": 8,
+    "prepMinutes": 25,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#E6A84E",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "400",
+        "unit": "g",
+        "item": "prawns",
+        "prepNote": "peeled and deveined",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": "slices",
+        "item": "white bread",
+        "prepNote": "crusts removed, soaked in water",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "100",
+        "unit": "g",
+        "item": "roasted peanuts",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "100",
+        "unit": "g",
+        "item": "cashews",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "50",
+        "unit": "g",
+        "item": "dried shrimp",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "400",
+        "unit": "ml",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "palm oil or olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground ginger",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "malagueta pepper or chili flakes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "¼",
+        "unit": "cup",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Blend soaked bread (squeezed of excess water), peanuts, cashews, and dried shrimp with 200ml water until smooth. Set aside.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Heat oil in a large pan and sauté onion and garlic until soft. Add tomatoes, ginger, and pepper, cooking for 5 minutes.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Add the blended nut mixture to the pan and stir well. Cook for 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Add coconut milk and bring to a gentle simmer. Cook, stirring frequently, until the mixture thickens to a creamy paste consistency, about 15-20 minutes.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 5,
+        "text": "Add fresh prawns and cook until pink and cooked through, about 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Stir in coriander and adjust salt. Serve hot with white rice or as a filling for acarajé.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Shellfish",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 40
+      }
+    ],
+    "dietTags": [
+      "Pescatarian",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Shellfish",
+      "Peanuts",
+      "Tree nuts",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "pastel-de-carne",
+    "title": "Pastel de Carne",
+    "shortDescription": "Crispy deep-fried pastries filled with seasoned ground beef",
+    "note": "Brazil's favorite street snack, best eaten hot",
+    "introCopy": "These golden, flaky half-moon pastries are found at every Brazilian street fair and market. The thin, crispy dough shatters to reveal a savory beef filling.",
+    "servings": 16,
+    "prepMinutes": 40,
+    "cookMinutes": 30,
+    "difficulty": "MEDIUM",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "SNACK",
+      "LUNCH"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "FRIED",
+      "FREEZER_FRIENDLY"
+    ],
+    "heroColor": "#D9A962",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "250",
+        "unit": "ml",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "400",
+        "unit": "g",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "tomato",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "tomato paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 10,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 13,
+        "quantity": "½",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "1",
+        "unit": "litre",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "For the dough, mix flour and salt in a bowl. Add oil and warm water, kneading until smooth and elastic, about 8 minutes. Cover and rest for 30 minutes.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 2,
+        "text": "For the filling, brown ground beef in a pan over medium-high heat. Add onion and garlic, cooking until soft. Add tomato, tomato paste, cumin, salt, pepper, and parsley. Cook until liquid evaporates, about 10 minutes. Cool completely.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Roll dough very thin (2mm) and cut into circles about 10cm in diameter using a bowl or cutter.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Place a tablespoon of filling on one half of each circle. Fold over and seal edges tightly with a fork.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 5,
+        "text": "Heat oil to 180°C (350°F). Fry pastéis in batches until golden and crispy, about 3-4 minutes per side. Drain on paper towels.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 6,
+        "text": "Serve immediately while hot and crispy.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "feijao-tropeiro",
+    "title": "Feijão Tropeiro",
+    "shortDescription": "Traditional Minas Gerais beans with cassava flour, bacon, and eggs",
+    "note": "Named after the tropeiros (mule drivers) who carried goods through the Brazilian interior",
+    "introCopy": "This hearty dish from Minas Gerais combines beans, cassava flour, bacon, sausage, and eggs into a complete meal that sustained travelers on long journeys.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN",
+      "HIGH_FIBER",
+      "ONE_POT"
+    ],
+    "heroColor": "#8B6F47",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "cooked pinto beans",
+        "prepNote": "drained, reserve 200ml cooking liquid",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "bacon",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "200",
+        "unit": "g",
+        "item": "calabresa sausage or chorizo",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "200",
+        "unit": "g",
+        "item": "cassava flour (farinha de mandioca)",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "3",
+        "unit": null,
+        "item": "spring onions",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "¼",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "½",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large skillet, fry bacon until crispy. Remove and set aside, leaving fat in pan.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Cook sausage in the same pan until browned. Remove and set aside.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "In the remaining fat, sauté onion and garlic until soft and golden.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Add beans and reserved cooking liquid. Bring to a simmer and cook for 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Push beans to the side and scramble eggs in the cleared space until just set.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Add bacon, sausage, and cassava flour, mixing everything together. The flour will absorb the liquid and create a dry, crumbly texture.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 7,
+        "text": "Stir in spring onions and parsley. Season with salt and pepper. Serve hot.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 35
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "carne-de-sol-com-mandioca",
+    "title": "Carne de Sol com Mandioca",
+    "shortDescription": "Sun-dried salted beef with fried cassava",
+    "note": "A specialty of Brazil's Northeast region",
+    "introCopy": "This northeastern classic pairs tender salt-cured beef with crispy fried cassava. The beef's intense flavor is balanced by the mild, starchy cassava.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 50,
+    "difficulty": "MEDIUM",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#A67C52",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "600",
+        "unit": "g",
+        "item": "carne de sol or salted beef",
+        "prepNote": "cut into chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "800",
+        "unit": "g",
+        "item": "cassava (yuca)",
+        "prepNote": "peeled and cut into thick sticks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "500",
+        "unit": "ml",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "½",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "butter lettuce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "sliced",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Soak carne de sol in cold water for 2 hours to remove excess salt, changing water once. Drain and pat dry.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Boil cassava in salted water until just tender but not falling apart, about 20 minutes. Drain and let dry.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 3,
+        "text": "Heat butter in a large skillet and sauté onion and garlic until golden. Add beef chunks and cook, turning occasionally, until browned and tender, about 20-25 minutes.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 4,
+        "text": "Meanwhile, heat vegetable oil to 180°C (350°F) and fry cassava sticks in batches until golden and crispy, about 5 minutes per batch. Drain on paper towels and season with salt.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Serve beef with fried cassava, lettuce, and tomatoes. Drizzle beef juices from the pan over everything.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "tapioca-crepe-sweet",
+    "title": "Tapioca Crepe (Sweet)",
+    "shortDescription": "Naturally gluten-free tapioca crepes with coconut and condensed milk",
+    "note": "Popular Brazilian breakfast or snack",
+    "introCopy": "These chewy, naturally gluten-free crepes made from tapioca starch are a northeastern Brazilian staple. This sweet version features coconut and condensed milk.",
+    "servings": 4,
+    "prepMinutes": 5,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30"
+    ],
+    "heroColor": "#F5F5DC",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "200",
+        "unit": "g",
+        "item": "tapioca starch (polvilho)",
+        "prepNote": "hydrated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "pinch",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 3,
+        "quantity": "100",
+        "unit": "g",
+        "item": "sweetened shredded coconut",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "sweetened condensed milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "If using dry tapioca starch, sprinkle with a few tablespoons of water and work through a sieve until it resembles wet sand. Let hydrate for 10 minutes.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 2,
+        "text": "Heat a non-stick pan over medium heat. Sprinkle about 3 tablespoons of tapioca evenly over the pan to form a thin circle. Do not press down.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "After about 1 minute, the tapioca will bind together. Sprinkle coconut over half the crepe and drizzle with condensed milk. Add a small piece of butter if desired.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Fold crepe in half and cook for another 30 seconds. Remove and serve immediately.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Repeat with remaining tapioca and filling.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 70
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "acai-bowl-brazilian",
+    "title": "Açaí Bowl (Brazilian Style)",
+    "shortDescription": "Thick frozen açaí blend topped with granola and banana",
+    "note": "Brazilian açaí bowls are thicker and less sweet than American versions",
+    "introCopy": "In Brazil, açaí is served thick and barely sweetened, often eaten as a meal rather than a dessert. This energizing bowl is a staple along the coast.",
+    "servings": 2,
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "difficulty": "EASY",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "NO_COOK",
+      "UNDER_30"
+    ],
+    "heroColor": "#4A235A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "400",
+        "unit": "g",
+        "item": "frozen açaí pulp",
+        "prepNote": "unsweetened",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": null,
+        "item": "bananas",
+        "prepNote": "frozen",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "coconut water or water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "honey",
+        "prepNote": "optional",
+        "optional": true
+      },
+      {
+        "component": "Toppings",
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "banana",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 6,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "granola",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "shredded coconut",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Toppings",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "condensed milk",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Break frozen açaí pulp into chunks. Blend with frozen bananas and coconut water until very thick and smooth, like soft-serve ice cream. Add honey if desired.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Pour into bowls immediately (it should be thick enough to hold toppings without them sinking).",
+        "durationMinutes": 1
+      },
+      {
+        "order": 3,
+        "text": "Top with sliced banana, granola, coconut, and a drizzle of condensed milk if using.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Serve immediately with a spoon.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Fruit",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "quindim",
+    "title": "Quindim",
+    "shortDescription": "Glossy Brazilian coconut custard with a golden top",
+    "note": "A stunning dessert with Portuguese-African roots",
+    "introCopy": "These jewel-like custards feature a shiny golden top and creamy coconut base. The Portuguese-influenced dessert showcases Brazil's love of coconut and egg yolks.",
+    "servings": 12,
+    "prepMinutes": 20,
+    "cookMinutes": 45,
+    "difficulty": "MEDIUM",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#FFD700",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "10",
+        "unit": null,
+        "item": "egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "300",
+        "unit": "g",
+        "item": "caster sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "200",
+        "unit": "g",
+        "item": "desiccated coconut",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "50",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 180°C (350°F). Grease 12 small muffin tins or ramekins generously with butter and dust with sugar.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Beat egg yolks with sugar until pale and thick, about 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Stir in melted butter, coconut milk, desiccated coconut, and vanilla until well combined.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Pour mixture into prepared tins, filling about three-quarters full.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Place tins in a bain-marie (water bath) and bake for 35-40 minutes until set and golden on top.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 6,
+        "text": "Cool completely, then refrigerate for at least 2 hours. Run a knife around edges and invert to unmold.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 7,
+        "text": "Serve chilled with the glossy golden top facing up.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Eggs",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "empadao-de-frango",
+    "title": "Empadão de Frango",
+    "shortDescription": "Brazilian chicken pot pie with a flaky double crust",
+    "note": "A beloved comfort food across Brazil",
+    "introCopy": "This impressive Brazilian pie features a rich, creamy chicken filling encased in buttery pastry. Larger than an empada, it's a centerpiece dish for gatherings.",
+    "servings": 8,
+    "prepMinutes": 40,
+    "cookMinutes": 50,
+    "difficulty": "MEDIUM",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#E8B449",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Pastry",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pastry",
+        "order": 2,
+        "quantity": "250",
+        "unit": "g",
+        "item": "cold butter",
+        "prepNote": "cubed",
+        "optional": false
+      },
+      {
+        "component": "Pastry",
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pastry",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pastry",
+        "order": 5,
+        "quantity": "100",
+        "unit": "ml",
+        "item": "cold water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "600",
+        "unit": "g",
+        "item": "chicken breast",
+        "prepNote": "cooked and shredded",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 10,
+        "quantity": "100",
+        "unit": "g",
+        "item": "peas",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 11,
+        "quantity": "100",
+        "unit": "g",
+        "item": "sweetcorn",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 12,
+        "quantity": "200",
+        "unit": "ml",
+        "item": "double cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 13,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 14,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 15,
+        "quantity": "½",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 16,
+        "quantity": "1",
+        "unit": null,
+        "item": "egg",
+        "prepNote": "beaten, for glaze",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "For the pastry, rub butter into flour and salt until it resembles breadcrumbs. Add egg yolks and enough cold water to form a dough. Wrap and refrigerate for 30 minutes.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 2,
+        "text": "Heat olive oil and sauté onion and garlic until soft. Add tomatoes and cook for 5 minutes. Add shredded chicken, peas, corn, cream, salt, and pepper. Simmer until thickened, about 10 minutes. Cool completely.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 3,
+        "text": "Preheat oven to 190°C (375°F). Roll out two-thirds of the pastry and line a 23cm pie dish.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Fill with the chicken mixture. Roll out remaining pastry and cover the pie, sealing edges well. Cut vents in the top and brush with beaten egg.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Bake for 40-45 minutes until golden brown. Let rest for 10 minutes before slicing.",
+        "durationMinutes": 50
+      },
+      {
+        "order": 6,
+        "text": "Serve warm or at room temperature.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 50
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "arroz-carreteiro",
+    "title": "Arroz Carreteiro",
+    "shortDescription": "Southern Brazilian rice with charque (dried beef) and spices",
+    "note": "Traditional gaucho dish from Rio Grande do Sul",
+    "introCopy": "This hearty rice dish from Brazil's southernmost state combines dried beef with rice, creating a flavorful one-pot meal beloved by gauchos.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 35,
+    "difficulty": "EASY",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "ONE_POT",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#9B7653",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "400",
+        "unit": "g",
+        "item": "charque or corned beef",
+        "prepNote": "soaked overnight, shredded",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "300",
+        "unit": "g",
+        "item": "long-grain rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "red bell pepper",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "600",
+        "unit": "ml",
+        "item": "beef stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "prepNote": null,
+        "optional": false,
+        "item": "bay leaves"
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "½",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "¼",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "2",
+        "unit": null,
+        "item": "spring onions",
+        "prepNote": "sliced",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Boil soaked charque in fresh water for 15 minutes to remove excess salt. Drain and shred finely.",
+        "durationMinutes": 18
+      },
+      {
+        "order": 2,
+        "text": "Heat olive oil in a large pot and sauté onion and garlic until golden. Add bell pepper and tomatoes, cooking for 5 minutes.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Add shredded charque and cook for 5 minutes, stirring to combine.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Add rice, cumin, pepper, and bay leaves. Stir to coat rice with the mixture.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Pour in beef stock and bring to a boil. Reduce heat to low, cover, and simmer until rice is tender and liquid absorbed, about 18-20 minutes.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 6,
+        "text": "Remove from heat and let rest, covered, for 5 minutes. Fluff with a fork and stir in parsley and spring onions.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 7,
+        "text": "Serve hot as a main dish.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "casquinha-de-siri",
+    "title": "Casquinha de Siri",
+    "shortDescription": "Stuffed crab shells with creamy crab filling and breadcrumb topping",
+    "note": "Classic coastal appetizer from Bahia and Rio",
+    "introCopy": "These elegant stuffed crab shells feature a rich, creamy crab mixture topped with golden breadcrumbs. A sophisticated appetizer found along Brazil's coastline.",
+    "servings": 8,
+    "prepMinutes": 30,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "Brazilian",
+    "mealSlot": [
+      "SNACK",
+      "LUNCH"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#D4855C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "crab meat",
+        "prepNote": "fresh or canned, picked over",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "red bell pepper",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "200",
+        "unit": "ml",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lime juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "¼",
+        "unit": "cup",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "½",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "½",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 13,
+        "quantity": "100",
+        "unit": "g",
+        "item": "breadcrumbs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 14,
+        "quantity": "50",
+        "unit": "g",
+        "item": "parmesan cheese",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 15,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 16,
+        "quantity": "8",
+        "unit": null,
+        "item": "crab shells or ramekins",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 200°C (400°F).",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Heat olive oil in a large pan and sauté onion and garlic until soft. Add bell pepper and tomatoes, cooking until softened, about 8 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Add crab meat, coconut milk, lime juice, paprika, salt, and pepper. Simmer until the mixture thickens, about 10 minutes. Stir in coriander.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 4,
+        "text": "Spoon the mixture into clean crab shells or individual ramekins.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Mix breadcrumbs with parmesan and melted butter. Sprinkle over each filled shell.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Bake for 15 minutes until the topping is golden and crispy.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 7,
+        "text": "Serve hot with lime wedges.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Shellfish",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Pescatarian"
+    ],
+    "allergenTags": [
+      "Shellfish",
+      "Wheat/gluten",
+      "Milk"
+    ]
+  }
+]

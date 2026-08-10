@@ -3,8 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  attributeLabel,
-  cardDisplayAttributes,
   dietEmblemClass,
   formatMealSlot,
   formatMinutes,
@@ -46,7 +44,6 @@ export function RecipeCardShell({
 }) {
   const emblems = visibleDietEmblems(recipe.dietTags);
   const meal = formatMealSlot(recipe.mealSlot);
-  const tags = cardDisplayAttributes(recipe.attributes, 2);
 
   return (
     <div className="overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
@@ -101,14 +98,6 @@ export function RecipeCardShell({
               {meal}
             </span>
           )}
-          {tags.map((a) => (
-            <span
-              key={a}
-              className="shrink-0 truncate rounded-full bg-[#EDF3EF] px-2 py-1"
-            >
-              {attributeLabel(a)}
-            </span>
-          ))}
         </div>
 
         {children}

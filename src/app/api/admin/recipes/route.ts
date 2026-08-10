@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
   }
 
-  const { dietIds, allergenIds, ingredients, steps, cuisineId, ...rest } = parsed.data;
+  const { dietIds, allergenIds, ingredients, steps, cuisineId, attributes, ...rest } = parsed.data;
 
   const slug = await generateUniqueSlug(rest.title);
 
@@ -29,6 +29,7 @@ export async function POST(request: Request) {
       cuisine: { connect: { id: cuisineId } },
       dietTags: { connect: dietIds.map((id) => ({ id })) },
       allergenTags: { connect: allergenIds.map((id) => ({ id })) },
+      attributeTags: { connect: attributes.map((code) => ({ code })) },
       ingredients: { create: ingredients.map((ing, i) => ({ ...ing, order: i })) },
       steps: { create: steps.map((s, i) => ({ ...s, order: i })) },
     },

@@ -6,6 +6,7 @@ import { compressImage } from "@/lib/image-compression";
 import {
   EMPTY_RECIPE,
   type EditorAllergen,
+  type EditorAttributeTag,
   type EditorCuisine,
   type EditorDiet,
   type EditorIngredient,
@@ -14,13 +15,14 @@ import {
   type RecipeFormValues,
 } from "@/lib/recipe-form-shared";
 
-export type { EditorAllergen, EditorCuisine, EditorDiet, EditorRecipe };
+export type { EditorAllergen, EditorAttributeTag, EditorCuisine, EditorDiet, EditorRecipe };
 
 export function RecipeEditor({
   recipe,
   cuisines: initialCuisines,
   diets,
   allergens,
+  attributeTags,
   onClose,
   onSaved,
 }: {
@@ -28,6 +30,7 @@ export function RecipeEditor({
   cuisines: EditorCuisine[];
   diets: EditorDiet[];
   allergens: EditorAllergen[];
+  attributeTags: EditorAttributeTag[];
   onClose: () => void;
   onSaved: () => void;
 }) {
@@ -268,6 +271,7 @@ export function RecipeEditor({
             cuisines={cuisines}
             diets={diets}
             allergens={allergens}
+            attributeTags={attributeTags}
             newCuisineName={newCuisineName}
             setNewCuisineName={setNewCuisineName}
             addingCuisine={addingCuisine}

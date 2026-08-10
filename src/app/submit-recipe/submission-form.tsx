@@ -193,6 +193,7 @@ export function SubmissionForm({
         cuisines={cuisines}
         diets={diets}
         allergens={allergens}
+        attributeTags={[]}
         newCuisineName=""
         setNewCuisineName={() => {}}
         addingCuisine={false}

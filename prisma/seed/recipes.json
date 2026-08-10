@@ -160,8 +160,7 @@
     "attributes": [
       "MAKE_AHEAD",
       "CROWD_PLEASER",
-      "COMFORT_FOOD",
-      "KID_FRIENDLY"
+      "COMFORT_FOOD"
     ],
     "heroColor": "#C24B3E",
     "allergenReviewStatus": "VERIFIED",
@@ -443,8 +442,7 @@
     "attributes": [
       "UNDER_30",
       "SPEND_LESS",
-      "EAT_MORE_VEG",
-      "KID_FRIENDLY"
+      "EAT_MORE_VEG"
     ],
     "heroColor": "#3E7D4C",
     "allergenReviewStatus": "VERIFIED",
@@ -1110,8 +1108,7 @@
     "batchFriendly": false,
     "attributes": [
       "FRIED",
-      "CROWD_PLEASER",
-      "KID_FRIENDLY"
+      "CROWD_PLEASER"
     ],
     "heroColor": "#E3B23C",
     "allergenReviewStatus": "UNVERIFIED",
@@ -1299,6 +1296,15 @@
         "item": "ground cumin",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "steamed basmati rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -1321,6 +1327,11 @@
         "order": 4,
         "text": "Add chickpeas and a splash of water, then simmer to thicken.",
         "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Serve hot over steamed basmati rice.",
+        "durationMinutes": null
       }
     ],
     "foodGroupProfile": [
@@ -1339,6 +1350,10 @@
       {
         "foodGroup": "Warm spices",
         "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
       }
     ],
     "dietTags": [
@@ -1432,6 +1447,15 @@
         "item": "garam masala",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "steamed basmati rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -1459,6 +1483,11 @@
         "order": 5,
         "text": "Stir in cream and return chicken to the pan to finish cooking through.",
         "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Serve over steamed basmati rice.",
+        "durationMinutes": null
       }
     ],
     "foodGroupProfile": [
@@ -1476,6 +1505,10 @@
       },
       {
         "foodGroup": "Warm spices",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Refined grains",
         "weight": 35
       }
     ],
@@ -1567,6 +1600,15 @@
         "item": "garam masala",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "steamed basmati rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -1589,6 +1631,11 @@
         "order": 4,
         "text": "Fold in paneer and cream, warming through without a hard boil.",
         "durationMinutes": 4
+      },
+      {
+        "order": 5,
+        "text": "Serve over steamed basmati rice.",
+        "durationMinutes": null
       }
     ],
     "foodGroupProfile": [
@@ -1607,6 +1654,10 @@
       {
         "foodGroup": "Warm spices",
         "weight": 25
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
       }
     ],
     "dietTags": [
@@ -1699,6 +1750,15 @@
         "item": "thai basil",
         "prepNote": null,
         "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "jasmine rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -1740,6 +1800,10 @@
       {
         "foodGroup": "Fresh herbs",
         "weight": 25
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
       }
     ],
     "dietTags": [
@@ -2707,7 +2771,6 @@
     "batchFriendly": false,
     "attributes": [
       "UNDER_30",
-      "KID_FRIENDLY",
       "CROWD_PLEASER"
     ],
     "heroColor": "#8A3E2E",
@@ -2883,6 +2946,15 @@
         "item": "cornstarch slurry",
         "prepNote": "to thicken",
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "steamed white rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -2910,6 +2982,11 @@
         "order": 5,
         "text": "Top with scallions and ground Sichuan peppercorn.",
         "durationMinutes": null
+      },
+      {
+        "order": 6,
+        "text": "Serve hot over steamed white rice.",
+        "durationMinutes": null
       }
     ],
     "foodGroupProfile": [
@@ -2928,6 +3005,10 @@
       {
         "foodGroup": "Alliums",
         "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
       }
     ],
     "dietTags": [
@@ -3018,6 +3099,15 @@
         "item": "scallions",
         "prepNote": "cut into pieces",
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "steamed white rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -3040,6 +3130,11 @@
         "order": 4,
         "text": "Add vinegar, scallions, and peanuts, tossing to combine.",
         "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Serve over steamed white rice.",
+        "durationMinutes": null
       }
     ],
     "foodGroupProfile": [
@@ -3058,6 +3153,10 @@
       {
         "foodGroup": "Alliums",
         "weight": 20
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
       }
     ],
     "dietTags": [
@@ -3140,6 +3239,15 @@
         "item": "oyster sauce",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 6,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "steamed white rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -3162,6 +3270,11 @@
         "order": 4,
         "text": "Return beef to the wok and toss to coat.",
         "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Serve over steamed white rice.",
+        "durationMinutes": null
       }
     ],
     "foodGroupProfile": [
@@ -3176,15 +3289,16 @@
       {
         "foodGroup": "Alliums",
         "weight": 25
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
       }
     ],
     "dietTags": [
       "Gluten-free",
-      "Low-carb",
       "High-protein",
-      "Diabetic-friendly",
-      "Keto",
-      "Whole30"
+      "Diabetic-friendly"
     ],
     "allergenTags": [
       "Soy",
@@ -3994,7 +4108,6 @@
     "batchFriendly": false,
     "attributes": [
       "CROWD_PLEASER",
-      "KID_FRIENDLY",
       "COMFORT_FOOD"
     ],
     "heroColor": "#C24B3E",
@@ -4277,8 +4390,7 @@
     "attributes": [
       "CROWD_PLEASER",
       "HIGH_PROTEIN",
-      "FRIED",
-      "KID_FRIENDLY"
+      "FRIED"
     ],
     "heroColor": "#C24B3E",
     "allergenReviewStatus": "VERIFIED",
@@ -4731,7 +4843,6 @@
     "attributes": [
       "UNDER_30",
       "SPEND_LESS",
-      "KID_FRIENDLY",
       "COMFORT_FOOD"
     ],
     "heroColor": "#E8C547",
@@ -5288,7 +5399,6 @@
     "attributes": [
       "UNDER_30",
       "EAT_MORE_VEG",
-      "KID_FRIENDLY",
       "SPEND_LESS"
     ],
     "heroColor": "#E8C547",
@@ -5682,7 +5792,6 @@
     "attributes": [
       "UNDER_30",
       "HIGH_PROTEIN",
-      "KID_FRIENDLY",
       "CROWD_PLEASER"
     ],
     "heroColor": "#B5651D",
@@ -5952,7 +6061,6 @@
     "attributes": [
       "MAKE_AHEAD",
       "SPEND_LESS",
-      "KID_FRIENDLY",
       "HIGH_PROTEIN"
     ],
     "heroColor": "#E07A5F",
@@ -6859,6 +6967,15 @@
         "item": "dried red chile",
         "prepNote": null,
         "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "steamed basmati rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -6881,6 +6998,11 @@
         "order": 4,
         "text": "Pour the hot tempering over the dal and stir just before serving.",
         "durationMinutes": null
+      },
+      {
+        "order": 5,
+        "text": "Serve hot over steamed basmati rice.",
+        "durationMinutes": null
       }
     ],
     "foodGroupProfile": [
@@ -6895,6 +7017,10 @@
       {
         "foodGroup": "Warm spices",
         "weight": 20
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
       }
     ],
     "dietTags": [
@@ -7546,6 +7672,15 @@
         "item": "fish sauce",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "jasmine rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -7591,6 +7726,10 @@
       {
         "foodGroup": "Warm spices",
         "weight": 20
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 25
       }
     ],
     "dietTags": [
@@ -7694,6 +7833,15 @@
         "item": "eggs",
         "prepNote": "for frying",
         "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "jasmine rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -7739,6 +7887,10 @@
       {
         "foodGroup": "Eggs",
         "weight": 20
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
       }
     ],
     "dietTags": [
@@ -7772,7 +7924,6 @@
     "effortTier": "WEEKEND",
     "batchFriendly": false,
     "attributes": [
-      "KID_FRIENDLY",
       "COMFORT_FOOD"
     ],
     "heroColor": "#F2B705",
@@ -8126,6 +8277,15 @@
         "item": "crushed peanuts",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "jasmine rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -8162,6 +8322,10 @@
       {
         "foodGroup": "Warm spices",
         "weight": 20
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
       }
     ],
     "dietTags": [
@@ -8567,6 +8731,15 @@
         "item": "turmeric",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "dry couscous",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -8612,6 +8785,10 @@
       {
         "foodGroup": "Alliums",
         "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
       }
     ],
     "dietTags": [
@@ -8620,8 +8797,7 @@
       "Gluten-free",
       "Dairy-free",
       "Diabetic-friendly",
-      "Kosher",
-      "Whole30"
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/moroccan-chicken-tagine.jpg",
@@ -8931,8 +9107,7 @@
     "attributes": [
       "EAT_MORE_VEG",
       "UNDER_30",
-      "SPEND_LESS",
-      "KID_FRIENDLY"
+      "SPEND_LESS"
     ],
     "heroColor": "#5C7A4A",
     "allergenReviewStatus": "VERIFIED",
@@ -9193,7 +9368,6 @@
     "effortTier": "WEEKNIGHT",
     "batchFriendly": true,
     "attributes": [
-      "KID_FRIENDLY",
       "COMFORT_FOOD",
       "UNDER_30",
       "CROWD_PLEASER"
@@ -9838,8 +10012,7 @@
     "attributes": [
       "UNDER_30",
       "SPEND_LESS",
-      "EAT_MORE_VEG",
-      "KID_FRIENDLY"
+      "EAT_MORE_VEG"
     ],
     "heroColor": "#E8C547",
     "allergenReviewStatus": "VERIFIED",
@@ -9975,7 +10148,6 @@
     "attributes": [
       "CROWD_PLEASER",
       "FRIED",
-      "KID_FRIENDLY",
       "HIGH_PROTEIN"
     ],
     "heroColor": "#E07A5F",
@@ -10043,6 +10215,15 @@
         "item": "ketchup",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "steamed white rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -10086,6 +10267,10 @@
       },
       {
         "foodGroup": "Fried & rich",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Refined grains",
         "weight": 25
       }
     ],
@@ -10246,8 +10431,7 @@
     "batchFriendly": false,
     "attributes": [
       "UNDER_30",
-      "HIGH_PROTEIN",
-      "KID_FRIENDLY"
+      "HIGH_PROTEIN"
     ],
     "heroColor": "#8A6D3B",
     "allergenReviewStatus": "VERIFIED",
@@ -11043,8 +11227,7 @@
     "effortTier": "WEEKNIGHT",
     "batchFriendly": false,
     "attributes": [
-      "COMFORT_FOOD",
-      "KID_FRIENDLY"
+      "COMFORT_FOOD"
     ],
     "heroColor": "#B5651D",
     "allergenReviewStatus": "VERIFIED",
@@ -11801,6 +11984,15 @@
         "item": "scallions",
         "prepNote": "sliced",
         "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "steamed short-grain rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -11828,6 +12020,11 @@
         "order": 5,
         "text": "Add tofu and simmer gently, then top with scallion.",
         "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Serve hot with steamed short-grain rice.",
+        "durationMinutes": null
       }
     ],
     "foodGroupProfile": [
@@ -11842,6 +12039,10 @@
       {
         "foodGroup": "Soy & tofu",
         "weight": 20
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 25
       }
     ],
     "dietTags": [
@@ -12698,8 +12899,7 @@
     "attributes": [
       "CROWD_PLEASER",
       "FREEZER_FRIENDLY",
-      "FRIED",
-      "KID_FRIENDLY"
+      "FRIED"
     ],
     "heroColor": "#D98E3E",
     "allergenReviewStatus": "VERIFIED",
@@ -14233,6 +14433,15 @@
         "item": "chicken broth",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "steamed white rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -14255,6 +14464,11 @@
         "order": 4,
         "text": "Return chicken to the pot and simmer until tender; stir in spinach at the end.",
         "durationMinutes": 20
+      },
+      {
+        "order": 5,
+        "text": "Serve hot over steamed white rice.",
+        "durationMinutes": null
       }
     ],
     "foodGroupProfile": [
@@ -14273,6 +14487,10 @@
       {
         "foodGroup": "Leafy greens",
         "weight": 10
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 25
       }
     ],
     "dietTags": [
@@ -14514,6 +14732,24 @@
         "item": "oranges",
         "prepNote": "sliced, for serving",
         "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "steamed white rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "farofa (toasted cassava flour)",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -14550,6 +14786,10 @@
       {
         "foodGroup": "Alliums",
         "weight": 10
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
       }
     ],
     "dietTags": [
@@ -14606,8 +14846,44 @@
         "optional": false
       },
       {
-        "component": null,
+        "component": "For the sides",
         "order": 3,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "farofa (toasted cassava flour)",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For the sides",
+        "order": 4,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "cooked white rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For the sides",
+        "order": 5,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "black beans (feijão)",
+        "prepNote": "cooked, or canned and drained",
+        "optional": false
+      },
+      {
+        "component": "For the sides",
+        "order": 6,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "vinagrete (Brazilian tomato-onion vinaigrette)",
+        "prepNote": "tomato, onion, bell pepper, red wine vinegar",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
         "quantity": "1/2",
         "unit": "cup",
         "item": "chimichurri",
@@ -14633,26 +14909,36 @@
       },
       {
         "order": 4,
-        "text": "Rest, slice against the grain, and serve with chimichurri.",
+        "text": "While the meat rests, warm the rice and black beans, toast the farofa, and stir together the vinagrete.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Rest the meat, slice against the grain, and serve with the rice, beans, farofa, vinagrete, and chimichurri.",
         "durationMinutes": 5
       }
     ],
     "foodGroupProfile": [
       {
         "foodGroup": "Red meat",
-        "weight": 80
+        "weight": 70
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 40
       }
     ],
     "dietTags": [
       "Gluten-free",
       "Dairy-free",
-      "Keto",
-      "Low-carb",
       "High-protein",
       "Low-sodium",
       "Diabetic-friendly",
-      "Kosher",
-      "Whole30"
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/brazilian-picanha.jpg",
@@ -14815,7 +15101,6 @@
     "batchFriendly": true,
     "attributes": [
       "UNDER_30",
-      "KID_FRIENDLY",
       "FREEZER_FRIENDLY"
     ],
     "heroColor": "#E8C468",
@@ -15347,7 +15632,6 @@
     "batchFriendly": false,
     "attributes": [
       "CROWD_PLEASER",
-      "KID_FRIENDLY",
       "COMFORT_FOOD"
     ],
     "heroColor": "#B8763C",
@@ -15818,6 +16102,15 @@
         "item": "kaffir lime leaves",
         "prepNote": null,
         "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "steamed white rice",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -15840,6 +16133,11 @@
         "order": 4,
         "text": "Simmer uncovered, stirring occasionally, until sauce reduces to a thick, dark paste.",
         "durationMinutes": 120
+      },
+      {
+        "order": 5,
+        "text": "Serve over steamed white rice.",
+        "durationMinutes": null
       }
     ],
     "foodGroupProfile": [
@@ -15854,13 +16152,15 @@
       {
         "foodGroup": "Nightshades",
         "weight": 10
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 25
       }
     ],
     "dietTags": [
       "Gluten-free",
       "Dairy-free",
-      "Keto",
-      "Low-carb",
       "Low-sodium"
     ],
     "allergenTags": [],

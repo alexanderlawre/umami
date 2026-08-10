@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { logInteraction } from "@/lib/log-interaction";
+import { attributeLabel, dietEmblemClass } from "@/lib/recipe-tags";
 
 type Ingredient = {
   id: string;
@@ -42,6 +43,8 @@ export type RecipeDetail = {
   proteinGrams: number | null;
   carbsGrams: number | null;
   fatGrams: number | null;
+  attributes: string[];
+  dietTags: string[];
 };
 
 function scaleQuantity(quantity: string, factor: number): string {
@@ -205,6 +208,40 @@ export function RecipeDetailClient({
           {recipe.prepMinutes} min prep / {recipe.cookMinutes} min cook
         </span>
       </div>
+
+      {(recipe.attributes.length > 0 || recipe.dietTags.length > 0) && (
+        <details className="group mt-3">
+          <summary className="flex cursor-pointer list-none items-center gap-1 text-xs font-medium text-[#2C5A87]">
+            Tags & dietary info
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              className="h-3.5 w-3.5 transition-transform group-open:rotate-180"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <div className="mt-2 flex flex-wrap gap-2 text-xs">
+            {recipe.dietTags
+              .filter((d) => d !== "Omnivore")
+              .map((diet) => (
+                <span
+                  key={diet}
+                  className={`rounded-full px-2 py-1 font-medium ${dietEmblemClass(diet)}`}
+                >
+                  {diet}
+                </span>
+              ))}
+            {recipe.attributes.map((a) => (
+              <span key={a} className="rounded-full bg-[#EDF3EF] px-2 py-1 text-[#6B7370]">
+                {attributeLabel(a)}
+              </span>
+            ))}
+          </div>
+        </details>
+      )}
 
       {hasMacros && (
         <section className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-4">

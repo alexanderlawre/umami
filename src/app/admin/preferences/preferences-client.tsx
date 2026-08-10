@@ -318,11 +318,13 @@ export function PreferencesClient({
   allergens,
   cuisines,
   foodGroups,
+  attributeTags,
 }: {
   diets: WithCount[];
   allergens: WithCount[];
   cuisines: WithCount[];
   foodGroups: FoodGroupRow[];
+  attributeTags: WithCount[];
 }) {
   return (
     <div className="space-y-6">
@@ -344,6 +346,12 @@ export function PreferencesClient({
         endpoint="/api/admin/cuisines"
         items={cuisines}
         confirmOnUse={false}
+      />
+      <CatalogSection
+        title="Attribute tags"
+        description="Shown as chips on recipe cards and as filter options (e.g. High protein, Grilled, Spicy). Used in the recipe editor to tag recipes."
+        endpoint="/api/admin/attribute-tags"
+        items={attributeTags}
       />
       <FoodGroupSection items={foodGroups} />
     </div>

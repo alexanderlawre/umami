@@ -1,0 +1,4504 @@
+[
+  {
+    "slug": "jerk-chicken-with-rice-and-peas",
+    "title": "Jerk Chicken with Rice and Peas",
+    "shortDescription": "Spicy Jamaican jerk chicken with coconut rice and kidney beans",
+    "note": "Marinate the chicken overnight for best flavor penetration.",
+    "introCopy": "Jamaica's iconic jerk chicken features a fiery spice blend with scotch bonnet peppers, allspice, and thyme. Traditionally cooked over pimento wood, this version brings authentic flavor to your grill or oven, served with the classic accompaniment of coconut rice and peas.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 45,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "SPICY",
+      "HIGH_PROTEIN",
+      "GRILLED",
+      "MAKE_AHEAD",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#8B4513",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Jerk marinade",
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "scotch bonnet peppers",
+        "prepNote": "seeded and chopped",
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 2,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "medium onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "fresh thyme leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "allspice berries",
+        "prepNote": "ground",
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "black pepper",
+        "prepNote": "freshly ground",
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "cinnamon",
+        "prepNote": "ground",
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "nutmeg",
+        "prepNote": "ground",
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 9,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "soy sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 10,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 11,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lime juice",
+        "prepNote": "fresh",
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 12,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "brown sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Jerk marinade",
+        "order": 13,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 14,
+        "quantity": "2",
+        "unit": "kg",
+        "item": "chicken pieces",
+        "prepNote": "legs, thighs, drumsticks",
+        "optional": false
+      },
+      {
+        "component": "Rice and peas",
+        "order": 15,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "long-grain white rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice and peas",
+        "order": 16,
+        "quantity": "1",
+        "unit": "can (400ml)",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice and peas",
+        "order": 17,
+        "quantity": "1",
+        "unit": "can (400g)",
+        "item": "kidney beans",
+        "prepNote": "drained and rinsed",
+        "optional": false
+      },
+      {
+        "component": "Rice and peas",
+        "order": 18,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice and peas",
+        "order": 19,
+        "quantity": "3",
+        "unit": "sprigs",
+        "item": "fresh thyme",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice and peas",
+        "order": 20,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "smashed",
+        "optional": false
+      },
+      {
+        "component": "Rice and peas",
+        "order": 21,
+        "quantity": "1",
+        "unit": null,
+        "item": "scotch bonnet pepper",
+        "prepNote": "whole",
+        "optional": true
+      },
+      {
+        "component": "Rice and peas",
+        "order": 22,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Blend all jerk marinade ingredients in a food processor until smooth.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Score the chicken pieces deeply and coat thoroughly with jerk marinade. Refrigerate for at least 4 hours or overnight.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Preheat grill to medium-high or oven to 200°C (400°F).",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Grill chicken for 35-45 minutes, turning occasionally, until internal temperature reaches 75°C (165°F) and skin is charred.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 5,
+        "text": "Meanwhile, combine rice, coconut milk, water, kidney beans, thyme, garlic, whole scotch bonnet, and salt in a pot.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Bring to a boil, reduce heat to low, cover, and simmer for 20-25 minutes until rice is tender and liquid absorbed.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 7,
+        "text": "Remove thyme sprigs, garlic, and scotch bonnet from rice. Fluff with a fork.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 8,
+        "text": "Serve jerk chicken over rice and peas.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Soy",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "cuban-ropa-vieja",
+    "title": "Ropa Vieja",
+    "shortDescription": "Cuban shredded beef in tomato-pepper sauce with white rice",
+    "note": "The meat becomes more tender the longer it braises. Don't rush this step.",
+    "introCopy": "Cuba's national dish translates to 'old clothes' for the shredded appearance of the braised beef. This comfort food classic features flank steak slowly simmered in a rich tomato sauce with bell peppers and olives, creating tender, flavorful strands of meat.",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 150,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "MAKE_AHEAD",
+      "HIGH_PROTEIN",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#C84C31",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Beef",
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "flank steak",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef",
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": "Beef",
+        "order": 3,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "smashed",
+        "optional": false
+      },
+      {
+        "component": "Beef",
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "bay leaf",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef",
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 7,
+        "quantity": "2",
+        "unit": null,
+        "item": "onions",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 8,
+        "quantity": "2",
+        "unit": null,
+        "item": "red bell peppers",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "green bell pepper",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 10,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 11,
+        "quantity": "1",
+        "unit": "can (800g)",
+        "item": "crushed tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 12,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "beef broth",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 13,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 14,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "green olives",
+        "prepNote": "pitted and sliced",
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 15,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "tomato paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 16,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 17,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 18,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 19,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 20,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 21,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "white rice",
+        "prepNote": "cooked",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Place flank steak, quartered onion, smashed garlic, bay leaf, and salt in large pot. Cover with water and bring to boil.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Reduce heat and simmer for 90 minutes until beef is very tender.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 3,
+        "text": "Remove beef, let cool slightly, then shred into thin strips. Reserve 1 cup cooking liquid.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Heat olive oil in large pan. Sauté sliced onions and peppers until softened, about 8 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Add minced garlic and cook 1 minute until fragrant.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Stir in tomato paste, cumin, oregano, salt, and pepper. Cook 2 minutes.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 7,
+        "text": "Add crushed tomatoes, broth, wine, reserved cooking liquid, and bay leaves. Simmer 15 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 8,
+        "text": "Add shredded beef and olives. Simmer 15-20 minutes until sauce thickens.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 9,
+        "text": "Remove bay leaves. Serve over white rice.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Sulphites",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "puerto-rican-mofongo",
+    "title": "Mofongo",
+    "shortDescription": "Puerto Rican mashed fried plantains with garlic and pork cracklings",
+    "note": "Use green plantains for the traditional texture. Yellow plantains will be too sweet.",
+    "introCopy": "This iconic Puerto Rican dish transforms green plantains into a savory, garlicky mound of comfort. Fried plantains are mashed with garlic, olive oil, and crispy pork cracklings to create a dense, flavorful side or base for stews and proteins.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "FRIED",
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#6B5D3F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "green plantains",
+        "prepNote": "peeled and cut into 1-inch chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "8",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "pork cracklings (chicharrón)",
+        "prepNote": "crushed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "chicken broth",
+        "prepNote": "warm",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat vegetable oil in deep pan to 175°C (350°F).",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Fry plantain chunks in batches until golden, about 5-7 minutes per batch. Drain on paper towels.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "In mortar and pestle or bowl, mash garlic with salt to form paste.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Add fried plantains, olive oil, and chicken broth. Mash vigorously until smooth but still chunky.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Fold in crushed chicharrón and black pepper.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Shape into individual mounds using a bowl or pilón (mortar). Serve immediately while hot.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "arroz-con-gandules",
+    "title": "Arroz con Gandules",
+    "shortDescription": "Puerto Rican rice with pigeon peas, sofrito, and pork",
+    "note": "Making fresh sofrito elevates this dish significantly, but store-bought works in a pinch.",
+    "introCopy": "Puerto Rico's national dish is a fragrant one-pot rice studded with pigeon peas and flavored with sofrito, a vibrant blend of peppers, onions, garlic, and cilantro. Often served at celebrations, this comforting side pairs with almost any protein.",
+    "servings": 8,
+    "prepMinutes": 20,
+    "cookMinutes": 35,
+    "difficulty": "EASY",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "ONE_POT",
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_FIBER"
+    ],
+    "heroColor": "#B8A040",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Sofrito",
+        "order": 1,
+        "quantity": "1",
+        "unit": null,
+        "item": "green bell pepper",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Sofrito",
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "red bell pepper",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Sofrito",
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Sofrito",
+        "order": 4,
+        "quantity": "8",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sofrito",
+        "order": 5,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "packed",
+        "optional": false
+      },
+      {
+        "component": "Sofrito",
+        "order": 6,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh culantro leaves",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Rice",
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 8,
+        "quantity": "150",
+        "unit": "g",
+        "item": "salt pork or bacon",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 9,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "long-grain white rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 10,
+        "quantity": "2",
+        "unit": "cans (425g each)",
+        "item": "pigeon peas (gandules)",
+        "prepNote": "drained, liquid reserved",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 11,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "chicken broth",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 12,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "tomato sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 13,
+        "quantity": "1",
+        "unit": "packet (1.4g)",
+        "item": "sazón with achiote",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 14,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 15,
+        "quantity": "10",
+        "unit": null,
+        "item": "Spanish olives",
+        "prepNote": "stuffed with pimientos",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 16,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "capers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 17,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 18,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Blend bell peppers, onion, garlic, cilantro, and culantro in food processor until smooth to make sofrito.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Heat olive oil in large caldero or heavy pot. Cook salt pork until crispy, about 5 minutes.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 3,
+        "text": "Add sofrito and cook, stirring frequently, until most liquid evaporates, about 8 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Stir in tomato sauce, sazón, oregano, and cook 2 minutes.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Add rice and stir to coat with sofrito mixture. Toast for 2 minutes.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Add pigeon peas, chicken broth, olives, capers, bay leaves, and salt. Stir well.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 7,
+        "text": "Bring to boil, then reduce to low heat. Cover and simmer 25-30 minutes until rice is tender and liquid absorbed.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 8,
+        "text": "Remove from heat, let stand covered 5 minutes. Remove bay leaves, fluff with fork, and serve.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "puerto-rican-pernil",
+    "title": "Pernil",
+    "shortDescription": "Puerto Rican slow-roasted pork shoulder with garlic and oregano",
+    "note": "Score the skin deeply and marinate overnight for crispy cuero (skin) and tender meat.",
+    "introCopy": "A centerpiece of Puerto Rican celebrations, pernil is pork shoulder marinated in a garlicky adobo and slow-roasted until the meat is fall-apart tender and the skin shatters into crispy shards. The intoxicating aroma alone makes this worth the wait.",
+    "servings": 10,
+    "prepMinutes": 30,
+    "cookMinutes": 300,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "MAKE_AHEAD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#8B6F47",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Adobo",
+        "order": 1,
+        "quantity": "1",
+        "unit": "head",
+        "item": "garlic",
+        "prepNote": "cloves peeled",
+        "optional": false
+      },
+      {
+        "component": "Adobo",
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Adobo",
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Adobo",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "black pepper",
+        "prepNote": "freshly ground",
+        "optional": false
+      },
+      {
+        "component": "Adobo",
+        "order": 5,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Adobo",
+        "order": 6,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "white vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Adobo",
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lime juice",
+        "prepNote": "fresh",
+        "optional": false
+      },
+      {
+        "component": "Pork",
+        "order": 8,
+        "quantity": "4",
+        "unit": "kg",
+        "item": "pork shoulder",
+        "prepNote": "skin-on, bone-in",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "white rice",
+        "prepNote": "cooked",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "1",
+        "unit": "batch",
+        "item": "arroz con gandules",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Mash garlic, oregano, salt, and pepper in mortar and pestle or food processor. Mix in olive oil, vinegar, and lime juice.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Score pork skin in 1-inch crosshatch pattern, cutting through skin and fat but not into meat.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Cut deep slits all over meat side of pork. Rub adobo all over, pushing into slits. Rub salt into skin.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Place pork skin-side up in roasting pan. Refrigerate uncovered overnight to dry skin.",
+        "durationMinutes": null
+      },
+      {
+        "order": 5,
+        "text": "Remove pork from refrigerator 1 hour before roasting. Preheat oven to 150°C (300°F).",
+        "durationMinutes": 60
+      },
+      {
+        "order": 6,
+        "text": "Roast pork covered with foil for 4 hours.",
+        "durationMinutes": 240
+      },
+      {
+        "order": 7,
+        "text": "Increase oven to 220°C (425°F). Remove foil and roast 45-60 minutes until skin is crispy and crackles.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 8,
+        "text": "Let rest 20 minutes. Shred or slice meat, breaking skin into shards. Serve with rice.",
+        "durationMinutes": 20
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Pork",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "tostones",
+    "title": "Tostones",
+    "shortDescription": "Twice-fried crispy green plantains with garlic dipping sauce",
+    "note": "Fry once at lower temperature, smash, then fry again at higher heat for perfect crispiness.",
+    "introCopy": "These addictive twice-fried plantain rounds are a staple across the Caribbean. Green plantains are fried, smashed flat, then fried again until golden and crispy. Served with garlicky mojo sauce, they're the perfect savory snack or side.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "SNACK",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "FRIED",
+      "UNDER_30",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#D4A853",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Tostones",
+        "order": 1,
+        "quantity": "3",
+        "unit": null,
+        "item": "green plantains",
+        "prepNote": "peeled and cut into 1-inch rounds",
+        "optional": false
+      },
+      {
+        "component": "Tostones",
+        "order": 2,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "Tostones",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mojo sauce",
+        "order": 4,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Mojo sauce",
+        "order": 5,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mojo sauce",
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "lime juice",
+        "prepNote": "fresh",
+        "optional": false
+      },
+      {
+        "component": "Mojo sauce",
+        "order": 7,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Mojo sauce",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Mojo sauce",
+        "order": 9,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make mojo: Heat olive oil in small pan, add garlic, cook 1 minute. Remove from heat, stir in lime juice, cilantro, salt, and pepper. Set aside.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Heat vegetable oil in deep pan to 160°C (325°F).",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Fry plantain rounds in batches for 3-4 minutes until tender but not browned. Remove and drain.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Place each round between parchment paper and smash with flat-bottomed glass or tostonera to about 1/4-inch thick.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Increase oil temperature to 190°C (375°F).",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Fry smashed plantains again in batches until golden and crispy, about 2-3 minutes per side.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 7,
+        "text": "Drain on paper towels, sprinkle with salt immediately, and serve hot with mojo sauce.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegan",
+      "Vegetarian",
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "jamaican-curry-goat",
+    "title": "Jamaican Curry Goat",
+    "shortDescription": "Tender goat meat in aromatic Jamaican curry with rice and peas",
+    "note": "Marinate the goat overnight and don't rush the braising for fall-apart tender meat.",
+    "introCopy": "This Jamaican classic features goat meat slowly braised in a fragrant curry sauce infused with scotch bonnet peppers, allspice, and thyme. The long cooking transforms tough cuts into melt-in-your-mouth tenderness, creating one of the island's most beloved dishes.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 120,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "SPICY",
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#A67B3D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Marinade",
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "goat meat",
+        "prepNote": "bone-in, cut into chunks",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "Jamaican curry powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 3,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh thyme leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "allspice",
+        "prepNote": "ground",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Curry",
+        "order": 8,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Curry",
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "large onions",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Curry",
+        "order": 10,
+        "quantity": "3",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Curry",
+        "order": 11,
+        "quantity": "1",
+        "unit": null,
+        "item": "scotch bonnet pepper",
+        "prepNote": "whole or chopped",
+        "optional": false
+      },
+      {
+        "component": "Curry",
+        "order": 12,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "Jamaican curry powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Curry",
+        "order": 13,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Curry",
+        "order": 14,
+        "quantity": "3",
+        "unit": null,
+        "item": "medium potatoes",
+        "prepNote": "peeled and cubed",
+        "optional": false
+      },
+      {
+        "component": "Curry",
+        "order": 15,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 16,
+        "quantity": "1",
+        "unit": "batch",
+        "item": "rice and peas",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Combine goat meat with curry powder, garlic, thyme, allspice, black pepper, and salt. Marinate refrigerated overnight.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Heat oil in large heavy pot. Brown goat meat in batches, about 5 minutes per batch. Remove and set aside.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "In same pot, sauté onions and scallions until softened, about 5 minutes.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 4,
+        "text": "Add curry powder and cook, stirring constantly, for 2 minutes until fragrant.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Return goat meat to pot. Add water, scotch bonnet, and salt. Bring to boil.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Reduce heat to low, cover, and simmer for 90 minutes, stirring occasionally.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 7,
+        "text": "Add potatoes and continue cooking 30 minutes until potatoes are tender and meat falls off bone.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 8,
+        "text": "Adjust seasoning. Remove scotch bonnet if left whole. Serve with rice and peas.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "ackee-and-saltfish",
+    "title": "Ackee and Saltfish",
+    "shortDescription": "Jamaica's national breakfast dish with salt cod and ackee fruit",
+    "note": "Only use properly prepared canned ackee or ripe fresh ackee. Unripe ackee is toxic.",
+    "introCopy": "Jamaica's beloved national dish pairs the unique ackee fruit with flaked salt cod in a savory scramble. The creamy texture of ackee resembles scrambled eggs, while the salt cod provides a briny counterpoint. Traditionally served for breakfast with fried dumplings and plantains.",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#E8D190",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "300",
+        "unit": "g",
+        "item": "salt cod",
+        "prepNote": "soaked overnight, drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "can (540g)",
+        "item": "ackee",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "red bell pepper",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "scotch bonnet pepper",
+        "prepNote": "seeded and minced",
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "3",
+        "unit": "sprigs",
+        "item": "fresh thyme",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "2",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Boil salt cod in fresh water for 15 minutes. Drain, flake into bite-sized pieces, removing bones and skin.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 2,
+        "text": "Heat oil in large skillet. Sauté onion until softened, about 5 minutes.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 3,
+        "text": "Add bell pepper, tomatoes, garlic, and scotch bonnet. Cook 5 minutes until softened.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 4,
+        "text": "Add flaked salt cod and thyme. Cook 5 minutes, stirring gently.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 5,
+        "text": "Gently fold in ackee, scallions, and black pepper. Cook 3-4 minutes, stirring carefully to avoid breaking ackee.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Remove thyme sprigs. Serve hot with fried dumplings, boiled green bananas, or toast.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "White fish",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "Pescatarian"
+    ],
+    "allergenTags": [
+      "Fish",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "trinidadian-doubles",
+    "title": "Trinidadian Doubles",
+    "shortDescription": "Fried bara bread with curried chickpea filling and chutneys",
+    "note": "The bara dough needs to rise for 1-2 hours. Make extra—these disappear quickly!",
+    "introCopy": "Trinidad's most popular street food consists of two soft, fried flatbreads (bara) filled with curried chickpeas (channa) and topped with tangy tamarind and hot pepper chutneys. This beloved breakfast or snack is a perfect balance of textures and flavors.",
+    "servings": 6,
+    "prepMinutes": 90,
+    "cookMinutes": 30,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "FRIED",
+      "SPICY",
+      "EAT_MORE_VEG",
+      "HIGH_FIBER"
+    ],
+    "heroColor": "#C9A063",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Bara",
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Bara",
+        "order": 2,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "instant yeast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Bara",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Bara",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground turmeric",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Bara",
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Bara",
+        "order": 6,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Bara",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "Channa",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cans (400g each)",
+        "item": "chickpeas",
+        "prepNote": "drained and rinsed",
+        "optional": false
+      },
+      {
+        "component": "Channa",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Channa",
+        "order": 10,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Channa",
+        "order": 11,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Channa",
+        "order": 12,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "curry powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Channa",
+        "order": 13,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Channa",
+        "order": 14,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground turmeric",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Channa",
+        "order": 15,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Channa",
+        "order": 16,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 17,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "tamarind chutney",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Toppings",
+        "order": 18,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "hot pepper sauce",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Toppings",
+        "order": 19,
+        "quantity": "1",
+        "unit": null,
+        "item": "cucumber",
+        "prepNote": "diced",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make bara: Mix flour, yeast, baking powder, turmeric, and salt. Add warm water, knead into soft dough. Cover and let rise 1-2 hours.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 2,
+        "text": "Make channa: Heat oil, sauté onion and garlic until softened. Add curry powder, cumin, turmeric. Cook 2 minutes.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 3,
+        "text": "Add chickpeas, water, and salt. Simmer 15 minutes, mashing some chickpeas for creamy texture. Keep warm.",
+        "durationMinutes": 18
+      },
+      {
+        "order": 4,
+        "text": "Divide bara dough into 12 balls. Roll each into 4-inch circles.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Heat oil to 180°C (350°F). Fry bara circles one at a time until puffed and golden, about 1 minute per side.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 6,
+        "text": "To serve: Place channa on one bara, top with second bara. Add tamarind chutney, pepper sauce, and cucumber.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegan",
+      "Vegetarian",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "dominican-pastelon",
+    "title": "Pastelón",
+    "shortDescription": "Dominican sweet plantain lasagna with seasoned beef",
+    "note": "Use very ripe (black) plantains for natural sweetness that balances the savory meat.",
+    "introCopy": "The Dominican answer to lasagna, pastelón layers sweet ripe plantains with seasoned ground beef and cheese. This sweet-savory casserole showcases the Caribbean love of contrasting flavors, with the caramelized plantains providing a natural sweetness against the spiced meat.",
+    "servings": 8,
+    "prepMinutes": 30,
+    "cookMinutes": 60,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "FREEZER_FRIENDLY",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#B8860B",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Plantain layers",
+        "order": 1,
+        "quantity": "6",
+        "unit": null,
+        "item": "very ripe plantains",
+        "prepNote": "peeled and sliced lengthwise",
+        "optional": false
+      },
+      {
+        "component": "Plantain layers",
+        "order": 2,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 3,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "green bell pepper",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 6,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 7,
+        "quantity": "1",
+        "unit": "can (200g)",
+        "item": "tomato sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 8,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "tomato paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 9,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "green olives",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 10,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 13,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Meat filling",
+        "order": 14,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 15,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 16,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "mozzarella cheese",
+        "prepNote": "shredded",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 180°C (350°F). Grease a 9x13 inch baking dish.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Fry plantain slices in oil until golden, about 2 minutes per side. Drain on paper towels.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Brown ground beef in large pan. Add onion, bell pepper, and garlic. Cook until softened, about 7 minutes.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 4,
+        "text": "Stir in tomato sauce, tomato paste, olives, raisins, cumin, oregano, salt, and pepper. Simmer 10 minutes.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 5,
+        "text": "Layer half the fried plantains in baking dish. Top with half the meat mixture and half the cheese.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Repeat layers with remaining plantains, meat, and cheese.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 7,
+        "text": "Pour beaten eggs evenly over the top, allowing it to seep into layers.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 8,
+        "text": "Bake 35-40 minutes until set and golden on top. Let cool 10 minutes before slicing.",
+        "durationMinutes": 45
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "sancocho-dominicano",
+    "title": "Sancocho Dominicano",
+    "shortDescription": "Dominican seven-meat stew with root vegetables and plantains",
+    "note": "Traditionally made with seven meats. Simpler versions work well with 3-4 varieties.",
+    "introCopy": "The Dominican Republic's national dish is a hearty, soul-warming stew featuring multiple meats and starchy root vegetables. Often served at gatherings and celebrations, this substantial one-pot meal is comfort food at its finest, rich with the flavors of the Caribbean.",
+    "servings": 10,
+    "prepMinutes": 40,
+    "cookMinutes": 120,
+    "difficulty": "INVOLVED",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN",
+      "ONE_POT"
+    ],
+    "heroColor": "#A0522D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Meats",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "pork ribs",
+        "prepNote": "cut into chunks",
+        "optional": false
+      },
+      {
+        "component": "Meats",
+        "order": 2,
+        "quantity": "500",
+        "unit": "g",
+        "item": "beef short ribs",
+        "prepNote": "cut into chunks",
+        "optional": false
+      },
+      {
+        "component": "Meats",
+        "order": 3,
+        "quantity": "500",
+        "unit": "g",
+        "item": "chicken pieces",
+        "prepNote": "bone-in",
+        "optional": false
+      },
+      {
+        "component": "Meats",
+        "order": 4,
+        "quantity": "300",
+        "unit": "g",
+        "item": "smoked pork chops",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Sofrito base",
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "large onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Sofrito base",
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "green bell pepper",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Sofrito base",
+        "order": 7,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Sofrito base",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Vegetables",
+        "order": 9,
+        "quantity": "3",
+        "unit": null,
+        "item": "yuca (cassava)",
+        "prepNote": "peeled and cut into chunks",
+        "optional": false
+      },
+      {
+        "component": "Vegetables",
+        "order": 10,
+        "quantity": "2",
+        "unit": null,
+        "item": "yautía (malanga)",
+        "prepNote": "peeled and cut into chunks",
+        "optional": false
+      },
+      {
+        "component": "Vegetables",
+        "order": 11,
+        "quantity": "2",
+        "unit": null,
+        "item": "ñame (yam)",
+        "prepNote": "peeled and cut into chunks",
+        "optional": false
+      },
+      {
+        "component": "Vegetables",
+        "order": 12,
+        "quantity": "3",
+        "unit": null,
+        "item": "potatoes",
+        "prepNote": "peeled and quartered",
+        "optional": false
+      },
+      {
+        "component": "Vegetables",
+        "order": 13,
+        "quantity": "2",
+        "unit": null,
+        "item": "green plantains",
+        "prepNote": "peeled and cut into chunks",
+        "optional": false
+      },
+      {
+        "component": "Vegetables",
+        "order": 14,
+        "quantity": "2",
+        "unit": null,
+        "item": "ears of corn",
+        "prepNote": "cut into thirds",
+        "optional": false
+      },
+      {
+        "component": "Seasonings",
+        "order": 15,
+        "quantity": "12",
+        "unit": "cups",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Seasonings",
+        "order": 16,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Seasonings",
+        "order": 17,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Seasonings",
+        "order": 18,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Seasonings",
+        "order": 19,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 20,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "white rice",
+        "prepNote": "cooked",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 21,
+        "quantity": "2",
+        "unit": null,
+        "item": "limes",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 22,
+        "quantity": "1",
+        "unit": null,
+        "item": "avocado",
+        "prepNote": "sliced",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In very large pot, combine all meats, onion, bell pepper, garlic, cilantro, oregano, bay leaves, salt, and pepper.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Add water and bring to boil. Reduce heat, cover, and simmer 60 minutes, skimming foam occasionally.",
+        "durationMinutes": 65
+      },
+      {
+        "order": 3,
+        "text": "Add yuca, yautía, and ñame. Simmer 20 minutes.",
+        "durationMinutes": 22
+      },
+      {
+        "order": 4,
+        "text": "Add potatoes, plantains, and corn. Simmer 30 minutes until all vegetables are tender.",
+        "durationMinutes": 32
+      },
+      {
+        "order": 5,
+        "text": "Adjust seasoning with salt and pepper. The stew should be thick but soupy.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Remove bay leaves. Serve in large bowls with white rice on the side, lime wedges, and avocado slices.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Poultry",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "cuban-sandwich",
+    "title": "Cuban Sandwich",
+    "shortDescription": "Pressed sandwich with roast pork, ham, Swiss cheese, and pickles",
+    "note": "Use Cuban bread if available. The sandwich must be pressed—this is non-negotiable!",
+    "introCopy": "This iconic pressed sandwich originated in Cuban communities in Florida. Layers of roast pork, ham, Swiss cheese, pickles, and mustard are pressed between Cuban bread until crispy outside and melty inside. The result is a perfect balance of savory, tangy, and satisfying.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 10,
+    "difficulty": "EASY",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#D4A86A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "Cuban bread rolls",
+        "prepNote": "or French baguette sections",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "yellow mustard",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "400",
+        "unit": "g",
+        "item": "roast pork",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "200",
+        "unit": "g",
+        "item": "ham",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "8",
+        "unit": "slices",
+        "item": "Swiss cheese",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "8",
+        "unit": null,
+        "item": "dill pickle slices",
+        "prepNote": "lengthwise",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": "softened",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Slice each bread roll horizontally. Spread mustard on both cut sides.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Layer bottom half with roast pork, ham, Swiss cheese, and pickles. Top with other bread half.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Spread butter on outside of sandwich (top and bottom).",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Heat large skillet or panini press over medium heat. Place sandwich in pan.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Press down firmly with heavy pan or press. Cook 4-5 minutes until bottom is golden and crispy.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Flip sandwich, press again, and cook 4-5 minutes until second side is golden and cheese melts.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 7,
+        "text": "Slice diagonally and serve hot.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Pork",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fermented foods",
+        "weight": 10
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Mustard"
+    ]
+  },
+  {
+    "slug": "cuban-picadillo",
+    "title": "Picadillo",
+    "shortDescription": "Cuban spiced ground beef with olives, raisins, and white rice",
+    "note": "The raisins add authentic sweetness. Don't skip them—they balance the savory elements.",
+    "introCopy": "This Cuban comfort food classic features ground beef simmered in tomato sauce with a distinctive sweet-savory combination of olives and raisins. Quick to make yet deeply flavorful, picadillo is a weeknight staple across Cuban households, traditionally served over white rice.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 30,
+    "difficulty": "EASY",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "UNDER_30",
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN",
+      "ONE_POT"
+    ],
+    "heroColor": "#A0522D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "green bell pepper",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "800",
+        "unit": "g",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "can (400g)",
+        "item": "crushed tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "tomato paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "green olives",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 15,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 16,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "white rice",
+        "prepNote": "cooked",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in large skillet over medium-high heat. Sauté onion and bell pepper until softened, about 6 minutes.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Add garlic and cook 1 minute until fragrant.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Add ground beef, breaking it up with spoon. Cook until browned, about 8 minutes. Drain excess fat.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Stir in crushed tomatoes, tomato paste, olives, raisins, wine, cumin, oregano, bay leaves, salt, and pepper.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Reduce heat to low and simmer uncovered for 20 minutes, stirring occasionally, until sauce thickens.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 6,
+        "text": "Remove bay leaves. Serve over white rice.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Sulphites",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "caribbean-callaloo",
+    "title": "Callaloo",
+    "shortDescription": "Trinidadian stewed greens with coconut milk and aromatics",
+    "note": "Use dasheen or taro leaves if available. Spinach works as a substitute in a pinch.",
+    "introCopy": "This beloved Caribbean side dish features leafy greens slowly simmered with coconut milk, aromatics, and often crab or salted meat. Variations exist across islands, but the Trinidadian version with okra and coconut milk is particularly silky and comforting.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "ONE_POT",
+      "HIGH_FIBER"
+    ],
+    "heroColor": "#2E7D32",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "bunches",
+        "item": "callaloo leaves or spinach",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "okra",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "can (400ml)",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "vegetable broth",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "scotch bonnet pepper",
+        "prepNote": "whole",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "3",
+        "unit": "sprigs",
+        "item": "fresh thyme",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "100",
+        "unit": "g",
+        "item": "salt pork or bacon",
+        "prepNote": "diced",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat oil in large pot. If using salt pork, cook until crispy, about 5 minutes.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 2,
+        "text": "Add onion, garlic, and scallions. Sauté until softened, about 5 minutes.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 3,
+        "text": "Add callaloo leaves, okra, coconut milk, broth, scotch bonnet (whole), thyme, salt, and pepper.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Bring to boil, reduce heat, and simmer covered for 20 minutes until greens are very tender.",
+        "durationMinutes": 22
+      },
+      {
+        "order": 5,
+        "text": "For traditional smooth texture, use immersion blender to partially blend, leaving some texture. Or leave chunky.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Remove scotch bonnet and thyme sprigs. Adjust seasoning and serve as a side dish.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "jamaican-oxtail-stew",
+    "title": "Jamaican Oxtail Stew",
+    "shortDescription": "Rich braised oxtail with butter beans and rice and peas",
+    "note": "Oxtail needs long, slow cooking. Plan for at least 2.5 hours of braising time.",
+    "introCopy": "One of Jamaica's most luxurious comfort foods, oxtail stew features the rich, gelatinous meat braised until fall-off-the-bone tender in a savory gravy enriched with browning sauce and allspice. Butter beans add creaminess, while the traditional rice and peas soaks up every drop of the luscious sauce.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 180,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "MAKE_AHEAD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#6B4423",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Oxtail",
+        "order": 1,
+        "quantity": "2",
+        "unit": "kg",
+        "item": "oxtail",
+        "prepNote": "cut into segments",
+        "optional": false
+      },
+      {
+        "component": "Oxtail",
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "browning sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Oxtail",
+        "order": 3,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Oxtail",
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "fresh thyme leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Oxtail",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "allspice",
+        "prepNote": "ground",
+        "optional": false
+      },
+      {
+        "component": "Oxtail",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Oxtail",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 8,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "onions",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 10,
+        "quantity": "4",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 11,
+        "quantity": "1",
+        "unit": null,
+        "item": "scotch bonnet pepper",
+        "prepNote": "whole",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 12,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "beef broth",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 13,
+        "quantity": "1",
+        "unit": "can (400g)",
+        "item": "butter beans",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 14,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "tomato paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 15,
+        "quantity": "2",
+        "unit": null,
+        "item": "carrots",
+        "prepNote": "cut into chunks",
+        "optional": false
+      },
+      {
+        "component": "Stew",
+        "order": 16,
+        "quantity": "3",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 17,
+        "quantity": "1",
+        "unit": "batch",
+        "item": "rice and peas",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Marinate oxtail with browning sauce, garlic, thyme, allspice, salt, and pepper. Refrigerate 2 hours or overnight.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Heat oil in large heavy pot. Brown oxtail in batches, about 5 minutes per batch. Remove and set aside.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 3,
+        "text": "In same pot, sauté onions and scallions until softened, about 5 minutes.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 4,
+        "text": "Return oxtail to pot. Add broth, tomato paste, scotch bonnet, and bay leaves. Bring to boil.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Reduce heat to low, cover tightly, and simmer for 2.5 hours, stirring occasionally.",
+        "durationMinutes": 150
+      },
+      {
+        "order": 6,
+        "text": "Add butter beans and carrots. Simmer uncovered 30 minutes until vegetables tender and sauce thickened.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 7,
+        "text": "Remove bay leaves and scotch bonnet. Skim excess fat from surface if desired.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 8,
+        "text": "Serve oxtail and gravy over rice and peas.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "jamaican-festival",
+    "title": "Festival",
+    "shortDescription": "Jamaican sweet fried dough sticks, perfect with jerk or fried fish",
+    "note": "The dough should be slightly sweet. Don't skip the sugar or vanilla.",
+    "introCopy": "These lightly sweet fried dough sticks are a Jamaican street food staple, traditionally served alongside jerk chicken or fried fish. Crispy on the outside with a soft, slightly sweet interior, festivals are the perfect balance to spicy, savory dishes.",
+    "servings": 8,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "SNACK",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "FRIED",
+      "UNDER_30"
+    ],
+    "heroColor": "#D4A76A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "cornmeal",
+        "prepNote": "fine",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "brown sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3/4",
+        "unit": "cup",
+        "item": "milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Mix flour, cornmeal, brown sugar, baking powder, and salt in large bowl.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Combine milk, melted butter, and vanilla in separate bowl.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Add wet ingredients to dry ingredients. Mix until soft, slightly sticky dough forms.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Heat oil in deep pan to 180°C (350°F).",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "With wet hands, shape dough into 8 oblong sticks, about 4 inches long and 1.5 inches wide.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 6,
+        "text": "Fry festivals in batches, turning once, until golden brown on both sides, about 3-4 minutes per side.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 7,
+        "text": "Drain on paper towels and serve warm.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "bahamian-conch-fritters",
+    "title": "Conch Fritters",
+    "shortDescription": "Crispy Bahamian fritters with tender conch and spicy peppers",
+    "note": "Tenderize conch well by pounding it before chopping. Frozen conch works fine.",
+    "introCopy": "These golden, crispy fritters are a Bahamian classic, found at beach shacks and upscale restaurants alike. Tender conch meat is mixed into a lightly spiced batter with peppers and herbs, then fried until crunchy outside and tender inside. Perfect with a squeeze of lime.",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "SNACK",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "FRIED",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#D4AF6A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "conch meat",
+        "prepNote": "pounded and finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "green bell pepper",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "celery stalk",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "scotch bonnet pepper",
+        "prepNote": "seeded and minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "lime juice",
+        "prepNote": "fresh",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "Old Bay seasoning",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 15,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In large bowl, combine chopped conch, onion, bell pepper, celery, garlic, and scotch bonnet.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "In separate bowl, whisk together flour, baking powder, Old Bay, salt, and black pepper.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "In another bowl, whisk eggs, milk, and lime juice.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Add wet ingredients to dry ingredients, mix until just combined. Fold in conch mixture.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Heat oil in deep pot to 180°C (350°F).",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Drop batter by heaping tablespoons into hot oil. Fry in batches until golden brown, about 3-4 minutes, turning once.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 7,
+        "text": "Drain on paper towels. Serve hot with lime wedges and hot sauce.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Shellfish",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 5
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Shellfish",
+      "Wheat/gluten",
+      "Eggs",
+      "Milk",
+      "Celery",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "flan-de-coco",
+    "title": "Flan de Coco",
+    "shortDescription": "Creamy Caribbean coconut flan with caramel sauce",
+    "note": "Don't skip the water bath—it ensures the custard sets smoothly without curdling.",
+    "introCopy": "This silky custard dessert brings together the Spanish tradition of flan with Caribbean coconut milk for a tropical twist. The rich caramel sauce pools around the creamy custard, creating an elegant finish to any Caribbean meal.",
+    "servings": 8,
+    "prepMinutes": 20,
+    "cookMinutes": 60,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#E8C298",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Caramel",
+        "order": 1,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "granulated sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Caramel",
+        "order": 2,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 3,
+        "quantity": "1",
+        "unit": "can (400ml)",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 4,
+        "quantity": "1",
+        "unit": "can (397g)",
+        "item": "sweetened condensed milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 5,
+        "quantity": "1",
+        "unit": "can (354ml)",
+        "item": "evaporated milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 6,
+        "quantity": "5",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 7,
+        "quantity": "3",
+        "unit": null,
+        "item": "egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 9,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 10,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "shredded coconut",
+        "prepNote": "sweetened",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 165°C (325°F).",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Make caramel: Heat sugar and water in saucepan over medium heat without stirring until deep amber, about 10 minutes.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 3,
+        "text": "Immediately pour caramel into 9-inch round cake pan, tilting to coat bottom evenly. Set aside.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Blend coconut milk, condensed milk, evaporated milk, eggs, egg yolks, vanilla, and salt until smooth.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Stir in shredded coconut if using. Pour custard mixture over caramel in pan.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Place flan pan in larger roasting pan. Fill roasting pan with hot water halfway up sides of flan pan.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 7,
+        "text": "Bake 55-65 minutes until center is just set but still jiggles slightly.",
+        "durationMinutes": 65
+      },
+      {
+        "order": 8,
+        "text": "Remove from water bath and cool to room temperature. Refrigerate at least 4 hours or overnight.",
+        "durationMinutes": null
+      },
+      {
+        "order": 9,
+        "text": "To serve, run knife around edge, invert onto serving plate, allowing caramel to drip over.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "caribbean-tres-leches-cake",
+    "title": "Tres Leches Cake",
+    "shortDescription": "Sponge cake soaked in three milks with whipped cream and rum",
+    "note": "Let the cake soak in the milk mixture for at least 4 hours for best texture.",
+    "introCopy": "This beloved Latin American dessert has been embraced throughout the Caribbean with tropical twists like coconut milk and rum. The airy sponge cake is soaked in a mixture of three milks until gloriously moist, then topped with billowy whipped cream.",
+    "servings": 12,
+    "prepMinutes": 30,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#F5E6D3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Cake",
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 4,
+        "quantity": "5",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": "separated",
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 5,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "granulated sugar",
+        "prepNote": "divided",
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 6,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cake",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Three milks",
+        "order": 8,
+        "quantity": "1",
+        "unit": "can (354ml)",
+        "item": "evaporated milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Three milks",
+        "order": 9,
+        "quantity": "1",
+        "unit": "can (397g)",
+        "item": "sweetened condensed milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Three milks",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Three milks",
+        "order": 11,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "dark rum",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Topping",
+        "order": 12,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "heavy whipping cream",
+        "prepNote": "cold",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 13,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "powdered sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 14,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 15,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "toasted coconut flakes",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 180°C (350°F). Grease and flour 9x13 inch pan.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Whisk flour, baking powder, and salt. Set aside.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Beat egg yolks with 3/4 cup sugar until pale and fluffy, about 5 minutes. Mix in milk and vanilla.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 4,
+        "text": "Gently fold flour mixture into egg yolk mixture until just combined.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "In clean bowl, beat egg whites to soft peaks. Gradually add remaining 1/4 cup sugar, beat to stiff peaks.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Gently fold egg whites into batter in three additions. Pour into prepared pan.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 7,
+        "text": "Bake 30-35 minutes until golden and toothpick comes out clean. Cool 10 minutes.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 8,
+        "text": "Poke holes all over warm cake with skewer. Whisk together evaporated milk, condensed milk, coconut milk, and rum.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 9,
+        "text": "Pour milk mixture slowly over cake, allowing it to soak in. Refrigerate at least 4 hours or overnight.",
+        "durationMinutes": null
+      },
+      {
+        "order": 10,
+        "text": "Before serving, whip heavy cream with powdered sugar and vanilla to stiff peaks. Spread over cake.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 11,
+        "text": "Garnish with toasted coconut. Slice and serve cold.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "caribbean-rice-and-peas",
+    "title": "Caribbean Rice and Peas",
+    "shortDescription": "Coconut rice with kidney beans, thyme, and scotch bonnet",
+    "note": "The peas are actually beans—kidney beans or pigeon peas work equally well.",
+    "introCopy": "A cornerstone of Caribbean cooking across Jamaica, Trinidad, and beyond, rice and peas is the perfect accompaniment to virtually any main dish. Cooked in coconut milk with aromatic thyme and a whole scotch bonnet pepper, this fragrant side is far more than the sum of its parts.",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "Caribbean",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "ONE_POT",
+      "EAT_MORE_VEG",
+      "HIGH_FIBER",
+      "UNDER_30"
+    ],
+    "heroColor": "#C9B895",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "long-grain white rice",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "can (400ml)",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "can (400g)",
+        "item": "kidney beans",
+        "prepNote": "drained and rinsed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": "sprigs",
+        "item": "fresh thyme",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "smashed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "scotch bonnet pepper",
+        "prepNote": "whole",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "allspice berries",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1.5",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Combine rice, coconut milk, water, kidney beans, thyme, garlic, scallions, scotch bonnet, allspice, salt, and pepper in large pot.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Bring to a rolling boil over high heat, stirring once or twice.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Reduce heat to very low, cover tightly with lid, and simmer without stirring for 20-25 minutes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 4,
+        "text": "Remove from heat and let stand covered for 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Remove thyme sprigs, garlic cloves, allspice berries, and scotch bonnet pepper.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Fluff rice with fork and serve hot.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegan",
+      "Vegetarian",
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  }
+]

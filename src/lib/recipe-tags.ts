@@ -1,6 +1,9 @@
 // Shared display helpers for recipe tags: human-readable labels for the
-// free-text `attributes` codes, colored emblem styling for `dietTags`, and
-// small formatters for the dashboard/cook-later card chip row.
+// `attributes` codes (backed by the admin-editable AttributeTag catalog —
+// this map is a display-only fallback/default set used before a DB-fetched
+// label is available, or if a code has no catalog match), colored emblem
+// styling for `dietTags`, and small formatters for the dashboard/cook-later
+// card chip row.
 
 export const ATTRIBUTE_LABELS: Record<string, string> = {
   HIGH_PROTEIN: "High protein",
@@ -13,7 +16,6 @@ export const ATTRIBUTE_LABELS: Record<string, string> = {
   EAT_MORE_VEG: "Veg-forward",
   FRIED: "Fried",
   UNDER_30: "Under 30 min",
-  KID_FRIENDLY: "Kid-friendly",
   SPICY: "Spicy",
   FREEZER_FRIENDLY: "Freezer-friendly",
   HIGH_FIBER: "High fiber",

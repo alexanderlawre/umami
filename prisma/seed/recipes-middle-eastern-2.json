@@ -1,0 +1,4054 @@
+[
+  {
+    "slug": "baba-ganoush",
+    "title": "Baba Ganoush",
+    "shortDescription": "Smoky roasted eggplant dip with tahini and lemon",
+    "note": "For extra smokiness, char the eggplant directly over a gas flame",
+    "introCopy": "This classic Levantine mezze features fire-roasted eggplant blended with tahini, garlic, and lemon juice. The key to exceptional baba ganoush is achieving that deep smoky flavor by charring the eggplant until the skin is blackened and the flesh is completely soft.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 40,
+    "difficulty": "EASY",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "MAKE_AHEAD",
+      "HIGH_FIBER"
+    ],
+    "heroColor": "#8B7355",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "large",
+        "item": "eggplants",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "tahini",
+        "prepNote": "well-stirred",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": "freshly squeezed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "kosher salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "pomegranate seeds",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "6",
+        "unit": null,
+        "item": "pita bread",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 450°F. Prick eggplants all over with a fork and place on a baking sheet.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Roast eggplants for 35-40 minutes, turning once halfway through, until skin is charred and flesh is completely soft.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 3,
+        "text": "Let eggplants cool for 10 minutes, then peel away and discard the charred skin. Place flesh in a colander to drain excess liquid for 5 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Transfer eggplant to a bowl and mash roughly with a fork. Add tahini, garlic, lemon juice, olive oil, cumin, and salt. Mix well until combined but still slightly chunky.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Taste and adjust seasoning. Transfer to a serving bowl, drizzle with additional olive oil, and garnish with parsley and pomegranate seeds. Serve with warm pita bread.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nightshades",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Kosher",
+      "Gluten-free",
+      "Dairy-free",
+      "Low-carb"
+    ],
+    "allergenTags": [
+      "Sesame",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "chicken-kebabs-grilled",
+    "title": "Grilled Chicken Kebabs (Shish Tawook)",
+    "shortDescription": "Yogurt-marinated chicken skewers with Middle Eastern spices",
+    "note": "Soak wooden skewers in water for 30 minutes before grilling",
+    "introCopy": "Shish tawook is a beloved Lebanese street food featuring tender chicken marinated in yogurt, lemon, and aromatic spices. The yogurt tenderizes the meat while creating a flavorful char when grilled.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "GRILLED",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#D4AF37",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Marinade",
+        "order": 1,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "plain yogurt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 3,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": "lbs",
+        "item": "boneless skinless chicken thighs",
+        "prepNote": "cut into 1.5-inch pieces",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "4",
+        "unit": null,
+        "item": "pita bread",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "garlic sauce (toum)",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large bowl, whisk together yogurt, lemon juice, garlic, olive oil, paprika, cumin, cinnamon, and salt.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Add chicken pieces and toss to coat thoroughly. Cover and refrigerate for at least 2 hours or up to overnight.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Preheat grill to medium-high heat. Thread marinated chicken onto skewers, leaving small gaps between pieces.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Grill kebabs for 12-15 minutes, turning every 3-4 minutes, until chicken is charred in spots and cooked through (internal temperature 165°F).",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Let rest for 5 minutes, then serve with warm pita bread and garlic sauce.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "High-protein",
+      "Low-carb",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "muhammara",
+    "title": "Muhammara",
+    "shortDescription": "Syrian red pepper and walnut dip with pomegranate molasses",
+    "note": "Use Aleppo pepper if available for authentic flavor",
+    "introCopy": "Muhammara is a vibrant Syrian mezze made from roasted red peppers, walnuts, and breadcrumbs, with a distinctive sweet-tart flavor from pomegranate molasses. This addictive dip is equally at home on a mezze platter or as a sandwich spread.",
+    "servings": 8,
+    "prepMinutes": 15,
+    "cookMinutes": 0,
+    "difficulty": "EASY",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "MAKE_AHEAD",
+      "NO_COOK",
+      "SPICY"
+    ],
+    "heroColor": "#C73E1D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "16",
+        "unit": "oz",
+        "item": "roasted red peppers",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "walnuts",
+        "prepNote": "toasted",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "panko breadcrumbs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "pomegranate molasses",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "clove",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "Aleppo pepper",
+        "prepNote": "or 1/2 tsp red pepper flakes",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "6",
+        "unit": null,
+        "item": "pita bread",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a food processor, combine roasted red peppers, walnuts, breadcrumbs, pomegranate molasses, lemon juice, garlic, Aleppo pepper, and cumin.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Pulse until mixture is finely chopped but still has some texture, scraping down sides as needed.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "With processor running, drizzle in olive oil until mixture is smooth and creamy. Season with salt to taste.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Transfer to a serving bowl and let sit for 30 minutes at room temperature for flavors to meld.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 5,
+        "text": "Drizzle with additional olive oil and serve with warm pita bread.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nightshades",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Kosher",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Tree nuts",
+      "Wheat/gluten",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "maqluba-chicken-rice",
+    "title": "Maqluba (Upside-Down Rice)",
+    "shortDescription": "Palestinian layered rice dish with chicken, vegetables, and aromatic spices",
+    "note": "Use a wide, heavy pot for best results when flipping",
+    "introCopy": "Maqluba, meaning 'upside down' in Arabic, is a show-stopping Palestinian dish where layers of rice, meat, and vegetables are cooked together then dramatically flipped onto a serving platter. The result is a beautiful presentation with tender meat and perfectly spiced rice.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 60,
+    "difficulty": "INVOLVED",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "ONE_POT",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#8B6914",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "lbs",
+        "item": "chicken thighs",
+        "prepNote": "bone-in, skin-on",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2.5",
+        "unit": "cups",
+        "item": "basmati rice",
+        "prepNote": "rinsed and soaked 30 minutes",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "large",
+        "item": "eggplant",
+        "prepNote": "sliced into 1/2-inch rounds",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "large",
+        "item": "tomatoes",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "head",
+        "item": "cauliflower",
+        "prepNote": "cut into florets",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "baharat spice blend",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground turmeric",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "toasted pine nuts",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 14,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Season chicken with 1 tsp salt, baharat, turmeric, and cumin. Heat 2 tbsp oil in a large pot and brown chicken on all sides. Remove and set aside.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "In the same pot, fry eggplant slices in batches until golden on both sides. Remove and drain on paper towels. Repeat with cauliflower florets.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 3,
+        "text": "Arrange eggplant slices in the bottom of the pot, followed by tomato slices, then cauliflower, then onion. Place browned chicken pieces on top.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Drain rice and spread evenly over chicken. Carefully pour hot chicken stock over everything. Add remaining salt. Bring to a boil.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Reduce heat to low, cover tightly, and cook for 35-40 minutes until rice is tender and liquid is absorbed.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 6,
+        "text": "Remove from heat and let rest covered for 10 minutes. Place a large serving platter over the pot and carefully flip the entire pot upside down. Tap the bottom and carefully lift off the pot.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 7,
+        "text": "Garnish with toasted pine nuts and parsley. Serve immediately.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Tree nuts"
+    ]
+  },
+  {
+    "slug": "lamb-kofta-kebabs",
+    "title": "Lamb Kofta Kebabs",
+    "shortDescription": "Spiced ground lamb skewers with fresh herbs",
+    "note": "Chill the mixture for 30 minutes before shaping for easier handling",
+    "introCopy": "These juicy lamb kofta are a staple across the Middle East, from Lebanon to Iraq. Ground lamb is mixed with fresh herbs, onions, and warm spices, then formed around skewers and grilled until charred and tender.",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 12,
+    "difficulty": "MEDIUM",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "GRILLED"
+    ],
+    "heroColor": "#6B4423",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "lbs",
+        "item": "ground lamb",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "onion",
+        "prepNote": "finely grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh mint",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground coriander",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "cayenne pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1.5",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 12,
+        "quantity": "4",
+        "unit": null,
+        "item": "pita bread",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "tahini sauce",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large bowl, combine ground lamb, grated onion, parsley, mint, garlic, cumin, coriander, paprika, cayenne, salt, and black pepper. Mix thoroughly with your hands until well combined.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Cover and refrigerate for 30 minutes to firm up and let flavors meld.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 3,
+        "text": "Divide mixture into 8 equal portions. With wet hands, mold each portion around a flat metal skewer into a long, sausage shape about 6 inches long.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Preheat grill to medium-high heat. Brush grates with oil.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Grill kofta for 10-12 minutes, turning every 3 minutes, until nicely charred and cooked through.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 6,
+        "text": "Serve hot with warm pita bread and tahini sauce.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "High-protein",
+      "Low-carb",
+      "Dairy-free",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Sesame"
+    ]
+  },
+  {
+    "slug": "mansaf-lamb-yogurt",
+    "title": "Mansaf",
+    "shortDescription": "Jordanian festive lamb dish with jameed yogurt sauce over rice",
+    "note": "If jameed is unavailable, use Greek yogurt with extra lemon juice",
+    "introCopy": "Mansaf is Jordan's national dish, traditionally served at weddings and celebrations. Tender lamb is cooked in a tangy fermented yogurt sauce called jameed and served over a bed of rice and flatbread, creating a communal feast meant to be eaten with the hands.",
+    "servings": 8,
+    "prepMinutes": 20,
+    "cookMinutes": 120,
+    "difficulty": "INVOLVED",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#E8DCC4",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Lamb",
+        "order": 1,
+        "quantity": "3",
+        "unit": "lbs",
+        "item": "bone-in lamb shoulder",
+        "prepNote": "cut into large pieces",
+        "optional": false
+      },
+      {
+        "component": "Lamb",
+        "order": 2,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": "Lamb",
+        "order": 3,
+        "quantity": "4",
+        "unit": "whole",
+        "item": "cardamom pods",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Lamb",
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Lamb",
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "black peppercorns",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Lamb",
+        "order": 6,
+        "quantity": "1.5",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Jameed sauce",
+        "order": 7,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "plain whole milk yogurt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Jameed sauce",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "cornstarch",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Jameed sauce",
+        "order": 9,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "lamb cooking liquid",
+        "prepNote": "reserved from cooking",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 10,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "basmati rice",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 11,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "ghee",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 12,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground turmeric",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "4",
+        "unit": "large",
+        "item": "flatbreads",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 14,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "toasted pine nuts",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 15,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "slivered almonds",
+        "prepNote": "toasted",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Place lamb pieces, onion, cardamom, bay leaves, peppercorns, and salt in a large pot. Cover with water by 2 inches. Bring to a boil, then reduce to a simmer.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Skim any foam from the surface. Cover and simmer for 1.5-2 hours until lamb is very tender.",
+        "durationMinutes": 120
+      },
+      {
+        "order": 3,
+        "text": "Remove lamb and strain cooking liquid, reserving 2 cups. Keep lamb warm.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "For the jameed sauce: whisk yogurt and cornstarch together until smooth. Slowly whisk in the reserved warm lamb broth. Heat in a saucepan over medium-low heat, stirring constantly in one direction, until thickened, about 15 minutes. Do not boil or it will curdle.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 5,
+        "text": "Cook rice: Heat ghee in a pot, add rice and turmeric, toast for 2 minutes. Add 4.5 cups water and 1 tsp salt. Bring to a boil, cover, reduce heat to low, and cook 15 minutes until tender.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 6,
+        "text": "To serve: Arrange flatbreads on a large platter. Top with rice, then lamb pieces. Pour yogurt sauce over everything. Garnish with pine nuts and almonds.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Tree nuts",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "kabsa-chicken-rice",
+    "title": "Kabsa (Saudi Spiced Rice)",
+    "shortDescription": "Aromatic Saudi rice dish with chicken and baharat spice",
+    "note": "Toast the whole spices before grinding for maximum flavor",
+    "introCopy": "Kabsa is the national dish of Saudi Arabia, featuring fragrant basmati rice cooked in a spiced broth with tender chicken. The signature baharat spice blend gives this dish its distinctive warm, complex flavor that's beloved throughout the Gulf region.",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 60,
+    "difficulty": "MEDIUM",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN",
+      "ONE_POT"
+    ],
+    "heroColor": "#D4A76A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "chicken",
+        "prepNote": "cut into 8 pieces",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "basmati rice",
+        "prepNote": "rinsed and soaked 30 minutes",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "large",
+        "item": "onions",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "large",
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "tomato paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "baharat spice blend",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground turmeric",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "4",
+        "unit": "whole",
+        "item": "cardamom pods",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 15,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "raisins",
+        "prepNote": "golden",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 16,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "toasted almonds",
+        "prepNote": "slivered",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Season chicken pieces with salt, baharat, turmeric, and cinnamon. Heat oil in a large pot and brown chicken on all sides. Remove and set aside.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "In the same pot, sauté onions until golden, about 8 minutes. Add garlic and cook 1 minute more.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Add tomatoes and tomato paste, cook for 5 minutes until tomatoes break down. Return chicken to pot.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Add cardamom pods, bay leaves, and chicken stock. Bring to a boil, then reduce to simmer. Cover and cook for 25 minutes until chicken is cooked through.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 5,
+        "text": "Remove chicken and keep warm. Drain rice and add to the pot. Bring to a boil, then reduce heat to low, cover tightly, and cook for 20 minutes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 6,
+        "text": "Remove from heat and let rest covered for 10 minutes. Meanwhile, sauté raisins in a small pan until plump.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 7,
+        "text": "Fluff rice and transfer to a serving platter. Top with chicken pieces, garnish with raisins and toasted almonds.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Tree nuts"
+    ]
+  },
+  {
+    "slug": "labneh-strained-yogurt",
+    "title": "Labneh with Za'atar",
+    "shortDescription": "Thick, tangy strained yogurt cheese with Middle Eastern herbs",
+    "note": "The longer you strain, the thicker and more cheese-like it becomes",
+    "introCopy": "Labneh is a staple of Levantine breakfast tables—silky, tangy yogurt cheese made by straining regular yogurt until thick and spreadable. Served with olive oil and za'atar, it's perfect for scooping with warm pita.",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "difficulty": "EASY",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "NO_COOK",
+      "HIGH_PROTEIN",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#F5F5DC",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "plain whole milk yogurt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 3,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "za'atar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 5,
+        "quantity": "6",
+        "unit": null,
+        "item": "pita bread",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 6,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "cherry tomatoes",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "cucumber",
+        "prepNote": "sliced",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Mix yogurt and salt together in a bowl.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Line a fine-mesh strainer with cheesecloth or a clean kitchen towel and place over a bowl. Pour yogurt into the cloth.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Gather the corners of the cloth and tie together. Refrigerate for at least 12 hours or up to 24 hours, allowing the whey to drain out.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Transfer thickened labneh to a serving bowl. Make a well in the center and drizzle generously with olive oil. Sprinkle za'atar over the top.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Serve with warm pita bread, cherry tomatoes, and cucumber slices.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal",
+      "Kosher",
+      "Gluten-free",
+      "High-protein",
+      "Low-carb"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Wheat/gluten",
+      "Sesame"
+    ]
+  },
+  {
+    "slug": "mahshi-stuffed-zucchini",
+    "title": "Mahshi (Stuffed Zucchini)",
+    "shortDescription": "Lebanese zucchini stuffed with rice, meat, and herbs in tomato broth",
+    "note": "Use a zucchini corer for easier hollowing, or a thin knife works too",
+    "introCopy": "Mahshi are stuffed vegetables popular throughout the Levant. This version features tender zucchini hollowed and filled with a fragrant mixture of rice, ground meat, and spices, then simmered in a garlicky tomato broth until perfectly tender.",
+    "servings": 6,
+    "prepMinutes": 45,
+    "cookMinutes": 60,
+    "difficulty": "INVOLVED",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#7BA05B",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "12",
+        "unit": "small",
+        "item": "zucchini",
+        "prepNote": "about 6 inches long",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 2,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "ground beef or lamb",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 3,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "short-grain rice",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "seven spice",
+        "prepNote": "baharat",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Cooking broth",
+        "order": 8,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "tomato sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking broth",
+        "order": 9,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking broth",
+        "order": 10,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Cooking broth",
+        "order": 11,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking broth",
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking broth",
+        "order": 13,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "dried mint",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 14,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "cooked white rice",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Cut the stem end off each zucchini. Using a zucchini corer or thin knife, carefully hollow out the zucchini, leaving about 1/4-inch wall. Reserve the flesh for another use.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 2,
+        "text": "In a bowl, mix ground meat, rice, seven spice, cinnamon, salt, and parsley until well combined.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Stuff each zucchini about 3/4 full with the meat mixture, leaving room for the rice to expand. Do not overstuff.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "In a large pot, combine tomato sauce, water, garlic, lemon juice, salt, and dried mint. Bring to a simmer.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Carefully arrange stuffed zucchini in the pot in layers. The liquid should cover them; add more water if needed.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Bring to a boil, then reduce heat to low. Cover and simmer gently for 50-60 minutes until zucchini are very tender and rice is cooked.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 7,
+        "text": "Carefully remove zucchini from the pot. Serve hot with rice and some of the tomato broth spooned over.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nightshades",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "manakish-zaatar",
+    "title": "Manakish Za'atar",
+    "shortDescription": "Lebanese flatbread topped with za'atar and olive oil",
+    "note": "For crispier manakish, bake on a preheated pizza stone",
+    "introCopy": "Manakish is the Levantine answer to pizza—soft, chewy flatbread brushed with olive oil and sprinkled with za'atar before baking. It's a beloved breakfast street food in Lebanon, Syria, and beyond, often eaten folded and on the go.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 12,
+    "difficulty": "MEDIUM",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#9C7A56",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "active dry yeast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 5,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "za'atar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "fresh vegetables",
+        "prepNote": "tomatoes, cucumbers, mint",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large bowl, combine warm water, yeast, and sugar. Let sit for 5 minutes until foamy.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Add flour, salt, and olive oil. Mix until a shaggy dough forms, then knead for 8-10 minutes until smooth and elastic.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 3,
+        "text": "Place dough in an oiled bowl, cover, and let rise in a warm place for 1 hour until doubled in size.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 4,
+        "text": "Preheat oven to 450°F. Divide dough into 6 equal pieces and roll each into an 8-inch circle.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Mix za'atar and olive oil together. Brush generously over each dough circle, spreading to the edges.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Place on baking sheets and bake for 10-12 minutes until edges are golden and bread is cooked through.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 7,
+        "text": "Serve warm, folded or flat, with fresh vegetables.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Kosher",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Sesame"
+    ]
+  },
+  {
+    "slug": "knafeh-cheese-pastry",
+    "title": "Knafeh",
+    "shortDescription": "Palestinian sweet cheese pastry with crispy shredded phyllo",
+    "note": "Use akkawi or mozzarella cheese for authentic texture",
+    "introCopy": "Knafeh is the crown jewel of Levantine desserts—layers of buttery, crispy kataifi pastry filled with melted cheese, soaked in sweet syrup, and often topped with pistachios. It's best served hot, when the cheese is stretchy and the pastry shatters at every bite.",
+    "servings": 12,
+    "prepMinutes": 25,
+    "cookMinutes": 45,
+    "difficulty": "INVOLVED",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#FFA500",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Pastry",
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "kataifi pastry",
+        "prepNote": "shredded phyllo",
+        "optional": false
+      },
+      {
+        "component": "Pastry",
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "unsalted butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": "Pastry",
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "orange food coloring",
+        "prepNote": "optional",
+        "optional": true
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "akkawi cheese",
+        "prepNote": "soaked overnight and shredded",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "mozzarella cheese",
+        "prepNote": "shredded",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "semolina",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 8,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "rose water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "crushed pistachios",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make the syrup: Combine sugar, water, and lemon juice in a saucepan. Bring to a boil, then simmer for 10 minutes until slightly thickened. Stir in rose water and let cool completely.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Preheat oven to 350°F. Butter a 9x13-inch baking pan.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Pull apart kataifi pastry to loosen the strands. Pour melted butter over and toss until evenly coated. Add food coloring if using.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Press half of the buttered kataifi into the bottom of the prepared pan in an even layer.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Mix the cheeses with semolina and spread evenly over the kataifi layer. Top with remaining kataifi, pressing down firmly.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Bake for 40-45 minutes until the top is golden brown and crispy.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 7,
+        "text": "Remove from oven and immediately pour the cooled syrup evenly over the hot knafeh. Let it soak for 15 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 8,
+        "text": "Sprinkle with crushed pistachios. Cut into squares or diamonds and serve warm.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal",
+      "Kosher"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Tree nuts"
+    ]
+  },
+  {
+    "slug": "mujadara-lentils-rice",
+    "title": "Mujadara",
+    "shortDescription": "Lebanese lentils and rice with crispy caramelized onions",
+    "note": "The secret is deeply caramelizing the onions until almost black",
+    "introCopy": "Mujadara is humble comfort food at its finest—earthy lentils and fluffy rice crowned with mountains of caramelized onions. This ancient Levantine dish proves that simple ingredients, when treated right, can be utterly delicious.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 50,
+    "difficulty": "EASY",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "COMFORT_FOOD",
+      "HIGH_FIBER",
+      "HIGH_PROTEIN",
+      "SPEND_LESS"
+    ],
+    "heroColor": "#654321",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "green or brown lentils",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "basmati rice",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "large",
+        "item": "onions",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground allspice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1.5",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "plain yogurt",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large skillet over medium heat. Add sliced onions and cook, stirring frequently, for 30-40 minutes until deeply caramelized and dark brown. Remove half and set aside for garnish.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 2,
+        "text": "Add lentils to the pot with remaining onions. Add 3 cups water and bring to a boil. Reduce heat and simmer for 15 minutes until lentils are partially cooked.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 3,
+        "text": "Add rice, cumin, allspice, salt, pepper, and remaining 1 cup water. Stir well.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Bring back to a boil, then reduce heat to low. Cover and cook for 20 minutes until rice and lentils are tender and liquid is absorbed.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 5,
+        "text": "Remove from heat and let stand covered for 10 minutes. Fluff with a fork.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Transfer to a serving platter and top with the reserved caramelized onions. Serve with yogurt on the side.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Kosher",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "baklava-pistachio",
+    "title": "Pistachio Baklava",
+    "shortDescription": "Flaky phyllo pastry layered with pistachios and honey syrup",
+    "note": "Keep phyllo covered with a damp towel while working to prevent drying",
+    "introCopy": "Baklava is the quintessential Middle Eastern sweet—paper-thin layers of buttery phyllo interspersed with crushed pistachios, baked until golden, then drenched in fragrant honey syrup. Each bite shatters into sweet, nutty perfection.",
+    "servings": 24,
+    "prepMinutes": 40,
+    "cookMinutes": 50,
+    "difficulty": "INVOLVED",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#A08C5C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Pastry",
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "phyllo dough",
+        "prepNote": "thawed",
+        "optional": false
+      },
+      {
+        "component": "Pastry",
+        "order": 2,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "unsalted butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 3,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "raw pistachios",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 6,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 7,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "honey",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "orange blossom water",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make the syrup: Combine sugar, water, honey, and lemon juice in a saucepan. Bring to a boil, then simmer for 15 minutes. Stir in orange blossom water and let cool completely.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 2,
+        "text": "Preheat oven to 325°F. Brush a 9x13-inch baking pan with butter.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Mix chopped pistachios, sugar, and cinnamon together.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Layer 8 sheets of phyllo in the pan, brushing each sheet with melted butter. Sprinkle with 1/3 of the pistachio mixture.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Add 6 more sheets of phyllo, buttering each, then add another 1/3 of pistachios. Repeat once more.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Top with remaining phyllo sheets (about 8), buttering each layer. Brush the top generously with butter.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 7,
+        "text": "Using a sharp knife, cut the baklava into diamond or square shapes, cutting all the way through to the bottom.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 8,
+        "text": "Bake for 45-50 minutes until golden brown and crisp.",
+        "durationMinutes": 50
+      },
+      {
+        "order": 9,
+        "text": "Remove from oven and immediately pour the cooled syrup evenly over the hot baklava. Let soak for at least 4 hours or overnight before serving.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal",
+      "Kosher"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Tree nuts",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "falafel-crispy",
+    "title": "Falafel",
+    "shortDescription": "Crispy fried chickpea fritters with herbs and spices",
+    "note": "Use dried chickpeas, not canned, for the right texture",
+    "introCopy": "Falafel are the crispy, herb-packed fritters beloved across the Middle East. Made from ground dried chickpeas mixed with fresh herbs and spices, they're fried until golden and crunchy outside while staying fluffy within—perfect tucked into pita with tahini sauce.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "HIGH_PROTEIN",
+      "HIGH_FIBER",
+      "FRIED"
+    ],
+    "heroColor": "#8B7355",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "dried chickpeas",
+        "prepNote": "soaked overnight",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "small",
+        "item": "onion",
+        "prepNote": "roughly chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "packed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "packed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1.5",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground coriander",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "cayenne pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1.5",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "6",
+        "unit": null,
+        "item": "pita bread",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 14,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "tahini sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 15,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "chopped vegetables",
+        "prepNote": "tomatoes, cucumbers, lettuce",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Drain soaked chickpeas thoroughly and pat dry. Do NOT cook them—they must be raw.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "In a food processor, combine chickpeas, onion, parsley, cilantro, garlic, cumin, coriander, cayenne, and salt. Pulse until finely ground but not pureed—the mixture should hold together when squeezed.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Transfer to a bowl, cover, and refrigerate for at least 1 hour or up to overnight.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Stir in baking powder and flour just before frying. The mixture should be moldable; add more flour 1 tbsp at a time if too wet.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Form mixture into small balls or patties, about 1.5 inches in diameter.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 6,
+        "text": "Heat oil to 350°F in a large pot. Fry falafel in batches for 3-4 minutes, turning once, until deep golden brown and crispy.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 7,
+        "text": "Drain on paper towels. Serve hot in pita bread with tahini sauce and fresh vegetables.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Kosher",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Sesame"
+    ]
+  },
+  {
+    "slug": "fatteh-chickpea-yogurt",
+    "title": "Fatteh (Chickpea & Yogurt)",
+    "shortDescription": "Layered Levantine dish with crispy pita, chickpeas, and garlicky yogurt",
+    "note": "Assemble just before serving to keep the pita crispy",
+    "introCopy": "Fatteh is a brilliant use of day-old pita, transformed into a layered masterpiece. Crispy toasted bread is topped with warm spiced chickpeas, cool tangy yogurt, and a final flourish of pine nuts and butter. The contrasts of temperature and texture make every bite exciting.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#F5DEB3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "3",
+        "unit": null,
+        "item": "pita bread",
+        "prepNote": "split and cut into triangles",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "cooked chickpeas",
+        "prepNote": "about 2 15-oz cans, drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "plain whole milk yogurt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "tahini",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 9,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 10,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "pine nuts",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 12,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 375°F. Arrange pita triangles on a baking sheet and toast for 8-10 minutes until crispy and golden. Set aside.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 2,
+        "text": "Warm chickpeas in a pot with cumin and a splash of water. Keep warm.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "In a bowl, mix yogurt, garlic, tahini, lemon juice, and salt until smooth and creamy.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "In a small skillet, melt butter over medium heat. Add pine nuts and cook, stirring constantly, until golden brown, about 3 minutes. Stir in paprika and remove from heat.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "To assemble: Arrange toasted pita pieces on a large serving platter. Top with warm chickpeas, then pour yogurt mixture over everything.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Drizzle the pine nut butter over the top and garnish with fresh parsley. Serve immediately.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal",
+      "Kosher",
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Tree nuts",
+      "Sesame"
+    ]
+  },
+  {
+    "slug": "maamoul-date-cookies",
+    "title": "Maamoul (Date-Filled Cookies)",
+    "shortDescription": "Delicate Middle Eastern shortbread cookies filled with dates",
+    "note": "Traditional molds create beautiful patterns but aren't required",
+    "introCopy": "Maamoul are buttery semolina cookies filled with sweet date paste, traditionally made for Easter and Eid celebrations throughout the Levant. Their delicate, crumbly texture and fragrant filling make them irresistible with tea or coffee.",
+    "servings": 30,
+    "prepMinutes": 45,
+    "cookMinutes": 20,
+    "difficulty": "INVOLVED",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#D2B48C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "fine semolina",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "unsalted butter",
+        "prepNote": "melted and cooled",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "powdered sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "orange blossom water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Date filling",
+        "order": 7,
+        "quantity": "12",
+        "unit": "oz",
+        "item": "medjool dates",
+        "prepNote": "pitted",
+        "optional": false
+      },
+      {
+        "component": "Date filling",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "unsalted butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Date filling",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "powdered sugar",
+        "prepNote": "for dusting",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make the filling: Combine dates, butter, and cinnamon in a food processor. Pulse until a paste forms. Roll into 30 small balls and refrigerate.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Make the dough: Mix semolina, flour, and powdered sugar. Pour melted butter over and rub with your hands until the mixture resembles breadcrumbs. Let rest for 1 hour.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Add orange blossom water and milk to the dough, kneading until it comes together into a soft, pliable dough.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Preheat oven to 350°F and line baking sheets with parchment.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Take a walnut-sized piece of dough and flatten it in your palm. Place a date ball in the center and wrap the dough around it, sealing completely. Shape into a ball or use a maamoul mold to create patterns.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 6,
+        "text": "Place cookies on prepared sheets. Bake for 18-20 minutes until just set but not browned—they should remain pale.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 7,
+        "text": "Let cool completely, then dust generously with powdered sugar.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal",
+      "Kosher"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "kubaneh-yemeni-bread",
+    "title": "Kubaneh (Yemeni Pull-Apart Bread)",
+    "shortDescription": "Overnight slow-baked Yemeni bread with layers of butter",
+    "note": "Traditionally baked overnight at very low heat for maximum tenderness",
+    "introCopy": "Kubaneh is a Yemeni Jewish Sabbath bread, traditionally baked overnight in a low oven so it's ready for Saturday morning breakfast. The result is incredibly soft, buttery layers that pull apart like the world's most tender dinner roll.",
+    "servings": 8,
+    "prepMinutes": 30,
+    "cookMinutes": 180,
+    "difficulty": "MEDIUM",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "BREAKFAST"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#F4E8D0",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "active dry yeast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1.5",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1.25",
+        "unit": "cups",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3/4",
+        "unit": "cup",
+        "item": "unsalted butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "grated tomato",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "6",
+        "unit": null,
+        "item": "hard-boiled eggs",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large bowl, combine warm water, yeast, and sugar. Let sit for 5 minutes until foamy.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Add flour, salt, and oil. Mix until a shaggy dough forms, then knead for 10 minutes until smooth and elastic.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Place in an oiled bowl, cover, and let rise for 1.5 hours until doubled.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 4,
+        "text": "Punch down dough and divide into 8 equal pieces. Roll each into a ball.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Generously brush a large Dutch oven or deep pot with melted butter. Dip each dough ball in melted butter and arrange in the pot, layering if needed. Pour any remaining butter over the top.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Cover tightly with lid or foil. Let rise for 30 minutes.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 7,
+        "text": "Preheat oven to 225°F. Bake covered for 3 hours. The bread should be golden brown and pull apart easily.",
+        "durationMinutes": 180
+      },
+      {
+        "order": 8,
+        "text": "Carefully invert onto a serving platter. Serve warm, pulling apart layers, with grated tomato and hard-boiled eggs if desired.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 30
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Kosher"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "lentil-soup-arabic",
+    "title": "Shorbet Adas (Arabic Lentil Soup)",
+    "shortDescription": "Velvety red lentil soup with cumin and lemon",
+    "note": "Blend until completely smooth for the silkiest texture",
+    "introCopy": "This comforting lentil soup is a staple across the Arab world, from Lebanon to Egypt. Red lentils break down into a creamy, golden soup seasoned with cumin, garlic, and a bright hit of lemon. It's simple, wholesome, and deeply satisfying.",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 35,
+    "difficulty": "EASY",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "COMFORT_FOOD",
+      "HIGH_FIBER",
+      "HIGH_PROTEIN",
+      "SPEND_LESS",
+      "ONE_POT"
+    ],
+    "heroColor": "#E4A853",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "red lentils",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "large",
+        "item": "carrot",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "6",
+        "unit": "cups",
+        "item": "vegetable stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground turmeric",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1.5",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 12,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "cut into wedges",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large pot over medium heat. Add onion and carrot, sauté for 8 minutes until softened.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Add garlic, cumin, and turmeric. Cook for 1 minute until fragrant.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Add lentils and vegetable stock. Bring to a boil, then reduce heat and simmer for 25 minutes until lentils are very soft and falling apart.",
+        "durationMinutes": 28
+      },
+      {
+        "order": 4,
+        "text": "Using an immersion blender, puree the soup until completely smooth. Alternatively, blend in batches in a regular blender.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Stir in lemon juice, salt, and pepper. Adjust seasoning to taste. Add water if soup is too thick.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Serve hot, garnished with fresh parsley and lemon wedges.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Kosher",
+      "Gluten-free",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "umm-ali-bread-pudding",
+    "title": "Umm Ali",
+    "shortDescription": "Egyptian bread pudding with nuts, raisins, and cream",
+    "note": "Use day-old puff pastry or phyllo for best texture",
+    "introCopy": "Umm Ali is Egypt's answer to bread pudding—layers of crispy pastry soaked in sweet milk and cream, studded with nuts and raisins, then baked until golden. It's rich, comforting, and utterly addictive, especially served warm.",
+    "servings": 8,
+    "prepMinutes": 20,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#C19A6B",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "puff pastry",
+        "prepNote": "or phyllo dough",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "heavy cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3/4",
+        "unit": "cup",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "shredded coconut",
+        "prepNote": "sweetened",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "golden raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "mixed nuts",
+        "prepNote": "almonds, pistachios, hazelnuts, roughly chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 375°F. Roll out puff pastry and place on a baking sheet. Bake for 15-18 minutes until golden and puffed. Let cool, then break into bite-sized pieces.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "In a saucepan, heat milk, cream, and sugar over medium heat, stirring until sugar dissolves. Remove from heat and stir in vanilla.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Brush a 9x13-inch baking dish with melted butter. Layer half the pastry pieces in the bottom.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Sprinkle with half the coconut, raisins, and nuts. Top with remaining pastry pieces, then remaining coconut, raisins, and nuts.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Pour the hot milk mixture evenly over the entire dish. Let soak for 10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Bake for 25-30 minutes until the top is golden brown and the liquid is mostly absorbed but still slightly creamy.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 7,
+        "text": "Serve warm, scooped into bowls.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Halal",
+      "Kosher"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Tree nuts",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "batata-harra-spicy-potatoes",
+    "title": "Batata Harra (Spicy Potatoes)",
+    "shortDescription": "Lebanese crispy fried potatoes with garlic, cilantro, and chili",
+    "note": "Frying the potatoes twice ensures maximum crispiness",
+    "introCopy": "Batata harra, meaning 'spicy potatoes' in Arabic, is a beloved Lebanese mezze of crispy fried potato cubes tossed with loads of garlic, fresh cilantro, and chili flakes. They're addictive as a side dish or appetizer, especially with a squeeze of lemon.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 30,
+    "difficulty": "EASY",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "SPICY",
+      "FRIED"
+    ],
+    "heroColor": "#CD7F32",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2.5",
+        "unit": "lbs",
+        "item": "russet potatoes",
+        "prepNote": "peeled and cut into 3/4-inch cubes",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1-2",
+        "unit": "tsp",
+        "item": "red pepper flakes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground coriander",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Pat potato cubes completely dry with paper towels.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Heat vegetable oil to 325°F in a large pot. Fry potatoes in batches for 6-8 minutes until just tender but not browned. Remove and drain on paper towels.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Increase oil temperature to 375°F. Fry potatoes again in batches for 3-4 minutes until golden brown and crispy. Drain and transfer to a large bowl.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "In a large skillet, heat olive oil over medium heat. Add garlic and cook for 1 minute until fragrant but not browned.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Add red pepper flakes and coriander, cook for 30 seconds more.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 6,
+        "text": "Add the fried potatoes to the skillet and toss to coat with the garlic oil. Add cilantro, lemon juice, and salt. Toss well.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 7,
+        "text": "Serve immediately while hot and crispy.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Halal",
+      "Kosher",
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "malfouf-cabbage-rolls",
+    "title": "Malfouf (Cabbage Rolls)",
+    "shortDescription": "Lebanese stuffed cabbage with rice and lamb in lemony broth",
+    "note": "Freezing the cabbage head makes separating leaves much easier",
+    "introCopy": "Malfouf are tender cabbage leaves wrapped around a savory filling of rice, ground lamb, and spices, then simmered in a tangy garlic-lemon broth. This traditional Lebanese dish is time-intensive but yields incredibly comforting results.",
+    "servings": 6,
+    "prepMinutes": 60,
+    "cookMinutes": 75,
+    "difficulty": "INVOLVED",
+    "cuisine": "Middle Eastern",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN",
+      "FREEZER_FRIENDLY"
+    ],
+    "heroColor": "#8FBC8F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "large",
+        "item": "green cabbage",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 2,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "ground lamb",
+        "prepNote": "or beef",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 3,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "short-grain rice",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "seven spice",
+        "prepNote": "baharat",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 8,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "chicken or beef stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 9,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 10,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "lemon juice",
+        "prepNote": "freshly squeezed",
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 12,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "dried mint",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "cooked white rice",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Bring a large pot of salted water to a boil. Core the cabbage and carefully separate the leaves, blanching them in boiling water for 2-3 minutes until pliable. Drain and set aside to cool.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 2,
+        "text": "In a bowl, mix ground lamb, rice, seven spice, cinnamon, salt, and pepper until well combined.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Trim the thick rib from each cabbage leaf. Place about 2 tablespoons of filling near the bottom of each leaf. Fold in the sides and roll up tightly like a burrito.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 4,
+        "text": "Line the bottom of a large pot with any leftover or torn cabbage leaves to prevent sticking. Arrange the rolls seam-side down in tight layers.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "In a bowl, combine stock, garlic, lemon juice, salt, and dried mint. Pour over the cabbage rolls. The liquid should just cover them; add water if needed.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Place a heat-proof plate on top of the rolls to keep them submerged. Bring to a boil, then reduce heat to low and simmer covered for 1 hour 15 minutes until rice is tender.",
+        "durationMinutes": 75
+      },
+      {
+        "order": 7,
+        "text": "Carefully remove rolls and serve hot with rice and some of the cooking broth.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Cruciferous veg",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Halal",
+      "Dairy-free",
+      "High-protein"
+    ],
+    "allergenTags": []
+  }
+]

@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { ATTRIBUTE_LABELS } from "@/lib/recipe-tags";
 import {
   DIFFICULTIES,
   MEAL_SLOTS,
   type EditorAllergen,
+  type EditorAttributeTag,
   type EditorCuisine,
   type EditorDiet,
   type EditorIngredient,
@@ -118,6 +118,7 @@ export function RecipeFormFields({
   cuisines,
   diets,
   allergens,
+  attributeTags,
   newCuisineName,
   setNewCuisineName,
   addingCuisine,
@@ -136,6 +137,7 @@ export function RecipeFormFields({
   cuisines: EditorCuisine[];
   diets: EditorDiet[];
   allergens: EditorAllergen[];
+  attributeTags: EditorAttributeTag[];
   newCuisineName: string;
   setNewCuisineName: (value: string) => void;
   addingCuisine: boolean;
@@ -292,13 +294,13 @@ export function RecipeFormFields({
       <div>
         <label className={labelClass()}>Attributes / tags</label>
         <div className="flex flex-wrap gap-2">
-          {Object.entries(ATTRIBUTE_LABELS).map(([code, label]) => (
+          {attributeTags.map((t) => (
             <Chip
-              key={code}
-              active={form.attributes.includes(code)}
-              onClick={() => toggleArrayValue("attributes", code)}
+              key={t.id}
+              active={form.attributes.includes(t.code)}
+              onClick={() => toggleArrayValue("attributes", t.code)}
             >
-              {label}
+              {t.name}
             </Chip>
           ))}
         </div>

@@ -1,0 +1,847 @@
+[
+  {
+    "slug": "bacalhau-a-bras",
+    "title": "Bacalhau à Brás",
+    "shortDescription": "Classic Portuguese salt cod with crispy potatoes, eggs, and olives",
+    "note": "Soak the salt cod for 24-48 hours, changing water several times to remove excess salt.",
+    "introCopy": "One of Portugal's most beloved bacalhau dishes, Bacalhau à Brás combines shredded salt cod with matchstick potatoes and scrambled eggs into a comforting, satisfying meal. This Lisbon classic is simple yet deeply flavorful, finished with black olives and fresh parsley.",
+    "servings": 4,
+    "prepMinutes": 30,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Portuguese",
+    "mealSlot": ["LUNCH", "DINNER"],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": ["COMFORT_FOOD", "CROWD_PLEASER", "HIGH_PROTEIN"],
+    "heroColor": "#E8D5A8",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "salt cod (bacalhau), soaked and desalted",
+        "prepNote": "shredded",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "800",
+        "unit": "g",
+        "item": "potatoes",
+        "prepNote": "cut into matchsticks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "6",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "large onions",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "150",
+        "unit": "ml",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "100",
+        "unit": "g",
+        "item": "black olives",
+        "prepNote": "pitted",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": "freshly ground",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Poach the desalted salt cod in simmering water for 10 minutes until tender. Drain, cool slightly, and shred into bite-sized pieces, removing any bones or skin.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Heat half the olive oil in a large pan over medium-high heat. Fry the matchstick potatoes in batches until golden and crispy, about 5-7 minutes per batch. Drain on paper towels.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "In the same pan with remaining oil, sauté the sliced onions over medium heat until soft and translucent, about 8 minutes. Add garlic and cook for another minute until fragrant.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 4,
+        "text": "Add the shredded cod to the onions and stir well. Cook for 3-4 minutes to allow flavors to meld.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 5,
+        "text": "Add the crispy potatoes to the pan and toss everything together. Pour in the beaten eggs and stir continuously over low heat until the eggs are just set but still creamy, about 2-3 minutes.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Remove from heat and season with black pepper. Garnish with black olives and fresh parsley. Serve immediately.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      { "foodGroup": "White fish", "weight": 40 },
+      { "foodGroup": "Starchy veg", "weight": 35 },
+      { "foodGroup": "Eggs", "weight": 25 },
+      { "foodGroup": "Alliums", "weight": 20 },
+      { "foodGroup": "Fresh herbs", "weight": 15 }
+    ],
+    "dietTags": ["Gluten-free", "Dairy-free", "Pescatarian", "High-protein"],
+    "allergenTags": ["Fish", "Eggs", "Sulphites"]
+  },
+  {
+    "slug": "caldo-verde",
+    "title": "Caldo Verde",
+    "shortDescription": "Hearty Portuguese kale and potato soup with chorizo",
+    "note": "Use Portuguese chouriço if available; Spanish chorizo works as a substitute.",
+    "introCopy": "This iconic green soup from northern Portugal is comfort in a bowl. Silky potato broth meets ribbons of dark green kale and slices of smoky chouriço sausage. Simple, wholesome, and deeply satisfying, it's a staple at Portuguese celebrations and everyday tables alike.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 35,
+    "difficulty": "EASY",
+    "cuisine": "Portuguese",
+    "mealSlot": ["LUNCH", "DINNER"],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": ["COMFORT_FOOD", "ONE_POT", "MAKE_AHEAD", "FREEZER_FRIENDLY"],
+    "heroColor": "#4A7C59",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "800",
+        "unit": "g",
+        "item": "potatoes",
+        "prepNote": "peeled and diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "400",
+        "unit": "g",
+        "item": "kale or collard greens",
+        "prepNote": "stems removed, finely shredded",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "200",
+        "unit": "g",
+        "item": "Portuguese chouriço sausage",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "large onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "litres",
+        "item": "chicken or vegetable stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "1",
+        "unit": null,
+        "item": "crusty bread",
+        "prepNote": "sliced",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat 3 tablespoons of olive oil in a large pot over medium heat. Add the chopped onion and sauté until soft, about 5 minutes. Add garlic and cook for 1 minute more.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 2,
+        "text": "Add the diced potatoes and stock to the pot. Bring to a boil, then reduce heat and simmer until potatoes are very tender, about 20 minutes.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 3,
+        "text": "Use a potato masher or immersion blender to partially blend the soup, leaving some potato chunks for texture while creating a creamy base.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Bring the soup back to a gentle boil. Add the shredded kale and sliced chouriço. Cook until the kale is tender but still bright green, about 5-7 minutes.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 5,
+        "text": "Season with salt and pepper to taste. Drizzle with remaining olive oil and serve hot with crusty bread.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      { "foodGroup": "Leafy greens", "weight": 50 },
+      { "foodGroup": "Starchy veg", "weight": 45 },
+      { "foodGroup": "Pork", "weight": 30 },
+      { "foodGroup": "Alliums", "weight": 20 }
+    ],
+    "dietTags": ["Gluten-free", "Dairy-free"],
+    "allergenTags": ["Celery", "Sulphites"]
+  },
+  {
+    "slug": "frango-piri-piri",
+    "title": "Frango Piri-Piri",
+    "shortDescription": "Fiery Portuguese piri-piri chicken with lemon and garlic",
+    "note": "Marinate the chicken for at least 4 hours, or overnight for maximum flavor.",
+    "introCopy": "Born from Portugal's colonial ties to Africa, piri-piri chicken is an explosion of heat, citrus, and garlic. The marinade penetrates deeply into the chicken, which is then grilled or roasted until the skin is crispy and charred. This is Portuguese barbecue at its finest.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 45,
+    "difficulty": "EASY",
+    "cuisine": "Portuguese",
+    "mealSlot": ["LUNCH", "DINNER"],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": ["SPICY", "HIGH_PROTEIN", "GRILLED", "MAKE_AHEAD", "CROWD_PLEASER"],
+    "heroColor": "#D84315",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "whole chicken",
+        "prepNote": "butterflied/spatchcocked",
+        "optional": false
+      },
+      {
+        "component": "Piri-piri marinade",
+        "order": 2,
+        "quantity": "8-10",
+        "unit": null,
+        "item": "fresh red bird's eye chillies",
+        "prepNote": "stems removed",
+        "optional": false
+      },
+      {
+        "component": "Piri-piri marinade",
+        "order": 3,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "peeled",
+        "optional": false
+      },
+      {
+        "component": "Piri-piri marinade",
+        "order": 4,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Piri-piri marinade",
+        "order": 5,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "lemon juice",
+        "prepNote": "freshly squeezed",
+        "optional": false
+      },
+      {
+        "component": "Piri-piri marinade",
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "red wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Piri-piri marinade",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "sweet paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Piri-piri marinade",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "smoked paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Piri-piri marinade",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Piri-piri marinade",
+        "order": 10,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "cut into wedges",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Combine all marinade ingredients in a blender or food processor. Blend until smooth, creating a vibrant red sauce.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Place the butterflied chicken in a large dish. Pour the marinade over the chicken, rubbing it thoroughly into all surfaces and under the skin. Cover and refrigerate for at least 4 hours, preferably overnight.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Preheat your grill to medium-high heat or preheat oven to 200°C (400°F).",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Remove chicken from marinade, reserving the marinade for basting. Grill the chicken skin-side down first for 15 minutes, then flip and continue grilling for another 25-30 minutes, basting occasionally with reserved marinade, until the internal temperature reaches 75°C (165°F) and skin is charred and crispy. If roasting, place on a baking tray and roast for 45 minutes, basting every 15 minutes.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 5,
+        "text": "Let the chicken rest for 10 minutes before carving. Serve with lemon wedges and extra piri-piri sauce on the side.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      { "foodGroup": "Poultry", "weight": 70 },
+      { "foodGroup": "Chilli & heat", "weight": 60 },
+      { "foodGroup": "Alliums", "weight": 25 },
+      { "foodGroup": "Warm spices", "weight": 20 }
+    ],
+    "dietTags": ["Gluten-free", "Dairy-free", "High-protein", "Paleo", "Whole30", "Keto", "Low-carb"],
+    "allergenTags": ["Sulphites"]
+  },
+  {
+    "slug": "arroz-de-marisco",
+    "title": "Arroz de Marisco",
+    "shortDescription": "Rich Portuguese seafood rice with prawns, clams, and mussels",
+    "note": "Have your fishmonger clean the seafood. Use good quality fish stock for the best flavor.",
+    "introCopy": "This lavish seafood rice is Portugal's answer to paella, though distinctly its own. Unlike the dry Spanish version, arroz de marisco is soupy and rich, with rice that drinks up a flavorful tomato-saffron broth brimming with prawns, clams, mussels, and sometimes lobster. It's celebratory food meant for sharing.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 40,
+    "difficulty": "INVOLVED",
+    "cuisine": "Portuguese",
+    "mealSlot": ["LUNCH", "DINNER"],
+    "effortTier": "PROJECT",
+    "batchFriendly": false,
+    "attributes": ["CROWD_PLEASER", "HIGH_PROTEIN"],
+    "heroColor": "#E85D4F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "400",
+        "unit": "g",
+        "item": "raw king prawns",
+        "prepNote": "shell-on, heads removed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "500",
+        "unit": "g",
+        "item": "clams",
+        "prepNote": "scrubbed clean",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "500",
+        "unit": "g",
+        "item": "mussels",
+        "prepNote": "scrubbed and debearded",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "300",
+        "unit": "g",
+        "item": "squid",
+        "prepNote": "cleaned and sliced into rings",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "400",
+        "unit": "g",
+        "item": "short-grain rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "large onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "red bell pepper",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "400",
+        "unit": "g",
+        "item": "tinned chopped tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1.2",
+        "unit": "litres",
+        "item": "fish stock",
+        "prepNote": "hot",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "200",
+        "unit": "ml",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "1",
+        "unit": "pinch",
+        "item": "saffron threads",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "sweet paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "1",
+        "unit": null,
+        "item": "bay leaf",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 15,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 16,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh coriander",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 17,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 18,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 19,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large, wide pot or cataplana over medium heat. Add the onion and bell pepper, sautéing until softened, about 7 minutes. Add garlic and cook for 1 minute more.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Stir in the chopped tomatoes, paprika, saffron, and bay leaf. Cook for 5 minutes until the tomatoes break down slightly.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Add the rice and stir to coat in the tomato mixture. Pour in the white wine and let it bubble for 2 minutes.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Add the hot fish stock, salt, and pepper. Bring to a boil, then reduce to a simmer. Cook uncovered, stirring occasionally, for 10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Add the squid rings and continue simmering for 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Nestle the prawns, clams, and mussels into the rice. Cover and cook for 8-10 minutes until the shellfish have opened and the prawns are pink and cooked through. Discard any shellfish that haven't opened.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 7,
+        "text": "Remove from heat and let stand covered for 5 minutes. The rice should be tender and soupy, not dry. Garnish with fresh coriander and serve with lemon wedges.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      { "foodGroup": "Shellfish", "weight": 70 },
+      { "foodGroup": "Refined grains", "weight": 50 },
+      { "foodGroup": "Nightshades", "weight": 30 },
+      { "foodGroup": "Alliums", "weight": 25 },
+      { "foodGroup": "Fresh herbs", "weight": 20 },
+      { "foodGroup": "Warm spices", "weight": 15 }
+    ],
+    "dietTags": ["Gluten-free", "Dairy-free", "Pescatarian", "High-protein"],
+    "allergenTags": ["Shellfish", "Fish", "Sulphites", "Celery"]
+  },
+  {
+    "slug": "pasteis-de-nata",
+    "title": "Pastéis de Nata",
+    "shortDescription": "Iconic Portuguese custard tarts with caramelized tops",
+    "note": "For the flakiest pastry, keep all ingredients very cold and work quickly.",
+    "introCopy": "Portugal's most famous export, these sublime custard tarts originated in Lisbon's Belém district. A crisp, flaky puff pastry shell cradles silky egg custard with a signature caramelized top. Best served warm with a dusting of cinnamon and powdered sugar, they're irresistible with a strong coffee.",
+    "servings": 12,
+    "prepMinutes": 45,
+    "cookMinutes": 20,
+    "difficulty": "INVOLVED",
+    "cuisine": "Portuguese",
+    "mealSlot": ["BREAKFAST", "SNACK"],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": ["COMFORT_FOOD", "CROWD_PLEASER"],
+    "heroColor": "#F4E4C1",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Pastry",
+        "order": 1,
+        "quantity": "375",
+        "unit": "g",
+        "item": "ready-made puff pastry",
+        "prepNote": "all-butter, cold",
+        "optional": false
+      },
+      {
+        "component": "Custard filling",
+        "order": 2,
+        "quantity": "300",
+        "unit": "ml",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard filling",
+        "order": 3,
+        "quantity": "200",
+        "unit": "g",
+        "item": "caster sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard filling",
+        "order": 4,
+        "quantity": "40",
+        "unit": "g",
+        "item": "plain flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard filling",
+        "order": 5,
+        "quantity": "6",
+        "unit": null,
+        "item": "large egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard filling",
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "cinnamon stick",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard filling",
+        "order": 8,
+        "quantity": "1",
+        "unit": "strip",
+        "item": "lemon zest",
+        "prepNote": "wide strip",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": "for dusting",
+        "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "icing sugar",
+        "prepNote": "for dusting",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 250°C (480°F). Grease a 12-hole muffin tin generously with butter.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Roll out the puff pastry thinly on a lightly floured surface. Roll it up tightly into a log, then cut into 12 equal pieces. Press each piece into a muffin hole, working the pastry up the sides to create a thin shell. Chill while making the custard.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "In a saucepan, combine 200ml of milk with the cinnamon stick and lemon zest. Heat until just below boiling, then remove from heat and let infuse for 10 minutes. Strain out the solids.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 4,
+        "text": "In a bowl, whisk together the flour and remaining 100ml cold milk until smooth. Whisk in the egg yolks and vanilla extract.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "In a clean saucepan, heat the sugar with 60ml water over medium heat, stirring until dissolved. Bring to a boil and cook without stirring until it reaches 110°C (230°F) on a sugar thermometer, about 5 minutes.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 6,
+        "text": "Gradually whisk the hot sugar syrup into the infused milk, then whisk this mixture into the egg yolk mixture. Strain through a fine sieve into a jug for easy pouring.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 7,
+        "text": "Fill each pastry shell about three-quarters full with custard. Bake for 18-20 minutes until the custard is set with dark caramelized spots on top and the pastry is golden and crisp.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 8,
+        "text": "Let cool in the tin for 5 minutes, then transfer to a wire rack. Serve warm, dusted with cinnamon and icing sugar if desired.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      { "foodGroup": "Eggs", "weight": 50 },
+      { "foodGroup": "Dairy", "weight": 45 },
+      { "foodGroup": "Refined grains", "weight": 40 },
+      { "foodGroup": "Added sugar", "weight": 70 },
+      { "foodGroup": "Warm spices", "weight": 20 }
+    ],
+    "dietTags": ["Vegetarian"],
+    "allergenTags": ["Eggs", "Milk", "Wheat/gluten"]
+  }
+]

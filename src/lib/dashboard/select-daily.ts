@@ -12,10 +12,7 @@ import {
 import type { RecipeCardData } from "@/app/dashboard/dashboard-client";
 
 export const DAILY_CARD_COUNT = 4;
-// Temporarily unlimited (was 1) — revisit reintroducing a per-window cap
-// later. Left as a real constant rather than ripping out the surrounding
-// mechanism so it's a one-line revert.
-export const MAX_MANUAL_REFRESHES_PER_WINDOW = Infinity;
+export const MAX_MANUAL_REFRESHES_PER_WINDOW = 1;
 
 export type EligibleRecipe = FilterableRecipe & RecipeCardData;
 
@@ -39,6 +36,7 @@ async function loadDashboardContext(userId: string): Promise<DashboardContext> {
       include: {
         dietTags: true,
         allergenTags: true,
+        attributeTags: { select: { code: true } },
         cuisine: true,
         ingredients: { select: { item: true } },
       },
@@ -67,7 +65,7 @@ async function loadDashboardContext(userId: string): Promise<DashboardContext> {
     mealSlot: r.mealSlot,
     prepMinutes: r.prepMinutes,
     cookMinutes: r.cookMinutes,
-    attributes: r.attributes,
+    attributes: r.attributeTags.map((t) => t.code),
     imageUrl: r.imageUrl,
     imageCredit: r.imageCredit,
     isActive: r.isActive,

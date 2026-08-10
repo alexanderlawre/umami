@@ -1,0 +1,2805 @@
+[
+  {
+    "slug": "venezuelan-arepas-reina-pepiada",
+    "title": "Arepas Reina Pepiada",
+    "shortDescription": "Classic Venezuelan arepas filled with creamy chicken-avocado salad",
+    "note": "The most iconic Venezuelan arepa filling, invented in the 1950s",
+    "introCopy": "Reina Pepiada is Venezuela's most beloved arepa filling—a luscious mixture of shredded chicken, creamy avocado, and mayonnaise. These thick corn cakes are grilled until crispy outside and tender inside, then stuffed generously with the chicken salad. Perfect for breakfast, lunch, or dinner.",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#F4E4C1",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Arepas",
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "pre-cooked white cornmeal (masarepa)",
+        "prepNote": "such as P.A.N.",
+        "optional": false
+      },
+      {
+        "component": "Arepas",
+        "order": 2,
+        "quantity": "2.5",
+        "unit": "cups",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Arepas",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Arepas",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": "plus more for cooking",
+        "optional": false
+      },
+      {
+        "component": "Reina Pepiada Filling",
+        "order": 5,
+        "quantity": "500",
+        "unit": "g",
+        "item": "boneless chicken breast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Reina Pepiada Filling",
+        "order": 6,
+        "quantity": "2",
+        "unit": "large",
+        "item": "ripe avocados",
+        "prepNote": "mashed",
+        "optional": false
+      },
+      {
+        "component": "Reina Pepiada Filling",
+        "order": 7,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "mayonnaise",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Reina Pepiada Filling",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lime juice",
+        "prepNote": "freshly squeezed",
+        "optional": false
+      },
+      {
+        "component": "Reina Pepiada Filling",
+        "order": 9,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Reina Pepiada Filling",
+        "order": 10,
+        "quantity": "1",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": "to taste",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Boil chicken breast in salted water until cooked through, about 15-20 minutes. Let cool, then shred finely with two forks.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 2,
+        "text": "In a large bowl, combine masarepa, salt, and oil. Gradually add warm water while mixing with your hands until a soft, smooth dough forms (it should not crack). Let rest for 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Meanwhile, prepare the filling: In a bowl, combine shredded chicken, mashed avocado, mayonnaise, lime juice, and cilantro. Season generously with salt and pepper. Mix until creamy.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Divide dough into 8 equal portions. Roll each into a ball, then flatten into a disc about 1 cm thick and 10 cm in diameter.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Heat a lightly oiled griddle or skillet over medium heat. Cook arepas for 5-7 minutes per side until golden brown with crispy spots. They should sound hollow when tapped.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 6,
+        "text": "Slice each arepa open like a pita pocket while still warm. Generously fill with reina pepiada mixture and serve immediately.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Poultry",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 5
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "pabellon-criollo",
+    "title": "Pabellón Criollo",
+    "shortDescription": "Venezuela's national dish with shredded beef, black beans, rice, and fried plantains",
+    "note": "Complete authentic version with all traditional components",
+    "introCopy": "Pabellón Criollo is the soul of Venezuelan cuisine—a harmonious plate featuring tender shredded beef in a rich tomato sauce, creamy black beans, fluffy white rice, and sweet fried plantains. This beloved national dish represents the perfect balance of flavors and textures that define Venezuelan comfort food.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 120,
+    "difficulty": "INVOLVED",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN",
+      "FRIED"
+    ],
+    "heroColor": "#8B4513",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Carne Mechada (Shredded Beef)",
+        "order": 1,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "flank steak",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Carne Mechada (Shredded Beef)",
+        "order": 2,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": "Carne Mechada (Shredded Beef)",
+        "order": 3,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "whole",
+        "optional": false
+      },
+      {
+        "component": "Carne Mechada (Shredded Beef)",
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Carne Mechada (Shredded Beef)",
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "salt",
+        "prepNote": "to taste",
+        "optional": false
+      },
+      {
+        "component": "For the Sauce",
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For the Sauce",
+        "order": 7,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "For the Sauce",
+        "order": 8,
+        "quantity": "1",
+        "unit": "large",
+        "item": "red bell pepper",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "For the Sauce",
+        "order": 9,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "For the Sauce",
+        "order": 10,
+        "quantity": "400",
+        "unit": "g",
+        "item": "crushed tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For the Sauce",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For the Sauce",
+        "order": 12,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "beef broth",
+        "prepNote": "reserved from cooking",
+        "optional": false
+      },
+      {
+        "component": "Caraotas Negras (Black Beans)",
+        "order": 13,
+        "quantity": "400",
+        "unit": "g",
+        "item": "dried black beans",
+        "prepNote": "or 2 cans, drained",
+        "optional": false
+      },
+      {
+        "component": "Caraotas Negras (Black Beans)",
+        "order": 14,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Caraotas Negras (Black Beans)",
+        "order": 15,
+        "quantity": "1",
+        "unit": "small",
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Caraotas Negras (Black Beans)",
+        "order": 16,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Caraotas Negras (Black Beans)",
+        "order": 17,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Caraotas Negras (Black Beans)",
+        "order": 18,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "brown sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For Serving",
+        "order": 19,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "long-grain white rice",
+        "prepNote": "cooked",
+        "optional": false
+      },
+      {
+        "component": "For Serving",
+        "order": 20,
+        "quantity": "3",
+        "unit": "large",
+        "item": "ripe plantains",
+        "prepNote": "sliced diagonally",
+        "optional": false
+      },
+      {
+        "component": "For Serving",
+        "order": 21,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": "for frying plantains",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Place flank steak in a large pot with quartered onion, whole garlic cloves, bay leaves, and salt. Cover with water and bring to a boil. Reduce heat and simmer for 90 minutes until very tender.",
+        "durationMinutes": 95
+      },
+      {
+        "order": 2,
+        "text": "While beef cooks, prepare black beans if using dried: Soak beans overnight, then cook in fresh water for 60-90 minutes until tender. Drain and set aside.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 3,
+        "text": "Remove beef from broth (reserve 1 cup broth) and let cool slightly. Shred meat with two forks into thin strands along the grain.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Heat oil in a large skillet over medium heat. Sauté chopped onion and bell pepper until soft, about 8 minutes. Add minced garlic and cook 1 minute more.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Add shredded beef, crushed tomatoes, cumin, and reserved broth to the skillet. Simmer for 20-25 minutes until sauce thickens and flavors meld. Season with salt and pepper.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 6,
+        "text": "For black beans: Heat oil in a saucepan, sauté onion until soft, add garlic and cumin, cook 1 minute. Add beans, brown sugar, and enough water to create a creamy consistency. Simmer 15 minutes.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 7,
+        "text": "Heat oil in a skillet over medium-high heat. Fry plantain slices for 2-3 minutes per side until golden and caramelized. Drain on paper towels.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 8,
+        "text": "To serve, place a portion of white rice on each plate. Arrange shredded beef, black beans, and fried plantains alongside. Serve immediately.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 8
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 2
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "hallacas-venezuelan",
+    "title": "Hallacas Venezolanas",
+    "shortDescription": "Traditional Christmas tamales with beef, pork, chicken, olives, and raisins",
+    "note": "The most elaborate Venezuelan dish, traditionally made for Christmas",
+    "introCopy": "Hallacas are Venezuela's cherished Christmas tradition—elaborate corn masa parcels filled with a complex stew of three meats, olives, capers, raisins, and vegetables, all wrapped in plantain leaves and boiled. Making hallacas is a family affair that brings generations together during the holidays.",
+    "servings": 20,
+    "prepMinutes": 120,
+    "cookMinutes": 90,
+    "difficulty": "INVOLVED",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "MAKE_AHEAD",
+      "FREEZER_FRIENDLY"
+    ],
+    "heroColor": "#CD853F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "beef stew meat",
+        "prepNote": "diced small",
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 2,
+        "quantity": "500",
+        "unit": "g",
+        "item": "pork shoulder",
+        "prepNote": "diced small",
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 3,
+        "quantity": "400",
+        "unit": "g",
+        "item": "boneless chicken thighs",
+        "prepNote": "diced small",
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 5,
+        "quantity": "2",
+        "unit": "large",
+        "item": "onions",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 6,
+        "quantity": "2",
+        "unit": null,
+        "item": "red bell peppers",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 7,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 8,
+        "quantity": "400",
+        "unit": "g",
+        "item": "crushed tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 9,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 10,
+        "quantity": "0.75",
+        "unit": "cup",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 11,
+        "quantity": "0.75",
+        "unit": "cup",
+        "item": "green olives",
+        "prepNote": "pitted and halved",
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 12,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "capers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 13,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Guiso (Meat Filling)",
+        "order": 14,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Masa (Dough)",
+        "order": 15,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "pre-cooked white cornmeal",
+        "prepNote": "masarepa or masa de maíz",
+        "optional": false
+      },
+      {
+        "component": "Masa (Dough)",
+        "order": 16,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "chicken or beef stock",
+        "prepNote": "warm",
+        "optional": false
+      },
+      {
+        "component": "Masa (Dough)",
+        "order": 17,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "achiote oil",
+        "prepNote": "or vegetable oil with paprika",
+        "optional": false
+      },
+      {
+        "component": "Masa (Dough)",
+        "order": 18,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 19,
+        "quantity": "40",
+        "unit": null,
+        "item": "plantain leaves",
+        "prepNote": "cut into 30cm squares, cleaned",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 20,
+        "quantity": "20",
+        "unit": null,
+        "item": "bell pepper strips",
+        "prepNote": "for garnish",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 21,
+        "quantity": "40",
+        "unit": null,
+        "item": "raisins",
+        "prepNote": "for garnish",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 22,
+        "quantity": "20",
+        "unit": null,
+        "item": "green olives",
+        "prepNote": "for garnish",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 23,
+        "quantity": "1",
+        "unit": null,
+        "item": "kitchen twine",
+        "prepNote": "for tying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Prepare guiso: Heat oil in a large pot over medium-high heat. Brown all meats in batches. Remove and set aside.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 2,
+        "text": "In the same pot, sauté onions and bell peppers until soft, about 8 minutes. Add garlic and cook 1 minute.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Return meats to pot. Add crushed tomatoes, wine, cumin, paprika, and salt. Cover and simmer for 60 minutes until meats are very tender.",
+        "durationMinutes": 65
+      },
+      {
+        "order": 4,
+        "text": "Stir in raisins, olives, and capers. Cook 10 more minutes. The mixture should be thick and saucy. Adjust seasoning and let cool completely.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Make masa: In a large bowl, combine cornmeal and salt. Gradually add warm stock and achiote oil, mixing until you have a smooth, spreadable dough similar to thick hummus.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Prepare plantain leaves: Pass each leaf briefly over an open flame or hot burner to make them pliable. Wipe clean with a damp cloth.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 7,
+        "text": "Assemble hallacas: Place one plantain leaf square on work surface. Spread about 3 tablespoons masa in the center into a thin rectangle. Place 2 tablespoons guiso in the middle. Top with a pepper strip, 2 raisins, and an olive.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 8,
+        "text": "Fold leaf over filling to form a rectangular packet, then wrap with a second leaf perpendicular to the first. Tie securely with twine. Repeat with remaining ingredients.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 9,
+        "text": "Bring a large pot of salted water to a boil. Add hallacas in batches and boil for 60 minutes. Remove and let rest 10 minutes before unwrapping and serving.",
+        "durationMinutes": 70
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Poultry",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 8
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 2
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "cachapas-con-queso",
+    "title": "Cachapas con Queso de Mano",
+    "shortDescription": "Sweet corn pancakes with fresh Venezuelan cheese",
+    "note": "Best made with fresh sweet corn during peak season",
+    "introCopy": "Cachapas are thick, sweet corn pancakes that showcase Venezuela's love for fresh corn. Made from blended sweet corn kernels, these golden pancakes are cooked until slightly caramelized and traditionally served folded over soft, salty queso de mano. They're perfect for breakfast or as a satisfying snack any time of day.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 30,
+    "difficulty": "EASY",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#FFD700",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "6",
+        "unit": "cups",
+        "item": "fresh sweet corn kernels",
+        "prepNote": "from about 8 ears",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "pre-cooked white cornmeal",
+        "prepNote": "masarepa",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "vegetable oil",
+        "prepNote": "for cooking",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "400",
+        "unit": "g",
+        "item": "queso de mano",
+        "prepNote": "or fresh mozzarella, sliced",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a blender, combine corn kernels, milk, sugar, masarepa, salt, and melted butter. Blend until mostly smooth but still slightly chunky. The batter should be thick and pourable.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Heat a lightly oiled griddle or large skillet over medium heat. Pour about 1/2 cup batter onto the griddle and spread gently into a circle about 15 cm in diameter.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Cook for 4-5 minutes until the bottom is golden brown and edges begin to dry. Flip carefully and cook another 4-5 minutes until cooked through and lightly charred in spots.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "While still on the griddle, place a slice of cheese on half of the cachapa. Fold the other half over to cover the cheese, creating a half-moon. Remove from heat.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Repeat with remaining batter and cheese. Serve cachapas hot, optionally with a small pat of butter on top.",
+        "durationMinutes": 15
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "tequeños-venezolanos",
+    "title": "Tequeños",
+    "shortDescription": "Crispy fried cheese sticks wrapped in dough, Venezuela's favorite party snack",
+    "note": "Use queso blanco or a firm white cheese that doesn't melt too quickly",
+    "introCopy": "Tequeños are the undisputed king of Venezuelan snacks—golden fried sticks of dough wrapped around firm white cheese. Crispy on the outside, stretchy and gooey inside, these irresistible finger foods are essential at every Venezuelan party, celebration, and gathering. Serve them hot with your favorite dipping sauce.",
+    "servings": 8,
+    "prepMinutes": 40,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "FREEZER_FRIENDLY",
+      "FRIED"
+    ],
+    "heroColor": "#F5DEB3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "60",
+        "unit": "g",
+        "item": "cold butter",
+        "prepNote": "cubed",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 5,
+        "quantity": "1",
+        "unit": "large",
+        "item": "egg",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 6,
+        "quantity": "0.75",
+        "unit": "cup",
+        "item": "cold water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling and Frying",
+        "order": 7,
+        "quantity": "500",
+        "unit": "g",
+        "item": "queso blanco",
+        "prepNote": "or white cheese, cut into sticks 10cm long",
+        "optional": false
+      },
+      {
+        "component": "Filling and Frying",
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "vegetable oil",
+        "prepNote": "for deep frying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make dough: In a large bowl, combine flour, salt, and sugar. Cut in cold butter with a pastry cutter or your fingers until mixture resembles coarse crumbs.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Beat egg with cold water. Add to flour mixture and stir until a dough forms. Knead briefly on a floured surface until smooth. Wrap in plastic and refrigerate for 30 minutes.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 3,
+        "text": "Roll dough out on a floured surface to about 3mm thickness. Cut into strips about 1.5 cm wide and 25-30 cm long.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Take a cheese stick and wrap a dough strip around it in a spiral, overlapping slightly, starting at one end and working to the other. Seal the end by pressing gently. Repeat with remaining cheese and dough.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 5,
+        "text": "Heat oil in a deep pot or fryer to 180°C (350°F). Fry tequeños in batches for 3-4 minutes, turning occasionally, until golden brown all over.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 6,
+        "text": "Drain on paper towels and serve immediately while the cheese is still gooey. Optionally serve with guasacaca (Venezuelan avocado sauce) or your favorite dip.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "pastelitos-venezolanos",
+    "title": "Pastelitos Venezolanos",
+    "shortDescription": "Crispy half-moon fried pastries with savory beef or cheese filling",
+    "note": "The dough is made with wheat flour, different from Colombian empanadas",
+    "introCopy": "Pastelitos are Venezuela's beloved fried turnovers with a thin, crispy wheat-flour shell and savory fillings. Whether stuffed with seasoned ground beef, shredded chicken, or melty cheese, these golden half-moons are a breakfast staple and popular street food across Venezuela.",
+    "servings": 6,
+    "prepMinutes": 35,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "FREEZER_FRIENDLY",
+      "FRIED"
+    ],
+    "heroColor": "#DAA520",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "60",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 5,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 7,
+        "quantity": "500",
+        "unit": "g",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 8,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "red bell pepper",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 10,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 11,
+        "quantity": "2",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 13,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "green olives",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 14,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 15,
+        "quantity": "1",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": "to taste",
+        "optional": false
+      },
+      {
+        "component": "For Frying",
+        "order": 16,
+        "quantity": "1",
+        "unit": null,
+        "item": "vegetable oil",
+        "prepNote": "for deep frying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make dough: Combine flour, salt, and sugar in a bowl. Add melted butter and warm water, mixing until a soft dough forms. Knead for 5 minutes until smooth and elastic. Cover and rest for 20 minutes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Make filling: Heat oil in a large skillet over medium-high heat. Cook ground beef, breaking it up, until browned, about 8 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Add onion and bell pepper to the beef and cook until softened, about 5 minutes. Add garlic and cook 1 minute more.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 4,
+        "text": "Stir in tomatoes, cumin, olives, and raisins. Cook until mixture is thick and most liquid has evaporated, about 10 minutes. Season with salt and pepper. Let cool completely.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Divide dough into 12 equal portions. Roll each into a thin circle about 15 cm in diameter on a floured surface.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Place 2 tablespoons of filling on one half of each circle. Fold over to create a half-moon and seal edges tightly by pressing with a fork.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 7,
+        "text": "Heat oil in a deep pot to 180°C (350°F). Fry pastelitos in batches for 3-4 minutes per side until golden brown and crispy. Drain on paper towels and serve hot.",
+        "durationMinutes": 20
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "asado-negro",
+    "title": "Asado Negro",
+    "shortDescription": "Beef roast braised in rich dark sauce with panela and spices",
+    "note": "The dark color comes from caramelized panela (sugarcane), not soy sauce",
+    "introCopy": "Asado Negro is one of Venezuela's most elegant dishes—a tender beef roast slowly braised in a deeply flavored dark sauce made from caramelized panela (unrefined sugarcane sugar). The result is melt-in-your-mouth meat bathed in a sweet-savory sauce that's perfect for Sunday dinners and special occasions.",
+    "servings": 8,
+    "prepMinutes": 20,
+    "cookMinutes": 150,
+    "difficulty": "MEDIUM",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#3E2723",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "beef eye of round",
+        "prepNote": "or similar roast",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "150",
+        "unit": "g",
+        "item": "panela",
+        "prepNote": "or dark brown sugar, grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": "for caramel",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "large",
+        "item": "onions",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "red bell peppers",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "4",
+        "unit": null,
+        "item": "tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "red wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "beef stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 15,
+        "quantity": "4",
+        "unit": "whole",
+        "item": "cloves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 16,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "Worcestershire sauce",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Rub beef all over with minced garlic, salt, and pepper. Let sit at room temperature for 15 minutes.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 2,
+        "text": "Heat oil in a large Dutch oven over medium-high heat. Sear beef on all sides until deeply browned, about 10 minutes total. Remove and set aside.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 3,
+        "text": "In the same pot, add grated panela and water. Cook over medium heat, stirring constantly, until panela dissolves and caramelizes into a dark syrup, about 8-10 minutes. Be careful not to burn.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 4,
+        "text": "Add onions and bell peppers to the caramel, stirring to coat. Cook for 5 minutes until softened.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 5,
+        "text": "Add tomatoes, red wine, beef stock, bay leaves, cumin, cloves, and Worcestershire sauce. Stir well and bring to a simmer.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Return beef to the pot, spooning sauce over it. Cover and simmer on low heat for 2-2.5 hours, turning beef every 30 minutes, until meat is very tender and sauce has thickened.",
+        "durationMinutes": 150
+      },
+      {
+        "order": 7,
+        "text": "Remove beef and let rest for 10 minutes. Slice against the grain and serve with the dark sauce spooned over. Traditionally served with white rice and fried plantains.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "empanadas-venezolanas-carne",
+    "title": "Empanadas Venezolanas de Carne",
+    "shortDescription": "Deep-fried corn empanadas with savory shredded beef filling",
+    "note": "Made with pre-cooked cornmeal, not wheat flour like Colombian empanadas",
+    "introCopy": "Venezuelan empanadas are made with pre-cooked cornmeal, giving them a distinctive golden color and satisfying crunch when deep-fried. Filled with tender shredded beef seasoned with tomatoes, peppers, and spices, these half-moon pockets are a beloved breakfast and street food across Venezuela.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 45,
+    "difficulty": "MEDIUM",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "FREEZER_FRIENDLY",
+      "FRIED"
+    ],
+    "heroColor": "#FFB347",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "pre-cooked white cornmeal",
+        "prepNote": "masarepa",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "2.75",
+        "unit": "cups",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 4,
+        "quantity": "500",
+        "unit": "g",
+        "item": "flank steak",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "red bell pepper",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 8,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 9,
+        "quantity": "2",
+        "unit": "large",
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef Filling",
+        "order": 12,
+        "quantity": "1",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": "to taste",
+        "optional": false
+      },
+      {
+        "component": "For Frying",
+        "order": 13,
+        "quantity": "1",
+        "unit": null,
+        "item": "vegetable oil",
+        "prepNote": "for deep frying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Boil flank steak in salted water for 45 minutes until very tender. Let cool, then shred finely with two forks.",
+        "durationMinutes": 50
+      },
+      {
+        "order": 2,
+        "text": "Heat oil in a large skillet over medium heat. Sauté onion and bell pepper until soft, about 7 minutes. Add garlic and cook 1 minute.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 3,
+        "text": "Add shredded beef, tomatoes, cumin, and paprika. Cook for 10-12 minutes until mixture is thick and flavorful. Season with salt and pepper. Let cool completely.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Make dough: In a large bowl, combine masarepa and salt. Gradually add warm water, mixing with your hands until a soft, smooth dough forms. It should be pliable and not crack. Let rest 5 minutes.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 5,
+        "text": "Divide dough into 12 equal balls. Place each ball between two pieces of plastic wrap or a plastic bag. Flatten with a plate or tortilla press into a thin circle about 15 cm in diameter.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Place 2-3 tablespoons filling on one half of each circle, leaving a border. Fold over to create a half-moon and seal edges firmly by pressing with your fingers or a fork.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 7,
+        "text": "Heat oil in a deep pot to 180°C (350°F). Fry empanadas in batches for 4-5 minutes, turning once, until golden brown and crispy. Drain on paper towels and serve hot.",
+        "durationMinutes": 20
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "reina-pepiada-filling",
+    "title": "Reina Pepiada (Chicken-Avocado Salad)",
+    "shortDescription": "Creamy Venezuelan chicken and avocado filling, perfect for arepas and wraps",
+    "note": "Can be made ahead and refrigerated for up to 2 days",
+    "introCopy": "Reina Pepiada is Venezuela's signature chicken salad—a luxurious blend of tender shredded chicken, ripe avocado, and creamy mayonnaise that's become an icon of Venezuelan cuisine. Use it to fill arepas, sandwiches, or wraps, or simply enjoy it on its own with crackers.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#98D8C8",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "800",
+        "unit": "g",
+        "item": "boneless chicken breast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": "for boiling",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "large",
+        "item": "ripe avocados",
+        "prepNote": "mashed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "0.75",
+        "unit": "cup",
+        "item": "mayonnaise",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "lime juice",
+        "prepNote": "freshly squeezed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "red onion",
+        "prepNote": "very finely minced",
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": "to taste",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Place chicken breasts in a pot and cover with water. Add salt and bring to a boil. Reduce heat and simmer for 15-20 minutes until chicken is cooked through and no longer pink.",
+        "durationMinutes": 22
+      },
+      {
+        "order": 2,
+        "text": "Remove chicken from water and let cool until comfortable to handle. Shred finely using two forks or your hands.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "In a large bowl, mash the avocados until mostly smooth but still slightly chunky.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Add shredded chicken, mayonnaise, lime juice, cilantro, and red onion (if using) to the avocado. Mix well until everything is evenly combined and creamy.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Season generously with salt and black pepper. Taste and adjust seasoning as needed. The mixture should be creamy, flavorful, and well-seasoned.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Use immediately to fill arepas or sandwiches, or refrigerate in an airtight container for up to 2 days. Press plastic wrap directly on the surface to prevent browning.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "sancocho-venezolano",
+    "title": "Sancocho Venezolano",
+    "shortDescription": "Hearty Venezuelan soup with beef, chicken, vegetables, and root vegetables",
+    "note": "A weekend project that feeds a crowd; even better the next day",
+    "introCopy": "Sancocho is Venezuela's ultimate comfort soup—a rich, hearty stew loaded with multiple meats, root vegetables, corn, and plantains. This substantial dish is traditionally served at family gatherings and Sunday lunches, bringing everyone together around a steaming bowl of soul-warming goodness.",
+    "servings": 10,
+    "prepMinutes": 30,
+    "cookMinutes": 90,
+    "difficulty": "MEDIUM",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN",
+      "ONE_POT"
+    ],
+    "heroColor": "#D2691E",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "beef short ribs",
+        "prepNote": "cut into portions",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "500",
+        "unit": "g",
+        "item": "chicken thighs",
+        "prepNote": "bone-in",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "large",
+        "item": "onions",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "red bell pepper",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": "large",
+        "item": "tomatoes",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "12",
+        "unit": "cups",
+        "item": "water or beef stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "500",
+        "unit": "g",
+        "item": "yuca",
+        "prepNote": "peeled and cut into chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "2",
+        "unit": "large",
+        "item": "potatoes",
+        "prepNote": "peeled and cut into chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "300",
+        "unit": "g",
+        "item": "calabaza squash",
+        "prepNote": "peeled and cubed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "2",
+        "unit": null,
+        "item": "green plantains",
+        "prepNote": "peeled and cut into thick rounds",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "2",
+        "unit": "ears",
+        "item": "corn",
+        "prepNote": "cut into thick rounds",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 15,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 16,
+        "quantity": "1",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": "to taste",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat oil in a very large pot or stockpot over medium-high heat. Season beef and chicken with salt and pepper, then brown all pieces on all sides, about 10 minutes. Remove and set aside.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 2,
+        "text": "In the same pot, sauté onions and bell pepper until softened, about 7 minutes. Add garlic and cook 1 minute more.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 3,
+        "text": "Add tomatoes and cook for 5 minutes until they begin to break down.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 4,
+        "text": "Return meats to the pot. Add water or stock, cumin, and bring to a boil. Reduce heat to medium-low, cover, and simmer for 45 minutes.",
+        "durationMinutes": 48
+      },
+      {
+        "order": 5,
+        "text": "Add yuca, potatoes, squash, plantains, and corn to the pot. Continue simmering for 30-40 minutes until all vegetables are tender and the broth is rich and flavorful.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 6,
+        "text": "Stir in fresh cilantro and season generously with salt and pepper to taste. The soup should be thick and hearty.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 7,
+        "text": "Serve in large bowls with pieces of meat, vegetables, and plenty of broth. Traditionally accompanied by white rice, avocado slices, and hot sauce on the side.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Poultry",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 8
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 2
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "tostones-venezolanos",
+    "title": "Tostones",
+    "shortDescription": "Twice-fried green plantains, crispy outside and tender inside",
+    "note": "Also called patacones in some regions; essential Venezuelan side dish",
+    "introCopy": "Tostones are crispy, golden rounds of twice-fried green plantains that are a staple accompaniment to countless Venezuelan meals. The double-frying technique creates a perfect contrast—crunchy exterior with a tender, almost creamy center. Serve them alongside practically anything or enjoy with a sprinkle of salt as a snack.",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "SNACK",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "EAT_MORE_VEG",
+      "FRIED",
+      "UNDER_30"
+    ],
+    "heroColor": "#DAA520",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": "large",
+        "item": "green plantains",
+        "prepNote": "firm and unripe",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "salt",
+        "prepNote": "to taste",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "crushed in water (optional)",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Peel plantains by cutting off the ends, slicing through the skin lengthwise, and removing the peel. Cut each plantain into thick rounds about 3-4 cm thick.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Heat about 2 cm of oil in a large heavy skillet over medium heat to about 160°C (325°F).",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Fry plantain rounds in batches for 3-4 minutes per side until lightly golden but not browned. They should be cooked through but still pale. Remove and drain on paper towels.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "Using the bottom of a glass, a tostonera, or a flat plate, flatten each fried plantain round to about 1 cm thickness. If using garlic water, brush each piece lightly.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Increase oil temperature to 180°C (350°F). Fry the flattened plantains again for 2-3 minutes per side until golden brown and crispy.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 6,
+        "text": "Drain on paper towels and immediately season generously with salt while still hot. Serve right away while crispy.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Fruit",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegan",
+      "Vegetarian",
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "quesillo-venezolano",
+    "title": "Quesillo Venezolano",
+    "shortDescription": "Venezuelan caramel flan with condensed milk, silky and sweet",
+    "note": "The Venezuelan version is especially creamy thanks to condensed milk",
+    "introCopy": "Quesillo is Venezuela's beloved answer to flan—a luscious, silky custard bathed in amber caramel sauce. Made with sweetened condensed milk and evaporated milk, this dessert is richer and more velvety than traditional flan. It's the star of Venezuelan celebrations and a sweet ending to any meal.",
+    "servings": 8,
+    "prepMinutes": 15,
+    "cookMinutes": 60,
+    "difficulty": "MEDIUM",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#FFD27F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Caramel",
+        "order": 1,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "granulated sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Caramel",
+        "order": 2,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 3,
+        "quantity": "1",
+        "unit": "can (397g)",
+        "item": "sweetened condensed milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 4,
+        "quantity": "1",
+        "unit": "can (354ml)",
+        "item": "evaporated milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 5,
+        "quantity": "5",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 7,
+        "quantity": "1",
+        "unit": "pinch",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 175°C (350°F). Have ready a flanera mold or a round 20cm cake pan.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Make caramel: In a small saucepan, combine sugar and water. Cook over medium heat without stirring until sugar dissolves and turns a deep amber color, about 8-10 minutes. Immediately pour into the mold, tilting to coat the bottom evenly. Set aside.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 3,
+        "text": "In a blender, combine sweetened condensed milk, evaporated milk, eggs, vanilla, and salt. Blend on medium speed for 1 minute until completely smooth.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Pour custard mixture over the caramel in the prepared mold. Cover tightly with aluminum foil.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Place the mold in a larger baking dish and fill the outer dish with hot water to come halfway up the sides of the mold (bain-marie). Bake for 50-60 minutes until the custard is set but still slightly jiggly in the center.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 6,
+        "text": "Remove from water bath and let cool to room temperature, then refrigerate for at least 4 hours or overnight until completely chilled.",
+        "durationMinutes": null
+      },
+      {
+        "order": 7,
+        "text": "To unmold, run a knife around the edges, place a serving plate on top, and quickly invert. The caramel will flow over the custard. Slice and serve chilled.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "majarete-venezolano",
+    "title": "Majarete",
+    "shortDescription": "Traditional Venezuelan corn and coconut pudding, creamy and aromatic",
+    "note": "Similar to corn pudding but uniquely Venezuelan with coconut milk",
+    "introCopy": "Majarete is a silky, aromatic Venezuelan dessert made from fresh corn, coconut milk, and warm spices. This creamy pudding has a delicate sweetness and is perfumed with cinnamon and sometimes anise. It's served chilled and dusted with cinnamon, offering a taste of traditional Venezuelan home cooking.",
+    "servings": 8,
+    "prepMinutes": 15,
+    "cookMinutes": 40,
+    "difficulty": "EASY",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "MAKE_AHEAD",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#F5DEB3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "fresh sweet corn kernels",
+        "prepNote": "from about 6 ears",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "can (400ml)",
+        "item": "coconut milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "0.75",
+        "unit": "cup",
+        "item": "granulated sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "prepNote": null,
+        "optional": false,
+        "item": "cinnamon stick"
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "0.5",
+        "unit": "tsp",
+        "item": "ground cinnamon",
+        "prepNote": "plus more for dusting",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "pinch",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "cornstarch",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a blender, combine corn kernels with 1 cup of the whole milk. Blend until smooth. Strain through a fine-mesh sieve into a bowl, pressing to extract as much liquid as possible. Discard solids.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "In a large saucepan, combine the strained corn liquid, coconut milk, remaining 1 cup whole milk, sugar, cinnamon stick, ground cinnamon, and salt. Bring to a gentle simmer over medium heat, stirring occasionally.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "In a small bowl, whisk together cornstarch and water until smooth to make a slurry.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Once the mixture is simmering, slowly pour in the cornstarch slurry while stirring constantly. Continue cooking, stirring frequently, for 15-20 minutes until the mixture thickens to a creamy pudding consistency.",
+        "durationMinutes": 22
+      },
+      {
+        "order": 5,
+        "text": "Remove from heat and discard the cinnamon stick. Pour the majarete into individual serving cups or a large serving dish.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Let cool to room temperature, then refrigerate for at least 3 hours until completely chilled and set. Dust with ground cinnamon before serving.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "venezuelan-arepas-domino",
+    "title": "Arepas Dominó",
+    "shortDescription": "Venezuelan arepas filled with black beans and white cheese",
+    "note": "Named for the contrast of black beans and white cheese, like domino pieces",
+    "introCopy": "Arepas Dominó get their name from the striking visual contrast of creamy black beans paired with salty white cheese. This classic filling is simple yet incredibly satisfying, with the earthy beans complementing the mild, slightly salty cheese. It's a vegetarian favorite that's beloved throughout Venezuela.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "Venezuelan",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "EAT_MORE_VEG",
+      "HIGH_PROTEIN",
+      "HIGH_FIBER"
+    ],
+    "heroColor": "#2F2F2F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Arepas",
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "pre-cooked white cornmeal",
+        "prepNote": "masarepa",
+        "optional": false
+      },
+      {
+        "component": "Arepas",
+        "order": 2,
+        "quantity": "2.5",
+        "unit": "cups",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Arepas",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Arepas",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": "plus more for cooking",
+        "optional": false
+      },
+      {
+        "component": "Black Bean Filling",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Black Bean Filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": "small",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Black Bean Filling",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Black Bean Filling",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "cooked black beans",
+        "prepNote": "with some liquid",
+        "optional": false
+      },
+      {
+        "component": "Black Bean Filling",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Black Bean Filling",
+        "order": 10,
+        "quantity": "1",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": "to taste",
+        "optional": false
+      },
+      {
+        "component": "For Serving",
+        "order": 11,
+        "quantity": "200",
+        "unit": "g",
+        "item": "queso blanco",
+        "prepNote": "or feta cheese, crumbled",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make arepas: In a large bowl, combine masarepa, salt, and oil. Gradually add warm water while mixing with your hands until a soft, smooth dough forms. Let rest for 5 minutes.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 2,
+        "text": "Make black bean filling: Heat oil in a skillet over medium heat. Sauté onion until soft, about 5 minutes. Add garlic and cook 1 minute.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 3,
+        "text": "Add black beans with their liquid and cumin. Mash about half of the beans with a fork or potato masher, leaving some whole for texture. Simmer for 8-10 minutes until thick and creamy. Season with salt and pepper. Keep warm.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 4,
+        "text": "Divide dough into 8 equal portions. Roll each into a ball, then flatten into a disc about 1 cm thick and 10 cm in diameter.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Heat a lightly oiled griddle or skillet over medium heat. Cook arepas for 5-7 minutes per side until golden brown with crispy spots and they sound hollow when tapped.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 6,
+        "text": "Slice each arepa open like a pita pocket while still warm. Fill generously with black beans and top with crumbled white cheese. Serve immediately.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 5
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 5
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  }
+]

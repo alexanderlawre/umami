@@ -1,0 +1,3349 @@
+[
+  {
+    "slug": "lomo-saltado",
+    "title": "Lomo Saltado",
+    "shortDescription": "Peruvian stir-fried beef with tomatoes, onions, and aji amarillo, served with rice and fries",
+    "note": "Both rice and fries are essential—not sides but integral parts of the dish",
+    "introCopy": "Lomo saltado is the quintessential Peruvian stir-fry that emerged from Chinese-Peruvian fusion cuisine in the late 19th century. Tender beef strips are wok-seared with tomatoes, red onions, and aji amarillo, then flambéed with soy sauce and vinegar for that characteristic charred flavor. The marriage of crispy fries and fluffy rice isn't just tradition—it's what makes this dish complete.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#8B4513",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Beef",
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "lb",
+        "item": "beef tenderloin or sirloin",
+        "prepNote": "cut into 1-inch strips",
+        "optional": false
+      },
+      {
+        "component": "Beef",
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "soy sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Beef",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "red wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stir-fry",
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": "divided",
+        "optional": false
+      },
+      {
+        "component": "Stir-fry",
+        "order": 5,
+        "quantity": "1",
+        "unit": "large",
+        "item": "red onion",
+        "prepNote": "cut into thick wedges",
+        "optional": false
+      },
+      {
+        "component": "Stir-fry",
+        "order": 6,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Stir-fry",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "aji amarillo paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stir-fry",
+        "order": 8,
+        "quantity": "2",
+        "unit": "large",
+        "item": "tomatoes",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": "Stir-fry",
+        "order": 9,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Stir-fry",
+        "order": 10,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stir-fry",
+        "order": 11,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "beef stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Stir-fry",
+        "order": 12,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "potatoes",
+        "prepNote": "cut into fries and fried until crispy",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 14,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "cooked white rice",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Marinate the beef strips with 1 tablespoon soy sauce and vinegar for 10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Heat 2 tablespoons oil in a wok or large skillet over high heat until smoking. Add beef in a single layer and sear without moving for 2 minutes, then stir-fry for 1 minute more. Remove beef and set aside.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Add remaining oil to the wok. Stir-fry onion wedges for 2 minutes until slightly charred but still crisp.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Add garlic and aji amarillo paste, stir-fry for 30 seconds until fragrant.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Add tomato wedges, cumin, remaining soy sauce, and beef stock. Stir-fry for 2 minutes.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Return beef to the wok along with any accumulated juices. Toss everything together for 1 minute. Season with salt and pepper.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 7,
+        "text": "Remove from heat and stir in fresh cilantro. Serve immediately over rice with crispy fries on the side (or mixed in, Peruvian-style).",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Soy",
+      "Sulphites",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "aji-de-gallina",
+    "title": "Ají de Gallina",
+    "shortDescription": "Creamy Peruvian chicken stew with aji amarillo, walnuts, and cheese over rice",
+    "note": "Traditionally uses day-old bread to thicken the sauce",
+    "introCopy": "Ají de gallina is Lima's beloved comfort food—a velvety, golden stew that marries indigenous aji amarillo peppers with Spanish and Moorish influences. Shredded chicken bathes in a luscious sauce enriched with walnuts, cheese, and evaporated milk, thickened with bread soaked in chicken stock. Served over white rice with boiled potatoes and hard-boiled eggs, it's the Peruvian equivalent of a warm hug.",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#FFD700",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Chicken",
+        "order": 1,
+        "quantity": "2",
+        "unit": "lb",
+        "item": "bone-in chicken breasts",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 2,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "onion",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 3,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "smashed",
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 5,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 6,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 7,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "aji amarillo paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 9,
+        "quantity": "4",
+        "unit": "slices",
+        "item": "white bread",
+        "prepNote": "crusts removed",
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "walnuts",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 11,
+        "quantity": "1",
+        "unit": "can (12 oz)",
+        "item": "evaporated milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 12,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "grated Parmesan cheese",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 13,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground turmeric",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 14,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "cooked white rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 15,
+        "quantity": "4",
+        "unit": "medium",
+        "item": "yellow potatoes",
+        "prepNote": "boiled and halved",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 16,
+        "quantity": "4",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": "hard-boiled and halved",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 17,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "black olives",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large pot, combine chicken breasts, quartered onion, smashed garlic, and salt. Cover with water and bring to a boil. Reduce heat and simmer for 25 minutes until chicken is cooked through.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Remove chicken and let cool slightly, reserving 2 cups of the cooking broth. Shred the chicken and discard bones and skin.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Soak the bread slices in 1 cup of the reserved chicken broth for 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "In a blender, combine the soaked bread and broth, walnuts, aji amarillo paste, and evaporated milk. Blend until completely smooth.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Heat oil in a large deep skillet over medium heat. Sauté the chopped onion for 5 minutes until soft, then add minced garlic and cook for 1 minute more.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 6,
+        "text": "Add the blended sauce and turmeric to the skillet. Stir in the remaining cup of chicken broth and bring to a gentle simmer.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 7,
+        "text": "Add the shredded chicken and Parmesan cheese. Simmer for 10 minutes, stirring frequently, until the sauce is thick and creamy. Season with salt to taste.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 8,
+        "text": "Serve over white rice, garnished with boiled potato halves, hard-boiled egg halves, and black olives.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Tree nuts",
+      "Milk",
+      "Eggs",
+      "Wheat/gluten",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "causa-rellena",
+    "title": "Causa Rellena",
+    "shortDescription": "Peruvian layered potato terrine with aji amarillo, filled with chicken or tuna salad",
+    "note": "Serve chilled as an appetizer or light lunch",
+    "introCopy": "Causa is one of Peru's most iconic dishes—a cold, layered potato terrine that showcases the country's 4,000 varieties of native potatoes. Fluffy yellow potatoes are mashed with lime juice and aji amarillo, then layered with chicken or tuna salad enriched with mayonnaise and aji. The result is a stunning tower of vibrant yellow and white, garnished with hard-boiled eggs, olives, and avocado. It's as beautiful as it is delicious.",
+    "servings": 6,
+    "prepMinutes": 40,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#F4C430",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Potato mixture",
+        "order": 1,
+        "quantity": "3",
+        "unit": "lb",
+        "item": "yellow potatoes",
+        "prepNote": "peeled",
+        "optional": false
+      },
+      {
+        "component": "Potato mixture",
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "aji amarillo paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Potato mixture",
+        "order": 3,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Potato mixture",
+        "order": 4,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh lime juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Potato mixture",
+        "order": 5,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 6,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "cooked chicken breast",
+        "prepNote": "shredded",
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "mayonnaise",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "aji amarillo paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh lime juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 10,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "red onion",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": "Chicken filling",
+        "order": 11,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 12,
+        "quantity": "3",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": "hard-boiled and sliced",
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 13,
+        "quantity": "1",
+        "unit": "large",
+        "item": "avocado",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 14,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "black olives",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 15,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Boil the potatoes in salted water until tender, about 20-25 minutes. Drain and let steam dry for a few minutes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "While potatoes are still warm, mash them until completely smooth with no lumps. Stir in aji amarillo paste, oil, lime juice, and salt. Mix until bright yellow and creamy. Let cool to room temperature.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "In a bowl, combine shredded chicken, mayonnaise, aji amarillo paste, lime juice, and red onion. Season with salt and pepper. Mix well and refrigerate.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Line a loaf pan or square dish with plastic wrap. Spread half of the potato mixture evenly in the bottom, pressing down gently.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Spread the chicken salad evenly over the potato layer, leaving a small border around the edges.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Top with the remaining potato mixture, spreading evenly and smoothing the top. Cover with plastic wrap and refrigerate for at least 2 hours.",
+        "durationMinutes": null
+      },
+      {
+        "order": 7,
+        "text": "To serve, unmold onto a serving platter. Top with hard-boiled egg slices, avocado slices, black olives, and fresh cilantro. Slice into portions.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Poultry",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "High-protein",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "ceviche-clasico-peruano",
+    "title": "Ceviche Clásico Peruano",
+    "shortDescription": "Classic Peruvian ceviche with fresh fish, lime, aji, red onion, and sweet potato",
+    "note": "Use the freshest fish possible—sushi-grade is ideal",
+    "introCopy": "Peruvian ceviche is the national dish, a point of immense pride. Unlike Mexican versions with tomatoes, Peruvian ceviche is pure and minimalist: pristine white fish cured in freshly squeezed lime juice with aji limo or rocoto, slivers of red onion, and a touch of cilantro. It's served with sweet potato, choclo (giant corn), and lettuce, with the acidic 'leche de tigre' pooling beneath—the tiger's milk that some claim cures hangovers.",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 0,
+    "difficulty": "EASY",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "NO_COOK",
+      "UNDER_30",
+      "HIGH_PROTEIN",
+      "LOW_CALORIE",
+      "SPICY"
+    ],
+    "heroColor": "#FFFFFF",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "lb",
+        "item": "fresh white fish fillets",
+        "prepNote": "such as sea bass, halibut, or corvina, cut into 1/2-inch cubes",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh lime juice",
+        "prepNote": "from about 12-15 limes",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "red onion",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "large",
+        "item": "aji limo or rocoto pepper",
+        "prepNote": "minced (or substitute with habanero)",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "clove",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "pinch",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "2",
+        "unit": "medium",
+        "item": "sweet potatoes",
+        "prepNote": "boiled and sliced into rounds",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "2",
+        "unit": "ears",
+        "item": "choclo or corn on the cob",
+        "prepNote": "boiled and cut into rounds",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "4",
+        "unit": "leaves",
+        "item": "butter lettuce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 12,
+        "quantity": "1",
+        "unit": "handful",
+        "item": "cancha",
+        "prepNote": "toasted corn nuts, optional",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Rinse the sliced red onion under cold water for 2 minutes to remove bitterness. Drain well and pat dry.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "In a glass or ceramic bowl, combine the fish cubes, lime juice, minced aji limo, garlic, and salt. Gently toss to coat all pieces with lime juice.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Let the fish cure in the refrigerator for 8-12 minutes, stirring once halfway through. The fish should turn opaque but still be tender—do not over-cure.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 4,
+        "text": "Add the red onion slices, cilantro, and black pepper. Gently toss to combine.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Serve immediately in shallow bowls with the leche de tigre (the lime marinade), accompanied by sweet potato slices, corn rounds, and lettuce leaves. Sprinkle with cancha if desired.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "White fish",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Pescatarian",
+      "Gluten-free",
+      "Dairy-free",
+      "Low-carb",
+      "Paleo",
+      "Whole30",
+      "High-protein",
+      "Low-FODMAP"
+    ],
+    "allergenTags": [
+      "Fish",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "papa-a-la-huancaina",
+    "title": "Papa a la Huancaína",
+    "shortDescription": "Peruvian boiled potatoes with creamy aji amarillo cheese sauce, olives, and eggs",
+    "note": "Can be served warm or at room temperature",
+    "introCopy": "Papa a la huancaína hails from Huancayo in Peru's central highlands. It's the ultimate Peruvian appetizer: tender boiled yellow potatoes blanketed in a silky, spicy cheese sauce made from aji amarillo, queso fresco, evaporated milk, and crackers. Traditionally served over lettuce leaves and garnished with black olives and hard-boiled eggs, it's creamy, tangy, and just spicy enough to make you reach for another bite.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "COMFORT_FOOD",
+      "SPICY"
+    ],
+    "heroColor": "#FFB347",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Potatoes",
+        "order": 1,
+        "quantity": "2.5",
+        "unit": "lb",
+        "item": "yellow potatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Potatoes",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Huancaina sauce",
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "aji amarillo paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Huancaina sauce",
+        "order": 4,
+        "quantity": "8",
+        "unit": "oz",
+        "item": "queso fresco or feta cheese",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Huancaina sauce",
+        "order": 5,
+        "quantity": "1",
+        "unit": "can (12 oz)",
+        "item": "evaporated milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Huancaina sauce",
+        "order": 6,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Huancaina sauce",
+        "order": 7,
+        "quantity": "6",
+        "unit": "saltine crackers",
+        "item": "saltine crackers",
+        "prepNote": "or 2 tablespoons breadcrumbs",
+        "optional": false
+      },
+      {
+        "component": "Huancaina sauce",
+        "order": 8,
+        "quantity": "1",
+        "unit": "clove",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Huancaina sauce",
+        "order": 9,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 10,
+        "quantity": "6",
+        "unit": "leaves",
+        "item": "butter lettuce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 11,
+        "quantity": "3",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": "hard-boiled and halved",
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 12,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "black olives",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Boil the potatoes in salted water until tender when pierced with a fork, about 20 minutes. Drain and let cool slightly, then slice into 1/2-inch rounds.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 2,
+        "text": "In a blender, combine aji amarillo paste, queso fresco, evaporated milk, oil, crackers, and garlic. Blend on high until completely smooth and creamy, about 2 minutes. The sauce should be pourable but thick. Add a splash of water if too thick. Season with salt to taste.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Arrange lettuce leaves on a serving platter. Place potato slices over the lettuce.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Pour the huancaina sauce generously over the potatoes, covering them completely.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Garnish with hard-boiled egg halves and black olives. Serve at room temperature or slightly warm.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Wheat/gluten",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "anticuchos-de-corazon",
+    "title": "Anticuchos de Corazón",
+    "shortDescription": "Peruvian grilled beef heart skewers marinated in aji panca and spices",
+    "note": "Beef heart is lean and tender when marinated properly—don't overcook",
+    "introCopy": "Anticuchos are Peru's most popular street food, sold from carts on nearly every corner in Lima. These smoky, charred skewers date back to Incan times, later adapted with Spanish ingredients. Beef heart is the traditional choice—marinated in vinegar, aji panca, cumin, and garlic, then grilled over charcoal until caramelized on the outside and juicy within. Served with boiled potatoes and a drizzle of extra marinade, they're addictively savory.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 10,
+    "difficulty": "MEDIUM",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "GRILLED",
+      "HIGH_PROTEIN",
+      "SPICY",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#8B0000",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Marinade",
+        "order": 1,
+        "quantity": "2",
+        "unit": "lb",
+        "item": "beef heart",
+        "prepNote": "trimmed of fat and tubes, cut into 1.5-inch cubes",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 2,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "aji panca paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 3,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "red wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 5,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 9,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "4",
+        "unit": "medium",
+        "item": "potatoes",
+        "prepNote": "boiled",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "2",
+        "unit": "ears",
+        "item": "corn on the cob",
+        "prepNote": "boiled and cut into rounds",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 12,
+        "quantity": "for drizzling",
+        "unit": null,
+        "item": "extra marinade",
+        "prepNote": "reserved and boiled for safety",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large bowl, whisk together aji panca paste, vinegar, oil, garlic, cumin, oregano, salt, and pepper until well combined.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Add the beef heart cubes and toss to coat thoroughly. Cover and refrigerate for at least 2 hours, or up to overnight for deeper flavor. Reserve 1/4 cup of marinade separately for serving.",
+        "durationMinutes": null
+      },
+      {
+        "order": 3,
+        "text": "Soak wooden skewers in water for 30 minutes. Thread the marinated beef heart cubes onto skewers.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Preheat a grill or grill pan to high heat. Grill the skewers for 2-3 minutes per side, turning to char all sides. The heart should be medium-rare to medium—do not overcook or it will become tough.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 5,
+        "text": "Meanwhile, bring the reserved marinade to a boil in a small saucepan and simmer for 2 minutes.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Serve the anticuchos hot, drizzled with the cooked marinade, alongside boiled potatoes and corn.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 25
+      }
+    ],
+    "dietTags": [
+      "High-protein",
+      "Gluten-free",
+      "Dairy-free",
+      "Low-carb",
+      "Paleo"
+    ],
+    "allergenTags": [
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "arroz-con-pollo-peruano",
+    "title": "Arroz con Pollo Peruano",
+    "shortDescription": "Peruvian green rice with chicken, cilantro, aji amarillo, and vegetables",
+    "note": "The green color comes from blended cilantro and peppers",
+    "introCopy": "Arroz con pollo is a beloved one-pot dish found throughout Latin America, but Peru's version stands out with its vibrant green hue. The rice is cooked with a cilantro-aji amarillo purée, infused with beer and chicken stock, and studded with peas, carrots, and tender chicken pieces. It's comfort food at its finest—fragrant, flavorful, and a complete meal in a single pot.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 40,
+    "difficulty": "MEDIUM",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "ONE_POT",
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#8FBC8F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Chicken",
+        "order": 1,
+        "quantity": "2.5",
+        "unit": "lb",
+        "item": "bone-in, skin-on chicken thighs and drumsticks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 2,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chicken",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 5,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 6,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 7,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "aji amarillo paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 9,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "long-grain white rice",
+        "prepNote": "rinsed",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh cilantro leaves and stems",
+        "prepNote": "packed",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "beer",
+        "prepNote": "lager-style",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 12,
+        "quantity": "2.5",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 13,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "frozen peas",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 14,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "carrots",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Rice",
+        "order": 15,
+        "quantity": "1",
+        "unit": "red bell pepper",
+        "item": "red bell pepper",
+        "prepNote": "diced",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Season the chicken pieces with salt, pepper, and cumin. Let sit for 10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "In a blender, combine cilantro, beer, and 1/2 cup of the chicken stock. Blend until smooth and bright green. Set aside.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Heat oil in a large deep pot or Dutch oven over medium-high heat. Brown the chicken pieces on all sides, about 8 minutes total. Remove and set aside.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "In the same pot, sauté the onion until softened, about 5 minutes. Add garlic and aji amarillo paste, cook for 1 minute.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 5,
+        "text": "Add the rice and stir to coat with the aromatics, toasting for 2 minutes.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Pour in the cilantro mixture and remaining chicken stock. Stir in peas, carrots, and bell pepper. Nestle the browned chicken pieces into the rice.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 7,
+        "text": "Bring to a boil, then reduce heat to low, cover, and simmer for 25-30 minutes until rice is tender and liquid is absorbed. Do not stir during cooking.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 8,
+        "text": "Remove from heat and let rest, covered, for 5 minutes. Fluff gently and serve hot.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "High-protein",
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Nightshades",
+      "Celery"
+    ]
+  },
+  {
+    "slug": "tacu-tacu",
+    "title": "Tacu Tacu",
+    "shortDescription": "Peruvian crispy rice and bean pancake, often served with steak or fried eggs",
+    "note": "Uses leftover rice and beans—traditional resourceful cooking",
+    "introCopy": "Tacu tacu is Peru's answer to fried rice meets refried beans. This ingenious dish was born in Afro-Peruvian kitchens, transforming leftover rice and canary beans into a crispy, golden pancake. The mixture is fried in a hot pan until a crust forms on both sides, creating a creamy interior with a shatteringly crisp exterior. Traditionally topped with breaded steak, fried eggs, or salsa criolla, it's the ultimate comfort-food breakfast or lunch.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN",
+      "HIGH_FIBER"
+    ],
+    "heroColor": "#D2691E",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Tacu tacu",
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "cooked white rice",
+        "prepNote": "preferably day-old",
+        "optional": false
+      },
+      {
+        "component": "Tacu tacu",
+        "order": 2,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "cooked canary beans or pinto beans",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tacu tacu",
+        "order": 3,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": "divided",
+        "optional": false
+      },
+      {
+        "component": "Tacu tacu",
+        "order": 4,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Tacu tacu",
+        "order": 5,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Tacu tacu",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "aji panca paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tacu tacu",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tacu tacu",
+        "order": 8,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "4",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": "fried",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "salsa criolla",
+        "prepNote": "red onion, lime, cilantro",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat 1 tablespoon oil in a large skillet over medium heat. Sauté the onion until soft, about 5 minutes. Add garlic, aji panca paste, and cumin; cook for 1 minute.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 2,
+        "text": "Add the beans to the skillet and mash roughly with a fork or potato masher, leaving some texture. Cook for 2 minutes.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Add the rice to the bean mixture and stir well to combine. Season with salt and pepper. Cook for 3 minutes, stirring occasionally.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Press the mixture down firmly into the skillet to form a large pancake. Drizzle 1 tablespoon oil around the edges. Cook without moving for 5-7 minutes until a golden crust forms on the bottom.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 5,
+        "text": "Carefully flip the tacu tacu (use a large plate to invert if needed), add remaining oil to the pan, and cook the other side for 5-7 minutes until golden and crispy.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 6,
+        "text": "Slide onto a serving platter, cut into wedges, and top each portion with a fried egg and salsa criolla. Serve hot.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "High-protein",
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "rocoto-relleno",
+    "title": "Rocoto Relleno",
+    "shortDescription": "Stuffed Peruvian rocoto peppers with spiced beef, raisins, olives, and cheese",
+    "note": "Rocoto peppers are very spicy—blanch them to reduce heat",
+    "introCopy": "Rocoto relleno is an Arequipa specialty that showcases the mighty rocoto pepper—round, thick-walled, and fiery hot. The peppers are blanched to temper their heat, then stuffed with a savory-sweet picadillo of ground beef, onions, raisins, peanuts, and hard-boiled eggs. Topped with melted cheese and baked in a creamy milk sauce, they emerge golden, bubbling, and irresistible. It's complex, layered, and a true testament to Peruvian culinary ingenuity.",
+    "servings": 4,
+    "prepMinutes": 30,
+    "cookMinutes": 40,
+    "difficulty": "INVOLVED",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": false,
+    "attributes": [
+      "SPICY",
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#DC143C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Peppers",
+        "order": 1,
+        "quantity": "4",
+        "unit": "large",
+        "item": "rocoto peppers",
+        "prepNote": "or substitute large red bell peppers for milder version",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 2,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "aji panca paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 10,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "roasted peanuts",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 11,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "black olives",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 12,
+        "quantity": "2",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": "hard-boiled and chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 13,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce & topping",
+        "order": 14,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "evaporated milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce & topping",
+        "order": 15,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "shredded mozzarella or queso fresco",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce & topping",
+        "order": 16,
+        "quantity": "2",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Cut the tops off the rocoto peppers and carefully remove seeds and membranes. Bring a large pot of salted water to a boil, add the peppers and their tops, and blanch for 5 minutes. Drain, rinse with cold water, and repeat blanching 2 more times to reduce heat. Set aside to drain.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 2,
+        "text": "Heat oil in a large skillet over medium-high heat. Cook the ground beef, breaking it up, until browned, about 6 minutes. Remove beef and set aside.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 3,
+        "text": "In the same skillet, sauté the onion until soft, about 5 minutes. Add garlic, aji panca paste, cumin, and oregano; cook for 1 minute.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 4,
+        "text": "Return the beef to the skillet. Stir in raisins, peanuts, olives, and chopped hard-boiled eggs. Season with salt and pepper. Cook for 2 minutes, then remove from heat and let cool slightly.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Preheat oven to 375°F (190°C). Stuff each pepper generously with the beef mixture. Top each with a slice of cheese and replace the pepper tops.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "In a bowl, whisk together evaporated milk and beaten eggs. Pour this mixture into a baking dish. Carefully place the stuffed peppers in the dish.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 7,
+        "text": "Bake for 25-30 minutes until the peppers are tender and the cheese is melted and golden. Serve hot with rice.",
+        "durationMinutes": 30
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "High-protein",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Peanuts",
+      "Sulphites",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "chupe-de-camarones",
+    "title": "Chupe de Camarones",
+    "shortDescription": "Peruvian shrimp chowder with potatoes, corn, aji amarillo, and poached eggs",
+    "note": "A hearty, comforting soup from Arequipa",
+    "introCopy": "Chupe de camarones is a luxurious shrimp chowder from Peru's southern coast, particularly beloved in Arequipa. This thick, creamy soup is loaded with plump shrimp, potatoes, corn, fava beans, and rice, enriched with evaporated milk and cheese, and spiced with aji amarillo. The crowning touch is a poached egg nestled in each bowl, its yolk mingling with the broth. It's warming, filling, and a celebration of Peruvian coastal bounty.",
+    "servings": 6,
+    "prepMinutes": 25,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#FF6347",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Soup",
+        "order": 1,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 2,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 3,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "aji amarillo paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 7,
+        "quantity": "2",
+        "unit": "large",
+        "item": "tomatoes",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 8,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "fish or shrimp stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 9,
+        "quantity": "2",
+        "unit": "large",
+        "item": "potatoes",
+        "prepNote": "peeled and cubed",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh or frozen corn kernels",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fava beans or lima beans",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 12,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "white rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 13,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "large shrimp",
+        "prepNote": "peeled and deveined",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 14,
+        "quantity": "1",
+        "unit": "can (12 oz)",
+        "item": "evaporated milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 15,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "queso fresco or feta",
+        "prepNote": "crumbled",
+        "optional": false
+      },
+      {
+        "component": "Soup",
+        "order": 16,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 17,
+        "quantity": "6",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 18,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat oil in a large pot over medium heat. Sauté the onion until soft, about 5 minutes. Add garlic, aji amarillo paste, paprika, and oregano; cook for 1 minute.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 2,
+        "text": "Add diced tomatoes and cook for 3 minutes until they begin to break down.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Pour in the stock and bring to a boil. Add potatoes, corn, fava beans, and rice. Reduce heat and simmer for 15 minutes until potatoes and rice are tender.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Stir in the shrimp and cook for 3-4 minutes until pink and cooked through.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 5,
+        "text": "Add the evaporated milk and crumbled cheese. Stir gently and heat through for 2 minutes. Season with salt and pepper to taste.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Crack each egg gently into the simmering soup, spacing them out. Cover and cook for 3-4 minutes until eggs are poached to your liking.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 7,
+        "text": "Ladle the soup into bowls, ensuring each gets a poached egg. Garnish with fresh cilantro and serve hot.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Shellfish",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "High-protein",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Shellfish",
+      "Fish",
+      "Milk",
+      "Eggs",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "pollo-a-la-brasa",
+    "title": "Pollo a la Brasa",
+    "shortDescription": "Peruvian rotisserie chicken marinated in soy sauce, aji panca, and spices",
+    "note": "Best cooked on a rotisserie grill, but oven-roasted works well too",
+    "introCopy": "Pollo a la brasa is Peru's most popular fast food—whole chickens marinated in a blend of soy sauce, aji panca, cumin, garlic, and beer, then roasted on a rotisserie until the skin is mahogany and crackling. The meat stays juicy and infused with smoky, savory spice. Traditionally served with thick-cut fries and salsa verde or aji amarillo sauce, it's the dish that unites all Peruvians, from Lima to the Amazon.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 75,
+    "difficulty": "MEDIUM",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#8B4513",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Marinade",
+        "order": 1,
+        "quantity": "1",
+        "unit": "whole (4 lb)",
+        "item": "chicken",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 2,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "soy sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 3,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 4,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "beer",
+        "prepNote": "lager-style",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 5,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "aji panca paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 6,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 7,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 8,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 9,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Marinade",
+        "order": 11,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 12,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "aji verde",
+        "prepNote": "Peruvian green sauce",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 13,
+        "quantity": "for serving",
+        "unit": null,
+        "item": "thick-cut fries",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a bowl, whisk together soy sauce, oil, beer, aji panca paste, garlic, cumin, paprika, oregano, pepper, and salt until well combined.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Place the chicken in a large resealable bag or bowl. Pour the marinade over the chicken, turning to coat all surfaces. Marinate in the refrigerator for at least 4 hours, preferably overnight.",
+        "durationMinutes": null
+      },
+      {
+        "order": 3,
+        "text": "Preheat oven to 400°F (200°C) or prepare a rotisserie grill. If using oven, place the chicken on a roasting rack set over a baking sheet.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Roast the chicken for 60-75 minutes (or follow rotisserie instructions), basting occasionally with remaining marinade, until the skin is deeply browned and a thermometer inserted into the thickest part of the thigh reads 165°F (74°C).",
+        "durationMinutes": 75
+      },
+      {
+        "order": 5,
+        "text": "Remove from oven and let rest for 10 minutes before carving. Serve with aji verde and thick-cut fries.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Poultry",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "High-protein",
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Soy",
+      "Sulphites",
+      "Celery"
+    ]
+  },
+  {
+    "slug": "tamales-peruanos",
+    "title": "Tamales Peruanos",
+    "shortDescription": "Peruvian tamales with corn masa, pork or chicken, aji panca, and olives",
+    "note": "Wrapped in banana leaves and steamed for tender, fragrant parcels",
+    "introCopy": "Peruvian tamales differ from their Mexican cousins in both flavor and preparation. The corn masa is enriched with aji panca and pork fat, giving it a reddish hue and deep, smoky flavor. Each tamal is filled with seasoned pork or chicken, hard-boiled egg, olives, and sometimes peanuts, then wrapped in banana leaves and steamed until tender. They're sold by street vendors and enjoyed for breakfast or lunch, often with a side of salsa criolla.",
+    "servings": 12,
+    "prepMinutes": 60,
+    "cookMinutes": 90,
+    "difficulty": "INVOLVED",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "FREEZER_FRIENDLY",
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN",
+      "SPICY"
+    ],
+    "heroColor": "#CD853F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Masa",
+        "order": 1,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "masa harina",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Masa",
+        "order": 2,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "chicken or pork stock",
+        "prepNote": "warm",
+        "optional": false
+      },
+      {
+        "component": "Masa",
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "lard or vegetable shortening",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Masa",
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "aji panca paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Masa",
+        "order": 5,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Masa",
+        "order": 6,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "1.5",
+        "unit": "lb",
+        "item": "pork shoulder or chicken thighs",
+        "prepNote": "cooked and shredded",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 10,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 11,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "aji panca paste",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 13,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 14,
+        "quantity": "12",
+        "unit": "large",
+        "item": "banana leaves",
+        "prepNote": "cut into 12-inch squares, softened over flame",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 15,
+        "quantity": "6",
+        "unit": "large",
+        "item": "eggs",
+        "prepNote": "hard-boiled and halved",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 16,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "black olives",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 17,
+        "quantity": "kitchen twine",
+        "unit": null,
+        "item": "kitchen twine",
+        "prepNote": "for tying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Prepare the filling: Heat oil in a skillet over medium heat. Sauté onion until soft, about 5 minutes. Add garlic, aji panca paste, and cumin; cook for 1 minute. Stir in the shredded meat and season with salt and pepper. Set aside to cool.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Make the masa: In a large bowl, combine masa harina, aji panca paste, cumin, and salt. Gradually add warm stock, mixing until a soft dough forms. Knead in the lard until fully incorporated and the dough is smooth and pliable.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Lay a banana leaf square on a work surface, shiny side up. Spread about 1/3 cup of masa in the center, forming a rectangle about 4x6 inches.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Place 2-3 tablespoons of meat filling in the center of the masa, along with half a hard-boiled egg and a few olives.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Fold the banana leaf over the filling to enclose it completely, forming a neat packet. Tie with kitchen twine to secure. Repeat with remaining ingredients.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 6,
+        "text": "Set up a large steamer with boiling water. Arrange the tamales standing upright in the steamer basket. Cover and steam for 1.5 hours, checking occasionally to ensure water hasn't evaporated.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 7,
+        "text": "Remove tamales from steamer and let cool for 5 minutes before unwrapping. Serve warm with salsa criolla or aji amarillo sauce.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Whole grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "High-protein",
+      "Gluten-free",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Corn",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "chicha-morada",
+    "title": "Chicha Morada",
+    "shortDescription": "Peruvian purple corn drink with pineapple, cinnamon, and lime",
+    "note": "A refreshing, non-alcoholic traditional beverage",
+    "introCopy": "Chicha morada is Peru's iconic purple corn drink, made by boiling purple corn with pineapple peels, cinnamon, cloves, and lime. The result is a deep violet, slightly sweet, and spiced beverage that's both refreshing and nutritious. It's rich in antioxidants and enjoyed year-round, especially during family gatherings and celebrations. Some versions add diced fruit for a chunky, punch-like texture.",
+    "servings": 8,
+    "prepMinutes": 10,
+    "cookMinutes": 45,
+    "difficulty": "EASY",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#663399",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "dried purple corn",
+        "prepNote": "or 3 ears fresh purple corn, kernels removed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "8",
+        "unit": "cups",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "whole",
+        "item": "pineapple",
+        "prepNote": "peeled, cored, cut into chunks, reserve peel",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cinnamon sticks",
+        "item": "cinnamon sticks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": "whole cloves",
+        "item": "cloves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "apple",
+        "prepNote": "quartered",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "sugar",
+        "prepNote": "or to taste",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh lime juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 9,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "diced pineapple",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "diced apple",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large pot, combine purple corn, water, pineapple peel, cinnamon sticks, cloves, and quartered apple. Bring to a boil over high heat.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Reduce heat to medium-low and simmer for 45 minutes, stirring occasionally, until the liquid is deep purple and fragrant.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 3,
+        "text": "Remove from heat and strain the liquid into a large pitcher, discarding the solids. Let cool to room temperature.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "Stir in sugar and lime juice, adjusting sweetness to taste. Refrigerate until completely chilled, at least 2 hours.",
+        "durationMinutes": null
+      },
+      {
+        "order": 5,
+        "text": "Serve over ice, optionally adding diced pineapple and apple for texture. Stir before serving as sediment may settle.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Fruit",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Whole grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 25
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Gluten-free",
+      "Dairy-free",
+      "Low-FODMAP"
+    ],
+    "allergenTags": [
+      "Corn"
+    ]
+  },
+  {
+    "slug": "suspiro-a-la-limena",
+    "title": "Suspiro a la Limeña",
+    "shortDescription": "Peruvian dulce de leche dessert topped with port-spiked meringue",
+    "note": "The name means 'sigh of a Lima lady'—a poetic nod to its delicate sweetness",
+    "introCopy": "Suspiro a la limeña is Lima's most romantic dessert—a cloud of silky dulce de leche (manjar blanco) crowned with a pillow of meringue flavored with port wine and dusted with cinnamon. Legend says the dessert got its name because it's so light and sweet, it makes you sigh. It's decadent, elegant, and the perfect finale to any Peruvian feast.",
+    "servings": 8,
+    "prepMinutes": 20,
+    "cookMinutes": 60,
+    "difficulty": "MEDIUM",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "COMFORT_FOOD"
+    ],
+    "heroColor": "#F5DEB3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Manjar blanco",
+        "order": 1,
+        "quantity": "1",
+        "unit": "can (14 oz)",
+        "item": "sweetened condensed milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Manjar blanco",
+        "order": 2,
+        "quantity": "1",
+        "unit": "can (12 oz)",
+        "item": "evaporated milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Manjar blanco",
+        "order": 3,
+        "quantity": "5",
+        "unit": "large",
+        "item": "egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Manjar blanco",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Meringue",
+        "order": 5,
+        "quantity": "4",
+        "unit": "large",
+        "item": "egg whites",
+        "prepNote": "room temperature",
+        "optional": false
+      },
+      {
+        "component": "Meringue",
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "granulated sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Meringue",
+        "order": 7,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "port wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 8,
+        "quantity": "for dusting",
+        "unit": null,
+        "item": "ground cinnamon",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make the manjar blanco: In a medium saucepan, combine sweetened condensed milk, evaporated milk, and egg yolks. Whisk until smooth.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Cook over medium-low heat, stirring constantly with a wooden spoon, for 15-20 minutes until the mixture thickens and coats the back of the spoon. Do not let it boil.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 3,
+        "text": "Remove from heat and stir in vanilla extract. Pour into individual serving glasses or a large serving dish. Let cool to room temperature, then refrigerate for at least 2 hours until set.",
+        "durationMinutes": null
+      },
+      {
+        "order": 4,
+        "text": "Make the meringue: In a clean, dry bowl, beat egg whites with an electric mixer on medium speed until soft peaks form.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Gradually add sugar, 1 tablespoon at a time, beating on high speed until stiff, glossy peaks form, about 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Gently fold in the port wine with a spatula until just incorporated.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 7,
+        "text": "Spoon or pipe the meringue over the chilled manjar blanco. Dust lightly with ground cinnamon. Serve immediately or refrigerate until ready to serve (meringue will hold for a few hours).",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "picarones",
+    "title": "Picarones",
+    "shortDescription": "Peruvian sweet potato and squash fritters drizzled with spiced molasses syrup",
+    "note": "Similar to doughnuts but made with squash and sweet potato",
+    "introCopy": "Picarones are Peru's answer to doughnuts—golden, crispy fritters made from a yeasted dough of sweet potato and pumpkin, deep-fried until puffy and light. They're served warm, drizzled generously with chancaca syrup (a dark, spiced molasses syrup infused with cinnamon, cloves, and orange peel). Street vendors sell them by the dozen, and they're enjoyed as a sweet snack or dessert, especially during October celebrations.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 30,
+    "difficulty": "MEDIUM",
+    "cuisine": "Peruvian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "FRIED",
+      "COMFORT_FOOD"
+    ],
+    "heroColor": "#FF8C00",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "sweet potato",
+        "prepNote": "peeled, boiled, and mashed",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "butternut squash or pumpkin",
+        "prepNote": "peeled, boiled, and mashed",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "active dry yeast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "warm water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "granulated sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "ground anise seed",
+        "prepNote": "optional",
+        "optional": true
+      },
+      {
+        "component": "Frying",
+        "order": 9,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "vegetable oil",
+        "prepNote": "for deep frying",
+        "optional": false
+      },
+      {
+        "component": "Chancaca syrup",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "piloncillo or dark brown sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chancaca syrup",
+        "order": 11,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chancaca syrup",
+        "order": 12,
+        "quantity": "1",
+        "unit": "cinnamon stick",
+        "item": "cinnamon stick",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chancaca syrup",
+        "order": 13,
+        "quantity": "3",
+        "unit": "whole cloves",
+        "item": "cloves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chancaca syrup",
+        "order": 14,
+        "quantity": "2",
+        "unit": "strips",
+        "item": "orange peel",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make the syrup: In a small saucepan, combine piloncillo, water, cinnamon stick, cloves, and orange peel. Bring to a boil, then reduce heat and simmer for 15 minutes until thick and syrupy. Strain and set aside.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 2,
+        "text": "Make the dough: Dissolve yeast and sugar in warm water and let sit for 5 minutes until frothy.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "In a large bowl, combine mashed sweet potato and squash. Add the yeast mixture, flour, salt, and anise (if using). Mix until a sticky, elastic dough forms. Cover and let rise in a warm place for 1 hour.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Heat oil in a deep pot or fryer to 350°F (175°C).",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Wet your hands with water. Take a small handful of dough and shape it into a ring (like a doughnut), poking a hole in the center. Carefully drop into the hot oil.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Fry the picarones in batches for 3-4 minutes per side until golden brown and puffed. Remove with a slotted spoon and drain on paper towels.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 7,
+        "text": "Serve warm, drizzled generously with chancaca syrup.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten"
+    ]
+  }
+]

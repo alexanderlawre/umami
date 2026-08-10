@@ -1,0 +1,2760 @@
+[
+  {
+    "slug": "argentinian-asado-with-chimichurri",
+    "title": "Argentinian Asado with Chimichurri",
+    "shortDescription": "Traditional mixed grill featuring beef ribs and sausages with vibrant herb sauce",
+    "note": "Asado is best cooked low and slow over wood or charcoal for authentic smoky flavor",
+    "introCopy": "Asado is the soul of Argentine cooking—a ritualistic gathering around the grill where beef short ribs, chorizo, and morcilla are cooked slowly over wood embers. The meat is seasoned simply with salt, allowing the quality of the beef to shine. No asado is complete without chimichurri, the bright parsley-oregano sauce that cuts through the richness.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 150,
+    "difficulty": "MEDIUM",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "GRILLED",
+      "HIGH_PROTEIN",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#8B4513",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Asado",
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "beef short ribs (tira de asado)",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Asado",
+        "order": 2,
+        "quantity": "6",
+        "unit": null,
+        "item": "chorizo sausages",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Asado",
+        "order": 3,
+        "quantity": "3",
+        "unit": "tablespoons",
+        "item": "coarse salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 4,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "fresh flat-leaf parsley",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 5,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 6,
+        "quantity": "3",
+        "unit": "tablespoons",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 7,
+        "quantity": "2",
+        "unit": "teaspoons",
+        "item": "red pepper flakes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 8,
+        "quantity": "0.75",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 9,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "red wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 10,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 11,
+        "quantity": "1",
+        "unit": "loaf",
+        "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make the chimichurri: Combine parsley, garlic, oregano, red pepper flakes, olive oil, vinegar, and salt in a bowl. Mix well and let stand at room temperature for at least 30 minutes to develop flavors.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Prepare a charcoal or wood fire in a grill. Let it burn until you have hot embers with no flames.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 3,
+        "text": "Season the short ribs generously on both sides with coarse salt.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Place the ribs bone-side down on the grill, about 8 inches above the embers. Cook slowly for 1 hour, turning occasionally.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 5,
+        "text": "Add the chorizo sausages to the grill and cook for 20-25 minutes, turning frequently, until cooked through and nicely charred.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 6,
+        "text": "Continue cooking the ribs for another 30-45 minutes, until the meat is tender and pulls away from the bone. The total cooking time should be about 2-2.5 hours.",
+        "durationMinutes": 45
+      },
+      {
+        "order": 7,
+        "text": "Remove all meats from the grill and let rest for 10 minutes. Slice the ribs between the bones and cut the chorizo into thick slices.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 8,
+        "text": "Serve immediately with chimichurri and crusty bread on the side.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 15
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "empanadas-argentinas-beef",
+    "title": "Empanadas Argentinas (Beef)",
+    "shortDescription": "Flaky hand pies filled with spiced ground beef, olives, and hard-boiled eggs",
+    "note": "The repulgue (crimped edge) is both decorative and helps identify fillings at gatherings",
+    "introCopy": "Empanadas are Argentina's most beloved handheld food, found at every family gathering and street corner. The classic beef filling combines ground meat with cumin, paprika, green olives, and hard-boiled egg—a combination that's sweet, savory, and utterly addictive. Each province has its own style, but this recipe follows the traditional porteño approach.",
+    "servings": 12,
+    "prepMinutes": 45,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER",
+      "FREEZER_FRIENDLY",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#D4A574",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Filling",
+        "order": 1,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 2,
+        "quantity": "2",
+        "unit": "medium",
+        "item": "onions",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 3,
+        "quantity": "500",
+        "unit": "g",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "2",
+        "unit": "teaspoons",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "sweet paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "0.5",
+        "unit": "teaspoon",
+        "item": "cayenne pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "12",
+        "unit": null,
+        "item": "green olives",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Filling",
+        "order": 10,
+        "quantity": "2",
+        "unit": null,
+        "item": "hard-boiled eggs",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 11,
+        "quantity": "24",
+        "unit": null,
+        "item": "empanada discs (tapas para empanadas)",
+        "prepNote": "store-bought or homemade",
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 12,
+        "quantity": "1",
+        "unit": null,
+        "item": "egg",
+        "prepNote": "beaten",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large skillet over medium heat. Add onions and cook until softened and translucent, about 8 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Add ground beef and cook, breaking it up with a wooden spoon, until browned and no longer pink, about 8 minutes.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Stir in cumin, paprika, cayenne, and salt. Cook for 2 minutes until fragrant.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Remove from heat and stir in chopped olives, raisins (if using), and hard-boiled eggs. Let the filling cool completely.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 5,
+        "text": "Preheat oven to 200°C (400°F). Line two baking sheets with parchment paper.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Place an empanada disc on a clean surface. Spoon 2 tablespoons of filling onto the center. Brush the edges with beaten egg.",
+        "durationMinutes": null
+      },
+      {
+        "order": 7,
+        "text": "Fold the disc in half to form a half-moon. Seal the edges by pressing with a fork or crimping (repulgue) with your fingers. Repeat with remaining discs.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 8,
+        "text": "Place empanadas on prepared baking sheets. Brush the tops with beaten egg.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 9,
+        "text": "Bake for 20-25 minutes until golden brown and crispy. Serve hot or warm.",
+        "durationMinutes": 25
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "milanesa-napolitana",
+    "title": "Milanesa Napolitana",
+    "shortDescription": "Breaded beef cutlet topped with ham, tomato sauce, and melted mozzarella",
+    "note": "Despite its Italian name, this is an Argentine classic found in every bodegón",
+    "introCopy": "Milanesa napolitana takes Argentina's beloved breaded cutlet and elevates it with layers of ham, tomato sauce, and melted cheese. Baked until bubbly and golden, it's pure comfort food—crispy, juicy, and utterly satisfying. Serve with french fries or a simple salad for a meal that defines Argentine home cooking.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "difficulty": "EASY",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#C8512D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "beef cutlets (nalga or cuadril)",
+        "prepNote": "pounded thin",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "breadcrumbs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "0.5",
+        "unit": "teaspoon",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 8,
+        "quantity": "4",
+        "unit": "slices",
+        "item": "cooked ham",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 9,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "tomato sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 10,
+        "quantity": "200",
+        "unit": "g",
+        "item": "mozzarella cheese",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 11,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "grated Parmesan",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 12,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Season cutlets with salt and pepper on both sides.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Set up three shallow dishes: one with flour, one with beaten eggs, and one with breadcrumbs.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Dredge each cutlet in flour, shaking off excess. Dip in egg, then coat thoroughly with breadcrumbs, pressing to adhere.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Heat vegetable oil in a large skillet over medium-high heat. Fry cutlets for 3-4 minutes per side until golden brown and crispy. Transfer to a paper towel-lined plate.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 5,
+        "text": "Preheat oven to 200°C (400°F). Place fried cutlets on a baking sheet.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Top each cutlet with a slice of ham, a spoonful of tomato sauce, mozzarella slices, Parmesan, and a sprinkle of oregano.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 7,
+        "text": "Bake for 10-12 minutes until cheese is melted and bubbly. Serve immediately with french fries or salad.",
+        "durationMinutes": 12
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 40
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "locro-argentino",
+    "title": "Locro Argentino",
+    "shortDescription": "Hearty hominy and bean stew with pork, chorizo, and butternut squash",
+    "note": "Traditionally served on May 25th (Argentina's Independence Day) but perfect any cold day",
+    "introCopy": "Locro is Argentina's national stew—a thick, warming bowl of white corn, beans, pork, and squash that has sustained people in the Andes for centuries. This is soul food at its finest: humble ingredients transformed through slow cooking into something profoundly comforting. The quiquirimichi (spicy oil) drizzled on top adds heat and color.",
+    "servings": 8,
+    "prepMinutes": 30,
+    "cookMinutes": 180,
+    "difficulty": "MEDIUM",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_FIBER",
+      "MAKE_AHEAD",
+      "FREEZER_FRIENDLY"
+    ],
+    "heroColor": "#D4A05E",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Locro",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "dried white hominy (maíz blanco)",
+        "prepNote": "soaked overnight",
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 2,
+        "quantity": "200",
+        "unit": "g",
+        "item": "dried white beans",
+        "prepNote": "soaked overnight",
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 3,
+        "quantity": "400",
+        "unit": "g",
+        "item": "pork ribs",
+        "prepNote": "cut into pieces",
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 4,
+        "quantity": "200",
+        "unit": "g",
+        "item": "chorizo sausage",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 5,
+        "quantity": "200",
+        "unit": "g",
+        "item": "bacon",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 6,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 8,
+        "quantity": "400",
+        "unit": "g",
+        "item": "butternut squash",
+        "prepNote": "peeled and cubed",
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 9,
+        "quantity": "2",
+        "unit": "teaspoons",
+        "item": "sweet paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 10,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 11,
+        "quantity": "2",
+        "unit": null,
+        "prepNote": null,
+        "optional": false,
+        "item": "bay leaves"
+      },
+      {
+        "component": "Locro",
+        "order": 12,
+        "quantity": "2",
+        "unit": "liters",
+        "item": "water or stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Locro",
+        "order": 13,
+        "quantity": "2",
+        "unit": "teaspoons",
+        "item": "salt",
+        "prepNote": "or to taste",
+        "optional": false
+      },
+      {
+        "component": "Quiquirimichi",
+        "order": 14,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "vegetable oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Quiquirimichi",
+        "order": 15,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "sweet paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Quiquirimichi",
+        "order": 16,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "cayenne pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Quiquirimichi",
+        "order": 17,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Drain the soaked hominy and beans. Place in a large heavy pot with water or stock, pork ribs, and bay leaves. Bring to a boil, then reduce heat and simmer for 1 hour.",
+        "durationMinutes": 70
+      },
+      {
+        "order": 2,
+        "text": "In a skillet, cook bacon until crispy. Add onion and garlic, cooking until softened, about 5 minutes. Stir in paprika and cumin.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Add the bacon mixture to the pot along with chorizo, butternut squash, and salt. Continue simmering for another 1.5-2 hours, stirring occasionally, until hominy is tender and stew is very thick.",
+        "durationMinutes": 100
+      },
+      {
+        "order": 4,
+        "text": "While the locro simmers, make the quiquirimichi: Heat oil in a small pan over low heat. Add paprika, cayenne, and garlic. Cook gently for 2 minutes, then remove from heat and let infuse.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Remove pork ribs from the locro, shred the meat, and return it to the pot. Discard bones and bay leaves.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Adjust seasoning with salt. The locro should be very thick and creamy. Serve in bowls with a drizzle of quiquirimichi on top.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Whole grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "choripan-con-chimichurri",
+    "title": "Choripán con Chimichurri",
+    "shortDescription": "Grilled chorizo sandwich with chimichurri on crusty bread",
+    "note": "The name comes from chorizo + pan (bread) — Argentina's favorite street food",
+    "introCopy": "Choripán is the ultimate Argentine street food: a grilled chorizo sausage tucked into crusty bread and doused with chimichurri. It's simple, messy, and absolutely delicious. Whether at a football match, street fair, or backyard asado, choripán is always the star. The key is good-quality chorizo and a generous amount of chimichurri.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "GRILLED",
+      "UNDER_30",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#9B5B3C",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "fresh chorizo sausages",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": null,
+        "item": "crusty rolls or baguette sections",
+        "prepNote": "split lengthwise",
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 3,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh flat-leaf parsley",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 4,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 6,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "red pepper flakes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 7,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 8,
+        "quantity": "3",
+        "unit": "tablespoons",
+        "item": "red wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Chimichurri",
+        "order": 9,
+        "quantity": "0.5",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make the chimichurri: Combine parsley, garlic, oregano, red pepper flakes, olive oil, vinegar, and salt in a bowl. Mix well and let stand for at least 15 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Preheat grill to medium-high heat. Prick the chorizo sausages a few times with a fork to prevent bursting.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Grill the chorizo for 12-15 minutes, turning frequently, until cooked through and nicely charred on all sides.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 4,
+        "text": "During the last 2 minutes, place the bread cut-side down on the grill to toast lightly.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Place each grilled chorizo in a toasted roll. Spoon chimichurri generously over the sausage. Serve immediately.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Pork",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "provoleta-grilled-provolone",
+    "title": "Provoleta (Grilled Provolone)",
+    "shortDescription": "Melted provolone cheese with oregano and chili flakes, charred on the grill",
+    "note": "Use thick slices (2cm) of provolone cheese so it melts without falling through the grill",
+    "introCopy": "Provoleta is the Argentine asador's way of keeping guests happy while the main meats cook. A thick round of provolone cheese is grilled until molten and golden, then showered with oregano and chili flakes. Scoop it up with crusty bread while it's still bubbling—it's impossible to resist.",
+    "servings": 4,
+    "prepMinutes": 5,
+    "cookMinutes": 8,
+    "difficulty": "EASY",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "GRILLED",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#F5DEB3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "400",
+        "unit": "g",
+        "item": "provolone cheese",
+        "prepNote": "in 2cm thick slices or one round",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": "tablespoon",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "red pepper flakes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "crusty bread",
+        "prepNote": "for serving",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat grill or cast-iron skillet to medium-high heat.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Brush both sides of the provolone with olive oil.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 3,
+        "text": "Place the provolone directly on the grill grates or in the hot skillet. Cook for 3-4 minutes per side until golden and charred in spots, with melted interior.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "Transfer to a serving plate or cast-iron dish. Immediately sprinkle with oregano and red pepper flakes.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Serve immediately with crusty bread for scooping while the cheese is still hot and gooey.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "humita-en-chala",
+    "title": "Humita en Chala",
+    "shortDescription": "Sweet corn tamales wrapped in corn husks with cheese and spices",
+    "note": "Fresh corn is essential—frozen won't give the right creamy texture",
+    "introCopy": "Humita is the Argentine answer to Mexican tamales, but with a sweeter, creamier profile. Fresh corn is ground into a paste with onions, spices, and cheese, then wrapped in corn husks and steamed. The result is tender, silky, and subtly sweet—a taste of summer in the Andes. These are traditionally enjoyed as a first course or light meal.",
+    "servings": 8,
+    "prepMinutes": 45,
+    "cookMinutes": 40,
+    "difficulty": "MEDIUM",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "LUNCH",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "COMFORT_FOOD",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#F4E5C3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "8",
+        "unit": "ears",
+        "item": "fresh corn",
+        "prepNote": "kernels removed, husks reserved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "sweet paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "0.5",
+        "unit": "teaspoon",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "0.25",
+        "unit": "teaspoon",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "150",
+        "unit": "g",
+        "item": "queso fresco or mozzarella",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "cornmeal",
+        "prepNote": "optional, for thickening",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Carefully remove corn husks and set aside. Clean and soak them in warm water to make them pliable.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Cut the kernels from the cobs. Blend or process half of the kernels until smooth. Keep the other half whole.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Melt butter in a large skillet over medium heat. Add onion and cook until softened, about 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Add the blended corn, whole kernels, paprika, cumin, salt, and pepper. Cook, stirring frequently, for 10 minutes until thickened. If the mixture is too loose, stir in cornmeal. Remove from heat and let cool slightly.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 5,
+        "text": "Fold in the diced cheese.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Take two overlapping corn husks. Place 2-3 tablespoons of filling in the center. Fold the sides over the filling, then fold up the bottom and tie with a strip of husk or kitchen twine. Repeat with remaining filling.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 7,
+        "text": "Stand the humitas upright in a steamer basket over boiling water. Cover and steam for 35-40 minutes until firm.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 8,
+        "text": "Let cool for 5 minutes before unwrapping. Serve warm as is or with a drizzle of cream.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Corn"
+    ]
+  },
+  {
+    "slug": "matambre-arrollado",
+    "title": "Matambre Arrollado",
+    "shortDescription": "Rolled flank steak stuffed with vegetables, hard-boiled eggs, and herbs",
+    "note": "Ask your butcher to butterfly the matambre for easier rolling",
+    "introCopy": "Matambre arrollado is a spectacular centerpiece—a butterflied flank steak rolled around a colorful filling of carrots, peppers, hard-boiled eggs, and herbs, then poached or roasted until tender. Sliced into spirals, it reveals a gorgeous mosaic of flavors. It's equally delicious hot or cold, making it perfect for parties and picnics.",
+    "servings": 8,
+    "prepMinutes": 40,
+    "cookMinutes": 120,
+    "difficulty": "INVOLVED",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": false,
+    "attributes": [
+      "MAKE_AHEAD",
+      "CROWD_PLEASER",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#8B6F47",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1.5",
+        "unit": "kg",
+        "item": "matambre (flank steak)",
+        "prepNote": "butterflied",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": null,
+        "item": "hard-boiled eggs",
+        "prepNote": "peeled",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "medium",
+        "item": "carrots",
+        "prepNote": "cut into thin strips",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "red bell pepper",
+        "prepNote": "cut into strips",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "teaspoons",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "teaspoons",
+        "item": "sweet paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "2",
+        "unit": "teaspoons",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "3",
+        "unit": "tablespoons",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 12,
+        "quantity": "2",
+        "unit": "liters",
+        "item": "water or stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 13,
+        "quantity": "1",
+        "unit": "medium",
+        "item": "onion",
+        "prepNote": "halved",
+        "optional": false
+      },
+      {
+        "component": "Cooking liquid",
+        "order": 14,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Lay the butterflied matambre flat on a work surface. Pound lightly to even thickness.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Combine garlic, oregano, paprika, salt, pepper, and olive oil. Rub this mixture all over the meat.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Arrange the hard-boiled eggs in a line down the center of the meat. Surround with carrot strips, bell pepper strips, and parsley.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Starting from one long side, tightly roll the matambre into a cylinder, enclosing the filling. Tie securely with kitchen twine at 2-inch intervals.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "In a large pot, bring water or stock to a boil with onion and bay leaves. Carefully add the rolled matambre.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Reduce heat and simmer gently for 1.5-2 hours until the meat is very tender.",
+        "durationMinutes": 105
+      },
+      {
+        "order": 7,
+        "text": "Remove from liquid and let cool for 15 minutes. For best slicing, refrigerate for at least 2 hours or overnight.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 8,
+        "text": "Remove twine and slice into 1-inch thick rounds. Serve cold with salad or at room temperature with chimichurri.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "High-protein"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "alfajores-de-maicena",
+    "title": "Alfajores de Maicena",
+    "shortDescription": "Tender cornstarch cookies sandwiched with dulce de leche and rolled in coconut",
+    "note": "Alfajores are Argentina's most iconic sweet—found in every bakery and home",
+    "introCopy": "Alfajores are delicate shortbread cookies made with cornstarch for an impossibly tender, melt-in-your-mouth texture. Two cookies sandwich a generous layer of dulce de leche, then the edges are rolled in shredded coconut. They're sweet, buttery, and utterly addictive—a perfect pairing with afternoon coffee or mate.",
+    "servings": 20,
+    "prepMinutes": 30,
+    "cookMinutes": 12,
+    "difficulty": "EASY",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "FREEZER_FRIENDLY"
+    ],
+    "heroColor": "#F5E6D3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Cookies",
+        "order": 1,
+        "quantity": "200",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "softened",
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 2,
+        "quantity": "150",
+        "unit": "g",
+        "item": "powdered sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 4,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 5,
+        "quantity": "200",
+        "unit": "g",
+        "item": "cornstarch",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 6,
+        "quantity": "100",
+        "unit": "g",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 7,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "baking powder",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Cookies",
+        "order": 8,
+        "quantity": "0.25",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling & coating",
+        "order": 9,
+        "quantity": "400",
+        "unit": "g",
+        "item": "dulce de leche",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling & coating",
+        "order": 10,
+        "quantity": "1.5",
+        "unit": "cups",
+        "item": "shredded coconut",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 180°C (350°F). Line two baking sheets with parchment paper.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Beat butter and powdered sugar until light and fluffy, about 3 minutes. Add egg yolks and vanilla, beating until combined.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "In a separate bowl, whisk together cornstarch, flour, baking powder, and salt.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Gradually add dry ingredients to butter mixture, mixing until just combined. The dough will be soft and delicate.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Roll dough out on a lightly floured surface to 5mm thickness. Cut out rounds with a 5cm cookie cutter.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 6,
+        "text": "Place cookies on prepared baking sheets, spacing 2cm apart. Bake for 10-12 minutes until just set but not browned. Let cool completely.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 7,
+        "text": "Spread 1-2 teaspoons of dulce de leche on the flat side of one cookie. Top with another cookie to make a sandwich.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 8,
+        "text": "Roll the edges of each sandwich in shredded coconut to coat. Store in an airtight container for up to 1 week.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Wheat/gluten",
+      "Corn"
+    ]
+  },
+  {
+    "slug": "pastel-de-papa",
+    "title": "Pastel de Papa",
+    "shortDescription": "Argentine shepherd's pie with seasoned beef and creamy mashed potato topping",
+    "note": "Similar to shepherd's pie but with distinctly Argentine seasoning (cumin, paprika, olives)",
+    "introCopy": "Pastel de papa is Argentina's answer to shepherd's pie—a comforting casserole of spiced ground beef topped with creamy mashed potatoes and baked until golden. The filling is flavored with cumin, paprika, and sweet raisins, while the potato topping is enriched with butter and milk. It's the ultimate family dinner.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 40,
+    "difficulty": "EASY",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "MAKE_AHEAD",
+      "FREEZER_FRIENDLY",
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#D4A76A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Filling",
+        "order": 1,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 2,
+        "quantity": "1",
+        "unit": "large",
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 3,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 4,
+        "quantity": "700",
+        "unit": "g",
+        "item": "ground beef",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "2",
+        "unit": "teaspoons",
+        "item": "ground cumin",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "sweet paprika",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "0.5",
+        "unit": "teaspoon",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "hard-boiled eggs",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 10,
+        "quantity": "0.25",
+        "unit": "cup",
+        "item": "green olives",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 11,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "raisins",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Topping",
+        "order": 12,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "potatoes",
+        "prepNote": "peeled and cubed",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 13,
+        "quantity": "60",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 14,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "milk",
+        "prepNote": "warm",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 15,
+        "quantity": "0.5",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Boil potatoes in salted water until tender, about 20 minutes. Drain well.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "While potatoes cook, heat olive oil in a large skillet over medium heat. Add onion and garlic, cooking until softened, about 5 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Add ground beef and cook, breaking it up, until browned, about 8 minutes. Stir in cumin, paprika, salt, and pepper.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 4,
+        "text": "Remove from heat and fold in chopped eggs, olives, and raisins (if using). Let cool slightly.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Mash the potatoes with butter, warm milk, and salt until smooth and creamy.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Preheat oven to 190°C (375°F). Spread the beef mixture in a 9x13 inch baking dish.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 7,
+        "text": "Spread the mashed potatoes evenly over the beef layer, smoothing the top. Use a fork to create texture on the surface.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 8,
+        "text": "Bake for 35-40 minutes until the top is golden brown. Let rest for 10 minutes before serving.",
+        "durationMinutes": 40
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 10
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Milk",
+      "Eggs",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "sorrentinos-de-jamon-y-queso",
+    "title": "Sorrentinos de Jamón y Queso",
+    "shortDescription": "Large round pasta pockets filled with ham and cheese in tomato sauce",
+    "note": "Sorrentinos are larger and thinner than ravioli, a specialty of Argentine Italian cuisine",
+    "introCopy": "Sorrentinos are a beloved Argentine pasta—large, delicate rounds filled with ham and mozzarella, served in a simple tomato sauce. This is Italian-Argentine cooking at its finest: handmade pasta stuffed generously and served family-style. Making them from scratch is a labor of love, but the tender pockets bursting with melted cheese are worth every moment.",
+    "servings": 4,
+    "prepMinutes": 60,
+    "cookMinutes": 20,
+    "difficulty": "INVOLVED",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "MAKE_AHEAD",
+      "FREEZER_FRIENDLY"
+    ],
+    "heroColor": "#E8B887",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Pasta dough",
+        "order": 1,
+        "quantity": "400",
+        "unit": "g",
+        "item": "00 flour or all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pasta dough",
+        "order": 2,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pasta dough",
+        "order": 3,
+        "quantity": "1",
+        "unit": "tablespoon",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pasta dough",
+        "order": 4,
+        "quantity": "0.5",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 5,
+        "quantity": "300",
+        "unit": "g",
+        "item": "mozzarella cheese",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 6,
+        "quantity": "150",
+        "unit": "g",
+        "item": "cooked ham",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "grated Parmesan",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "1",
+        "unit": null,
+        "item": "egg",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "0.25",
+        "unit": "teaspoon",
+        "item": "black pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 10,
+        "quantity": "400",
+        "unit": "g",
+        "item": "crushed tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 11,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 12,
+        "quantity": "2",
+        "unit": "tablespoons",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 13,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "dried oregano",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 14,
+        "quantity": "0.5",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 15,
+        "quantity": "6",
+        "unit": null,
+        "item": "fresh basil leaves",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make the pasta dough: Mound flour on a work surface and create a well. Add eggs, olive oil, and salt. Gradually incorporate flour into the wet ingredients, kneading until smooth, about 10 minutes. Wrap and rest for 30 minutes.",
+        "durationMinutes": 40
+      },
+      {
+        "order": 2,
+        "text": "Make the filling: Combine mozzarella, ham, Parmesan, beaten egg, and black pepper in a bowl. Mix well and refrigerate.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "Make the sauce: Heat olive oil in a saucepan over medium heat. Add garlic and cook until fragrant, 1 minute. Add crushed tomatoes, oregano, and salt. Simmer for 15 minutes. Stir in basil if using.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 4,
+        "text": "Roll pasta dough through a pasta machine to the second-thinnest setting, or roll by hand until very thin.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Using a 10cm round cutter, cut circles from the pasta sheets.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Place 1 tablespoon of filling in the center of each circle. Brush edges with water, fold in half, and press firmly to seal, eliminating air pockets.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 7,
+        "text": "Bring a large pot of salted water to a boil. Cook sorrentinos in batches for 3-4 minutes until they float. Remove with a slotted spoon.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 8,
+        "text": "Serve sorrentinos with warm tomato sauce and additional grated Parmesan.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "noquis-del-29",
+    "title": "Ñoquis del 29",
+    "shortDescription": "Potato gnocchi traditionally served on the 29th of each month for good luck",
+    "note": "The tradition says to place money under your plate when eating ñoquis on the 29th",
+    "introCopy": "In Argentina, the 29th of every month is ñoqui day—a tradition brought by Italian immigrants who ate these pillowy potato dumplings at the end of the month when money was tight. Today, it's a beloved ritual: tender gnocchi are served with tomato sauce or butter and sage, and diners place a bill under their plate for prosperity. These are lighter and fluffier than Italian gnocchi, with a distinctive Argentine touch.",
+    "servings": 4,
+    "prepMinutes": 45,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "FREEZER_FRIENDLY",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#F5DEB3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Gnocchi",
+        "order": 1,
+        "quantity": "1",
+        "unit": "kg",
+        "item": "starchy potatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Gnocchi",
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "egg",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Gnocchi",
+        "order": 3,
+        "quantity": "200",
+        "unit": "g",
+        "item": "all-purpose flour",
+        "prepNote": "plus more for dusting",
+        "optional": false
+      },
+      {
+        "component": "Gnocchi",
+        "order": 4,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 5,
+        "quantity": "400",
+        "unit": "g",
+        "item": "crushed tomatoes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 6,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 7,
+        "quantity": "3",
+        "unit": "tablespoons",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 8,
+        "quantity": "6",
+        "unit": null,
+        "item": "fresh basil leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Sauce",
+        "order": 9,
+        "quantity": "0.5",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "grated Parmesan",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Boil potatoes whole and unpeeled until tender, about 25 minutes. Drain and let cool slightly, then peel while still warm.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 2,
+        "text": "Pass the potatoes through a ricer or mash very smoothly. Let cool to room temperature.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Make a well in the center of the potatoes. Add egg, flour, and salt. Gently mix until just combined—do not overwork or the gnocchi will be tough.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Divide dough into 6 portions. Roll each into a long rope about 2cm thick. Cut into 2cm pieces.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 5,
+        "text": "Roll each piece down the back of a fork to create ridges, or leave plain. Place on a floured baking sheet.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 6,
+        "text": "Make the sauce: Heat olive oil in a saucepan over medium heat. Add garlic and cook for 1 minute. Add crushed tomatoes and salt. Simmer for 15 minutes. Tear in basil leaves.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 7,
+        "text": "Bring a large pot of salted water to a boil. Cook gnocchi in batches—they're done when they float to the surface, about 2-3 minutes. Remove with a slotted spoon.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 8,
+        "text": "Toss gnocchi gently with tomato sauce. Serve immediately with grated Parmesan.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "medialunas-argentine-croissants",
+    "title": "Medialunas (Argentine Croissants)",
+    "shortDescription": "Sweet, buttery crescent pastries brushed with sugar syrup",
+    "note": "Medialunas come in two styles: de manteca (butter) and de grasa (lard)—this is the sweet butter version",
+    "introCopy": "Medialunas are Argentina's breakfast icon—smaller, sweeter, and softer than French croissants, with a shiny sugar glaze. Every Argentine has a favorite bakery where they pick up a dozen warm medialunas for Sunday breakfast or afternoon merienda. Serve with café con leche and dulce de leche for spreading, and you'll understand why these little crescents inspire such devotion.",
+    "servings": 16,
+    "prepMinutes": 40,
+    "cookMinutes": 18,
+    "difficulty": "INVOLVED",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "BREAKFAST",
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "FREEZER_FRIENDLY"
+    ],
+    "heroColor": "#F4D58D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "500",
+        "unit": "g",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "60",
+        "unit": "g",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "10",
+        "unit": "g",
+        "item": "instant yeast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "1",
+        "unit": "teaspoon",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 6,
+        "quantity": "200",
+        "unit": "ml",
+        "item": "warm milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 7,
+        "quantity": "100",
+        "unit": "g",
+        "item": "butter",
+        "prepNote": "melted",
+        "optional": false
+      },
+      {
+        "component": "Lamination",
+        "order": 8,
+        "quantity": "200",
+        "unit": "g",
+        "item": "cold butter",
+        "prepNote": "for folding",
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 9,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Syrup",
+        "order": 10,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Assembly",
+        "order": 11,
+        "quantity": "1",
+        "unit": null,
+        "item": "egg",
+        "prepNote": "beaten",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Combine flour, sugar, yeast, and salt in a large bowl. Add eggs, warm milk, and melted butter. Mix until a soft dough forms. Knead for 5 minutes, then cover and rest for 15 minutes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 2,
+        "text": "Roll dough into a rectangle about 40x20cm. Place the 200g cold butter between two sheets of parchment and pound/roll into a 20x15cm rectangle.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Place the butter on one half of the dough rectangle. Fold the other half over to enclose. Seal the edges.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Roll the dough out to 40x20cm again. Fold in thirds like a letter. Wrap and refrigerate for 30 minutes. Repeat this roll-and-fold process twice more, chilling between each turn.",
+        "durationMinutes": 90
+      },
+      {
+        "order": 5,
+        "text": "Roll the dough to 5mm thickness. Cut into triangles with a 10cm base. Roll each triangle from the base to the tip, forming a crescent shape. Place on lined baking sheets, curving the ends inward.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 6,
+        "text": "Cover and let rise for 1 hour until puffy.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 7,
+        "text": "Preheat oven to 190°C (375°F). Brush medialunas with beaten egg. Bake for 15-18 minutes until golden.",
+        "durationMinutes": 18
+      },
+      {
+        "order": 8,
+        "text": "While medialunas bake, make the syrup: Combine water and sugar in a small pot. Bring to a boil, then simmer for 3 minutes until slightly thickened.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 9,
+        "text": "Brush hot medialunas generously with sugar syrup as soon as they come out of the oven. Let cool slightly and serve warm.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "slug": "flan-con-dulce-de-leche",
+    "title": "Flan con Dulce de Leche",
+    "shortDescription": "Silky caramel custard topped with dulce de leche and whipped cream",
+    "note": "The water bath (baño María) is essential for the creamy, smooth texture",
+    "introCopy": "Flan is the ultimate Argentine comfort dessert—a silky, jiggly custard bathed in golden caramel and crowned with a generous drizzle of dulce de leche. The texture is impossibly smooth, the flavor rich yet delicate. Serve it chilled with a cloud of whipped cream, and watch it disappear. This is the dessert that appears at every family celebration, and for good reason.",
+    "servings": 8,
+    "prepMinutes": 20,
+    "cookMinutes": 60,
+    "difficulty": "MEDIUM",
+    "cuisine": "Argentinian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "MAKE_AHEAD",
+      "COMFORT_FOOD"
+    ],
+    "heroColor": "#D4A574",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Caramel",
+        "order": 1,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Caramel",
+        "order": 2,
+        "quantity": "3",
+        "unit": "tablespoons",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 3,
+        "quantity": "5",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 4,
+        "quantity": "400",
+        "unit": "ml",
+        "item": "sweetened condensed milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 5,
+        "quantity": "400",
+        "unit": "ml",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Custard",
+        "order": 6,
+        "quantity": "1",
+        "unit": "tablespoon",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 7,
+        "quantity": "0.5",
+        "unit": "cup",
+        "item": "dulce de leche",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 8,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "whipped cream",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 170°C (340°F). Have ready a 9-inch round baking dish or flan mold.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Make the caramel: Combine sugar and water in a small saucepan. Cook over medium heat without stirring until it turns deep amber, about 8 minutes. Immediately pour into the baking dish, tilting to coat the bottom evenly. Work quickly as it hardens fast.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Blend eggs, condensed milk, whole milk, and vanilla until completely smooth, about 1 minute.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Pour custard mixture over the hardened caramel in the dish.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 5,
+        "text": "Place the dish in a larger roasting pan. Pour hot water into the roasting pan until it reaches halfway up the sides of the custard dish (baño María).",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Bake for 55-65 minutes until the flan is set around the edges but still slightly jiggly in the center. A knife inserted near the edge should come out clean.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 7,
+        "text": "Remove from water bath and let cool to room temperature. Refrigerate for at least 4 hours or overnight.",
+        "durationMinutes": 240
+      },
+      {
+        "order": 8,
+        "text": "To serve, run a knife around the edge of the dish. Place a serving plate on top and quickly invert. The flan will release with the caramel sauce pooling around it. Drizzle with dulce de leche and top with whipped cream if desired.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 60
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Eggs"
+    ]
+  }
+]

@@ -1,0 +1,4468 @@
+[
+  {
+    "slug": "osso-buco-milanese",
+    "title": "Osso Buco alla Milanese",
+    "shortDescription": "Braised veal shanks in white wine and broth with gremolata",
+    "note": "Classic Milanese comfort, best made a day ahead",
+    "introCopy": "This iconic Lombard dish features tender veal shanks slow-braised until the meat falls from the bone. The marrow is prized, and the gremolata adds bright contrast to the rich sauce. Traditionally served with risotto alla milanese.",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 150,
+    "difficulty": "INVOLVED",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "MAKE_AHEAD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#8B6F47",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": null,
+        "item": "veal shanks",
+        "prepNote": "1.5 inches thick",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "all-purpose flour",
+        "prepNote": "for dredging",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": null,
+        "item": "carrots",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "stalks",
+        "item": "celery",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "can",
+        "item": "crushed tomatoes",
+        "prepNote": "14 oz",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "beef stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "2",
+        "unit": null,
+        "item": "bay leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "fresh thyme",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Gremolata",
+        "order": 14,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "finely chopped",
+        "optional": false
+      },
+      {
+        "component": "Gremolata",
+        "order": 15,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Gremolata",
+        "order": 16,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "zest only",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Season veal shanks with salt and pepper, dredge in flour, shaking off excess.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Heat oil and butter in a large Dutch oven over medium-high heat. Brown shanks on all sides, about 8 minutes total. Remove and set aside.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Add onion, carrots, and celery to pot. Cook until softened, about 6 minutes. Add garlic and cook 1 minute more.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 4,
+        "text": "Pour in wine, scraping up browned bits. Simmer until reduced by half, about 3 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Add tomatoes, stock, bay leaves, and thyme. Return shanks to pot, nestling them in liquid. Bring to simmer.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Cover and braise in 325°F oven until meat is fork-tender, about 2 hours. Turn shanks halfway through.",
+        "durationMinutes": 120
+      },
+      {
+        "order": 7,
+        "text": "Meanwhile, combine gremolata ingredients in a small bowl.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 8,
+        "text": "Remove shanks to serving platter. Reduce sauce on stovetop if needed, then spoon over shanks and garnish with gremolata.",
+        "durationMinutes": 10
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 12
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 18
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 8
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Milk",
+      "Wheat/gluten",
+      "Celery",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "carbonara-romana",
+    "title": "Carbonara Romana",
+    "shortDescription": "Spaghetti with guanciale, eggs, and Pecorino Romano",
+    "note": "Work quickly to avoid scrambling the eggs",
+    "introCopy": "Rome's silky pasta classic relies on just five ingredients: pasta, guanciale, eggs, Pecorino Romano, and black pepper. The key is tossing hot pasta with the egg mixture off heat to create a creamy sauce without scrambling.",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "UNDER_30",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#F4E4C1",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "spaghetti",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "6",
+        "unit": "oz",
+        "item": "guanciale",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": null,
+        "item": "large egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": null,
+        "item": "large whole eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "Pecorino Romano",
+        "prepNote": "finely grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": "freshly ground",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt",
+        "prepNote": "for pasta water",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Bring large pot of salted water to boil. Cook spaghetti until al dente, about 9 minutes. Reserve 1.5 cups pasta water.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Meanwhile, cook guanciale in large skillet over medium heat until fat renders and meat is crispy, about 8 minutes. Remove from heat.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "In a bowl, whisk together egg yolks, whole eggs, Pecorino, and black pepper until smooth.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Add drained pasta to skillet with guanciale (off heat). Toss to coat in fat.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Quickly pour egg mixture over pasta, tossing constantly. Add reserved pasta water a little at a time until sauce is creamy and coats pasta.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Serve immediately with extra Pecorino and black pepper.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 25
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "cacio-e-pepe",
+    "title": "Cacio e Pepe",
+    "shortDescription": "Roman pasta with Pecorino and black pepper",
+    "note": "The pasta water is crucial for emulsifying the sauce",
+    "introCopy": "This minimalist Roman classic showcases the power of technique. With just three ingredients—pasta, Pecorino Romano, and black pepper—you create a silky, luxurious sauce through careful emulsification.",
+    "servings": 4,
+    "prepMinutes": 5,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30"
+    ],
+    "heroColor": "#EBE3D5",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "tonnarelli or spaghetti",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "Pecorino Romano",
+        "prepNote": "finely grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "black peppercorns",
+        "prepNote": "coarsely ground",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt",
+        "prepNote": "for pasta water",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Toast peppercorns in a large dry skillet over medium heat until fragrant, about 2 minutes. Remove from heat.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Bring large pot of salted water to boil. Cook pasta until just shy of al dente, about 7 minutes. Reserve 2 cups pasta water.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Return skillet with pepper to medium heat. Add 1 cup pasta water and bring to simmer.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Add drained pasta to skillet and toss vigorously for 1 minute to allow starch to release.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Remove from heat. Add Pecorino in three additions, tossing constantly and adding pasta water as needed to create a smooth, creamy sauce.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Serve immediately with extra Pecorino and black pepper.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 60
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk"
+    ]
+  },
+  {
+    "slug": "arancini-siciliani",
+    "title": "Arancini Siciliani",
+    "shortDescription": "Crispy fried risotto balls with ragu and mozzarella",
+    "note": "Rice must be completely cool before shaping",
+    "introCopy": "These golden Sicilian rice balls are a street food treasure. Stuffed with meat ragu and melted mozzarella, then fried to crispy perfection, they're a delicious way to use leftover risotto.",
+    "servings": 6,
+    "prepMinutes": 45,
+    "cookMinutes": 90,
+    "difficulty": "INVOLVED",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "CROWD_PLEASER",
+      "FREEZER_FRIENDLY",
+      "FRIED",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#D4A574",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Risotto",
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "arborio rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Risotto",
+        "order": 2,
+        "quantity": "6",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": "warm",
+        "optional": false
+      },
+      {
+        "component": "Risotto",
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Risotto",
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "finely diced",
+        "optional": false
+      },
+      {
+        "component": "Risotto",
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "Parmesan",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": "Risotto",
+        "order": 6,
+        "quantity": "pinch",
+        "unit": null,
+        "item": "saffron threads",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 7,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "beef ragu",
+        "prepNote": "cooled",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "peas",
+        "prepNote": "cooked",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "6",
+        "unit": "oz",
+        "item": "mozzarella",
+        "prepNote": "diced small",
+        "optional": false
+      },
+      {
+        "component": "Breading",
+        "order": 10,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Breading",
+        "order": 11,
+        "quantity": "4",
+        "unit": null,
+        "item": "eggs",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Breading",
+        "order": 12,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "breadcrumbs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Breading",
+        "order": 13,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make risotto: Sauté onion in oil until soft. Add rice, toast 2 minutes. Add wine, cook until absorbed. Add stock one ladle at a time, stirring constantly, until rice is al dente, about 25 minutes. Stir in saffron and Parmesan.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 2,
+        "text": "Spread risotto on a baking sheet and refrigerate until completely cold, at least 2 hours.",
+        "durationMinutes": 120
+      },
+      {
+        "order": 3,
+        "text": "Combine ragu and peas for filling. With wet hands, take a handful of cold risotto and flatten. Place a spoonful of filling and a cube of mozzarella in center. Enclose completely with more rice, forming a ball. Repeat to make 12 arancini.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 4,
+        "text": "Set up breading station: flour, beaten eggs, breadcrumbs. Roll each arancini in flour, dip in egg, then coat thoroughly in breadcrumbs.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Heat 3 inches of oil to 350°F in a deep pot. Fry arancini in batches until deep golden, about 4 minutes per batch. Drain on paper towels.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 6,
+        "text": "Let rest 5 minutes before serving to allow cheese to set slightly.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Red meat",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 70
+      }
+    ],
+    "dietTags": [],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Eggs",
+      "Milk",
+      "Celery",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "pesto-genovese-linguine",
+    "title": "Linguine al Pesto Genovese",
+    "shortDescription": "Ligurian basil pesto with green beans and potatoes",
+    "note": "Use a mortar and pestle for the most authentic texture",
+    "introCopy": "Genoa's signature sauce combines sweet basil, pine nuts, garlic, Parmigiano-Reggiano, and Pecorino with olive oil. Traditionally served with green beans and potatoes, the starch helps the pesto cling to every strand of pasta.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 15,
+    "difficulty": "EASY",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#7BA05B",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Pesto",
+        "order": 1,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "fresh basil leaves",
+        "prepNote": "packed",
+        "optional": false
+      },
+      {
+        "component": "Pesto",
+        "order": 2,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "pine nuts",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pesto",
+        "order": 3,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Pesto",
+        "order": 4,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "Parmigiano-Reggiano",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": "Pesto",
+        "order": 5,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "Pecorino Romano",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": "Pesto",
+        "order": 6,
+        "quantity": "2/3",
+        "unit": "cup",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "linguine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "8",
+        "unit": "oz",
+        "item": "green beans",
+        "prepNote": "trimmed, halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "medium potato",
+        "prepNote": "peeled, diced small",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make pesto: In food processor, pulse basil, pine nuts, and garlic until coarsely chopped. Add cheeses and pulse to combine. With motor running, slowly drizzle in olive oil. Season with salt.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Bring large pot of salted water to boil. Add potatoes and cook 5 minutes. Add green beans and cook 5 minutes more. Add pasta and cook until al dente, about 8 minutes. Reserve 1 cup pasta water.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Drain pasta, beans, and potatoes. Return to pot with pesto and 1/4 cup pasta water. Toss over low heat, adding more water as needed to create a silky sauce.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Serve immediately with extra grated cheese.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Starchy veg",
+        "weight": 18
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Tree nuts"
+    ]
+  },
+  {
+    "slug": "branzino-acqua-pazza",
+    "title": "Branzino all'Acqua Pazza",
+    "shortDescription": "Whole sea bass poached in 'crazy water' with tomatoes",
+    "note": "Ask your fishmonger to scale and gut the fish",
+    "introCopy": "This Neapolitan dish translates to 'crazy water'—a simple, flavorful broth of tomatoes, garlic, and white wine that poaches the fish to tender perfection. It's light, elegant, and celebrates the quality of fresh seafood.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "HIGH_PROTEIN",
+      "LOW_CARB"
+    ],
+    "heroColor": "#C1554D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": null,
+        "item": "whole branzino",
+        "prepNote": "1.5 lbs each, scaled and gutted",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "pint",
+        "item": "cherry tomatoes",
+        "prepNote": "halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "red pepper flakes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 10,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Season fish inside and out with salt and pepper.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Heat olive oil in a large, deep skillet over medium heat. Add garlic and cook until fragrant but not browned, about 1 minute.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Add tomatoes and red pepper flakes. Cook until tomatoes begin to break down, about 4 minutes.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Add wine and water. Bring to a simmer and cook 3 minutes to let alcohol evaporate.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 5,
+        "text": "Carefully add fish to the pan. Spoon some liquid over the top. Cover and simmer gently until fish is cooked through, about 12 minutes.",
+        "durationMinutes": 13
+      },
+      {
+        "order": 6,
+        "text": "Transfer fish to serving platter. Stir parsley into broth, taste and adjust seasoning. Spoon broth and tomatoes over fish.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 7,
+        "text": "Serve immediately with crusty bread for soaking up the broth.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "White fish",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Pescatarian",
+      "Gluten-free",
+      "Dairy-free",
+      "Low-carb",
+      "Paleo",
+      "Whole30",
+      "Mediterranean"
+    ],
+    "allergenTags": [
+      "Fish",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "panzanella-toscana",
+    "title": "Panzanella Toscana",
+    "shortDescription": "Tuscan bread and tomato salad with basil",
+    "note": "Use day-old bread for the best texture",
+    "introCopy": "This rustic Tuscan salad transforms stale bread into a celebration of summer. Ripe tomatoes, crisp cucumber, red onion, and basil mingle with toasted bread cubes, all dressed in a simple vinaigrette.",
+    "servings": 6,
+    "prepMinutes": 20,
+    "cookMinutes": 10,
+    "difficulty": "EASY",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#D4573B",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "day-old rustic bread",
+        "prepNote": "cut into 1-inch cubes",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3",
+        "unit": "lbs",
+        "item": "ripe tomatoes",
+        "prepNote": "mixed varieties, cut into chunks",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "English cucumber",
+        "prepNote": "cut into half-moons",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "red onion",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh basil leaves",
+        "prepNote": "torn",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "red wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "clove",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat oven to 400°F. Spread bread cubes on a baking sheet and toast until golden and crisp, about 10 minutes. Let cool.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 2,
+        "text": "In a large bowl, combine tomatoes, cucumber, red onion, and basil.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 3,
+        "text": "In a small bowl, whisk together olive oil, vinegar, garlic, salt, and pepper.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Add toasted bread to vegetables. Pour dressing over and toss gently. Let stand 15 minutes before serving to allow bread to absorb juices.",
+        "durationMinutes": 16
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 30
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free",
+      "Mediterranean"
+    ],
+    "allergenTags": [
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "tiramisu-classico",
+    "title": "Tiramisu Classico",
+    "shortDescription": "Coffee-soaked ladyfingers layered with mascarpone cream",
+    "note": "Use room temperature eggs for the smoothest custard",
+    "introCopy": "Italy's most beloved dessert layers espresso-dipped ladyfingers with a cloud-like mascarpone cream. The name means 'pick me up,' a nod to the coffee and sugar that deliver a sweet energy boost.",
+    "servings": 8,
+    "prepMinutes": 30,
+    "cookMinutes": 0,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "NO_COOK",
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#8B7355",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "6",
+        "unit": null,
+        "item": "large egg yolks",
+        "prepNote": "room temperature",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "3/4",
+        "unit": "cup",
+        "item": "granulated sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1 1/3",
+        "unit": "cups",
+        "item": "mascarpone",
+        "prepNote": "room temperature",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "heavy cream",
+        "prepNote": "cold",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1 3/4",
+        "unit": "cups",
+        "item": "strong espresso",
+        "prepNote": "cooled",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "coffee liqueur",
+        "prepNote": "Kahlua or Marsala",
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "40",
+        "unit": null,
+        "item": "ladyfinger cookies",
+        "prepNote": "savoiardi",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "unsweetened cocoa powder",
+        "prepNote": "for dusting",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Whisk egg yolks and sugar in a heatproof bowl set over simmering water until thick and pale, about 5 minutes. Remove from heat and let cool slightly.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 2,
+        "text": "Whisk mascarpone into egg mixture until smooth.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "In a separate bowl, whip cream to stiff peaks. Gently fold into mascarpone mixture until combined.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Combine espresso and liqueur (if using) in a shallow dish.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 5,
+        "text": "Quickly dip half the ladyfingers in coffee mixture (1 second per side) and arrange in a single layer in a 9x13-inch dish. Spread half the mascarpone cream over ladyfingers.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 6,
+        "text": "Repeat with remaining ladyfingers and cream, creating a second layer.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 7,
+        "text": "Cover and refrigerate at least 4 hours, preferably overnight.",
+        "durationMinutes": 240
+      },
+      {
+        "order": 8,
+        "text": "Before serving, dust generously with cocoa powder through a fine-mesh sieve.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 60
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Milk",
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "saltimbocca-alla-romana",
+    "title": "Saltimbocca alla Romana",
+    "shortDescription": "Veal cutlets with prosciutto and sage in white wine sauce",
+    "note": "The name means 'jumps in the mouth' for good reason",
+    "introCopy": "This Roman classic features tender veal topped with prosciutto and fresh sage, quickly pan-fried and finished with a bright white wine sauce. It's elegant enough for company but quick enough for a weeknight.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#C9A961",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "8",
+        "unit": null,
+        "item": "veal cutlets",
+        "prepNote": "pounded thin",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "8",
+        "unit": "slices",
+        "item": "prosciutto di Parma",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "16",
+        "unit": null,
+        "item": "fresh sage leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "all-purpose flour",
+        "prepNote": "for dredging",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Place prosciutto slice on each veal cutlet, top with 2 sage leaves. Secure with toothpicks. Season lightly with pepper (prosciutto is salty).",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Dredge veal in flour, shaking off excess.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 3,
+        "text": "Heat 2 tablespoons butter and olive oil in large skillet over medium-high heat. Cook cutlets prosciutto-side down first, 2 minutes per side. Work in batches to avoid crowding. Transfer to a platter and tent with foil.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 4,
+        "text": "Add wine to pan, scraping up browned bits. Simmer until reduced by half, about 2 minutes.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 5,
+        "text": "Add stock and simmer 2 minutes. Remove from heat and swirl in remaining tablespoon of butter.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Remove toothpicks from cutlets, pour sauce over, and serve immediately.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 8
+      }
+    ],
+    "dietTags": [
+      "High-protein",
+      "Low-carb"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Wheat/gluten",
+      "Celery",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "panna-cotta-vanilla",
+    "title": "Panna Cotta alla Vaniglia",
+    "shortDescription": "Silky vanilla cream custard with berry compote",
+    "note": "Don't skip the cold water bloom for the gelatin",
+    "introCopy": "This Piedmontese dessert is simplicity itself: sweetened cream set with just enough gelatin to create a delicate wobble. Topped with fresh berries or a tart compote, it's an elegant finish to any meal.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 10,
+    "difficulty": "EASY",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#F5E6D3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Panna Cotta",
+        "order": 1,
+        "quantity": "2 1/2",
+        "unit": "tsp",
+        "item": "unflavored gelatin",
+        "prepNote": "1 packet",
+        "optional": false
+      },
+      {
+        "component": "Panna Cotta",
+        "order": 2,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "cold water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Panna Cotta",
+        "order": 3,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "heavy cream",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Panna Cotta",
+        "order": 4,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "whole milk",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Panna Cotta",
+        "order": 5,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "granulated sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Panna Cotta",
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "vanilla bean",
+        "prepNote": "split and scraped, or 1 tsp extract",
+        "optional": false
+      },
+      {
+        "component": "Panna Cotta",
+        "order": 7,
+        "quantity": "pinch",
+        "unit": null,
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Berry Compote",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "mixed berries",
+        "prepNote": "fresh or frozen",
+        "optional": false
+      },
+      {
+        "component": "Berry Compote",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Berry Compote",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Sprinkle gelatin over cold water in a small bowl. Let stand 5 minutes to bloom.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Combine cream, milk, sugar, vanilla bean and seeds (or extract), and salt in a saucepan. Heat over medium, stirring, until sugar dissolves and mixture is steaming but not boiling.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 3,
+        "text": "Remove from heat. Add bloomed gelatin and whisk until completely dissolved. Strain through fine-mesh sieve.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Divide among six 4-ounce ramekins or glasses. Refrigerate until set, at least 4 hours or overnight.",
+        "durationMinutes": 240
+      },
+      {
+        "order": 5,
+        "text": "For compote: Combine berries, sugar, and lemon juice in a small saucepan. Cook over medium heat until berries release juices and mixture thickens slightly, about 8 minutes. Cool completely.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Serve panna cotta in ramekins or unmold onto plates. Top with berry compote.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 85
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 35
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "ribollita-toscana",
+    "title": "Ribollita Toscana",
+    "shortDescription": "Hearty Tuscan bread and bean soup with kale",
+    "note": "The name means 're-boiled' as it's best the next day",
+    "introCopy": "This rustic Tuscan soup is a thrifty masterpiece, transforming leftover bread, beans, and vegetables into something deeply satisfying. The bread breaks down into the broth, creating a thick, porridge-like consistency.",
+    "servings": 8,
+    "prepMinutes": 25,
+    "cookMinutes": 60,
+    "difficulty": "EASY",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "MAKE_AHEAD",
+      "HIGH_FIBER",
+      "EAT_MORE_VEG",
+      "ONE_POT"
+    ],
+    "heroColor": "#6B8E4E",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "extra virgin olive oil",
+        "prepNote": "plus more for serving",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": null,
+        "item": "carrots",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "stalks",
+        "item": "celery",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "bunch",
+        "item": "Tuscan kale",
+        "prepNote": "stems removed, chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": "can",
+        "item": "crushed tomatoes",
+        "prepNote": "28 oz",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "3",
+        "unit": "cans",
+        "item": "cannellini beans",
+        "prepNote": "15 oz each, drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "6",
+        "unit": "cups",
+        "item": "vegetable stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": null,
+        "item": "Parmesan rind",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "fresh rosemary",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "fresh thyme",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "6",
+        "unit": "cups",
+        "item": "day-old rustic bread",
+        "prepNote": "torn into pieces",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 14,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Heat olive oil in a large pot over medium heat. Add onion, carrots, and celery. Cook until softened, about 8 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Add garlic, rosemary, and thyme. Cook 1 minute until fragrant.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Add kale and cook until wilted, about 3 minutes.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 4,
+        "text": "Stir in tomatoes, beans, stock, and Parmesan rind (if using). Bring to a boil, then reduce heat and simmer 30 minutes.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 5,
+        "text": "Mash some of the beans against the side of the pot to thicken the soup. Stir in bread and simmer 15 minutes more, until bread has broken down and soup is very thick.",
+        "durationMinutes": 17
+      },
+      {
+        "order": 6,
+        "text": "Remove Parmesan rind. Season with salt and pepper. Let stand 10 minutes before serving.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 7,
+        "text": "Serve drizzled with good olive oil and grated Parmesan.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Legumes & pulses",
+        "weight": 65
+      },
+      {
+        "foodGroup": "Leafy greens",
+        "weight": 55
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 12
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Mediterranean",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Celery"
+    ]
+  },
+  {
+    "slug": "caponata-siciliana",
+    "title": "Caponata Siciliana",
+    "shortDescription": "Sweet and sour Sicilian eggplant with capers and olives",
+    "note": "Better the next day after flavors meld",
+    "introCopy": "This Sicilian sweet-and-sour eggplant dish is a study in contrasts: tender vegetables, briny capers and olives, sweet raisins, and a tangy vinegar finish. Serve as an antipasto or side dish, warm or at room temperature.",
+    "servings": 6,
+    "prepMinutes": 30,
+    "cookMinutes": 40,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#7B4B3A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "lbs",
+        "item": "eggplant",
+        "prepNote": "cut into 3/4-inch cubes",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": "divided",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "stalks",
+        "item": "celery",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "can",
+        "item": "crushed tomatoes",
+        "prepNote": "14 oz",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "green olives",
+        "prepNote": "pitted, halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "capers",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "golden raisins",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "red wine vinegar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1",
+        "unit": "tbsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh basil",
+        "prepNote": "torn",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "pine nuts",
+        "prepNote": "toasted",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Toss eggplant with 2 teaspoons salt. Let drain in colander 20 minutes, then pat dry.",
+        "durationMinutes": 22
+      },
+      {
+        "order": 2,
+        "text": "Heat 1/4 cup olive oil in large skillet over medium-high heat. Cook eggplant in batches until golden, about 8 minutes per batch, adding more oil as needed. Transfer to a plate.",
+        "durationMinutes": 18
+      },
+      {
+        "order": 3,
+        "text": "Add remaining oil to skillet. Cook onion and celery until softened, about 6 minutes.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 4,
+        "text": "Add tomatoes, olives, capers, and raisins. Simmer 10 minutes.",
+        "durationMinutes": 11
+      },
+      {
+        "order": 5,
+        "text": "Stir in vinegar and sugar. Return eggplant to pan and simmer 10 minutes more, until flavors meld.",
+        "durationMinutes": 11
+      },
+      {
+        "order": 6,
+        "text": "Remove from heat. Stir in basil and pine nuts. Season with salt and pepper. Serve warm or at room temperature.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Nightshades",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Fruit",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 12
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Gluten-free",
+      "Dairy-free",
+      "Mediterranean"
+    ],
+    "allergenTags": [
+      "Tree nuts",
+      "Celery",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "risotto-ai-funghi-porcini",
+    "title": "Risotto ai Funghi Porcini",
+    "shortDescription": "Creamy porcini mushroom risotto with Parmesan",
+    "note": "Save the porcini soaking liquid for extra umami depth",
+    "introCopy": "This Venetian risotto showcases earthy porcini mushrooms, both dried for concentrated flavor and fresh for texture. The slow addition of stock and constant stirring release the rice's starch, creating a naturally creamy dish.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD"
+    ],
+    "heroColor": "#8B7355",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "oz",
+        "item": "dried porcini mushrooms",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "hot water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "6",
+        "unit": "cups",
+        "item": "chicken or vegetable stock",
+        "prepNote": "warm",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": "divided",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "8",
+        "unit": "oz",
+        "item": "fresh mushrooms",
+        "prepNote": "sliced (cremini or button)",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "shallot",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1 1/2",
+        "unit": "cups",
+        "item": "arborio rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "Parmigiano-Reggiano",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 12,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 13,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Soak dried porcini in hot water for 20 minutes. Drain, reserving liquid. Chop mushrooms. Strain liquid through coffee filter and add to warm stock.",
+        "durationMinutes": 22
+      },
+      {
+        "order": 2,
+        "text": "Heat 1 tablespoon butter and olive oil in large skillet. Sauté fresh mushrooms until golden, about 8 minutes. Season with salt and pepper. Set aside.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "In a large saucepan, melt 1 tablespoon butter over medium heat. Add shallot and cook until soft, 3 minutes. Add garlic and chopped porcini, cook 1 minute.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 4,
+        "text": "Add rice and stir to coat, toasting for 2 minutes. Add wine and cook, stirring, until absorbed.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 5,
+        "text": "Add stock one ladle at a time, stirring constantly and waiting until liquid is mostly absorbed before adding more. Continue until rice is creamy and al dente, about 20 minutes.",
+        "durationMinutes": 22
+      },
+      {
+        "order": 6,
+        "text": "Stir in sautéed mushrooms, remaining tablespoon of butter, and Parmesan. Season with salt and pepper. Garnish with parsley and serve immediately.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 65
+      },
+      {
+        "foodGroup": "Mushrooms",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 12
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Celery",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "focaccia-rosmarino",
+    "title": "Focaccia al Rosmarino",
+    "shortDescription": "Ligurian flatbread with rosemary and olive oil",
+    "note": "The dimples in the dough hold pools of olive oil",
+    "introCopy": "This dimpled Ligurian flatbread is crispy on the outside, pillowy within, and fragrant with rosemary and olive oil. It's perfect for sandwiches, alongside soup, or simply torn and dipped in more olive oil.",
+    "servings": 8,
+    "prepMinutes": 20,
+    "cookMinutes": 25,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "DINNER",
+      "SNACK"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD"
+    ],
+    "heroColor": "#C9A961",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "instant yeast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "honey",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1 3/4",
+        "unit": "cups",
+        "item": "warm water",
+        "prepNote": "110°F",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "extra virgin olive oil",
+        "prepNote": "divided",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh rosemary",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "flaky sea salt",
+        "prepNote": "for topping",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "In a large bowl, whisk together flour, yeast, and salt. Add honey, water, and 1/4 cup olive oil. Mix until a shaggy dough forms.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Knead dough in bowl or on lightly floured surface until smooth and elastic, about 8 minutes. Shape into a ball.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Place dough in an oiled bowl, turn to coat, and cover. Let rise in a warm place until doubled, about 1 hour.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 4,
+        "text": "Pour 2 tablespoons olive oil into a 9x13-inch baking pan. Transfer dough to pan and turn to coat in oil. Gently stretch dough to fill the pan. If it springs back, let rest 10 minutes and stretch again. Cover and let rise 30 minutes.",
+        "durationMinutes": 35
+      },
+      {
+        "order": 5,
+        "text": "Preheat oven to 425°F. Dimple dough all over with your fingertips, pressing all the way through. Drizzle with remaining 2 tablespoons olive oil, letting it pool in the dimples. Sprinkle with rosemary and flaky salt.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 6,
+        "text": "Bake until deeply golden, 20-25 minutes. Cool in pan 5 minutes, then transfer to a wire rack.",
+        "durationMinutes": 27
+      },
+      {
+        "order": 7,
+        "text": "Serve warm or at room temperature.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Vegan",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten"
+    ]
+  },
+  {
+    "slug": "spaghetti-alle-vongole",
+    "title": "Spaghetti alle Vongole",
+    "shortDescription": "Spaghetti with fresh clams in white wine and garlic",
+    "note": "Purge clams in salted water before cooking",
+    "introCopy": "This Neapolitan classic is a celebration of the sea. Fresh clams steam open in white wine and garlic, releasing their briny liquor to create a simple, elegant sauce that clings to al dente spaghetti.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#E8D5B7",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "2",
+        "unit": "lbs",
+        "item": "littleneck clams",
+        "prepNote": "scrubbed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "spaghetti",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1/3",
+        "unit": "cup",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "6",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "red pepper flakes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Soak clams in cold salted water for 20 minutes to purge sand. Drain and rinse. Discard any that don't close when tapped.",
+        "durationMinutes": 22
+      },
+      {
+        "order": 2,
+        "text": "Bring large pot of salted water to boil. Cook spaghetti until just shy of al dente, about 7 minutes. Reserve 1 cup pasta water and drain.",
+        "durationMinutes": 8
+      },
+      {
+        "order": 3,
+        "text": "Meanwhile, heat olive oil in a large, deep skillet over medium heat. Add garlic and red pepper flakes. Cook until garlic is fragrant but not browned, 1 minute.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Add wine and bring to a simmer. Add clams, cover, and cook until they open, 5-8 minutes. Discard any that don't open.",
+        "durationMinutes": 9
+      },
+      {
+        "order": 5,
+        "text": "Add drained pasta to skillet with clams. Toss over medium heat, adding pasta water as needed, until pasta is al dente and coated in sauce, about 2 minutes.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Remove from heat. Stir in parsley and butter (if using). Taste and adjust seasoning (clams are salty, so go light on salt).",
+        "durationMinutes": 1
+      },
+      {
+        "order": 7,
+        "text": "Serve immediately with crusty bread.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Shellfish",
+        "weight": 65
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 8
+      }
+    ],
+    "dietTags": [
+      "Pescatarian",
+      "Dairy-free",
+      "Mediterranean"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Shellfish",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "bistecca-fiorentina",
+    "title": "Bistecca alla Fiorentina",
+    "shortDescription": "Grilled T-bone steak Tuscan-style with lemon and olive oil",
+    "note": "Let the steak come to room temperature before grilling",
+    "introCopy": "Florence's iconic steak is a massive T-bone from Chianina cattle, grilled over high heat, seasoned simply with salt, pepper, and a drizzle of olive oil. It's served rare to medium-rare, sliced, and shared.",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "GRILLED",
+      "HIGH_PROTEIN",
+      "LOW_CARB"
+    ],
+    "heroColor": "#8B4513",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": null,
+        "item": "T-bone or porterhouse steak",
+        "prepNote": "2-3 lbs, 2 inches thick",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "extra virgin olive oil",
+        "prepNote": "plus more for drizzling",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "coarse sea salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "black pepper",
+        "prepNote": "freshly ground",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 6,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "arugula",
+        "prepNote": null,
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Remove steak from refrigerator 1 hour before cooking to bring to room temperature. Pat completely dry.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 2,
+        "text": "Preheat grill or grill pan to high heat (500°F+).",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Rub steak all over with olive oil. Season generously with salt and pepper on both sides.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Grill steak 5-6 minutes per side for rare to medium-rare (internal temperature 125-130°F). Don't move the steak while cooking to develop a good crust.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 5,
+        "text": "Transfer to a cutting board and let rest 10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Slice meat off the bone, then cut into thick slices against the grain. Arrange on a platter, drizzle with olive oil, and serve with lemon wedges and arugula if desired.",
+        "durationMinutes": 5
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 90
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Dairy-free",
+      "Low-carb",
+      "Keto",
+      "Paleo",
+      "Whole30"
+    ],
+    "allergenTags": []
+  },
+  {
+    "slug": "pasta-alla-norma",
+    "title": "Pasta alla Norma",
+    "shortDescription": "Sicilian pasta with fried eggplant, tomato, and ricotta salata",
+    "note": "Named after Bellini's opera, it's Catania's pride",
+    "introCopy": "This Sicilian masterpiece combines silky fried eggplant with a bright tomato sauce, tossed with pasta and finished with salty ricotta salata. It's a perfect balance of rich, fresh, and savory.",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 35,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#6B3E26",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "rigatoni or penne",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "eggplant",
+        "prepNote": "cut into 1/2-inch cubes",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1",
+        "unit": "can",
+        "item": "crushed tomatoes",
+        "prepNote": "28 oz",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "red pepper flakes",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fresh basil",
+        "prepNote": "torn",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "4",
+        "unit": "oz",
+        "item": "ricotta salata",
+        "prepNote": "grated or crumbled",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Salt eggplant cubes and let drain in a colander for 15 minutes. Pat dry.",
+        "durationMinutes": 17
+      },
+      {
+        "order": 2,
+        "text": "Heat olive oil in a large skillet over medium-high heat. Fry eggplant in batches until golden and tender, about 6 minutes per batch. Drain on paper towels.",
+        "durationMinutes": 15
+      },
+      {
+        "order": 3,
+        "text": "Pour off all but 2 tablespoons oil from skillet. Add garlic and cook 1 minute. Add tomatoes and red pepper flakes (if using). Simmer 15 minutes, breaking up tomatoes. Season with salt and pepper.",
+        "durationMinutes": 17
+      },
+      {
+        "order": 4,
+        "text": "Meanwhile, cook pasta in salted boiling water until al dente. Reserve 1 cup pasta water and drain.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Add eggplant and basil to tomato sauce. Toss pasta with sauce, adding pasta water as needed to create a silky consistency.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Serve topped with ricotta salata and extra basil.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 65
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 50
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "cannoli-siciliani",
+    "title": "Cannoli Siciliani",
+    "shortDescription": "Crispy fried pastry shells filled with sweet ricotta cream",
+    "note": "Fill shells just before serving to keep them crispy",
+    "introCopy": "Sicily's most famous dessert features crispy fried pastry tubes filled with sweetened ricotta, studded with chocolate chips and candied fruit. The contrast between crunchy shell and creamy filling is irresistible.",
+    "servings": 12,
+    "prepMinutes": 45,
+    "cookMinutes": 20,
+    "difficulty": "INVOLVED",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "PROJECT",
+    "batchFriendly": true,
+    "attributes": [
+      "FRIED"
+    ],
+    "heroColor": "#F5DEB3",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Shells",
+        "order": 1,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "all-purpose flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Shells",
+        "order": 2,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Shells",
+        "order": 3,
+        "quantity": "1/4",
+        "unit": "tsp",
+        "item": "cinnamon",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Shells",
+        "order": 4,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": "softened",
+        "optional": false
+      },
+      {
+        "component": "Shells",
+        "order": 5,
+        "quantity": "1",
+        "unit": null,
+        "item": "egg",
+        "prepNote": "beaten",
+        "optional": false
+      },
+      {
+        "component": "Shells",
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Shells",
+        "order": 7,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "vegetable oil",
+        "prepNote": "for frying",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 8,
+        "quantity": "2",
+        "unit": "lbs",
+        "item": "whole milk ricotta",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 9,
+        "quantity": "1 1/2",
+        "unit": "cups",
+        "item": "powdered sugar",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 10,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "vanilla extract",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 11,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "mini chocolate chips",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Filling",
+        "order": 12,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "candied orange peel",
+        "prepNote": "finely chopped",
+        "optional": true
+      },
+      {
+        "component": "Filling",
+        "order": 13,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "pistachios",
+        "prepNote": "chopped, for garnish",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make shells: Mix flour, sugar, cinnamon, and butter until crumbly. Add egg and wine, kneading until smooth. Wrap and refrigerate 1 hour.",
+        "durationMinutes": 70
+      },
+      {
+        "order": 2,
+        "text": "Roll dough very thin (1/8 inch). Cut into 4-inch circles. Wrap each circle around a metal cannoli tube, sealing edge with water.",
+        "durationMinutes": 20
+      },
+      {
+        "order": 3,
+        "text": "Heat 3 inches of oil to 375°F. Fry shells on tubes until golden, about 2 minutes. Drain on paper towels and cool before removing tubes.",
+        "durationMinutes": 25
+      },
+      {
+        "order": 4,
+        "text": "Make filling: Beat ricotta until smooth. Stir in powdered sugar and vanilla. Fold in chocolate chips and candied peel (if using). Refrigerate until ready to fill.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 5,
+        "text": "Just before serving, pipe or spoon filling into cooled shells from both ends. Dip ends in chopped pistachios if desired.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 6,
+        "text": "Dust with powdered sugar and serve immediately.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Refined grains",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 65
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fried & rich",
+        "weight": 75
+      },
+      {
+        "foodGroup": "Nuts & seeds",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk",
+      "Eggs",
+      "Tree nuts",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "polenta-salsiccia-ragu",
+    "title": "Polenta with Sausage Ragu",
+    "shortDescription": "Creamy polenta topped with hearty Italian sausage sauce",
+    "note": "Stir polenta often to prevent lumps and scorching",
+    "introCopy": "This Northern Italian comfort dish pairs soft, buttery polenta with a rich sausage ragu. It's rustic, warming, and perfect for cold weather. The polenta soaks up the savory sauce beautifully.",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 50,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "COMFORT_FOOD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#A0826D",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Polenta",
+        "order": 1,
+        "quantity": "6",
+        "unit": "cups",
+        "item": "water",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Polenta",
+        "order": 2,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Polenta",
+        "order": 3,
+        "quantity": "1 1/2",
+        "unit": "cups",
+        "item": "polenta",
+        "prepNote": "coarse cornmeal",
+        "optional": false
+      },
+      {
+        "component": "Polenta",
+        "order": 4,
+        "quantity": "4",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Polenta",
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "Parmesan",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": "Ragu",
+        "order": 6,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "Italian sausage",
+        "prepNote": "casings removed",
+        "optional": false
+      },
+      {
+        "component": "Ragu",
+        "order": 7,
+        "quantity": "1",
+        "unit": null,
+        "item": "onion",
+        "prepNote": "diced",
+        "optional": false
+      },
+      {
+        "component": "Ragu",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Ragu",
+        "order": 9,
+        "quantity": "1",
+        "unit": "can",
+        "item": "crushed tomatoes",
+        "prepNote": "28 oz",
+        "optional": false
+      },
+      {
+        "component": "Ragu",
+        "order": 10,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "red wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Ragu",
+        "order": 11,
+        "quantity": "1",
+        "unit": "tsp",
+        "item": "fresh rosemary",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Ragu",
+        "order": 12,
+        "quantity": "1",
+        "unit": null,
+        "item": "bay leaf",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make ragu: Brown sausage in a large pot over medium-high heat, breaking it up, about 8 minutes. Remove with a slotted spoon.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Add onion to pot and cook in sausage fat until softened, 5 minutes. Add garlic and cook 1 minute.",
+        "durationMinutes": 7
+      },
+      {
+        "order": 3,
+        "text": "Add wine and simmer 2 minutes. Return sausage to pot. Add tomatoes, rosemary, and bay leaf. Simmer gently for 30 minutes, stirring occasionally.",
+        "durationMinutes": 33
+      },
+      {
+        "order": 4,
+        "text": "Meanwhile, make polenta: Bring water and salt to boil in a large saucepan. Slowly whisk in polenta in a steady stream. Reduce heat to low.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Cook polenta, stirring frequently, until thick and creamy, about 30 minutes. Stir in butter and Parmesan.",
+        "durationMinutes": 32
+      },
+      {
+        "order": 6,
+        "text": "Remove bay leaf from ragu. Spoon polenta into bowls and top generously with sausage ragu and extra Parmesan.",
+        "durationMinutes": 3
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Whole grains",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Pork",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 30
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "frittata-zucchine-menta",
+    "title": "Frittata with Zucchini and Mint",
+    "shortDescription": "Italian egg frittata with zucchini, mint, and Parmesan",
+    "note": "Great warm, room temperature, or cold",
+    "introCopy": "This versatile Italian egg dish is perfect for breakfast, lunch, or dinner. Fresh zucchini and mint give it a light, summery flavor, while Parmesan adds richness. Serve it in wedges with a simple salad.",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "BREAKFAST",
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "HIGH_PROTEIN",
+      "LOW_CARB",
+      "EAT_MORE_VEG"
+    ],
+    "heroColor": "#8DB255",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "8",
+        "unit": null,
+        "item": "large eggs",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "Parmesan",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh mint",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "2",
+        "unit": null,
+        "item": "medium zucchini",
+        "prepNote": "thinly sliced into rounds",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "shallot",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Preheat broiler. In a bowl, whisk eggs with Parmesan, mint, salt, and pepper.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 2,
+        "text": "Heat olive oil in a 10-inch oven-safe skillet over medium heat. Add zucchini and shallot. Cook until zucchini is tender and lightly browned, about 8 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 3,
+        "text": "Add garlic and cook 1 minute. Season vegetables with salt and pepper.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 4,
+        "text": "Pour egg mixture over vegetables, tilting pan to distribute evenly. Cook without stirring until edges are set but center is still slightly liquid, about 5 minutes.",
+        "durationMinutes": 6
+      },
+      {
+        "order": 5,
+        "text": "Transfer skillet to broiler and cook until top is golden and just set, 3-4 minutes. Watch carefully to prevent burning.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 6,
+        "text": "Let rest 5 minutes. Slide onto a plate, cut into wedges, and serve warm or at room temperature.",
+        "durationMinutes": 6
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Eggs",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 45
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 12
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free",
+      "Low-carb",
+      "Keto"
+    ],
+    "allergenTags": [
+      "Eggs",
+      "Milk",
+      "Nightshades"
+    ]
+  },
+  {
+    "slug": "pasta-puttanesca",
+    "title": "Spaghetti alla Puttanesca",
+    "shortDescription": "Bold Neapolitan pasta with tomatoes, olives, capers, and anchovies",
+    "note": "The name translates roughly to 'lady of the night' pasta",
+    "introCopy": "This punchy Neapolitan sauce comes together in the time it takes to cook pasta. Briny olives and capers, pungent garlic, fiery chili, and umami-rich anchovies create an intensely flavorful dish with minimal effort.",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 20,
+    "difficulty": "EASY",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "UNDER_30",
+      "SPICY"
+    ],
+    "heroColor": "#8B3A3A",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "spaghetti",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "4",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "4",
+        "unit": null,
+        "item": "anchovy fillets",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1/2",
+        "unit": "tsp",
+        "item": "red pepper flakes",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1",
+        "unit": "can",
+        "item": "crushed tomatoes",
+        "prepNote": "28 oz",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "Kalamata olives",
+        "prepNote": "pitted, halved",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "capers",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 9,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 10,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Bring large pot of salted water to boil. Cook spaghetti until al dente. Reserve 1 cup pasta water and drain.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 2,
+        "text": "Meanwhile, heat olive oil in a large skillet over medium heat. Add garlic and cook until fragrant, 1 minute.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 3,
+        "text": "Add anchovies and red pepper flakes. Cook, stirring, until anchovies dissolve, about 2 minutes.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Add tomatoes, olives, and capers. Simmer until sauce thickens slightly, about 10 minutes. Season with salt and pepper (go easy on salt—capers and anchovies are salty).",
+        "durationMinutes": 12
+      },
+      {
+        "order": 5,
+        "text": "Add drained pasta to sauce and toss, adding pasta water as needed to create a silky consistency. Stir in parsley.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 6,
+        "text": "Serve immediately, no cheese needed.",
+        "durationMinutes": null
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 65
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Oily fish",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 15
+      },
+      {
+        "foodGroup": "Chilli & heat",
+        "weight": 25
+      }
+    ],
+    "dietTags": [
+      "Pescatarian",
+      "Dairy-free"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Fish"
+    ]
+  },
+  {
+    "slug": "affogato-espresso",
+    "title": "Affogato al Caffè",
+    "shortDescription": "Vanilla gelato 'drowned' in hot espresso",
+    "note": "Serve immediately for the perfect hot-cold contrast",
+    "introCopy": "This elegant Italian dessert couldn't be simpler: a scoop of creamy vanilla gelato or ice cream 'drowned' in a shot of hot espresso. The contrast of temperatures and the marriage of coffee and cream is pure magic.",
+    "servings": 4,
+    "prepMinutes": 5,
+    "cookMinutes": 0,
+    "difficulty": "EASY",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "SNACK"
+    ],
+    "effortTier": "WEEKNIGHT",
+    "batchFriendly": false,
+    "attributes": [
+      "NO_COOK",
+      "UNDER_30"
+    ],
+    "heroColor": "#6F4E37",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "4",
+        "unit": "scoops",
+        "item": "vanilla gelato or ice cream",
+        "prepNote": "high quality",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "4",
+        "unit": "shots",
+        "item": "hot espresso",
+        "prepNote": "freshly brewed",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "as desired",
+        "unit": null,
+        "item": "amaretti cookies",
+        "prepNote": "for serving",
+        "optional": true
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "as desired",
+        "unit": null,
+        "item": "chocolate shavings",
+        "prepNote": "for garnish",
+        "optional": true
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Brew 4 shots of espresso.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 2,
+        "text": "Place one scoop of gelato in each of four small glasses or cups.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 3,
+        "text": "Pour one shot of hot espresso over each scoop of gelato.",
+        "durationMinutes": 1
+      },
+      {
+        "order": 4,
+        "text": "Garnish with chocolate shavings if desired. Serve immediately with amaretti cookies on the side.",
+        "durationMinutes": 1
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Dairy",
+        "weight": 80
+      },
+      {
+        "foodGroup": "Added sugar",
+        "weight": 40
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk"
+    ]
+  },
+  {
+    "slug": "vitello-tonnato",
+    "title": "Vitello Tonnato",
+    "shortDescription": "Chilled sliced veal with creamy tuna-caper sauce",
+    "note": "A classic Piedmontese summer dish, best made ahead",
+    "introCopy": "This elegant northern Italian dish pairs tender roasted veal with a silky tuna-mayonnaise sauce. It sounds unusual but the combination is sublime—creamy, savory, and perfect for a summer lunch or elegant antipasto.",
+    "servings": 8,
+    "prepMinutes": 30,
+    "cookMinutes": 60,
+    "difficulty": "INVOLVED",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "MAKE_AHEAD",
+      "HIGH_PROTEIN"
+    ],
+    "heroColor": "#D4C5A9",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Veal",
+        "order": 1,
+        "quantity": "2",
+        "unit": "lbs",
+        "item": "veal roast",
+        "prepNote": "tied",
+        "optional": false
+      },
+      {
+        "component": "Veal",
+        "order": 2,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Veal",
+        "order": 3,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Veal",
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "carrot",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Veal",
+        "order": 5,
+        "quantity": "1",
+        "unit": "stalk",
+        "item": "celery",
+        "prepNote": "chopped",
+        "optional": false
+      },
+      {
+        "component": "Veal",
+        "order": 6,
+        "quantity": "1",
+        "unit": null,
+        "item": "bay leaf",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tonnato Sauce",
+        "order": 7,
+        "quantity": "1",
+        "unit": "can",
+        "item": "tuna in olive oil",
+        "prepNote": "5 oz, drained",
+        "optional": false
+      },
+      {
+        "component": "Tonnato Sauce",
+        "order": 8,
+        "quantity": "4",
+        "unit": null,
+        "item": "anchovy fillets",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tonnato Sauce",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "capers",
+        "prepNote": "drained",
+        "optional": false
+      },
+      {
+        "component": "Tonnato Sauce",
+        "order": 10,
+        "quantity": "2",
+        "unit": null,
+        "item": "egg yolks",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tonnato Sauce",
+        "order": 11,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "lemon juice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tonnato Sauce",
+        "order": 12,
+        "quantity": "3/4",
+        "unit": "cup",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Tonnato Sauce",
+        "order": 13,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "reserved cooking liquid",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 14,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "capers",
+        "prepNote": "for garnish",
+        "optional": false
+      },
+      {
+        "component": "For serving",
+        "order": 15,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "lemon wedges",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Place veal, wine, stock, carrot, celery, and bay leaf in a large pot. Bring to simmer, cover, and cook gently until veal is tender, about 1 hour. Let cool in liquid.",
+        "durationMinutes": 70
+      },
+      {
+        "order": 2,
+        "text": "Remove veal and refrigerate until cold. Strain and reserve 1/4 cup cooking liquid.",
+        "durationMinutes": 120
+      },
+      {
+        "order": 3,
+        "text": "Make tonnato sauce: In food processor, blend tuna, anchovies, capers, egg yolks, and lemon juice until smooth.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "With motor running, slowly drizzle in olive oil until emulsified. Thin with reserved cooking liquid to achieve a pourable consistency. Season with salt and pepper.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 5,
+        "text": "Slice veal very thin. Arrange on a platter. Spoon sauce generously over veal, covering completely. Cover and refrigerate at least 2 hours or overnight.",
+        "durationMinutes": 130
+      },
+      {
+        "order": 6,
+        "text": "Before serving, garnish with additional capers and serve with lemon wedges.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Red meat",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Oily fish",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Eggs",
+        "weight": 20
+      },
+      {
+        "foodGroup": "Root veg",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Gluten-free",
+      "Low-carb"
+    ],
+    "allergenTags": [
+      "Fish",
+      "Eggs",
+      "Celery",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "risotto-alla-milanese",
+    "title": "Risotto alla Milanese",
+    "shortDescription": "Saffron-infused Milanese risotto with butter and Parmesan",
+    "note": "The saffron gives it the signature golden color",
+    "introCopy": "Milan's signature risotto is luxurious in its simplicity. Saffron lends a golden hue and delicate floral flavor, while butter and Parmesan create a creamy, velvety texture. It's the traditional accompaniment to osso buco.",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 30,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": false,
+    "attributes": [
+      "COMFORT_FOOD"
+    ],
+    "heroColor": "#F4D03F",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": null,
+        "order": 1,
+        "quantity": "6",
+        "unit": "cups",
+        "item": "chicken stock",
+        "prepNote": "warm",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 2,
+        "quantity": "pinch",
+        "unit": null,
+        "item": "saffron threads",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 3,
+        "quantity": "3",
+        "unit": "tbsp",
+        "item": "butter",
+        "prepNote": "divided",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 4,
+        "quantity": "1",
+        "unit": null,
+        "item": "shallot",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 5,
+        "quantity": "1 1/2",
+        "unit": "cups",
+        "item": "arborio rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 6,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "dry white wine",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "Parmigiano-Reggiano",
+        "prepNote": "grated",
+        "optional": false
+      },
+      {
+        "component": null,
+        "order": 8,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt and pepper",
+        "prepNote": null,
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Add saffron to warm stock and let steep.",
+        "durationMinutes": 5
+      },
+      {
+        "order": 2,
+        "text": "Melt 2 tablespoons butter in a large saucepan over medium heat. Add shallot and cook until softened, 3 minutes.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 3,
+        "text": "Add rice and stir to coat, toasting for 2 minutes. Add wine and cook, stirring, until absorbed.",
+        "durationMinutes": 4
+      },
+      {
+        "order": 4,
+        "text": "Add saffron stock one ladle at a time, stirring constantly and waiting until liquid is mostly absorbed before adding more. Continue until rice is creamy and al dente, about 20 minutes.",
+        "durationMinutes": 22
+      },
+      {
+        "order": 5,
+        "text": "Remove from heat. Stir in remaining tablespoon of butter and Parmesan. Season with salt and pepper.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 6,
+        "text": "Let rest 2 minutes, then serve immediately with extra Parmesan.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 70
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 35
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      },
+      {
+        "foodGroup": "Warm spices",
+        "weight": 15
+      }
+    ],
+    "dietTags": [
+      "Vegetarian",
+      "Gluten-free"
+    ],
+    "allergenTags": [
+      "Milk",
+      "Celery",
+      "Sulphites"
+    ]
+  },
+  {
+    "slug": "pizza-margherita-napoletana",
+    "title": "Pizza Margherita Napoletana",
+    "shortDescription": "Classic Neapolitan pizza with tomato, mozzarella, and basil",
+    "note": "A pizza stone and very hot oven are essential",
+    "introCopy": "The queen of pizzas, created in 1889 to honor Queen Margherita. This Neapolitan classic showcases the Italian flag's colors: red tomato sauce, white mozzarella, and green basil. Simplicity demands the finest ingredients.",
+    "servings": 4,
+    "prepMinutes": 90,
+    "cookMinutes": 10,
+    "difficulty": "MEDIUM",
+    "cuisine": "Italian",
+    "mealSlot": [
+      "LUNCH",
+      "DINNER"
+    ],
+    "effortTier": "WEEKEND",
+    "batchFriendly": true,
+    "attributes": [
+      "CROWD_PLEASER"
+    ],
+    "heroColor": "#D4573B",
+    "allergenReviewStatus": "UNVERIFIED",
+    "isActive": false,
+    "ingredients": [
+      {
+        "component": "Dough",
+        "order": 1,
+        "quantity": "3 1/2",
+        "unit": "cups",
+        "item": "bread flour",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 2,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "instant yeast",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 3,
+        "quantity": "2",
+        "unit": "tsp",
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 4,
+        "quantity": "1 1/2",
+        "unit": "cups",
+        "item": "warm water",
+        "prepNote": "110°F",
+        "optional": false
+      },
+      {
+        "component": "Dough",
+        "order": 5,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 6,
+        "quantity": "1",
+        "unit": "can",
+        "item": "San Marzano tomatoes",
+        "prepNote": "28 oz, crushed by hand",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cloves",
+        "item": "garlic",
+        "prepNote": "minced",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "extra virgin olive oil",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 9,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "fresh mozzarella",
+        "prepNote": "torn into pieces",
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "fresh basil leaves",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 11,
+        "quantity": "to taste",
+        "unit": null,
+        "item": "salt",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "Topping",
+        "order": 12,
+        "quantity": "as needed",
+        "unit": null,
+        "item": "semolina flour",
+        "prepNote": "for dusting",
+        "optional": false
+      }
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "text": "Make dough: Combine flour, yeast, and salt in a large bowl. Add water and olive oil. Mix until a shaggy dough forms, then knead 8 minutes until smooth and elastic.",
+        "durationMinutes": 12
+      },
+      {
+        "order": 2,
+        "text": "Place dough in oiled bowl, turn to coat, cover, and let rise until doubled, about 1 hour.",
+        "durationMinutes": 60
+      },
+      {
+        "order": 3,
+        "text": "Make sauce: Combine crushed tomatoes, garlic, olive oil, and salt. No cooking required.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 4,
+        "text": "Punch down dough and divide into 4 equal pieces. Shape into balls. Let rest 15 minutes.",
+        "durationMinutes": 17
+      },
+      {
+        "order": 5,
+        "text": "Place pizza stone in oven and preheat to 500°F (or as hot as your oven goes) for at least 30 minutes.",
+        "durationMinutes": 30
+      },
+      {
+        "order": 6,
+        "text": "On a semolina-dusted surface, stretch one dough ball into a 10-inch circle. Transfer to a pizza peel or inverted baking sheet.",
+        "durationMinutes": 3
+      },
+      {
+        "order": 7,
+        "text": "Spread 1/4 of the sauce on dough, leaving a 1-inch border. Top with 1/4 of the mozzarella.",
+        "durationMinutes": 2
+      },
+      {
+        "order": 8,
+        "text": "Slide pizza onto hot stone and bake until crust is golden and cheese is bubbling, 8-10 minutes.",
+        "durationMinutes": 10
+      },
+      {
+        "order": 9,
+        "text": "Remove from oven and immediately top with fresh basil and a drizzle of olive oil. Repeat with remaining dough and toppings.",
+        "durationMinutes": 2
+      }
+    ],
+    "foodGroupProfile": [
+      {
+        "foodGroup": "Refined grains",
+        "weight": 60
+      },
+      {
+        "foodGroup": "Dairy",
+        "weight": 50
+      },
+      {
+        "foodGroup": "Nightshades",
+        "weight": 40
+      },
+      {
+        "foodGroup": "Fresh herbs",
+        "weight": 25
+      },
+      {
+        "foodGroup": "Alliums",
+        "weight": 10
+      }
+    ],
+    "dietTags": [
+      "Vegetarian"
+    ],
+    "allergenTags": [
+      "Wheat/gluten",
+      "Milk"
+    ]
+  }
+]

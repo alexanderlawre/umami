@@ -81,7 +81,7 @@ async function main() {
         mealSlot: recipe.mealSlot as never,
         effortTier: recipe.effortTier,
         batchFriendly: recipe.batchFriendly,
-        attributes: recipe.attributes,
+        attributeTags: { connect: recipe.attributes.map((code) => ({ code })) },
         heroColor: recipe.heroColor,
         imageUrl: recipe.imageUrl,
         imageCredit: recipe.imageCredit,
@@ -109,6 +109,7 @@ async function main() {
         fatGrams: recipe.fatGrams ?? null,
         dietTags: { set: recipe.dietTags.map((name) => ({ name })) },
         allergenTags: { set: recipe.allergenTags.map((name) => ({ name })) },
+        attributeTags: { set: recipe.attributes.map((code) => ({ code })) },
       },
     });
   }

@@ -14,7 +14,7 @@ export default async function CookLaterPage() {
   const saved = await prisma.savedRecipe.findMany({
     where: { userId: session.user.id, savedAt: { gte: savedRecipeExpiryCutoff() } },
     include: {
-      recipe: { include: { dietTags: true, cuisine: true } },
+      recipe: { include: { dietTags: true, cuisine: true, attributeTags: { select: { code: true } } } },
     },
     orderBy: { savedAt: "desc" },
   });
@@ -29,7 +29,7 @@ export default async function CookLaterPage() {
     mealSlot: s.recipe.mealSlot,
     prepMinutes: s.recipe.prepMinutes,
     cookMinutes: s.recipe.cookMinutes,
-    attributes: s.recipe.attributes,
+    attributes: s.recipe.attributeTags.map((t) => t.code),
     dietTags: s.recipe.dietTags.map((d) => d.name),
     imageUrl: s.recipe.imageUrl,
     imageCredit: s.recipe.imageCredit,

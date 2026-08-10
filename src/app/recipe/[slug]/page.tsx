@@ -22,6 +22,8 @@ export default async function RecipeDetailPage({
       steps: { orderBy: { order: "asc" } },
       cuisine: true,
       allergenTags: true,
+      attributeTags: true,
+      dietTags: true,
     },
   });
 
@@ -75,6 +77,8 @@ export default async function RecipeDetailPage({
     proteinGrams: recipe.proteinGrams,
     carbsGrams: recipe.carbsGrams,
     fatGrams: recipe.fatGrams,
+    attributes: recipe.attributeTags.map((a) => a.code),
+    dietTags: recipe.dietTags.map((d) => d.name),
   };
 
   return (

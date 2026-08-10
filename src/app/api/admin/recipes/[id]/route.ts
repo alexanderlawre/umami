@@ -23,13 +23,16 @@ export async function GET(
       steps: { orderBy: { order: "asc" } },
       dietTags: true,
       allergenTags: true,
+      attributeTags: { select: { code: true } },
     },
   });
   if (!recipe) {
     return NextResponse.json({ error: "Recipe not found" }, { status: 404 });
   }
 
-  return NextResponse.json({ recipe });
+  return NextResponse.json({
+    recipe: { ...recipe, attributes: recipe.attributeTags.map((t) => t.code) },
+  });
 }
 
 export async function PATCH(
@@ -50,7 +53,7 @@ export async function PATCH(
     return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
   }
 
-  const { dietIds, allergenIds, ingredients, steps, cuisineId, ...rest } = parsed.data;
+  const { dietIds, allergenIds, ingredients, steps, cuisineId, attributes, ...rest } = parsed.data;
 
   const recipe = await prisma.$transaction(async (tx) => {
     if (ingredients) {
@@ -68,6 +71,9 @@ export async function PATCH(
         ...(dietIds ? { dietTags: { set: dietIds.map((did) => ({ id: did })) } } : {}),
         ...(allergenIds
           ? { allergenTags: { set: allergenIds.map((aid) => ({ id: aid })) } }
+          : {}),
+        ...(attributes
+          ? { attributeTags: { set: attributes.map((code) => ({ code })) } }
           : {}),
         ...(ingredients
           ? {

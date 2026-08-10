@@ -2,7 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { RecipesClient, type AdminRecipeRow } from "./recipes-client";
 
 export default async function AdminRecipesPage() {
-  const [recipes, cuisines, diets, allergens, cookbooks] = await Promise.all([
+  const [recipes, cuisines, diets, allergens, cookbooks, attributeTags] = await Promise.all([
     prisma.recipe.findMany({
       orderBy: { title: "asc" },
       select: {
@@ -21,6 +21,7 @@ export default async function AdminRecipesPage() {
     prisma.diet.findMany({ orderBy: { name: "asc" } }),
     prisma.allergen.findMany({ orderBy: { name: "asc" } }),
     prisma.cookbook.findMany({ orderBy: { name: "asc" }, select: { id: true, name: true } }),
+    prisma.attributeTag.findMany({ orderBy: { name: "asc" } }),
   ]);
 
   const recipeRows = recipes.map((r) => ({
@@ -45,6 +46,7 @@ export default async function AdminRecipesPage() {
           diets={diets}
           allergens={allergens}
           cookbooks={cookbooks}
+          attributeTags={attributeTags}
         />
       </div>
     </main>

@@ -5,6 +5,7 @@
 export type EditorCuisine = { id: string; name: string; slug: string };
 export type EditorDiet = { id: string; name: string };
 export type EditorAllergen = { id: string; name: string };
+export type EditorAttributeTag = { id: string; name: string; code: string };
 
 export type EditorIngredient = {
   component: string | null;

@@ -177,6 +177,19 @@ model Cuisine {
   submissions RecipeSubmission[]
 }
 
+// Admin-editable catalog of recipe "attribute" tags (e.g. "High protein",
+// "Grilled") — mirrors Cuisine's {name, code} shape so it can reuse the
+// same admin CatalogSection UI/API pattern. `code` is the stable machine
+// identifier (e.g. "HIGH_PROTEIN"), auto-derived from `name` the same way
+// Cuisine derives `slug` from `name`.
+model AttributeTag {
+  id   String @id @default(cuid())
+  name String @unique
+  code String @unique
+
+  recipes Recipe[]
+}
+
 // ---------- Recipes ----------
 
 model Recipe {
@@ -198,7 +211,7 @@ model Recipe {
   effortTier   EffortTier
   batchFriendly Boolean @default(false)
 
-  attributes String[] @default([])
+  attributeTags AttributeTag[]
   heroColor  String
   imageUrl   String?
   imageCredit String?

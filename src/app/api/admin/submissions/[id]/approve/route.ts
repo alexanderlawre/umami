@@ -37,6 +37,15 @@ export async function POST(
 
   const slug = await generateUniqueSlug(submission.title);
 
+  // submission.attributes is a plain string[] of codes (RecipeSubmission
+  // wasn't migrated to the AttributeTag relation), so it may contain stale
+  // codes no longer in the catalog (e.g. the removed KID_FRIENDLY) — filter
+  // to only codes that still exist before connecting, so this doesn't throw.
+  const validAttributeTags = await prisma.attributeTag.findMany({
+    where: { code: { in: submission.attributes } },
+    select: { code: true },
+  });
+
   // Move the uploaded photo (if any) from the submissions/ staging folder
   // into the main recipe-photos folder under the recipe's final slug.
   let finalImageUrl: string | null = null;
@@ -69,7 +78,6 @@ export async function POST(
         mealSlot: submission.mealSlot,
         effortTier: submission.effortTier,
         batchFriendly: submission.batchFriendly,
-        attributes: submission.attributes,
         heroColor: submission.heroColor,
         imageCredit: submission.imageCredit,
         caloriesPerServing: submission.caloriesPerServing,
@@ -83,6 +91,7 @@ export async function POST(
         cuisine: { connect: { id: submission.cuisineId } },
         dietTags: { connect: submission.dietTags.map((d) => ({ id: d.id })) },
         allergenTags: { connect: submission.allergenTags.map((a) => ({ id: a.id })) },
+        attributeTags: { connect: validAttributeTags.map((t) => ({ code: t.code })) },
         ingredients: {
           create: submission.ingredients.map((ing) => ({
             component: ing.component,

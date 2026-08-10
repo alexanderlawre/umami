@@ -7,6 +7,7 @@ import { AddCuisineInline } from "@/components/recipe-form-fields";
 import {
   RecipeEditor,
   type EditorAllergen,
+  type EditorAttributeTag,
   type EditorCuisine,
   type EditorDiet,
   type EditorRecipe,
@@ -288,12 +289,14 @@ export function RecipesClient({
   cuisines,
   diets,
   allergens,
+  attributeTags,
   cookbooks: initialCookbooks,
 }: {
   recipes: AdminRecipeRow[];
   cuisines: EditorCuisine[];
   diets: EditorDiet[];
   allergens: EditorAllergen[];
+  attributeTags: EditorAttributeTag[];
   cookbooks: AdminCookbookOption[];
 }) {
   const router = useRouter();
@@ -469,6 +472,7 @@ export function RecipesClient({
           cuisines={cuisines}
           diets={diets}
           allergens={allergens}
+          attributeTags={attributeTags}
           onClose={() => setEditorState(null)}
           onSaved={handleSaved}
         />
@@ -479,6 +483,7 @@ export function RecipesClient({
           cuisines={cuisines}
           diets={diets}
           allergens={allergens}
+          attributeTags={attributeTags}
           onClose={() => setEditorState(null)}
           onSaved={handleSaved}
         />
