@@ -142,12 +142,12 @@ async function main() {
             batchFriendly: recipe.batchFriendly,
             attributeTags: { set: recipe.attributes.map((code) => ({ code })) },
             heroColor: recipe.heroColor,
-            imageUrl: recipe.imageUrl,
-            imageCredit: recipe.imageCredit,
-            // Deliberately not syncing allergenReviewStatus/isActive here:
-            // once a recipe exists, its moderation state is owned by the
-            // admin UI (verify/publish toggles), and re-running the seed
-            // must not silently revert an admin's review decision.
+            // Deliberately not syncing allergenReviewStatus/isActive/
+            // imageUrl/imageCredit here: once a recipe exists, its
+            // moderation state and photo are owned by the admin UI (verify/
+            // publish toggles, photo upload), and re-running the seed must
+            // not silently revert an admin's review decision or wipe out an
+            // uploaded photo back to the JSON's placeholder image.
             ingredients: { create: recipe.ingredients },
             steps: { create: recipe.steps },
             foodGroupProfile: {
