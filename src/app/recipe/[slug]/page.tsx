@@ -77,8 +77,12 @@ export default async function RecipeDetailPage({
     proteinGrams: recipe.proteinGrams,
     carbsGrams: recipe.carbsGrams,
     fatGrams: recipe.fatGrams,
+    fiberGrams: recipe.fiberGrams,
+    cholesterolMg: recipe.cholesterolMg,
     attributes: recipe.attributeTags.map((a) => a.code),
     dietTags: recipe.dietTags.map((d) => d.name),
+    allergenTags: recipeAllergenNames,
+    allergenReviewStatus: recipe.allergenReviewStatus,
   };
 
   return (

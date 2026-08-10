@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { logInteraction } from "@/lib/log-interaction";
-import { attributeLabel, dietEmblemClass } from "@/lib/recipe-tags";
+import { attributeLabel, dietEmblemClass, visibleDietEmblems } from "@/lib/recipe-tags";
 import { MotionButton } from "@/components/motion-button";
 import { PageTransition } from "@/components/page-transition";
 import { SheetModal } from "@/components/sheet-modal";
@@ -47,8 +47,12 @@ export type RecipeDetail = {
   proteinGrams: number | null;
   carbsGrams: number | null;
   fatGrams: number | null;
+  fiberGrams: number | null;
+  cholesterolMg: number | null;
   attributes: string[];
   dietTags: string[];
+  allergenTags: string[];
+  allergenReviewStatus: string;
 };
 
 function scaleQuantity(quantity: string, factor: number): string {
@@ -89,7 +93,14 @@ export function RecipeDetailClient({
     recipe.caloriesPerServing != null ||
     recipe.proteinGrams != null ||
     recipe.carbsGrams != null ||
-    recipe.fatGrams != null;
+    recipe.fatGrams != null ||
+    recipe.fiberGrams != null ||
+    recipe.cholesterolMg != null;
+
+  const dietEmblems = visibleDietEmblems(recipe.dietTags);
+  const isAllergenUnverified = recipe.allergenReviewStatus !== "VERIFIED";
+  const scaledTotal = (perServing: number | null) =>
+    perServing == null ? null : Math.round(perServing * servings);
 
   const grouped = recipe.ingredients.reduce<Record<string, Ingredient[]>>(
     (acc, ing) => {
@@ -222,7 +233,33 @@ export function RecipeDetailClient({
         </span>
       </div>
 
-      {(recipe.attributes.length > 0 || recipe.dietTags.length > 0) && (
+      {(dietEmblems.length > 0 || recipe.allergenTags.length > 0) && (
+        <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
+          {dietEmblems.map((diet) => (
+            <span
+              key={diet}
+              className={`rounded-full px-2 py-1 font-medium ${dietEmblemClass(diet)}`}
+            >
+              {diet}
+            </span>
+          ))}
+          {recipe.allergenTags.map((allergen) => (
+            <span
+              key={allergen}
+              className="rounded-full border border-[#B23A32] bg-[#FBEBE9] px-2 py-1 font-medium text-[#B23A32]"
+            >
+              ⚠ Contains {allergen}
+            </span>
+          ))}
+        </div>
+      )}
+      {isAllergenUnverified && (recipe.allergenTags.length > 0 || recipe.dietTags.length > 0) && (
+        <p className="mt-1 text-[11px] italic text-[#6B7370]">
+          Allergen info not yet verified — please check the ingredient list carefully.
+        </p>
+      )}
+
+      {recipe.attributes.length > 0 && (
         <div className="mt-3">
           <button
             onClick={() => setTagsOpen((v) => !v)}
@@ -252,16 +289,6 @@ export function RecipeDetailClient({
                 className="overflow-hidden"
               >
                 <div className="mt-2 flex flex-wrap gap-2 text-xs">
-                  {recipe.dietTags
-                    .filter((d) => d !== "Omnivore")
-                    .map((diet) => (
-                      <span
-                        key={diet}
-                        className={`rounded-full px-2 py-1 font-medium ${dietEmblemClass(diet)}`}
-                      >
-                        {diet}
-                      </span>
-                    ))}
                   {recipe.attributes.map((a) => (
                     <span key={a} className="rounded-full bg-[#EDF3EF] px-2 py-1 text-[#6B7370]">
                       {attributeLabel(a)}
@@ -277,7 +304,7 @@ export function RecipeDetailClient({
       {hasMacros && (
         <section className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-4">
           <h2 className="text-sm font-semibold text-[#1A1D1B]">Nutrition (per serving)</h2>
-          <div className="mt-3 grid grid-cols-4 gap-2 text-center">
+          <div className="mt-3 grid grid-cols-3 gap-2 text-center sm:grid-cols-6">
             <div>
               <p className="text-base font-semibold text-[#1A1D1B]">
                 {recipe.caloriesPerServing ?? "—"}
@@ -304,15 +331,42 @@ export function RecipeDetailClient({
                   </p>
                   <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Fat</p>
                 </div>
+                <div>
+                  <p className="text-base font-semibold text-[#1A1D1B]">
+                    {recipe.fiberGrams ?? "—"}g
+                  </p>
+                  <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Fiber</p>
+                </div>
+                <div>
+                  <p className="text-base font-semibold text-[#1A1D1B]">
+                    {recipe.cholesterolMg ?? "—"}mg
+                  </p>
+                  <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Cholesterol</p>
+                </div>
               </>
             ) : (
-              <div className="col-span-3 flex items-center justify-center rounded-xl bg-[#EDF3EF] px-2 py-2">
+              <div className="col-span-2 flex items-center justify-center rounded-xl bg-[#EDF3EF] px-2 py-2 sm:col-span-5">
                 <p className="text-[11px] text-[#6B7370]">
                   🔒 Unlock full nutrition breakdown with Premium
                 </p>
               </div>
             )}
           </div>
+          {recipe.caloriesPerServing != null && servings !== recipe.servings && (
+            <p className="mt-3 text-center text-[11px] text-[#6B7370]">
+              Total for {servings} serving{servings === 1 ? "" : "s"}:{" "}
+              {scaledTotal(recipe.caloriesPerServing)} cal
+              {isPremium && recipe.proteinGrams != null && (
+                <> · {scaledTotal(recipe.proteinGrams)}g protein</>
+              )}
+              {isPremium && recipe.carbsGrams != null && (
+                <> · {scaledTotal(recipe.carbsGrams)}g carbs</>
+              )}
+              {isPremium && recipe.fatGrams != null && (
+                <> · {scaledTotal(recipe.fatGrams)}g fat</>
+              )}
+            </p>
+          )}
         </section>
       )}
 

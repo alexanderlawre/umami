@@ -217,12 +217,14 @@ model Recipe {
   imageCredit String?
 
   // Simple, optional per-serving macros. Kept intentionally minimal — no
-  // full nutrition-tracking system. Protein/carbs/fat are gated behind
-  // User.isPremium in the UI; calories stay free for everyone.
+  // full nutrition-tracking system. Protein/carbs/fat/fiber/cholesterol are
+  // gated behind User.isPremium in the UI; calories stay free for everyone.
   caloriesPerServing Int?
   proteinGrams       Int?
   carbsGrams         Int?
   fatGrams           Int?
+  fiberGrams         Int?
+  cholesterolMg      Int?
 
   allergenReviewStatus AllergenReviewStatus @default(UNVERIFIED)
   isActive             Boolean              @default(true)
