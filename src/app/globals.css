@@ -12,14 +12,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* This app only has one, light theme — no component has dark-mode styling
+   (no `dark:` variants anywhere). Explicitly pin color-scheme to light so
+   iOS/Safari (and other browsers) don't auto-invert the page, native form
+   controls, or scrollbars when the device is set to dark mode, which was
+   previously making body text unreadable and leaving header/footer/buttons
+   in a mismatched, un-adapted light style against a flipped-dark page. */
 html {
+  color-scheme: light;
   -webkit-text-size-adjust: 100%;
   overscroll-behavior-y: contain;
 }
