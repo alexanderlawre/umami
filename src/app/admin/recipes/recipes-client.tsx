@@ -170,18 +170,32 @@ function RecipeRow({
 }) {
   const [recipe, setRecipe] = useState(initial);
   const [saving, setSaving] = useState(false);
+  // Which category to restore this recipe into — defaults to whatever it
+  // was before archiving, but the admin can pick a different one before
+  // hitting Restore.
+  const [restoreSlot, setRestoreSlot] = useState(initial.mealSlot);
 
   async function toggleActive() {
     const next = !recipe.isActive;
     const prevReason = recipe.archivedReason;
+    const prevSlot = recipe.mealSlot;
     setSaving(true);
     // Restoring (Hidden/Archived -> Active) also clears any archivedReason,
-    // so a manually-restored recipe doesn't keep showing a stale "why" tag.
-    setRecipe((r) => ({ ...r, isActive: next, archivedReason: next ? null : r.archivedReason }));
+    // so a manually-restored recipe doesn't keep showing a stale "why" tag,
+    // and applies whichever category was selected in the restore dropdown.
+    setRecipe((r) => ({
+      ...r,
+      isActive: next,
+      archivedReason: next ? null : r.archivedReason,
+      mealSlot: next ? restoreSlot : r.mealSlot,
+    }));
     try {
-      await patchRecipe(recipe.id, { isActive: next, ...(next ? { archivedReason: null } : {}) });
+      await patchRecipe(recipe.id, {
+        isActive: next,
+        ...(next ? { archivedReason: null, mealSlot: restoreSlot } : {}),
+      });
     } catch {
-      setRecipe((r) => ({ ...r, isActive: !next, archivedReason: prevReason }));
+      setRecipe((r) => ({ ...r, isActive: !next, archivedReason: prevReason, mealSlot: prevSlot }));
     } finally {
       setSaving(false);
     }
@@ -265,6 +279,21 @@ function RecipeRow({
           >
             {recipe.allergenReviewStatus}
           </button>
+
+          {!recipe.isActive && (
+            <select
+              value={restoreSlot}
+              onChange={(e) => setRestoreSlot(e.target.value)}
+              disabled={saving}
+              className="flex-1 rounded-full border border-[#E8E6E0] bg-white px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50 sm:flex-none"
+            >
+              {MEAL_CATEGORIES.map((c) => (
+                <option key={c.key} value={c.key}>
+                  {c.label}
+                </option>
+              ))}
+            </select>
+          )}
 
           <button
             onClick={toggleActive}
