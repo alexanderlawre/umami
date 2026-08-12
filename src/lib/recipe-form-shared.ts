@@ -33,7 +33,7 @@ export type EditorRecipe = {
   cookMinutes: number;
   difficulty: "EASY" | "MEDIUM" | "INVOLVED";
   cuisineId: string;
-  mealSlot: string[];
+  mealSlot: string;
   effortTier: "WEEKNIGHT" | "WEEKEND" | "PROJECT";
   batchFriendly: boolean;
   attributes: string[];
@@ -69,7 +69,7 @@ export const EMPTY_RECIPE: RecipeFormValues = {
   cookMinutes: 20,
   difficulty: "EASY",
   cuisineId: "",
-  mealSlot: ["DINNER"],
+  mealSlot: "DINNER",
   effortTier: "WEEKNIGHT",
   batchFriendly: false,
   attributes: [],
@@ -86,5 +86,5 @@ export const EMPTY_RECIPE: RecipeFormValues = {
 };
 
 export const DIFFICULTIES = ["EASY", "MEDIUM", "INVOLVED"] as const;
-export const MEAL_SLOTS = ["BREAKFAST", "LUNCH", "DINNER", "SNACK"] as const;
+export const MEAL_SLOTS = ["BREAKFAST", "TAPAS", "LUNCH", "DINNER"] as const;
 export const EFFORT_TIERS = ["WEEKNIGHT", "WEEKEND", "PROJECT"] as const;

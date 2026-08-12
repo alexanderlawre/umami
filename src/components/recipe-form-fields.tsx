@@ -133,7 +133,7 @@ export function RecipeFormFields({
 }: {
   form: RecipeFormValues;
   update: <K extends keyof RecipeFormValues>(key: K, value: RecipeFormValues[K]) => void;
-  toggleArrayValue: (key: "mealSlot" | "attributes" | "dietIds" | "allergenIds", value: string) => void;
+  toggleArrayValue: (key: "attributes" | "dietIds" | "allergenIds", value: string) => void;
   cuisines: EditorCuisine[];
   diets: EditorDiet[];
   allergens: EditorAllergen[];
@@ -282,8 +282,8 @@ export function RecipeFormFields({
           {MEAL_SLOTS.map((slot) => (
             <Chip
               key={slot}
-              active={form.mealSlot.includes(slot)}
-              onClick={() => toggleArrayValue("mealSlot", slot)}
+              active={form.mealSlot === slot}
+              onClick={() => update("mealSlot", slot)}
             >
               {slot}
             </Chip>

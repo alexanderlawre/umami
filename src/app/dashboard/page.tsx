@@ -10,7 +10,6 @@ export default async function DashboardPage() {
 
   const selection = await getDailySelection(session.user.id);
   const slotCopy: Record<typeof selection.currentSlot, string> = {
-    BREAKFAST: "Breakfast picks for you",
     LUNCH: "Lunch picks for you",
     DINNER: "Dinner picks for you",
   };
@@ -30,6 +29,8 @@ export default async function DashboardPage() {
           nextWindowAt={selection.nextWindowAt.toISOString()}
           userDiets={selection.userDiets}
           cookbooks={selection.cookbooks}
+          tapasSection={selection.tapasSection}
+          breakfastSection={selection.breakfastSection}
         />
       </div>
     </main>

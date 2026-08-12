@@ -17,7 +17,7 @@ export const stepSchema = z.object({
 });
 
 export const DIFFICULTIES = ["EASY", "MEDIUM", "INVOLVED"] as const;
-export const MEAL_SLOTS = ["BREAKFAST", "LUNCH", "DINNER", "SNACK"] as const;
+export const MEAL_SLOTS = ["BREAKFAST", "TAPAS", "LUNCH", "DINNER"] as const;
 export const EFFORT_TIERS = ["WEEKNIGHT", "WEEKEND", "PROJECT"] as const;
 
 export const recipeFieldsSchema = z.object({
@@ -30,7 +30,7 @@ export const recipeFieldsSchema = z.object({
   cookMinutes: z.number().int().min(0),
   difficulty: z.enum(DIFFICULTIES),
   cuisineId: z.string().min(1),
-  mealSlot: z.array(z.enum(MEAL_SLOTS)).min(1),
+  mealSlot: z.enum(MEAL_SLOTS),
   effortTier: z.enum(EFFORT_TIERS),
   batchFriendly: z.boolean().optional().default(false),
   attributes: z.array(z.string()).optional().default([]),
@@ -61,5 +61,6 @@ export const recipeUpdateSchema = recipeFieldsSchema.partial().extend({
   dietIds: z.array(z.string()).optional(),
   allergenIds: z.array(z.string()).optional(),
   isActive: z.boolean().optional(),
+  archivedReason: z.string().nullable().optional(),
   allergenReviewStatus: z.enum(["UNVERIFIED", "VERIFIED"]).optional(),
 });

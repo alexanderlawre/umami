@@ -132,15 +132,14 @@ export function visibleDietEmblems(dietTags: string[], max = 3): string[] {
 
 const MEAL_SLOT_LABELS: Record<string, string> = {
   BREAKFAST: "Breakfast",
+  TAPAS: "Tapas",
   LUNCH: "Lunch",
   DINNER: "Dinner",
-  SNACK: "Snack",
 };
 
-export function formatMealSlot(mealSlot: string[]): string | null {
-  const first = mealSlot[0];
-  if (!first) return null;
-  return MEAL_SLOT_LABELS[first] ?? first;
+export function formatMealSlot(mealSlot: string): string | null {
+  if (!mealSlot) return null;
+  return MEAL_SLOT_LABELS[mealSlot] ?? mealSlot;
 }
 
 export function formatMinutes(prepMinutes: number, cookMinutes: number): string {

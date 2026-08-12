@@ -18,11 +18,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
   }
 
-  const { dietIds, allergenIds, ingredients, steps, cuisineId, ...rest } = parsed.data;
+  const { dietIds, allergenIds, ingredients, steps, cuisineId, mealSlot, ...rest } = parsed.data;
 
   const submission = await prisma.recipeSubmission.create({
     data: {
       ...rest,
+      // RecipeSubmission.mealSlot is still MealSlot[] (unlike the now-scalar
+      // Recipe.mealSlot) — wrap the single form selection into a 1-element
+      // array to match. The approval route unwraps it back to a scalar.
+      mealSlot: [mealSlot],
       user: { connect: { id: session.user.id } },
       cuisine: { connect: { id: cuisineId } },
       dietTags: { connect: dietIds.map((id) => ({ id })) },

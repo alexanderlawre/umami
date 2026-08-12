@@ -19,7 +19,7 @@ export type SavedRecipeData = {
   shortDescription: string;
   note: string;
   cuisine: string;
-  mealSlot: string[];
+  mealSlot: string;
   prepMinutes: number;
   cookMinutes: number;
   attributes: string[];

@@ -75,7 +75,7 @@ export async function POST(
         prepMinutes: submission.prepMinutes,
         cookMinutes: submission.cookMinutes,
         difficulty: submission.difficulty,
-        mealSlot: submission.mealSlot,
+        mealSlot: submission.mealSlot[0] ?? "DINNER",
         effortTier: submission.effortTier,
         batchFriendly: submission.batchFriendly,
         heroColor: submission.heroColor,

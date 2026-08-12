@@ -209,13 +209,11 @@ model Recipe {
   difficulty   Difficulty
   cuisineId    String
   cuisine      Cuisine    @relation(fields: [cuisineId], references: [id])
-  mealSlot     MealSlot[]
-  // Single-value replacement for `mealSlot` during the meal-slot audit
-  // (see scripts/audit-meal-slot-and-health.mjs) — every recipe gets
-  // exactly one of BREAKFAST/TAPAS/LUNCH/DINNER. Nullable until the audit
-  // backfills it; a later migration drops `mealSlot` and renames this to
-  // `mealSlot` once every row is populated.
-  mealSlotPrimary MealSlot?
+  // Every recipe belongs to exactly one category (audited 2026-08 — see
+  // git history for the one-off audit script). Previously a `MealSlot[]`
+  // array allowing multiple slots per recipe; changed to a single required
+  // value so breakfast/tapas/lunch/dinner are mutually exclusive.
+  mealSlot     MealSlot
   effortTier   EffortTier
   batchFriendly Boolean @default(false)
 

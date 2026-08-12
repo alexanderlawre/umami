@@ -12,6 +12,7 @@ export default async function AdminRecipesPage() {
         cuisine: { select: { id: true, name: true } },
         mealSlot: true,
         isActive: true,
+        archivedReason: true,
         allergenReviewStatus: true,
         imageUrl: true,
         cookbookEntries: { select: { cookbookId: true } },

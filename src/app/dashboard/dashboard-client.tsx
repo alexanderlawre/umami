@@ -23,7 +23,7 @@ export type RecipeCardData = {
   shortDescription: string;
   note: string;
   cuisine: string;
-  mealSlot: string[];
+  mealSlot: string;
   prepMinutes: number;
   cookMinutes: number;
   attributes: string[];
@@ -461,6 +461,54 @@ export type CookbookSection = {
   recipes: RecipeCardData[];
 };
 
+// A collapsed-by-default dropdown of that day's rotating Tapas/Breakfast
+// picks — same visual card grid as the main pool, just gated behind a
+// <details> so it doesn't compete with the 4-card daily rotation above the
+// fold. Hidden entirely if there's nothing eligible for this user today.
+function RotatingSlotSection({
+  title,
+  recipes,
+  userDiets,
+  onSavedChange,
+}: {
+  title: string;
+  recipes: RecipeCardData[];
+  userDiets: string[];
+  onSavedChange: (id: string, saved: boolean) => void;
+}) {
+  if (recipes.length === 0) return null;
+
+  return (
+    <details className="group mt-6 rounded-2xl border border-[#E8E6E0] bg-white">
+      <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4">
+        <span className="text-lg font-semibold text-[#1A1D1B]">{title}</span>
+        <span className="flex items-center gap-2 text-xs text-[#6B7370]">
+          {recipes.length} today
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            className="h-3.5 w-3.5 transition-transform group-open:rotate-180"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+          </svg>
+        </span>
+      </summary>
+      <div className="grid grid-cols-1 gap-4 border-t border-[#E8E6E0] p-5 sm:grid-cols-2">
+        {recipes.map((recipe) => (
+          <RecipeCard
+            key={recipe.id}
+            recipe={recipe}
+            userDiets={userDiets}
+            onSavedChange={onSavedChange}
+          />
+        ))}
+      </div>
+    </details>
+  );
+}
+
 export function DashboardClient({
   pool,
   served,
@@ -468,6 +516,8 @@ export function DashboardClient({
   nextWindowAt,
   userDiets,
   cookbooks,
+  tapasSection,
+  breakfastSection,
 }: {
   pool: RecipeCardData[];
   served: RecipeCardData[];
@@ -475,6 +525,8 @@ export function DashboardClient({
   nextWindowAt: string;
   userDiets: string[];
   cookbooks: CookbookSection[];
+  tapasSection: RecipeCardData[];
+  breakfastSection: RecipeCardData[];
 }) {
   const [poolState] = useState(pool);
   const [visible, setVisible] = useState(() => dedupeFirstFour(served));
@@ -583,9 +635,23 @@ export function DashboardClient({
 
   if (poolState.length === 0) {
     return (
-      <p className="text-sm text-[#6B7370]">
-        No recipes match your preferences yet. Check back soon.
-      </p>
+      <div>
+        <p className="text-sm text-[#6B7370]">
+          No recipes match your preferences yet. Check back soon.
+        </p>
+        <RotatingSlotSection
+          title="Tapas"
+          recipes={tapasSection}
+          userDiets={userDiets}
+          onSavedChange={handleSavedChange}
+        />
+        <RotatingSlotSection
+          title="Breakfast"
+          recipes={breakfastSection}
+          userDiets={userDiets}
+          onSavedChange={handleSavedChange}
+        />
+      </div>
     );
   }
 
@@ -687,6 +753,19 @@ export function DashboardClient({
           ))}
         </div>
       )}
+
+      <RotatingSlotSection
+        title="Tapas"
+        recipes={tapasSection}
+        userDiets={userDiets}
+        onSavedChange={handleSavedChange}
+      />
+      <RotatingSlotSection
+        title="Breakfast"
+        recipes={breakfastSection}
+        userDiets={userDiets}
+        onSavedChange={handleSavedChange}
+      />
     </div>
   );
 }

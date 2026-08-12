@@ -19,8 +19,9 @@ export type AdminRecipeRow = {
   title: string;
   cuisine: string;
   cuisineId: string;
-  mealSlot: string[];
+  mealSlot: string;
   isActive: boolean;
+  archivedReason: string | null;
   allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
   imageUrl: string | null;
   cookbookIds: string[];
@@ -28,13 +29,12 @@ export type AdminRecipeRow = {
 
 export type AdminCookbookOption = { id: string; name: string };
 
-// Admin-facing meal categories. SNACK is relabeled "Small Bites" here only —
-// the consumer-facing formatMealSlot() wording elsewhere is untouched.
+// Admin-facing meal categories. Every recipe belongs to exactly one.
 const MEAL_CATEGORIES: { key: string; label: string }[] = [
   { key: "BREAKFAST", label: "Breakfast" },
+  { key: "TAPAS", label: "Tapas" },
   { key: "LUNCH", label: "Lunch" },
   { key: "DINNER", label: "Dinner" },
-  { key: "SNACK", label: "Small Bites" },
 ];
 
 async function patchRecipe(id: string, body: Record<string, unknown>) {
@@ -173,12 +173,15 @@ function RecipeRow({
 
   async function toggleActive() {
     const next = !recipe.isActive;
+    const prevReason = recipe.archivedReason;
     setSaving(true);
-    setRecipe((r) => ({ ...r, isActive: next }));
+    // Restoring (Hidden/Archived -> Active) also clears any archivedReason,
+    // so a manually-restored recipe doesn't keep showing a stale "why" tag.
+    setRecipe((r) => ({ ...r, isActive: next, archivedReason: next ? null : r.archivedReason }));
     try {
-      await patchRecipe(recipe.id, { isActive: next });
+      await patchRecipe(recipe.id, { isActive: next, ...(next ? { archivedReason: null } : {}) });
     } catch {
-      setRecipe((r) => ({ ...r, isActive: !next }));
+      setRecipe((r) => ({ ...r, isActive: !next, archivedReason: prevReason }));
     } finally {
       setSaving(false);
     }
@@ -236,6 +239,9 @@ function RecipeRow({
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-medium text-[#1A1D1B]">{recipe.title}</p>
             <p className="text-xs text-[#6B7370]">{recipe.cuisine}</p>
+            {!recipe.isActive && recipe.archivedReason && (
+              <p className="mt-0.5 truncate text-[11px] text-[#B45309]">{recipe.archivedReason}</p>
+            )}
           </div>
         </div>
 
@@ -269,7 +275,7 @@ function RecipeRow({
                 : "border-[#E8E6E0] text-[#6B7370]"
             }`}
           >
-            {recipe.isActive ? "Active" : "Hidden"}
+            {recipe.isActive ? "Active" : "Restore"}
           </button>
 
           <CookbookMenu
@@ -328,22 +334,24 @@ export function RecipesClient({
     }
   }
 
-  // A recipe with multiple mealSlot tags (e.g. LUNCH + SNACK) appears under
-  // every category it declares.
+  // Each active recipe belongs to exactly one category. Archived (isActive:
+  // false) recipes are excluded here and shown in their own section instead,
+  // so a recipe never appears in both places at once.
   const grouped = useMemo(() => {
     const map = new Map<string, AdminRecipeRow[]>();
     for (const category of MEAL_CATEGORIES) map.set(category.key, []);
     for (const recipe of recipes) {
-      for (const slot of recipe.mealSlot) {
-        const list = map.get(slot);
-        if (list) list.push(recipe);
-      }
+      if (!recipe.isActive) continue;
+      const list = map.get(recipe.mealSlot);
+      if (list) list.push(recipe);
     }
     return MEAL_CATEGORIES.map((category) => ({
       ...category,
       rows: map.get(category.key) ?? [],
     }));
   }, [recipes]);
+
+  const archived = useMemo(() => recipes.filter((r) => !r.isActive), [recipes]);
 
   // Since a flagged recipe could live in multiple category groups, a
   // filter=unverified/active query param expands every section by default
@@ -370,7 +378,7 @@ export function RecipesClient({
         cookMinutes: number;
         difficulty: EditorRecipe["difficulty"];
         cuisineId: string;
-        mealSlot: string[];
+        mealSlot: string;
         effortTier: EditorRecipe["effortTier"];
         batchFriendly: boolean;
         attributes: string[];
@@ -462,6 +470,32 @@ export function RecipesClient({
             </details>
           );
         })}
+
+        <details
+          open={expandAll}
+          className="group rounded-2xl border border-[#E8E6E0] bg-white"
+        >
+          <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-[#1A1D1B]">
+            <span>Archived</span>
+            <span className="text-xs font-normal text-[#6B7370]">
+              {archived.length} recipe{archived.length === 1 ? "" : "s"}
+            </span>
+          </summary>
+          <div className="border-t border-[#E8E6E0] px-4">
+            {archived.length === 0 && (
+              <p className="py-3 text-xs text-[#6B7370]">No archived recipes.</p>
+            )}
+            {archived.map((recipe) => (
+              <RecipeRow
+                key={recipe.id}
+                recipe={recipe}
+                onEdit={openEdit}
+                cookbooks={cookbooks}
+                onCreateCookbook={createCookbook}
+              />
+            ))}
+          </div>
+        </details>
 
         <AddCuisineInline onCreated={() => router.refresh()} />
       </div>

@@ -1,19 +1,21 @@
-// Timezone-aware meal-slot windows. The dashboard shows Breakfast/Lunch/Dinner
-// recipes based on each user's own local time of day, switching automatically
-// at three boundaries: 4:00am (Breakfast starts), 10:00am (Lunch starts), and
-// 4:00pm (Dinner starts, spanning through to 3:59am the next local day).
+// Timezone-aware meal-slot windows. The main dashboard rotation only ever
+// shows Lunch/Dinner recipes (Breakfast/Tapas recipes live in their own
+// always-on rotating sections instead — see loadRotatingSlotSections in
+// select-daily.ts) — so there are only two time-of-day windows: Lunch is
+// weighted more heavily 6:00am-11:59am, and Dinner dominates the rest of the
+// day (noon through 5:59am the next local day).
 //
 // Built entirely on Intl.DateTimeFormat's `timeZone` option — no timezone
 // library dependency needed. We only ever need (a) the local hour/minute to
-// classify the current slot, and (b) a *duration* until the next boundary
+// classify the current window, and (b) a *duration* until the next boundary
 // (not an absolute wall-clock conversion), which is timezone-offset-safe
 // without needing full zoned-datetime arithmetic.
 
-export type MealSlot = "BREAKFAST" | "LUNCH" | "DINNER";
+export type MealSlot = "LUNCH" | "DINNER";
 
 export const DEFAULT_TIMEZONE = "UTC";
 
-const BOUNDARY_HOURS = [4, 10, 16] as const;
+const BOUNDARY_HOURS = [6, 12] as const;
 
 function localParts(timezone: string, now: Date) {
   let formatter: Intl.DateTimeFormat;
@@ -52,8 +54,7 @@ function localParts(timezone: string, now: Date) {
 
 export function getCurrentMealSlot(timezone: string | null | undefined, now: Date = new Date()): MealSlot {
   const { hour } = localParts(timezone || DEFAULT_TIMEZONE, now);
-  if (hour >= 4 && hour < 10) return "BREAKFAST";
-  if (hour >= 10 && hour < 16) return "LUNCH";
+  if (hour >= 6 && hour < 12) return "LUNCH";
   return "DINNER";
 }
 
@@ -67,9 +68,9 @@ export function getMealSlotWindowKey(timezone: string | null | undefined, now: D
   const tz = timezone || DEFAULT_TIMEZONE;
   const { year, month, day, hour } = localParts(tz, now);
 
-  if (hour < 4) {
-    // Hours 0-3 are still part of the *previous* local calendar day's Dinner
-    // window (Dinner spans 16:00 -> 03:59), not a fresh Breakfast window yet.
+  if (hour < 6) {
+    // Hours 0-5 are still part of the *previous* local calendar day's Dinner
+    // window (Dinner spans 12:00 -> 05:59), not a fresh Lunch window yet.
     const prevDay = new Date(Date.UTC(year, month - 1, day));
     prevDay.setUTCDate(prevDay.getUTCDate() - 1);
     return `${prevDay.getUTCFullYear()}-${pad(prevDay.getUTCMonth() + 1)}-${pad(prevDay.getUTCDate())}:DINNER`;
@@ -95,15 +96,23 @@ export function nextMealSlotWindowAt(timezone: string | null | undefined, now: D
   return new Date(now.getTime() + minutesUntilNextMealSlotBoundary(timezone, now) * 60_000);
 }
 
-// Deterministic, low-probability "should this window include a scattered
-// snack" check. Seeded from userId+windowKey so it's stable for the whole
-// window (no flicker on reload) but varies window-to-window and user-to-user.
-export function shouldScatterSnack(seed: string, probability = 0.15): boolean {
+// Local calendar-day key (YYYY-MM-DD), used to seed the once-daily rotating
+// Tapas/Breakfast sections — stable all day, changes at local midnight
+// rollover (per the user's own timezone, same as the Lunch/Dinner windows).
+export function getLocalDateKey(timezone: string | null | undefined, now: Date = new Date()): string {
+  const tz = timezone || DEFAULT_TIMEZONE;
+  const { year, month, day } = localParts(tz, now);
+  return `${year}-${pad(month)}-${pad(day)}`;
+}
+
+// Deterministic hash of a string into an unsigned 32-bit integer — used to
+// seed the daily rotating Tapas/Breakfast picks (see seededShuffle in
+// select-daily.ts) so every user sees the same 6-recipe set on a given
+// calendar day without persisting anything server-side.
+export function hashSeed(seed: string): number {
   let hash = 0;
   for (let i = 0; i < seed.length; i++) {
     hash = (hash * 31 + seed.charCodeAt(i)) | 0;
   }
-  // Map the hash to [0, 1).
-  const normalized = (hash >>> 0) / 0xffffffff;
-  return normalized < probability;
+  return hash >>> 0;
 }
