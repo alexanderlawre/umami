@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
+import { Liquid } from "liquid-gooey";
 import { logInteraction } from "@/lib/log-interaction";
 import { shuffle } from "@/lib/shuffle";
 import {
@@ -316,17 +317,31 @@ function FilterTagButton({
       ? dietEmblemClass(tag.value) ?? "bg-[#1A1D1B] text-white"
       : "bg-[#1A1D1B] text-white";
   return (
-    <button
-      onClick={() => onToggle(tag.value)}
-      aria-pressed={active}
-      className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
-        active
-          ? `border-transparent ${activeClass}`
-          : "border-[#E8E6E0] bg-white text-[#6B7370] hover:bg-[#EDF3EF]"
-      }`}
+    // Each chip gets its own single-item liquid group. The blob is
+    // transparent while inactive so it stays invisible, and pops in with a
+    // springy liquid-shape transition the moment the chip is toggled on —
+    // the fill only shows up as a soft gooey halo behind an active tag.
+    <Liquid
+      blur={5}
+      contrast={22}
+      fill={active ? "rgba(31, 95, 69, 0.16)" : "transparent"}
+      shadow={active ? "0 2px 6px rgba(31, 95, 69, 0.18)" : undefined}
+      className="inline-block"
     >
-      {tag.label}
-    </button>
+      <Liquid.Item morph={{ shape: true }} scale={active ? 1.06 : 1} transition="bouncy">
+        <button
+          onClick={() => onToggle(tag.value)}
+          aria-pressed={active}
+          className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+            active
+              ? `border-transparent ${activeClass}`
+              : "border-[#E8E6E0] bg-white text-[#6B7370] hover:bg-[#EDF3EF]"
+          }`}
+        >
+          {tag.label}
+        </button>
+      </Liquid.Item>
+    </Liquid>
   );
 }
 
@@ -522,6 +537,7 @@ export function DashboardClient({
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [refreshPending, setRefreshPending] = useState(false);
   const [refreshMessage, setRefreshMessage] = useState<string | null>(null);
+  const [refreshPressed, setRefreshPressed] = useState(false);
 
   const availableTags = useMemo<FilterTag[]>(() => {
     const diets = new Set<string>();
@@ -664,33 +680,52 @@ export function DashboardClient({
       )}
 
       <div className="mt-6 flex flex-col items-center gap-2">
-        <MotionButton
-          onClick={handleRefresh}
-          disabled={refreshDisabled}
-          whileHover={{ y: -2 }}
-          className="flex items-center gap-2 rounded-full border border-[#E8E6E0] px-5 py-3 text-sm font-medium text-[#1A1D1B] transition-colors hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
+        {/* A soft gooey halo that squishes on press and settles back with a
+            springy liquid-shape transition — purely decorative, layered
+            behind the real (crisp, fully interactive) button. */}
+        <Liquid
+          blur={7}
+          contrast={18}
+          fill="rgba(31, 95, 69, 0.14)"
+          shadow="0 3px 10px rgba(31, 95, 69, 0.14)"
         >
-          <motion.svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            className="h-4 w-4"
-            animate={refreshPending ? { rotate: 360 } : { rotate: 0 }}
-            transition={
-              refreshPending
-                ? { repeat: Infinity, duration: 0.8, ease: "linear" }
-                : { duration: 0.2 }
-            }
+          <Liquid.Item
+            morph={{ shape: true }}
+            scale={refreshPressed ? 0.92 : 1}
+            transition="bouncy"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-            />
-          </motion.svg>
-          {refreshPending ? "Shuffling\u2026" : "Refresh recipes"}
-        </MotionButton>
+            <MotionButton
+              onClick={handleRefresh}
+              onPointerDown={() => setRefreshPressed(true)}
+              onPointerUp={() => setRefreshPressed(false)}
+              onPointerLeave={() => setRefreshPressed(false)}
+              disabled={refreshDisabled}
+              whileHover={{ y: -2 }}
+              className="flex items-center gap-2 rounded-full border border-[#E8E6E0] px-5 py-3 text-sm font-medium text-[#1A1D1B] transition-colors hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              <motion.svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                className="h-4 w-4"
+                animate={refreshPending ? { rotate: 360 } : { rotate: 0 }}
+                transition={
+                  refreshPending
+                    ? { repeat: Infinity, duration: 0.8, ease: "linear" }
+                    : { duration: 0.2 }
+                }
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                />
+              </motion.svg>
+              {refreshPending ? "Shuffling\u2026" : "Refresh recipes"}
+            </MotionButton>
+          </Liquid.Item>
+        </Liquid>
         {refreshMessage && (
           <p className="text-xs text-[#6B7370]">{refreshMessage}</p>
         )}
