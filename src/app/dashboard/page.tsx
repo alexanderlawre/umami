@@ -25,8 +25,6 @@ export default async function DashboardPage() {
         <DashboardClient
           pool={selection.pool}
           served={selection.served}
-          refreshAvailable={selection.refreshAvailable}
-          nextWindowAt={selection.nextWindowAt.toISOString()}
           userDiets={selection.userDiets}
           cookbooks={selection.cookbooks}
           tapasSection={selection.tapasSection}

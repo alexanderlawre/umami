@@ -294,18 +294,10 @@ function dedupeFirstFour(pool: RecipeCardData[]): RecipeCardData[] {
 }
 
 // Client-only reshuffle used only while a filter is active (filtering is a
-// local, ad-hoc browsing affordance and intentionally doesn't consume the
-// user's one server-tracked manual refresh for the window).
+// local, ad-hoc browsing affordance that reshuffles within the filtered set
+// instead of round-tripping to the server-tracked refresh).
 function pickFour(pool: RecipeCardData[]): RecipeCardData[] {
   return dedupeFirstFour(shuffle(pool));
-}
-
-function formatWindowTime(iso: string): string {
-  try {
-    return new Date(iso).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-  } catch {
-    return "later";
-  }
 }
 
 type FilterTag = { value: string; label: string; kind: "diet" | "attribute" };
@@ -512,8 +504,6 @@ function RotatingSlotSection({
 export function DashboardClient({
   pool,
   served,
-  refreshAvailable,
-  nextWindowAt,
   userDiets,
   cookbooks,
   tapasSection,
@@ -521,8 +511,6 @@ export function DashboardClient({
 }: {
   pool: RecipeCardData[];
   served: RecipeCardData[];
-  refreshAvailable: boolean;
-  nextWindowAt: string;
   userDiets: string[];
   cookbooks: CookbookSection[];
   tapasSection: RecipeCardData[];
@@ -532,8 +520,6 @@ export function DashboardClient({
   const [visible, setVisible] = useState(() => dedupeFirstFour(served));
   const [cookbooksState, setCookbooksState] = useState(cookbooks);
   const [selected, setSelected] = useState<Set<string>>(new Set());
-  const [canRefresh, setCanRefresh] = useState(refreshAvailable);
-  const [nextAt, setNextAt] = useState(nextWindowAt);
   const [refreshPending, setRefreshPending] = useState(false);
   const [refreshMessage, setRefreshMessage] = useState<string | null>(null);
 
@@ -575,27 +561,17 @@ export function DashboardClient({
     setRefreshMessage(null);
 
     // While a filter is active, "refresh" is just a local reshuffle within
-    // the filtered pool and doesn't touch the server-tracked manual-refresh
-    // budget for the window.
+    // the filtered pool and doesn't touch the server.
     if (selected.size > 0) {
       setVisible(pickFour(filteredPool));
       return;
     }
 
-    if (!canRefresh || refreshPending) return;
+    if (refreshPending) return;
     setRefreshPending(true);
     try {
       const res = await fetch("/api/dashboard/refresh", { method: "POST" });
       const body = await res.json().catch(() => null);
-
-      if (res.status === 429) {
-        setCanRefresh(false);
-        if (body?.nextWindowAt) setNextAt(body.nextWindowAt);
-        setRefreshMessage(
-          `You've used your reshuffle for now. Next one available around ${formatWindowTime(body?.nextWindowAt ?? nextAt)}.`,
-        );
-        return;
-      }
 
       if (!res.ok || !body?.recipes) {
         setRefreshMessage("Something went wrong. Try again.");
@@ -603,8 +579,6 @@ export function DashboardClient({
       }
 
       setVisible(body.recipes);
-      setCanRefresh(false);
-      if (body.nextWindowAt) setNextAt(body.nextWindowAt);
     } catch {
       setRefreshMessage("Something went wrong. Try again.");
     } finally {
@@ -656,7 +630,7 @@ export function DashboardClient({
   }
 
   const refreshDisabled =
-    selected.size === 0 ? !canRefresh || refreshPending : filteredPool.length === 0;
+    selected.size === 0 ? refreshPending : filteredPool.length === 0;
 
   return (
     <div>
@@ -715,19 +689,8 @@ export function DashboardClient({
               d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
             />
           </motion.svg>
-          {refreshPending
-            ? "Shuffling\u2026"
-            : selected.size === 0 && !canRefresh
-              ? "Reshuffle used for now"
-              : "Refresh recipes"}
+          {refreshPending ? "Shuffling\u2026" : "Refresh recipes"}
         </MotionButton>
-        {selected.size === 0 && (
-          <p className="text-xs text-[#6B7370]">
-            {canRefresh
-              ? "You have one reshuffle available until the next refresh."
-              : `Next automatic refresh around ${formatWindowTime(nextAt)}.`}
-          </p>
-        )}
         {refreshMessage && (
           <p className="text-xs text-[#6B7370]">{refreshMessage}</p>
         )}

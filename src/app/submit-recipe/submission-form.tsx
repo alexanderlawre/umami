@@ -35,7 +35,7 @@ export function SubmissionForm({
     setForm((f) => ({ ...f, [key]: value }));
   }
 
-  function toggleArrayValue(key: "mealSlot" | "attributes" | "dietIds" | "allergenIds", value: string) {
+  function toggleArrayValue(key: "attributes" | "dietIds" | "allergenIds", value: string) {
     setForm((f) => {
       const list = f[key] as string[];
       const next = list.includes(value) ? list.filter((v) => v !== value) : [...list, value];

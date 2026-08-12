@@ -13,7 +13,6 @@ import {
 import type { RecipeCardData } from "@/app/dashboard/dashboard-client";
 
 export const DAILY_CARD_COUNT = 4;
-export const MAX_MANUAL_REFRESHES_PER_WINDOW = 1;
 export const ROTATING_SLOT_COUNT = 6;
 
 export type EligibleRecipe = FilterableRecipe & RecipeCardData;
@@ -188,7 +187,6 @@ export type DailySelection = {
   pool: RecipeCardData[];
   served: RecipeCardData[];
   currentSlot: MealSlot;
-  refreshAvailable: boolean;
   nextWindowAt: Date;
   userDiets: string[];
   cookbooks: CookbookSection[];
@@ -234,7 +232,6 @@ export async function getDailySelection(userId: string): Promise<DailySelection>
   const distinctServedAt = [...new Set(existing.map((c) => c.servedAt.getTime()))].sort(
     (a, b) => b - a
   );
-  const refreshesUsedThisWindow = Math.max(0, distinctServedAt.length - 1);
 
   let served: EligibleRecipe[];
 
@@ -278,7 +275,6 @@ export async function getDailySelection(userId: string): Promise<DailySelection>
     pool: pool.map(toCardData),
     served: served.map(toCardData),
     currentSlot,
-    refreshAvailable: refreshesUsedThisWindow < MAX_MANUAL_REFRESHES_PER_WINDOW,
     nextWindowAt: nextMealSlotWindowAt(timezone),
     userDiets: profile.diets,
     cookbooks,
@@ -287,26 +283,19 @@ export async function getDailySelection(userId: string): Promise<DailySelection>
   };
 }
 
-export type RefreshResult =
-  | { ok: true; served: RecipeCardData[]; nextWindowAt: Date }
-  | { ok: false; reason: "no-refresh-available"; nextWindowAt: Date };
+export type RefreshResult = { served: RecipeCardData[]; nextWindowAt: Date };
 
+// No cap on manual reshuffles — a user can hit "Refresh recipes" as many
+// times as they like. Each refresh excludes every recipe already served
+// this window (not just the latest batch) so repeated refreshes keep
+// surfacing new combinations until the eligible pool is exhausted, at
+// which point pickDaily's own fallback reuses the full pool again.
 export async function refreshDailySelection(userId: string): Promise<RefreshResult> {
   const { pool, profile, timezone, currentSlot, windowKey } = await loadDashboardContext(userId);
 
   const existing = await prisma.servedCard.findMany({
     where: { userId, windowKey },
   });
-  const distinctServedAt = new Set(existing.map((c) => c.servedAt.getTime()));
-  const refreshesUsedThisWindow = Math.max(0, distinctServedAt.size - 1);
-
-  if (refreshesUsedThisWindow >= MAX_MANUAL_REFRESHES_PER_WINDOW) {
-    return {
-      ok: false,
-      reason: "no-refresh-available",
-      nextWindowAt: nextMealSlotWindowAt(timezone),
-    };
-  }
 
   const currentIds = new Set(existing.map((c) => c.recipeId));
   const served = pickDaily(pool, profile, currentSlot, currentIds);
@@ -318,5 +307,5 @@ export async function refreshDailySelection(userId: string): Promise<RefreshResu
     });
   }
 
-  return { ok: true, served: served.map(toCardData), nextWindowAt: nextMealSlotWindowAt(timezone) };
+  return { served: served.map(toCardData), nextWindowAt: nextMealSlotWindowAt(timezone) };
 }

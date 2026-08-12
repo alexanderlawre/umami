@@ -10,16 +10,6 @@ export async function POST() {
 
   const result = await refreshDailySelection(session.user.id);
 
-  if (!result.ok) {
-    return NextResponse.json(
-      {
-        error: "No manual refresh available until the next window.",
-        nextWindowAt: result.nextWindowAt.toISOString(),
-      },
-      { status: 429 },
-    );
-  }
-
   return NextResponse.json({
     recipes: result.served,
     nextWindowAt: result.nextWindowAt.toISOString(),
