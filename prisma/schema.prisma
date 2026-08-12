@@ -33,7 +33,9 @@ enum MealSlot {
   BREAKFAST
   LUNCH
   DINNER
-  SNACK
+  SNACK // legacy value, no longer assignable via the app — kept so existing
+  // enum rows/migrations don't break; superseded by TAPAS.
+  TAPAS
 }
 
 enum EffortTier {
@@ -208,6 +210,12 @@ model Recipe {
   cuisineId    String
   cuisine      Cuisine    @relation(fields: [cuisineId], references: [id])
   mealSlot     MealSlot[]
+  // Single-value replacement for `mealSlot` during the meal-slot audit
+  // (see scripts/audit-meal-slot-and-health.mjs) — every recipe gets
+  // exactly one of BREAKFAST/TAPAS/LUNCH/DINNER. Nullable until the audit
+  // backfills it; a later migration drops `mealSlot` and renames this to
+  // `mealSlot` once every row is populated.
+  mealSlotPrimary MealSlot?
   effortTier   EffortTier
   batchFriendly Boolean @default(false)
 
@@ -228,6 +236,11 @@ model Recipe {
 
   allergenReviewStatus AllergenReviewStatus @default(UNVERIFIED)
   isActive             Boolean              @default(true)
+  // Why this recipe is currently inactive/archived (e.g. "High fat/calories"),
+  // shown in the admin Archive view. Null for recipes that were never
+  // archived, or for pre-existing isActive:false rows from before this field
+  // existed (they just show no reason, same as other nullable backfills).
+  archivedReason       String?
   createdAt            DateTime             @default(now())
 
   ingredients      Ingredient[]
