@@ -1,7 +1,10 @@
 // Soft scoring: everything here only ever re-ranks the pool that already
 // passed the hard allergen filter (see filter.ts) — nothing in this module
-// excludes a recipe. Diet match, meal-slot match, and favorite-cuisine match
-// are all rewards, not requirements, so the dashboard never goes empty.
+// excludes a recipe. Diet match, meal-slot match, favorite-cuisine match,
+// learned food-group affinity, and implicit (behavior-derived) cuisine
+// match are all rewards, not requirements, so the dashboard never goes
+// empty and a brand-new user with zero behavioral history still gets a
+// perfectly good score from just their declared onboarding preferences.
 
 import type { MealSlot } from "@/lib/meal-slot";
 
@@ -9,11 +12,26 @@ export type ScorableRecipe = {
   dietTags: string[];
   mealSlot: string;
   cuisine: string;
+  // 0-100 weight per FoodGroup this recipe belongs to (RecipeFoodGroup) —
+  // optional so any caller that doesn't care about learned personalization
+  // (or hasn't loaded it) keeps working unchanged.
+  foodGroups?: { foodGroupId: string; weight: number }[];
 };
 
 export type ScoringProfile = {
   diets: string[];
   favoriteCuisines: string[];
+  // Blended per-FoodGroup affinity (0-100), keyed by FoodGroup id — see
+  // select-daily.ts's loadDashboardContext for how this is derived from
+  // FoodGroupPreference (learnedValue once it has drifted from
+  // declaredValue, i.e. real behavioral signal exists; declaredValue
+  // otherwise). Absent entirely for cold-start users with no preferences
+  // row yet — the affinity term below just contributes nothing then.
+  foodGroupAffinity?: Map<string, number>;
+  // Cuisines inferred from actual cooking behavior (CookLog), additive on
+  // top of — not a replacement for — the user's declared onboarding
+  // favoriteCuisines.
+  implicitFavoriteCuisines?: string[];
 };
 
 // The main rotation pool only ever contains LUNCH/DINNER recipes (Breakfast
@@ -26,6 +44,12 @@ const PRIMARY_MEAL_SLOT_WEIGHT = 6;
 const SECONDARY_MEAL_SLOT_WEIGHT = 2;
 const DIET_MATCH_WEIGHT = 2;
 const FAVORITE_CUISINE_WEIGHT = 3;
+// Smaller than the declared favorite-cuisine bonus — behavior-inferred
+// preference is a weaker signal than something the user explicitly told us.
+const IMPLICIT_CUISINE_WEIGHT = 2;
+// Max bonus at perfect alignment (recipe weight and user affinity both
+// 100); scales down smoothly as either drops toward 0.
+const FOOD_GROUP_AFFINITY_WEIGHT = 4;
 // Every recipe gets a small base weight so recipes that match nothing are
 // still eligible to be picked (weighted-random, not a cutoff).
 const BASE_WEIGHT = 1;
@@ -46,7 +70,32 @@ export function scoreRecipe(
     score += FAVORITE_CUISINE_WEIGHT;
   }
 
+  if (profile.implicitFavoriteCuisines?.includes(recipe.cuisine)) {
+    score += IMPLICIT_CUISINE_WEIGHT;
+  }
+
+  if (profile.foodGroupAffinity && recipe.foodGroups && recipe.foodGroups.length > 0) {
+    score += foodGroupAffinityBonus(recipe.foodGroups, profile.foodGroupAffinity) * FOOD_GROUP_AFFINITY_WEIGHT;
+  }
+
   return score;
+}
+
+// Average alignment across every food group this recipe touches — both the
+// recipe's weight and the user's affinity are 0-100, so alignment is only
+// high when *both* are high together (a recipe that's 100% "spicy" scores
+// nothing extra from a user with 0 learned affinity for spicy food, and
+// vice versa). Returns 0-1.
+function foodGroupAffinityBonus(
+  foodGroups: { foodGroupId: string; weight: number }[],
+  affinity: Map<string, number>,
+): number {
+  const alignments = foodGroups.map(({ foodGroupId, weight }) => {
+    const userAffinity = affinity.get(foodGroupId);
+    if (userAffinity === undefined) return 0;
+    return (weight / 100) * (userAffinity / 100);
+  });
+  return alignments.reduce((a, b) => a + b, 0) / alignments.length;
 }
 
 // Weighted-random shuffle: higher-scoring recipes are more likely to sort

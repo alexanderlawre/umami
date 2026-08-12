@@ -6,7 +6,6 @@ import {
   getCurrentMealSlot,
   getLocalDateKey,
   getMealSlotWindowKey,
-  hashSeed,
   nextMealSlotWindowAt,
   type MealSlot,
 } from "@/lib/meal-slot";
@@ -14,8 +13,23 @@ import type { RecipeCardData } from "@/app/dashboard/dashboard-client";
 
 export const DAILY_CARD_COUNT = 4;
 export const ROTATING_SLOT_COUNT = 6;
+// Of the 4 main daily cards, this many are reserved for a deliberate
+// "discovery" pick (see pickDaily) — chosen by inverting the affinity
+// scoring instead of maximizing it, so the user keeps seeing at least one
+// new thing outside their established taste profile even once learning
+// kicks in. The other 3 stay affinity-weighted as before.
+const DISCOVERY_SLOT_COUNT = 1;
+// A cook history this short isn't enough to confidently infer a favorite
+// cuisine from behavior alone — below this, implicitFavoriteCuisines stays
+// empty and scoring falls back to declared preferences only.
+const IMPLICIT_CUISINE_MIN_COUNT = 2;
 
-export type EligibleRecipe = FilterableRecipe & RecipeCardData;
+export type EligibleRecipe = FilterableRecipe &
+  RecipeCardData & {
+    // 0-100 weight per FoodGroup this recipe belongs to — scoring-only,
+    // never rendered on the card itself (see toCardData, which drops it).
+    foodGroups: { foodGroupId: string; weight: number }[];
+  };
 
 type DashboardContext = {
   // Main 4-card rotation pool: LUNCH/DINNER recipes only — Breakfast and
@@ -30,27 +44,38 @@ type DashboardContext = {
 };
 
 async function loadDashboardContext(userId: string): Promise<DashboardContext> {
-  const [user, preferences, recipes, savedRecipes] = await Promise.all([
-    prisma.user.findUnique({ where: { id: userId }, select: { timezone: true } }),
-    prisma.userPreferences.findUnique({
-      where: { userId },
-      include: { diets: true, allergens: true },
-    }),
-    prisma.recipe.findMany({
-      where: { isActive: true },
-      include: {
-        dietTags: true,
-        allergenTags: true,
-        attributeTags: { select: { code: true } },
-        cuisine: true,
-        ingredients: { select: { item: true } },
-      },
-    }),
-    prisma.savedRecipe.findMany({
-      where: { userId, savedAt: { gte: savedRecipeExpiryCutoff() } },
-      select: { recipeId: true },
-    }),
-  ]);
+  const [user, preferences, recipes, savedRecipes, foodGroupPrefs, cookedCuisineRows] =
+    await Promise.all([
+      prisma.user.findUnique({ where: { id: userId }, select: { timezone: true } }),
+      prisma.userPreferences.findUnique({
+        where: { userId },
+        include: { diets: true, allergens: true },
+      }),
+      prisma.recipe.findMany({
+        where: { isActive: true },
+        include: {
+          dietTags: true,
+          allergenTags: true,
+          attributeTags: { select: { code: true } },
+          cuisine: true,
+          ingredients: { select: { item: true } },
+          foodGroupProfile: { select: { foodGroupId: true, weight: true } },
+        },
+      }),
+      prisma.savedRecipe.findMany({
+        where: { userId, savedAt: { gte: savedRecipeExpiryCutoff() } },
+        select: { recipeId: true },
+      }),
+      // Learned taste profile — see learn.ts for how these get written
+      // (cook/star = positive nudge, dismiss/mute = negative nudge).
+      prisma.foodGroupPreference.findMany({ where: { userId } }),
+      // Behavior-derived cuisine affinity, separate from declared
+      // onboarding favoriteCuisines (see scoreRecipe's implicitFavoriteCuisines).
+      prisma.cookLog.findMany({
+        where: { userId },
+        select: { recipe: { select: { cuisine: { select: { name: true } } } } },
+      }),
+    ]);
 
   const userProfile = {
     diets: preferences?.diets.map((d) => d.name) ?? [],
@@ -79,10 +104,33 @@ async function loadDashboardContext(userId: string): Promise<DashboardContext> {
     allergenTags: r.allergenTags.map((a) => a.name),
     ingredientItems: r.ingredients.map((i) => i.item),
     saved: savedRecipeIds.has(r.id),
+    isDiscovery: false,
+    foodGroups: r.foodGroupProfile.map((fg) => ({ foodGroupId: fg.foodGroupId, weight: fg.weight })),
   }));
 
   const timezone = user?.timezone ?? null;
   const eligible = filterEligibleRecipes(candidates, userProfile);
+
+  // Blend learnedValue in once real behavioral signal exists (i.e. it has
+  // actually drifted away from the frozen onboarding declaredValue);
+  // otherwise the two are still identical anyway, so this is a no-op for
+  // brand-new users — cold start falls back to declared preferences alone,
+  // same as before this feature existed.
+  const foodGroupAffinity = new Map<string, number>();
+  for (const p of foodGroupPrefs) {
+    foodGroupAffinity.set(p.foodGroupId, p.learnedValue);
+  }
+
+  const cuisineCounts = new Map<string, number>();
+  for (const row of cookedCuisineRows) {
+    const name = row.recipe.cuisine.name;
+    cuisineCounts.set(name, (cuisineCounts.get(name) ?? 0) + 1);
+  }
+  const implicitFavoriteCuisines = [...cuisineCounts.entries()]
+    .filter(([, count]) => count >= IMPLICIT_CUISINE_MIN_COUNT)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 2)
+    .map(([name]) => name);
 
   return {
     pool: eligible.filter((r) => r.mealSlot === "LUNCH" || r.mealSlot === "DINNER"),
@@ -91,6 +139,8 @@ async function loadDashboardContext(userId: string): Promise<DashboardContext> {
     profile: {
       diets: userProfile.diets,
       favoriteCuisines: preferences?.favoriteCuisines ?? [],
+      foodGroupAffinity: foodGroupAffinity.size > 0 ? foodGroupAffinity : undefined,
+      implicitFavoriteCuisines: implicitFavoriteCuisines.length > 0 ? implicitFavoriteCuisines : undefined,
     },
     timezone,
     currentSlot: getCurrentMealSlot(timezone),
@@ -98,14 +148,43 @@ async function loadDashboardContext(userId: string): Promise<DashboardContext> {
   };
 }
 
+// Inverted score: favors recipes touching food groups the user has the
+// *least* learned affinity for, so the discovery slot deliberately explores
+// outside the established taste profile instead of just picking a low
+// scorer by coincidence. Still only ever drawn from the same
+// allergy-filtered, diet-eligible pool as everything else — discovery only
+// ever changes *which* eligible recipe surfaces, never bypasses
+// eligibility.
+function discoveryWeight(recipe: EligibleRecipe, profile: ScoringProfile): number {
+  const affinity = profile.foodGroupAffinity;
+  if (!affinity || recipe.foodGroups.length === 0) return 1;
+
+  const alignments = recipe.foodGroups.map(({ foodGroupId, weight }) => {
+    const userAffinity = affinity.get(foodGroupId);
+    if (userAffinity === undefined) return 0.5; // unknown = neutral, still explorable
+    return (weight / 100) * (userAffinity / 100);
+  });
+  const avgAlignment = alignments.reduce((a, b) => a + b, 0) / alignments.length;
+  // Low alignment -> high discovery weight. Floors at 0.05 so nothing is
+  // ever fully unreachable (weightedShuffle already floors weight at 0.01,
+  // this just keeps the intent explicit here too).
+  return Math.max(0.05, 1 - avgAlignment);
+}
+
 // Favorited (saved) recipes get priority for the daily four so a starred
 // recipe is more likely to keep surfacing, without ever being *required* to
 // (saving itself, via SavedRecipe, already persists independent of what the
 // dashboard shows — see cook-later). Within each priority tier, recipes are
 // weighted-shuffled by soft score (lunch/dinner time-of-day weighting, diet
-// match, favorite cuisine) — nothing here ever excludes a recipe, only
-// re-ranks it. The pool itself is already restricted to LUNCH/DINNER only
-// (see loadDashboardContext) — Breakfast/Tapas never reach this function.
+// match, favorite cuisine, learned food-group affinity, implicit cuisine
+// affinity) — nothing here ever excludes a recipe, only re-ranks it. The
+// pool itself is already restricted to LUNCH/DINNER only (see
+// loadDashboardContext) — Breakfast/Tapas never reach this function.
+//
+// One of the DAILY_CARD_COUNT slots is reserved for a discovery pick (see
+// discoveryWeight) so the user always sees at least one recipe chosen to
+// explore outside their established taste profile, flagged via
+// isDiscovery so the UI can badge it.
 function pickDaily(
   pool: EligibleRecipe[],
   profile: ScoringProfile,
@@ -118,43 +197,37 @@ function pickDaily(
 
   const favorited = weightedShuffle(base.filter((r) => r.saved), weight);
   const rest = weightedShuffle(base.filter((r) => !r.saved), weight);
-  return [...favorited, ...rest].slice(0, DAILY_CARD_COUNT);
+  const affinityPicks = [...favorited, ...rest].slice(0, DAILY_CARD_COUNT - DISCOVERY_SLOT_COUNT);
+
+  const affinityPickIds = new Set(affinityPicks.map((r) => r.id));
+  const discoveryCandidates = base.filter((r) => !affinityPickIds.has(r.id));
+  const discoveryPool = discoveryCandidates.length > 0 ? discoveryCandidates : base;
+  const discoveryPicks = weightedShuffle(discoveryPool, (r) => discoveryWeight(r, profile)).slice(
+    0,
+    DISCOVERY_SLOT_COUNT,
+  );
+
+  return [
+    ...affinityPicks,
+    ...discoveryPicks.map((r) => ({ ...r, isDiscovery: true })),
+  ].slice(0, DAILY_CARD_COUNT);
 }
 
-// Mulberry32 — a small, fast, deterministic PRNG. Given the same numeric
-// seed it always produces the same sequence, which is exactly what the
-// once-daily rotating Tapas/Breakfast sections need (same 6 recipes for
-// everyone until the local day rolls over), unlike Math.random()-based
-// weightedShuffle used for the main rotation.
-function mulberry32(seed: number): () => number {
-  let s = seed;
-  return function () {
-    s |= 0;
-    s = (s + 0x6d2b79f5) | 0;
-    let t = Math.imul(s ^ (s >>> 15), 1 | s);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
-
-function seededShuffle<T>(items: T[], seed: number): T[] {
-  const rand = mulberry32(seed);
-  const arr = [...items];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(rand() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-// Deterministically picks up to ROTATING_SLOT_COUNT recipes from a
-// Breakfast/Tapas pool, seeded only by the slot name + local calendar day —
-// same picks for every user all day, changes at local-day rollover. Falls
-// back gracefully (returns everything available) if the pool has fewer than
-// ROTATING_SLOT_COUNT recipes.
-function pickRotatingSlot(candidates: EligibleRecipe[], seedKey: string): EligibleRecipe[] {
-  if (candidates.length === 0) return [];
-  return seededShuffle(candidates, hashSeed(seedKey)).slice(0, ROTATING_SLOT_COUNT);
+// Tapas/Breakfast rotating sections use the same weighted-random +
+// preference scoring as the main rotation (diet match, favorite cuisine,
+// learned affinity) — no separate "favorited" tier or discovery slot since
+// these sections are already a rotating sample, not a fixed set of 4.
+function pickRotating(
+  pool: EligibleRecipe[],
+  profile: ScoringProfile,
+  currentSlot: MealSlot,
+  count: number,
+  exclude: Set<string> = new Set(),
+): EligibleRecipe[] {
+  const available = pool.filter((r) => !exclude.has(r.id));
+  const base = available.length >= count ? available : pool;
+  const weight = (r: EligibleRecipe) => scoreRecipe(r, profile, currentSlot);
+  return weightedShuffle(base, weight).slice(0, count);
 }
 
 function toCardData(r: EligibleRecipe): RecipeCardData {
@@ -174,6 +247,7 @@ function toCardData(r: EligibleRecipe): RecipeCardData {
     imageUrl: r.imageUrl,
     imageCredit: r.imageCredit,
     saved: r.saved,
+    isDiscovery: r.isDiscovery,
   };
 }
 
@@ -219,67 +293,154 @@ async function loadCookbookSections(poolById: Map<string, EligibleRecipe>): Prom
     .filter((cb) => cb.recipes.length > 0);
 }
 
-export async function getDailySelection(userId: string): Promise<DailySelection> {
-  const { pool, tapasPool, breakfastPool, profile, timezone, currentSlot, windowKey } =
-    await loadDashboardContext(userId);
-  const poolById = new Map(pool.map((r) => [r.id, r]));
-
+// Reads the latest persisted batch of ServedCard rows for (userId,
+// windowKey), or creates one via `pick()` if none exists yet. This is the
+// single source of truth backing every rotating section on the dashboard
+// (main 4-card rotation, Tapas, Breakfast) — nothing is ever recomputed
+// on-the-fly from a hash/seed, so the exact same recipes in the exact same
+// order come back on every read within the window, regardless of how many
+// times the user navigates away and back (see DECISIONS.md).
+//
+// Ordering is fully deterministic via the `position` column (0..n-1,
+// written at insert time) rather than relying on `servedAt` alone: rows in
+// one batch share an identical timestamp, which has no defined order on its
+// own across separate reads/connections — that ambiguity was the root cause
+// of the "recipes reorder when you go back" bug this replaces.
+//
+// Idempotent under a race (e.g. two near-simultaneous first loads of a
+// brand-new window): the unique (userId, windowKey, servedAt, position)
+// constraint plus `skipDuplicates` means at most one writer's rows survive
+// for a given servedAt, and we always re-read the persisted rows as the
+// return value rather than trusting our own in-memory pick.
+async function getOrCreateBatch(
+  userId: string,
+  windowKey: string,
+  poolById: Map<string, EligibleRecipe>,
+  count: number,
+  pick: (exclude: Set<string>) => EligibleRecipe[],
+): Promise<EligibleRecipe[]> {
   const existing = await prisma.servedCard.findMany({
     where: { userId, windowKey },
-    orderBy: { servedAt: "desc" },
+    orderBy: [{ servedAt: "desc" }, { position: "asc" }],
   });
 
-  const distinctServedAt = [...new Set(existing.map((c) => c.servedAt.getTime()))].sort(
-    (a, b) => b - a
-  );
-
-  let served: EligibleRecipe[];
-
-  if (distinctServedAt.length > 0) {
-    const latestServedAt = distinctServedAt[0];
+  if (existing.length > 0) {
+    const latestServedAt = existing[0].servedAt.getTime();
     const latestCards = existing.filter((c) => c.servedAt.getTime() === latestServedAt);
-    served = latestCards
+    let served = latestCards
       .map((c) => poolById.get(c.recipeId))
       .filter((r): r is EligibleRecipe => Boolean(r));
 
-    // Top up if some previously-served recipes rotated out of eligibility.
-    if (served.length < DAILY_CARD_COUNT && pool.length > 0) {
+    // Top up if some previously-served recipes rotated out of eligibility
+    // (e.g. archived, allergen tags corrected since). Best-effort and
+    // in-memory only — it doesn't rewrite the persisted batch, so this can
+    // recompute slightly differently on a later read only if the catalog
+    // itself keeps changing underneath the batch, which is rare and
+    // strictly safer than showing a shrunken/ineligible card.
+    if (served.length < count && poolById.size > 0) {
       const servedIds = new Set(served.map((r) => r.id));
-      const topUp = pickDaily(pool, profile, currentSlot, servedIds).filter(
-        (r) => !servedIds.has(r.id)
-      );
-      served = [...served, ...topUp].slice(0, DAILY_CARD_COUNT);
+      const topUp = pick(servedIds).filter((r) => !servedIds.has(r.id));
+      served = [...served, ...topUp].slice(0, count);
     }
-  } else if (pool.length > 0) {
-    served = pickDaily(pool, profile, currentSlot);
-    if (served.length > 0) {
-      const servedAt = new Date();
-      await prisma.servedCard.createMany({
-        data: served.map((r) => ({ userId, recipeId: r.id, servedAt, windowKey })),
-      });
-    }
-  } else {
-    served = [];
+
+    return served;
   }
+
+  if (poolById.size === 0) return [];
+
+  const picked = pick(new Set());
+  if (picked.length === 0) return [];
+
+  const servedAt = new Date();
+  await prisma.servedCard.createMany({
+    data: picked.map((r, i) => ({ userId, recipeId: r.id, servedAt, windowKey, position: i })),
+    skipDuplicates: true,
+  });
+
+  // Re-read so that if a concurrent request raced us for this exact window,
+  // both callers converge on whichever batch actually persisted first.
+  const persisted = await prisma.servedCard.findMany({
+    where: { userId, windowKey },
+    orderBy: [{ servedAt: "desc" }, { position: "asc" }],
+  });
+  const latestServedAt = persisted[0]?.servedAt.getTime();
+  const latestCards = persisted.filter((c) => c.servedAt.getTime() === latestServedAt);
+  return latestCards
+    .map((c) => poolById.get(c.recipeId))
+    .filter((r): r is EligibleRecipe => Boolean(r));
+}
+
+// Re-derives which single persisted card (if any) should carry the
+// "Something new" discovery badge, purely by re-running discoveryWeight
+// against the already-persisted set and flagging whichever one is the
+// weakest affinity match — same logic pickDaily used to choose it
+// originally, just applied after the fact so the badge survives across
+// reads without needing its own persisted column. Cosmetic only: this can
+// never change *which* 4 recipes are shown (that's ServedCard's job) —
+// only which one, if any, carries the "Something new" label. Deterministic
+// given a fixed served set + fixed profile, so it doesn't flicker between
+// reads within the same window either.
+function flagDiscoveryCard(served: EligibleRecipe[], profile: ScoringProfile): EligibleRecipe[] {
+  if (served.length === 0 || !profile.foodGroupAffinity) return served;
+
+  let weakest = served[0];
+  let weakestWeight = -Infinity;
+  for (const r of served) {
+    const w = discoveryWeight(r, profile);
+    if (w > weakestWeight) {
+      weakestWeight = w;
+      weakest = r;
+    }
+  }
+
+  return served.map((r) => (r.id === weakest.id ? { ...r, isDiscovery: true } : r));
+}
+
+export async function getDailySelection(userId: string): Promise<DailySelection> {
+  const { pool, tapasPool, breakfastPool, profile, timezone, currentSlot, windowKey } =
+    await loadDashboardContext(userId);
+
+  const poolById = new Map(pool.map((r) => [r.id, r]));
+  const tapasById = new Map(tapasPool.map((r) => [r.id, r]));
+  const breakfastById = new Map(breakfastPool.map((r) => [r.id, r]));
+
+  // Tapas/Breakfast are keyed per-user (not just per-day) so every user
+  // gets their own random, preference-weighted rotation instead of the
+  // whole site seeing the identical 6 recipes — the window key alone
+  // (calendar day + section) already scopes rows to a single day; per-user
+  // scoping comes from ServedCard rows always being queried by userId too.
+  const dateKey = getLocalDateKey(timezone);
+  const tapasWindowKey = `${dateKey}:TAPAS`;
+  const breakfastWindowKey = `${dateKey}:BREAKFAST`;
+
+  const [served, tapasServed, breakfastServed] = await Promise.all([
+    getOrCreateBatch(userId, windowKey, poolById, DAILY_CARD_COUNT, (exclude) =>
+      pickDaily(pool, profile, currentSlot, exclude),
+    ),
+    getOrCreateBatch(userId, tapasWindowKey, tapasById, ROTATING_SLOT_COUNT, (exclude) =>
+      pickRotating(tapasPool, profile, currentSlot, ROTATING_SLOT_COUNT, exclude),
+    ),
+    getOrCreateBatch(userId, breakfastWindowKey, breakfastById, ROTATING_SLOT_COUNT, (exclude) =>
+      pickRotating(breakfastPool, profile, currentSlot, ROTATING_SLOT_COUNT, exclude),
+    ),
+  ]);
+
+  const servedWithBadge = flagDiscoveryCard(served, profile);
 
   // Cookbook sections still key off the LUNCH/DINNER pool (the old
   // hand-picked "Tapas: ..." cookbooks are gone as of Phase 4 — any other
   // future curated cookbook is expected to reference lunch/dinner recipes).
   const cookbooks = await loadCookbookSections(poolById);
 
-  const dateKey = getLocalDateKey(timezone);
-  const tapasSection = pickRotatingSlot(tapasPool, `tapas:${dateKey}`).map(toCardData);
-  const breakfastSection = pickRotatingSlot(breakfastPool, `breakfast:${dateKey}`).map(toCardData);
-
   return {
     pool: pool.map(toCardData),
-    served: served.map(toCardData),
+    served: servedWithBadge.map(toCardData),
     currentSlot,
     nextWindowAt: nextMealSlotWindowAt(timezone),
     userDiets: profile.diets,
     cookbooks,
-    tapasSection,
-    breakfastSection,
+    tapasSection: tapasServed.map(toCardData),
+    breakfastSection: breakfastServed.map(toCardData),
   };
 }
 
@@ -289,7 +450,12 @@ export type RefreshResult = { served: RecipeCardData[]; nextWindowAt: Date };
 // times as they like. Each refresh excludes every recipe already served
 // this window (not just the latest batch) so repeated refreshes keep
 // surfacing new combinations until the eligible pool is exhausted, at
-// which point pickDaily's own fallback reuses the full pool again.
+// which point pickDaily's own fallback reuses the full pool again. Unlike
+// getOrCreateBatch, this always writes a brand-new batch — that's the
+// intended effect of an explicit refresh (it deliberately replaces what
+// future back-navigation will show, as opposed to the passive reads in
+// getDailySelection which must never change the persisted batch on their
+// own).
 export async function refreshDailySelection(userId: string): Promise<RefreshResult> {
   const { pool, profile, timezone, currentSlot, windowKey } = await loadDashboardContext(userId);
 
@@ -303,9 +469,13 @@ export async function refreshDailySelection(userId: string): Promise<RefreshResu
   if (served.length > 0) {
     const servedAt = new Date();
     await prisma.servedCard.createMany({
-      data: served.map((r) => ({ userId, recipeId: r.id, servedAt, windowKey })),
+      data: served.map((r, i) => ({ userId, recipeId: r.id, servedAt, windowKey, position: i })),
+      skipDuplicates: true,
     });
   }
 
-  return { served: served.map(toCardData), nextWindowAt: nextMealSlotWindowAt(timezone) };
+  return {
+    served: flagDiscoveryCard(served, profile).map(toCardData),
+    nextWindowAt: nextMealSlotWindowAt(timezone),
+  };
 }

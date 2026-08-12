@@ -33,6 +33,12 @@ export type RecipeCardData = {
   imageUrl: string | null;
   imageCredit: string | null;
   saved: boolean;
+  // True for the one main-rotation card (if any) deliberately chosen to
+  // explore outside the user's established taste profile — see
+  // select-daily.ts's discoveryWeight/flagDiscoveryCard. Optional/undefined
+  // for any card source that doesn't compute this (cookbooks, tapas,
+  // breakfast, cook-later) — treated the same as false.
+  isDiscovery?: boolean;
 };
 
 function StarButton({
@@ -213,6 +219,11 @@ function RecipeCard({
           saved={recipe.saved}
           onSavedChange={(saved) => onSavedChange(recipe.id, saved)}
         />
+        {recipe.isDiscovery ? (
+          <span className="absolute right-3 top-3 rounded-full bg-[#1F5F45] px-2.5 py-1 text-[11px] font-medium text-white shadow-sm">
+            Something new
+          </span>
+        ) : null}
       </div>
 
       <div className="p-5">

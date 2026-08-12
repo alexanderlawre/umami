@@ -3,6 +3,7 @@ import { z } from "zod";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { savedRecipeExpiryCutoff } from "@/lib/saved-recipes";
+import { updateLearnedPreferences } from "@/lib/recommend/learn";
 
 const schema = z.object({
   recipeId: z.string(),
@@ -50,6 +51,15 @@ export async function POST(request: Request) {
     // it reappears in Cook Later rather than staying invisible.
     update: { savedAt: new Date() },
   });
+
+  // Best-effort: starring a recipe is a positive taste signal, whether it's
+  // a brand-new save or a refresh of an expired one. Never fails the save
+  // itself (already committed).
+  try {
+    await updateLearnedPreferences(userId, recipeId, "positive");
+  } catch (err) {
+    console.error("Failed to update learned preferences after save", err);
+  }
 
   return NextResponse.json({ saved: true, id: saved.id });
 }

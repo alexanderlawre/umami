@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
+import { updateLearnedPreferences } from "@/lib/recommend/learn";
 
 const schema = z.object({
   recipeId: z.string(),
@@ -63,6 +64,16 @@ export async function POST(request: Request) {
 
     return log;
   });
+
+  // Best-effort: cooking a recipe is a strong positive taste signal, but a
+  // failure here must never fail the cook-log itself (already committed).
+  // Awaited (not fire-and-forget) since serverless functions can freeze
+  // execution as soon as the response is returned.
+  try {
+    await updateLearnedPreferences(userId, recipeId, "positive");
+  } catch (err) {
+    console.error("Failed to update learned preferences after cook", err);
+  }
 
   return NextResponse.json({ cookLogId: cookLog.id });
 }

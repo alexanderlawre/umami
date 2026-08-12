@@ -453,7 +453,17 @@ model ServedCard {
   // window key and become inert history, same as other append-only logs here.
   windowKey      String   @default("")
   scoreBreakdown Json?
+  // 0-based position within its batch (same userId+windowKey+servedAt) —
+  // added to make batch reads deterministic. Ties on servedAt (every row in
+  // a batch is written with the same timestamp) have no defined order on
+  // their own, so relying on servedAt alone let the same 4 served recipes
+  // come back in a different order across requests (see DECISIONS.md /
+  // the "recipes change on back navigation" fix). Defaults to 0 for legacy
+  // rows pre-dating this field; backfilled properly by a follow-up
+  // migration before the uniqueness constraint is added.
+  position       Int      @default(0)
 
   @@index([userId, servedAt])
   @@index([userId, windowKey])
+  @@unique([userId, windowKey, servedAt, position])
 }

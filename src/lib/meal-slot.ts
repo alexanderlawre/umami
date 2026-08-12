@@ -105,14 +105,3 @@ export function getLocalDateKey(timezone: string | null | undefined, now: Date =
   return `${year}-${pad(month)}-${pad(day)}`;
 }
 
-// Deterministic hash of a string into an unsigned 32-bit integer — used to
-// seed the daily rotating Tapas/Breakfast picks (see seededShuffle in
-// select-daily.ts) so every user sees the same 6-recipe set on a given
-// calendar day without persisting anything server-side.
-export function hashSeed(seed: string): number {
-  let hash = 0;
-  for (let i = 0; i < seed.length; i++) {
-    hash = (hash * 31 + seed.charCodeAt(i)) | 0;
-  }
-  return hash >>> 0;
-}
