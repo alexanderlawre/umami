@@ -171,20 +171,51 @@ function discoveryWeight(recipe: EligibleRecipe, profile: ScoringProfile): numbe
   return Math.max(0.05, 1 - avgAlignment);
 }
 
-// Favorited (saved) recipes get priority for the daily four so a starred
-// recipe is more likely to keep surfacing, without ever being *required* to
-// (saving itself, via SavedRecipe, already persists independent of what the
-// dashboard shows — see cook-later). Within each priority tier, recipes are
-// weighted-shuffled by soft score (lunch/dinner time-of-day weighting, diet
-// match, favorite cuisine, learned food-group affinity, implicit cuisine
-// affinity) — nothing here ever excludes a recipe, only re-ranks it. The
-// pool itself is already restricted to LUNCH/DINNER only (see
-// loadDashboardContext) — Breakfast/Tapas never reach this function.
-//
+// Deterministically prioritizes the user's declared favorite cuisines over
+// everything else, so they actually dominate the affinity slots on any day
+// there are enough eligible recipes in a preferred cuisine — not just "more
+// likely to appear" via score alone (a probabilistic weighted-shuffle can
+// still lose a 3x-weighted recipe to a 1x one fairly often). Behavior-
+// inferred (implicit) cuisine matches are the second-priority tier — a
+// weaker signal than something the user explicitly told us, but still
+// ahead of everything else. Saved-recipe priority is preserved *within*
+// each cuisine tier (a saved recipe outside the user's favorite cuisines
+// still loses a slot to an unsaved favorite-cuisine recipe, since the
+// entire point here is cuisine dominance, not just a tiebreaker). Nothing
+// is ever excluded — a tier that comes up short just falls through to the
+// next one, so users with no declared cuisines (or too small an eligible
+// pool) see exactly the old score-only behavior.
+function pickAffinity(
+  base: EligibleRecipe[],
+  profile: ScoringProfile,
+  weight: (r: EligibleRecipe) => number,
+  count: number,
+): EligibleRecipe[] {
+  const declared = new Set(profile.favoriteCuisines);
+  const implicit = new Set(profile.implicitFavoriteCuisines ?? []);
+
+  const declaredTier = base.filter((r) => declared.has(r.cuisine));
+  const implicitTier = base.filter((r) => !declared.has(r.cuisine) && implicit.has(r.cuisine));
+  const restTier = base.filter((r) => !declared.has(r.cuisine) && !implicit.has(r.cuisine));
+
+  const orderTier = (recipes: EligibleRecipe[]) => {
+    const saved = weightedShuffle(recipes.filter((r) => r.saved), weight);
+    const unsaved = weightedShuffle(recipes.filter((r) => !r.saved), weight);
+    return [...saved, ...unsaved];
+  };
+
+  return [...orderTier(declaredTier), ...orderTier(implicitTier), ...orderTier(restTier)].slice(0, count);
+}
+
 // One of the DAILY_CARD_COUNT slots is reserved for a discovery pick (see
 // discoveryWeight) so the user always sees at least one recipe chosen to
 // explore outside their established taste profile, flagged via
-// isDiscovery so the UI can badge it.
+// isDiscovery so the UI can badge it. The other DAILY_CARD_COUNT - 1 slots
+// go through pickAffinity, so on a normal day they're dominated by the
+// user's favorite cuisines first, with "try something new" as the one
+// deliberate exception. The pool itself is already restricted to
+// LUNCH/DINNER only (see loadDashboardContext) — Breakfast/Tapas never
+// reach this function.
 function pickDaily(
   pool: EligibleRecipe[],
   profile: ScoringProfile,
@@ -195,9 +226,7 @@ function pickDaily(
   const base = available.length >= DAILY_CARD_COUNT ? available : pool;
   const weight = (r: EligibleRecipe) => scoreRecipe(r, profile, currentSlot);
 
-  const favorited = weightedShuffle(base.filter((r) => r.saved), weight);
-  const rest = weightedShuffle(base.filter((r) => !r.saved), weight);
-  const affinityPicks = [...favorited, ...rest].slice(0, DAILY_CARD_COUNT - DISCOVERY_SLOT_COUNT);
+  const affinityPicks = pickAffinity(base, profile, weight, DAILY_CARD_COUNT - DISCOVERY_SLOT_COUNT);
 
   const affinityPickIds = new Set(affinityPicks.map((r) => r.id));
   const discoveryCandidates = base.filter((r) => !affinityPickIds.has(r.id));
@@ -213,10 +242,10 @@ function pickDaily(
   ].slice(0, DAILY_CARD_COUNT);
 }
 
-// Tapas/Breakfast rotating sections use the same weighted-random +
-// preference scoring as the main rotation (diet match, favorite cuisine,
-// learned affinity) — no separate "favorited" tier or discovery slot since
-// these sections are already a rotating sample, not a fixed set of 4.
+// Tapas/Breakfast rotating sections go through the same cuisine-dominance
+// tiering as the main rotation (pickAffinity) — no separate discovery slot
+// since these sections are already a rotating sample, not a fixed set of 4,
+// but favorite cuisines should still dominate them the same way.
 function pickRotating(
   pool: EligibleRecipe[],
   profile: ScoringProfile,
@@ -227,7 +256,7 @@ function pickRotating(
   const available = pool.filter((r) => !exclude.has(r.id));
   const base = available.length >= count ? available : pool;
   const weight = (r: EligibleRecipe) => scoreRecipe(r, profile, currentSlot);
-  return weightedShuffle(base, weight).slice(0, count);
+  return pickAffinity(base, profile, weight, count);
 }
 
 function toCardData(r: EligibleRecipe): RecipeCardData {

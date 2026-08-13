@@ -42,14 +42,19 @@ export type ScoringProfile = {
 // off-slot dish is still reachable, just less likely.
 const PRIMARY_MEAL_SLOT_WEIGHT = 6;
 const SECONDARY_MEAL_SLOT_WEIGHT = 2;
-const DIET_MATCH_WEIGHT = 2;
-const FAVORITE_CUISINE_WEIGHT = 3;
+const DIET_MATCH_WEIGHT = 3;
+const FAVORITE_CUISINE_WEIGHT = 5;
 // Smaller than the declared favorite-cuisine bonus — behavior-inferred
 // preference is a weaker signal than something the user explicitly told us.
-const IMPLICIT_CUISINE_WEIGHT = 2;
+// Still substantial: repeated cooking behavior is strong personalization
+// evidence in its own right, not just a tiebreaker.
+const IMPLICIT_CUISINE_WEIGHT = 3;
 // Max bonus at perfect alignment (recipe weight and user affinity both
-// 100); scales down smoothly as either drops toward 0.
-const FOOD_GROUP_AFFINITY_WEIGHT = 4;
+// 100); scales down smoothly as either drops toward 0. This is the biggest
+// single lever behavioral learning (cook/star/dismiss — see learn.ts) has
+// over the ranking, since it compounds across every food group a recipe
+// touches rather than being a single flat bonus.
+const FOOD_GROUP_AFFINITY_WEIGHT = 6;
 // Every recipe gets a small base weight so recipes that match nothing are
 // still eligible to be picked (weighted-random, not a cutoff).
 const BASE_WEIGHT = 1;
