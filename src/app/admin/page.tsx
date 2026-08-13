@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
+import { BarChart, ChartAxisLabels, type BarChartPoint } from "@/components/admin/bar-chart";
 
 function StatCard({
   label,
@@ -66,8 +67,41 @@ const HOUR_LABELS = Array.from({ length: 24 }, (_, h) => {
   return `${hour12}${period}`;
 });
 
+const SIGNUP_WINDOW_DAYS = 30;
+
+function dateKey(d: Date): string {
+  return d.toISOString().slice(0, 10); // YYYY-MM-DD (UTC)
+}
+
+function shortDateLabel(key: string): string {
+  const [, month, day] = key.split("-");
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${monthNames[Number(month) - 1]} ${Number(day)}`;
+}
+
+// Builds a zero-filled daily bucket series for the last `days` days (inclusive
+// of today), so the chart always has a fixed-width x-axis even when there's
+// no data yet for some days.
+function buildDailySeries(timestamps: Date[], days: number): BarChartPoint[] {
+  const counts = new Map<string, number>();
+  for (const ts of timestamps) {
+    const key = dateKey(ts);
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  const series: BarChartPoint[] = [];
+  const today = new Date();
+  for (let i = days - 1; i >= 0; i--) {
+    const d = new Date(today);
+    d.setUTCDate(d.getUTCDate() - i);
+    const key = dateKey(d);
+    series.push({ label: shortDateLabel(key), value: counts.get(key) ?? 0 });
+  }
+  return series;
+}
+
 export default async function AdminPage() {
   const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  const signupWindowAgo = new Date(Date.now() - SIGNUP_WINDOW_DAYS * 24 * 60 * 60 * 1000);
 
   const [
     userCount,
@@ -81,6 +115,8 @@ export default async function AdminPage() {
     mostCookedRaw,
     mostStarredRaw,
     cookHourCounts,
+    recentSignups,
+    premiumUserCount,
   ] = await Promise.all([
     prisma.user.count(),
     prisma.user.count({ where: { createdAt: { gte: sevenDaysAgo } } }),
@@ -108,7 +144,27 @@ export default async function AdminPage() {
       where: { type: "COOK" },
       _count: { localHour: true },
     }),
+    prisma.user.findMany({
+      where: { createdAt: { gte: signupWindowAgo } },
+      select: { createdAt: true },
+    }),
+    prisma.user.count({ where: { isPremium: true } }),
   ]);
+
+  const signupSeries = buildDailySeries(
+    recentSignups.map((u) => u.createdAt),
+    SIGNUP_WINDOW_DAYS,
+  );
+  // Premium tier isn't live yet — the paid-users chart stays a visible but
+  // inert placeholder (flat/empty series) until real subscription data
+  // exists, at which point this can be replaced with a real daily series
+  // the same way signups is built above.
+  const paidPlaceholderSeries = buildDailySeries([], SIGNUP_WINDOW_DAYS);
+  const chartAxisLabels = [
+    signupSeries[0]?.label ?? "",
+    signupSeries[Math.floor(signupSeries.length / 2)]?.label ?? "",
+    signupSeries[signupSeries.length - 1]?.label ?? "",
+  ];
 
   const recipeIds = [
     ...new Set([...mostCookedRaw.map((r) => r.recipeId), ...mostStarredRaw.map((r) => r.recipeId)]),
@@ -174,6 +230,34 @@ export default async function AdminPage() {
         {stats.interactionCounts.map((i) => (
           <StatCard key={i.type} label={i.type} value={i.count} />
         ))}
+        <StatCard label="Premium users" value={premiumUserCount} />
+      </div>
+
+      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <section className="rounded-2xl border border-[#E8E6E0] bg-white p-5">
+          <div className="flex items-center justify-between gap-2">
+            <h2 className="text-sm font-semibold text-[#1A1D1B]">User signups</h2>
+            <span className="text-xs text-[#6B7370]">Last {SIGNUP_WINDOW_DAYS} days</span>
+          </div>
+          <div className="mt-4">
+            <BarChart data={signupSeries} />
+            <ChartAxisLabels labels={chartAxisLabels} />
+          </div>
+        </section>
+
+        <section className="relative rounded-2xl border border-[#E8E6E0] bg-white p-5 opacity-60">
+          <div className="flex items-center justify-between gap-2">
+            <h2 className="text-sm font-semibold text-[#1A1D1B]">Paid users</h2>
+            <span className="rounded-full bg-[#F4F2EC] px-2 py-0.5 text-[10px] uppercase tracking-wide text-[#6B7370]">
+              Coming soon
+            </span>
+          </div>
+          <div className="mt-4">
+            <BarChart data={paidPlaceholderSeries} color="#C9C4B8" />
+            <ChartAxisLabels labels={chartAxisLabels} />
+          </div>
+          <p className="mt-3 text-xs text-[#6B7370]">Activates automatically once the premium tier ships.</p>
+        </section>
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
