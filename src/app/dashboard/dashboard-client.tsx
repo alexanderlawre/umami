@@ -127,15 +127,41 @@ function RecipeCard({
   recipe,
   userDiets,
   onSavedChange,
+  popKey,
 }: {
   recipe: RecipeCardData;
   userDiets: string[];
   onSavedChange: (id: string, saved: boolean) => void;
+  // When provided, the card gets a decorative liquid-gooey "pop" (a soft
+  // green halo that squishes the card into place) every time this value
+  // changes — used only by the main 4-card daily rotation to mark a refresh,
+  // not by cookbook/tapas/breakfast sections which never refresh. Omitted
+  // entirely (no Liquid wrapper at all) for those other render sites so this
+  // stays a zero-cost, zero-risk addition anywhere it isn't wanted.
+  popKey?: number;
 }) {
   const router = useRouter();
   const ref = useRef<HTMLDivElement | null>(null);
   const emblems = visibleDietEmblems(recipe.dietTags, 2);
   const [cookLaterPending, setCookLaterPending] = useState(false);
+
+  // Settled (scale 1, no halo bleed) on the very first mount — including the
+  // dashboard's initial page load — and only animates the squish-in on
+  // subsequent popKey changes, i.e. actual refreshes. This keeps the effect
+  // scoped precisely to "when they refresh", never to first paint.
+  const isFirstPop = useRef(true);
+  const [popped, setPopped] = useState(true);
+  useEffect(() => {
+    if (popKey === undefined) return;
+    if (isFirstPop.current) {
+      isFirstPop.current = false;
+      return;
+    }
+    setPopped(false);
+    const raf = requestAnimationFrame(() => setPopped(true));
+    return () => cancelAnimationFrame(raf);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [popKey]);
 
   useEffect(() => {
     const el = ref.current;
@@ -190,18 +216,8 @@ function RecipeCard({
     }
   }
 
-  return (
-    <MotionCard
-      ref={ref}
-      layout
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -8 }}
-      transition={{ type: "spring", stiffness: 300, damping: 28 }}
-      whileHover={{ y: -6 }}
-      onClick={() => router.push(`/recipe/${recipe.slug}`)}
-      className="cursor-pointer overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-soft hover:shadow-lifted"
-    >
+  const innerContent = (
+    <>
       <div className="relative">
         {recipe.imageUrl ? (
           <div className="relative h-40 w-full">
@@ -279,6 +295,47 @@ function RecipeCard({
           </MotionButton>
         </div>
       </div>
+    </>
+  );
+
+  return (
+    <MotionCard
+      ref={ref}
+      layout
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -8 }}
+      transition={{ type: "spring", stiffness: 300, damping: 28 }}
+      whileHover={{ y: -6 }}
+      onClick={() => router.push(`/recipe/${recipe.slug}`)}
+      className="cursor-pointer overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-soft hover:shadow-lifted"
+    >
+      {popKey === undefined ? (
+        innerContent
+      ) : (
+        // Same decorative-halo technique already used for the refresh button
+        // and filter chips below: a single-item Liquid group whose fill only
+        // ever shows as a brief green ring while the Liquid.Item's scale is
+        // mid-spring (fully covered by the card's own opaque white
+        // background once settled at scale 1). Nested *inside* MotionCard
+        // (rather than wrapping it) so the card itself stays the literal,
+        // unwrapped grid/AnimatePresence item — wrapping it from the outside
+        // would insert extra DOM between the grid and the animated element,
+        // breaking `mode="popLayout"`'s reflow-on-exit. Any halo bleed is
+        // clipped by the card's own `overflow-hidden`, which just means it
+        // stays confined to the card's real edge — never an arbitrary cut.
+        <Liquid
+          blur={9}
+          contrast={20}
+          fill="rgba(31, 95, 69, 0.14)"
+          shadow="0 6px 16px rgba(31, 95, 69, 0.12)"
+          className="block"
+        >
+          <Liquid.Item morph={{ shape: true }} scale={popped ? 1 : 0.88} transition="bouncy">
+            <div>{innerContent}</div>
+          </Liquid.Item>
+        </Liquid>
+      )}
     </MotionCard>
   );
 }
@@ -549,6 +606,17 @@ export function DashboardClient({
   const [refreshPending, setRefreshPending] = useState(false);
   const [refreshMessage, setRefreshMessage] = useState<string | null>(null);
   const [refreshPressed, setRefreshPressed] = useState(false);
+  // Bumped every time `visible` is replaced with a new set of cards (server
+  // refresh, local filtered reshuffle, filter toggle/clear) — passed to each
+  // main-grid RecipeCard as `popKey` to trigger its liquid-gooey pop-in.
+  // Never bumped by `handleSavedChange`, which only patches `saved` on
+  // already-visible cards and shouldn't replay the pop.
+  const [refreshGeneration, setRefreshGeneration] = useState(0);
+
+  function replaceVisible(next: RecipeCardData[]) {
+    setVisible(next);
+    setRefreshGeneration((g) => g + 1);
+  }
 
   const availableTags = useMemo<FilterTag[]>(() => {
     const diets = new Set<string>();
@@ -590,7 +658,7 @@ export function DashboardClient({
     // While a filter is active, "refresh" is just a local reshuffle within
     // the filtered pool and doesn't touch the server.
     if (selected.size > 0) {
-      setVisible(pickFour(filteredPool));
+      replaceVisible(pickFour(filteredPool));
       return;
     }
 
@@ -605,7 +673,7 @@ export function DashboardClient({
         return;
       }
 
-      setVisible(body.recipes);
+      replaceVisible(body.recipes);
     } catch {
       setRefreshMessage("Something went wrong. Try again.");
     } finally {
@@ -624,14 +692,14 @@ export function DashboardClient({
           : poolState.filter((r) =>
               [...next].every((tag) => r.attributes.includes(tag) || r.dietTags.includes(tag)),
             );
-      setVisible(next.size === 0 ? dedupeFirstFour(served) : dedupeFirstFour(nextFiltered));
+      replaceVisible(next.size === 0 ? dedupeFirstFour(served) : dedupeFirstFour(nextFiltered));
       return next;
     });
   }
 
   function clearFilters() {
     setSelected(new Set());
-    setVisible(dedupeFirstFour(served));
+    replaceVisible(dedupeFirstFour(served));
   }
 
   if (poolState.length === 0) {
@@ -684,6 +752,7 @@ export function DashboardClient({
                 recipe={recipe}
                 userDiets={userDiets}
                 onSavedChange={handleSavedChange}
+                popKey={refreshGeneration}
               />
             ))}
           </AnimatePresence>
