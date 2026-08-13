@@ -427,7 +427,7 @@
       { "foodGroup": "Fresh herbs", "weight": 40 },
       { "foodGroup": "Root veg", "weight": 30 }
     ],
-    "dietTags": ["Vegan", "Vegetarian", "Mediterranean", "Gluten-free", "Dairy-free", "Low-carb", "Whole30", "Paleo"],
+    "dietTags": ["Vegan", "Vegetarian", "Mediterranean", "Gluten-free", "Dairy-free", "Low-carb", "Paleo"],
     "allergenTags": []
   },
   {
@@ -1660,7 +1660,7 @@
       { "foodGroup": "Cruciferous veg", "weight": 85 },
       { "foodGroup": "Alliums", "weight": 20 }
     ],
-    "dietTags": ["Vegan", "Vegetarian", "Mediterranean", "Gluten-free", "Dairy-free", "Whole30", "Paleo", "Low-carb"],
+    "dietTags": ["Vegan", "Vegetarian", "Mediterranean", "Gluten-free", "Dairy-free", "Paleo", "Low-carb"],
     "allergenTags": ["Milk"]
   },
   {
@@ -1823,7 +1823,7 @@
       { "foodGroup": "Alliums", "weight": 25 },
       { "foodGroup": "Warm spices", "weight": 20 }
     ],
-    "dietTags": ["Vegan", "Vegetarian", "Mediterranean", "Gluten-free", "Dairy-free", "Whole30", "Paleo", "Low-carb"],
+    "dietTags": ["Vegan", "Vegetarian", "Mediterranean", "Gluten-free", "Dairy-free", "Paleo", "Low-carb"],
     "allergenTags": []
   }
 ]

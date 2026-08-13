@@ -816,8 +816,7 @@
       "Paleo",
       "Low-sodium",
       "Diabetic-friendly",
-      "Kosher",
-      "Whole30"
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/carne-asada.jpg",
@@ -2076,8 +2075,7 @@
       "Low-carb",
       "Flexitarian",
       "Diabetic-friendly",
-      "Keto",
-      "Whole30"
+      "Keto"
     ],
     "allergenTags": [
       "Shellfish",
@@ -2485,8 +2483,7 @@
       "Low-sodium",
       "Diabetic-friendly",
       "Kosher",
-      "Keto",
-      "Whole30"
+      "Keto"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/lamb-kofta.jpg",
@@ -2743,8 +2740,7 @@
       "Low-sodium",
       "Diabetic-friendly",
       "Kosher",
-      "Keto",
-      "Whole30"
+      "Keto"
     ],
     "allergenTags": [
       "Fish"
@@ -3428,7 +3424,6 @@
       "Vegetarian",
       "Gluten-free",
       "Mediterranean",
-      "Whole30",
       "Paleo",
       "Flexitarian",
       "Low-sodium",
@@ -5234,8 +5229,7 @@
       "Flexitarian",
       "Low-sodium",
       "Diabetic-friendly",
-      "Keto",
-      "Whole30"
+      "Keto"
     ],
     "allergenTags": [
       "Shellfish"
@@ -6573,7 +6567,6 @@
     ],
     "dietTags": [
       "Vegetarian",
-      "Low-FODMAP",
       "Flexitarian",
       "Kosher"
     ],
@@ -7027,7 +7020,6 @@
       "Vegetarian",
       "Gluten-free",
       "High-protein",
-      "Low-FODMAP",
       "Flexitarian",
       "Low-sodium",
       "Diabetic-friendly",
@@ -7292,7 +7284,6 @@
       "Vegan",
       "Vegetarian",
       "Gluten-free",
-      "Whole30",
       "Paleo",
       "Flexitarian",
       "Low-sodium",
@@ -14340,8 +14331,7 @@
       "Dairy-free",
       "Flexitarian",
       "Low-sodium",
-      "Kosher",
-      "Whole30"
+      "Kosher"
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/west-african-fufu.jpg",

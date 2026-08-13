@@ -1067,7 +1067,6 @@
       "Dairy-free",
       "Low-carb",
       "Paleo",
-      "Whole30",
       "Mediterranean"
     ],
     "allergenTags": [
@@ -2840,8 +2839,7 @@
       "Dairy-free",
       "Low-carb",
       "Keto",
-      "Paleo",
-      "Whole30"
+      "Paleo"
     ],
     "allergenTags": []
   },

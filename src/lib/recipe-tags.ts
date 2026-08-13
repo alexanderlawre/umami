@@ -62,10 +62,10 @@ const COOK_METHOD_ATTRIBUTES = new Set([
 const ATTRIBUTE_DIET_HINTS: Record<string, string[]> = {
   HIGH_PROTEIN: ["High-protein"],
   LOW_CARB: ["Keto", "Low-carb"],
-  LOW_CALORIE: ["Diabetic-friendly", "Whole30"],
-  LOW_SUGAR: ["Diabetic-friendly", "Whole30"],
+  LOW_CALORIE: ["Diabetic-friendly"],
+  LOW_SUGAR: ["Diabetic-friendly"],
   EAT_MORE_VEG: ["Vegetarian", "Vegan", "Flexitarian", "Mediterranean"],
-  HIGH_FIBER: ["Mediterranean", "Whole30"],
+  HIGH_FIBER: ["Mediterranean"],
 };
 
 // Dashboard-card tag ranking: drops cook-method tags entirely, then sorts
@@ -96,11 +96,9 @@ export const DIET_COLORS: Record<string, string> = {
   Keto: "bg-purple-100 text-purple-800",
   "Low-carb": "bg-violet-100 text-violet-800",
   Paleo: "bg-orange-100 text-orange-800",
-  Whole30: "bg-amber-100 text-amber-900",
   Mediterranean: "bg-blue-100 text-blue-800",
   "Gluten-free": "bg-yellow-100 text-yellow-800",
   "Dairy-free": "bg-sky-100 text-sky-800",
-  "Low-FODMAP": "bg-pink-100 text-pink-800",
   Halal: "bg-emerald-100 text-emerald-800",
   Kosher: "bg-teal-100 text-teal-800",
   "Low-sodium": "bg-slate-100 text-slate-800",

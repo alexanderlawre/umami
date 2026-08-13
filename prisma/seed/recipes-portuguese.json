@@ -440,7 +440,7 @@
       { "foodGroup": "Alliums", "weight": 25 },
       { "foodGroup": "Warm spices", "weight": 20 }
     ],
-    "dietTags": ["Gluten-free", "Dairy-free", "High-protein", "Paleo", "Whole30", "Keto", "Low-carb"],
+    "dietTags": ["Gluten-free", "Dairy-free", "High-protein", "Paleo", "Keto", "Low-carb"],
     "allergenTags": ["Sulphites"]
   },
   {

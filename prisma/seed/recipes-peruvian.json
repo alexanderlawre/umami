@@ -939,9 +939,7 @@
       "Dairy-free",
       "Low-carb",
       "Paleo",
-      "Whole30",
-      "High-protein",
-      "Low-FODMAP"
+      "High-protein"
     ],
     "allergenTags": [
       "Fish",
@@ -2958,8 +2956,7 @@
       "Vegetarian",
       "Vegan",
       "Gluten-free",
-      "Dairy-free",
-      "Low-FODMAP"
+      "Dairy-free"
     ],
     "allergenTags": [
       "Corn"
