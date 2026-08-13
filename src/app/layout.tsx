@@ -5,6 +5,7 @@ import { auth } from "@/auth";
 import { AuthSessionProvider } from "@/components/session-provider";
 import { AppHeader } from "@/components/app-header";
 import { TimezoneSync } from "@/components/timezone-sync";
+import { NativeBootstrap } from "@/components/native-bootstrap";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default async function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#FBFAF7] text-[#1A1D1B]">
         <AuthSessionProvider session={session}>
+          <NativeBootstrap />
           <TimezoneSync />
           {session?.user?.onboarded && (
             <AppHeader

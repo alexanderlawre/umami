@@ -17,6 +17,15 @@ const config: CapacitorConfig = {
     url: 'http://localhost:3001',
     cleartext: true,
   },
+  // Hide the launch splash manually (via SplashScreen.hide() in
+  // NativeBootstrap) once the app has actually mounted, instead of on a
+  // blind timer — avoids both a stuck splash and a white-flash gap between
+  // splash and first paint.
+  plugins: {
+    SplashScreen: {
+      launchAutoHide: false,
+    },
+  },
 };
 
 export default config;

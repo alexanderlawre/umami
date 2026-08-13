@@ -7,6 +7,7 @@ import Link from "next/link";
 import { compressImage } from "@/lib/image-compression";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
+import { hideKeyboard } from "@/lib/native";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -88,6 +89,7 @@ export default function SignupPage() {
         }
       }
 
+      hideKeyboard();
       router.push("/onboarding/preferences");
       router.refresh();
     } catch {

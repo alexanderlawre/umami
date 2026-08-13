@@ -6,7 +6,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Liquid } from "liquid-gooey";
+import { Capacitor } from "@capacitor/core";
 import { logInteraction } from "@/lib/log-interaction";
+import { hapticImpactLight, hapticImpactMedium } from "@/lib/native";
 import { shuffle } from "@/lib/shuffle";
 import {
   attributeLabel,
@@ -61,6 +63,7 @@ function StarButton({
     setError(null);
     onSavedChange(next);
     logInteraction(recipeId, next ? "STAR" : "UNSTAR");
+    hapticImpactMedium();
 
     try {
       const res = next
@@ -207,6 +210,7 @@ function RecipeCard({
       if (res.ok) {
         onSavedChange(recipe.id, true);
         logInteraction(recipe.id, "STAR");
+        hapticImpactMedium();
       }
     } catch {
       // Non-fatal: navigate regardless so the user isn't stuck.
@@ -653,6 +657,7 @@ export function DashboardClient({
   }
 
   async function handleRefresh() {
+    hapticImpactLight();
     setRefreshMessage(null);
 
     // While a filter is active, "refresh" is just a local reshuffle within
@@ -680,6 +685,66 @@ export function DashboardClient({
       setRefreshPending(false);
     }
   }
+
+  // Native-only pull-to-refresh: a plain downward drag starting from the
+  // very top of the scrolled document triggers the same `handleRefresh()`
+  // used by the "Refresh recipes" button (a curated reshuffle, not a raw
+  // page reload — so a native page-reload-style pull-to-refresh plugin
+  // would be semantically wrong here). Scoped to
+  // `Capacitor.isNativePlatform()` since this is purely a native-app
+  // mechanic; the web app has no pull-to-refresh gesture today and this
+  // shouldn't add one there. `handleRefresh` already guards against
+  // overlapping calls via `refreshPending`, so this is safe to fire
+  // whenever the gesture completes.
+  //
+  // `handleRefresh` is a plain (non-memoized) function redeclared every
+  // render, so it closes over the latest `selected`/`filteredPool`/
+  // `refreshPending` state each time. The touch listeners below are
+  // attached once (empty deps, so we're not re-adding/removing them on
+  // every keystroke elsewhere on the page), so we route the call through a
+  // ref that's kept in sync on every render — this avoids the listeners
+  // ever invoking a stale closure.
+  const handleRefreshRef = useRef(handleRefresh);
+  handleRefreshRef.current = handleRefresh;
+
+  useEffect(() => {
+    if (!Capacitor.isNativePlatform()) return;
+
+    const PULL_THRESHOLD = 70;
+    let startY: number | null = null;
+    let armed = false;
+
+    function onTouchStart(e: TouchEvent) {
+      if (window.scrollY > 0) {
+        startY = null;
+        return;
+      }
+      startY = e.touches[0]?.clientY ?? null;
+      armed = false;
+    }
+
+    function onTouchMove(e: TouchEvent) {
+      if (startY === null) return;
+      const currentY = e.touches[0]?.clientY;
+      if (currentY === undefined) return;
+      armed = currentY - startY > PULL_THRESHOLD;
+    }
+
+    function onTouchEnd() {
+      if (armed) handleRefreshRef.current();
+      startY = null;
+      armed = false;
+    }
+
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    window.addEventListener("touchmove", onTouchMove, { passive: true });
+    window.addEventListener("touchend", onTouchEnd, { passive: true });
+    return () => {
+      window.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("touchend", onTouchEnd);
+    };
+  }, []);
 
   function toggleTag(value: string) {
     setSelected((prev) => {
