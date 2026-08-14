@@ -44,6 +44,15 @@ enum EffortTier {
   PROJECT
 }
 
+// User-facing dashboard control (distinct from Recipe.effortTier, which is
+// admin-curated catalog data) — see UserPreferences.effortPreference and
+// score.ts's EFFORT_MATCH_WEIGHT for how the two map onto each other.
+enum EffortPreference {
+  QUICK
+  ANY
+  PROJECT
+}
+
 enum AllergenReviewStatus {
   UNVERIFIED
   VERIFIED
@@ -124,6 +133,17 @@ model UserPreferences {
 
   favoriteCuisines   String[] @default([])
   foodGroupFeedback  String?
+
+  // Free-tier feed intelligence v1: last-chosen Quick/Any/Project segmented
+  // control on the dashboard, persisted so it becomes the default across
+  // sessions. Soft signal only (see score.ts) — never excludes recipes on
+  // its own, so a thin PROJECT inventory still fills gracefully.
+  effortPreference EffortPreference @default(ANY)
+  // Near-hard ceiling on Recipe.spiceLevel (0-3). Null = Hot / unfiltered —
+  // matches spiceLevel's own "unknown = unfiltered" convention (see Recipe).
+  // This is a comfort preference, not a safety filter, so it lives here
+  // rather than alongside the hard allergen fields.
+  spiceMax         Int?
 
   updatedAt DateTime @updatedAt
 }
@@ -216,6 +236,16 @@ model Recipe {
   mealSlot     MealSlot
   effortTier   EffortTier
   batchFriendly Boolean @default(false)
+
+  // 0-3 heat level, nullable. Unknown/untagged stays null and is always
+  // treated as unfiltered by UserPreferences.spiceMax (a comfort
+  // preference, not a safety filter — unlike allergenTags, an unrated
+  // recipe is never assumed hot). `spiceLevelInferred` flags rows seeded by
+  // scripts/backfill-spice-level.mjs from the existing "Chilli & heat"
+  // RecipeFoodGroup weight rather than reviewed/authored directly, so admin
+  // tooling can surface them for a manual pass later.
+  spiceLevel         Int?
+  spiceLevelInferred Boolean @default(false)
 
   attributeTags AttributeTag[]
   heroColor  String
