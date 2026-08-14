@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -597,14 +597,20 @@ const CATEGORY_OPTIONS: { value: DashboardCategory; label: string }[] = [
 // different pool, not just re-ranking the current one.
 //
 // A true liquid tab indicator: one shared Liquid group, one Liquid.Item
-// running effect="move" whose real DOM rect we drive via translateX/width to
-// match whichever button is active — the engine measures that rect itself
-// (effect="move" implies `observe`) and the surface trails it as liquid
-// rubber with a droplet tail, melting from one option into the next instead
-// of just re-rendering a new solid pill. Buttons themselves stay
-// transparent/unpositioned-background so the moving blob is genuinely their
-// visible surface, not hidden underneath an opaque fill (the mistake the
-// old per-option-halo version made — see git history).
+// running effect="move" that slides between fixed-width segments. Each
+// option button has the SAME hard-coded width (SEGMENT_WIDTH), so the
+// indicator's position is a pure function of the active option's index —
+// `translateX(index * SEGMENT_WIDTH)` — with no DOM measurement, no ref,
+// and no async layout-effect step involved. An earlier version measured
+// button rects at runtime and drove the indicator from that; the two
+// coordinate systems (outer container vs. the Liquid group's own inset
+// wrapper) didn't agree, and the measure-then-correct flow caused a visible
+// jump on mount/switch. Fixed widths sidestep the whole class of bug.
+// Buttons stay transparent/unpositioned-background so the moving blob is
+// genuinely their visible surface, not hidden underneath an opaque fill
+// (the mistake the very first per-option-halo version made).
+const SEGMENT_WIDTH = 96;
+
 function CategoryControl({
   value,
   onChange,
@@ -614,63 +620,40 @@ function CategoryControl({
   onChange: (value: DashboardCategory) => void;
   disabled: boolean;
 }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const buttonRefs = useRef<Partial<Record<DashboardCategory, HTMLButtonElement | null>>>({});
-  const [indicator, setIndicator] = useState<{ x: number; width: number } | null>(null);
-
-  useLayoutEffect(() => {
-    function measure() {
-      const container = containerRef.current;
-      const button = buttonRefs.current[value];
-      if (!container || !button) return;
-      const containerRect = container.getBoundingClientRect();
-      const buttonRect = button.getBoundingClientRect();
-      setIndicator({ x: buttonRect.left - containerRect.left, width: buttonRect.width });
-    }
-    measure();
-    // Labels are fixed text, but re-measure on resize/font-load for
-    // robustness rather than assuming pixel widths never shift.
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, [value]);
+  const activeIndex = CATEGORY_OPTIONS.findIndex((opt) => opt.value === value);
 
   return (
     <div
-      ref={containerRef}
       role="radiogroup"
       aria-label="Which recipes do you want to see?"
-      className="relative mb-4 inline-flex rounded-full border border-[#E8E6E0] bg-white p-1"
+      className="relative mx-auto mb-4 inline-flex rounded-full border border-[#E8E6E0] bg-white p-1"
     >
       <Liquid
-        blur={8}
+        blur={6}
         contrast={20}
         fill="#1B4332"
         shadow="0 2px 6px rgba(27, 67, 50, 0.25)"
         className="pointer-events-none absolute inset-1"
       >
-        {indicator ? (
-          <Liquid.Item effect="move" move={{ springiness: 0.6, wobble: 0.45, trail: 0.5 }}>
-            <div
-              className="h-full rounded-full"
-              style={{ width: indicator.width, transform: `translateX(${indicator.x}px)` }}
-            />
-          </Liquid.Item>
-        ) : null}
+        <Liquid.Item effect="move" move={{ springiness: 0.6, wobble: 0.3, trail: 0.3 }}>
+          <div
+            className="h-full rounded-full"
+            style={{ width: SEGMENT_WIDTH, transform: `translateX(${activeIndex * SEGMENT_WIDTH}px)` }}
+          />
+        </Liquid.Item>
       </Liquid>
       {CATEGORY_OPTIONS.map((opt) => {
         const active = value === opt.value;
         return (
           <button
             key={opt.value}
-            ref={(el) => {
-              buttonRefs.current[opt.value] = el;
-            }}
             type="button"
             role="radio"
             aria-checked={active}
             disabled={disabled}
             onClick={() => !active && onChange(opt.value)}
-            className={`relative z-10 rounded-full px-3 py-1.5 text-xs font-medium transition-colors disabled:opacity-50 ${
+            style={{ width: SEGMENT_WIDTH }}
+            className={`relative z-10 rounded-full py-1.5 text-center text-xs font-medium transition-colors disabled:opacity-50 ${
               active ? "text-white" : "text-[#6B7370] hover:bg-[#EDF3EF]"
             }`}
           >
@@ -941,14 +924,16 @@ export function DashboardClient({
   if (poolState.length === 0) {
     return (
       <div>
-        <h1 className="text-2xl font-bold text-[#1A1D1B]">{heading}</h1>
-        <p className="mt-1 text-sm text-[#6B7370]">{CATEGORY_SUBTITLE[activeCategory]}</p>
-        <div className="mt-6">
-          <CategoryControl value={activeCategory} onChange={handleCategoryChange} disabled={categoryPending} />
-          <p className="text-sm text-[#6B7370]">
-            No recipes match your preferences yet. Check back soon.
-          </p>
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-[#1A1D1B]">{heading}</h1>
+          <p className="mt-1 text-sm text-[#6B7370]">{CATEGORY_SUBTITLE[activeCategory]}</p>
+          <div className="mt-6">
+            <CategoryControl value={activeCategory} onChange={handleCategoryChange} disabled={categoryPending} />
+          </div>
         </div>
+        <p className="text-center text-sm text-[#6B7370]">
+          No recipes match your preferences yet. Check back soon.
+        </p>
       </div>
     );
   }
@@ -958,11 +943,13 @@ export function DashboardClient({
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-[#1A1D1B]">{heading}</h1>
-      <p className="mt-1 text-sm text-[#6B7370]">{CATEGORY_SUBTITLE[activeCategory]}</p>
+      <div className="text-center">
+        <h1 className="text-2xl font-bold text-[#1A1D1B]">{heading}</h1>
+        <p className="mt-1 text-sm text-[#6B7370]">{CATEGORY_SUBTITLE[activeCategory]}</p>
 
-      <div className="mt-6">
-        <CategoryControl value={activeCategory} onChange={handleCategoryChange} disabled={categoryPending} />
+        <div className="mt-6">
+          <CategoryControl value={activeCategory} onChange={handleCategoryChange} disabled={categoryPending} />
+        </div>
       </div>
 
       <FilterBar
