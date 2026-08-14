@@ -9,6 +9,10 @@
 import type { MealSlot } from "@/lib/meal-slot";
 
 export type ScorableRecipe = {
+  // Needed to look up profile.recentlyShownRecipeIds below — every real
+  // caller already has this (EligibleRecipe), so it's required rather than
+  // optional like the other feature-specific fields on this type.
+  id: string;
   dietTags: string[];
   mealSlot: string;
   cuisine: string;
@@ -43,6 +47,15 @@ export type ScoringProfile = {
   // fallback pickDaily/pickRotating already use when a filtered set comes
   // up short (see select-daily.ts).
   effortPreference?: "QUICK" | "ANY" | "PROJECT";
+  // Free-tier feed intelligence v1: recipe ids served to this user in the
+  // last few days (see select-daily.ts's loadDashboardContext) — a mild
+  // negative bias toward "not the same thing again", not a hard exclude
+  // (that's already handled separately, per-window, by getOrCreateBatch's
+  // own currentIds exclusion). A thin eligible pool still resurfaces a
+  // recently-shown recipe rather than the dashboard going empty. Absent
+  // entirely when there's no serve history yet (new user, or the query
+  // itself is skipped) — contributes nothing then.
+  recentlyShownRecipeIds?: Set<string>;
 };
 
 // The main rotation pool only ever contains LUNCH/DINNER recipes (Breakfast
@@ -76,6 +89,12 @@ const EFFORT_MATCH_WEIGHT = 3;
 // Every recipe gets a small base weight so recipes that match nothing are
 // still eligible to be picked (weighted-random, not a cutoff).
 const BASE_WEIGHT = 1;
+// Mild penalty for a recipe shown in the last few days (see
+// recentlyShownRecipeIds) — deliberately modest, smaller than any single
+// positive-match bonus above, so a recipe the user actually loves still
+// wins out over pure novelty. weightedShuffle's own 0.01 floor means this
+// can never zero out a recipe's odds entirely.
+const RECENTLY_SHOWN_PENALTY_WEIGHT = 3;
 
 export function scoreRecipe(
   recipe: ScorableRecipe,
@@ -105,6 +124,10 @@ export function scoreRecipe(
     score += EFFORT_MATCH_WEIGHT;
   } else if (profile.effortPreference === "PROJECT" && recipe.effortTier === "PROJECT") {
     score += EFFORT_MATCH_WEIGHT;
+  }
+
+  if (profile.recentlyShownRecipeIds?.has(recipe.id)) {
+    score -= RECENTLY_SHOWN_PENALTY_WEIGHT;
   }
 
   return score;

@@ -27,6 +27,12 @@ const DISCOVERY_SLOT_COUNT = 1;
 // cuisine from behavior alone — below this, implicitFavoriteCuisines stays
 // empty and scoring falls back to declared preferences only.
 const IMPLICIT_CUISINE_MIN_COUNT = 2;
+// Free-tier feed intelligence v1: how far back "recently shown" looks for
+// the freshness scoring bias (see score.ts's RECENTLY_SHOWN_PENALTY_WEIGHT).
+// Deliberately short — a handful of days, not the multi-week horizon
+// learn.ts's recency decay operates on — since this is about not repeating
+// the same handful of dishes day after day, not about long-term taste drift.
+const FRESHNESS_LOOKBACK_DAYS = 5;
 
 export type EligibleRecipe = FilterableRecipe &
   RecipeCardData & {
@@ -62,7 +68,7 @@ async function loadDashboardContext(
   // Falls back to the persisted UserPreferences.effortPreference otherwise.
   effortOverride?: "QUICK" | "ANY" | "PROJECT",
 ): Promise<DashboardContext> {
-  const [user, preferences, recipes, savedRecipes, foodGroupPrefs, cookedCuisineRows] =
+  const [user, preferences, recipes, savedRecipes, foodGroupPrefs, cookedCuisineRows, recentlyShown] =
     await Promise.all([
       prisma.user.findUnique({ where: { id: userId }, select: { timezone: true } }),
       prisma.userPreferences.findUnique({
@@ -92,6 +98,17 @@ async function loadDashboardContext(
       prisma.cookLog.findMany({
         where: { userId },
         select: { recipe: { select: { cuisine: { select: { name: true } } } } },
+      }),
+      // Free-tier feed intelligence v1: feeds a mild negative scoring bias
+      // (see score.ts's recentlyShownRecipeIds) — this is separate from, and
+      // softer than, getOrCreateBatch's hard per-window exclusion, which
+      // only ever looks at the *current* window.
+      prisma.servedCard.findMany({
+        where: {
+          userId,
+          servedAt: { gte: new Date(Date.now() - FRESHNESS_LOOKBACK_DAYS * 24 * 60 * 60 * 1000) },
+        },
+        select: { recipeId: true },
       }),
     ]);
 
@@ -165,6 +182,8 @@ async function loadDashboardContext(
       foodGroupAffinity: foodGroupAffinity.size > 0 ? foodGroupAffinity : undefined,
       implicitFavoriteCuisines: implicitFavoriteCuisines.length > 0 ? implicitFavoriteCuisines : undefined,
       effortPreference: effortOverride ?? preferences?.effortPreference ?? "ANY",
+      recentlyShownRecipeIds:
+        recentlyShown.length > 0 ? new Set(recentlyShown.map((c) => c.recipeId)) : undefined,
     },
     timezone,
     currentSlot: getCurrentMealSlot(timezone),
