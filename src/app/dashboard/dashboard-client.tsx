@@ -597,22 +597,51 @@ const CATEGORY_OPTIONS: { value: DashboardCategory; label: string }[] = [
 // different pool, not just re-ranking the current one.
 //
 // A true liquid tab indicator: one shared Liquid group, one Liquid.Item
-// whose position is driven by the CONTROLLED `x` prop (component-driven
-// position — "the library animates both the element and its liquid in
-// perfect sync", per the liquid-gooey docs' own primary example) rather
-// than us setting a raw `transform` and hoping effect="move"'s rect
-// observation matches it. Each option button has the same hard-coded width
-// (SEGMENT_WIDTH), so `x` is a pure function of the active option's index.
+// using effect="move" — the pill's *real* position is driven entirely by
+// our own inline `transform` + CSS `transition` (well-understood, always
+// applies), and the library's spring-lagged gooey blob observes and trails
+// that real element via ResizeObserver/MutationObserver rather than us
+// asking the library to own the position itself. Each option button has
+// the same hard-coded width (SEGMENT_WIDTH), so the transform is a pure
+// function of the active option's index.
 //
-// Root cause of every earlier broken version: `<Liquid>` renders its own
-// inline `style={{ position: "relative", ... }}` — an INLINE style always
-// beats a Tailwind class, so a `className="absolute"` on it was silently
-// ignored. The group never actually left normal flow; it rendered as a
-// real flex item ahead of the buttons and shoved them sideways, which is
-// why the pill and the active (white-text) button kept landing in
-// different places. Passing `position`/`inset` via `style` (merged AFTER
-// the library's own defaults) is the only way to override them.
+// Root cause #1 (fixed): `<Liquid>` renders its own inline
+// `style={{ position: "relative", ... }}` — an INLINE style always beats a
+// Tailwind class, so a `className="absolute"` on it was silently ignored.
+// The group never actually left normal flow. Passing `position`/`inset` via
+// `style` (merged AFTER the library's own defaults) is the only way to
+// override them.
+//
+// Root cause #2 (fixed): the pill is a plain `display: inline-block` div —
+// inline-level boxes are laid out per the CSS `text-align` of their
+// containing block, and this control lives inside the `text-center` wrapper
+// added around the whole dashboard heading. With nothing overriding it, the
+// inherited `text-align: center` centered the pill inside the 288px track
+// before any of our own positioning ran, so our transform then added on top
+// of that already-centered position instead of on top of a left-aligned
+// one. `textAlign: "left"` below removes that inherited centering.
+//
+// Root cause #3 (fixed): the pill used `h-full`, but its library-generated
+// `inline-block` parent has no explicit height of its own (it's sized to
+// fit its child, a circular dependency), so the percentage resolves to 0.
+// An explicit pixel height (matching the Liquid track's own rendered
+// height) sidesteps that entirely.
+//
+// Root cause #4 (fixed): we originally drove position via Liquid.Item's
+// controlled `x` prop (its documented "component-driven position" mode).
+// Confirmed live via React DevTools fiber inspection that the *prop*
+// updates correctly on every category change (fiber.memoizedProps.x tracked
+// the new value every time), but the library's own internal effect that's
+// supposed to imperatively write that x/y to the real DOM element's
+// `style.transform` never actually ran again after the very first mount —
+// the on-screen pill stayed frozen at whatever slot was active on load, no
+// matter how many times x changed afterward. Since that's an internal,
+// undocumented mechanism we don't control, we stopped depending on it:
+// effect="move" instead expects *us* to move a real element with real CSS,
+// and only asks the library to visually trail it, which sidesteps the
+// broken update path entirely.
 const SEGMENT_WIDTH = 96;
+const SEGMENT_HEIGHT = 28;
 
 function CategoryControl({
   value,
@@ -637,10 +666,17 @@ function CategoryControl({
         fill="#1B4332"
         shadow="0 2px 6px rgba(27, 67, 50, 0.25)"
         className="pointer-events-none"
-        style={{ position: "absolute", inset: 4 }}
+        style={{ position: "absolute", inset: 4, textAlign: "left" }}
       >
-        <Liquid.Item x={activeIndex * SEGMENT_WIDTH} transition="smooth">
-          <div className="h-full rounded-full" style={{ width: SEGMENT_WIDTH }} />
+        <Liquid.Item effect="move">
+          <div
+            className="rounded-full transition-transform duration-300 ease-out"
+            style={{
+              width: SEGMENT_WIDTH,
+              height: SEGMENT_HEIGHT,
+              transform: `translateX(${activeIndex * SEGMENT_WIDTH}px)`,
+            }}
+          />
         </Liquid.Item>
       </Liquid>
       {CATEGORY_OPTIONS.map((opt) => {
