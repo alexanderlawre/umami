@@ -44,13 +44,14 @@ enum EffortTier {
   PROJECT
 }
 
-// User-facing dashboard control (distinct from Recipe.effortTier, which is
-// admin-curated catalog data) — see UserPreferences.effortPreference and
-// score.ts's EFFORT_MATCH_WEIGHT for how the two map onto each other.
-enum EffortPreference {
-  QUICK
-  ANY
-  PROJECT
+// User-facing dashboard control letting the user shift the main 4-card
+// rotation between meal types — see UserPreferences.dashboardCategory and
+// select-daily.ts's activePoolFor() for how this selects which pool/window
+// key the daily rotation draws from.
+enum DashboardCategory {
+  MEALS
+  TAPAS
+  BREAKFAST
 }
 
 enum AllergenReviewStatus {
@@ -149,11 +150,11 @@ model UserPreferences {
   favoriteCuisines   String[] @default([])
   foodGroupFeedback  String?
 
-  // Free-tier feed intelligence v1: last-chosen Quick/Any/Project segmented
-  // control on the dashboard, persisted so it becomes the default across
-  // sessions. Soft signal only (see score.ts) — never excludes recipes on
-  // its own, so a thin PROJECT inventory still fills gracefully.
-  effortPreference EffortPreference @default(ANY)
+  // Last-chosen Meals/Tapas/Breakfast segmented control on the dashboard,
+  // persisted so it becomes the default across sessions. Determines which
+  // pool/window the main 4-card rotation draws from (see select-daily.ts's
+  // activePoolFor()) — not a scoring signal.
+  dashboardCategory DashboardCategory @default(MEALS)
   // Near-hard ceiling on Recipe.spiceLevel (0-3). Null = Hot / unfiltered —
   // matches spiceLevel's own "unknown = unfiltered" convention (see Recipe).
   // This is a comfort preference, not a safety filter, so it lives here

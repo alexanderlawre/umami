@@ -1,9 +1,11 @@
-// Timezone-aware meal-slot windows. The main dashboard rotation only ever
-// shows Lunch/Dinner recipes (Breakfast/Tapas recipes live in their own
-// always-on rotating sections instead — see loadRotatingSlotSections in
-// select-daily.ts) — so there are only two time-of-day windows: Lunch is
-// weighted more heavily 6:00am-11:59am, and Dinner dominates the rest of the
-// day (noon through 5:59am the next local day).
+// Timezone-aware meal-slot windows. `scoreRecipe`'s meal-slot bonus (see
+// score.ts) only ever compares against Lunch/Dinner, so there are only two
+// time-of-day windows: Lunch is weighted more heavily 6:00am-11:59am, and
+// Dinner dominates the rest of the day (noon through 5:59am the next local
+// day). The dashboard's Meals/Tapas/Breakfast category control (see
+// select-daily.ts's activePoolFor) reuses this same window's boundary/key
+// for all three categories — Tapas and Breakfast just suffix the key rather
+// than defining their own cadence.
 //
 // Built entirely on Intl.DateTimeFormat's `timeZone` option — no timezone
 // library dependency needed. We only ever need (a) the local hour/minute to
@@ -94,14 +96,5 @@ export function minutesUntilNextMealSlotBoundary(
 
 export function nextMealSlotWindowAt(timezone: string | null | undefined, now: Date = new Date()): Date {
   return new Date(now.getTime() + minutesUntilNextMealSlotBoundary(timezone, now) * 60_000);
-}
-
-// Local calendar-day key (YYYY-MM-DD), used to seed the once-daily rotating
-// Tapas/Breakfast sections — stable all day, changes at local midnight
-// rollover (per the user's own timezone, same as the Lunch/Dinner windows).
-export function getLocalDateKey(timezone: string | null | undefined, now: Date = new Date()): string {
-  const tz = timezone || DEFAULT_TIMEZONE;
-  const { year, month, day } = localParts(tz, now);
-  return `${year}-${pad(month)}-${pad(day)}`;
 }
 

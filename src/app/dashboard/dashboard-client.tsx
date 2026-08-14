@@ -582,34 +582,35 @@ function FilterBar({
   );
 }
 
-const EFFORT_OPTIONS: { value: "QUICK" | "ANY" | "PROJECT"; label: string }[] = [
-  { value: "QUICK", label: "Quick" },
-  { value: "ANY", label: "Any" },
-  { value: "PROJECT", label: "Project" },
+type DashboardCategory = "MEALS" | "TAPAS" | "BREAKFAST";
+
+const CATEGORY_OPTIONS: { value: DashboardCategory; label: string }[] = [
+  { value: "MEALS", label: "Meals" },
+  { value: "TAPAS", label: "Tapas" },
+  { value: "BREAKFAST", label: "Breakfast" },
 ];
 
-// Free-tier feed intelligence v1: persistent Quick/Any/Project segmented
-// control. Unlike FilterBar above (a client-only reshuffle of the
-// already-served pool), changing this always triggers a real server re-pick
-// — see handleEffortChange in DashboardClient — since a thin PROJECT
-// inventory needs to reach outside the 4 cards already on screen to fill
-// gracefully. Soft bias only (score.ts), so it never empties the dashboard.
-function EffortControl({
+// Persistent Meals/Tapas/Breakfast segmented control. Unlike FilterBar above
+// (a client-only reshuffle of the already-served pool), changing this always
+// triggers a real server re-pick — see handleCategoryChange in
+// DashboardClient — since switching category means drawing from an entirely
+// different pool, not just re-ranking the current one.
+function CategoryControl({
   value,
   onChange,
   disabled,
 }: {
-  value: "QUICK" | "ANY" | "PROJECT";
-  onChange: (value: "QUICK" | "ANY" | "PROJECT") => void;
+  value: DashboardCategory;
+  onChange: (value: DashboardCategory) => void;
   disabled: boolean;
 }) {
   return (
     <div
       role="radiogroup"
-      aria-label="How much effort are you up for?"
+      aria-label="Which recipes do you want to see?"
       className="mb-4 inline-flex rounded-full border border-[#E8E6E0] bg-white p-1"
     >
-      {EFFORT_OPTIONS.map((opt) => {
+      {CATEGORY_OPTIONS.map((opt) => {
         const active = value === opt.value;
         return (
           // Same single-item liquid group as FilterTagButton above: a
@@ -650,80 +651,36 @@ export type CookbookSection = {
   recipes: RecipeCardData[];
 };
 
-// A collapsed-by-default dropdown of that day's rotating Tapas/Breakfast
-// picks — same visual card grid as the main pool, just gated behind a
-// <details> so it doesn't compete with the 4-card daily rotation above the
-// fold. Hidden entirely if there's nothing eligible for this user today.
-function RotatingSlotSection({
-  title,
-  recipes,
-  userDiets,
-  onSavedChange,
-}: {
-  title: string;
-  recipes: RecipeCardData[];
-  userDiets: string[];
-  onSavedChange: (id: string, saved: boolean) => void;
-}) {
-  if (recipes.length === 0) return null;
-
-  return (
-    <details className="group mt-6 rounded-2xl border border-[#E8E6E0] bg-white">
-      <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4">
-        <span className="text-lg font-semibold text-[#1A1D1B]">{title}</span>
-        <span className="flex items-center gap-2 text-xs text-[#6B7370]">
-          {recipes.length} today
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            className="h-3.5 w-3.5 transition-transform group-open:rotate-180"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-          </svg>
-        </span>
-      </summary>
-      <div className="grid grid-cols-1 gap-4 border-t border-[#E8E6E0] p-5 sm:grid-cols-2">
-        {recipes.map((recipe) => (
-          <RecipeCard
-            key={recipe.id}
-            recipe={recipe}
-            userDiets={userDiets}
-            onSavedChange={onSavedChange}
-          />
-        ))}
-      </div>
-    </details>
-  );
-}
+const CATEGORY_SUBTITLE: Record<DashboardCategory, string> = {
+  MEALS: "Four recipes. That's the whole surface.",
+  TAPAS: "Four tapas. Same rules as the rest.",
+  BREAKFAST: "Four breakfasts. Same rules as the rest.",
+};
 
 export function DashboardClient({
   pool,
   served,
   userDiets,
   cookbooks,
-  tapasSection,
-  breakfastSection,
-  effortPreference,
+  category,
+  currentSlot,
 }: {
   pool: RecipeCardData[];
   served: RecipeCardData[];
   userDiets: string[];
   cookbooks: CookbookSection[];
-  tapasSection: RecipeCardData[];
-  breakfastSection: RecipeCardData[];
-  effortPreference: "QUICK" | "ANY" | "PROJECT";
+  category: DashboardCategory;
+  currentSlot: "LUNCH" | "DINNER";
 }) {
-  const [poolState] = useState(pool);
+  const [poolState, setPoolState] = useState(pool);
   const [visible, setVisible] = useState(() => dedupeFirstFour(served));
   const [cookbooksState, setCookbooksState] = useState(cookbooks);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [refreshPending, setRefreshPending] = useState(false);
   const [refreshMessage, setRefreshMessage] = useState<string | null>(null);
   const [refreshPressed, setRefreshPressed] = useState(false);
-  const [effort, setEffort] = useState(effortPreference);
-  const [effortPending, setEffortPending] = useState(false);
+  const [activeCategory, setActiveCategory] = useState(category);
+  const [categoryPending, setCategoryPending] = useState(false);
   // Bumped every time `visible` is replaced with a new set of cards (server
   // refresh, local filtered reshuffle, filter toggle/clear) — passed to each
   // main-grid RecipeCard as `popKey` to trigger its liquid-gooey pop-in.
@@ -819,35 +776,38 @@ export function DashboardClient({
 
   // Always a real server re-pick (never the local filteredPool reshuffle
   // handleRefresh falls back to) — the whole point of this control is to
-  // reach outside the already-served 4 cards into the full eligible pool,
-  // e.g. to actually surface PROJECT-tier recipes that weren't in today's
-  // batch at all. Persists as the user's new default via the same request.
-  async function handleEffortChange(next: "QUICK" | "ANY" | "PROJECT") {
-    if (effortPending) return;
+  // draw from an entirely different pool (Meals/Tapas/Breakfast), not just
+  // re-rank the current one. Persists as the user's new default via the
+  // same request. Resets any active filters, since a filter combo valid for
+  // one category may match nothing in another.
+  async function handleCategoryChange(next: DashboardCategory) {
+    if (categoryPending) return;
     hapticImpactLight();
-    setEffort(next);
-    setEffortPending(true);
+    setActiveCategory(next);
+    setCategoryPending(true);
     setRefreshMessage(null);
     try {
       const res = await fetch("/api/dashboard/refresh", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ effortPreference: next }),
+        body: JSON.stringify({ category: next }),
       });
       const body = await res.json().catch(() => null);
 
       if (!res.ok || !body?.recipes) {
         setRefreshMessage("Something went wrong. Try again.");
-        setEffort(effortPreference);
+        setActiveCategory(category);
         return;
       }
 
       replaceVisible(body.recipes);
+      setPoolState(body.pool ?? poolState);
+      setSelected(new Set());
     } catch {
       setRefreshMessage("Something went wrong. Try again.");
-      setEffort(effortPreference);
+      setActiveCategory(category);
     } finally {
-      setEffortPending(false);
+      setCategoryPending(false);
     }
   }
 
@@ -932,24 +892,26 @@ export function DashboardClient({
     replaceVisible(dedupeFirstFour(served));
   }
 
+  const heading =
+    activeCategory === "MEALS"
+      ? currentSlot === "LUNCH"
+        ? "Lunch picks for you"
+        : "Dinner picks for you"
+      : activeCategory === "TAPAS"
+        ? "Tapas picks for you"
+        : "Breakfast picks for you";
+
   if (poolState.length === 0) {
     return (
       <div>
-        <p className="text-sm text-[#6B7370]">
-          No recipes match your preferences yet. Check back soon.
-        </p>
-        <RotatingSlotSection
-          title="Tapas"
-          recipes={tapasSection}
-          userDiets={userDiets}
-          onSavedChange={handleSavedChange}
-        />
-        <RotatingSlotSection
-          title="Breakfast"
-          recipes={breakfastSection}
-          userDiets={userDiets}
-          onSavedChange={handleSavedChange}
-        />
+        <h1 className="text-2xl font-bold text-[#1A1D1B]">{heading}</h1>
+        <p className="mt-1 text-sm text-[#6B7370]">{CATEGORY_SUBTITLE[activeCategory]}</p>
+        <div className="mt-6">
+          <CategoryControl value={activeCategory} onChange={handleCategoryChange} disabled={categoryPending} />
+          <p className="text-sm text-[#6B7370]">
+            No recipes match your preferences yet. Check back soon.
+          </p>
+        </div>
       </div>
     );
   }
@@ -959,7 +921,12 @@ export function DashboardClient({
 
   return (
     <div>
-      <EffortControl value={effort} onChange={handleEffortChange} disabled={effortPending} />
+      <h1 className="text-2xl font-bold text-[#1A1D1B]">{heading}</h1>
+      <p className="mt-1 text-sm text-[#6B7370]">{CATEGORY_SUBTITLE[activeCategory]}</p>
+
+      <div className="mt-6">
+        <CategoryControl value={activeCategory} onChange={handleCategoryChange} disabled={categoryPending} />
+      </div>
 
       <FilterBar
         tags={availableTags}
@@ -1064,19 +1031,6 @@ export function DashboardClient({
           ))}
         </div>
       )}
-
-      <RotatingSlotSection
-        title="Tapas"
-        recipes={tapasSection}
-        userDiets={userDiets}
-        onSavedChange={handleSavedChange}
-      />
-      <RotatingSlotSection
-        title="Breakfast"
-        recipes={breakfastSection}
-        userDiets={userDiets}
-        onSavedChange={handleSavedChange}
-      />
     </div>
   );
 }

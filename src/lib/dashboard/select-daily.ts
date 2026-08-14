@@ -8,15 +8,15 @@ import { scoreRecipe, weightedShuffle, type ScoringProfile } from "@/lib/recomme
 import { savedRecipeExpiryCutoff } from "@/lib/saved-recipes";
 import {
   getCurrentMealSlot,
-  getLocalDateKey,
   getMealSlotWindowKey,
   nextMealSlotWindowAt,
   type MealSlot,
 } from "@/lib/meal-slot";
 import type { RecipeCardData } from "@/app/dashboard/dashboard-client";
 
+export type DashboardCategory = "MEALS" | "TAPAS" | "BREAKFAST";
+
 export const DAILY_CARD_COUNT = 4;
-export const ROTATING_SLOT_COUNT = 6;
 // Of the 4 main daily cards, this many are reserved for a deliberate
 // "discovery" pick (see pickDaily) — chosen by inverting the affinity
 // scoring instead of maximizing it, so the user keeps seeing at least one
@@ -42,15 +42,11 @@ export type EligibleRecipe = FilterableRecipe &
     // 0-3 heat level, null if unrated — see filter.ts's isWithinSpiceCeiling
     // and Recipe.spiceLevel. Scoring/filter-only, dropped by toCardData.
     spiceLevel: number | null;
-    // Admin-curated catalog effort classification — see score.ts's
-    // EFFORT_MATCH_WEIGHT for how this maps to the user's dashboard
-    // Quick/Any/Project control. Scoring-only, dropped by toCardData.
-    effortTier: string;
   };
 
 type DashboardContext = {
   // Main 4-card rotation pool: LUNCH/DINNER recipes only — Breakfast and
-  // Tapas never appear here, only in their own rotating sections below.
+  // Tapas live in their own pools below, selected between via `category`.
   pool: EligibleRecipe[];
   tapasPool: EligibleRecipe[];
   breakfastPool: EligibleRecipe[];
@@ -58,15 +54,16 @@ type DashboardContext = {
   timezone: string | null;
   currentSlot: MealSlot;
   windowKey: string;
+  category: DashboardCategory;
 };
 
 async function loadDashboardContext(
   userId: string,
-  // Lets a refresh request pass a just-changed effort control value that
+  // Lets a refresh request pass a just-changed category control value that
   // hasn't been persisted yet (or shouldn't override the stored default on
   // every read) — see refreshDailySelection / /api/dashboard/refresh.
-  // Falls back to the persisted UserPreferences.effortPreference otherwise.
-  effortOverride?: "QUICK" | "ANY" | "PROJECT",
+  // Falls back to the persisted UserPreferences.dashboardCategory otherwise.
+  categoryOverride?: DashboardCategory,
 ): Promise<DashboardContext> {
   const [user, preferences, recipes, savedRecipes, foodGroupPrefs, cookedCuisineRows, recentlyShown] =
     await Promise.all([
@@ -142,7 +139,6 @@ async function loadDashboardContext(
     isDiscovery: false,
     foodGroups: r.foodGroupProfile.map((fg) => ({ foodGroupId: fg.foodGroupId, weight: fg.weight })),
     spiceLevel: r.spiceLevel,
-    effortTier: r.effortTier,
   }));
 
   const timezone = user?.timezone ?? null;
@@ -181,13 +177,13 @@ async function loadDashboardContext(
       favoriteCuisines: preferences?.favoriteCuisines ?? [],
       foodGroupAffinity: foodGroupAffinity.size > 0 ? foodGroupAffinity : undefined,
       implicitFavoriteCuisines: implicitFavoriteCuisines.length > 0 ? implicitFavoriteCuisines : undefined,
-      effortPreference: effortOverride ?? preferences?.effortPreference ?? "ANY",
       recentlyShownRecipeIds:
         recentlyShown.length > 0 ? new Set(recentlyShown.map((c) => c.recipeId)) : undefined,
     },
     timezone,
     currentSlot: getCurrentMealSlot(timezone),
     windowKey: getMealSlotWindowKey(timezone),
+    category: categoryOverride ?? preferences?.dashboardCategory ?? "MEALS",
   };
 }
 
@@ -369,21 +365,21 @@ function pickDaily(
   ].slice(0, DAILY_CARD_COUNT);
 }
 
-// Tapas/Breakfast rotating sections go through the same cuisine-dominance
-// tiering as the main rotation (pickAffinity) — no separate discovery slot
-// since these sections are already a rotating sample, not a fixed set of 4,
-// but favorite cuisines should still dominate them the same way.
-function pickRotating(
-  pool: EligibleRecipe[],
-  profile: ScoringProfile,
-  currentSlot: MealSlot,
-  count: number,
-  exclude: Set<string> = new Set(),
-): EligibleRecipe[] {
-  const available = pool.filter((r) => !exclude.has(r.id));
-  const base = available.length >= count ? available : pool;
-  const weight = (r: EligibleRecipe) => scoreRecipe(r, profile, currentSlot);
-  return pickAffinity(base, profile, weight, count);
+// Resolves which pool/windowKey the active category draws from. Tapas and
+// Breakfast reuse the exact same meal-slot-boundary windowKey as the main
+// rotation (just suffixed), not their old once-daily-at-midnight cadence —
+// so all three categories now rotate on the same 6am/noon schedule.
+function activePoolFor(
+  ctx: Pick<DashboardContext, "pool" | "tapasPool" | "breakfastPool" | "windowKey" | "category">,
+): { pool: EligibleRecipe[]; windowKey: string } {
+  switch (ctx.category) {
+    case "TAPAS":
+      return { pool: ctx.tapasPool, windowKey: `${ctx.windowKey}:TAPAS` };
+    case "BREAKFAST":
+      return { pool: ctx.breakfastPool, windowKey: `${ctx.windowKey}:BREAKFAST` };
+    default:
+      return { pool: ctx.pool, windowKey: ctx.windowKey };
+  }
 }
 
 function toCardData(r: EligibleRecipe): RecipeCardData {
@@ -420,9 +416,7 @@ export type DailySelection = {
   nextWindowAt: Date;
   userDiets: string[];
   cookbooks: CookbookSection[];
-  tapasSection: RecipeCardData[];
-  breakfastSection: RecipeCardData[];
-  effortPreference: "QUICK" | "ANY" | "PROJECT";
+  category: DashboardCategory;
 };
 
 // Admin-curated cookbook sections are built by filtering the already
@@ -554,58 +548,41 @@ function flagDiscoveryCard(served: EligibleRecipe[], profile: ScoringProfile): E
 }
 
 export async function getDailySelection(userId: string): Promise<DailySelection> {
-  const { pool, tapasPool, breakfastPool, profile, timezone, currentSlot, windowKey } =
-    await loadDashboardContext(userId);
+  const ctx = await loadDashboardContext(userId);
+  const { pool, profile, timezone, currentSlot, category } = ctx;
 
-  const poolById = new Map(pool.map((r) => [r.id, r]));
-  const tapasById = new Map(tapasPool.map((r) => [r.id, r]));
-  const breakfastById = new Map(breakfastPool.map((r) => [r.id, r]));
+  const { pool: activePool, windowKey: activeWindowKey } = activePoolFor(ctx);
+  const activePoolById = new Map(activePool.map((r) => [r.id, r]));
 
-  // Tapas/Breakfast are keyed per-user (not just per-day) so every user
-  // gets their own random, preference-weighted rotation instead of the
-  // whole site seeing the identical 6 recipes — the window key alone
-  // (calendar day + section) already scopes rows to a single day; per-user
-  // scoping comes from ServedCard rows always being queried by userId too.
-  const dateKey = getLocalDateKey(timezone);
-  const tapasWindowKey = `${dateKey}:TAPAS`;
-  const breakfastWindowKey = `${dateKey}:BREAKFAST`;
-
-  const [served, tapasServed, breakfastServed] = await Promise.all([
-    getOrCreateBatch(userId, windowKey, poolById, DAILY_CARD_COUNT, (exclude) =>
-      pickDaily(pool, profile, currentSlot, exclude),
-    ),
-    getOrCreateBatch(userId, tapasWindowKey, tapasById, ROTATING_SLOT_COUNT, (exclude) =>
-      pickRotating(tapasPool, profile, currentSlot, ROTATING_SLOT_COUNT, exclude),
-    ),
-    getOrCreateBatch(userId, breakfastWindowKey, breakfastById, ROTATING_SLOT_COUNT, (exclude) =>
-      pickRotating(breakfastPool, profile, currentSlot, ROTATING_SLOT_COUNT, exclude),
-    ),
-  ]);
+  const served = await getOrCreateBatch(userId, activeWindowKey, activePoolById, DAILY_CARD_COUNT, (exclude) =>
+    pickDaily(activePool, profile, currentSlot, exclude),
+  );
 
   const servedWithBadge = flagDiscoveryCard(served, profile);
 
-  // Cookbook sections still key off the LUNCH/DINNER pool (the old
-  // hand-picked "Tapas: ..." cookbooks are gone as of Phase 4 — any other
-  // future curated cookbook is expected to reference lunch/dinner recipes).
+  // Cookbook sections still key off the LUNCH/DINNER pool regardless of the
+  // active category (the old hand-picked "Tapas: ..." cookbooks are gone as
+  // of Phase 4 — any other future curated cookbook is expected to reference
+  // lunch/dinner recipes).
+  const poolById = new Map(pool.map((r) => [r.id, r]));
   const cookbooks = await loadCookbookSections(poolById);
 
   return {
-    pool: pool.map(toCardData),
+    pool: activePool.map(toCardData),
     served: servedWithBadge.map(toCardData),
     currentSlot,
     nextWindowAt: nextMealSlotWindowAt(timezone),
     userDiets: profile.diets,
     cookbooks,
-    tapasSection: tapasServed.map(toCardData),
-    breakfastSection: breakfastServed.map(toCardData),
-    effortPreference: profile.effortPreference ?? "ANY",
+    category,
   };
 }
 
 export type RefreshResult = {
   served: RecipeCardData[];
+  pool: RecipeCardData[];
   nextWindowAt: Date;
-  effortPreference: "QUICK" | "ANY" | "PROJECT";
+  category: DashboardCategory;
 };
 
 // No cap on manual reshuffles — a user can hit "Refresh recipes" as many
@@ -620,35 +597,36 @@ export type RefreshResult = {
 // own).
 export async function refreshDailySelection(
   userId: string,
-  // Lets the dashboard's Quick/Any/Project control trigger a real re-pick
-  // against the full eligible pool (not just a local reshuffle of the
-  // already-served 4 cards) — see /api/dashboard/refresh, which persists
-  // this back to UserPreferences.effortPreference when provided.
-  effortOverride?: "QUICK" | "ANY" | "PROJECT",
+  // Lets the dashboard's Meals/Tapas/Breakfast control trigger a real
+  // re-pick against the full eligible pool for that category (not just a
+  // local reshuffle of the already-served 4 cards) — see
+  // /api/dashboard/refresh, which persists this back to
+  // UserPreferences.dashboardCategory when provided.
+  categoryOverride?: DashboardCategory,
 ): Promise<RefreshResult> {
-  const { pool, profile, timezone, currentSlot, windowKey } = await loadDashboardContext(
-    userId,
-    effortOverride,
-  );
+  const ctx = await loadDashboardContext(userId, categoryOverride);
+  const { profile, timezone, currentSlot, category } = ctx;
+  const { pool: activePool, windowKey: activeWindowKey } = activePoolFor(ctx);
 
   const existing = await prisma.servedCard.findMany({
-    where: { userId, windowKey },
+    where: { userId, windowKey: activeWindowKey },
   });
 
   const currentIds = new Set(existing.map((c) => c.recipeId));
-  const served = pickDaily(pool, profile, currentSlot, currentIds);
+  const served = pickDaily(activePool, profile, currentSlot, currentIds);
 
   if (served.length > 0) {
     const servedAt = new Date();
     await prisma.servedCard.createMany({
-      data: served.map((r, i) => ({ userId, recipeId: r.id, servedAt, windowKey, position: i })),
+      data: served.map((r, i) => ({ userId, recipeId: r.id, servedAt, windowKey: activeWindowKey, position: i })),
       skipDuplicates: true,
     });
   }
 
   return {
     served: flagDiscoveryCard(served, profile).map(toCardData),
+    pool: activePool.map(toCardData),
     nextWindowAt: nextMealSlotWindowAt(timezone),
-    effortPreference: profile.effortPreference ?? "ANY",
+    category,
   };
 }
