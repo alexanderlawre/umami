@@ -126,11 +126,52 @@ function StarButton({
   );
 }
 
+// Free-tier feed intelligence v1: the "pass" affordance for
+// DISMISS-as-negative-signal — see updateLearnedPreferences in
+// src/lib/recommend/learn.ts, which already reacts to this interaction type;
+// this button was the only missing piece (no UI anywhere called it before).
+// Deliberately a plain icon button rather than a swipe gesture — smallest
+// change that makes the existing machinery reachable.
+function PassButton({
+  recipeId,
+  onPass,
+}: {
+  recipeId: string;
+  onPass?: (id: string) => void;
+}) {
+  const [pressed, setPressed] = useState(false);
+
+  function handlePass(e: React.MouseEvent) {
+    e.stopPropagation();
+    if (pressed) return;
+    setPressed(true);
+    hapticImpactMedium();
+    logInteraction(recipeId, "DISMISS");
+    onPass?.(recipeId);
+  }
+
+  return (
+    <MotionButton
+      onClick={handlePass}
+      disabled={pressed}
+      aria-label="Not for me"
+      whileHover={{ y: -2 }}
+      whileTap={{ scale: 0.9 }}
+      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#E8E6E0] text-[#6B7370] transition-colors hover:bg-[#F5EDEA] hover:text-[#B23A32] disabled:opacity-50"
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </MotionButton>
+  );
+}
+
 function RecipeCard({
   recipe,
   userDiets,
   onSavedChange,
   popKey,
+  onPass,
 }: {
   recipe: RecipeCardData;
   userDiets: string[];
@@ -142,6 +183,12 @@ function RecipeCard({
   // entirely (no Liquid wrapper at all) for those other render sites so this
   // stays a zero-cost, zero-risk addition anywhere it isn't wanted.
   popKey?: number;
+  // Free-tier feed intelligence v1: negative taste signal ("not for me").
+  // Optional — only the main daily rotation wires this up to a real
+  // swap-for-next-candidate; cookbook/tapas/breakfast sections still log the
+  // DISMISS (see PassButton) but don't need a replacement affordance since
+  // they're not the adaptive-learning surface.
+  onPass?: (id: string) => void;
 }) {
   const router = useRouter();
   const ref = useRef<HTMLDivElement | null>(null);
@@ -297,6 +344,7 @@ function RecipeCard({
           >
             {cookLaterPending ? "Saving\u2026" : "Cook Later"}
           </MotionButton>
+          <PassButton recipeId={recipe.id} onPass={onPass} />
         </div>
       </div>
     </>
@@ -709,6 +757,23 @@ export function DashboardClient({
     );
   }
 
+  // Free-tier feed intelligence v1: PassButton already logged the DISMISS
+  // interaction (which is what actually feeds updateLearnedPreferences) —
+  // this just swaps the passed card for the next not-yet-shown candidate
+  // from the same pool the filter chips already use, so the grid never
+  // shows a hole. Falls back to simply removing the card if the pool is
+  // exhausted (same "never worse than fewer cards" fallback the rest of the
+  // dashboard already relies on).
+  function handlePass(id: string) {
+    setVisible((prev) => {
+      const remaining = prev.filter((r) => r.id !== id);
+      const visibleIds = new Set(prev.map((r) => r.id));
+      const sourcePool = selected.size > 0 ? filteredPool : poolState;
+      const replacement = sourcePool.find((r) => !visibleIds.has(r.id));
+      return replacement ? [...remaining, replacement] : remaining;
+    });
+  }
+
   async function handleRefresh() {
     hapticImpactLight();
     setRefreshMessage(null);
@@ -907,6 +972,7 @@ export function DashboardClient({
                 userDiets={userDiets}
                 onSavedChange={handleSavedChange}
                 popKey={refreshGeneration}
+                onPass={handlePass}
               />
             ))}
           </AnimatePresence>
