@@ -13,6 +13,12 @@ import { MotionButton } from "@/components/motion-button";
 // Both pages keep full local state for every field and POST the same
 // combined payload to /api/onboarding, so saving from here doesn't clobber
 // what's set on the other page.
+const SPICE_OPTIONS: { value: number; label: string }[] = [
+  { value: 1, label: "Mild" },
+  { value: 2, label: "Medium" },
+  { value: 3, label: "Hot" },
+];
+
 export function PreferencesOnlyForm({
   diets,
   allergens,
@@ -23,6 +29,7 @@ export function PreferencesOnlyForm({
   initialFavoriteCuisines,
   initialFoodGroupFeedback,
   initialClusterValues,
+  initialSpiceMax,
 }: {
   diets: Diet[];
   allergens: Allergen[];
@@ -33,6 +40,7 @@ export function PreferencesOnlyForm({
   initialFavoriteCuisines: string[];
   initialFoodGroupFeedback: string;
   initialClusterValues: number[];
+  initialSpiceMax: number | null;
 }) {
   const router = useRouter();
 
@@ -43,6 +51,7 @@ export function PreferencesOnlyForm({
   const [clusterValues] = useState<number[]>(initialClusterValues);
   const [feedback] = useState(initialFoodGroupFeedback);
   const [favoriteCuisines] = useState<string[]>(initialFavoriteCuisines);
+  const [spiceMax, setSpiceMax] = useState<number | null>(initialSpiceMax);
 
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -101,6 +110,7 @@ export function PreferencesOnlyForm({
           meters,
           favoriteCuisines,
           foodGroupFeedback: feedback.trim() || null,
+          spiceMax,
         }),
       });
 
@@ -173,6 +183,25 @@ export function PreferencesOnlyForm({
               options={diets.map((d) => ({ value: d.id, label: d.name }))}
               selected={dietIds}
               onToggle={toggleDiet}
+            />
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#1A1D1B]">How much heat can you handle?</h3>
+          <p className="mt-1 text-xs text-[#6B7370]">
+            We won&rsquo;t surface anything spicier than this. Recipes we haven&rsquo;t rated for
+            heat still show up either way.
+          </p>
+          <div className="mt-3">
+            <ChipGrid
+              options={SPICE_OPTIONS.map((o) => ({ value: String(o.value), label: o.label }))}
+              selected={spiceMax === null ? [] : [String(spiceMax)]}
+              onToggle={(value) => {
+                setSaved(false);
+                const numeric = Number(value);
+                setSpiceMax((prev) => (prev === numeric ? null : numeric));
+              }}
             />
           </div>
         </div>

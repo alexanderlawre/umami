@@ -71,3 +71,28 @@ export function filterEligibleRecipes<T extends FilterableRecipe>(
 ): T[] {
   return recipes.filter((recipe) => isRecipeEligible(recipe, user));
 }
+
+// Near-hard spice ceiling (free-tier feed intelligence v1): unlike the
+// allergen filter above, this is a comfort preference, not a safety
+// concern, so it lives in its own function rather than folding into
+// isRecipeEligible. `spiceLevel === null` (unrated) always passes — unknown
+// heat is never assumed to be hot. `spiceMax === null` means the user
+// hasn't set a ceiling (or explicitly wants everything), so nothing is
+// filtered.
+export type SpiceRateableRecipe = { spiceLevel: number | null };
+
+export function isWithinSpiceCeiling(
+  recipe: SpiceRateableRecipe,
+  spiceMax: number | null,
+): boolean {
+  if (spiceMax === null) return true;
+  if (recipe.spiceLevel === null) return true;
+  return recipe.spiceLevel <= spiceMax;
+}
+
+export function filterWithinSpiceCeiling<T extends SpiceRateableRecipe>(
+  recipes: T[],
+  spiceMax: number | null,
+): T[] {
+  return recipes.filter((recipe) => isWithinSpiceCeiling(recipe, spiceMax));
+}

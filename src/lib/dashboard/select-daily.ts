@@ -1,5 +1,9 @@
 import { prisma } from "@/lib/prisma";
-import { filterEligibleRecipes, type FilterableRecipe } from "@/lib/recommend/filter";
+import {
+  filterEligibleRecipes,
+  filterWithinSpiceCeiling,
+  type FilterableRecipe,
+} from "@/lib/recommend/filter";
 import { scoreRecipe, weightedShuffle, type ScoringProfile } from "@/lib/recommend/score";
 import { savedRecipeExpiryCutoff } from "@/lib/saved-recipes";
 import {
@@ -29,6 +33,13 @@ export type EligibleRecipe = FilterableRecipe &
     // 0-100 weight per FoodGroup this recipe belongs to — scoring-only,
     // never rendered on the card itself (see toCardData, which drops it).
     foodGroups: { foodGroupId: string; weight: number }[];
+    // 0-3 heat level, null if unrated — see filter.ts's isWithinSpiceCeiling
+    // and Recipe.spiceLevel. Scoring/filter-only, dropped by toCardData.
+    spiceLevel: number | null;
+    // Admin-curated catalog effort classification — see score.ts's
+    // EFFORT_MATCH_WEIGHT for how this maps to the user's dashboard
+    // Quick/Any/Project control. Scoring-only, dropped by toCardData.
+    effortTier: string;
   };
 
 type DashboardContext = {
@@ -106,10 +117,15 @@ async function loadDashboardContext(userId: string): Promise<DashboardContext> {
     saved: savedRecipeIds.has(r.id),
     isDiscovery: false,
     foodGroups: r.foodGroupProfile.map((fg) => ({ foodGroupId: fg.foodGroupId, weight: fg.weight })),
+    spiceLevel: r.spiceLevel,
+    effortTier: r.effortTier,
   }));
 
   const timezone = user?.timezone ?? null;
-  const eligible = filterEligibleRecipes(candidates, userProfile);
+  const eligible = filterWithinSpiceCeiling(
+    filterEligibleRecipes(candidates, userProfile),
+    preferences?.spiceMax ?? null,
+  );
 
   // Blend learnedValue in once real behavioral signal exists (i.e. it has
   // actually drifted away from the frozen onboarding declaredValue);

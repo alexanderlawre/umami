@@ -47,5 +47,6 @@ export async function loadPreferencesData(userId: string) {
     initialFavoriteCuisines: preferences?.favoriteCuisines ?? [],
     initialFoodGroupFeedback: preferences?.foodGroupFeedback ?? "",
     initialClusterValues,
+    initialSpiceMax: preferences?.spiceMax ?? null,
   };
 }

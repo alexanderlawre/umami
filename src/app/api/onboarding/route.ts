@@ -10,6 +10,10 @@ const onboardingSchema = z.object({
   meters: z.record(z.string(), z.number().min(0).max(100)),
   favoriteCuisines: z.array(z.string()),
   foodGroupFeedback: z.string().nullable().optional(),
+  // Free-tier feed intelligence v1: null = Hot/unfiltered, same convention
+  // as Recipe.spiceLevel. Optional so existing callers of this route that
+  // don't render the spice control don't need to send it.
+  spiceMax: z.number().int().min(0).max(3).nullable().optional(),
 });
 
 export async function POST(request: Request) {
@@ -27,7 +31,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { dietIds, allergenIds, customAllergens, meters, favoriteCuisines, foodGroupFeedback } =
+  const { dietIds, allergenIds, customAllergens, meters, favoriteCuisines, foodGroupFeedback, spiceMax } =
     parsed.data;
 
   await prisma.$transaction([
@@ -40,6 +44,7 @@ export async function POST(request: Request) {
         customAllergens,
         favoriteCuisines,
         foodGroupFeedback: foodGroupFeedback ?? undefined,
+        spiceMax: spiceMax === undefined ? undefined : spiceMax,
       },
       update: {
         diets: { set: dietIds.map((id) => ({ id })) },
@@ -47,6 +52,7 @@ export async function POST(request: Request) {
         customAllergens,
         favoriteCuisines,
         foodGroupFeedback: foodGroupFeedback ?? undefined,
+        spiceMax: spiceMax === undefined ? undefined : spiceMax,
       },
     }),
     ...Object.entries(meters).map(([foodGroupId, value]) =>
