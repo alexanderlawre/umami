@@ -87,10 +87,18 @@ enum SubmissionStatus {
 model User {
   id           String   @id @default(cuid())
   email        String   @unique
-  passwordHash String
+  // Nullable: users created via Google/Apple sign-in have no password at
+  // all. The Credentials provider's authorize() guards against this (see
+  // src/auth.ts) — such accounts can only sign in via their OAuth provider.
+  passwordHash String?
   name         String
   image        String?
-  country      String
+  // Nullable: OAuth providers (especially Apple) often don't supply
+  // city/country. Only the credentials /api/signup route still requires
+  // this at creation time; it's otherwise just a profile detail (see
+  // src/app/profile, src/app/admin/users — both already tolerate missing
+  // values).
+  country      String?
   city         String?
   timezone     String?
   birthday     DateTime?
@@ -98,6 +106,13 @@ model User {
   isPremium    Boolean  @default(false)
   createdAt    DateTime @default(now())
   lastActiveAt DateTime @default(now())
+
+  // Provider account ids for adapter-less OAuth linking (no Account/Session
+  // models in this schema — NextAuth is JWT-only here). Populated the first
+  // time a user completes Google/Apple sign-in; see the jwt callback in
+  // src/auth.ts for the find-or-create/link logic.
+  googleId String? @unique
+  appleId  String? @unique
 
   preferences         UserPreferences?
   foodGroupPreferences FoodGroupPreference[]

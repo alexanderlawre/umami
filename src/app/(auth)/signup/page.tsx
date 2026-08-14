@@ -7,6 +7,7 @@ import Link from "next/link";
 import { compressImage } from "@/lib/image-compression";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
+import { OAuthButtons } from "@/components/oauth-buttons";
 import { hideKeyboard } from "@/lib/native";
 
 export default function SignupPage() {
@@ -108,7 +109,15 @@ export default function SignupPage() {
           <p className="mt-1 text-sm text-[#6B7370]">
             Four recipes. That&apos;s the whole surface.
           </p>
-          <p className="mt-4 text-xs font-medium uppercase tracking-wide text-[#6B7370]">
+
+          <p className="mt-4 text-xs text-[#6B7370]">
+            Fastest way in — pulls in your name, email, and photo automatically.
+          </p>
+          <div className="mt-3 mb-4">
+            <OAuthButtons />
+          </div>
+
+          <p className="text-xs font-medium uppercase tracking-wide text-[#6B7370]">
             Step 1 of 3: Profile
           </p>
 

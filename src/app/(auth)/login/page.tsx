@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
+import { OAuthButtons } from "@/components/oauth-buttons";
 import { hideKeyboard } from "@/lib/native";
 
 export default function LoginPage() {
@@ -46,7 +47,11 @@ export default function LoginPage() {
           </h1>
           <p className="mt-1 text-center text-sm text-[#6B7370]">Welcome back.</p>
 
-          <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+          <div className="mt-8">
+            <OAuthButtons />
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-[#1A1D1B]">
                 Email

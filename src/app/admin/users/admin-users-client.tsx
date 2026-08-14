@@ -7,7 +7,7 @@ export type AdminUserRow = {
   email: string;
   name: string;
   city: string | null;
-  country: string;
+  country: string | null;
   isAdmin: boolean;
   isPremium: boolean;
   createdAt: string;
