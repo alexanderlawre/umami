@@ -534,6 +534,55 @@ function FilterBar({
   );
 }
 
+const EFFORT_OPTIONS: { value: "QUICK" | "ANY" | "PROJECT"; label: string }[] = [
+  { value: "QUICK", label: "Quick" },
+  { value: "ANY", label: "Any" },
+  { value: "PROJECT", label: "Project" },
+];
+
+// Free-tier feed intelligence v1: persistent Quick/Any/Project segmented
+// control. Unlike FilterBar above (a client-only reshuffle of the
+// already-served pool), changing this always triggers a real server re-pick
+// — see handleEffortChange in DashboardClient — since a thin PROJECT
+// inventory needs to reach outside the 4 cards already on screen to fill
+// gracefully. Soft bias only (score.ts), so it never empties the dashboard.
+function EffortControl({
+  value,
+  onChange,
+  disabled,
+}: {
+  value: "QUICK" | "ANY" | "PROJECT";
+  onChange: (value: "QUICK" | "ANY" | "PROJECT") => void;
+  disabled: boolean;
+}) {
+  return (
+    <div
+      role="radiogroup"
+      aria-label="How much effort are you up for?"
+      className="mb-4 inline-flex rounded-full border border-[#E8E6E0] bg-white p-1"
+    >
+      {EFFORT_OPTIONS.map((opt) => {
+        const active = value === opt.value;
+        return (
+          <button
+            key={opt.value}
+            type="button"
+            role="radio"
+            aria-checked={active}
+            disabled={disabled}
+            onClick={() => !active && onChange(opt.value)}
+            className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors disabled:opacity-50 ${
+              active ? "bg-[#1F5F45] text-white" : "text-[#6B7370] hover:bg-[#EDF3EF]"
+            }`}
+          >
+            {opt.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 export type CookbookSection = {
   id: string;
   name: string;
@@ -595,6 +644,7 @@ export function DashboardClient({
   cookbooks,
   tapasSection,
   breakfastSection,
+  effortPreference,
 }: {
   pool: RecipeCardData[];
   served: RecipeCardData[];
@@ -602,6 +652,7 @@ export function DashboardClient({
   cookbooks: CookbookSection[];
   tapasSection: RecipeCardData[];
   breakfastSection: RecipeCardData[];
+  effortPreference: "QUICK" | "ANY" | "PROJECT";
 }) {
   const [poolState] = useState(pool);
   const [visible, setVisible] = useState(() => dedupeFirstFour(served));
@@ -610,6 +661,8 @@ export function DashboardClient({
   const [refreshPending, setRefreshPending] = useState(false);
   const [refreshMessage, setRefreshMessage] = useState<string | null>(null);
   const [refreshPressed, setRefreshPressed] = useState(false);
+  const [effort, setEffort] = useState(effortPreference);
+  const [effortPending, setEffortPending] = useState(false);
   // Bumped every time `visible` is replaced with a new set of cards (server
   // refresh, local filtered reshuffle, filter toggle/clear) — passed to each
   // main-grid RecipeCard as `popKey` to trigger its liquid-gooey pop-in.
@@ -683,6 +736,40 @@ export function DashboardClient({
       setRefreshMessage("Something went wrong. Try again.");
     } finally {
       setRefreshPending(false);
+    }
+  }
+
+  // Always a real server re-pick (never the local filteredPool reshuffle
+  // handleRefresh falls back to) — the whole point of this control is to
+  // reach outside the already-served 4 cards into the full eligible pool,
+  // e.g. to actually surface PROJECT-tier recipes that weren't in today's
+  // batch at all. Persists as the user's new default via the same request.
+  async function handleEffortChange(next: "QUICK" | "ANY" | "PROJECT") {
+    if (effortPending) return;
+    hapticImpactLight();
+    setEffort(next);
+    setEffortPending(true);
+    setRefreshMessage(null);
+    try {
+      const res = await fetch("/api/dashboard/refresh", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ effortPreference: next }),
+      });
+      const body = await res.json().catch(() => null);
+
+      if (!res.ok || !body?.recipes) {
+        setRefreshMessage("Something went wrong. Try again.");
+        setEffort(effortPreference);
+        return;
+      }
+
+      replaceVisible(body.recipes);
+    } catch {
+      setRefreshMessage("Something went wrong. Try again.");
+      setEffort(effortPreference);
+    } finally {
+      setEffortPending(false);
     }
   }
 
@@ -794,6 +881,8 @@ export function DashboardClient({
 
   return (
     <div>
+      <EffortControl value={effort} onChange={handleEffortChange} disabled={effortPending} />
+
       <FilterBar
         tags={availableTags}
         selected={selected}

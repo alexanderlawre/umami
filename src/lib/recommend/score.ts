@@ -16,6 +16,10 @@ export type ScorableRecipe = {
   // optional so any caller that doesn't care about learned personalization
   // (or hasn't loaded it) keeps working unchanged.
   foodGroups?: { foodGroupId: string; weight: number }[];
+  // Admin-curated catalog classification (WEEKNIGHT | WEEKEND | PROJECT) —
+  // optional for the same reason foodGroups is: callers that don't care
+  // about the effort control keep working unchanged.
+  effortTier?: string;
 };
 
 export type ScoringProfile = {
@@ -32,6 +36,13 @@ export type ScoringProfile = {
   // top of — not a replacement for — the user's declared onboarding
   // favoriteCuisines.
   implicitFavoriteCuisines?: string[];
+  // Free-tier feed intelligence v1: the dashboard's Quick/Any/Project
+  // segmented control (UserPreferences.effortPreference). "ANY" or absent
+  // contributes nothing — this is a soft bias, never a hard filter, so a
+  // thin PROJECT inventory still fills gracefully via the same base-pool
+  // fallback pickDaily/pickRotating already use when a filtered set comes
+  // up short (see select-daily.ts).
+  effortPreference?: "QUICK" | "ANY" | "PROJECT";
 };
 
 // The main rotation pool only ever contains LUNCH/DINNER recipes (Breakfast
@@ -55,6 +66,13 @@ const IMPLICIT_CUISINE_WEIGHT = 3;
 // over the ranking, since it compounds across every food group a recipe
 // touches rather than being a single flat bonus.
 const FOOD_GROUP_AFFINITY_WEIGHT = 6;
+// Soft bias for the dashboard's Quick/Any/Project control — deliberately
+// smaller than FAVORITE_CUISINE_WEIGHT so effort nudges the ranking without
+// ever overriding taste/cuisine personalization. WEEKEND-tier recipes get
+// no bonus either way under either Quick or Project, since they're not a
+// clean match for "quick" or "project" — they just don't get boosted, never
+// excluded.
+const EFFORT_MATCH_WEIGHT = 3;
 // Every recipe gets a small base weight so recipes that match nothing are
 // still eligible to be picked (weighted-random, not a cutoff).
 const BASE_WEIGHT = 1;
@@ -81,6 +99,12 @@ export function scoreRecipe(
 
   if (profile.foodGroupAffinity && recipe.foodGroups && recipe.foodGroups.length > 0) {
     score += foodGroupAffinityBonus(recipe.foodGroups, profile.foodGroupAffinity) * FOOD_GROUP_AFFINITY_WEIGHT;
+  }
+
+  if (profile.effortPreference === "QUICK" && recipe.effortTier === "WEEKNIGHT") {
+    score += EFFORT_MATCH_WEIGHT;
+  } else if (profile.effortPreference === "PROJECT" && recipe.effortTier === "PROJECT") {
+    score += EFFORT_MATCH_WEIGHT;
   }
 
   return score;

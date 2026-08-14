@@ -54,7 +54,14 @@ type DashboardContext = {
   windowKey: string;
 };
 
-async function loadDashboardContext(userId: string): Promise<DashboardContext> {
+async function loadDashboardContext(
+  userId: string,
+  // Lets a refresh request pass a just-changed effort control value that
+  // hasn't been persisted yet (or shouldn't override the stored default on
+  // every read) — see refreshDailySelection / /api/dashboard/refresh.
+  // Falls back to the persisted UserPreferences.effortPreference otherwise.
+  effortOverride?: "QUICK" | "ANY" | "PROJECT",
+): Promise<DashboardContext> {
   const [user, preferences, recipes, savedRecipes, foodGroupPrefs, cookedCuisineRows] =
     await Promise.all([
       prisma.user.findUnique({ where: { id: userId }, select: { timezone: true } }),
@@ -157,6 +164,7 @@ async function loadDashboardContext(userId: string): Promise<DashboardContext> {
       favoriteCuisines: preferences?.favoriteCuisines ?? [],
       foodGroupAffinity: foodGroupAffinity.size > 0 ? foodGroupAffinity : undefined,
       implicitFavoriteCuisines: implicitFavoriteCuisines.length > 0 ? implicitFavoriteCuisines : undefined,
+      effortPreference: effortOverride ?? preferences?.effortPreference ?? "ANY",
     },
     timezone,
     currentSlot: getCurrentMealSlot(timezone),
@@ -311,6 +319,7 @@ export type DailySelection = {
   cookbooks: CookbookSection[];
   tapasSection: RecipeCardData[];
   breakfastSection: RecipeCardData[];
+  effortPreference: "QUICK" | "ANY" | "PROJECT";
 };
 
 // Admin-curated cookbook sections are built by filtering the already
@@ -486,10 +495,15 @@ export async function getDailySelection(userId: string): Promise<DailySelection>
     cookbooks,
     tapasSection: tapasServed.map(toCardData),
     breakfastSection: breakfastServed.map(toCardData),
+    effortPreference: profile.effortPreference ?? "ANY",
   };
 }
 
-export type RefreshResult = { served: RecipeCardData[]; nextWindowAt: Date };
+export type RefreshResult = {
+  served: RecipeCardData[];
+  nextWindowAt: Date;
+  effortPreference: "QUICK" | "ANY" | "PROJECT";
+};
 
 // No cap on manual reshuffles — a user can hit "Refresh recipes" as many
 // times as they like. Each refresh excludes every recipe already served
@@ -501,8 +515,18 @@ export type RefreshResult = { served: RecipeCardData[]; nextWindowAt: Date };
 // future back-navigation will show, as opposed to the passive reads in
 // getDailySelection which must never change the persisted batch on their
 // own).
-export async function refreshDailySelection(userId: string): Promise<RefreshResult> {
-  const { pool, profile, timezone, currentSlot, windowKey } = await loadDashboardContext(userId);
+export async function refreshDailySelection(
+  userId: string,
+  // Lets the dashboard's Quick/Any/Project control trigger a real re-pick
+  // against the full eligible pool (not just a local reshuffle of the
+  // already-served 4 cards) — see /api/dashboard/refresh, which persists
+  // this back to UserPreferences.effortPreference when provided.
+  effortOverride?: "QUICK" | "ANY" | "PROJECT",
+): Promise<RefreshResult> {
+  const { pool, profile, timezone, currentSlot, windowKey } = await loadDashboardContext(
+    userId,
+    effortOverride,
+  );
 
   const existing = await prisma.servedCard.findMany({
     where: { userId, windowKey },
@@ -522,5 +546,6 @@ export async function refreshDailySelection(userId: string): Promise<RefreshResu
   return {
     served: flagDiscoveryCard(served, profile).map(toCardData),
     nextWindowAt: nextMealSlotWindowAt(timezone),
+    effortPreference: profile.effortPreference ?? "ANY",
   };
 }

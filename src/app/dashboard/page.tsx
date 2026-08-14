@@ -29,6 +29,7 @@ export default async function DashboardPage() {
           cookbooks={selection.cookbooks}
           tapasSection={selection.tapasSection}
           breakfastSection={selection.breakfastSection}
+          effortPreference={selection.effortPreference}
         />
       </div>
     </main>
