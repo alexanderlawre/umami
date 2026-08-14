@@ -77,7 +77,7 @@ export function PreferencesClient({
           <MotionButton
             type="button"
             onClick={handleContinue}
-            className="flex-1 rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2E7D5B]"
+            className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2D6A4F]"
           >
             Continue
           </MotionButton>

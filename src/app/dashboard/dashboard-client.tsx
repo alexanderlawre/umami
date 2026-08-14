@@ -287,7 +287,7 @@ function RecipeCard({
           onSavedChange={(saved) => onSavedChange(recipe.id, saved)}
         />
         {recipe.isDiscovery ? (
-          <span className="absolute right-3 top-3 rounded-full bg-[#1F5F45] px-2.5 py-1 text-[11px] font-medium text-white shadow-sm">
+          <span className="absolute right-3 top-3 rounded-full bg-[#1B4332] px-2.5 py-1 text-[11px] font-medium text-white shadow-sm">
             Something new
           </span>
         ) : null}
@@ -332,7 +332,7 @@ function RecipeCard({
         <div className="mt-4 flex items-center gap-2">
           <Link
             href={`/recipe/${recipe.slug}`}
-            className="flex-1 rounded-full bg-[#1F5F45] px-4 py-2 text-center text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+            className="flex-1 rounded-full bg-[#1B4332] px-4 py-2 text-center text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           >
             View Recipe
           </Link>
@@ -379,8 +379,8 @@ function RecipeCard({
         <Liquid
           blur={9}
           contrast={20}
-          fill="rgba(31, 95, 69, 0.14)"
-          shadow="0 6px 16px rgba(31, 95, 69, 0.12)"
+          fill="rgba(27, 67, 50, 0.14)"
+          shadow="0 6px 16px rgba(27, 67, 50, 0.12)"
           className="block"
         >
           <Liquid.Item morph={{ shape: true }} scale={popped ? 1 : 0.88} transition="bouncy">
@@ -444,8 +444,8 @@ function FilterTagButton({
     <Liquid
       blur={5}
       contrast={22}
-      fill={active ? "rgba(31, 95, 69, 0.16)" : "transparent"}
-      shadow={active ? "0 2px 6px rgba(31, 95, 69, 0.18)" : undefined}
+      fill={active ? "rgba(27, 67, 50, 0.16)" : "transparent"}
+      shadow={active ? "0 2px 6px rgba(27, 67, 50, 0.18)" : undefined}
       className="inline-block"
     >
       <Liquid.Item morph={{ shape: true }} scale={active ? 1.06 : 1} transition="bouncy">
@@ -497,7 +497,7 @@ function FilterBar({
         >
           Filters
           {selected.size > 0 && (
-            <span className="rounded-full bg-[#1F5F45] px-1.5 py-0.5 text-[10px] font-semibold text-white">
+            <span className="rounded-full bg-[#1B4332] px-1.5 py-0.5 text-[10px] font-semibold text-white">
               {selected.size}
             </span>
           )}
@@ -612,19 +612,32 @@ function EffortControl({
       {EFFORT_OPTIONS.map((opt) => {
         const active = value === opt.value;
         return (
-          <button
+          // Same single-item liquid group as FilterTagButton above: a
+          // transparent-when-inactive gooey halo that pops in with a
+          // springy shape-morph the moment this option becomes active.
+          <Liquid
             key={opt.value}
-            type="button"
-            role="radio"
-            aria-checked={active}
-            disabled={disabled}
-            onClick={() => !active && onChange(opt.value)}
-            className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors disabled:opacity-50 ${
-              active ? "bg-[#1F5F45] text-white" : "text-[#6B7370] hover:bg-[#EDF3EF]"
-            }`}
+            blur={5}
+            contrast={22}
+            fill={active ? "rgba(27, 67, 50, 0.16)" : "transparent"}
+            shadow={active ? "0 2px 6px rgba(27, 67, 50, 0.18)" : undefined}
+            className="inline-block"
           >
-            {opt.label}
-          </button>
+            <Liquid.Item morph={{ shape: true }} scale={active ? 1.06 : 1} transition="bouncy">
+              <button
+                type="button"
+                role="radio"
+                aria-checked={active}
+                disabled={disabled}
+                onClick={() => !active && onChange(opt.value)}
+                className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors disabled:opacity-50 ${
+                  active ? "bg-[#1B4332] text-white" : "text-[#6B7370] hover:bg-[#EDF3EF]"
+                }`}
+              >
+                {opt.label}
+              </button>
+            </Liquid.Item>
+          </Liquid>
         );
       })}
     </div>
@@ -986,8 +999,8 @@ export function DashboardClient({
         <Liquid
           blur={7}
           contrast={18}
-          fill="rgba(31, 95, 69, 0.14)"
-          shadow="0 3px 10px rgba(31, 95, 69, 0.14)"
+          fill="rgba(27, 67, 50, 0.14)"
+          shadow="0 3px 10px rgba(27, 67, 50, 0.14)"
         >
           <Liquid.Item
             morph={{ shape: true }}

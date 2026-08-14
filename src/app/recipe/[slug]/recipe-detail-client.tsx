@@ -463,7 +463,7 @@ export function RecipeDetailClient({
           whileTap={{ scale: 0.94 }}
           className={`rounded-xl border px-4 py-3 text-sm font-medium ${
             starred
-              ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
+              ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
               : "border-[#E8E6E0] text-[#1A1D1B]"
           }`}
         >
@@ -474,7 +474,7 @@ export function RecipeDetailClient({
           disabled={cooking}
           animate={justCooked ? { scale: [1, 1.08, 1] } : { scale: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="rounded-xl bg-[#1F5F45] px-4 py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
+          className="rounded-xl bg-[#1B4332] px-4 py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
         >
           {cooking ? "Logging..." : justCooked ? "✓ Logged!" : "I cooked this"}
         </MotionButton>
@@ -501,7 +501,7 @@ export function RecipeDetailClient({
           </MotionButton>
           <MotionButton
             onClick={() => submitCosign(true)}
-            className="rounded-xl bg-[#1F5F45] px-4 py-3 text-sm font-medium text-white"
+            className="rounded-xl bg-[#1B4332] px-4 py-3 text-sm font-medium text-white"
           >
             Share cosign
           </MotionButton>

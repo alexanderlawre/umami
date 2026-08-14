@@ -213,11 +213,11 @@ export function PreferencesOnlyForm({
             type="button"
             onClick={save}
             disabled={saving}
-            className="rounded-xl bg-[#1F5F45] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#2E7D5B] disabled:opacity-50"
+            className="rounded-xl bg-[#1B4332] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
           >
             {saving ? "Saving..." : "Save changes"}
           </MotionButton>
-          {saved && <span className="text-sm text-[#1F5F45]">Saved!</span>}
+          {saved && <span className="text-sm text-[#1B4332]">Saved!</span>}
         </div>
       </PageTransition>
     </main>

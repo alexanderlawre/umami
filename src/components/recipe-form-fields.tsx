@@ -15,7 +15,7 @@ import {
 } from "@/lib/recipe-form-shared";
 
 export function inputClass() {
-  return "w-full rounded-lg border border-[#E8E6E0] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F45]";
+  return "w-full rounded-lg border border-[#E8E6E0] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B4332]";
 }
 
 export function labelClass() {
@@ -95,7 +95,7 @@ export function Chip({
       onClick={onClick}
       className={`rounded-full border px-3 py-1.5 text-xs font-medium ${
         active
-          ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
+          ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
           : "border-[#E8E6E0] text-[#6B7370]"
       }`}
     >

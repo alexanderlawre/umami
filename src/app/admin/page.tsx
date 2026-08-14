@@ -21,7 +21,7 @@ function StatCard({
     return (
       <Link
         href={href}
-        className="block rounded-2xl border border-[#E8E6E0] bg-white p-4 transition hover:border-[#1F5F45] hover:shadow-sm"
+        className="block rounded-2xl border border-[#E8E6E0] bg-white p-4 transition hover:border-[#1B4332] hover:shadow-sm"
       >
         {content}
       </Link>

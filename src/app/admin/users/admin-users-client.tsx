@@ -58,12 +58,12 @@ function PromoteForm({ onPromoted }: { onPromoted: (email: string) => void }) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="name@example.com"
-          className="flex-1 rounded-lg border border-[#E8E6E0] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+          className="flex-1 rounded-lg border border-[#E8E6E0] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
         />
         <button
           onClick={submit}
           disabled={pending || !email.trim()}
-          className="shrink-0 rounded-lg bg-[#1F5F45] px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+          className="shrink-0 rounded-lg bg-[#1B4332] px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
         >
           {pending ? "Saving…" : "Promote"}
         </button>
@@ -142,7 +142,7 @@ export function AdminUsersClient({
                 <p className="text-sm font-semibold text-[#1A1D1B]">
                   {u.name}
                   {u.isAdmin && (
-                    <span className="ml-2 rounded-full bg-[#EDF3EF] px-2 py-0.5 text-[10px] font-medium text-[#1F5F45]">
+                    <span className="ml-2 rounded-full bg-[#EDF3EF] px-2 py-0.5 text-[10px] font-medium text-[#1B4332]">
                       Admin
                     </span>
                   )}
@@ -167,7 +167,7 @@ export function AdminUsersClient({
                   disabled={togglingId === u.id}
                   className={`rounded-full border px-3 py-2 text-xs transition disabled:opacity-50 ${
                     u.isPremium
-                      ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
+                      ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
                       : "border-[#E8E6E0] text-[#6B7370] hover:bg-[#EDF3EF]"
                   }`}
                 >
@@ -192,7 +192,7 @@ export function AdminUsersClient({
 
             <div className="mt-3 flex flex-wrap gap-1.5">
               {u.diets.map((d) => (
-                <span key={d} className="rounded-full bg-[#EDF3EF] px-2 py-1 text-[11px] text-[#1F5F45]">
+                <span key={d} className="rounded-full bg-[#EDF3EF] px-2 py-1 text-[11px] text-[#1B4332]">
                   {d}
                 </span>
               ))}

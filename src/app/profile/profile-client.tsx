@@ -171,7 +171,7 @@ export function ProfileClient({
                   setSaved(false);
                   setName(e.target.value);
                 }}
-                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
             <div>
@@ -183,7 +183,7 @@ export function ProfileClient({
                   setSaved(false);
                   setBirthday(e.target.value);
                 }}
-                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
             <div>
@@ -195,7 +195,7 @@ export function ProfileClient({
                   setSaved(false);
                   setCity(e.target.value);
                 }}
-                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
             <div>
@@ -207,7 +207,7 @@ export function ProfileClient({
                   setSaved(false);
                   setCountry(e.target.value);
                 }}
-                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
           </div>
@@ -217,11 +217,11 @@ export function ProfileClient({
               type="button"
               onClick={save}
               disabled={saving}
-              className="shrink-0 rounded-xl bg-[#1F5F45] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2E7D5B] disabled:opacity-50"
+              className="shrink-0 rounded-xl bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
             >
               {saving ? "Saving..." : "Save"}
             </MotionButton>
-            {saved && <span className="text-sm text-[#1F5F45]">Saved!</span>}
+            {saved && <span className="text-sm text-[#1B4332]">Saved!</span>}
           </div>
           {error && <p className="mt-2 text-sm text-[#B23A32]">{error}</p>}
 

@@ -55,7 +55,7 @@ export function ProfileMenu({
         aria-label="Profile menu"
         whileHover={{ y: -2, scale: 1.04 }}
         whileTap={{ scale: 0.92 }}
-        className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-[#1F5F45] text-sm font-semibold text-white shadow-sm"
+        className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-[#1B4332] text-sm font-semibold text-white shadow-sm"
       >
         {image ? (
           // eslint-disable-next-line @next/next/no-img-element

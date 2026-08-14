@@ -136,7 +136,7 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
                   type="button"
                   onClick={() => saveRename(row.id)}
                   disabled={savingRename || !editingName.trim()}
-                  className="shrink-0 rounded-lg border border-[#1F5F45] bg-[#EDF3EF] px-2 py-1 text-xs text-[#1F5F45] disabled:opacity-50"
+                  className="shrink-0 rounded-lg border border-[#1B4332] bg-[#EDF3EF] px-2 py-1 text-xs text-[#1B4332] disabled:opacity-50"
                 >
                   Save
                 </button>

@@ -73,7 +73,7 @@ export const EMPTY_RECIPE: RecipeFormValues = {
   effortTier: "WEEKNIGHT",
   batchFriendly: false,
   attributes: [],
-  heroColor: "#1F5F45",
+  heroColor: "#1B4332",
   imageCredit: null,
   caloriesPerServing: null,
   proteinGrams: null,

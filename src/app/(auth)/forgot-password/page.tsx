@@ -60,7 +60,7 @@ export default function ForgotPasswordPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+                  className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
                 />
               </div>
 
@@ -69,7 +69,7 @@ export default function ForgotPasswordPage() {
               <MotionButton
                 type="submit"
                 disabled={loading}
-                className="w-full rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2E7D5B] disabled:opacity-50"
+                className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
               >
                 {loading ? "Sending..." : "Send reset link"}
               </MotionButton>

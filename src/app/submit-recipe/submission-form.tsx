@@ -214,7 +214,7 @@ export function SubmissionForm({
           type="button"
           onClick={handleSubmit}
           disabled={saving}
-          className="w-full rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white disabled:opacity-50"
+          className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white disabled:opacity-50"
         >
           {saving ? "Submitting…" : "Submit recipe"}
         </button>

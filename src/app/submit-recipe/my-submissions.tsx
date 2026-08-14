@@ -14,7 +14,7 @@ type SubmissionRow = {
 function StatusBadge({ status }: { status: SubmissionRow["status"] }) {
   const styles: Record<SubmissionRow["status"], string> = {
     PENDING: "border-[#B45309] bg-[#FEF3E2] text-[#B45309]",
-    APPROVED: "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]",
+    APPROVED: "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]",
     REJECTED: "border-red-300 bg-red-50 text-red-700",
   };
   const labels: Record<SubmissionRow["status"], string> = {

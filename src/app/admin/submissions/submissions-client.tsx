@@ -17,7 +17,7 @@ type SubmissionRow = SubmissionPreviewData & {
 function StatusBadge({ status }: { status: SubmissionRow["status"] }) {
   const styles: Record<SubmissionRow["status"], string> = {
     PENDING: "border-[#B45309] bg-[#FEF3E2] text-[#B45309]",
-    APPROVED: "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]",
+    APPROVED: "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]",
     REJECTED: "border-red-300 bg-red-50 text-red-700",
   };
   return (
@@ -105,7 +105,7 @@ export function SubmissionsClient({
                 key={row.id}
                 type="button"
                 onClick={() => openReview(row)}
-                className="flex w-full items-center gap-3 rounded-xl border border-[#E8E6E0] bg-white p-3 text-left hover:border-[#1F5F45]"
+                className="flex w-full items-center gap-3 rounded-xl border border-[#E8E6E0] bg-white p-3 text-left hover:border-[#1B4332]"
               >
                 <div className="h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-[#EDF3EF]">
                   {row.imageUrl && (
@@ -184,7 +184,7 @@ export function SubmissionsClient({
                 </label>
                 <textarea
                   rows={2}
-                  className="w-full rounded-lg border border-[#E8E6E0] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+                  className="w-full rounded-lg border border-[#E8E6E0] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
                   value={reviewNote}
                   onChange={(e) => setReviewNote(e.target.value)}
                 />
@@ -206,7 +206,7 @@ export function SubmissionsClient({
                     type="button"
                     onClick={approve}
                     disabled={busy}
-                    className="flex-1 rounded-xl bg-[#1F5F45] py-3 text-sm font-medium text-white disabled:opacity-50"
+                    className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white disabled:opacity-50"
                   >
                     {busy ? "Approving…" : "Approve"}
                   </button>

@@ -98,7 +98,7 @@ function CookbookMenu({
         aria-expanded={open}
         className={`w-full rounded-full border px-3 py-2 text-xs sm:w-auto ${
           cookbookIds.length > 0
-            ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
+            ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
             : "border-[#E8E6E0] text-[#1A1D1B]"
         }`}
       >
@@ -146,7 +146,7 @@ function CookbookMenu({
             <button
               onClick={handleCreate}
               disabled={creating || !newName.trim()}
-              className="shrink-0 rounded-full bg-[#1F5F45] px-3 py-1.5 text-xs font-medium text-white disabled:opacity-50"
+              className="shrink-0 rounded-full bg-[#1B4332] px-3 py-1.5 text-xs font-medium text-white disabled:opacity-50"
             >
               Add
             </button>
@@ -273,7 +273,7 @@ function RecipeRow({
             disabled={saving}
             className={`flex-1 rounded-full border px-3 py-2 text-xs disabled:opacity-50 sm:flex-none ${
               recipe.allergenReviewStatus === "VERIFIED"
-                ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
+                ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
                 : "border-[#B45309] bg-[#FEF3E2] text-[#B45309]"
             }`}
           >
@@ -300,7 +300,7 @@ function RecipeRow({
             disabled={saving}
             className={`flex-1 rounded-full border px-3 py-2 text-xs disabled:opacity-50 sm:flex-none ${
               recipe.isActive
-                ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
+                ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
                 : "border-[#E8E6E0] text-[#6B7370]"
             }`}
           >
@@ -454,7 +454,7 @@ export function RecipesClient({
         <div />
         <button
           onClick={() => setEditorState({ mode: "create" })}
-          className="shrink-0 rounded-full bg-[#1F5F45] px-4 py-2 text-xs font-medium text-white"
+          className="shrink-0 rounded-full bg-[#1B4332] px-4 py-2 text-xs font-medium text-white"
         >
           + New recipe
         </button>

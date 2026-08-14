@@ -31,7 +31,7 @@ export function OnboardingShell({
       <PageTransition className="mx-auto flex w-full max-w-md flex-1 flex-col">
         <div className="h-1.5 w-full rounded-full bg-[#E8E6E0]">
           <motion.div
-            className="h-1.5 rounded-full bg-[#1F5F45]"
+            className="h-1.5 rounded-full bg-[#1B4332]"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ type: "spring", stiffness: 200, damping: 30 }}
@@ -74,7 +74,7 @@ export function ChipGrid({
             whileTap={{ scale: 0.9 }}
             className={`rounded-full border px-4 py-2.5 text-sm transition ${
               active
-                ? "border-[#1F5F45] bg-[#EDF3EF] text-[#1F5F45]"
+                ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
                 : "border-[#E8E6E0] bg-white text-[#1A1D1B]"
             }`}
           >
@@ -108,7 +108,7 @@ export function CategoryItemPicker({
       <select
         value={active?.label ?? ""}
         onChange={(e) => setActiveLabel(e.target.value)}
-        className="w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+        className="w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
       >
         {groups.map((g) => {
           const count = g.options.filter((o) => selected.includes(o.value)).length;
@@ -150,7 +150,7 @@ export function SliderRow({
         max={100}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="mt-1 w-full accent-[#1F5F45]"
+        className="mt-1 w-full accent-[#1B4332]"
       />
     </div>
   );
@@ -248,7 +248,7 @@ export function TagInput({
           }}
           placeholder={placeholder}
           disabled={cap !== undefined && value.length >= cap}
-          className="flex-1 rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1F5F45] disabled:opacity-50"
+          className="flex-1 rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332] disabled:opacity-50"
         />
         <MotionButton
           type="button"

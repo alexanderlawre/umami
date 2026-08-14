@@ -69,7 +69,7 @@ export function SubmissionPreview({ submission }: { submission: SubmissionPrevie
       {(submission.dietTags.length > 0 || submission.allergenTags.length > 0) && (
         <div className="flex flex-wrap gap-2 text-xs">
           {submission.dietTags.map((d) => (
-            <span key={d.id} className="rounded-full bg-[#EDF3EF] px-2 py-1 text-[#1F5F45]">
+            <span key={d.id} className="rounded-full bg-[#EDF3EF] px-2 py-1 text-[#1B4332]">
               {d.name}
             </span>
           ))}

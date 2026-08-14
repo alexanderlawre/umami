@@ -10,7 +10,7 @@ const BASELINE_PAD = 4;
 
 export function BarChart({
   data,
-  color = "#1F5F45",
+  color = "#1B4332",
 }: {
   data: BarChartPoint[];
   color?: string;

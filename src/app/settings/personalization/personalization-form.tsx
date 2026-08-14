@@ -140,7 +140,7 @@ export function PersonalizationForm({
                     next[i] = Number(e.target.value);
                     setClusterValues(next);
                   }}
-                  className="mt-2 w-full accent-[#1F5F45]"
+                  className="mt-2 w-full accent-[#1B4332]"
                 />
                 <div className="flex justify-between text-xs text-[#6B7370]">
                   <span>rarely</span>
@@ -163,7 +163,7 @@ export function PersonalizationForm({
               setFeedback(e.target.value);
             }}
             rows={2}
-            className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1F5F45]"
+            className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
           />
         </div>
 
@@ -195,11 +195,11 @@ export function PersonalizationForm({
             type="button"
             onClick={save}
             disabled={saving}
-            className="rounded-xl bg-[#1F5F45] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#2E7D5B] disabled:opacity-50"
+            className="rounded-xl bg-[#1B4332] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
           >
             {saving ? "Saving..." : "Save changes"}
           </MotionButton>
-          {saved && <span className="text-sm text-[#1F5F45]">Saved!</span>}
+          {saved && <span className="text-sm text-[#1B4332]">Saved!</span>}
         </div>
       </PageTransition>
     </main>

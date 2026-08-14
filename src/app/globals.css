@@ -87,7 +87,7 @@ body {
 
 /* Elevation scale: layered, soft shadows for a more tactile, Apple-like
    sense of depth than a single flat box-shadow gives. Built on the
-   existing brand palette (forest green #1F5F45 for the glow variant) so
+   existing brand palette (evergreen #1B4332 for the glow variant) so
    these read as an extension of the current design, not a new one. */
 .shadow-soft {
   box-shadow:
@@ -104,7 +104,7 @@ body {
 .shadow-glow {
   box-shadow:
     0 4px 10px rgba(26, 29, 27, 0.06),
-    0 8px 24px rgba(31, 95, 69, 0.18);
+    0 8px 24px rgba(27, 67, 50, 0.18);
 }
 
 /* Frosted-glass surface for sticky nav / modal chrome. */
