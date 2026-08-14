@@ -195,6 +195,87 @@ function discoveryWeight(recipe: EligibleRecipe, profile: ScoringProfile): numbe
   return Math.max(0.05, 1 - avgAlignment);
 }
 
+// Free-tier feed intelligence v1: dish/protein diversity guard. The catalog
+// has no dedicated protein-type field — AttributeTag is a generic
+// admin-curated tag (e.g. "High protein", "Grilled"), not a protein
+// *category*, and proteinGrams is a nutrition quantity, not a type — so this
+// reuses the same free-text substring-match-over-ingredientItems approach
+// filter.ts's custom-allergen matching already relies on. Returns null (no
+// signal) when nothing matches, and a null signal is never treated as
+// colliding with anything else — this stays a best-effort nudge, never a
+// classifier precise enough to exclude on.
+const PROTEIN_KEYWORDS = [
+  "chicken",
+  "beef",
+  "pork",
+  "lamb",
+  "turkey",
+  "duck",
+  "bacon",
+  "sausage",
+  "shrimp",
+  "prawn",
+  "salmon",
+  "tuna",
+  "cod",
+  "crab",
+  "shellfish",
+  "fish",
+  "tofu",
+  "tempeh",
+  "egg",
+  "lentil",
+  "chickpea",
+  "bean",
+  "paneer",
+];
+
+function proteinSignal(recipe: EligibleRecipe): string | null {
+  const items = (recipe.ingredientItems ?? []).map((i) => i.toLowerCase());
+  for (const keyword of PROTEIN_KEYWORDS) {
+    if (items.some((item) => item.includes(keyword))) return keyword;
+  }
+  return null;
+}
+
+// Prefers recipes whose protein signal hasn't already been used *within
+// each tier*, but never drops a recipe purely for colliding — a tier is
+// fully consumed (novel-signal picks first, then duplicate-signal picks) for
+// as many slots as it can fill before the next tier is ever touched. This
+// is what keeps cuisine-tier dominance (see pickAffinity below) completely
+// intact: a cuisine tier with `count` or more eligible recipes still fills
+// every slot from that same tier alone, just biased toward its own
+// dish/protein variety first, rather than partially handing slots to a
+// lower-priority tier just because of a same-tier protein repeat.
+function dedupeByProtein(tiers: EligibleRecipe[][], count: number): EligibleRecipe[] {
+  const picked: EligibleRecipe[] = [];
+  const usedSignals = new Set<string>();
+
+  for (const tier of tiers) {
+    if (picked.length >= count) break;
+
+    const novel: EligibleRecipe[] = [];
+    const duplicate: EligibleRecipe[] = [];
+    for (const recipe of tier) {
+      const signal = proteinSignal(recipe);
+      if (signal && usedSignals.has(signal)) {
+        duplicate.push(recipe);
+      } else {
+        novel.push(recipe);
+      }
+    }
+
+    for (const recipe of [...novel, ...duplicate]) {
+      if (picked.length >= count) break;
+      const signal = proteinSignal(recipe);
+      if (signal) usedSignals.add(signal);
+      picked.push(recipe);
+    }
+  }
+
+  return picked;
+}
+
 // Deterministically prioritizes the user's declared favorite cuisines over
 // everything else, so they actually dominate the affinity slots on any day
 // there are enough eligible recipes in a preferred cuisine — not just "more
@@ -228,7 +309,10 @@ function pickAffinity(
     return [...saved, ...unsaved];
   };
 
-  return [...orderTier(declaredTier), ...orderTier(implicitTier), ...orderTier(restTier)].slice(0, count);
+  return dedupeByProtein(
+    [orderTier(declaredTier), orderTier(implicitTier), orderTier(restTier)],
+    count,
+  );
 }
 
 // One of the DAILY_CARD_COUNT slots is reserved for a discovery pick (see
