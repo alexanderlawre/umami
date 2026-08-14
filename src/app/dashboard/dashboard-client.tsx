@@ -597,18 +597,21 @@ const CATEGORY_OPTIONS: { value: DashboardCategory; label: string }[] = [
 // different pool, not just re-ranking the current one.
 //
 // A true liquid tab indicator: one shared Liquid group, one Liquid.Item
-// running effect="move" that slides between fixed-width segments. Each
-// option button has the SAME hard-coded width (SEGMENT_WIDTH), so the
-// indicator's position is a pure function of the active option's index —
-// `translateX(index * SEGMENT_WIDTH)` — with no DOM measurement, no ref,
-// and no async layout-effect step involved. An earlier version measured
-// button rects at runtime and drove the indicator from that; the two
-// coordinate systems (outer container vs. the Liquid group's own inset
-// wrapper) didn't agree, and the measure-then-correct flow caused a visible
-// jump on mount/switch. Fixed widths sidestep the whole class of bug.
-// Buttons stay transparent/unpositioned-background so the moving blob is
-// genuinely their visible surface, not hidden underneath an opaque fill
-// (the mistake the very first per-option-halo version made).
+// whose position is driven by the CONTROLLED `x` prop (component-driven
+// position — "the library animates both the element and its liquid in
+// perfect sync", per the liquid-gooey docs' own primary example) rather
+// than us setting a raw `transform` and hoping effect="move"'s rect
+// observation matches it. Each option button has the same hard-coded width
+// (SEGMENT_WIDTH), so `x` is a pure function of the active option's index.
+//
+// Root cause of every earlier broken version: `<Liquid>` renders its own
+// inline `style={{ position: "relative", ... }}` — an INLINE style always
+// beats a Tailwind class, so a `className="absolute"` on it was silently
+// ignored. The group never actually left normal flow; it rendered as a
+// real flex item ahead of the buttons and shoved them sideways, which is
+// why the pill and the active (white-text) button kept landing in
+// different places. Passing `position`/`inset` via `style` (merged AFTER
+// the library's own defaults) is the only way to override them.
 const SEGMENT_WIDTH = 96;
 
 function CategoryControl({
@@ -629,17 +632,15 @@ function CategoryControl({
       className="relative mx-auto mb-4 inline-flex rounded-full border border-[#E8E6E0] bg-white p-1"
     >
       <Liquid
-        blur={6}
-        contrast={20}
+        blur={5}
+        contrast={24}
         fill="#1B4332"
         shadow="0 2px 6px rgba(27, 67, 50, 0.25)"
-        className="pointer-events-none absolute inset-1"
+        className="pointer-events-none"
+        style={{ position: "absolute", inset: 4 }}
       >
-        <Liquid.Item effect="move" move={{ springiness: 0.6, wobble: 0.3, trail: 0.3 }}>
-          <div
-            className="h-full rounded-full"
-            style={{ width: SEGMENT_WIDTH, transform: `translateX(${activeIndex * SEGMENT_WIDTH}px)` }}
-          />
+        <Liquid.Item x={activeIndex * SEGMENT_WIDTH} transition="smooth">
+          <div className="h-full rounded-full" style={{ width: SEGMENT_WIDTH }} />
         </Liquid.Item>
       </Liquid>
       {CATEGORY_OPTIONS.map((opt) => {
@@ -653,7 +654,7 @@ function CategoryControl({
             disabled={disabled}
             onClick={() => !active && onChange(opt.value)}
             style={{ width: SEGMENT_WIDTH }}
-            className={`relative z-10 rounded-full py-1.5 text-center text-xs font-medium transition-colors disabled:opacity-50 ${
+            className={`relative z-10 rounded-full py-1.5 text-center text-xs font-medium transition-colors duration-200 disabled:opacity-50 ${
               active ? "text-white" : "text-[#6B7370] hover:bg-[#EDF3EF]"
             }`}
           >
