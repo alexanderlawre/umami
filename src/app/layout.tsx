@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Work_Sans, Lora, IBM_Plex_Mono } from "next/font/google";
+import { Work_Sans, Bitter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { auth } from "@/auth";
 import { AuthSessionProvider } from "@/components/session-provider";
@@ -16,11 +16,11 @@ const workSans = Work_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
-// Page titles/section headers (h1-h3) app-wide. A warm, readable text serif
-// with true semibold/bold cuts (unlike Quando, which is regular-only and
-// would have needed a faked/synthesized bold) so the existing
+// Page titles/section headers (h1-h3) app-wide. A warm slab serif built
+// for screen headlines — grounded, cookbook-like character that suits a
+// recipe app, with true semibold/bold cuts so the existing
 // font-semibold/font-bold hierarchy on every heading renders crisply.
-const lora = Lora({
+const bitter = Bitter({
   variable: "--font-title",
   subsets: ["latin"],
   weight: ["600", "700"],
@@ -56,7 +56,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${workSans.variable} ${lora.variable} ${ibmPlexMono.variable} h-full antialiased`}
+      className={`${workSans.variable} ${bitter.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#FBFAF7] text-[#1A1D1B]">
         <AuthSessionProvider session={session}>
