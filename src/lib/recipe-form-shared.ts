@@ -41,7 +41,7 @@ export type EditorRecipe = {
   imageUrl: string | null;
   imageCredit: string | null;
   isActive: boolean;
-  allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
+  allergenReviewStatus: "UNVERIFIED" | "IN_REVIEW" | "VERIFIED";
   caloriesPerServing: number | null;
   proteinGrams: number | null;
   carbsGrams: number | null;

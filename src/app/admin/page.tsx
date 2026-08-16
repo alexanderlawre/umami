@@ -1,20 +1,24 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { BarChart, ChartAxisLabels, type BarChartPoint } from "@/components/admin/bar-chart";
+import { MultiLineChart, ChartLegend } from "@/components/admin/line-chart";
+import { ChartAxisLabels } from "@/components/admin/bar-chart";
 
 function StatCard({
   label,
   value,
+  sub,
   href,
 }: {
   label: string;
   value: number | string;
+  sub?: string;
   href?: string;
 }) {
   const content = (
     <>
       <p className="text-2xl font-bold text-[#1A1D1B]">{value}</p>
       <p className="mt-1 text-xs text-[#6B7370]">{label}</p>
+      {sub && <p className="mt-2 text-[11px] text-[#6B7370]/70">{sub}</p>}
     </>
   );
   if (href) {
@@ -61,13 +65,11 @@ function Leaderboard({
   );
 }
 
-const HOUR_LABELS = Array.from({ length: 24 }, (_, h) => {
-  const period = h < 12 ? "AM" : "PM";
-  const hour12 = h % 12 === 0 ? 12 : h % 12;
-  return `${hour12}${period}`;
-});
-
 const SIGNUP_WINDOW_DAYS = 30;
+const HOUR_LABELS = [
+  "12am", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am", "11am",
+  "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm",
+];
 
 function dateKey(d: Date): string {
   return d.toISOString().slice(0, 10); // YYYY-MM-DD (UTC)
@@ -79,53 +81,75 @@ function shortDateLabel(key: string): string {
   return `${monthNames[Number(month) - 1]} ${Number(day)}`;
 }
 
-// Builds a zero-filled daily bucket series for the last `days` days (inclusive
-// of today), so the chart always has a fixed-width x-axis even when there's
-// no data yet for some days.
-function buildDailySeries(timestamps: Date[], days: number): BarChartPoint[] {
-  const counts = new Map<string, number>();
-  for (const ts of timestamps) {
-    const key = dateKey(ts);
-    counts.set(key, (counts.get(key) ?? 0) + 1);
-  }
-  const series: BarChartPoint[] = [];
+// Builds two cumulative running-total series (all users, and users who are
+// currently premium) bucketed by day for the last `days` days, so the chart
+// reads as "growth over time" rather than daily deltas. Note: premium status
+// is a live flag with no historical "upgraded at" timestamp in the schema,
+// so the premium line is "currently-premium users, grouped by signup date" —
+// a reasonable growth proxy without a schema migration, not a literal
+// record of when each user upgraded.
+function buildCumulativeUserSeries(
+  users: { createdAt: Date; isPremium: boolean }[],
+  days: number,
+): { labels: string[]; total: number[]; premium: number[] } {
+  const sorted = [...users].sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+  const labels: string[] = [];
+  const total: number[] = [];
+  const premium: number[] = [];
   const today = new Date();
+  let idx = 0;
+  let totalSoFar = 0;
+  let premiumSoFar = 0;
   for (let i = days - 1; i >= 0; i--) {
-    const d = new Date(today);
-    d.setUTCDate(d.getUTCDate() - i);
-    const key = dateKey(d);
-    series.push({ label: shortDateLabel(key), value: counts.get(key) ?? 0 });
+    const cutoff = new Date(today);
+    cutoff.setUTCDate(cutoff.getUTCDate() - i);
+    cutoff.setUTCHours(23, 59, 59, 999);
+    while (idx < sorted.length && sorted[idx].createdAt <= cutoff) {
+      totalSoFar++;
+      if (sorted[idx].isPremium) premiumSoFar++;
+      idx++;
+    }
+    labels.push(shortDateLabel(dateKey(cutoff)));
+    total.push(totalSoFar);
+    premium.push(premiumSoFar);
   }
-  return series;
+  return { labels, total, premium };
 }
 
 export default async function AdminPage() {
   const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-  const signupWindowAgo = new Date(Date.now() - SIGNUP_WINDOW_DAYS * 24 * 60 * 60 * 1000);
 
   const [
-    userCount,
-    newUsers7d,
+    allUsers,
     recipeCount,
     activeRecipeCount,
-    unverifiedRecipeCount,
+    needReviewCount,
+    inReviewCount,
+    interactionCounts,
+    cookLaterCount,
     cookLogCount,
     cookLogs7d,
-    interactionCounts,
+    peakHourCounts,
     mostCookedRaw,
     mostStarredRaw,
-    cookHourCounts,
-    recentSignups,
-    premiumUserCount,
   ] = await Promise.all([
-    prisma.user.count(),
-    prisma.user.count({ where: { createdAt: { gte: sevenDaysAgo } } }),
+    prisma.user.findMany({
+      select: { createdAt: true, isPremium: true },
+      orderBy: { createdAt: "asc" },
+    }),
     prisma.recipe.count(),
     prisma.recipe.count({ where: { isActive: true } }),
     prisma.recipe.count({ where: { allergenReviewStatus: "UNVERIFIED" } }),
+    prisma.recipe.count({ where: { allergenReviewStatus: "IN_REVIEW" } }),
+    prisma.interaction.groupBy({ by: ["type"], _count: true }),
+    prisma.savedRecipe.count(),
     prisma.cookLog.count(),
     prisma.cookLog.count({ where: { cookedAt: { gte: sevenDaysAgo } } }),
-    prisma.interaction.groupBy({ by: ["type"], _count: true }),
+    prisma.interaction.groupBy({
+      by: ["localHour"],
+      where: { type: "COOK" },
+      _count: { localHour: true },
+    }),
     prisma.cookLog.groupBy({
       by: ["recipeId"],
       _count: { recipeId: true },
@@ -139,32 +163,26 @@ export default async function AdminPage() {
       orderBy: { _count: { recipeId: "desc" } },
       take: 5,
     }),
-    prisma.interaction.groupBy({
-      by: ["localHour"],
-      where: { type: "COOK" },
-      _count: { localHour: true },
-    }),
-    prisma.user.findMany({
-      where: { createdAt: { gte: signupWindowAgo } },
-      select: { createdAt: true },
-    }),
-    prisma.user.count({ where: { isPremium: true } }),
   ]);
 
-  const signupSeries = buildDailySeries(
-    recentSignups.map((u) => u.createdAt),
-    SIGNUP_WINDOW_DAYS,
-  );
-  // Premium tier isn't live yet — the paid-users chart stays a visible but
-  // inert placeholder (flat/empty series) until real subscription data
-  // exists, at which point this can be replaced with a real daily series
-  // the same way signups is built above.
-  const paidPlaceholderSeries = buildDailySeries([], SIGNUP_WINDOW_DAYS);
-  const chartAxisLabels = [
-    signupSeries[0]?.label ?? "",
-    signupSeries[Math.floor(signupSeries.length / 2)]?.label ?? "",
-    signupSeries[signupSeries.length - 1]?.label ?? "",
+  const userCount = allUsers.length;
+  const premiumUserCount = allUsers.filter((u) => u.isPremium).length;
+
+  const { labels: userChartLabels, total: totalUserSeries, premium: premiumUserSeries } =
+    buildCumulativeUserSeries(allUsers, SIGNUP_WINDOW_DAYS);
+  const userChartAxisLabels = [
+    userChartLabels[0] ?? "",
+    userChartLabels[Math.floor(userChartLabels.length / 2)] ?? "",
+    userChartLabels[userChartLabels.length - 1] ?? "",
   ];
+
+  const interactionCountByType = new Map(interactionCounts.map((r) => [r.type, r._count]));
+
+  const peakHour = peakHourCounts.reduce<{ hour: number; count: number } | null>((best, row) => {
+    const count = row._count.localHour;
+    if (!best || count > best.count) return { hour: row.localHour, count };
+    return best;
+  }, null);
 
   const recipeIds = [
     ...new Set([...mostCookedRaw.map((r) => r.recipeId), ...mostStarredRaw.map((r) => r.recipeId)]),
@@ -186,84 +204,77 @@ export default async function AdminPage() {
     count: r._count.recipeId,
   }));
 
-  const peakCookingHour = cookHourCounts.reduce<{ hour: number; count: number } | null>(
-    (best, row) => {
-      const count = row._count.localHour;
-      if (!best || count > best.count) return { hour: row.localHour, count };
-      return best;
-    },
-    null,
-  );
-
-  const stats = {
-    userCount,
-    newUsers7d,
-    recipeCount,
-    activeRecipeCount,
-    unverifiedRecipeCount,
-    cookLogCount,
-    cookLogs7d,
-    interactionCounts: interactionCounts.map((i) => ({ type: i.type, count: i._count })),
-  };
-
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-10">
       <h1 className="text-2xl font-bold text-[#1A1D1B]">Overview</h1>
       <p className="mt-1 text-sm text-[#6B7370]">Usage stats across the catalog and userbase.</p>
 
-      <div className="mx-auto mt-6 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
-        <StatCard label="Users" value={stats.userCount} href="/admin/users" />
-        <StatCard label="New users (7d)" value={stats.newUsers7d} />
-        <StatCard label="Recipes" value={stats.recipeCount} href="/admin/recipes" />
-        <StatCard label="Active recipes" value={stats.activeRecipeCount} href="/admin/recipes?filter=active" />
+      <section className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5">
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="text-sm font-semibold text-[#1A1D1B]">Users</h2>
+          <span className="text-xs text-[#6B7370]">Last {SIGNUP_WINDOW_DAYS} days</span>
+        </div>
+        <div className="mt-4">
+          <MultiLineChart
+            series={[
+              { label: "Users", color: "#1B4332", data: totalUserSeries },
+              { label: "Premium users", color: "#7C5CBF", data: premiumUserSeries },
+            ]}
+          />
+          <ChartAxisLabels labels={userChartAxisLabels} />
+        </div>
+        <ChartLegend
+          series={[
+            { label: `Users — ${userCount}`, color: "#1B4332" },
+            { label: `Premium — ${premiumUserCount}`, color: "#7C5CBF" },
+          ]}
+        />
+      </section>
+
+      <div className="mt-6 grid grid-cols-3 gap-3">
+        <StatCard label="Recipes" value={recipeCount} href="/admin/recipes" />
+        <StatCard label="Active recipes" value={activeRecipeCount} href="/admin/recipes?filter=active" />
         <StatCard
-          label="Unverified allergens"
-          value={stats.unverifiedRecipeCount}
+          label="Need review"
+          value={needReviewCount}
+          sub={`${inReviewCount} in review`}
           href="/admin/recipes?filter=unverified"
         />
-        <StatCard label="Cook logs" value={stats.cookLogCount} />
-        <StatCard label="Cook logs (7d)" value={stats.cookLogs7d} />
-        <StatCard
-          label="Peak cooking hour"
-          value={peakCookingHour ? HOUR_LABELS[peakCookingHour.hour] : "—"}
-        />
-        {stats.interactionCounts.map((i) => (
-          <StatCard key={i.type} label={i.type} value={i.count} />
-        ))}
-        <StatCard label="Premium users" value={premiumUserCount} />
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <section className="rounded-2xl border border-[#E8E6E0] bg-white p-5">
-          <div className="flex items-center justify-between gap-2">
-            <h2 className="text-sm font-semibold text-[#1A1D1B]">User signups</h2>
-            <span className="text-xs text-[#6B7370]">Last {SIGNUP_WINDOW_DAYS} days</span>
-          </div>
-          <div className="mt-4">
-            <BarChart data={signupSeries} />
-            <ChartAxisLabels labels={chartAxisLabels} />
-          </div>
-        </section>
-
-        <section className="relative rounded-2xl border border-[#E8E6E0] bg-white p-5 opacity-60">
-          <div className="flex items-center justify-between gap-2">
-            <h2 className="text-sm font-semibold text-[#1A1D1B]">Paid users</h2>
-            <span className="rounded-full bg-[#F4F2EC] px-2 py-0.5 text-[10px] uppercase tracking-wide text-[#6B7370]">
-              Coming soon
-            </span>
-          </div>
-          <div className="mt-4">
-            <BarChart data={paidPlaceholderSeries} color="#C9C4B8" />
-            <ChartAxisLabels labels={chartAxisLabels} />
-          </div>
-          <p className="mt-3 text-xs text-[#6B7370]">Activates automatically once the premium tier ships.</p>
-        </section>
+      <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
+        <StatCard label="Opened" value={interactionCountByType.get("OPEN") ?? 0} />
+        <StatCard label="Impressions" value={interactionCountByType.get("IMPRESSION") ?? 0} />
+        <StatCard label="Cosigns" value={interactionCountByType.get("COSIGN") ?? 0} />
+        <StatCard label="Cooked" value={interactionCountByType.get("COOK") ?? 0} />
+        <StatCard label="Stars" value={interactionCountByType.get("STAR") ?? 0} />
+        <StatCard label="Unstars" value={interactionCountByType.get("UNSTAR") ?? 0} />
+        <StatCard label="Cook laters" value={cookLaterCount} />
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Leaderboard title="Most cooked recipes" rows={mostCooked} emptyLabel="No cook logs yet." />
         <Leaderboard title="Most starred recipes" rows={mostStarred} emptyLabel="No stars yet." />
       </div>
+
+      <details className="group mt-6 rounded-2xl border border-[#E8E6E0] bg-white">
+        <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-3 text-sm font-semibold text-[#1A1D1B]">
+          <span>Extra insights</span>
+          <span className="text-xs font-normal text-[#6B7370] group-open:hidden">Show</span>
+          <span className="hidden text-xs font-normal text-[#6B7370] group-open:inline">Hide</span>
+        </summary>
+        <div className="grid grid-cols-2 gap-3 border-t border-[#E8E6E0] p-5 sm:grid-cols-3">
+          <StatCard
+            label="Cook logs"
+            value={cookLogCount}
+            sub={`+${cookLogs7d} this week`}
+          />
+          <StatCard
+            label="Peak cooking hour"
+            value={peakHour ? HOUR_LABELS[peakHour.hour] ?? `${peakHour.hour}:00` : "—"}
+          />
+        </div>
+      </details>
     </main>
   );
 }

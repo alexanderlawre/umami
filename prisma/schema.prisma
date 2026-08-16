@@ -56,6 +56,7 @@ enum DashboardCategory {
 
 enum AllergenReviewStatus {
   UNVERIFIED
+  IN_REVIEW
   VERIFIED
 }
 

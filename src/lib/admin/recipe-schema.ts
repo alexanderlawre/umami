@@ -62,5 +62,5 @@ export const recipeUpdateSchema = recipeFieldsSchema.partial().extend({
   allergenIds: z.array(z.string()).optional(),
   isActive: z.boolean().optional(),
   archivedReason: z.string().nullable().optional(),
-  allergenReviewStatus: z.enum(["UNVERIFIED", "VERIFIED"]).optional(),
+  allergenReviewStatus: z.enum(["UNVERIFIED", "IN_REVIEW", "VERIFIED"]).optional(),
 });

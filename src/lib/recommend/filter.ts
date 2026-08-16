@@ -12,7 +12,7 @@
 export type FilterableRecipe = {
   id: string;
   isActive: boolean;
-  allergenReviewStatus: "VERIFIED" | "UNVERIFIED";
+  allergenReviewStatus: "VERIFIED" | "UNVERIFIED" | "IN_REVIEW";
   dietTags: string[]; // Diet names this recipe satisfies
   allergenTags: string[]; // Allergen names this recipe contains
   ingredientItems?: string[]; // Free-text ingredient names, used to match custom allergens

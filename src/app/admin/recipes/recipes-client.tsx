@@ -22,10 +22,16 @@ export type AdminRecipeRow = {
   mealSlot: string;
   isActive: boolean;
   archivedReason: string | null;
-  allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
+  allergenReviewStatus: "UNVERIFIED" | "IN_REVIEW" | "VERIFIED";
   imageUrl: string | null;
   cookbookIds: string[];
 };
+
+// Cycle order for the review-status button: an admin clicks through
+// UNVERIFIED -> IN_REVIEW -> VERIFIED -> back to UNVERIFIED. "IN_REVIEW"
+// exists so a recipe an admin has started looking at is visibly pulled out
+// of the general unverified pile instead of getting lost in a long list.
+const REVIEW_STATUS_CYCLE = ["UNVERIFIED", "IN_REVIEW", "VERIFIED"] as const;
 
 export type AdminCookbookOption = { id: string; name: string };
 
@@ -202,16 +208,15 @@ function RecipeRow({
   }
 
   async function toggleReviewStatus() {
-    const next = recipe.allergenReviewStatus === "VERIFIED" ? "UNVERIFIED" : "VERIFIED";
+    const prev = recipe.allergenReviewStatus;
+    const currentIndex = REVIEW_STATUS_CYCLE.indexOf(prev);
+    const next = REVIEW_STATUS_CYCLE[(currentIndex + 1) % REVIEW_STATUS_CYCLE.length];
     setSaving(true);
     setRecipe((r) => ({ ...r, allergenReviewStatus: next }));
     try {
       await patchRecipe(recipe.id, { allergenReviewStatus: next });
     } catch {
-      setRecipe((r) => ({
-        ...r,
-        allergenReviewStatus: next === "VERIFIED" ? "UNVERIFIED" : "VERIFIED",
-      }));
+      setRecipe((r) => ({ ...r, allergenReviewStatus: prev }));
     } finally {
       setSaving(false);
     }
@@ -274,10 +279,12 @@ function RecipeRow({
             className={`flex-1 rounded-full border px-3 py-2 text-xs disabled:opacity-50 sm:flex-none ${
               recipe.allergenReviewStatus === "VERIFIED"
                 ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
-                : "border-[#B45309] bg-[#FEF3E2] text-[#B45309]"
+                : recipe.allergenReviewStatus === "IN_REVIEW"
+                  ? "border-[#1D4ED8] bg-[#EFF4FE] text-[#1D4ED8]"
+                  : "border-[#B45309] bg-[#FEF3E2] text-[#B45309]"
             }`}
           >
-            {recipe.allergenReviewStatus}
+            {recipe.allergenReviewStatus === "IN_REVIEW" ? "IN REVIEW" : recipe.allergenReviewStatus}
           </button>
 
           {!recipe.isActive && (
@@ -415,7 +422,7 @@ export function RecipesClient({
         imageUrl: string | null;
         imageCredit: string | null;
         isActive: boolean;
-        allergenReviewStatus: "UNVERIFIED" | "VERIFIED";
+        allergenReviewStatus: "UNVERIFIED" | "IN_REVIEW" | "VERIFIED";
         caloriesPerServing: number | null;
         proteinGrams: number | null;
         carbsGrams: number | null;
@@ -463,6 +470,7 @@ export function RecipesClient({
       <div className="mt-3 space-y-3">
         {grouped.map(({ key, label, rows }) => {
           const hasUnverified = rows.some((r) => r.allergenReviewStatus === "UNVERIFIED");
+          const hasInReview = rows.some((r) => r.allergenReviewStatus === "IN_REVIEW");
           return (
             <details
               key={key}
@@ -475,6 +483,11 @@ export function RecipesClient({
                   {hasUnverified && (
                     <span className="rounded-full border border-[#B45309] bg-[#FEF3E2] px-2 py-0.5 text-[10px] font-medium text-[#B45309]">
                       unverified
+                    </span>
+                  )}
+                  {hasInReview && (
+                    <span className="rounded-full border border-[#1D4ED8] bg-[#EFF4FE] px-2 py-0.5 text-[10px] font-medium text-[#1D4ED8]">
+                      in review
                     </span>
                   )}
                 </span>
