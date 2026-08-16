@@ -1,69 +1,9 @@
-import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { MultiLineChart, ChartLegend } from "@/components/admin/line-chart";
 import { ChartAxisLabels } from "@/components/admin/bar-chart";
-
-function StatCard({
-  label,
-  value,
-  sub,
-  href,
-}: {
-  label: string;
-  value: number | string;
-  sub?: string;
-  href?: string;
-}) {
-  const content = (
-    <>
-      <p className="text-2xl font-bold text-[#1A1D1B]">{value}</p>
-      <p className="mt-1 text-xs text-[#6B7370]">{label}</p>
-      {sub && <p className="mt-2 text-[11px] text-[#6B7370]/70">{sub}</p>}
-    </>
-  );
-  if (href) {
-    return (
-      <Link
-        href={href}
-        className="block rounded-2xl border border-[#E8E6E0] bg-white p-4 transition hover:border-[#1B4332] hover:shadow-sm"
-      >
-        {content}
-      </Link>
-    );
-  }
-  return <div className="rounded-2xl border border-[#E8E6E0] bg-white p-4">{content}</div>;
-}
-
-function Leaderboard({
-  title,
-  rows,
-  emptyLabel,
-}: {
-  title: string;
-  rows: { label: string; count: number }[];
-  emptyLabel: string;
-}) {
-  return (
-    <section className="rounded-2xl border border-[#E8E6E0] bg-white p-5">
-      <h2 className="text-sm font-semibold text-[#1A1D1B]">{title}</h2>
-      {rows.length === 0 ? (
-        <p className="mt-3 text-xs text-[#6B7370]">{emptyLabel}</p>
-      ) : (
-        <ol className="mt-3 space-y-2">
-          {rows.map((row, i) => (
-            <li key={row.label} className="flex items-center justify-between gap-3 text-sm">
-              <span className="flex min-w-0 items-center gap-2">
-                <span className="shrink-0 text-xs font-medium text-[#6B7370]">{i + 1}.</span>
-                <span className="truncate text-[#1A1D1B]">{row.label}</span>
-              </span>
-              <span className="shrink-0 text-xs text-[#6B7370]">{row.count}</span>
-            </li>
-          ))}
-        </ol>
-      )}
-    </section>
-  );
-}
+import { StatCard } from "@/components/admin/stat-card";
+import { Leaderboard } from "@/components/admin/leaderboard";
+import { ExtraInsights } from "@/components/admin/extra-insights";
 
 const SIGNUP_WINDOW_DAYS = 30;
 const HOUR_LABELS = [
@@ -257,24 +197,11 @@ export default async function AdminPage() {
         <Leaderboard title="Most starred recipes" rows={mostStarred} emptyLabel="No stars yet." />
       </div>
 
-      <details className="group mt-6 rounded-2xl border border-[#E8E6E0] bg-white">
-        <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-3 text-sm font-semibold text-[#1A1D1B]">
-          <span>Extra insights</span>
-          <span className="text-xs font-normal text-[#6B7370] group-open:hidden">Show</span>
-          <span className="hidden text-xs font-normal text-[#6B7370] group-open:inline">Hide</span>
-        </summary>
-        <div className="grid grid-cols-2 gap-3 border-t border-[#E8E6E0] p-5 sm:grid-cols-3">
-          <StatCard
-            label="Cook logs"
-            value={cookLogCount}
-            sub={`+${cookLogs7d} this week`}
-          />
-          <StatCard
-            label="Peak cooking hour"
-            value={peakHour ? HOUR_LABELS[peakHour.hour] ?? `${peakHour.hour}:00` : "—"}
-          />
-        </div>
-      </details>
+      <ExtraInsights
+        cookLogCount={cookLogCount}
+        cookLogs7d={cookLogs7d}
+        peakHourLabel={peakHour ? HOUR_LABELS[peakHour.hour] ?? `${peakHour.hour}:00` : "—"}
+      />
     </main>
   );
 }

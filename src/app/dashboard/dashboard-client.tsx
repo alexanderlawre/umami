@@ -18,6 +18,8 @@ import {
 } from "@/lib/recipe-tags";
 import { MotionButton } from "@/components/motion-button";
 import { MotionCard } from "@/components/motion-card";
+import { RecipeCardSkeleton } from "@/components/skeleton";
+import { EmptyState } from "@/components/empty-state";
 
 export type RecipeCardData = {
   id: string;
@@ -172,6 +174,7 @@ function RecipeCard({
   onSavedChange,
   popKey,
   onPass,
+  index,
 }: {
   recipe: RecipeCardData;
   userDiets: string[];
@@ -189,6 +192,11 @@ function RecipeCard({
   // DISMISS (see PassButton) but don't need a replacement affordance since
   // they're not the adaptive-learning surface.
   onPass?: (id: string) => void;
+  // Position within the currently-rendered grid — only passed by the main
+  // 4-card rotation so its cards visibly cascade in rather than popping in
+  // all at once. Omitted (defaults to 0, no stagger) for cookbook carousels,
+  // which aren't a "mount" moment in the same sense.
+  index?: number;
 }) {
   const router = useRouter();
   const ref = useRef<HTMLDivElement | null>(null);
@@ -357,7 +365,7 @@ function RecipeCard({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -8 }}
-      transition={{ type: "spring", stiffness: 300, damping: 28 }}
+      transition={{ type: "spring", stiffness: 300, damping: 28, delay: (index ?? 0) * 0.06 }}
       whileHover={{ y: -6 }}
       onClick={() => router.push(`/recipe/${recipe.slug}`)}
       className="cursor-pointer overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-soft hover:shadow-lifted"
@@ -968,9 +976,7 @@ export function DashboardClient({
             <CategoryControl value={activeCategory} onChange={handleCategoryChange} disabled={categoryPending} />
           </div>
         </div>
-        <p className="text-center text-sm text-[#6B7370]">
-          No recipes match your preferences yet. Check back soon.
-        </p>
+        <EmptyState title="No recipes match your preferences yet. Check back soon." />
       </div>
     );
   }
@@ -996,29 +1002,66 @@ export function DashboardClient({
         onClear={clearFilters}
       />
 
-      {(selected.size > 0 ? filteredPool.length === 0 : false) ? (
-        <p className="text-sm text-[#6B7370]">
-          No recipes match your selected filters.{" "}
-          <button onClick={clearFilters} className="text-[#2C5A87] underline">
-            Clear filters
-          </button>
-        </p>
-      ) : (
-        <motion.div layout className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <AnimatePresence mode="popLayout">
-            {visible.map((recipe) => (
-              <RecipeCard
-                key={recipe.id}
-                recipe={recipe}
-                userDiets={userDiets}
-                onSavedChange={handleSavedChange}
-                popKey={refreshGeneration}
-                onPass={handlePass}
-              />
+      <AnimatePresence mode="wait" initial={false}>
+        {refreshPending || categoryPending ? (
+          <motion.div
+            key="skeleton"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2"
+          >
+            {Array.from({ length: 4 }).map((_, i) => (
+              <RecipeCardSkeleton key={i} />
             ))}
-          </AnimatePresence>
-        </motion.div>
-      )}
+          </motion.div>
+        ) : selected.size > 0 && filteredPool.length === 0 ? (
+          <motion.div
+            key="empty-filtered"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <EmptyState
+              title="No recipes match your selected filters."
+              action={
+                <button
+                  onClick={clearFilters}
+                  className="text-sm font-medium text-[#2C5A87] underline"
+                >
+                  Clear filters
+                </button>
+              }
+            />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="grid"
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2"
+          >
+            <AnimatePresence mode="popLayout">
+              {visible.map((recipe, i) => (
+                <RecipeCard
+                  key={recipe.id}
+                  recipe={recipe}
+                  index={i}
+                  userDiets={userDiets}
+                  onSavedChange={handleSavedChange}
+                  popKey={refreshGeneration}
+                  onPass={handlePass}
+                />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div className="mt-6 flex flex-col items-center gap-2">
         {/* A soft gooey halo that squishes on press and settles back with a

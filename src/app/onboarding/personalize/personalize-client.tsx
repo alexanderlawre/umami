@@ -172,7 +172,7 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
             type="button"
             onClick={finish}
             disabled={submitting}
-            className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+            className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
           >
             {submitting ? "Saving..." : "Finish"}
           </MotionButton>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
 import { OAuthButtons } from "@/components/oauth-buttons";
@@ -82,12 +83,21 @@ export default function LoginPage() {
               />
             </div>
 
-            {error && <p className="text-sm text-[#B23A32]">{error}</p>}
+            {error && (
+              <motion.p
+                initial={{ x: 0 }}
+                animate={{ x: [0, -6, 6, -4, 4, 0] }}
+                transition={{ duration: 0.4 }}
+                className="text-sm text-[#B23A32]"
+              >
+                {error}
+              </motion.p>
+            )}
 
             <MotionButton
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+              className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
             >
               {loading ? "Logging in..." : "Log in"}
             </MotionButton>

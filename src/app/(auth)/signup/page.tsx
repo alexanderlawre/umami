@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { compressImage } from "@/lib/image-compression";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
@@ -198,6 +199,17 @@ export default function SignupPage() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
+              {/* Live feedback as the user types, instead of only surfacing
+                  a mismatch after they submit. */}
+              {confirmPassword.length > 0 && (
+                <p
+                  className={`mt-1 text-xs ${
+                    password === confirmPassword ? "text-[#1B4332]" : "text-[#B23A32]"
+                  }`}
+                >
+                  {password === confirmPassword ? "Passwords match." : "Passwords don't match yet."}
+                </p>
+              )}
             </div>
             <div>
               <label className="block text-sm font-medium text-[#1A1D1B]">
@@ -237,12 +249,21 @@ export default function SignupPage() {
               </div>
             </div>
 
-            {error && <p className="text-sm text-[#B23A32]">{error}</p>}
+            {error && (
+              <motion.p
+                initial={{ x: 0 }}
+                animate={{ x: [0, -6, 6, -4, 4, 0] }}
+                transition={{ duration: 0.4 }}
+                className="text-sm text-[#B23A32]"
+              >
+                {error}
+              </motion.p>
+            )}
 
             <MotionButton
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+              className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
             >
               {loading ? "Creating account..." : "Continue"}
             </MotionButton>

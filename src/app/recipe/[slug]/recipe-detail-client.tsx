@@ -416,7 +416,17 @@ export function RecipeDetailClient({
                 {component}
               </p>
             )}
-            <ul className="mt-1 space-y-1">
+            {/* Keyed on servings so the whole list visibly refreshes (a brief
+                opacity fade) in sync with the counter's own bounce above —
+                previously only the counter animated while these scaled
+                quantities changed silently underneath it. */}
+            <motion.ul
+              key={servings}
+              initial={{ opacity: 0.4 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.25 }}
+              className="mt-1 space-y-1"
+            >
               {[...items]
                 .sort((a, b) => a.order - b.order)
                 .map((ing) => (
@@ -428,7 +438,7 @@ export function RecipeDetailClient({
                     )}
                   </li>
                 ))}
-            </ul>
+            </motion.ul>
           </div>
         ))}
       </section>
@@ -438,15 +448,21 @@ export function RecipeDetailClient({
         <ol className="mt-2 space-y-3">
           {[...recipe.steps]
             .sort((a, b) => a.order - b.order)
-            .map((step) => (
-              <li key={step.id} className="text-sm text-[#1A1D1B]">
+            .map((step, i) => (
+              <motion.li
+                key={step.id}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: i * 0.04 }}
+                className="text-sm text-[#1A1D1B]"
+              >
                 <span className="font-medium">{step.order}.</span> {step.text}
                 {step.durationMinutes && (
                   <span className="ml-2 text-xs text-[#6B7370]">
                     ~{step.durationMinutes} min
                   </span>
                 )}
-              </li>
+              </motion.li>
             ))}
         </ol>
       </section>
@@ -467,7 +483,16 @@ export function RecipeDetailClient({
               : "border-[#E8E6E0] text-[#1A1D1B]"
           }`}
         >
-          {starred ? "★ Cook later" : "☆ Cook later"}
+          <motion.span
+            key={starred ? "on" : "off"}
+            initial={{ scale: 0.7 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 500, damping: 22 }}
+            className="inline-block"
+          >
+            {starred ? "★" : "☆"}
+          </motion.span>{" "}
+          Cook later
         </MotionButton>
         <MotionButton
           onClick={handleCook}
