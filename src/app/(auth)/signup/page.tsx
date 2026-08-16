@@ -104,7 +104,7 @@ export default function SignupPage() {
     <main className="flex flex-1 items-center justify-center px-6 py-12">
       <PageTransition className="w-full max-w-sm">
         <div className="rounded-2xl border border-[#E8E6E0] bg-white p-8 shadow-soft">
-          <h1 className="text-2xl font-bold tracking-tight text-[#1A1D1B]">
+          <h1 className="font-display text-2xl font-bold tracking-tight text-[#1A1D1B]">
             umami
           </h1>
           <p className="mt-1 text-sm text-[#6B7370]">

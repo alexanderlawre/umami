@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-heading);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-logo);
 }
 
 /* This app only has one, light theme — no component has dark-mode styling
@@ -42,15 +42,20 @@ html {
   }
 }
 
-/* Headers/titles app-wide use IBM Plex Mono Bold (loaded as --font-heading
-   in layout.tsx) instead of the body sans-serif, applied once here rather
-   than editing every h1/h2/h3 call site individually. */
+/* Headers/titles app-wide use Lora (loaded as --font-title in layout.tsx)
+   instead of the body sans-serif, applied once here rather than editing
+   every h1/h2/h3 call site individually. Lora ships real semibold/bold
+   cuts, so the existing font-semibold/font-bold Tailwind utility class on
+   each heading renders at its true weight — no synthesized/faked bold
+   needed here (contrast with the mono-logo treatment below, which is
+   bold-only by design). `:not(.font-display)` excludes the login/signup
+   "umami" wordmark h1s, which opt into the separate IBM Plex Mono Bold
+   treatment below instead. */
 @layer base {
-  h1,
-  h2,
-  h3 {
-    font-family: var(--font-heading), ui-monospace, monospace;
-    letter-spacing: -0.01em;
+  h1:not(.font-display),
+  h2:not(.font-display),
+  h3:not(.font-display) {
+    font-family: var(--font-title), ui-serif, serif;
   }
 }
 
@@ -133,10 +138,12 @@ body {
   background: linear-gradient(180deg, #fbfaf7 0%, #f3f1ea 100%);
 }
 
-/* Same IBM Plex Mono Bold heading font as the h1/h2/h3 base-layer rule
-   above, for the handful of non-heading elements that still act as a
-   title/wordmark (e.g. the nav logo, which renders as a <Link>). */
+/* IBM Plex Mono Bold, reserved for the "umami" wordmark specifically (nav
+   logo, login/signup headline) — not the general h1-h3 heading font, which
+   uses Lora instead (see the base-layer rule above). Applied by hand to
+   the couple of elements that render the literal brand name, including the
+   login/signup <h1>s so they override the Lora base-layer rule. */
 .font-display {
-  font-family: var(--font-heading), ui-monospace, monospace;
+  font-family: var(--font-logo), ui-monospace, monospace;
   letter-spacing: -0.01em;
 }
