@@ -149,11 +149,15 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
                 </button>
               </div>
             ) : (
-              <div>
-                <span className="text-sm text-[#1A1D1B]">{row.name}</span>
-                <span className="ml-2 text-xs text-[#6B7370]">
-                  ({row.recipeCount} recipe{row.recipeCount === 1 ? "" : "s"})
-                </span>
+              <div className="min-w-0 flex-1">
+                <div className="flex min-w-0 items-baseline gap-2">
+                  <span className="min-w-0 flex-1 truncate text-sm text-[#1A1D1B]">
+                    {row.name}
+                  </span>
+                  <span className="shrink-0 text-xs text-[#6B7370]">
+                    ({row.recipeCount} recipe{row.recipeCount === 1 ? "" : "s"})
+                  </span>
+                </div>
                 {rowError[row.id] && <p className="mt-1 text-xs text-red-600">{rowError[row.id]}</p>}
               </div>
             )}

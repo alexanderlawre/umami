@@ -138,17 +138,17 @@ export function AdminUsersClient({
         {users.map((u) => (
           <div key={u.id} className="rounded-2xl border border-[#E8E6E0] bg-white p-4">
             <div className="flex flex-wrap items-start justify-between gap-2">
-              <div>
-                <p className="text-sm font-semibold text-[#1A1D1B]">
-                  {u.name}
+              <div className="min-w-0 flex-1">
+                <p className="flex items-center text-sm font-semibold text-[#1A1D1B]">
+                  <span className="truncate">{u.name}</span>
                   {u.isAdmin && (
-                    <span className="ml-2 rounded-full bg-[#EDF3EF] px-2 py-0.5 text-[10px] font-medium text-[#1B4332]">
+                    <span className="ml-2 shrink-0 rounded-full bg-[#EDF3EF] px-2 py-0.5 text-[10px] font-medium text-[#1B4332]">
                       Admin
                     </span>
                   )}
                 </p>
-                <p className="text-xs text-[#6B7370]">{u.email}</p>
-                <p className="mt-1 text-xs text-[#6B7370]">
+                <p className="truncate text-xs text-[#6B7370]">{u.email}</p>
+                <p className="mt-1 truncate text-xs text-[#6B7370]">
                   {[u.city, u.country].filter(Boolean).join(", ") || "No location set"}
                 </p>
               </div>

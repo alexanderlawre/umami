@@ -305,7 +305,11 @@ function RecipeCard({
         <p className="text-xs uppercase tracking-wide text-[#6B7370]">
           {recipe.cuisine}
         </p>
-        <h3 className="mt-1 text-lg font-semibold text-[#1A1D1B]">
+        {/* Truncated to a single line so every card in a row stays the same
+            height regardless of title length — a long title wrapping to a
+            2nd/3rd line was pushing cards out of alignment with their
+            neighbors in the grid. */}
+        <h3 className="mt-1 truncate text-lg font-semibold text-[#1A1D1B]">
           {recipe.title}
         </h3>
         {recipe.ingredientItems.length > 0 && (
