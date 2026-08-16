@@ -9,7 +9,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-heading);
 }
 
 /* This app only has one, light theme — no component has dark-mode styling
@@ -42,10 +42,22 @@ html {
   }
 }
 
+/* Headers/titles app-wide use IBM Plex Mono Bold (loaded as --font-heading
+   in layout.tsx) instead of the body sans-serif, applied once here rather
+   than editing every h1/h2/h3 call site individually. */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading), ui-monospace, monospace;
+    letter-spacing: -0.01em;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   padding-top: env(safe-area-inset-top);
@@ -119,4 +131,12 @@ body {
    cream/page-background tones. */
 .bg-gradient-hero {
   background: linear-gradient(180deg, #fbfaf7 0%, #f3f1ea 100%);
+}
+
+/* Same IBM Plex Mono Bold heading font as the h1/h2/h3 base-layer rule
+   above, for the handful of non-heading elements that still act as a
+   title/wordmark (e.g. the nav logo, which renders as a <Link>). */
+.font-display {
+  font-family: var(--font-heading), ui-monospace, monospace;
+  letter-spacing: -0.01em;
 }

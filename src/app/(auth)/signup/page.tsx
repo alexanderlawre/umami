@@ -105,7 +105,7 @@ export default function SignupPage() {
       <PageTransition className="w-full max-w-sm">
         <div className="rounded-2xl border border-[#E8E6E0] bg-white p-8 shadow-soft">
           <h1 className="text-2xl font-bold tracking-tight text-[#1A1D1B]">
-            Umami
+            umami
           </h1>
           <p className="mt-1 text-sm text-[#6B7370]">
             Four recipes. That&apos;s the whole surface.

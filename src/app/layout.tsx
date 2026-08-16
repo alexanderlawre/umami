@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { auth } from "@/auth";
 import { AuthSessionProvider } from "@/components/session-provider";
@@ -12,9 +12,14 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Headers/titles + the "umami" wordmark use IBM Plex Mono Bold; this slot
+// used to be Geist Mono, which was loaded but never actually referenced by
+// any `font-mono` usage anywhere in the app — fully repurposed instead of
+// adding a second font import.
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -39,7 +44,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#FBFAF7] text-[#1A1D1B]">
         <AuthSessionProvider session={session}>
