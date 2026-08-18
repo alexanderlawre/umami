@@ -77,6 +77,7 @@ export default async function CookLaterPage() {
       cookMinutes: s.recipe.cookMinutes,
       attributes: s.recipe.attributeTags.map((t) => t.code),
       dietTags: s.recipe.dietTags.map((d) => d.name),
+      ingredientItems: s.recipe.ingredients.map((ing) => ing.item),
       imageUrl: s.recipe.imageUrl,
       imageCredit: s.recipe.imageCredit,
     }));

@@ -17,7 +17,8 @@ function SavedRecipeCard({
 }) {
   const [pending, setPending] = useState(false);
 
-  async function handleRemove() {
+  async function handleRemove(e: React.MouseEvent) {
+    e.stopPropagation();
     if (pending) return;
     setPending(true);
     logInteraction(recipe.id, "UNSTAR");

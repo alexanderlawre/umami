@@ -727,9 +727,9 @@ export type CookbookSection = {
 };
 
 const CATEGORY_SUBTITLE: Record<DashboardCategory, string> = {
-  MEALS: "Four recipes. That's the whole surface.",
-  TAPAS: "Four tapas. Same rules as the rest.",
-  BREAKFAST: "Four breakfasts. Same rules as the rest.",
+  MEALS: "4 recipes picked for you today.",
+  TAPAS: "4 tapas picked for you today.",
+  BREAKFAST: "4 breakfasts picked for you today.",
 };
 
 export function DashboardClient({
