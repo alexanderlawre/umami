@@ -53,19 +53,27 @@ describe("isRecipeEligible", () => {
     expect(isRecipeEligible(safeRecipe, vegan)).toBe(true);
   });
 
-  // Diet is a soft signal (see score.ts), not a hard filter — a mismatched
-  // recipe still shows, just ranked lower, so the feed never goes empty for
-  // a user with several diets or an under-tagged catalog.
-  it("does NOT exclude a non-vegan recipe for a vegan user (diet is soft, not hard)", () => {
+  // Diet is a hard filter, same fail-closed posture as allergens — a
+  // mismatched recipe is excluded entirely, never just ranked lower, so a
+  // vegan user is never shown a non-vegan recipe.
+  it("excludes a non-vegan recipe for a vegan user (diet is hard, not soft)", () => {
     const vegan = user({ diets: ["Vegan"] });
     const meatRecipe = recipe({ dietTags: ["Gluten-free"] });
-    expect(isRecipeEligible(meatRecipe, vegan)).toBe(true);
+    expect(isRecipeEligible(meatRecipe, vegan)).toBe(false);
   });
 
-  it("does NOT require a recipe to satisfy every declared diet", () => {
+  it("allows a recipe satisfying the user's single declared diet", () => {
+    const vegan = user({ diets: ["Vegan"] });
+    const veganRecipe = recipe({ dietTags: ["Vegan", "Vegetarian"] });
+    expect(isRecipeEligible(veganRecipe, vegan)).toBe(true);
+  });
+
+  it("requires a recipe to satisfy EVERY declared diet (AND, not ANY)", () => {
     const both = user({ diets: ["Vegan", "Gluten-free"] });
     const onlyVegan = recipe({ dietTags: ["Vegan", "Vegetarian"] });
-    expect(isRecipeEligible(onlyVegan, both)).toBe(true);
+    const bothDiets = recipe({ dietTags: ["Vegan", "Gluten-free"] });
+    expect(isRecipeEligible(onlyVegan, both)).toBe(false);
+    expect(isRecipeEligible(bothDiets, both)).toBe(true);
   });
 
   // Fixture: custom free-text allergen case, since it can't be matched
@@ -127,7 +135,7 @@ describe("isRecipeEligible", () => {
 });
 
 describe("filterEligibleRecipes", () => {
-  it("filters a list down to only allergen-safe recipes (diet mismatch no longer excludes)", () => {
+  it("filters a list down to only allergen-safe, diet-matching recipes", () => {
     const vegan = user({ diets: ["Vegan"], allergens: ["Tree nuts"] });
     const recipes = [
       recipe({ id: "a", dietTags: ["Vegan"] }),
@@ -135,6 +143,6 @@ describe("filterEligibleRecipes", () => {
       recipe({ id: "c", dietTags: ["Vegetarian"] }),
     ];
     const result = filterEligibleRecipes(recipes, vegan);
-    expect(result.map((r) => r.id)).toEqual(["a", "c"]);
+    expect(result.map((r) => r.id)).toEqual(["a"]);
   });
 });

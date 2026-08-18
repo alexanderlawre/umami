@@ -55,7 +55,6 @@ export type ScoringProfile = {
 // off-slot dish is still reachable, just less likely.
 const PRIMARY_MEAL_SLOT_WEIGHT = 6;
 const SECONDARY_MEAL_SLOT_WEIGHT = 2;
-const DIET_MATCH_WEIGHT = 3;
 const FAVORITE_CUISINE_WEIGHT = 5;
 // Smaller than the declared favorite-cuisine bonus — behavior-inferred
 // preference is a weaker signal than something the user explicitly told us.
@@ -87,8 +86,10 @@ export function scoreRecipe(
 
   score += recipe.mealSlot === currentSlot ? PRIMARY_MEAL_SLOT_WEIGHT : SECONDARY_MEAL_SLOT_WEIGHT;
 
-  const matchedDiets = profile.diets.filter((diet) => recipe.dietTags.includes(diet)).length;
-  score += matchedDiets * DIET_MATCH_WEIGHT;
+  // Diet is now a hard filter (see filter.ts) — every recipe reaching this
+  // scoring step already satisfies every declared diet, so there's nothing
+  // left to discriminate on here. profile.diets stays on ScoringProfile in
+  // case a future caller needs it, but no longer contributes a bonus.
 
   if (profile.favoriteCuisines.includes(recipe.cuisine)) {
     score += FAVORITE_CUISINE_WEIGHT;

@@ -6,6 +6,7 @@ import {
 } from "@/lib/recommend/filter";
 import { scoreRecipe, weightedShuffle, type ScoringProfile } from "@/lib/recommend/score";
 import { savedRecipeExpiryCutoff } from "@/lib/saved-recipes";
+import { clustersForRecipe } from "@/lib/food-group-clusters";
 import {
   getCurrentMealSlot,
   getMealSlotWindowKey,
@@ -39,6 +40,11 @@ export type EligibleRecipe = FilterableRecipe &
     // 0-100 weight per FoodGroup this recipe belongs to — scoring-only,
     // never rendered on the card itself (see toCardData, which drops it).
     foodGroups: { foodGroupId: string; weight: number }[];
+    // Broader "more of ___" cluster titles this recipe prominently belongs
+    // to (see food-group-clusters.ts) — unlike foodGroups above, this DOES
+    // reach the client via toCardData, since it powers the dashboard's
+    // food-group filter chips.
+    foodGroupClusters: string[];
     // 0-3 heat level, null if unrated — see filter.ts's isWithinSpiceCeiling
     // and Recipe.spiceLevel. Scoring/filter-only, dropped by toCardData.
     spiceLevel: number | null;
@@ -80,7 +86,9 @@ async function loadDashboardContext(
           attributeTags: { select: { code: true } },
           cuisine: true,
           ingredients: { select: { item: true } },
-          foodGroupProfile: { select: { foodGroupId: true, weight: true } },
+          foodGroupProfile: {
+            select: { foodGroupId: true, weight: true, foodGroup: { select: { name: true } } },
+          },
         },
       }),
       prisma.savedRecipe.findMany({
@@ -138,6 +146,9 @@ async function loadDashboardContext(
     saved: savedRecipeIds.has(r.id),
     isDiscovery: false,
     foodGroups: r.foodGroupProfile.map((fg) => ({ foodGroupId: fg.foodGroupId, weight: fg.weight })),
+    foodGroupClusters: clustersForRecipe(
+      r.foodGroupProfile.map((fg) => ({ name: fg.foodGroup.name, weight: fg.weight })),
+    ),
     spiceLevel: r.spiceLevel,
   }));
 
@@ -365,21 +376,57 @@ function pickDaily(
   ].slice(0, DAILY_CARD_COUNT);
 }
 
-// Resolves which pool/windowKey the active category draws from. Tapas and
-// Breakfast reuse the exact same meal-slot-boundary windowKey as the main
-// rotation (just suffixed), not their old once-daily-at-midnight cadence —
-// so all three categories now rotate on the same 6am/noon schedule.
+// Suffixes the base meal-slot windowKey per category — Tapas and Breakfast
+// reuse the exact same meal-slot-boundary windowKey as the main rotation
+// (just suffixed), not their old once-daily-at-midnight cadence — so all
+// three categories now rotate on the same 6am/noon schedule. Exported so
+// A1's refresh-limit gate (see /api/dashboard/refresh) can resolve the same
+// per-section key without duplicating this mapping.
+export function windowKeyForCategory(baseWindowKey: string, category: DashboardCategory): string {
+  switch (category) {
+    case "TAPAS":
+      return `${baseWindowKey}:TAPAS`;
+    case "BREAKFAST":
+      return `${baseWindowKey}:BREAKFAST`;
+    default:
+      return baseWindowKey;
+  }
+}
+
+// Resolves which pool/windowKey the active category draws from.
 function activePoolFor(
   ctx: Pick<DashboardContext, "pool" | "tapasPool" | "breakfastPool" | "windowKey" | "category">,
 ): { pool: EligibleRecipe[]; windowKey: string } {
+  const windowKey = windowKeyForCategory(ctx.windowKey, ctx.category);
   switch (ctx.category) {
     case "TAPAS":
-      return { pool: ctx.tapasPool, windowKey: `${ctx.windowKey}:TAPAS` };
+      return { pool: ctx.tapasPool, windowKey };
     case "BREAKFAST":
-      return { pool: ctx.breakfastPool, windowKey: `${ctx.windowKey}:BREAKFAST` };
+      return { pool: ctx.breakfastPool, windowKey };
     default:
-      return { pool: ctx.pool, windowKey: ctx.windowKey };
+      return { pool: ctx.pool, windowKey };
   }
+}
+
+// Lightweight resolution of "which section + window is currently active for
+// this user" — used by A1's refresh-limit gate, which needs the windowKey
+// *before* deciding whether to even call refreshDailySelection (a blocked
+// request must never touch ServedCard/RefreshUsage side effects it
+// shouldn't). Deliberately avoids loadDashboardContext's full recipe-pool
+// query — this only needs timezone + the persisted category default, not
+// the eligible-recipe pool itself.
+export async function resolveActiveWindow(
+  userId: string,
+  categoryOverride?: DashboardCategory,
+): Promise<{ category: DashboardCategory; windowKey: string; nextWindowAt: Date }> {
+  const [user, preferences] = await Promise.all([
+    prisma.user.findUnique({ where: { id: userId }, select: { timezone: true } }),
+    prisma.userPreferences.findUnique({ where: { userId }, select: { dashboardCategory: true } }),
+  ]);
+  const timezone = user?.timezone ?? null;
+  const category = categoryOverride ?? preferences?.dashboardCategory ?? "MEALS";
+  const windowKey = windowKeyForCategory(getMealSlotWindowKey(timezone), category);
+  return { category, windowKey, nextWindowAt: nextMealSlotWindowAt(timezone) };
 }
 
 function toCardData(r: EligibleRecipe): RecipeCardData {
@@ -395,6 +442,7 @@ function toCardData(r: EligibleRecipe): RecipeCardData {
     cookMinutes: r.cookMinutes,
     attributes: r.attributes,
     dietTags: r.dietTags,
+    foodGroupClusters: r.foodGroupClusters,
     ingredientItems: r.ingredientItems ?? [],
     imageUrl: r.imageUrl,
     imageCredit: r.imageCredit,

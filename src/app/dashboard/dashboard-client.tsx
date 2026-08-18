@@ -20,6 +20,7 @@ import { MotionButton } from "@/components/motion-button";
 import { MotionCard } from "@/components/motion-card";
 import { RecipeCardSkeleton } from "@/components/skeleton";
 import { EmptyState } from "@/components/empty-state";
+import { RefreshBlockedModal } from "@/components/refresh-blocked-modal";
 
 export type RecipeCardData = {
   id: string;
@@ -33,6 +34,10 @@ export type RecipeCardData = {
   cookMinutes: number;
   attributes: string[];
   dietTags: string[];
+  // Broader "more of ___" cluster titles this recipe prominently belongs to
+  // (see food-group-clusters.ts) — powers the dashboard's food-group filter
+  // chips (see availableTags/filteredPool below).
+  foodGroupClusters: string[];
   ingredientItems: string[];
   imageUrl: string | null;
   imageCredit: string | null;
@@ -433,7 +438,7 @@ function pickFour(pool: RecipeCardData[]): RecipeCardData[] {
   return dedupeFirstFour(shuffle(pool));
 }
 
-type FilterTag = { value: string; label: string; kind: "diet" | "attribute" };
+type FilterTag = { value: string; label: string; kind: "foodGroup" | "attribute" };
 
 function FilterTagButton({
   tag,
@@ -444,10 +449,11 @@ function FilterTagButton({
   active: boolean;
   onToggle: (value: string) => void;
 }) {
-  const activeClass =
-    tag.kind === "diet"
-      ? dietEmblemClass(tag.value) ?? "bg-[#1A1D1B] text-white"
-      : "bg-[#1A1D1B] text-white";
+  // Food-group and attribute chips share the same neutral active style —
+  // unlike the per-card diet emblems (dietEmblemClass), these don't need
+  // per-tag coloring since there's no fixed, small palette to draw from
+  // (12 food-group clusters vs. a handful of diets).
+  const activeClass = "bg-[#1A1D1B] text-white";
   return (
     // Each chip gets its own single-item liquid group. The blob is
     // transparent while inactive so it stays invisible, and pops in with a
@@ -477,10 +483,10 @@ function FilterTagButton({
   );
 }
 
-// Collapsed-by-default: with every diet + attribute tag rendered flat, the
-// bar could grow to dominate the page above the fold. A toggle button with
-// an active-count badge keeps the common case (no filters) compact, while
-// still surfacing an obvious affordance to narrow things down.
+// Collapsed-by-default: with every food-group + attribute tag rendered flat,
+// the bar could grow to dominate the page above the fold. A toggle button
+// with an active-count badge keeps the common case (no filters) compact,
+// while still surfacing an obvious affordance to narrow things down.
 function FilterBar({
   tags,
   selected,
@@ -496,7 +502,7 @@ function FilterBar({
 
   if (tags.length === 0) return null;
 
-  const dietTags = tags.filter((t) => t.kind === "diet");
+  const foodGroupTags = tags.filter((t) => t.kind === "foodGroup");
   const attrTags = tags.filter((t) => t.kind === "attribute");
 
   return (
@@ -544,13 +550,13 @@ function FilterBar({
             className="overflow-hidden"
           >
             <div className="mt-3 space-y-3 rounded-2xl border border-[#E8E6E0] bg-white p-4 shadow-soft">
-              {dietTags.length > 0 && (
+              {foodGroupTags.length > 0 && (
                 <div>
                   <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[#6B7370]">
-                    Diet
+                    More of
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {dietTags.map((tag) => (
+                    {foodGroupTags.map((tag) => (
                       <FilterTagButton
                         key={tag.value}
                         tag={tag}
@@ -743,10 +749,22 @@ export function DashboardClient({
 }) {
   const [poolState, setPoolState] = useState(pool);
   const [visible, setVisible] = useState(() => dedupeFirstFour(served));
+  // The current "true base" set of cards — what clearing all filters should
+  // restore. Distinct from `served` (a static initial-render prop that never
+  // changes) and from `visible` (which filtering/reshuffling mutate
+  // transiently): this only ever advances on a REAL new base — a server
+  // refresh or a category switch — never on a local filtered reshuffle or a
+  // filter toggle. See toggleTag/clearFilters below.
+  const [baseVisible, setBaseVisible] = useState(() => dedupeFirstFour(served));
   const [cookbooksState, setCookbooksState] = useState(cookbooks);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [refreshPending, setRefreshPending] = useState(false);
   const [refreshMessage, setRefreshMessage] = useState<string | null>(null);
+  // A1 free-plan gate: set from a 429 REFRESH_LIMIT_REACHED response to the
+  // plain "Refresh recipes" tap (never the category switch — see
+  // handleCategoryChange). Separate from refreshMessage since this opens a
+  // modal rather than an inline note.
+  const [refreshBlockedUntil, setRefreshBlockedUntil] = useState<string | null>(null);
   const [refreshPressed, setRefreshPressed] = useState(false);
   const [activeCategory, setActiveCategory] = useState(category);
   const [categoryPending, setCategoryPending] = useState(false);
@@ -762,27 +780,32 @@ export function DashboardClient({
     setRefreshGeneration((g) => g + 1);
   }
 
+  // Diet is no longer a filter chip here — it's a hard, preference-driven
+  // exclusion applied server-side (see filter.ts's isRecipeEligible), so
+  // every recipe in poolState already satisfies every declared diet. The
+  // "more of ___" chips below replace diet as the second filter category,
+  // built from each recipe's food-group cluster membership instead.
   const availableTags = useMemo<FilterTag[]>(() => {
-    const diets = new Set<string>();
+    const foodGroups = new Set<string>();
     const attrs = new Set<string>();
     for (const r of poolState) {
-      for (const d of r.dietTags) diets.add(d);
+      for (const c of r.foodGroupClusters) foodGroups.add(c);
       for (const a of r.attributes) attrs.add(a);
     }
-    const dietTags: FilterTag[] = [...diets]
+    const foodGroupTags: FilterTag[] = [...foodGroups]
       .sort()
-      .map((value) => ({ value, label: value, kind: "diet" as const }));
+      .map((value) => ({ value, label: value, kind: "foodGroup" as const }));
     const attrTags: FilterTag[] = [...attrs]
       .sort()
       .map((value) => ({ value, label: attributeLabel(value), kind: "attribute" as const }));
-    return [...dietTags, ...attrTags];
+    return [...foodGroupTags, ...attrTags];
   }, [poolState]);
 
   const filteredPool = useMemo(() => {
     if (selected.size === 0) return poolState;
     const tags = [...selected];
     return poolState.filter((r) =>
-      tags.every((tag) => r.attributes.includes(tag) || r.dietTags.includes(tag)),
+      tags.every((tag) => r.attributes.includes(tag) || r.foodGroupClusters.includes(tag)),
     );
   }, [poolState, selected]);
 
@@ -830,12 +853,18 @@ export function DashboardClient({
       const res = await fetch("/api/dashboard/refresh", { method: "POST" });
       const body = await res.json().catch(() => null);
 
+      if (res.status === 429 && body?.error === "REFRESH_LIMIT_REACHED") {
+        setRefreshBlockedUntil(body.nextWindowAt ?? null);
+        return;
+      }
+
       if (!res.ok || !body?.recipes) {
         setRefreshMessage("Something went wrong. Try again.");
         return;
       }
 
       replaceVisible(body.recipes);
+      setBaseVisible(body.recipes);
     } catch {
       setRefreshMessage("Something went wrong. Try again.");
     } finally {
@@ -870,6 +899,7 @@ export function DashboardClient({
       }
 
       replaceVisible(body.recipes);
+      setBaseVisible(body.recipes);
       setPoolState(body.pool ?? poolState);
       setSelected(new Set());
     } catch {
@@ -940,6 +970,11 @@ export function DashboardClient({
     };
   }, []);
 
+  // Clearing/removing filters always restores `baseVisible` — the current
+  // true base set (last real server refresh or category switch) — never the
+  // static initial-render `served` prop, which would otherwise snap back to
+  // stale pre-refresh cards. Filtering itself still freely pulls in other
+  // pool recipes; only the "no filters selected" resting state is anchored.
   function toggleTag(value: string) {
     setSelected((prev) => {
       const next = new Set(prev);
@@ -949,16 +984,16 @@ export function DashboardClient({
         next.size === 0
           ? poolState
           : poolState.filter((r) =>
-              [...next].every((tag) => r.attributes.includes(tag) || r.dietTags.includes(tag)),
+              [...next].every((tag) => r.attributes.includes(tag) || r.foodGroupClusters.includes(tag)),
             );
-      replaceVisible(next.size === 0 ? dedupeFirstFour(served) : dedupeFirstFour(nextFiltered));
+      replaceVisible(next.size === 0 ? baseVisible : dedupeFirstFour(nextFiltered));
       return next;
     });
   }
 
   function clearFilters() {
     setSelected(new Set());
-    replaceVisible(dedupeFirstFour(served));
+    replaceVisible(baseVisible);
   }
 
   const heading =
@@ -1118,6 +1153,12 @@ export function DashboardClient({
           <p className="text-xs text-[#6B7370]">{refreshMessage}</p>
         )}
       </div>
+
+      <RefreshBlockedModal
+        open={refreshBlockedUntil !== null}
+        onClose={() => setRefreshBlockedUntil(null)}
+        nextWindowAt={refreshBlockedUntil}
+      />
 
       {cookbooksState.length > 0 && (
         <div className="mt-10 space-y-8">

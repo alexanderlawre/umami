@@ -125,6 +125,7 @@ model User {
   savedRecipes        SavedRecipe[]
   passwordResetTokens PasswordResetToken[]
   recipeSubmissions   RecipeSubmission[]
+  refreshUsages       RefreshUsage[]
 }
 
 model PasswordResetToken {
@@ -513,4 +514,28 @@ model ServedCard {
   @@index([userId, servedAt])
   @@index([userId, windowKey])
   @@unique([userId, windowKey, servedAt, position])
+}
+
+// Free-plan gate for A1 (manual dashboard refreshes). One row = one
+// consumed manual refresh for a given (user, section, meal-slot window) —
+// existence alone is the signal (cap is always exactly 1 today; `count` is
+// kept for forward-compatibility with a future higher cap without another
+// migration). Only ever written for the plain "Refresh recipes" tap (see
+// /api/dashboard/refresh) — switching the Meals/Tapas/Breakfast category
+// control never writes here, since that's browsing to a different section,
+// not "refreshing" the one you're already looking at. Premium never writes
+// here at all (getEntitlements returns Infinity, so the gate is skipped
+// entirely). Rows are never deleted — a fresh window naturally gets a
+// fresh windowKey, so old rows just age out as inert history, same as
+// ServedCard.
+model RefreshUsage {
+  id        String            @id @default(cuid())
+  userId    String
+  user      User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  section   DashboardCategory
+  windowKey String
+  count     Int               @default(0)
+  createdAt DateTime          @default(now())
+
+  @@unique([userId, section, windowKey])
 }
