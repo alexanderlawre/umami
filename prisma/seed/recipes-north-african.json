@@ -876,6 +876,24 @@
         "item": "lemons",
         "prepNote": "juiced",
         "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 18,
+        "quantity": "1",
+        "unit": null,
+        "item": "lemon",
+        "prepNote": "cut into wedges, for serving",
+        "optional": true
+      },
+      {
+        "component": "Garnish",
+        "order": 19,
+        "quantity": "8",
+        "unit": null,
+        "item": "dates",
+        "prepNote": "for serving",
+        "optional": true
       }
     ],
     "steps": [

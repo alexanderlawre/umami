@@ -12,6 +12,7 @@ import {
   type EditorIngredient,
   type EditorRecipe,
   type EditorStep,
+  type EditorSubRecipe,
   type RecipeFormValues,
 } from "@/lib/recipe-form-shared";
 
@@ -58,12 +59,14 @@ export function RecipeEditor({
           proteinGrams: recipe.proteinGrams,
           carbsGrams: recipe.carbsGrams,
           fatGrams: recipe.fatGrams,
+          pairingSuggestion: recipe.pairingSuggestion,
           dietIds: recipe.dietIds,
           allergenIds: recipe.allergenIds,
           ingredients: recipe.ingredients.length
             ? recipe.ingredients
             : EMPTY_RECIPE.ingredients,
           steps: recipe.steps.length ? recipe.steps : EMPTY_RECIPE.steps,
+          subRecipes: recipe.subRecipes,
         }
       : EMPTY_RECIPE,
   );
@@ -145,6 +148,96 @@ export function RecipeEditor({
     setForm((f) => ({ ...f, steps: f.steps.filter((_, idx) => idx !== i) }));
   }
 
+  function updateSubRecipe(i: number, patch: Partial<EditorSubRecipe>) {
+    setForm((f) => ({
+      ...f,
+      subRecipes: f.subRecipes.map((sub, idx) => (idx === i ? { ...sub, ...patch } : sub)),
+    }));
+  }
+
+  function addSubRecipe() {
+    setForm((f) => ({
+      ...f,
+      subRecipes: [
+        ...f.subRecipes,
+        { title: "", ingredients: [{ quantity: "", unit: null, item: "" }], steps: [""] },
+      ],
+    }));
+  }
+
+  function removeSubRecipe(i: number) {
+    setForm((f) => ({ ...f, subRecipes: f.subRecipes.filter((_, idx) => idx !== i) }));
+  }
+
+  function updateSubRecipeIngredient(
+    subIdx: number,
+    ingIdx: number,
+    patch: Partial<EditorSubRecipe["ingredients"][number]>,
+  ) {
+    setForm((f) => ({
+      ...f,
+      subRecipes: f.subRecipes.map((sub, idx) =>
+        idx === subIdx
+          ? {
+              ...sub,
+              ingredients: sub.ingredients.map((ing, i) => (i === ingIdx ? { ...ing, ...patch } : ing)),
+            }
+          : sub,
+      ),
+    }));
+  }
+
+  function addSubRecipeIngredient(subIdx: number) {
+    setForm((f) => ({
+      ...f,
+      subRecipes: f.subRecipes.map((sub, idx) =>
+        idx === subIdx
+          ? { ...sub, ingredients: [...sub.ingredients, { quantity: "", unit: null, item: "" }] }
+          : sub,
+      ),
+    }));
+  }
+
+  function removeSubRecipeIngredient(subIdx: number, ingIdx: number) {
+    setForm((f) => ({
+      ...f,
+      subRecipes: f.subRecipes.map((sub, idx) =>
+        idx === subIdx
+          ? { ...sub, ingredients: sub.ingredients.filter((_, i) => i !== ingIdx) }
+          : sub,
+      ),
+    }));
+  }
+
+  function updateSubRecipeStep(subIdx: number, stepIdx: number, text: string) {
+    setForm((f) => ({
+      ...f,
+      subRecipes: f.subRecipes.map((sub, idx) =>
+        idx === subIdx
+          ? { ...sub, steps: sub.steps.map((s, i) => (i === stepIdx ? text : s)) }
+          : sub,
+      ),
+    }));
+  }
+
+  function addSubRecipeStep(subIdx: number) {
+    setForm((f) => ({
+      ...f,
+      subRecipes: f.subRecipes.map((sub, idx) =>
+        idx === subIdx ? { ...sub, steps: [...sub.steps, ""] } : sub,
+      ),
+    }));
+  }
+
+  function removeSubRecipeStep(subIdx: number, stepIdx: number) {
+    setForm((f) => ({
+      ...f,
+      subRecipes: f.subRecipes.map((sub, idx) =>
+        idx === subIdx ? { ...sub, steps: sub.steps.filter((_, i) => i !== stepIdx) } : sub,
+      ),
+    }));
+  }
+
   async function handlePhotoChange(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file || !recipe) return;
@@ -184,6 +277,17 @@ export function RecipeEditor({
     }
     if (form.steps.some((s) => !s.text.trim())) {
       setError("Every step needs text.");
+      return;
+    }
+    if (
+      form.subRecipes.some(
+        (sub) =>
+          !sub.title.trim() ||
+          sub.ingredients.some((i) => !i.item.trim()) ||
+          sub.steps.some((s) => !s.trim()),
+      )
+    ) {
+      setError("Every sub-recipe needs a title, and every ingredient/step needs text.");
       return;
     }
 
@@ -282,6 +386,15 @@ export function RecipeEditor({
             updateStep={updateStep}
             addStep={addStep}
             removeStep={removeStep}
+            updateSubRecipe={updateSubRecipe}
+            addSubRecipe={addSubRecipe}
+            removeSubRecipe={removeSubRecipe}
+            updateSubRecipeIngredient={updateSubRecipeIngredient}
+            addSubRecipeIngredient={addSubRecipeIngredient}
+            removeSubRecipeIngredient={removeSubRecipeIngredient}
+            updateSubRecipeStep={updateSubRecipeStep}
+            addSubRecipeStep={addSubRecipeStep}
+            removeSubRecipeStep={removeSubRecipeStep}
           />
 
           {error && <p className="text-sm text-red-600">{error}</p>}

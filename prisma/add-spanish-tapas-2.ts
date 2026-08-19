@@ -48,6 +48,11 @@ type RecipeSeed = {
   foodGroupProfile: { foodGroup: string; weight: number }[];
   dietTags: string[];
   allergenTags: string[];
+  subRecipes?: {
+    title: string;
+    ingredients: { quantity: string; unit: string | null; item: string }[];
+    steps: string[];
+  }[];
 };
 
 const recipes = recipesData as RecipeSeed[];
@@ -97,6 +102,9 @@ async function main() {
         isActive: true,
         ingredients: { create: recipe.ingredients },
         steps: { create: recipe.steps },
+        subRecipes: recipe.subRecipes
+          ? { create: recipe.subRecipes.map((sub, i) => ({ ...sub, order: i })) }
+          : undefined,
         foodGroupProfile: {
           create: recipe.foodGroupProfile.map((fgp) => ({
             weight: fgp.weight,
@@ -118,6 +126,12 @@ async function main() {
         dietTags: { set: recipe.dietTags.map((name) => ({ name })) },
         allergenTags: { set: recipe.allergenTags.map((name) => ({ name })) },
         attributeTags: { set: recipe.attributes.map((code) => ({ code })) },
+        // Sync sub-recipes on re-run (delete + recreate) — this is a newer
+        // field with no admin-owned edits to preserve, unlike ingredients/
+        // steps which are intentionally left alone here.
+        subRecipes: recipe.subRecipes
+          ? { deleteMany: {}, create: recipe.subRecipes.map((sub, i) => ({ ...sub, order: i })) }
+          : undefined,
       },
     });
   }

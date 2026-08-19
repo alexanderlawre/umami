@@ -1036,7 +1036,7 @@
       { "component": null, "order": 6, "quantity": "1", "unit": "lb", "item": "white fish fillets", "prepNote": "cut into chunks", "optional": false },
       { "component": null, "order": 7, "quantity": "1", "unit": "lb", "item": "mussels", "prepNote": "scrubbed", "optional": false },
       { "component": null, "order": 8, "quantity": "1/2", "unit": "lb", "item": "shrimp", "prepNote": "peeled and deveined", "optional": false },
-      { "component": null, "order": 9, "quantity": "1/4", "unit": "cup", "item": "fresh parsley", "prepNote": "chopped", "optional": false }
+      { "component": "Garnish", "order": 9, "quantity": "1/4", "unit": "cup", "item": "fresh parsley", "prepNote": "chopped", "optional": false }
     ],
     "steps": [
       { "order": 1, "text": "In a large pot, cook onion and garlic in olive oil until softened, about 5 minutes.", "durationMinutes": 5 },

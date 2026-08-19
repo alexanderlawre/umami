@@ -4,6 +4,7 @@
     "title": "Argentinian Asado with Chimichurri",
     "shortDescription": "Traditional mixed grill featuring beef ribs and sausages with vibrant herb sauce",
     "note": "Asado is best cooked low and slow over wood or charcoal for authentic smoky flavor",
+    "pairingSuggestion": "Pairs well with a bold Malbec.",
     "introCopy": "Asado is the soul of Argentine cooking—a ritualistic gathering around the grill where beef short ribs, chorizo, and morcilla are cooked slowly over wood embers. The meat is seasoned simply with salt, allowing the quality of the beef to shine. No asado is complete without chimichurri, the bright parsley-oregano sauce that cuts through the richness.",
     "servings": 6,
     "prepMinutes": 30,
@@ -374,6 +375,26 @@
         "durationMinutes": 25
       }
     ],
+    "subRecipes": [
+      {
+        "title": "Make your own empanada dough",
+        "ingredients": [
+          { "quantity": "500", "unit": "g", "item": "all-purpose flour" },
+          { "quantity": "1", "unit": "teaspoon", "item": "salt" },
+          { "quantity": "100", "unit": "g", "item": "cold butter or lard, cubed" },
+          { "quantity": "1", "unit": null, "item": "egg" },
+          { "quantity": "150", "unit": "ml", "item": "warm water" }
+        ],
+        "steps": [
+          "Whisk the flour and salt together in a large bowl. Cut in the cold butter with your fingers or a pastry cutter until the mixture resembles coarse crumbs.",
+          "Make a well in the center and add the egg and warm water. Mix until a shaggy dough forms.",
+          "Turn the dough out onto a floured surface and knead for 3-4 minutes until smooth and elastic.",
+          "Wrap in plastic wrap and rest in the refrigerator for at least 30 minutes.",
+          "Divide the dough into 24 equal pieces and roll each into a thin, roughly 12cm round disc.",
+          "Use immediately in place of store-bought empanada discs."
+        ]
+      }
+    ],
     "foodGroupProfile": [
       {
         "foodGroup": "Red meat",
@@ -404,6 +425,7 @@
     "title": "Milanesa Napolitana",
     "shortDescription": "Breaded beef cutlet topped with ham, tomato sauce, and melted mozzarella",
     "note": "Despite its Italian name, this is an Argentine classic found in every bodegón",
+    "pairingSuggestion": "Pairs well with a glass of Malbec or a cold beer.",
     "introCopy": "Milanesa napolitana takes Argentina's beloved breaded cutlet and elevates it with layers of ham, tomato sauce, and melted cheese. Baked until bubbly and golden, it's pure comfort food—crispy, juicy, and utterly satisfying. Serve with french fries or a simple salad for a meal that defines Argentine home cooking.",
     "servings": 4,
     "prepMinutes": 20,

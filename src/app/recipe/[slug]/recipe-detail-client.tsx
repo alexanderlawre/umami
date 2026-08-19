@@ -28,6 +28,14 @@ type Step = {
   durationMinutes: number | null;
 };
 
+type SubRecipe = {
+  id: string;
+  order: number;
+  title: string;
+  ingredients: { quantity: string; unit: string | null; item: string }[];
+  steps: string[];
+};
+
 export type RecipeDetail = {
   id: string;
   title: string;
@@ -42,6 +50,7 @@ export type RecipeDetail = {
   effortTier: string;
   ingredients: Ingredient[];
   steps: Step[];
+  subRecipes: SubRecipe[];
   imageUrl: string | null;
   imageCredit: string | null;
   caloriesPerServing: number | null;
@@ -50,6 +59,7 @@ export type RecipeDetail = {
   fatGrams: number | null;
   fiberGrams: number | null;
   cholesterolMg: number | null;
+  pairingSuggestion: string | null;
   attributes: string[];
   dietTags: string[];
   allergenTags: string[];
@@ -83,6 +93,16 @@ export function RecipeDetailClient({
   const [cookError, setCookError] = useState<string | null>(null);
   const [tagsOpen, setTagsOpen] = useState(false);
   const [justCooked, setJustCooked] = useState(false);
+  const [openSubRecipeIds, setOpenSubRecipeIds] = useState<Set<string>>(new Set());
+
+  function toggleSubRecipe(id: string) {
+    setOpenSubRecipeIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
 
   useEffect(() => {
     // Log OPEN once when the detail page is actually reached, not on link hover/prefetch.
@@ -437,6 +457,65 @@ export function RecipeDetailClient({
         ))}
       </section>
 
+      {recipe.subRecipes.length > 0 && (
+        <section className="mt-4 space-y-2">
+          {recipe.subRecipes.map((sub) => {
+            const open = openSubRecipeIds.has(sub.id);
+            return (
+              <div key={sub.id}>
+                <button
+                  onClick={() => toggleSubRecipe(sub.id)}
+                  aria-expanded={open}
+                  className="flex cursor-pointer list-none items-center gap-1 text-xs font-medium text-[#2C5A87]"
+                >
+                  Want to make the {sub.title.replace(/^Make (your own |)/i, "")} yourself?
+                  <motion.svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    className="h-3.5 w-3.5"
+                    animate={{ rotate: open ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+                  </motion.svg>
+                </button>
+                <AnimatePresence initial={false}>
+                  {open && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mt-2 rounded-xl border border-[#E8E6E0] bg-white p-3">
+                        <p className="text-sm font-semibold text-[#1A1D1B]">{sub.title}</p>
+                        <ul className="mt-2 space-y-1">
+                          {sub.ingredients.map((ing, i) => (
+                            <li key={i} className="text-sm text-[#1A1D1B]">
+                              {ing.quantity} {ing.unit ?? ""} {ing.item}
+                            </li>
+                          ))}
+                        </ul>
+                        <ol className="mt-3 space-y-2">
+                          {sub.steps.map((text, i) => (
+                            <li key={i} className="text-sm text-[#1A1D1B]">
+                              <span className="font-medium">{i + 1}.</span> {text}
+                            </li>
+                          ))}
+                        </ol>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
+        </section>
+      )}
+
       <section className="mt-6">
         <h2 className="text-lg font-semibold text-[#1A1D1B]">Method</h2>
         <ol className="mt-2 space-y-3">
@@ -460,6 +539,10 @@ export function RecipeDetailClient({
             ))}
         </ol>
       </section>
+
+      {recipe.pairingSuggestion && (
+        <p className="mt-4 text-xs italic text-[#6B7370]">{recipe.pairingSuggestion}</p>
+      )}
 
       {(saveError || cookError) && (
         <p className="fixed inset-x-0 bottom-20 mx-auto w-fit rounded-lg bg-[#1A1D1B] px-3 py-2 text-xs text-white shadow-sm">

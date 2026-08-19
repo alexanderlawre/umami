@@ -77,6 +77,16 @@ type RecipeSeed = {
   foodGroupProfile: { foodGroup: string; weight: number }[];
   dietTags: string[];
   allergenTags: string[];
+  // Optional "make it yourself" add-on (e.g. empanada dough) — only a
+  // handful of recipes have one, so this is omitted everywhere else.
+  subRecipes?: {
+    title: string;
+    ingredients: { quantity: string; unit: string | null; item: string }[];
+    steps: string[];
+  }[];
+  // Optional side/drink pairing recommendation — only populated where the
+  // pairing is culturally unambiguous.
+  pairingSuggestion?: string;
 };
 
 async function main() {
@@ -125,6 +135,7 @@ async function main() {
         prisma.ingredient.deleteMany({ where: { recipeId: existing.id } }),
         prisma.step.deleteMany({ where: { recipeId: existing.id } }),
         prisma.recipeFoodGroup.deleteMany({ where: { recipeId: existing.id } }),
+        prisma.subRecipe.deleteMany({ where: { recipeId: existing.id } }),
         prisma.recipe.update({
           where: { id: existing.id },
           data: {
@@ -137,12 +148,12 @@ async function main() {
             cookMinutes: recipe.cookMinutes,
             difficulty: recipe.difficulty,
             cuisine: { connect: { name: recipe.cuisine } },
-            mealSlot: recipe.mealSlot as never,
             effortTier: recipe.effortTier,
             batchFriendly: recipe.batchFriendly,
             attributeTags: { set: recipe.attributes.map((code) => ({ code })) },
             heroColor: recipe.heroColor,
-            // Deliberately not syncing allergenReviewStatus/isActive/
+            pairingSuggestion: recipe.pairingSuggestion ?? null,
+            // Deliberately not syncing mealSlot/allergenReviewStatus/isActive/
             // imageUrl/imageCredit here: once a recipe exists, its
             // moderation state and photo are owned by the admin UI (verify/
             // publish toggles, photo upload), and re-running the seed must
@@ -150,6 +161,9 @@ async function main() {
             // uploaded photo back to the JSON's placeholder image.
             ingredients: { create: recipe.ingredients },
             steps: { create: recipe.steps },
+            subRecipes: recipe.subRecipes
+              ? { create: recipe.subRecipes.map((sub, i) => ({ ...sub, order: i })) }
+              : undefined,
             foodGroupProfile: {
               create: recipe.foodGroupProfile.map((fgp) => ({
                 weight: fgp.weight,
@@ -185,8 +199,12 @@ async function main() {
         imageCredit: recipe.imageCredit,
         allergenReviewStatus: recipe.allergenReviewStatus,
         isActive: recipe.isActive ?? true,
+        pairingSuggestion: recipe.pairingSuggestion ?? null,
         ingredients: { create: recipe.ingredients },
         steps: { create: recipe.steps },
+        subRecipes: recipe.subRecipes
+          ? { create: recipe.subRecipes.map((sub, i) => ({ ...sub, order: i })) }
+          : undefined,
         foodGroupProfile: {
           create: recipe.foodGroupProfile.map((fgp) => ({
             weight: fgp.weight,

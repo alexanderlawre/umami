@@ -427,6 +427,7 @@ export function RecipesClient({
         proteinGrams: number | null;
         carbsGrams: number | null;
         fatGrams: number | null;
+        pairingSuggestion: string | null;
         dietTags: { id: string }[];
         allergenTags: { id: string }[];
         ingredients: {
@@ -438,6 +439,11 @@ export function RecipesClient({
           optional: boolean;
         }[];
         steps: { text: string; durationMinutes: number | null }[];
+        subRecipes: {
+          title: string;
+          ingredients: { quantity: string; unit: string | null; item: string }[];
+          steps: string[];
+        }[];
       };
     };
     setEditorState({

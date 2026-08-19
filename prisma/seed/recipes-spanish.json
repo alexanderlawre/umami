@@ -4,6 +4,7 @@
     "title": "Patatas Bravas",
     "shortDescription": "Crispy fried potatoes served with spicy tomato sauce and garlicky aioli, part of a tapas trio with Gambas al Ajillo and Pan con Tomate.",
     "note": "Cut potatoes into uniform 1-inch cubes and double-fry for maximum crispiness.",
+    "pairingSuggestion": "Pairs well with a cold Spanish lager or a dry sherry.",
     "introCopy": "Patatas bravas are one of Spain's most iconic tapas. The name means 'fierce potatoes,' a nod to the spicy sauce that coats them. This Madrid classic is essential bar food.",
     "servings": 4,
     "prepMinutes": 15,
@@ -649,6 +650,7 @@
     "title": "Tortilla Española",
     "shortDescription": "A thick, tender Spanish omelet of slow-cooked potatoes, onions, and eggs, part of a tapas trio with Croquetas de Jamón and Pimientos de Padrón.",
     "note": "Cook the potatoes low and slow in the oil so they turn tender, not crispy, before adding the eggs.",
+    "pairingSuggestion": "Pairs well with a glass of Rioja or a cold beer.",
     "introCopy": "Tortilla española, or tortilla de patatas, is Spain's beloved potato omelet found in every home and bar. Served warm or at room temperature, it's equally at home as tapas, a light lunch, or a sandwich filling.",
     "servings": 6,
     "prepMinutes": 20,
@@ -1373,6 +1375,7 @@
     "title": "Paella Valenciana",
     "shortDescription": "The original saffron rice dish from Valencia with chicken, rabbit, green beans, and lima beans cooked in a wide shallow pan.",
     "note": "Resist stirring the rice once the liquid is added — this allows the prized crispy socarrat to form on the bottom.",
+    "pairingSuggestion": "Pairs well with a chilled Spanish rosado or a crisp Albari\u00f1o.",
     "introCopy": "Paella Valenciana is the authentic ancestor of all paellas, born in the rice fields outside Valencia. Traditionalists insist on chicken, rabbit, and local beans rather than seafood, cooked over an open flame in a wide paellera.",
     "servings": 6,
     "prepMinutes": 25,
@@ -6077,7 +6080,7 @@
         "optional": false
       },
       {
-        "component": "For garnish",
+        "component": "Garnish",
         "order": 8,
         "quantity": "1",
         "unit": "cup",

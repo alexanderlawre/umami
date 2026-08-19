@@ -1504,6 +1504,25 @@
         "durationMinutes": 11
       }
     ],
+    "subRecipes": [
+      {
+        "title": "Make your own pizza dough",
+        "ingredients": [
+          { "quantity": "500", "unit": "g", "item": "bread flour" },
+          { "quantity": "2", "unit": "teaspoons", "item": "instant yeast" },
+          { "quantity": "2", "unit": "teaspoons", "item": "salt" },
+          { "quantity": "2", "unit": "tablespoons", "item": "olive oil" },
+          { "quantity": "325", "unit": "ml", "item": "warm water" }
+        ],
+        "steps": [
+          "Whisk the flour, yeast, and salt together in a large bowl.",
+          "Add the olive oil and warm water, and mix until a shaggy dough forms.",
+          "Turn out onto a floured surface and knead for 8-10 minutes until smooth and elastic.",
+          "Place in an oiled bowl, cover, and let rise in a warm spot for 1 hour, until doubled in size.",
+          "Punch down and roll out to about 1 lb of dough, ready to use in place of store-bought pizza dough."
+        ]
+      }
+    ],
     "foodGroupProfile": [
       {
         "foodGroup": "Nightshades",

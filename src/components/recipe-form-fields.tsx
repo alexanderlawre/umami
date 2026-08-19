@@ -11,6 +11,7 @@ import {
   type EditorIngredient,
   type EditorRecipe,
   type EditorStep,
+  type EditorSubRecipe,
   type RecipeFormValues,
 } from "@/lib/recipe-form-shared";
 
@@ -130,6 +131,15 @@ export function RecipeFormFields({
   updateStep,
   addStep,
   removeStep,
+  updateSubRecipe,
+  addSubRecipe,
+  removeSubRecipe,
+  updateSubRecipeIngredient,
+  addSubRecipeIngredient,
+  removeSubRecipeIngredient,
+  updateSubRecipeStep,
+  addSubRecipeStep,
+  removeSubRecipeStep,
 }: {
   form: RecipeFormValues;
   update: <K extends keyof RecipeFormValues>(key: K, value: RecipeFormValues[K]) => void;
@@ -151,6 +161,21 @@ export function RecipeFormFields({
   updateStep: (i: number, patch: Partial<EditorStep>) => void;
   addStep: () => void;
   removeStep: (i: number) => void;
+  // Sub-recipe editing is admin-only (curation decision, not exposed on the
+  // public submission form) — omit all of these props to hide the block.
+  updateSubRecipe?: (i: number, patch: Partial<EditorSubRecipe>) => void;
+  addSubRecipe?: () => void;
+  removeSubRecipe?: (i: number) => void;
+  updateSubRecipeIngredient?: (
+    subIdx: number,
+    ingIdx: number,
+    patch: Partial<EditorSubRecipe["ingredients"][number]>,
+  ) => void;
+  addSubRecipeIngredient?: (subIdx: number) => void;
+  removeSubRecipeIngredient?: (subIdx: number, ingIdx: number) => void;
+  updateSubRecipeStep?: (subIdx: number, stepIdx: number, text: string) => void;
+  addSubRecipeStep?: (subIdx: number) => void;
+  removeSubRecipeStep?: (subIdx: number, stepIdx: number) => void;
 }) {
   return (
     <>
@@ -398,6 +423,16 @@ export function RecipeFormFields({
         </div>
       </div>
 
+      <div>
+        <label className={labelClass()}>Pairing suggestion (optional)</label>
+        <input
+          className={inputClass()}
+          placeholder="e.g. Pairs well with a cold beer or caipirinha."
+          value={form.pairingSuggestion ?? ""}
+          onChange={(e) => update("pairingSuggestion", e.target.value || null)}
+        />
+      </div>
+
       {/* Ingredients */}
       <div>
         <div className="flex items-center justify-between">
@@ -514,6 +549,127 @@ export function RecipeFormFields({
           ))}
         </div>
       </div>
+
+      {/* Sub-recipes — optional "make it yourself" add-ons, e.g. dough.
+          Admin-only; hidden on the public submission form. */}
+      {addSubRecipe && (
+      <div>
+        <div className="flex items-center justify-between">
+          <label className={labelClass()}>Sub-recipes (optional)</label>
+          <button
+            type="button"
+            onClick={addSubRecipe}
+            className="text-xs font-medium text-[#2C5A87] underline"
+          >
+            + Add sub-recipe
+          </button>
+        </div>
+        <div className="space-y-3">
+          {form.subRecipes.map((sub, subIdx) => (
+            <div key={subIdx} className="rounded-lg border border-[#E8E6E0] bg-white p-3">
+              <div className="flex items-center gap-2">
+                <input
+                  className={inputClass()}
+                  placeholder='Title, e.g. "Make your own empanada dough"'
+                  value={sub.title}
+                  onChange={(e) => updateSubRecipe?.(subIdx, { title: e.target.value })}
+                />
+                <button
+                  type="button"
+                  onClick={() => removeSubRecipe?.(subIdx)}
+                  className="shrink-0 text-xs text-red-600"
+                >
+                  Remove
+                </button>
+              </div>
+
+              <div className="mt-3">
+                <div className="flex items-center justify-between">
+                  <p className="text-xs font-medium text-[#6B7370]">Ingredients</p>
+                  <button
+                    type="button"
+                    onClick={() => addSubRecipeIngredient?.(subIdx)}
+                    className="text-xs font-medium text-[#2C5A87] underline"
+                  >
+                    + Add ingredient
+                  </button>
+                </div>
+                <div className="mt-1 space-y-1">
+                  {sub.ingredients.map((ing, ingIdx) => (
+                    <div key={ingIdx} className="grid grid-cols-[1fr_1fr_2fr_auto] gap-2">
+                      <input
+                        className={inputClass()}
+                        placeholder="Qty"
+                        value={ing.quantity}
+                        onChange={(e) =>
+                          updateSubRecipeIngredient?.(subIdx, ingIdx, { quantity: e.target.value })
+                        }
+                      />
+                      <input
+                        className={inputClass()}
+                        placeholder="Unit"
+                        value={ing.unit ?? ""}
+                        onChange={(e) =>
+                          updateSubRecipeIngredient?.(subIdx, ingIdx, { unit: e.target.value || null })
+                        }
+                      />
+                      <input
+                        className={inputClass()}
+                        placeholder="Item"
+                        value={ing.item}
+                        onChange={(e) =>
+                          updateSubRecipeIngredient?.(subIdx, ingIdx, { item: e.target.value })
+                        }
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeSubRecipeIngredient?.(subIdx, ingIdx)}
+                        className="text-xs text-red-600"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-3">
+                <div className="flex items-center justify-between">
+                  <p className="text-xs font-medium text-[#6B7370]">Steps</p>
+                  <button
+                    type="button"
+                    onClick={() => addSubRecipeStep?.(subIdx)}
+                    className="text-xs font-medium text-[#2C5A87] underline"
+                  >
+                    + Add step
+                  </button>
+                </div>
+                <div className="mt-1 space-y-1">
+                  {sub.steps.map((text, stepIdx) => (
+                    <div key={stepIdx} className="flex items-center gap-2">
+                      <textarea
+                        rows={2}
+                        className={inputClass()}
+                        placeholder={`Step ${stepIdx + 1}`}
+                        value={text}
+                        onChange={(e) => updateSubRecipeStep?.(subIdx, stepIdx, e.target.value)}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeSubRecipeStep?.(subIdx, stepIdx)}
+                        className="shrink-0 text-xs text-red-600"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      )}
     </>
   );
 }

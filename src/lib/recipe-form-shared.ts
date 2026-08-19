@@ -21,6 +21,14 @@ export type EditorStep = {
   durationMinutes: number | null;
 };
 
+// Optional "make it yourself" reference recipe (e.g. empanada dough) shown
+// as a collapsed dropdown on the detail page — see SubRecipe in schema.prisma.
+export type EditorSubRecipe = {
+  title: string;
+  ingredients: { quantity: string; unit: string | null; item: string }[];
+  steps: string[];
+};
+
 export type EditorRecipe = {
   id: string;
   slug: string;
@@ -46,10 +54,12 @@ export type EditorRecipe = {
   proteinGrams: number | null;
   carbsGrams: number | null;
   fatGrams: number | null;
+  pairingSuggestion: string | null;
   dietIds: string[];
   allergenIds: string[];
   ingredients: EditorIngredient[];
   steps: EditorStep[];
+  subRecipes: EditorSubRecipe[];
 };
 
 // The subset of EditorRecipe actually edited via the form — excludes
@@ -79,10 +89,12 @@ export const EMPTY_RECIPE: RecipeFormValues = {
   proteinGrams: null,
   carbsGrams: null,
   fatGrams: null,
+  pairingSuggestion: null,
   dietIds: [],
   allergenIds: [],
   ingredients: [{ component: null, quantity: "", unit: null, item: "", prepNote: null, optional: false }],
   steps: [{ text: "", durationMinutes: null }],
+  subRecipes: [],
 };
 
 export const DIFFICULTIES = ["EASY", "MEDIUM", "INVOLVED"] as const;

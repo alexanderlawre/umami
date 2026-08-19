@@ -21,6 +21,7 @@ export async function GET(
     include: {
       ingredients: { orderBy: { order: "asc" } },
       steps: { orderBy: { order: "asc" } },
+      subRecipes: { orderBy: { order: "asc" } },
       dietTags: true,
       allergenTags: true,
       attributeTags: { select: { code: true } },
@@ -53,7 +54,8 @@ export async function PATCH(
     return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
   }
 
-  const { dietIds, allergenIds, ingredients, steps, cuisineId, attributes, ...rest } = parsed.data;
+  const { dietIds, allergenIds, ingredients, steps, subRecipes, cuisineId, attributes, ...rest } =
+    parsed.data;
 
   const recipe = await prisma.$transaction(async (tx) => {
     if (ingredients) {
@@ -61,6 +63,9 @@ export async function PATCH(
     }
     if (steps) {
       await tx.step.deleteMany({ where: { recipeId: id } });
+    }
+    if (subRecipes) {
+      await tx.subRecipe.deleteMany({ where: { recipeId: id } });
     }
 
     return tx.recipe.update({
@@ -84,6 +89,9 @@ export async function PATCH(
           : {}),
         ...(steps
           ? { steps: { create: steps.map((s, i) => ({ ...s, order: i })) } }
+          : {}),
+        ...(subRecipes
+          ? { subRecipes: { create: subRecipes.map((sub, i) => ({ ...sub, order: i })) } }
           : {}),
       },
     });

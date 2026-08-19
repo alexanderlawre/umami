@@ -16,6 +16,20 @@ export const stepSchema = z.object({
   durationMinutes: z.number().int().positive().nullable().optional(),
 });
 
+export const subRecipeSchema = z.object({
+  title: z.string().trim().min(1),
+  ingredients: z
+    .array(
+      z.object({
+        quantity: z.string().trim(),
+        unit: z.string().trim().nullable().optional(),
+        item: z.string().trim().min(1),
+      }),
+    )
+    .min(1),
+  steps: z.array(z.string().trim().min(1)).min(1),
+});
+
 export const DIFFICULTIES = ["EASY", "MEDIUM", "INVOLVED"] as const;
 export const MEAL_SLOTS = ["BREAKFAST", "TAPAS", "LUNCH", "DINNER"] as const;
 export const EFFORT_TIERS = ["WEEKNIGHT", "WEEKEND", "PROJECT"] as const;
@@ -40,10 +54,12 @@ export const recipeFieldsSchema = z.object({
   proteinGrams: z.number().int().positive().nullable().optional(),
   carbsGrams: z.number().int().positive().nullable().optional(),
   fatGrams: z.number().int().positive().nullable().optional(),
+  pairingSuggestion: z.string().trim().nullable().optional(),
   dietIds: z.array(z.string()).optional().default([]),
   allergenIds: z.array(z.string()).optional().default([]),
   ingredients: z.array(ingredientSchema).min(1),
   steps: z.array(stepSchema).min(1),
+  subRecipes: z.array(subRecipeSchema).optional().default([]),
 });
 
 // Built from `.partial()`, but re-overrides every field that had a
@@ -60,6 +76,7 @@ export const recipeUpdateSchema = recipeFieldsSchema.partial().extend({
   attributes: z.array(z.string()).optional(),
   dietIds: z.array(z.string()).optional(),
   allergenIds: z.array(z.string()).optional(),
+  subRecipes: z.array(subRecipeSchema).optional(),
   isActive: z.boolean().optional(),
   archivedReason: z.string().nullable().optional(),
   allergenReviewStatus: z.enum(["UNVERIFIED", "IN_REVIEW", "VERIFIED"]).optional(),

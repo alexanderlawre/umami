@@ -20,6 +20,7 @@ export default async function RecipeDetailPage({
     include: {
       ingredients: { orderBy: { order: "asc" } },
       steps: { orderBy: { order: "asc" } },
+      subRecipes: { orderBy: { order: "asc" } },
       cuisine: true,
       allergenTags: true,
       attributeTags: true,
@@ -71,6 +72,13 @@ export default async function RecipeDetailPage({
     effortTier: recipe.effortTier,
     ingredients: recipe.ingredients,
     steps: recipe.steps,
+    subRecipes: recipe.subRecipes as unknown as {
+      id: string;
+      order: number;
+      title: string;
+      ingredients: { quantity: string; unit: string | null; item: string }[];
+      steps: string[];
+    }[],
     imageUrl: recipe.imageUrl,
     imageCredit: recipe.imageCredit,
     caloriesPerServing: recipe.caloriesPerServing,
@@ -79,6 +87,7 @@ export default async function RecipeDetailPage({
     fatGrams: recipe.fatGrams,
     fiberGrams: recipe.fiberGrams,
     cholesterolMg: recipe.cholesterolMg,
+    pairingSuggestion: recipe.pairingSuggestion,
     attributes: recipe.attributeTags.map((a) => a.code),
     dietTags: recipe.dietTags.map((d) => d.name),
     allergenTags: recipeAllergenNames,

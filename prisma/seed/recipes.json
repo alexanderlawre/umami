@@ -484,7 +484,7 @@
         "optional": false
       },
       {
-        "component": null,
+        "component": "Garnish",
         "order": 5,
         "quantity": "1",
         "unit": null,
@@ -632,6 +632,33 @@
         "item": "corn tortillas",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 7,
+        "quantity": "1/4",
+        "unit": null,
+        "item": "white onion",
+        "prepNote": "diced",
+        "optional": true
+      },
+      {
+        "component": "Garnish",
+        "order": 8,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "fresh cilantro",
+        "prepNote": "chopped",
+        "optional": true
+      },
+      {
+        "component": "Garnish",
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "lime",
+        "prepNote": "cut into wedges",
+        "optional": true
       }
     ],
     "steps": [
@@ -694,6 +721,7 @@
     "title": "Carne Asada",
     "shortDescription": "Skirt steak, lime, garlic, cilantro, orange",
     "note": "Slice against the grain — with skirt steak this matters more than almost anything else you do to it.",
+    "pairingSuggestion": "Pairs well with a cold Mexican lager or a glass of red wine.",
     "introCopy": "A weekend grill dish. Marinate in the morning, cook it fast and hot in the evening.",
     "servings": 4,
     "prepMinutes": 15,
@@ -1094,6 +1122,7 @@
     "title": "Chicken Katsu",
     "shortDescription": "Chicken thigh, panko, katsu sauce, cabbage",
     "note": "Rest the breaded cutlets for five minutes before frying — it helps the crust stay put in the oil.",
+    "pairingSuggestion": "Pairs well with a cold Japanese lager.",
     "introCopy": "The crunch is the whole point. Double-dredge if you want it extra thick.",
     "servings": 4,
     "prepMinutes": 20,
@@ -1374,6 +1403,7 @@
     "title": "Butter Chicken",
     "shortDescription": "Chicken thigh, tomato, cream, butter, garam masala",
     "note": "Marinate the chicken in yogurt overnight if you have time — it tenderizes as much as it flavors.",
+    "pairingSuggestion": "Pairs well with a cold lager or a mango lassi.",
     "introCopy": "Rich and a little sweet from the cream. Worth the extra ten minutes of simmering for the sauce to deepen.",
     "servings": 4,
     "prepMinutes": 20,
@@ -1954,6 +1984,7 @@
     "title": "Tom Yum Goong",
     "shortDescription": "Shrimp, lemongrass, lime leaf, mushroom, chili",
     "note": "Bruise the lemongrass and lime leaves instead of chopping them fine — you want the aromatics infused, not eaten.",
+    "pairingSuggestion": "Pairs well with a cold Thai lager.",
     "introCopy": "Sour, hot, and fast. The broth should taste sharp enough to make your eyes water a little.",
     "servings": 4,
     "prepMinutes": 15,
@@ -2361,6 +2392,7 @@
     "title": "Lamb Kofta",
     "shortDescription": "Ground lamb, cumin, cinnamon, onion, parsley",
     "note": "Wet your hands before shaping the kofta — the mixture is sticky and this keeps it from clumping to your fingers.",
+    "pairingSuggestion": "Pairs well with a light red wine or a glass of ayran.",
     "introCopy": "Skewered and grilled, spiced with a warmth that leans more toward cinnamon than heat.",
     "servings": 4,
     "prepMinutes": 20,
@@ -2567,6 +2599,33 @@
         "item": "onion",
         "prepNote": "diced",
         "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 7,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "shredded cheddar",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Garnish",
+        "order": 8,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "sour cream",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Garnish",
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "sliced",
+        "optional": true
       }
     ],
     "steps": [
@@ -3439,6 +3498,7 @@
     "title": "Coq au Vin",
     "shortDescription": "Chicken thighs, red wine, bacon, mushroom, pearl onion",
     "note": "Use a wine you'd actually drink — it reduces down to nearly a third of its volume, so any flaws concentrate too.",
+    "pairingSuggestion": "Pairs well with the same red Burgundy used to braise it.",
     "introCopy": "A weekend project, not a weeknight one. The braise does most of the work once it's in the oven.",
     "servings": 6,
     "prepMinutes": 30,
@@ -3834,6 +3894,7 @@
     "title": "Korean BBQ Beef Bowl",
     "shortDescription": "Ground beef, gochujang, garlic, sesame, rice",
     "note": "Cook the beef in batches if the pan looks crowded — steaming instead of browning is the most common way this goes wrong.",
+    "pairingSuggestion": "Pairs well with a cold Korean lager or a glass of soju.",
     "introCopy": "Sweet-savory ground beef that takes about as long as cooking the rice to go with it.",
     "servings": 4,
     "prepMinutes": 10,
@@ -4022,7 +4083,7 @@
         "optional": false
       },
       {
-        "component": null,
+        "component": "Garnish",
         "order": 5,
         "quantity": "4",
         "unit": null,
@@ -4090,6 +4151,7 @@
     "title": "Margherita Pizza",
     "shortDescription": "Pizza dough, San Marzano tomatoes, mozzarella, basil",
     "note": "Let the dough come fully to room temperature before stretching — cold dough tears instead of stretching.",
+    "pairingSuggestion": "Pairs well with a chilled Italian lager or a light Chianti.",
     "introCopy": "Three toppings, no more. The whole point is tasting each one, so don't crowd the dough.",
     "servings": 4,
     "prepMinutes": 20,
@@ -4306,6 +4368,15 @@
         "item": "butter",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 8,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh parsley",
+        "prepNote": "chopped",
+        "optional": true
       }
     ],
     "steps": [
@@ -4759,6 +4830,24 @@
         "unit": "piece",
         "item": "parmesan rind",
         "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "Garnish",
+        "order": 9,
+        "quantity": "1/4",
+        "unit": "cup",
+        "item": "parmesan",
+        "prepNote": "grated",
+        "optional": true
+      },
+      {
+        "component": "Garnish",
+        "order": 10,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "fresh basil",
+        "prepNote": "torn",
         "optional": true
       }
     ],
@@ -6161,6 +6250,7 @@
     "title": "Beef Sukiyaki",
     "shortDescription": "Thinly sliced beef, tofu, napa cabbage, mushrooms, sukiyaki sauce",
     "note": "Slice the beef paper-thin, or ask your butcher to — it should cook in seconds once it hits the pan.",
+    "pairingSuggestion": "Pairs well with a warm cup of sake.",
     "introCopy": "A simmered hot-pot style dish, sweet-savory sauce and all, best cooked at the table if you can.",
     "servings": 4,
     "prepMinutes": 20,
@@ -7036,6 +7126,7 @@
     "title": "Tandoori Chicken",
     "shortDescription": "Chicken, yogurt marinade, tandoori spice, lemon",
     "note": "A very hot oven or grill is essential here — tandoori chicken depends on quick, high-heat char, not slow roasting.",
+    "pairingSuggestion": "Pairs well with a mango lassi or a crisp lager.",
     "introCopy": "Deeply spiced and marinated overnight if you can manage it, then blasted at high heat for char.",
     "servings": 4,
     "prepMinutes": 20,
@@ -7430,6 +7521,7 @@
     "title": "Pad Thai",
     "shortDescription": "Rice noodles, shrimp, egg, tamarind, peanuts, bean sprouts",
     "note": "Soak the noodles, don't boil them — boiled rice noodles turn mushy the second they hit the hot pan.",
+    "pairingSuggestion": "Pairs well with a cold Thai lager, such as Singha or Chang.",
     "introCopy": "Sweet, sour, and salty in careful balance. Have everything prepped before the wok gets hot.",
     "servings": 4,
     "prepMinutes": 25,
@@ -7966,7 +8058,7 @@
         "optional": false
       },
       {
-        "component": null,
+        "component": "Garnish",
         "order": 6,
         "quantity": "1",
         "unit": "tsp",
@@ -8336,6 +8428,7 @@
     "title": "Chicken Shawarma Bowl",
     "shortDescription": "Spiced chicken thighs, rice, pickled turnip, garlic sauce",
     "note": "Marinate the chicken as long as you can spare — even 30 minutes helps, but a few hours transforms it.",
+    "pairingSuggestion": "Pairs well with a glass of ayran or a light lager.",
     "introCopy": "Warmly spiced chicken over rice, finished with a garlicky white sauce and something pickled for crunch.",
     "servings": 4,
     "prepMinutes": 20,
@@ -10619,6 +10712,15 @@
         "item": "eggs",
         "prepNote": "beaten",
         "optional": false
+      },
+      {
+        "component": "Garnish",
+        "order": 8,
+        "quantity": "2",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "sliced",
+        "optional": true
       }
     ],
     "steps": [
@@ -11063,6 +11165,7 @@
     "title": "Beef Bourguignon",
     "shortDescription": "Beef chuck, red wine, mushrooms, pearl onions, bacon",
     "note": "Sear the beef in batches — crowd the pan and it steams instead of browning, which is most of the dish's flavor.",
+    "pairingSuggestion": "Pairs well with a Burgundy or other medium-bodied red wine.",
     "introCopy": "A long, slow braise in red wine. Worth doing on a weekend when you're around the house anyway.",
     "servings": 6,
     "prepMinutes": 25,
@@ -11593,6 +11696,7 @@
     "title": "Korean Fried Chicken",
     "shortDescription": "Double-fried chicken wings, gochujang glaze, sesame",
     "note": "Fry twice — the first fry cooks the meat, the second makes the skin shatter-crisp.",
+    "pairingSuggestion": "Pairs well with a cold beer \u2014 the classic chimaek pairing.",
     "introCopy": "Double-frying is the whole trick here: it renders out extra fat so the skin stays crisp even under a sticky glaze.",
     "servings": 4,
     "prepMinutes": 20,
@@ -13145,6 +13249,7 @@
     "title": "Banh Mi Sandwich",
     "shortDescription": "Baguette, pork, pickled carrot and daikon, cilantro, pate",
     "note": "Pickle the vegetables at least an hour ahead — a rushed quick-pickle stays too raw and crunchy-sharp.",
+    "pairingSuggestion": "Pairs well with a cold Vietnamese lager.",
     "introCopy": "A crackly baguette stacked with savory pork, tangy pickles, and fresh herbs — French bread, Vietnamese soul.",
     "servings": 4,
     "prepMinutes": 25,
@@ -13560,6 +13665,7 @@
     "title": "Greek Chicken Souvlaki",
     "shortDescription": "Skewered chicken, lemon, oregano, garlic, pita, tzatziki",
     "note": "Cut chicken into evenly sized cubes — mismatched pieces mean some skewers dry out before others finish.",
+    "pairingSuggestion": "Pairs well with a crisp Assyrtiko or a cold beer.",
     "introCopy": "Bright, lemony grilled skewers wrapped in warm pita with cool, garlicky tzatziki.",
     "servings": 4,
     "prepMinutes": 20,
@@ -14040,7 +14146,7 @@
         "optional": false
       },
       {
-        "component": null,
+        "component": "Garnish",
         "order": 6,
         "quantity": "2",
         "unit": "tbsp",
@@ -14640,6 +14746,7 @@
     "title": "Feijoada",
     "shortDescription": "Black beans, pork, sausage, orange, rice",
     "note": "Soak the beans overnight and skim the pot often — a clean simmer keeps the stew from turning muddy.",
+    "pairingSuggestion": "Pairs well with a cold beer or a caipirinha.",
     "introCopy": "Brazil's national dish: a deeply savory black bean and pork stew simmered low and slow, served with rice and orange slices.",
     "servings": 6,
     "prepMinutes": 20,
@@ -14797,6 +14904,7 @@
     "title": "Brazilian Picanha",
     "shortDescription": "Beef sirloin cap, coarse salt, garlic, chimichurri",
     "note": "Leave the fat cap on and score it lightly — it's what bastes the meat and crisps up over the fire.",
+    "pairingSuggestion": "Pairs well with a cold beer or a caipirinha.",
     "introCopy": "A churrasco classic: beef sirloin cap seasoned with nothing but coarse salt and grilled hot for a deeply crusted exterior.",
     "servings": 4,
     "prepMinutes": 10,
@@ -15417,7 +15525,7 @@
         "optional": false
       },
       {
-        "component": null,
+        "component": "Garnish",
         "order": 7,
         "quantity": "2",
         "unit": "tbsp",

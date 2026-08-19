@@ -8,12 +8,15 @@ import { CookedRecipeCard, type CookedRecipeData } from "@/components/recipe-car
 import { compressImage } from "@/lib/image-compression";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
+import { LocationPicker, type LocationValue } from "@/components/location-picker";
+import { BirthdayPicker } from "@/components/birthday-picker";
 
 export function ProfileClient({
   initialName,
   email,
   initialBirthday,
   initialCity,
+  initialState,
   initialCountry,
   initialImage,
   cooked,
@@ -22,6 +25,7 @@ export function ProfileClient({
   email: string;
   initialBirthday: string;
   initialCity: string;
+  initialState: string;
   initialCountry: string;
   initialImage: string | null;
   cooked: CookedRecipeData[];
@@ -30,8 +34,11 @@ export function ProfileClient({
   const { update } = useSession();
   const [name, setName] = useState(initialName);
   const [birthday, setBirthday] = useState(initialBirthday);
-  const [city, setCity] = useState(initialCity);
-  const [country, setCountry] = useState(initialCountry);
+  const [location, setLocation] = useState<LocationValue>({
+    country: initialCountry,
+    state: initialState,
+    city: initialCity,
+  });
   const [photoPreview, setPhotoPreview] = useState<string | null>(initialImage);
   const [uploadingPhoto, setUploadingPhoto] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -69,7 +76,7 @@ export function ProfileClient({
 
   async function save() {
     const trimmedName = name.trim();
-    const trimmedCountry = country.trim();
+    const trimmedCountry = location.country.trim();
     if (!trimmedName) {
       setError("Name can't be empty.");
       return;
@@ -88,7 +95,8 @@ export function ProfileClient({
         body: JSON.stringify({
           name: trimmedName,
           birthday: birthday || null,
-          city: city.trim() || null,
+          city: location.city.trim() || null,
+          state: location.state.trim() || null,
           country: trimmedCountry,
         }),
       });
@@ -176,40 +184,24 @@ export function ProfileClient({
             </div>
             <div>
               <label className="block text-sm font-medium text-[#1A1D1B]">Birthday</label>
-              <input
-                type="date"
+              <BirthdayPicker
                 value={birthday}
-                onChange={(e) => {
+                onChange={(next) => {
                   setSaved(false);
-                  setBirthday(e.target.value);
+                  setBirthday(next);
                 }}
-                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-[#1A1D1B]">City</label>
-              <input
-                type="text"
-                value={city}
-                onChange={(e) => {
-                  setSaved(false);
-                  setCity(e.target.value);
-                }}
-                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-[#1A1D1B]">Country</label>
-              <input
-                type="text"
-                value={country}
-                onChange={(e) => {
-                  setSaved(false);
-                  setCountry(e.target.value);
-                }}
-                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
-              />
-            </div>
+          </div>
+
+          <div className="mt-4">
+            <LocationPicker
+              value={location}
+              onChange={(next) => {
+                setSaved(false);
+                setLocation(next);
+              }}
+            />
           </div>
 
           <div className="mt-4 flex items-center gap-3">

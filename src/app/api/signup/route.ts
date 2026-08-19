@@ -11,6 +11,7 @@ const signupSchema = z
     confirmPassword: z.string(),
     birthday: z.coerce.date().optional().nullable(),
     city: z.string().trim().min(1, "City is required"),
+    state: z.string().trim().nullable().optional(),
     country: z.string().trim().min(1, "Country is required"),
   })
   .refine((data) => data.password === data.confirmPassword, {
@@ -29,7 +30,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { name, email, password, birthday, city, country } = parsed.data;
+  const { name, email, password, birthday, city, state, country } = parsed.data;
 
   const existing = await prisma.user.findUnique({ where: { email } });
   if (existing) {
@@ -42,7 +43,15 @@ export async function POST(request: Request) {
   const passwordHash = await bcrypt.hash(password, 12);
 
   await prisma.user.create({
-    data: { name, email, passwordHash, birthday: birthday ?? undefined, city, country },
+    data: {
+      name,
+      email,
+      passwordHash,
+      birthday: birthday ?? undefined,
+      city,
+      state: state || null,
+      country,
+    },
   });
 
   return NextResponse.json({ ok: true });

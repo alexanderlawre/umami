@@ -101,6 +101,7 @@ model User {
   // src/app/profile, src/app/admin/users — both already tolerate missing
   // values).
   country      String?
+  state        String?
   city         String?
   timezone     String?
   birthday     DateTime?
@@ -280,6 +281,11 @@ model Recipe {
   fiberGrams         Int?
   cholesterolMg      Int?
 
+  // Optional side/drink suggestion shown as a small muted line on the
+  // recipe detail page, e.g. "Pairs well with a cold beer or caipirinha."
+  // Only populated for recipes with an unambiguous, well-established pairing.
+  pairingSuggestion String?
+
   allergenReviewStatus AllergenReviewStatus @default(UNVERIFIED)
   isActive             Boolean              @default(true)
   // Why this recipe is currently inactive/archived (e.g. "High fat/calories"),
@@ -291,6 +297,7 @@ model Recipe {
 
   ingredients      Ingredient[]
   steps            Step[]
+  subRecipes       SubRecipe[]
   foodGroupProfile RecipeFoodGroup[]
   dietTags         Diet[]
   allergenTags     Allergen[]
@@ -324,6 +331,21 @@ model Step {
   order           Int
   text            String
   durationMinutes Int?
+}
+
+// Optional "make it yourself" reference recipe attached to a parent Recipe
+// (e.g. empanada dough for Empanadas Argentinas), shown as a collapsed-by-
+// default dropdown on the detail page rather than a full first-class recipe
+// — kept as JSON blobs rather than full Ingredient/Step relations since it
+// never needs servings-scaling or independent querying.
+model SubRecipe {
+  id          String @id @default(cuid())
+  recipeId    String
+  recipe      Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  order       Int    @default(0)
+  title       String // e.g. "Make your own empanada dough"
+  ingredients Json // [{ quantity: string, unit: string|null, item: string }]
+  steps       Json // string[] of step text
 }
 
 model RecipeFoodGroup {

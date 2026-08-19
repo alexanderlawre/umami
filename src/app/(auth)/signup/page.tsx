@@ -9,6 +9,8 @@ import { compressImage } from "@/lib/image-compression";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
 import { OAuthButtons } from "@/components/oauth-buttons";
+import { LocationPicker, type LocationValue } from "@/components/location-picker";
+import { BirthdayPicker } from "@/components/birthday-picker";
 import { hideKeyboard } from "@/lib/native";
 
 export default function SignupPage() {
@@ -18,8 +20,7 @@ export default function SignupPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [birthday, setBirthday] = useState("");
-  const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
+  const [location, setLocation] = useState<LocationValue>({ country: "", state: "", city: "" });
   const [photoFile, setPhotoFile] = useState<File | null>(null);
   const [photoPreview, setPhotoPreview] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -42,6 +43,11 @@ export default function SignupPage() {
       return;
     }
 
+    if (!location.country || !location.city) {
+      setError("City and country are required");
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -54,8 +60,9 @@ export default function SignupPage() {
           password,
           confirmPassword,
           birthday: birthday || null,
-          city,
-          country,
+          city: location.city,
+          state: location.state || null,
+          country: location.country,
         }),
       });
       const data = await res.json();
@@ -215,38 +222,10 @@ export default function SignupPage() {
               <label className="block text-sm font-medium text-[#1A1D1B]">
                 Birthday
               </label>
-              <input
-                type="date"
-                value={birthday}
-                onChange={(e) => setBirthday(e.target.value)}
-                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
-              />
+              <BirthdayPicker value={birthday} onChange={setBirthday} />
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="block text-sm font-medium text-[#1A1D1B]">
-                  City
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={city}
-                  onChange={(e) => setCity(e.target.value)}
-                  className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-[#1A1D1B]">
-                  Country
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={country}
-                  onChange={(e) => setCountry(e.target.value)}
-                  className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
-                />
-              </div>
+            <div>
+              <LocationPicker value={location} onChange={setLocation} />
             </div>
 
             {error && (
