@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { logInteraction } from "@/lib/log-interaction";
 import { attributeLabel, dietEmblemClass, visibleDietEmblems } from "@/lib/recipe-tags";
+import { scaleQuantity } from "@/lib/quantity";
 import { MotionButton } from "@/components/motion-button";
 import { PageTransition } from "@/components/page-transition";
 import { SheetModal } from "@/components/sheet-modal";
@@ -61,13 +62,6 @@ function LockIcon({ className }: { className?: string }) {
       <path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5Zm-3 8V6a3 3 0 1 1 6 0v3H9Z" />
     </svg>
   );
-}
-
-function scaleQuantity(quantity: string, factor: number): string {
-  const num = Number(quantity);
-  if (Number.isNaN(num)) return quantity;
-  const scaled = Math.round(num * factor * 100) / 100;
-  return String(scaled);
 }
 
 export function RecipeDetailClient({
