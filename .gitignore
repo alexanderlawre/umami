@@ -41,3 +41,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# tooling config / agent config
+/.agents/
+/.claude/
+skills-lock.json
+
+# one-off data-migration scripts and their generated outputs
+scripts/apply-recipe-nutrition.mjs
+scripts/download-missing-recipe-photos.mjs
+scripts/download-recipe-photos-pexels.mjs
+scripts/estimate-recipe-nutrition.mjs
+scripts/filter-photo-matches.mjs
+scripts/find-missing-recipe-photos.mjs
+scripts/find-recipe-photos-pexels.mjs
+scripts/*manifest*.json
+scripts/photo-flagged-mismatches.json
+scripts/photo-source-manifest.json
