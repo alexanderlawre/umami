@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
+import { LoadingOrb } from "@/components/loading-orb";
 
 function ResetPasswordForm() {
   const router = useRouter();
@@ -102,7 +103,13 @@ function ResetPasswordForm() {
         disabled={loading}
         className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
       >
-        {loading ? "Updating..." : "Update password"}
+        {loading ? (
+          <span className="inline-flex items-center justify-center gap-2">
+            <LoadingOrb size={20} theme="dark" /> Updating...
+          </span>
+        ) : (
+          "Update password"
+        )}
       </MotionButton>
     </form>
   );

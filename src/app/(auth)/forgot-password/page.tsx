@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
+import { LoadingOrb } from "@/components/loading-orb";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -71,7 +72,13 @@ export default function ForgotPasswordPage() {
                 disabled={loading}
                 className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
               >
-                {loading ? "Sending..." : "Send reset link"}
+                {loading ? (
+                  <span className="inline-flex items-center justify-center gap-2">
+                    <LoadingOrb size={20} theme="dark" /> Sending...
+                  </span>
+                ) : (
+                  "Send reset link"
+                )}
               </MotionButton>
             </form>
           )}

@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
 import { OAuthButtons } from "@/components/oauth-buttons";
+import { LoadingOrb } from "@/components/loading-orb";
 import { hideKeyboard } from "@/lib/native";
 
 export default function LoginPage() {
@@ -99,7 +100,13 @@ export default function LoginPage() {
               disabled={loading}
               className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
             >
-              {loading ? "Logging in..." : "Log in"}
+              {loading ? (
+                <span className="inline-flex items-center justify-center gap-2">
+                  <LoadingOrb size={20} theme="dark" /> Logging in...
+                </span>
+              ) : (
+                "Log in"
+              )}
             </MotionButton>
           </form>
         </div>

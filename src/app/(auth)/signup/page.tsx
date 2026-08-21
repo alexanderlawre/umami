@@ -11,6 +11,7 @@ import { MotionButton } from "@/components/motion-button";
 import { OAuthButtons } from "@/components/oauth-buttons";
 import { LocationPicker, type LocationValue } from "@/components/location-picker";
 import { BirthdayPicker } from "@/components/birthday-picker";
+import { LoadingOrb } from "@/components/loading-orb";
 import { hideKeyboard } from "@/lib/native";
 
 export default function SignupPage() {
@@ -244,7 +245,13 @@ export default function SignupPage() {
               disabled={loading}
               className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
             >
-              {loading ? "Creating account..." : "Continue"}
+              {loading ? (
+                <span className="inline-flex items-center justify-center gap-2">
+                  <LoadingOrb size={20} theme="dark" /> Creating account...
+                </span>
+              ) : (
+                "Continue"
+              )}
             </MotionButton>
           </form>
         </div>

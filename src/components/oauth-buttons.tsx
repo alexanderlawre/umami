@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { MotionButton } from "@/components/motion-button";
+import { LoadingOrb } from "@/components/loading-orb";
 
 // Shared "Continue with Google" / "Continue with Apple" buttons for the
 // login and signup pages. Both use the same full-page-redirect OAuth flow
@@ -31,7 +32,7 @@ export function OAuthButtons() {
         onClick={() => handleClick("google")}
         className="flex w-full items-center justify-center gap-2 rounded-xl border border-[#E8E6E0] bg-white py-3 text-sm font-medium text-[#1A1D1B] transition-colors hover:bg-[#EDF3EF] disabled:opacity-50"
       >
-        <GoogleIcon />
+        {pending === "google" ? <LoadingOrb size={20} /> : <GoogleIcon />}
         {pending === "google" ? "Redirecting..." : "Continue with Google"}
       </MotionButton>
       <MotionButton
@@ -40,7 +41,7 @@ export function OAuthButtons() {
         onClick={() => handleClick("apple")}
         className="flex w-full items-center justify-center gap-2 rounded-xl bg-black py-3 text-sm font-medium text-white transition-colors hover:bg-[#1A1D1B] disabled:opacity-50"
       >
-        <AppleIcon />
+        {pending === "apple" ? <LoadingOrb size={20} theme="dark" /> : <AppleIcon />}
         {pending === "apple" ? "Redirecting..." : "Continue with Apple"}
       </MotionButton>
 

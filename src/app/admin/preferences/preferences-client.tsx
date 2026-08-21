@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { inputClass } from "@/components/recipe-form-fields";
+import { LoadingOrb } from "@/components/loading-orb";
 
 type WithCount = { id: string; name: string; _count: Record<string, number> };
 
@@ -139,7 +140,13 @@ function CatalogSection({
                 }
                 className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
               >
-                {deletingId === row.id ? "Removing…" : "Remove"}
+                {deletingId === row.id ? (
+                  <span className="inline-flex items-center gap-1.5">
+                    <LoadingOrb size={20} /> Removing…
+                  </span>
+                ) : (
+                  "Remove"
+                )}
               </button>
             </li>
           );
@@ -160,7 +167,13 @@ function CatalogSection({
           disabled={adding || !name.trim()}
           className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50"
         >
-          {adding ? "Adding…" : "+ Add"}
+          {adding ? (
+            <span className="inline-flex items-center gap-1.5">
+              <LoadingOrb size={20} /> Adding…
+            </span>
+          ) : (
+            "+ Add"
+          )}
         </button>
       </div>
       {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
@@ -267,7 +280,13 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
                 title={inUse ? "Still in use. Removing will also detach it from those references." : "Remove"}
                 className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
               >
-                {deletingId === row.id ? "Removing…" : "Remove"}
+                {deletingId === row.id ? (
+                  <span className="inline-flex items-center gap-1.5">
+                    <LoadingOrb size={20} /> Removing…
+                  </span>
+                ) : (
+                  "Remove"
+                )}
               </button>
             </li>
           );
@@ -305,7 +324,13 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
           disabled={adding || !name.trim() || !description.trim()}
           className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50 sm:col-span-2 sm:w-fit"
         >
-          {adding ? "Adding…" : "+ Add food group"}
+          {adding ? (
+            <span className="inline-flex items-center gap-1.5">
+              <LoadingOrb size={20} /> Adding…
+            </span>
+          ) : (
+            "+ Add food group"
+          )}
         </button>
       </div>
       {error && <p className="mt-1 text-xs text-red-600">{error}</p>}

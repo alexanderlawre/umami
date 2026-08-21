@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { LoadingOrb } from "@/components/loading-orb";
 
 export type AdminUserRow = {
   id: string;
@@ -65,7 +66,13 @@ function PromoteForm({ onPromoted }: { onPromoted: (email: string) => void }) {
           disabled={pending || !email.trim()}
           className="shrink-0 rounded-lg bg-[#1B4332] px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
         >
-          {pending ? "Saving…" : "Promote"}
+          {pending ? (
+            <span className="inline-flex items-center justify-center gap-2">
+              <LoadingOrb size={20} theme="dark" /> Saving…
+            </span>
+          ) : (
+            "Promote"
+          )}
         </button>
       </div>
       {error && <p className="mt-2 text-xs text-red-600">{error}</p>}
@@ -171,7 +178,13 @@ export function AdminUsersClient({
                       : "border-[#E8E6E0] text-[#6B7370] hover:bg-[#EDF3EF]"
                   }`}
                 >
-                  {u.isPremium ? "Premium" : "Free"}
+                  {togglingId === u.id ? (
+                    <LoadingOrb size={20} />
+                  ) : u.isPremium ? (
+                    "Premium"
+                  ) : (
+                    "Free"
+                  )}
                 </button>
                 {canManageAdmins && (
                   <button
@@ -184,7 +197,13 @@ export function AdminUsersClient({
                         : "border-[#E8E6E0] text-[#6B7370] hover:bg-[#EDF3EF]"
                     }`}
                   >
-                    {u.isAdmin ? "Revoke admin" : "Grant admin"}
+                    {togglingAdminId === u.id ? (
+                      <LoadingOrb size={20} />
+                    ) : u.isAdmin ? (
+                      "Revoke admin"
+                    ) : (
+                      "Grant admin"
+                    )}
                   </button>
                 )}
               </div>

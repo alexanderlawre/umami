@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { SubmissionPreview, type SubmissionPreviewData } from "@/components/submission-preview";
+import { LoadingOrb } from "@/components/loading-orb";
 
 type SubmissionRow = SubmissionPreviewData & {
   id: string;
@@ -200,7 +201,7 @@ export function SubmissionsClient({
                     disabled={busy}
                     className="flex-1 rounded-xl border border-red-300 py-3 text-sm font-medium text-red-700 disabled:opacity-50"
                   >
-                    Reject
+                    {busy ? <LoadingOrb size={20} /> : "Reject"}
                   </button>
                   <button
                     type="button"
@@ -208,7 +209,13 @@ export function SubmissionsClient({
                     disabled={busy}
                     className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white disabled:opacity-50"
                   >
-                    {busy ? "Approving…" : "Approve"}
+                    {busy ? (
+                      <span className="inline-flex items-center justify-center gap-2">
+                        <LoadingOrb size={20} theme="dark" /> Approving…
+                      </span>
+                    ) : (
+                      "Approve"
+                    )}
                   </button>
                 </>
               ) : (
@@ -219,7 +226,7 @@ export function SubmissionsClient({
                     disabled={busy}
                     className="flex-1 rounded-xl border border-[#E8E6E0] py-3 text-sm font-medium text-[#1A1D1B] disabled:opacity-50"
                   >
-                    Back
+                    {busy ? <LoadingOrb size={20} /> : "Back"}
                   </button>
                   <button
                     type="button"
@@ -227,7 +234,13 @@ export function SubmissionsClient({
                     disabled={busy}
                     className="flex-1 rounded-xl bg-red-700 py-3 text-sm font-medium text-white disabled:opacity-50"
                   >
-                    {busy ? "Rejecting…" : "Confirm reject"}
+                    {busy ? (
+                      <span className="inline-flex items-center justify-center gap-2">
+                        <LoadingOrb size={20} theme="dark" /> Rejecting…
+                      </span>
+                    ) : (
+                      "Confirm reject"
+                    )}
                   </button>
                 </>
               )}

@@ -10,6 +10,7 @@ import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
 import { LocationPicker, type LocationValue } from "@/components/location-picker";
 import { BirthdayPicker } from "@/components/birthday-picker";
+import { LoadingOrb } from "@/components/loading-orb";
 
 export function ProfileClient({
   initialName,
@@ -163,8 +164,14 @@ export function ProfileClient({
             />
             <div>
               <p className="text-sm font-medium text-[#1A1D1B]">Profile photo</p>
-              <p className="text-xs text-[#6B7370]">
-                {uploadingPhoto ? "Uploading..." : "Click to change."}
+              <p className="flex items-center gap-2 text-xs text-[#6B7370]">
+                {uploadingPhoto ? (
+                  <>
+                    <LoadingOrb size={20} /> Uploading...
+                  </>
+                ) : (
+                  "Click to change."
+                )}
               </p>
             </div>
           </div>
@@ -211,7 +218,13 @@ export function ProfileClient({
               disabled={saving}
               className="shrink-0 rounded-xl bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
             >
-              {saving ? "Saving..." : "Save"}
+              {saving ? (
+                <span className="inline-flex items-center justify-center gap-2">
+                  <LoadingOrb size={20} theme="dark" /> Saving...
+                </span>
+              ) : (
+                "Save"
+              )}
             </MotionButton>
             {saved && <span className="text-sm text-[#1B4332]">Saved!</span>}
           </div>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { inputClass } from "@/components/recipe-form-fields";
+import { LoadingOrb } from "@/components/loading-orb";
 
 type CookbookRow = { id: string; name: string; recipeCount: number };
 
@@ -138,7 +139,7 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
                   disabled={savingRename || !editingName.trim()}
                   className="shrink-0 rounded-lg border border-[#1B4332] bg-[#EDF3EF] px-2 py-1 text-xs text-[#1B4332] disabled:opacity-50"
                 >
-                  Save
+                  {savingRename ? <LoadingOrb size={20} /> : "Save"}
                 </button>
                 <button
                   type="button"
@@ -177,7 +178,13 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
                   disabled={deletingId === row.id}
                   className="rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
                 >
-                  {deletingId === row.id ? "Removing…" : "Remove"}
+                  {deletingId === row.id ? (
+                    <span className="inline-flex items-center gap-1.5">
+                      <LoadingOrb size={20} /> Removing…
+                    </span>
+                  ) : (
+                    "Remove"
+                  )}
                 </button>
               </div>
             )}
@@ -202,7 +209,13 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
           disabled={adding || !name.trim()}
           className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50"
         >
-          {adding ? "Adding…" : "+ Add"}
+          {adding ? (
+            <span className="inline-flex items-center gap-1.5">
+              <LoadingOrb size={20} /> Adding…
+            </span>
+          ) : (
+            "+ Add"
+          )}
         </button>
       </div>
       {error && <p className="mt-1 text-xs text-red-600">{error}</p>}

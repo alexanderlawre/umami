@@ -18,7 +18,7 @@ import {
 } from "@/lib/recipe-tags";
 import { MotionButton } from "@/components/motion-button";
 import { MotionCard } from "@/components/motion-card";
-import { RecipeCardSkeleton } from "@/components/skeleton";
+import { LoadingOrb } from "@/components/loading-orb";
 import { EmptyState } from "@/components/empty-state";
 import { RefreshBlockedModal } from "@/components/refresh-blocked-modal";
 
@@ -765,7 +765,6 @@ export function DashboardClient({
   // handleCategoryChange). Separate from refreshMessage since this opens a
   // modal rather than an inline note.
   const [refreshBlockedUntil, setRefreshBlockedUntil] = useState<string | null>(null);
-  const [refreshPressed, setRefreshPressed] = useState(false);
   const [activeCategory, setActiveCategory] = useState(category);
   const [categoryPending, setCategoryPending] = useState(false);
   // Bumped every time `visible` is replaced with a new set of cards (server
@@ -1049,11 +1048,10 @@ export function DashboardClient({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2"
+            className="flex flex-col items-center gap-3 py-16"
           >
-            {Array.from({ length: 4 }).map((_, i) => (
-              <RecipeCardSkeleton key={i} />
-            ))}
+            <LoadingOrb size={64} aria-label="Loading recipes" />
+            <p className="text-sm text-[#6B7370]">Loading recipes…</p>
           </motion.div>
         ) : selected.size > 0 && filteredPool.length === 0 ? (
           <motion.div
@@ -1103,52 +1101,42 @@ export function DashboardClient({
       </AnimatePresence>
 
       <div className="mt-6 flex flex-col items-center gap-2">
-        {/* A soft gooey halo that squishes on press and settles back with a
-            springy liquid-shape transition — purely decorative, layered
-            behind the real (crisp, fully interactive) button. */}
-        <Liquid
-          blur={7}
-          contrast={18}
-          fill="rgba(27, 67, 50, 0.14)"
-          shadow="0 3px 10px rgba(27, 67, 50, 0.14)"
+        {/* Plain MotionButton press/hover feedback (spring-scale on tap,
+            lift on hover — see motion-button.tsx's defaults). Previously
+            wrapped in a Liquid/Liquid.Item halo whose `scale` was tied to
+            onPointerDown/Up/Leave; that combination
+            (`morph={{shape:true}}` + a scale bound to raw pointer events)
+            wakes liquid-gooey's continuous requestAnimationFrame
+            re-measure/re-raster loop on every single tap (confirmed by
+            reading the library's source), which is what caused the
+            perceptible per-tap lag on mobile Safari. Dropped entirely
+            rather than gated behind a pointer-type media query, since the
+            halo was purely decorative and MotionButton's own whileTap
+            already gives equivalent tactile feedback for free. */}
+        <MotionButton
+          onClick={handleRefresh}
+          disabled={refreshDisabled}
+          className="flex items-center gap-2 rounded-full border border-[#E8E6E0] px-5 py-3 text-sm font-medium text-[#1A1D1B] transition-colors hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
         >
-          <Liquid.Item
-            morph={{ shape: true }}
-            scale={refreshPressed ? 0.92 : 1}
-            transition="bouncy"
-          >
-            <MotionButton
-              onClick={handleRefresh}
-              onPointerDown={() => setRefreshPressed(true)}
-              onPointerUp={() => setRefreshPressed(false)}
-              onPointerLeave={() => setRefreshPressed(false)}
-              disabled={refreshDisabled}
-              whileHover={{ y: -2 }}
-              className="flex items-center gap-2 rounded-full border border-[#E8E6E0] px-5 py-3 text-sm font-medium text-[#1A1D1B] transition-colors hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
+          {refreshPending ? (
+            <LoadingOrb size={20} />
+          ) : (
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              className="h-4 w-4"
             >
-              <motion.svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                className="h-4 w-4"
-                animate={refreshPending ? { rotate: 360 } : { rotate: 0 }}
-                transition={
-                  refreshPending
-                    ? { repeat: Infinity, duration: 0.8, ease: "linear" }
-                    : { duration: 0.2 }
-                }
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-                />
-              </motion.svg>
-              {refreshPending ? "Shuffling\u2026" : "Refresh recipes"}
-            </MotionButton>
-          </Liquid.Item>
-        </Liquid>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+              />
+            </svg>
+          )}
+          {refreshPending ? "Shuffling\u2026" : "Refresh recipes"}
+        </MotionButton>
         {refreshMessage && (
           <p className="text-xs text-[#6B7370]">{refreshMessage}</p>
         )}
