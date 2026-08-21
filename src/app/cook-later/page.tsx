@@ -14,7 +14,7 @@ export default async function CookLaterPage() {
 
   const userId = session.user.id;
 
-  const [saved, preferences] = await Promise.all([
+  const [saved, preferences, strictDietPrefs] = await Promise.all([
     prisma.savedRecipe.findMany({
       where: { userId, savedAt: { gte: savedRecipeExpiryCutoff() } },
       include: {
@@ -34,10 +34,18 @@ export default async function CookLaterPage() {
       where: { userId },
       include: { allergens: true },
     }),
+    // Only STRICT diets are a hard filter here, matching the dashboard (see
+    // select-daily.ts's loadDashboardContext) — MODERATE/FLEXIBLE diets are
+    // a "mostly, but open to other things" preference, not a requirement
+    // every saved recipe must satisfy.
+    prisma.userDietPreference.findMany({
+      where: { userId, commitment: "STRICT" },
+      include: { diet: true },
+    }),
   ]);
 
   const userProfile = {
-    diets: [] as string[],
+    diets: strictDietPrefs.map((d) => d.diet.name),
     allergens: preferences?.allergens.map((a) => a.name) ?? [],
     customAllergens: preferences?.customAllergens ?? [],
   };
@@ -91,7 +99,7 @@ export default async function CookLaterPage() {
       {hiddenCount > 0 && (
         <p className="mt-1 text-sm text-[#B23A32]">
           {hiddenCount} saved {hiddenCount === 1 ? "recipe" : "recipes"} hidden due to your
-          allergy settings.
+          allergy or diet settings.
         </p>
       )}
 

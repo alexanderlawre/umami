@@ -125,7 +125,10 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          dietIds: prefs.dietIds,
+          diets: prefs.dietIds.map((dietId) => ({
+            dietId,
+            commitment: prefs.dietCommitments[dietId] ?? "STRICT",
+          })),
           allergenIds: prefs.allergenIds,
           customAllergens: prefs.customAllergens,
           meters,

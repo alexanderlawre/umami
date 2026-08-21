@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import type { DietCommitment } from "@prisma/client";
 import { FOOD_GROUP_CLUSTERS } from "@/lib/food-group-screens";
 
 // Shared loader used by both the Preferences and Personalization settings
@@ -6,15 +7,18 @@ import { FOOD_GROUP_CLUSTERS } from "@/lib/food-group-screens";
 // the full set as initial state so their (unmodified) fields round-trip
 // correctly when POSTing the combined payload to /api/onboarding.
 export async function loadPreferencesData(userId: string) {
-  const [diets, allergens, foodGroups, preferences, foodGroupPreferences] = await Promise.all([
+  const [diets, allergens, foodGroups, preferences, foodGroupPreferences, dietPreferences] = await Promise.all([
     prisma.diet.findMany({ orderBy: { name: "asc" } }),
     prisma.allergen.findMany({ orderBy: { name: "asc" } }),
     prisma.foodGroup.findMany({ orderBy: { name: "asc" } }),
     prisma.userPreferences.findUnique({
       where: { userId },
-      include: { diets: true, allergens: true },
+      include: { allergens: true },
     }),
     prisma.foodGroupPreference.findMany({
+      where: { userId },
+    }),
+    prisma.userDietPreference.findMany({
       where: { userId },
     }),
   ]);
@@ -37,11 +41,17 @@ export async function loadPreferencesData(userId: string) {
     return Math.round(values.reduce((a, b) => a + b, 0) / values.length);
   });
 
+  const initialDietCommitments: Record<string, DietCommitment> = {};
+  for (const dp of dietPreferences) {
+    initialDietCommitments[dp.dietId] = dp.commitment;
+  }
+
   return {
     diets,
     allergens,
     foodGroups,
-    initialDietIds: preferences?.diets.map((d) => d.id) ?? [],
+    initialDietIds: dietPreferences.map((dp) => dp.dietId),
+    initialDietCommitments,
     initialAllergenIds: preferences?.allergens.map((a) => a.id) ?? [],
     initialCustomAllergens: preferences?.customAllergens ?? [],
     initialFavoriteCuisines: preferences?.favoriteCuisines ?? [],

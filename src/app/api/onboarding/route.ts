@@ -4,7 +4,12 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 
 const onboardingSchema = z.object({
-  dietIds: z.array(z.string()),
+  diets: z.array(
+    z.object({
+      dietId: z.string(),
+      commitment: z.enum(["STRICT", "MODERATE", "FLEXIBLE"]),
+    }),
+  ),
   allergenIds: z.array(z.string()),
   customAllergens: z.array(z.string()),
   meters: z.record(z.string(), z.number().min(0).max(100)),
@@ -31,7 +36,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { dietIds, allergenIds, customAllergens, meters, favoriteCuisines, foodGroupFeedback, spiceMax } =
+  const { diets, allergenIds, customAllergens, meters, favoriteCuisines, foodGroupFeedback, spiceMax } =
     parsed.data;
 
   await prisma.$transaction([
@@ -39,7 +44,6 @@ export async function POST(request: Request) {
       where: { userId: session.user.id },
       create: {
         userId: session.user.id,
-        diets: { connect: dietIds.map((id) => ({ id })) },
         allergens: { connect: allergenIds.map((id) => ({ id })) },
         customAllergens,
         favoriteCuisines,
@@ -47,7 +51,6 @@ export async function POST(request: Request) {
         spiceMax: spiceMax === undefined ? undefined : spiceMax,
       },
       update: {
-        diets: { set: dietIds.map((id) => ({ id })) },
         allergens: { set: allergenIds.map((id) => ({ id })) },
         customAllergens,
         favoriteCuisines,
@@ -55,6 +58,30 @@ export async function POST(request: Request) {
         spiceMax: spiceMax === undefined ? undefined : spiceMax,
       },
     }),
+    // UserDietPreference is a separate explicit-join model (not nested under
+    // UserPreferences, unlike allergens) so it can carry a per-diet
+    // commitment level — full-replace via delete-outside-the-submitted-set
+    // plus one upsert per diet, mirroring the meters->FoodGroupPreference
+    // pattern below.
+    prisma.userDietPreference.deleteMany({
+      where: {
+        userId: session.user.id,
+        dietId: { notIn: diets.map((d) => d.dietId) },
+      },
+    }),
+    ...diets.map((d) =>
+      prisma.userDietPreference.upsert({
+        where: { userId_dietId: { userId: session.user.id, dietId: d.dietId } },
+        create: {
+          userId: session.user.id,
+          dietId: d.dietId,
+          commitment: d.commitment,
+        },
+        update: {
+          commitment: d.commitment,
+        },
+      })
+    ),
     ...Object.entries(meters).map(([foodGroupId, value]) =>
       prisma.foodGroupPreference.upsert({
         where: { userId_foodGroupId: { userId: session.user.id, foodGroupId } },

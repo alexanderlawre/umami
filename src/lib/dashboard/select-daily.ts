@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import {
   filterEligibleRecipes,
   filterWithinSpiceCeiling,
+  satisfiesDiets,
   type FilterableRecipe,
 } from "@/lib/recommend/filter";
 import { scoreRecipe, weightedShuffle, type ScoringProfile } from "@/lib/recommend/score";
@@ -34,6 +35,17 @@ const IMPLICIT_CUISINE_MIN_COUNT = 2;
 // learn.ts's recency decay operates on — since this is about not repeating
 // the same handful of dishes day after day, not about long-term taste drift.
 const FRESHNESS_LOOKBACK_DAYS = 5;
+// Guaranteed-mix-ratio for MODERATE/FLEXIBLE diet commitments (see
+// pickDaily): the fraction of the non-discovery affinity slots reserved for
+// recipes matching the user's non-strict diet(s), with the remainder left
+// open to anything else in the strict-filtered pool. STRICT diets never
+// reach this — they stay a hard 100% filter via satisfiesDiets in
+// loadDashboardContext. When a user declares more than one non-strict diet,
+// the highest (most-committed) ratio wins.
+const DIET_MATCH_RATIO: Record<"MODERATE" | "FLEXIBLE", number> = {
+  MODERATE: 0.7,
+  FLEXIBLE: 0.4,
+};
 
 export type EligibleRecipe = FilterableRecipe &
   RecipeCardData & {
@@ -61,6 +73,16 @@ type DashboardContext = {
   currentSlot: MealSlot;
   windowKey: string;
   category: DashboardCategory;
+  // Diet names behind a MODERATE/FLEXIBLE commitment (STRICT diets are
+  // already baked into `pool`/`tapasPool`/`breakfastPool` via the hard
+  // filter, so they're not repeated here) — see pickDaily's guaranteed-mix
+  // split.
+  alignedDietNames: string[];
+  // Highest ratio among the user's non-strict diets, or undefined when they
+  // have none — undefined disables the mix-ratio split entirely so
+  // strict-only/no-diet users get byte-identical behavior to before this
+  // feature existed.
+  dietMatchRatio?: number;
 };
 
 async function loadDashboardContext(
@@ -71,12 +93,16 @@ async function loadDashboardContext(
   // Falls back to the persisted UserPreferences.dashboardCategory otherwise.
   categoryOverride?: DashboardCategory,
 ): Promise<DashboardContext> {
-  const [user, preferences, recipes, savedRecipes, foodGroupPrefs, cookedCuisineRows, recentlyShown] =
+  const [user, preferences, dietPrefs, recipes, savedRecipes, foodGroupPrefs, cookedCuisineRows, recentlyShown] =
     await Promise.all([
       prisma.user.findUnique({ where: { id: userId }, select: { timezone: true } }),
       prisma.userPreferences.findUnique({
         where: { userId },
-        include: { diets: true, allergens: true },
+        include: { allergens: true },
+      }),
+      prisma.userDietPreference.findMany({
+        where: { userId },
+        include: { diet: true },
       }),
       prisma.recipe.findMany({
         where: { isActive: true },
@@ -117,8 +143,29 @@ async function loadDashboardContext(
       }),
     ]);
 
+  // Only STRICT diets are a hard filter — MODERATE/FLEXIBLE diets are
+  // excluded from filterEligibleRecipes entirely and instead drive
+  // pickDaily's guaranteed-mix split below, since they're a "mostly, but
+  // open to other things" preference rather than a safety-style
+  // requirement. Allergens are never split this way — always a hard filter,
+  // unaffected by diet commitment.
+  const strictDietNames = dietPrefs
+    .filter((d) => d.commitment === "STRICT")
+    .map((d) => d.diet.name);
+  const nonStrictDietPrefs = dietPrefs.filter((d) => d.commitment !== "STRICT");
+  const alignedDietNames = nonStrictDietPrefs.map((d) => d.diet.name);
+  const dietMatchRatio =
+    nonStrictDietPrefs.length > 0
+      ? Math.max(
+          ...nonStrictDietPrefs.map(
+            (d) => DIET_MATCH_RATIO[d.commitment as "MODERATE" | "FLEXIBLE"],
+          ),
+        )
+      : undefined;
+  const allDietNames = dietPrefs.map((d) => d.diet.name);
+
   const userProfile = {
-    diets: preferences?.diets.map((d) => d.name) ?? [],
+    diets: strictDietNames,
     allergens: preferences?.allergens.map((a) => a.name) ?? [],
     customAllergens: preferences?.customAllergens ?? [],
   };
@@ -184,7 +231,7 @@ async function loadDashboardContext(
     tapasPool: eligible.filter((r) => r.mealSlot === "TAPAS"),
     breakfastPool: eligible.filter((r) => r.mealSlot === "BREAKFAST"),
     profile: {
-      diets: userProfile.diets,
+      diets: allDietNames,
       favoriteCuisines: preferences?.favoriteCuisines ?? [],
       foodGroupAffinity: foodGroupAffinity.size > 0 ? foodGroupAffinity : undefined,
       implicitFavoriteCuisines: implicitFavoriteCuisines.length > 0 ? implicitFavoriteCuisines : undefined,
@@ -195,6 +242,8 @@ async function loadDashboardContext(
     currentSlot: getCurrentMealSlot(timezone),
     windowKey: getMealSlotWindowKey(timezone),
     category: categoryOverride ?? preferences?.dashboardCategory ?? "MEALS",
+    alignedDietNames,
+    dietMatchRatio,
   };
 }
 
@@ -273,9 +322,16 @@ function proteinSignal(recipe: EligibleRecipe): string | null {
 // every slot from that same tier alone, just biased toward its own
 // dish/protein variety first, rather than partially handing slots to a
 // lower-priority tier just because of a same-tier protein repeat.
-function dedupeByProtein(tiers: EligibleRecipe[][], count: number): EligibleRecipe[] {
+function dedupeByProtein(
+  tiers: EligibleRecipe[][],
+  count: number,
+  // Pre-seeded with signals already used by a prior pick in the same daily
+  // batch (see pickDaily's aligned/open split) so the two slices don't both
+  // reach for the same protein independently. Defaults to a fresh set,
+  // preserving existing single-call behavior everywhere else.
+  usedSignals: Set<string> = new Set(),
+): EligibleRecipe[] {
   const picked: EligibleRecipe[] = [];
-  const usedSignals = new Set<string>();
 
   for (const tier of tiers) {
     if (picked.length >= count) break;
@@ -321,6 +377,9 @@ function pickAffinity(
   profile: ScoringProfile,
   weight: (r: EligibleRecipe) => number,
   count: number,
+  // See dedupeByProtein — threaded through unchanged so pickDaily's
+  // aligned/open split can share one signal set across both calls.
+  usedSignals?: Set<string>,
 ): EligibleRecipe[] {
   const declared = new Set(profile.favoriteCuisines);
   const implicit = new Set(profile.implicitFavoriteCuisines ?? []);
@@ -338,6 +397,7 @@ function pickAffinity(
   return dedupeByProtein(
     [orderTier(declaredTier), orderTier(implicitTier), orderTier(restTier)],
     count,
+    usedSignals,
   );
 }
 
@@ -350,17 +410,44 @@ function pickAffinity(
 // deliberate exception. The pool itself is already restricted to
 // LUNCH/DINNER only (see loadDashboardContext) — Breakfast/Tapas never
 // reach this function.
-function pickDaily(
+export function pickDaily(
   pool: EligibleRecipe[],
   profile: ScoringProfile,
   currentSlot: MealSlot,
   exclude: Set<string> = new Set(),
+  // Present only when the user has at least one MODERATE/FLEXIBLE diet (see
+  // loadDashboardContext's dietMatchRatio) — splits the affinity slots
+  // below into an aligned slice (matches every non-strict diet) sized by
+  // `ratio`, and an open slice for the remainder, so the user reliably sees
+  // *both* "mostly what I asked for" and "still open to other things"
+  // rather than one or the other winning by chance. STRICT diets never
+  // reach here — `pool` is already hard-filtered to satisfy them.
+  dietMix?: { alignedDietNames: string[]; ratio: number },
 ): EligibleRecipe[] {
   const available = pool.filter((r) => !exclude.has(r.id));
   const base = available.length >= DAILY_CARD_COUNT ? available : pool;
   const weight = (r: EligibleRecipe) => scoreRecipe(r, profile, currentSlot);
+  const affinitySlotCount = DAILY_CARD_COUNT - DISCOVERY_SLOT_COUNT;
 
-  const affinityPicks = pickAffinity(base, profile, weight, DAILY_CARD_COUNT - DISCOVERY_SLOT_COUNT);
+  let affinityPicks: EligibleRecipe[];
+  if (dietMix) {
+    const alignedTarget = Math.round(dietMix.ratio * affinitySlotCount);
+    const alignedPool = base.filter((r) => satisfiesDiets(r, dietMix.alignedDietNames));
+    const usedSignals = new Set<string>();
+    const alignedPicks = pickAffinity(alignedPool, profile, weight, alignedTarget, usedSignals);
+
+    // Graceful fallback: if the aligned pool came up short of alignedTarget,
+    // the open slice picks up the difference so all affinitySlotCount slots
+    // still get filled, same as the no-mix path below.
+    const alignedIds = new Set(alignedPicks.map((r) => r.id));
+    const openPool = base.filter((r) => !alignedIds.has(r.id));
+    const openCount = affinitySlotCount - alignedPicks.length;
+    const openPicks = pickAffinity(openPool, profile, weight, openCount, usedSignals);
+
+    affinityPicks = [...alignedPicks, ...openPicks];
+  } else {
+    affinityPicks = pickAffinity(base, profile, weight, affinitySlotCount);
+  }
 
   const affinityPickIds = new Set(affinityPicks.map((r) => r.id));
   const discoveryCandidates = base.filter((r) => !affinityPickIds.has(r.id));
@@ -597,13 +684,14 @@ function flagDiscoveryCard(served: EligibleRecipe[], profile: ScoringProfile): E
 
 export async function getDailySelection(userId: string): Promise<DailySelection> {
   const ctx = await loadDashboardContext(userId);
-  const { pool, profile, timezone, currentSlot, category } = ctx;
+  const { pool, profile, timezone, currentSlot, category, alignedDietNames, dietMatchRatio } = ctx;
+  const dietMix = dietMatchRatio !== undefined ? { alignedDietNames, ratio: dietMatchRatio } : undefined;
 
   const { pool: activePool, windowKey: activeWindowKey } = activePoolFor(ctx);
   const activePoolById = new Map(activePool.map((r) => [r.id, r]));
 
   const served = await getOrCreateBatch(userId, activeWindowKey, activePoolById, DAILY_CARD_COUNT, (exclude) =>
-    pickDaily(activePool, profile, currentSlot, exclude),
+    pickDaily(activePool, profile, currentSlot, exclude, dietMix),
   );
 
   const servedWithBadge = flagDiscoveryCard(served, profile);
@@ -653,7 +741,8 @@ export async function refreshDailySelection(
   categoryOverride?: DashboardCategory,
 ): Promise<RefreshResult> {
   const ctx = await loadDashboardContext(userId, categoryOverride);
-  const { profile, timezone, currentSlot, category } = ctx;
+  const { profile, timezone, currentSlot, category, alignedDietNames, dietMatchRatio } = ctx;
+  const dietMix = dietMatchRatio !== undefined ? { alignedDietNames, ratio: dietMatchRatio } : undefined;
   const { pool: activePool, windowKey: activeWindowKey } = activePoolFor(ctx);
 
   const existing = await prisma.servedCard.findMany({
@@ -661,7 +750,7 @@ export async function refreshDailySelection(
   });
 
   const currentIds = new Set(existing.map((c) => c.recipeId));
-  const served = pickDaily(activePool, profile, currentSlot, currentIds);
+  const served = pickDaily(activePool, profile, currentSlot, currentIds, dietMix);
 
   if (served.length > 0) {
     const servedAt = new Date();

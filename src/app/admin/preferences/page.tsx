@@ -5,7 +5,9 @@ export default async function AdminPreferencesPage() {
   const [diets, allergens, cuisines, foodGroups, attributeTags] = await Promise.all([
     prisma.diet.findMany({
       orderBy: { name: "asc" },
-      include: { _count: { select: { recipes: true, userPreferences: true, submissions: true } } },
+      include: {
+        _count: { select: { recipes: true, userDietPreferences: true, submissions: true } },
+      },
     }),
     prisma.allergen.findMany({
       orderBy: { name: "asc" },

@@ -20,10 +20,12 @@ export default async function AdminUsersPage() {
       createdAt: true,
       preferences: {
         select: {
-          diets: { select: { name: true } },
           allergens: { select: { name: true } },
           customAllergens: true,
         },
+      },
+      userDietPreferences: {
+        select: { diet: { select: { name: true } } },
       },
       _count: { select: { cookLogs: true, savedRecipes: true } },
     },
@@ -38,7 +40,7 @@ export default async function AdminUsersPage() {
     isAdmin: u.isAdmin,
     isPremium: u.isPremium,
     createdAt: u.createdAt.toISOString(),
-    diets: u.preferences?.diets.map((d) => d.name) ?? [],
+    diets: u.userDietPreferences.map((dp) => dp.diet.name),
     allergens: u.preferences?.allergens.map((a) => a.name) ?? [],
     customAllergens: u.preferences?.customAllergens ?? [],
     cookedCount: u._count.cookLogs,

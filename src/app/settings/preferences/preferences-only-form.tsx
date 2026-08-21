@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import type { Allergen, Diet, FoodGroup } from "@prisma/client";
-import { ChipGrid, TagInput } from "../../onboarding/onboarding-ui";
+import type { Allergen, Diet, DietCommitment, FoodGroup } from "@prisma/client";
+import { ChipGrid, TagInput, DietCommitmentSlider } from "../../onboarding/onboarding-ui";
 import { FOOD_GROUP_CLUSTERS } from "@/lib/food-group-screens";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
@@ -24,6 +24,7 @@ export function PreferencesOnlyForm({
   allergens,
   foodGroups,
   initialDietIds,
+  initialDietCommitments,
   initialAllergenIds,
   initialCustomAllergens,
   initialFavoriteCuisines,
@@ -35,6 +36,7 @@ export function PreferencesOnlyForm({
   allergens: Allergen[];
   foodGroups: FoodGroup[];
   initialDietIds: string[];
+  initialDietCommitments: Record<string, DietCommitment>;
   initialAllergenIds: string[];
   initialCustomAllergens: string[];
   initialFavoriteCuisines: string[];
@@ -45,6 +47,8 @@ export function PreferencesOnlyForm({
   const router = useRouter();
 
   const [dietIds, setDietIds] = useState<string[]>(initialDietIds);
+  const [dietCommitments, setDietCommitments] =
+    useState<Record<string, DietCommitment>>(initialDietCommitments);
   const [allergenIds, setAllergenIds] = useState<string[]>(initialAllergenIds);
   const [customAllergenInput, setCustomAllergenInput] = useState("");
   const [customAllergens, setCustomAllergens] = useState<string[]>(initialCustomAllergens);
@@ -66,6 +70,14 @@ export function PreferencesOnlyForm({
   function toggleDiet(id: string) {
     setSaved(false);
     setDietIds((prev) => (prev.includes(id) ? prev.filter((v) => v !== id) : [...prev, id]));
+    setDietCommitments((prev) => {
+      if (dietIds.includes(id)) {
+        const rest = { ...prev };
+        delete rest[id];
+        return rest;
+      }
+      return { ...prev, [id]: "STRICT" };
+    });
   }
 
   function toggleAllergen(id: string) {
@@ -104,7 +116,10 @@ export function PreferencesOnlyForm({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          dietIds,
+          diets: dietIds.map((id) => ({
+            dietId: id,
+            commitment: dietCommitments[id] ?? "STRICT",
+          })),
           allergenIds,
           customAllergens,
           meters,
@@ -185,6 +200,25 @@ export function PreferencesOnlyForm({
               onToggle={toggleDiet}
             />
           </div>
+          {dietIds.length > 0 && (
+            <div className="mt-3 space-y-3">
+              {dietIds.map((id) => {
+                const diet = diets.find((d) => d.id === id);
+                if (!diet) return null;
+                return (
+                  <DietCommitmentSlider
+                    key={id}
+                    dietName={diet.name}
+                    value={dietCommitments[id] ?? "STRICT"}
+                    onChange={(level) => {
+                      setSaved(false);
+                      setDietCommitments((prev) => ({ ...prev, [id]: level }));
+                    }}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
 
         <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">

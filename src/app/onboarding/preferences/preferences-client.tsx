@@ -2,8 +2,14 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import type { Allergen, Diet } from "@prisma/client";
-import { OnboardingShell, ChipGrid, CategoryItemPicker, TagInput } from "../onboarding-ui";
+import type { Allergen, Diet, DietCommitment } from "@prisma/client";
+import {
+  OnboardingShell,
+  ChipGrid,
+  CategoryItemPicker,
+  TagInput,
+  DietCommitmentSlider,
+} from "../onboarding-ui";
 import { ONBOARDING_PREFS_KEY } from "../shared";
 import { groupAllergensByCategory, OTHER_ALLERGEN_CATEGORY_LABEL } from "@/lib/allergen-categories";
 import { MotionButton } from "@/components/motion-button";
@@ -22,6 +28,7 @@ export function PreferencesClient({
   const [customAllergenInput, setCustomAllergenInput] = useState("");
   const [customAllergens, setCustomAllergens] = useState<string[]>([]);
   const [dietIds, setDietIds] = useState<string[]>([]);
+  const [dietCommitments, setDietCommitments] = useState<Record<string, DietCommitment>>({});
 
   const allergenGroups = useMemo(
     () =>
@@ -37,7 +44,18 @@ export function PreferencesClient({
   }
 
   function toggleDiet(id: string) {
-    setDietIds((prev) => (prev.includes(id) ? prev.filter((v) => v !== id) : [...prev, id]));
+    setDietIds((prev) => {
+      const next = prev.includes(id) ? prev.filter((v) => v !== id) : [...prev, id];
+      return next;
+    });
+    setDietCommitments((prev) => {
+      if (dietIds.includes(id)) {
+        const rest = { ...prev };
+        delete rest[id];
+        return rest;
+      }
+      return { ...prev, [id]: "STRICT" };
+    });
   }
 
   function addCustomAllergen() {
@@ -54,7 +72,7 @@ export function PreferencesClient({
   }
 
   function handleContinue() {
-    const payload = { dietIds, allergenIds, customAllergens };
+    const payload = { dietIds, dietCommitments, allergenIds, customAllergens };
     sessionStorage.setItem(ONBOARDING_PREFS_KEY, JSON.stringify(payload));
     router.push("/onboarding/personalize");
   }
@@ -131,6 +149,24 @@ export function PreferencesClient({
             onToggle={toggleDiet}
           />
         </div>
+        {dietIds.length > 0 && (
+          <div className="mt-3 space-y-3">
+            {dietIds.map((id) => {
+              const diet = diets.find((d) => d.id === id);
+              if (!diet) return null;
+              return (
+                <DietCommitmentSlider
+                  key={id}
+                  dietName={diet.name}
+                  value={dietCommitments[id] ?? "STRICT"}
+                  onChange={(level) =>
+                    setDietCommitments((prev) => ({ ...prev, [id]: level }))
+                  }
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
     </OnboardingShell>
   );

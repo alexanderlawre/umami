@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isRecipeEligible, filterEligibleRecipes } from "./filter";
+import { isRecipeEligible, filterEligibleRecipes, satisfiesDiets } from "./filter";
 import type { FilterableRecipe, UserFilterProfile } from "./filter";
 
 function recipe(overrides: Partial<FilterableRecipe> = {}): FilterableRecipe {
@@ -131,6 +131,20 @@ describe("isRecipeEligible", () => {
     const anyUser = user({ diets: ["Vegetarian"] });
     const r = recipe({ dietTags: ["Vegetarian"] });
     expect(isRecipeEligible(r, anyUser)).toBe(true);
+  });
+});
+
+describe("satisfiesDiets", () => {
+  it("allows any recipe when no diets are declared", () => {
+    expect(satisfiesDiets({ dietTags: [] }, [])).toBe(true);
+    expect(satisfiesDiets({ dietTags: ["Keto"] }, [])).toBe(true);
+  });
+
+  it("requires every declared diet to be present (AND, not ANY)", () => {
+    expect(satisfiesDiets({ dietTags: ["Vegan"] }, ["Vegan", "Gluten-free"])).toBe(false);
+    expect(satisfiesDiets({ dietTags: ["Vegan", "Gluten-free"] }, ["Vegan", "Gluten-free"])).toBe(
+      true,
+    );
   });
 });
 

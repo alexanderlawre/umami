@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import type { DietCommitment } from "@prisma/client";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
 
@@ -82,6 +83,62 @@ export function ChipGrid({
           </MotionButton>
         );
       })}
+    </div>
+  );
+}
+
+const COMMITMENT_LEVELS: DietCommitment[] = ["STRICT", "MODERATE", "FLEXIBLE"];
+const COMMITMENT_LABELS: Record<DietCommitment, string> = {
+  STRICT: "Strict",
+  MODERATE: "Moderate",
+  FLEXIBLE: "Flexible",
+};
+
+// How committed the user is to a diet they've already selected — STRICT
+// keeps it a hard, non-negotiable filter (only matching recipes ever show,
+// same as before this control existed); MODERATE/FLEXIBLE relax it into a
+// guaranteed-mix ratio instead (see select-daily.ts's pickDaily), so a
+// "mostly Mediterranean, but open to other things" user actually sees a mix
+// rather than either an all-or-nothing filter or a soft ranking bump that
+// could get lost entirely. Rendered only under a diet the user has already
+// toggled on (mirrors CategoryAccordion's reveal-on-select pattern above);
+// new selections default to STRICT.
+export function DietCommitmentSlider({
+  dietName,
+  value,
+  onChange,
+}: {
+  dietName: string;
+  value: DietCommitment;
+  onChange: (v: DietCommitment) => void;
+}) {
+  const index = COMMITMENT_LEVELS.indexOf(value);
+  const description: Record<DietCommitment, string> = {
+    STRICT: `Strict: only ${dietName} recipes.`,
+    MODERATE: `Moderate: mostly ${dietName}, some variety.`,
+    FLEXIBLE: `Flexible: ${dietName}-leaning, open to more.`,
+  };
+
+  return (
+    <div className="mt-2 rounded-xl bg-[#EDF3EF] p-3">
+      <input
+        type="range"
+        min={0}
+        max={2}
+        step={1}
+        value={index}
+        onChange={(e) => onChange(COMMITMENT_LEVELS[Number(e.target.value)])}
+        className="w-full accent-[#1B4332]"
+        aria-label={`${dietName} commitment level`}
+      />
+      <div className="flex justify-between text-[10px] text-[#6B7370]">
+        {COMMITMENT_LEVELS.map((level) => (
+          <span key={level} className={level === value ? "font-medium text-[#1B4332]" : ""}>
+            {COMMITMENT_LABELS[level]}
+          </span>
+        ))}
+      </div>
+      <p className="mt-1 text-xs text-[#6B7370]">{description[value]}</p>
     </div>
   );
 }

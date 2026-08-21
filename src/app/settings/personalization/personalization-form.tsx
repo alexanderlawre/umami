@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import type { Allergen, Diet, FoodGroup } from "@prisma/client";
+import type { Allergen, Diet, DietCommitment, FoodGroup } from "@prisma/client";
 import { TagInput } from "../../onboarding/onboarding-ui";
 import { FOOD_GROUP_CLUSTERS } from "@/lib/food-group-screens";
 import { PageTransition } from "@/components/page-transition";
@@ -17,6 +17,7 @@ const SUGGESTED_CUISINE_COUNT = 5;
 export function PersonalizationForm({
   foodGroups,
   initialDietIds,
+  initialDietCommitments,
   initialAllergenIds,
   initialCustomAllergens,
   initialFavoriteCuisines,
@@ -27,6 +28,7 @@ export function PersonalizationForm({
   allergens: Allergen[];
   foodGroups: FoodGroup[];
   initialDietIds: string[];
+  initialDietCommitments: Record<string, DietCommitment>;
   initialAllergenIds: string[];
   initialCustomAllergens: string[];
   initialFavoriteCuisines: string[];
@@ -36,6 +38,7 @@ export function PersonalizationForm({
   const router = useRouter();
 
   const [dietIds] = useState<string[]>(initialDietIds);
+  const [dietCommitments] = useState<Record<string, DietCommitment>>(initialDietCommitments);
   const [allergenIds] = useState<string[]>(initialAllergenIds);
   const [customAllergens] = useState<string[]>(initialCustomAllergens);
   const [clusterValues, setClusterValues] = useState<number[]>(initialClusterValues);
@@ -84,7 +87,10 @@ export function PersonalizationForm({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          dietIds,
+          diets: dietIds.map((id) => ({
+            dietId: id,
+            commitment: dietCommitments[id] ?? "STRICT",
+          })),
           allergenIds,
           customAllergens,
           meters,

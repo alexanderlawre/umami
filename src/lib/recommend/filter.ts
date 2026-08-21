@@ -25,6 +25,19 @@ export type UserFilterProfile = {
   customAllergens: string[]; // Free-text allergens/foods the user declared
 };
 
+export type DietTaggedRecipe = { dietTags: string[] };
+
+/**
+ * Whether a recipe satisfies every one of the given diet names (AND, not
+ * ANY). Used both as the hard STRICT-diet filter in isRecipeEligible below
+ * and to build the "aligned" pool for MODERATE/FLEXIBLE diet commitments in
+ * select-daily.ts's guaranteed-mix-ratio logic.
+ */
+export function satisfiesDiets(recipe: DietTaggedRecipe, diets: string[]): boolean {
+  if (diets.length === 0) return true;
+  return diets.every((diet) => recipe.dietTags.includes(diet));
+}
+
 /**
  * Whether a recipe is safe/eligible to ever show a given user, ignoring
  * cooldowns and scoring entirely.
@@ -37,10 +50,7 @@ export function isRecipeEligible(
 
   // Every declared diet must be satisfied — a recipe missing even one of
   // the user's declared diets is excluded entirely, not just ranked lower.
-  if (user.diets.length > 0) {
-    const satisfiesAllDiets = user.diets.every((diet) => recipe.dietTags.includes(diet));
-    if (!satisfiesAllDiets) return false;
-  }
+  if (!satisfiesDiets(recipe, user.diets)) return false;
 
   // Fail closed: any declared allergy (built-in or free-text) restricts the
   // user to recipes whose allergen tagging has been verified.

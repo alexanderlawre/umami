@@ -119,6 +119,7 @@ model User {
 
   preferences         UserPreferences?
   foodGroupPreferences FoodGroupPreference[]
+  userDietPreferences  UserDietPreference[]
   interactions        Interaction[]
   cookLogs            CookLog[]
   cooldowns           Cooldown[]
@@ -146,7 +147,6 @@ model UserPreferences {
   userId String @unique
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  diets            Diet[]
   allergens        Allergen[]
   customAllergens  String[] @default([])
 
@@ -181,6 +181,23 @@ model FoodGroupPreference {
   @@unique([userId, foodGroupId])
 }
 
+enum DietCommitment {
+  STRICT
+  MODERATE
+  FLEXIBLE
+}
+
+model UserDietPreference {
+  id         String         @id @default(cuid())
+  userId     String
+  user       User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  dietId     String
+  diet       Diet           @relation(fields: [dietId], references: [id], onDelete: Cascade)
+  commitment DietCommitment @default(STRICT)
+
+  @@unique([userId, dietId])
+}
+
 model FoodGroup {
   id          String             @id @default(cuid())
   name        String             @unique
@@ -195,9 +212,9 @@ model Diet {
   id   String @id @default(cuid())
   name String @unique
 
-  userPreferences UserPreferences[]
-  recipes         Recipe[]
-  submissions     RecipeSubmission[] @relation("SubmissionDietTags")
+  userDietPreferences UserDietPreference[]
+  recipes             Recipe[]
+  submissions         RecipeSubmission[] @relation("SubmissionDietTags")
 }
 
 model Allergen {
