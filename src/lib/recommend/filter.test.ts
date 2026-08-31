@@ -132,6 +132,39 @@ describe("isRecipeEligible", () => {
     const r = recipe({ dietTags: ["Vegetarian"] });
     expect(isRecipeEligible(r, anyUser)).toBe(true);
   });
+
+  // Fixture: mistagged recipe — the built-in allergenTags say "safe", but
+  // the ingredient text itself contains a known allergen keyword. The
+  // ingredient-keyword fallback should still exclude it, since strictness
+  // here can't depend on tagging being perfect.
+  it("excludes a recipe missing an allergenTag when its ingredients contain a known allergen keyword", () => {
+    const peanutAllergyUser = user({ allergens: ["Peanuts"] });
+    const mistagged = recipe({
+      allergenTags: [], // no tag, would otherwise pass
+      ingredientItems: ["2 tbsp peanut butter", "1 cup rice"],
+    });
+    expect(isRecipeEligible(mistagged, peanutAllergyUser)).toBe(false);
+  });
+
+  it("matches allergen keywords case-insensitively", () => {
+    const shellfishAllergyUser = user({ allergens: ["Shellfish"] });
+    const r = recipe({ ingredientItems: ["1 lb SHRIMP, peeled"] });
+    expect(isRecipeEligible(r, shellfishAllergyUser)).toBe(false);
+  });
+
+  it("allows a recipe when no ingredient matches the declared allergen's keywords", () => {
+    const peanutAllergyUser = user({ allergens: ["Peanuts"] });
+    const r = recipe({ ingredientItems: ["1 cup rice", "2 tbsp olive oil"] });
+    expect(isRecipeEligible(r, peanutAllergyUser)).toBe(true);
+  });
+
+  it("checks keyword fallback across every declared built-in allergen", () => {
+    const multiAllergyUser = user({ allergens: ["Peanuts", "Milk"] });
+    const dairyRecipe = recipe({ ingredientItems: ["1 cup butter"] });
+    const safeRecipe = recipe({ ingredientItems: ["1 cup rice"] });
+    expect(isRecipeEligible(dairyRecipe, multiAllergyUser)).toBe(false);
+    expect(isRecipeEligible(safeRecipe, multiAllergyUser)).toBe(true);
+  });
 });
 
 describe("satisfiesDiets", () => {

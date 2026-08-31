@@ -116,7 +116,7 @@ export default function SignupPage() {
             umami
           </h1>
           <p className="mt-1 text-sm text-[#6B7370]">
-            Four recipes. That&apos;s the whole surface.
+            Recipes catered to you.
           </p>
 
           <p className="mt-4 text-xs text-[#6B7370]">

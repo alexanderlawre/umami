@@ -47,6 +47,21 @@ export function SettingsClient({
         </div>
 
         <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <p className="text-sm font-medium text-[#1A1D1B]">Diet, allergies &amp; taste</p>
+          <p className="mt-1 text-xs text-[#6B7370]">
+            Your picks from onboarding aren&apos;t final. Update your{" "}
+            <Link href="/settings/preferences" className="text-[#2C5A87] underline">
+              diets and allergies
+            </Link>{" "}
+            or your{" "}
+            <Link href="/settings/personalization" className="text-[#2C5A87] underline">
+              taste and personalization
+            </Link>{" "}
+            any time.
+          </p>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <p className="text-sm font-medium text-[#1A1D1B]">Password</p>
           <p className="mt-1 text-xs text-[#6B7370]">
             Need to change it?{" "}

@@ -27,6 +27,53 @@ export type UserFilterProfile = {
 
 export type DietTaggedRecipe = { dietTags: string[] };
 
+// Ingredient-text fallback for built-in allergens: a second, independent
+// check alongside the admin-curated allergenTags match below, in case a
+// recipe is mistagged. Allergen safety is "super strict" — never rely on a
+// single point of failure (one missed/incorrect tag) to decide whether a
+// recipe is safe to show. Keyed by the exact Allergen.name values seeded in
+// prisma/seed/reference.ts. Deliberately broad/over-inclusive (favors false
+// positives over false negatives), matching the same fail-closed posture as
+// the rest of this file.
+const ALLERGEN_KEYWORDS: Record<string, string[]> = {
+  Peanuts: ["peanut"],
+  "Tree nuts": [
+    "almond",
+    "cashew",
+    "walnut",
+    "pecan",
+    "pistachio",
+    "hazelnut",
+    "macadamia",
+    "brazil nut",
+    "pine nut",
+  ],
+  Milk: ["milk", "cream", "butter", "cheese", "yogurt", "yoghurt", "whey", "ghee", "buttermilk"],
+  Eggs: ["egg"],
+  Fish: ["fish", "salmon", "tuna", "cod", "anchovy", "anchovies", "sardine", "halibut", "trout", "bass"],
+  Shellfish: ["shrimp", "prawn", "crab", "lobster", "clam", "mussel", "oyster", "scallop", "squid", "octopus"],
+  "Wheat/gluten": [
+    "wheat",
+    "flour",
+    "bread",
+    "pasta",
+    "noodle",
+    "barley",
+    "rye",
+    "gluten",
+    "couscous",
+    "breadcrumb",
+  ],
+  Soy: ["soy", "tofu", "tempeh", "edamame", "miso"],
+  Sesame: ["sesame", "tahini"],
+  Mustard: ["mustard"],
+  Celery: ["celery"],
+  Sulphites: ["sulphite", "sulfite", "wine", "raisin"],
+  Lupin: ["lupin", "lupini"],
+  Corn: ["corn", "maize", "cornstarch", "cornmeal", "popcorn"],
+  Nightshades: ["tomato", "potato", "eggplant", "aubergine", "bell pepper", "chili", "chilli", "chile", "paprika"],
+};
+
 /**
  * Whether a recipe satisfies every one of the given diet names (AND, not
  * ANY). Used both as the hard STRICT-diet filter in isRecipeEligible below
@@ -64,6 +111,20 @@ export function isRecipeEligible(
     user.allergens.includes(tag)
   );
   if (hasAllergenConflict) return false;
+
+  // Ingredient-keyword fallback for built-in allergens: catches recipes
+  // whose allergenTags are missing or incomplete by also scanning the raw
+  // ingredient text for known keywords of each declared allergen.
+  if (user.allergens.length > 0 && recipe.ingredientItems) {
+    const keywords = user.allergens.flatMap((a) => ALLERGEN_KEYWORDS[a] ?? []);
+    if (keywords.length > 0) {
+      const hasKeywordConflict = recipe.ingredientItems.some((item) => {
+        const lower = item.toLowerCase();
+        return keywords.some((keyword) => lower.includes(keyword));
+      });
+      if (hasKeywordConflict) return false;
+    }
+  }
 
   // Custom free-text allergens: substring-match (case-insensitive) each
   // declared term against every ingredient's item text. This is the primary
