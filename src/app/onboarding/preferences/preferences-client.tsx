@@ -82,7 +82,7 @@ export function PreferencesClient({
       step={2}
       totalSteps={TOTAL_STEPS}
       title="Allergies and diet"
-      subtitle="Allergies come first. They permanently filter matching ingredients out of everything we show you. You can always update these later from Settings."
+      subtitle="Allergies come first. They permanently filter matching ingredients out of everything we show you. You can always update these later from your Profile."
       footer={
         <div className="mt-8 flex gap-3">
           <MotionButton

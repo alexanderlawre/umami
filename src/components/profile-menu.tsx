@@ -12,9 +12,7 @@ type MenuLink = { href: string; label: string };
 const BASE_LINKS: MenuLink[] = [
   { href: "/profile", label: "Profile" },
   { href: "/cook-later", label: "Cook later" },
-  { href: "/settings/preferences", label: "Preferences" },
   { href: "/settings/personalization", label: "Personalization" },
-  { href: "/settings", label: "Settings" },
 ];
 
 export function ProfileMenu({

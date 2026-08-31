@@ -11,6 +11,8 @@ import { MotionButton } from "@/components/motion-button";
 import { LocationPicker, type LocationValue } from "@/components/location-picker";
 import { BirthdayPicker } from "@/components/birthday-picker";
 import { LoadingOrb } from "@/components/loading-orb";
+import { CookbooksSection, type CookbookSummary } from "./cookbooks-section";
+import { AccountSettingsSection } from "./account-settings-section";
 
 export function ProfileClient({
   initialName,
@@ -20,7 +22,10 @@ export function ProfileClient({
   initialState,
   initialCountry,
   initialImage,
+  timezone,
+  hasPassword,
   cooked,
+  cookbooks,
 }: {
   initialName: string;
   email: string;
@@ -29,7 +34,10 @@ export function ProfileClient({
   initialState: string;
   initialCountry: string;
   initialImage: string | null;
+  timezone: string | null;
+  hasPassword: boolean;
   cooked: CookedRecipeData[];
+  cookbooks: CookbookSummary[];
 }) {
   const router = useRouter();
   const { update } = useSession();
@@ -229,14 +237,15 @@ export function ProfileClient({
             {saved && <span className="text-sm text-[#1B4332]">Saved!</span>}
           </div>
           {error && <p className="mt-2 text-sm text-[#B23A32]">{error}</p>}
-
-          <p className="mt-4 text-sm text-[#6B7370]">{email}</p>
         </div>
 
+        <CookbooksSection cookbooks={cookbooks} />
+
         <div className="mt-10">
-          <h2 className="text-lg font-semibold text-[#1A1D1B]">Cook book</h2>
+          <h2 className="text-lg font-semibold text-[#1A1D1B]">Cook archive</h2>
           <p className="mt-1 text-sm text-[#6B7370]">
-            Recipes you've marked as cooked show up here.
+            Private — only you can see this. Recipes you&apos;ve marked as cooked show up here; add
+            any of them to a public cookbook above.
           </p>
 
           {cooked.length === 0 ? (
@@ -250,6 +259,10 @@ export function ProfileClient({
               ))}
             </div>
           )}
+        </div>
+
+        <div className="mt-10">
+          <AccountSettingsSection email={email} timezone={timezone} hasPassword={hasPassword} />
         </div>
       </PageTransition>
     </main>

@@ -135,3 +135,32 @@ export function CookedRecipeCard({ recipe }: { recipe: CookedRecipeData }) {
     </RecipeCardShell>
   );
 }
+
+// Recipe card variant for a user's own cookbook management page — adds a
+// "Remove" action; the click stops propagation so it doesn't also trigger
+// the shell's own navigate-to-recipe click handler.
+export function UserCookbookRecipeCard({
+  recipe,
+  onRemove,
+  removing,
+}: {
+  recipe: SavedRecipeData;
+  onRemove: () => void;
+  removing?: boolean;
+}) {
+  return (
+    <RecipeCardShell recipe={recipe}>
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          onRemove();
+        }}
+        disabled={removing}
+        className="mt-3 text-xs font-medium text-[#B23A32] underline disabled:opacity-50"
+      >
+        {removing ? "Removing..." : "Remove from cookbook"}
+      </button>
+    </RecipeCardShell>
+  );
+}

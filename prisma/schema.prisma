@@ -128,6 +128,7 @@ model User {
   passwordResetTokens PasswordResetToken[]
   recipeSubmissions   RecipeSubmission[]
   refreshUsages       RefreshUsage[]
+  userCookbooks       UserCookbook[]
 }
 
 model PasswordResetToken {
@@ -325,6 +326,7 @@ model Recipe {
   servedCards      ServedCard[]
   savedBy          SavedRecipe[]
   cookbookEntries  CookbookRecipe[]
+  userCookbookEntries UserCookbookRecipe[]
   submissionSource RecipeSubmission?
 }
 
@@ -525,6 +527,37 @@ model CookbookRecipe {
   addedAt    DateTime @default(now())
 
   @@unique([cookbookId, recipeId])
+}
+
+// User-owned, user-named public cookbooks, shown on the user's profile.
+// Distinct from the admin-curated Cookbook above — scoped per-user (name is
+// unique per user, not globally), has an optional cover image, and only
+// recipes the user has actually cooked (see CookLog) can be added — enforced
+// in the API route, not the schema.
+model UserCookbook {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name          String
+  coverImageUrl String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  recipes UserCookbookRecipe[]
+
+  @@unique([userId, name])
+  @@index([userId])
+}
+
+model UserCookbookRecipe {
+  id             String       @id @default(cuid())
+  userCookbookId String
+  userCookbook   UserCookbook @relation(fields: [userCookbookId], references: [id], onDelete: Cascade)
+  recipeId       String
+  recipe         Recipe       @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  addedAt        DateTime     @default(now())
+
+  @@unique([userCookbookId, recipeId])
 }
 
 model ServedCard {

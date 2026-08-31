@@ -3,18 +3,26 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Allergen, Diet, DietCommitment, FoodGroup } from "@prisma/client";
-import { TagInput } from "../../onboarding/onboarding-ui";
+import { ChipGrid, TagInput, DietCommitmentSlider } from "../../onboarding/onboarding-ui";
 import { FOOD_GROUP_CLUSTERS } from "@/lib/food-group-screens";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
 
 const SUGGESTED_CUISINE_COUNT = 5;
 
-// Food-group sliders + feedback + favorite cuisines only — allergies/diets
-// live on the Preferences page (settings/preferences). Both pages keep full
-// local state for every field and POST the same combined payload to
-// /api/onboarding, so saving from here doesn't clobber what's set there.
+const SPICE_OPTIONS: { value: number; label: string }[] = [
+  { value: 1, label: "Mild" },
+  { value: 2, label: "Medium" },
+  { value: 3, label: "Hot" },
+];
+
+// Combined Preferences + Personalization form — allergies, diets, spice
+// ceiling, food-group sliders, feedback, and favorite cuisines all live and
+// save together in one place now, POSTing the full payload to
+// /api/onboarding in a single save action.
 export function PersonalizationForm({
+  diets,
+  allergens,
   foodGroups,
   initialDietIds,
   initialDietCommitments,
@@ -23,6 +31,7 @@ export function PersonalizationForm({
   initialFavoriteCuisines,
   initialFoodGroupFeedback,
   initialClusterValues,
+  initialSpiceMax,
 }: {
   diets: Diet[];
   allergens: Allergen[];
@@ -34,13 +43,17 @@ export function PersonalizationForm({
   initialFavoriteCuisines: string[];
   initialFoodGroupFeedback: string;
   initialClusterValues: number[];
+  initialSpiceMax: number | null;
 }) {
   const router = useRouter();
 
-  const [dietIds] = useState<string[]>(initialDietIds);
-  const [dietCommitments] = useState<Record<string, DietCommitment>>(initialDietCommitments);
-  const [allergenIds] = useState<string[]>(initialAllergenIds);
-  const [customAllergens] = useState<string[]>(initialCustomAllergens);
+  const [dietIds, setDietIds] = useState<string[]>(initialDietIds);
+  const [dietCommitments, setDietCommitments] =
+    useState<Record<string, DietCommitment>>(initialDietCommitments);
+  const [allergenIds, setAllergenIds] = useState<string[]>(initialAllergenIds);
+  const [customAllergenInput, setCustomAllergenInput] = useState("");
+  const [customAllergens, setCustomAllergens] = useState<string[]>(initialCustomAllergens);
+  const [spiceMax, setSpiceMax] = useState<number | null>(initialSpiceMax);
   const [clusterValues, setClusterValues] = useState<number[]>(initialClusterValues);
   const [feedback, setFeedback] = useState(initialFoodGroupFeedback);
   const [cuisineInput, setCuisineInput] = useState("");
@@ -55,6 +68,36 @@ export function PersonalizationForm({
     for (const fg of foodGroups) map.set(fg.name, fg);
     return map;
   }, [foodGroups]);
+
+  function toggleDiet(id: string) {
+    setSaved(false);
+    setDietIds((prev) => (prev.includes(id) ? prev.filter((v) => v !== id) : [...prev, id]));
+    setDietCommitments((prev) => {
+      if (dietIds.includes(id)) {
+        const rest = { ...prev };
+        delete rest[id];
+        return rest;
+      }
+      return { ...prev, [id]: "STRICT" };
+    });
+  }
+
+  function toggleAllergen(id: string) {
+    setSaved(false);
+    setAllergenIds((prev) => (prev.includes(id) ? prev.filter((v) => v !== id) : [...prev, id]));
+  }
+
+  function addCustomAllergen() {
+    const parts = customAllergenInput
+      .split(",")
+      .map((p) => p.trim())
+      .filter(Boolean);
+    if (parts.length > 0) {
+      setSaved(false);
+      setCustomAllergens((prev) => [...new Set([...prev, ...parts])]);
+    }
+    setCustomAllergenInput("");
+  }
 
   function addCuisines() {
     const parts = cuisineInput
@@ -96,6 +139,7 @@ export function PersonalizationForm({
           meters,
           favoriteCuisines,
           foodGroupFeedback: feedback.trim() || null,
+          spiceMax,
         }),
       });
 
@@ -119,10 +163,99 @@ export function PersonalizationForm({
       <PageTransition>
         <h1 className="text-xl font-bold tracking-tight text-[#1A1D1B]">Personalization</h1>
         <p className="mt-1 text-sm text-[#6B7370]">
-          Tune how much we lean toward the foods and cuisines you love.
+          Update your diet, allergies, and taste preferences any time. Changes apply to your
+          dashboard right away.
         </p>
 
         <div className="mt-8 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#1A1D1B]">Any allergies?</h3>
+          <p className="mt-1 text-xs text-[#6B7370]">
+            Pick as many as apply. This is the main safeguard that keeps unsafe recipes off your
+            dashboard.
+          </p>
+          <div className="mt-3">
+            <ChipGrid
+              options={allergens.map((a) => ({ value: a.id, label: a.name }))}
+              selected={allergenIds}
+              onToggle={toggleAllergen}
+            />
+          </div>
+
+          <div className="mt-5">
+            <label className="block text-sm font-medium text-[#1A1D1B]">Other allergies</label>
+            <p className="mt-1 text-xs text-[#6B7370]">
+              List specific foods or food groups, separated by commas (e.g. &ldquo;kiwi,
+              shellfish&rdquo;).
+            </p>
+            <div className="mt-2">
+              <TagInput
+                value={customAllergens}
+                onAdd={addCustomAllergen}
+                onRemove={(v) => {
+                  setSaved(false);
+                  setCustomAllergens((prev) => prev.filter((c) => c !== v));
+                }}
+                input={customAllergenInput}
+                onInputChange={setCustomAllergenInput}
+                placeholder="e.g. kiwi, cilantro"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#1A1D1B]">Any diets that apply to you?</h3>
+          <p className="mt-1 text-xs text-[#6B7370]">
+            Pick as many as you like. No restrictions is fine too, you can leave this blank.
+          </p>
+          <div className="mt-3">
+            <ChipGrid
+              options={diets.map((d) => ({ value: d.id, label: d.name }))}
+              selected={dietIds}
+              onToggle={toggleDiet}
+            />
+          </div>
+          {dietIds.length > 0 && (
+            <div className="mt-3 space-y-3">
+              {dietIds.map((id) => {
+                const diet = diets.find((d) => d.id === id);
+                if (!diet) return null;
+                return (
+                  <DietCommitmentSlider
+                    key={id}
+                    dietName={diet.name}
+                    value={dietCommitments[id] ?? "STRICT"}
+                    onChange={(level) => {
+                      setSaved(false);
+                      setDietCommitments((prev) => ({ ...prev, [id]: level }));
+                    }}
+                  />
+                );
+              })}
+            </div>
+          )}
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#1A1D1B]">How much heat can you handle?</h3>
+          <p className="mt-1 text-xs text-[#6B7370]">
+            We won&rsquo;t surface anything spicier than this. Recipes we haven&rsquo;t rated for
+            heat still show up either way.
+          </p>
+          <div className="mt-3">
+            <ChipGrid
+              options={SPICE_OPTIONS.map((o) => ({ value: String(o.value), label: o.label }))}
+              selected={spiceMax === null ? [] : [String(spiceMax)]}
+              onToggle={(value) => {
+                setSaved(false);
+                const numeric = Number(value);
+                setSpiceMax((prev) => (prev === numeric ? null : numeric));
+              }}
+            />
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <h3 className="text-sm font-semibold text-[#1A1D1B]">How much do you eat these?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
             Rarely to constantly. This nudges which recipes we show you first, it never rules

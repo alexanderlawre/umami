@@ -8,7 +8,7 @@ export default async function ProfilePage() {
   if (!session?.user) redirect("/login");
   if (!session.user.onboarded) redirect("/onboarding");
 
-  const [user, cookLogs] = await Promise.all([
+  const [user, cookLogs, cookbooks] = await Promise.all([
     prisma.user.findUnique({
       where: { id: session.user.id },
       select: {
@@ -19,6 +19,8 @@ export default async function ProfilePage() {
         state: true,
         country: true,
         image: true,
+        timezone: true,
+        passwordHash: true,
       },
     }),
     prisma.cookLog.findMany({
@@ -34,6 +36,11 @@ export default async function ProfilePage() {
         },
       },
       orderBy: { cookedAt: "desc" },
+    }),
+    prisma.userCookbook.findMany({
+      where: { userId: session.user.id },
+      include: { _count: { select: { recipes: true } } },
+      orderBy: { createdAt: "asc" },
     }),
   ]);
 
@@ -87,7 +94,15 @@ export default async function ProfilePage() {
       initialState={user?.state ?? ""}
       initialCountry={user?.country ?? ""}
       initialImage={user?.image ?? null}
+      timezone={user?.timezone ?? null}
+      hasPassword={!!user?.passwordHash}
       cooked={cooked}
+      cookbooks={cookbooks.map((c) => ({
+        id: c.id,
+        name: c.name,
+        coverImageUrl: c.coverImageUrl,
+        recipeCount: c._count.recipes,
+      }))}
     />
   );
 }
