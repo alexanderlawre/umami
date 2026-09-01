@@ -119,10 +119,7 @@ export default function SignupPage() {
             Recipes catered to you.
           </p>
 
-          <p className="mt-4 text-xs text-[#6B7370]">
-            Fastest way in — pulls in your name, email, and photo automatically.
-          </p>
-          <div className="mt-3 mb-4">
+          <div className="mt-4 mb-4">
             <OAuthButtons />
           </div>
 
