@@ -102,6 +102,25 @@ body {
   animation: title-intro 0.5s ease-out;
 }
 
+/* Slow pulse/breathe loop for the umami mark used as the app's loading
+   indicator (see loading-orb.tsx). */
+@keyframes loading-mark-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-loading-mark {
+  animation: loading-mark-pulse 1.3s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
 /* Elevation scale: layered, soft shadows for a more tactile, Apple-like
    sense of depth than a single flat box-shadow gives. Built on the
    existing brand palette (evergreen #1B4332 for the glow variant) so
