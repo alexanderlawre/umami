@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1148.4198895027625" height="520" viewBox="0 0 1148.4198895027625 520">
+    <g transform="translate(-37.67955801104973,168) scale(2.56353591160221)">
+    <path d="M30 24 L30 60 C30 75 41 83 52 83 C63 83 71 76 71 61 L71 28"
+          fill="none" stroke="#1A1D1B" stroke-width="15"
+          stroke-linecap="round" stroke-linejoin="round" />
+    <path fill-rule="evenodd" fill="#1A1D1B" d="
+      M67 23
+      C74 12 85 4 96 0
+      C90 10 82 20 76 30
+      Z
+      M70 22
+      C78 14 86 8 93 2
+      C89 6 80 13 72 20
+      Z
+    " />
+  </g>
+    <text x="248.41988950276243" y="400" font-family="Bitter, Georgia, 'Times New Roman', serif" font-weight="700"
+          font-size="300" letter-spacing="-6" fill="#1A1D1B">mami</text>
+  </svg>
