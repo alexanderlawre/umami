@@ -4,13 +4,18 @@
 // covers, and a single presentation sheet for reference. Re-run any time
 // colors/sizes need to change: `node scripts/generate-brand-assets.mjs`.
 import sharp from "sharp";
-import { mkdir, writeFile } from "node:fs/promises";
+import opentype from "opentype.js";
+import potrace from "potrace";
+import pngToIco from "png-to-ico";
+import { mkdir, writeFile, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SVG_DIR = path.join(ROOT, "public/brand/svg");
 const PNG_DIR = path.join(ROOT, "public/brand/png");
+const FONT_PATH = path.join(ROOT, "scripts/fonts/IBMPlexMono-Bold.ttf");
+const BRAND_SOURCE_DIR = path.join(ROOT, "scripts/brand-source");
 
 const COLORS = {
   green: "#1B4332",
@@ -18,64 +23,76 @@ const COLORS = {
   white: "#FFFFFF",
 };
 
-// ---- The glyph -------------------------------------------------------
-// A thick rounded stroke forms the "u" body. The leaf shares the same
-// fill color and overlaps the stem's round cap so the two merge into one
-// continuous shape, then a thin evenodd "vein" is cut through the leaf so
-// it reads as foliage rather than a blade.
-function glyphMarkup(color) {
-  return `
-    <path d="M30 24 L30 60 C30 75 41 83 52 83 C63 83 71 76 71 61 L71 28"
-          fill="none" stroke="${color}" stroke-width="15"
-          stroke-linecap="round" stroke-linejoin="round" />
-    <path fill-rule="evenodd" fill="${color}" d="
-      M67 23
-      C74 12 85 4 96 0
-      C90 10 82 20 76 30
-      Z
-      M70 22
-      C78 14 86 8 93 2
-      C89 6 80 13 72 20
-      Z
-    " />
-  `;
+// ---- The mark & wordmark ------------------------------------------------
+// Sourced from the actual approved artwork (scripts/brand-source/*.png — a
+// stylized "u" with a leaf sprouting from its accent, and the matching
+// "umami" wordmark), not hand-drawn. Each source PNG is vector-traced once
+// (via potrace) into a single evenodd SVG path, then re-rendered in each
+// brand color by swapping the `fill`, so the exact approved silhouette is
+// what ships everywhere — mark, wordmark, app icons, and favicon.
+const traceCache = new Map();
+
+async function tracePng(pngPath) {
+  if (traceCache.has(pngPath)) return traceCache.get(pngPath);
+  const promise = new Promise((resolve, reject) => {
+    potrace.trace(pngPath, { threshold: 128, turdSize: 5, optCurve: true }, (err, svg) => {
+      if (err) return reject(err);
+      const viewBoxMatch = svg.match(/viewBox="([^"]+)"/);
+      const dMatch = svg.match(/\sd="([^"]+)"/);
+      if (!viewBoxMatch || !dMatch) return reject(new Error(`Could not parse traced SVG for ${pngPath}`));
+      resolve({ viewBox: viewBoxMatch[1], d: dMatch[1] });
+    });
+  });
+  traceCache.set(pngPath, promise);
+  return promise;
 }
 
-const GLYPH_VIEWBOX = "-5 -10 110 110";
-
-function glyphSvg(color, canvasSize = 800) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${canvasSize}" height="${canvasSize}" viewBox="${GLYPH_VIEWBOX}">${glyphMarkup(color)}</svg>`;
+async function realMarkSvg(color) {
+  const { viewBox, d } = await tracePng(path.join(BRAND_SOURCE_DIR, "mark-source.png"));
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}"><path d="${d}" fill="${color}" fill-rule="evenodd" /></svg>`;
 }
 
-// ---- The wordmark ------------------------------------------------------
-// The glyph followed by "mami" set in a bold serif, echoing the app's own
-// headline font (Bitter) with a safe system fallback so rendering doesn't
-// depend on a font being installed on this machine.
+async function realWordmarkSvg(color) {
+  const { viewBox, d } = await tracePng(path.join(BRAND_SOURCE_DIR, "wordmark-source.png"));
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}"><path d="${d}" fill="${color}" fill-rule="evenodd" /></svg>`;
+}
+
+// ---- The current live logo (plain text) --------------------------------
+// This is the actual logo in use on the live site right now: the word
+// "umami" set in IBM Plex Mono Bold with tight letter-spacing, no
+// illustrated mark (see src/components/animated-logo.tsx and the
+// `.font-display` utility in globals.css). Serving as the logo until a
+// stronger custom mark replaces it, per direct request.
 //
-// Glyph and text are measured (via a one-off sharp trim()-offset calibration
-// script, since discarded) in their own native coordinate systems, then the
-// glyph is scaled/translated
-// so its baseline (bottom of the "u") lands on the text baseline and its
-// height roughly matches the text's cap-height (dot-of-i to baseline), so
-// the leaf tip sits level with the "i" dot instead of towering over it.
-const GLYPH = { left: 22.5, bottom: 90.5, height: 90.5 };
-const TEXT_FONT_SIZE = 300;
-const TEXT_CAP_HEIGHT = 232; // measured at font-size 300
-const TEXT_BASELINE_Y = 400;
+// The glyph outlines are baked to static SVG path data (via opentype.js,
+// reading the real webfont file below) rather than an SVG <text> element,
+// so these exports render identically everywhere without depending on the
+// font being installed/registered wherever the SVG/PNG is opened.
+const LOGO_FONT_SIZE = 300;
+const LOGO_LETTER_SPACING_EM = -0.01; // matches .font-display in globals.css
+const LOGO_PADDING = 20;
 
-function wordmarkSvg(color) {
-  const scale = TEXT_CAP_HEIGHT / GLYPH.height;
-  const marginLeft = 20;
-  const tx = marginLeft - GLYPH.left * scale;
-  const ty = TEXT_BASELINE_Y - GLYPH.bottom * scale;
-  const glyphRight = 96 * scale + tx;
-  const textX = glyphRight + 40;
-  const canvasWidth = textX + 900;
-  const canvasHeight = TEXT_BASELINE_Y + 120;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${canvasWidth}" height="${canvasHeight}" viewBox="0 0 ${canvasWidth} ${canvasHeight}">
-    <g transform="translate(${tx},${ty}) scale(${scale})">${glyphMarkup(color)}</g>
-    <text x="${textX}" y="${TEXT_BASELINE_Y}" font-family="Bitter, Georgia, 'Times New Roman', serif" font-weight="700"
-          font-size="${TEXT_FONT_SIZE}" letter-spacing="-6" fill="${color}">mami</text>
+let logoFont;
+async function loadLogoFont() {
+  if (!logoFont) {
+    const buf = await readFile(FONT_PATH);
+    logoFont = opentype.parse(buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength));
+  }
+  return logoFont;
+}
+
+async function logoTextSvg(color) {
+  const font = await loadLogoFont();
+  const glyphPath = font.getPath("umami", 0, 0, LOGO_FONT_SIZE, {
+    letterSpacing: LOGO_LETTER_SPACING_EM,
+  });
+  const bbox = glyphPath.getBoundingBox();
+  const width = bbox.x2 - bbox.x1 + LOGO_PADDING * 2;
+  const height = bbox.y2 - bbox.y1 + LOGO_PADDING * 2;
+  const tx = LOGO_PADDING - bbox.x1;
+  const ty = LOGO_PADDING - bbox.y1;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+    <g transform="translate(${tx},${ty})"><path d="${glyphPath.toPathData(2)}" fill="${color}" /></g>
   </svg>`;
 }
 
@@ -125,7 +142,7 @@ async function exportTransparentPngRect(svg, targetWidth, outPath) {
 // A square "app icon" style cover: mark centered on a solid background,
 // full-bleed (the OS applies its own corner mask on top of this).
 async function exportIconCover({ markColor, bgColor, size, outPath, markScale = 0.56 }) {
-  const trimmed = await renderTrimmed(glyphSvg(markColor));
+  const trimmed = await renderTrimmed(await realMarkSvg(markColor));
   const meta = await sharp(trimmed).metadata();
   const box = Math.round(size * markScale);
   const scaleFactor = Math.min(box / meta.width, box / meta.height);
@@ -395,22 +412,35 @@ async function buildPresentationSheet() {
     .toFile(path.join(PNG_DIR, "brand-sheet.png"));
 }
 
+const FAVICON_PATH = path.join(ROOT, "src/app/favicon.ico");
+
 async function main() {
   await mkdir(SVG_DIR, { recursive: true });
   await mkdir(PNG_DIR, { recursive: true });
 
   // --- SVG source files (black) ---
-  await writeFile(path.join(SVG_DIR, "mark-black.svg"), glyphSvg(COLORS.black, 200));
-  await writeFile(path.join(SVG_DIR, "wordmark-black.svg"), wordmarkSvg(COLORS.black));
+  await writeFile(path.join(SVG_DIR, "mark-black.svg"), await realMarkSvg(COLORS.black));
+  await writeFile(path.join(SVG_DIR, "wordmark-black.svg"), await realWordmarkSvg(COLORS.black));
+
+  // --- Current live logo: plain "umami" text, black + white ---
+  for (const name of ["black", "white"]) {
+    const svg = await logoTextSvg(COLORS[name]);
+    await writeFile(path.join(SVG_DIR, `logo-text-${name}.svg`), svg);
+    await exportTransparentPngRect(svg, 1600, path.join(PNG_DIR, `logo-text-${name}.png`));
+  }
 
   // --- Mark-only PNGs, transparent bg, 3 colors, 1024px square ---
   for (const [name, hex] of Object.entries(COLORS)) {
-    await exportTransparentPng(glyphSvg(hex), 1024, path.join(PNG_DIR, `mark-${name}.png`));
+    await exportTransparentPng(await realMarkSvg(hex), 1024, path.join(PNG_DIR, `mark-${name}.png`));
   }
 
   // --- Wordmark PNGs, transparent bg, 3 colors, 1600px wide ---
   for (const [name, hex] of Object.entries(COLORS)) {
-    await exportTransparentPngRect(wordmarkSvg(hex), 1600, path.join(PNG_DIR, `wordmark-${name}.png`));
+    await exportTransparentPngRect(
+      await realWordmarkSvg(hex),
+      1600,
+      path.join(PNG_DIR, `wordmark-${name}.png`),
+    );
   }
 
   // --- App icon covers ---
@@ -430,9 +460,16 @@ async function main() {
     });
   }
 
+  // --- Favicon: the real mark, black, on transparent, compiled to .ico
+  // (multi-resolution 16/32/48) and written straight into src/app/, where
+  // Next.js's file convention picks it up as the site favicon automatically.
+  const faviconSourcePng = path.join(PNG_DIR, "mark-black.png");
+  const icoBuffer = await pngToIco(faviconSourcePng);
+  await writeFile(FAVICON_PATH, icoBuffer);
+
   await buildPresentationSheet();
 
-  console.log("Brand assets generated in public/brand/");
+  console.log("Brand assets generated in public/brand/, favicon updated at src/app/favicon.ico");
 }
 
 main().catch((err) => {
