@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Work_Sans, Bitter, IBM_Plex_Mono } from "next/font/google";
+import { Roboto_Mono, STIX_Two_Text } from "next/font/google";
 import "./globals.css";
 import { auth } from "@/auth";
 import { AuthSessionProvider } from "@/components/session-provider";
@@ -7,29 +7,21 @@ import { AppHeader } from "@/components/app-header";
 import { TimezoneSync } from "@/components/timezone-sync";
 import { NativeBootstrap } from "@/components/native-bootstrap";
 
-// Body copy: an open, airy sans-serif (replaces Geist Sans, which read as
-// too condensed) with enough weights loaded to cover the app's existing
-// font-medium/font-semibold/font-bold hierarchy usage.
-const workSans = Work_Sans({
+// Body copy app-wide. 400 = regular body text, 200 = the ExtraLight cut
+// used (via the `font-extralight` utility) for small subtext — cuisine
+// tags, badges, metadata labels. 700 kept for any existing
+// font-semibold/font-bold body text to render as a true bold cut.
+const robotoMono = Roboto_Mono({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["200", "400", "700"],
 });
 
-// Page titles/section headers (h1-h3) app-wide. A warm slab serif built
-// for screen headlines — grounded, cookbook-like character that suits a
-// recipe app, with true semibold/bold cuts so the existing
-// font-semibold/font-bold hierarchy on every heading renders crisply.
-const bitter = Bitter({
+// Page titles/section headers (h1-h3) app-wide. Bold only — headers are
+// always rendered bold regardless of each heading's own font-*
+// utility class (see the base-layer h1/h2/h3 rule in globals.css).
+const stixTwoText = STIX_Two_Text({
   variable: "--font-title",
-  subsets: ["latin"],
-  weight: ["600", "700"],
-});
-
-// Reserved for the "umami" wordmark only (nav logo + login/signup headline)
-// via the .font-display utility — not applied to generic headers/titles.
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-logo",
   subsets: ["latin"],
   weight: ["700"],
 });
@@ -56,9 +48,9 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${workSans.variable} ${bitter.variable} ${ibmPlexMono.variable} h-full antialiased`}
+      className={`${robotoMono.variable} ${stixTwoText.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#FBFAF7] text-[#1A1D1B]">
+      <body className="min-h-full flex flex-col bg-[#EFEFEF] text-[#101010]">
         <AuthSessionProvider session={session}>
           <NativeBootstrap />
           <TimezoneSync />

@@ -10,8 +10,8 @@ export type LocationValue = {
 };
 
 const selectClass =
-  "mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332] disabled:opacity-50";
-const labelClass = "block text-sm font-medium text-[#1A1D1B]";
+  "mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332] disabled:opacity-50";
+const labelClass = "block text-sm font-medium text-[#101010]";
 
 /**
  * Country → State/Province → City picker, backed by the offline
@@ -130,14 +130,14 @@ export function LocationPicker({
           onBlur={() => setTimeout(() => setCityOpen(false), 150)}
         />
         {cityOpen && !cityDisabled && filteredCities.length > 0 && (
-          <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-y-auto rounded-xl border border-[#E8E6E0] bg-white py-1 shadow-soft">
+          <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-y-auto rounded-[100px] border border-[#E8E6E0] bg-white py-1 shadow-soft">
             {filteredCities.map((c) => (
               <li key={`${c.name}-${c.latitude}-${c.longitude}`}>
                 <button
                   type="button"
                   onMouseDown={(e) => e.preventDefault()}
                   onClick={() => handleCitySelect(c.name)}
-                  className="block w-full px-3 py-1.5 text-left text-sm text-[#1A1D1B] hover:bg-[#EDF3EF]"
+                  className="block w-full px-3 py-1.5 text-left text-sm text-[#101010] hover:bg-[#EDF3EF]"
                 >
                   {c.name}
                 </button>

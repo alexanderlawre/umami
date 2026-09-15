@@ -103,17 +103,17 @@ function CookbookMenu({
       <button
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className={`w-full rounded-full border px-3 py-2 text-xs sm:w-auto ${
+        className={`w-full rounded-full border px-3 py-2 text-xs shadow-brand sm:w-auto ${
           cookbookIds.length > 0
             ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
-            : "border-[#E8E6E0] text-[#1A1D1B]"
+            : "border-[#E8E6E0] text-[#101010]"
         }`}
       >
         Cookbooks{cookbookIds.length > 0 ? ` (${cookbookIds.length})` : ""}
       </button>
 
       {open && (
-        <div className="absolute right-0 top-11 z-20 w-56 overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white py-1.5 shadow-lg">
+        <div className="absolute right-0 top-11 z-20 w-56 overflow-hidden rounded-[100px] border border-[#E8E6E0] bg-white py-1.5 shadow-lg">
           {cookbooks.length === 0 && (
             <p className="px-4 py-2 text-xs text-[#6B7370]">No cookbooks yet.</p>
           )}
@@ -123,13 +123,13 @@ function CookbookMenu({
               return (
                 <label
                   key={cb.id}
-                  className="flex cursor-pointer items-center gap-2 px-4 py-2 text-sm text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
+                  className="flex cursor-pointer items-center gap-2 px-4 py-2 text-sm text-[#101010] transition hover:bg-[#EDF3EF]"
                 >
                   <input
                     type="checkbox"
                     checked={checked}
                     onChange={() => onToggle(cb.id, !checked)}
-                    className="h-4 w-4 rounded border-[#E8E6E0]"
+                    className="h-4 w-4 rounded-[100px] border-[#E8E6E0]"
                   />
                   {cb.name}
                 </label>
@@ -153,7 +153,7 @@ function CookbookMenu({
             <button
               onClick={handleCreate}
               disabled={creating || !newName.trim()}
-              className="shrink-0 rounded-full bg-[#1B4332] px-3 py-1.5 text-xs font-medium text-white disabled:opacity-50"
+              className="shrink-0 rounded-full bg-[#1B4332] px-3 py-1.5 text-xs font-medium text-white shadow-brand disabled:opacity-50"
             >
               {creating ? <LoadingOrb size={20} theme="dark" /> : "Add"}
             </button>
@@ -250,14 +250,14 @@ function RecipeRow({
     <div className="flex flex-col gap-2 border-b border-[#E8E6E0] py-3 last:border-0">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <div className="flex min-w-0 flex-1 items-center gap-3">
-          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-[#EDF3EF]">
+          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-[100px] bg-[#EDF3EF]">
             {recipe.imageUrl && (
               <Image src={recipe.imageUrl} alt={recipe.title} fill sizes="48px" className="object-cover" />
             )}
           </div>
 
           <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-medium text-[#1A1D1B]">{recipe.title}</p>
+            <p className="truncate text-sm font-medium text-[#101010]">{recipe.title}</p>
             <p className="text-xs text-[#6B7370]">{recipe.cuisine}</p>
             {!recipe.isActive && recipe.archivedReason && (
               <p className="mt-0.5 truncate text-[11px] text-[#B45309]">{recipe.archivedReason}</p>
@@ -269,7 +269,7 @@ function RecipeRow({
           <button
             onClick={() => onEdit(recipe.id)}
             disabled={saving}
-            className="flex-1 rounded-full border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50 sm:flex-none"
+            className="flex-1 rounded-full border border-[#E8E6E0] px-3 py-2 text-xs text-[#101010] shadow-brand disabled:opacity-50 sm:flex-none"
           >
             {saving ? <LoadingOrb size={20} /> : "Edit recipe"}
           </button>
@@ -277,7 +277,7 @@ function RecipeRow({
           <button
             onClick={toggleReviewStatus}
             disabled={saving}
-            className={`flex-1 rounded-full border px-3 py-2 text-xs disabled:opacity-50 sm:flex-none ${
+            className={`flex-1 rounded-full border px-3 py-2 text-xs shadow-brand disabled:opacity-50 sm:flex-none ${
               recipe.allergenReviewStatus === "VERIFIED"
                 ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
                 : recipe.allergenReviewStatus === "IN_REVIEW"
@@ -299,7 +299,7 @@ function RecipeRow({
               value={restoreSlot}
               onChange={(e) => setRestoreSlot(e.target.value)}
               disabled={saving}
-              className="flex-1 rounded-full border border-[#E8E6E0] bg-white px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50 sm:flex-none"
+              className="flex-1 rounded-full border border-[#E8E6E0] bg-white px-3 py-2 text-xs text-[#101010] disabled:opacity-50 sm:flex-none"
             >
               {MEAL_CATEGORIES.map((c) => (
                 <option key={c.key} value={c.key}>
@@ -312,7 +312,7 @@ function RecipeRow({
           <button
             onClick={toggleActive}
             disabled={saving}
-            className={`flex-1 rounded-full border px-3 py-2 text-xs disabled:opacity-50 sm:flex-none ${
+            className={`flex-1 rounded-full border px-3 py-2 text-xs shadow-brand disabled:opacity-50 sm:flex-none ${
               recipe.isActive
                 ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
                 : "border-[#E8E6E0] text-[#6B7370]"
@@ -474,7 +474,7 @@ export function RecipesClient({
         <div />
         <button
           onClick={() => setEditorState({ mode: "create" })}
-          className="shrink-0 rounded-full bg-[#1B4332] px-4 py-2 text-xs font-medium text-white"
+          className="shrink-0 rounded-full bg-[#1B4332] px-4 py-2 text-xs font-medium text-white shadow-brand"
         >
           + New recipe
         </button>
@@ -488,9 +488,9 @@ export function RecipesClient({
             <details
               key={key}
               open={expandAll}
-              className="group rounded-2xl border border-[#E8E6E0] bg-white"
+              className="group rounded-[100px] border border-[#E8E6E0] bg-white"
             >
-              <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-[#1A1D1B]">
+              <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-[#101010]">
                 <span className="flex items-center gap-2">
                   {label}
                   {hasUnverified && (
@@ -528,9 +528,9 @@ export function RecipesClient({
 
         <details
           open={expandAll}
-          className="group rounded-2xl border border-[#E8E6E0] bg-white"
+          className="group rounded-[100px] border border-[#E8E6E0] bg-white"
         >
-          <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-[#1A1D1B]">
+          <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-[#101010]">
             <span>Archived</span>
             <span className="text-xs font-normal text-[#6B7370]">
               {archived.length} recipe{archived.length === 1 ? "" : "s"}

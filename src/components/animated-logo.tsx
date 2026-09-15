@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const SESSION_KEY = "umami-title-intro-shown";
@@ -21,11 +22,18 @@ export function AnimatedLogo() {
   return (
     <Link
       href="/dashboard"
-      className={`font-display -my-2 -ml-1 rounded-lg px-1 py-2 text-lg font-bold text-[#1A1D1B] ${
+      className={`-my-2 -ml-1 flex items-center rounded-[100px] px-1 py-2 ${
         animate ? "animate-title-intro" : ""
       }`}
     >
-      umami
+      <Image
+        src="/brand/svg/wordmark-black.svg"
+        alt="umami"
+        width={1698}
+        height={687}
+        className="h-6 w-auto"
+        priority
+      />
     </Link>
   );
 }

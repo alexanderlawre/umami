@@ -66,7 +66,7 @@ export function ProfileMenu({
       <AnimatePresence>
         {open && (
           <motion.div
-            className="absolute right-0 top-11 z-20 w-48 origin-top-right overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white py-1.5 shadow-lifted"
+            className="absolute right-0 top-11 z-20 w-48 origin-top-right overflow-hidden rounded-[100px] border border-[#E8E6E0] bg-white py-1.5 shadow-lifted"
             initial={{ opacity: 0, scale: 0.92, y: -6 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.92, y: -6 }}
@@ -77,7 +77,7 @@ export function ProfileMenu({
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block px-4 py-2 text-sm text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
+                className="block px-4 py-2 text-sm text-[#101010] transition hover:bg-[#EDF3EF]"
               >
                 {link.label}
               </Link>
@@ -85,7 +85,7 @@ export function ProfileMenu({
             <div className="my-1.5 border-t border-[#E8E6E0]" />
             <button
               onClick={() => signOut({ callbackUrl: "/login" })}
-              className="block w-full px-4 py-2 text-left text-sm text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
+              className="block w-full px-4 py-2 text-left text-sm text-[#101010] transition hover:bg-[#EDF3EF]"
             >
               Sign out
             </button>

@@ -9,7 +9,6 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-body);
-  --font-mono: var(--font-logo);
 }
 
 /* This app only has one, light theme — no component has dark-mode styling
@@ -42,20 +41,18 @@ html {
   }
 }
 
-/* Headers/titles app-wide use Bitter (loaded as --font-title in
-   layout.tsx) instead of the body sans-serif, applied once here rather
-   than editing every h1/h2/h3 call site individually. Bitter ships real
-   semibold/bold cuts, so the existing font-semibold/font-bold Tailwind
-   utility class on each heading renders at its true weight — no
-   synthesized/faked bold needed here (contrast with the mono-logo
-   treatment below, which is bold-only by design). `:not(.font-display)`
-   excludes the login/signup "umami" wordmark h1s, which opt into the
-   separate IBM Plex Mono Bold treatment below instead. */
+/* Headers/titles app-wide use STIX Two Text (loaded as --font-title in
+   layout.tsx) instead of the body font, applied once here rather than
+   editing every h1/h2/h3 call site individually. Always bold
+   (font-weight: 700, the only cut loaded), regardless of whatever
+   font-semibold/font-bold utility class each individual heading already
+   has — a true bold cut, not synthesized. */
 @layer base {
-  h1:not(.font-display),
-  h2:not(.font-display),
-  h3:not(.font-display) {
+  h1,
+  h2,
+  h3 {
     font-family: var(--font-title), ui-serif, serif;
+    font-weight: 700;
   }
 }
 
@@ -152,18 +149,13 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-/* Subtle warm gradient for hero/card surfaces, built from the existing
-   cream/page-background tones. */
+/* Subtle warm gradient for hero/card surfaces, built from the page
+   background tone. */
 .bg-gradient-hero {
-  background: linear-gradient(180deg, #fbfaf7 0%, #f3f1ea 100%);
+  background: linear-gradient(180deg, #efefef 0%, #f3f1ea 100%);
 }
 
-/* IBM Plex Mono Bold, reserved for the "umami" wordmark specifically (nav
-   logo, login/signup headline) — not the general h1-h3 heading font, which
-   uses Bitter instead (see the base-layer rule above). Applied by hand to
-   the couple of elements that render the literal brand name, including the
-   login/signup <h1>s so they override the Bitter base-layer rule. */
-.font-display {
-  font-family: var(--font-logo), ui-monospace, monospace;
-  letter-spacing: -0.01em;
+/* Signature offset shadow for all buttons and recipe cards. */
+.shadow-brand {
+  box-shadow: -4px -6px 5px 4px rgba(0, 0, 0, 0.1);
 }

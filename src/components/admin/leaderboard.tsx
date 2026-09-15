@@ -15,8 +15,8 @@ export function Leaderboard({
   emptyLabel: string;
 }) {
   return (
-    <section className="rounded-2xl border border-[#E8E6E0] bg-white p-5">
-      <h2 className="text-sm font-semibold text-[#1A1D1B]">{title}</h2>
+    <section className="rounded-[100px] border border-[#E8E6E0] bg-white p-5">
+      <h2 className="text-sm font-semibold text-[#101010]">{title}</h2>
       {rows.length === 0 ? (
         <p className="mt-3 text-xs text-[#6B7370]">{emptyLabel}</p>
       ) : (
@@ -31,7 +31,7 @@ export function Leaderboard({
             >
               <span className="flex min-w-0 items-center gap-2">
                 <span className="shrink-0 text-xs font-medium text-[#6B7370]">{i + 1}.</span>
-                <span className="truncate text-[#1A1D1B]">{row.label}</span>
+                <span className="truncate text-[#101010]">{row.label}</span>
               </span>
               <span className="shrink-0 text-xs text-[#6B7370]">{row.count}</span>
             </motion.li>

@@ -88,14 +88,14 @@ export function PreferencesClient({
           <MotionButton
             type="button"
             onClick={() => router.back()}
-            className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#1A1D1B]"
+            className="rounded-[100px] border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#101010] shadow-brand"
           >
             Back
           </MotionButton>
           <MotionButton
             type="button"
             onClick={handleContinue}
-            className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow"
+            className="flex-1 rounded-[100px] bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand"
           >
             Continue
           </MotionButton>
@@ -103,7 +103,7 @@ export function PreferencesClient({
       }
     >
       <div>
-        <h3 className="text-sm font-semibold text-[#1A1D1B]">Any allergies?</h3>
+        <h3 className="text-sm font-semibold text-[#101010]">Any allergies?</h3>
         <p className="mt-1 text-xs text-[#6B7370]">
           Choose a category, then check off the specific items that apply. This is the main
           safeguard that keeps unsafe recipes off your dashboard.
@@ -117,7 +117,7 @@ export function PreferencesClient({
         </div>
 
         <div className="mt-5">
-          <label className="block text-sm font-medium text-[#1A1D1B]">
+          <label className="block text-sm font-medium text-[#101010]">
             {OTHER_ALLERGEN_CATEGORY_LABEL}
           </label>
           <p className="mt-1 text-xs text-[#6B7370]">
@@ -138,7 +138,7 @@ export function PreferencesClient({
       </div>
 
       <div className="mt-8 border-t border-[#E8E6E0] pt-6">
-        <h3 className="text-sm font-semibold text-[#1A1D1B]">Any diets that apply to you?</h3>
+        <h3 className="text-sm font-semibold text-[#101010]">Any diets that apply to you?</h3>
         <p className="mt-1 text-xs text-[#6B7370]">
           Pick as many as you like. No restrictions is fine too, you can leave this blank.
         </p>

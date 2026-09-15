@@ -45,7 +45,7 @@ export function RefreshBlockedModal({
 
   return (
     <SheetModal open={open} onClose={onClose}>
-      <p className="text-lg font-semibold text-[#1A1D1B]">That&apos;s your refresh for now</p>
+      <p className="text-lg font-semibold text-[#101010]">That&apos;s your refresh for now</p>
       <p className="mt-2 text-sm text-[#6B7370]">
         Fresh picks land automatically at the next window — or go unlimited with Umami+.
       </p>
@@ -58,14 +58,14 @@ export function RefreshBlockedModal({
         <button
           type="button"
           onClick={onClose}
-          className="flex-1 rounded-lg border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
+          className="flex-1 rounded-[100px] border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#101010] shadow-brand transition hover:bg-[#EDF3EF]"
         >
           Got it
         </button>
         <Link
           href="/premium"
           onClick={onClose}
-          className="flex-1 rounded-lg bg-[#1B4332] px-4 py-2.5 text-center text-sm font-medium text-white transition hover:opacity-90"
+          className="flex-1 rounded-[100px] bg-[#1B4332] px-4 py-2.5 text-center text-sm font-medium text-white shadow-brand transition hover:opacity-90"
         >
           Go Umami+
         </Link>

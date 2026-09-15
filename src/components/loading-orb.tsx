@@ -30,7 +30,7 @@ export function LoadingOrb({
   className?: string;
   "aria-label"?: string;
 }) {
-  const color = theme === "dark" ? "#FFFFFF" : "#1A1D1B";
+  const color = theme === "dark" ? "#FFFFFF" : "#101010";
 
   return (
     <svg

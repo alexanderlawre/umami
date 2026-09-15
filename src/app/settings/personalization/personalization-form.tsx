@@ -161,14 +161,14 @@ export function PersonalizationForm({
   return (
     <main className="mx-auto w-full max-w-2xl flex-1 px-6 py-10 pb-content-safe">
       <PageTransition>
-        <h1 className="text-xl font-bold tracking-tight text-[#1A1D1B]">Personalization</h1>
+        <h1 className="text-xl font-bold tracking-tight text-[#101010]">Personalization</h1>
         <p className="mt-1 text-sm text-[#6B7370]">
           Update your diet, allergies, and taste preferences any time. Changes apply to your
           dashboard right away.
         </p>
 
-        <div className="mt-8 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
-          <h3 className="text-sm font-semibold text-[#1A1D1B]">Any allergies?</h3>
+        <div className="mt-8 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#101010]">Any allergies?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
             Pick as many as apply. This is the main safeguard that keeps unsafe recipes off your
             dashboard.
@@ -182,7 +182,7 @@ export function PersonalizationForm({
           </div>
 
           <div className="mt-5">
-            <label className="block text-sm font-medium text-[#1A1D1B]">Other allergies</label>
+            <label className="block text-sm font-medium text-[#101010]">Other allergies</label>
             <p className="mt-1 text-xs text-[#6B7370]">
               List specific foods or food groups, separated by commas (e.g. &ldquo;kiwi,
               shellfish&rdquo;).
@@ -203,8 +203,8 @@ export function PersonalizationForm({
           </div>
         </div>
 
-        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
-          <h3 className="text-sm font-semibold text-[#1A1D1B]">Any diets that apply to you?</h3>
+        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#101010]">Any diets that apply to you?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
             Pick as many as you like. No restrictions is fine too, you can leave this blank.
           </p>
@@ -236,8 +236,8 @@ export function PersonalizationForm({
           )}
         </div>
 
-        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
-          <h3 className="text-sm font-semibold text-[#1A1D1B]">How much heat can you handle?</h3>
+        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#101010]">How much heat can you handle?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
             We won&rsquo;t surface anything spicier than this. Recipes we haven&rsquo;t rated for
             heat still show up either way.
@@ -255,8 +255,8 @@ export function PersonalizationForm({
           </div>
         </div>
 
-        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
-          <h3 className="text-sm font-semibold text-[#1A1D1B]">How much do you eat these?</h3>
+        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#101010]">How much do you eat these?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
             Rarely to constantly. This nudges which recipes we show you first, it never rules
             anything out.
@@ -265,7 +265,7 @@ export function PersonalizationForm({
             {FOOD_GROUP_CLUSTERS.map((cluster, i) => (
               <div key={cluster.title}>
                 <div className="flex items-center justify-between text-sm">
-                  <span className="font-medium text-[#1A1D1B]">{cluster.title}</span>
+                  <span className="font-medium text-[#101010]">{cluster.title}</span>
                   <span className="text-[#6B7370]">{clusterValues[i]}</span>
                 </div>
                 <input
@@ -290,8 +290,8 @@ export function PersonalizationForm({
           </div>
         </div>
 
-        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
-          <label className="block text-sm font-medium text-[#1A1D1B]">
+        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <label className="block text-sm font-medium text-[#101010]">
             Don&apos;t see something you eat a lot?
           </label>
           <p className="mt-1 text-xs text-[#6B7370]">Tell us and we&apos;ll work on adding it. Optional.</p>
@@ -302,12 +302,12 @@ export function PersonalizationForm({
               setFeedback(e.target.value);
             }}
             rows={2}
-            className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+            className="mt-2 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
           />
         </div>
 
-        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
-          <label className="block text-sm font-medium text-[#1A1D1B]">Favorite cuisines</label>
+        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <label className="block text-sm font-medium text-[#101010]">Favorite cuisines</label>
           <p className="mt-1 text-xs text-[#6B7370]">
             Type at least {SUGGESTED_CUISINE_COUNT} if you can, more if you want. This shows
             favoritism toward these cuisines without ruling out anything else.
@@ -334,7 +334,7 @@ export function PersonalizationForm({
             type="button"
             onClick={save}
             disabled={saving}
-            className="rounded-xl bg-[#1B4332] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+            className="rounded-[100px] bg-[#1B4332] px-5 py-3 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
           >
             {saving ? "Saving..." : "Save changes"}
           </MotionButton>

@@ -54,7 +54,7 @@ export function hapticImpactMedium(): void {
 export function configureStatusBar(): void {
   if (!isNative()) return;
   StatusBar.setStyle({ style: Style.Light }).catch(() => {});
-  StatusBar.setBackgroundColor({ color: "#FBFAF7" }).catch(() => {});
+  StatusBar.setBackgroundColor({ color: "#EFEFEF" }).catch(() => {});
 }
 
 /**

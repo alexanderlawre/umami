@@ -32,15 +32,15 @@ function StatusBadge({ status }: { status: SubmissionRow["status"] }) {
 export function MySubmissions({ submissions }: { submissions: SubmissionRow[] }) {
   return (
     <div>
-      <h2 className="text-sm font-semibold text-[#1A1D1B]">Your submissions</h2>
-      <div className="mt-2 rounded-2xl border border-[#E8E6E0] bg-white px-4">
+      <h2 className="text-sm font-semibold text-[#101010]">Your submissions</h2>
+      <div className="mt-2 rounded-[100px] border border-[#E8E6E0] bg-white px-4">
         {submissions.map((s) => (
           <div
             key={s.id}
             className="flex flex-col gap-2 border-b border-[#E8E6E0] py-3 last:border-0 sm:flex-row sm:items-center sm:justify-between"
           >
             <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-medium text-[#1A1D1B]">{s.title}</p>
+              <p className="truncate text-sm font-medium text-[#101010]">{s.title}</p>
               {s.status === "APPROVED" && s.approvedSlug && (
                 <Link
                   href={`/recipe/${s.approvedSlug}`}

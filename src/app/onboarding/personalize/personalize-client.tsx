@@ -167,7 +167,7 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
           <MotionButton
             type="button"
             onClick={() => router.push("/onboarding/preferences")}
-            className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#1A1D1B]"
+            className="rounded-[100px] border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#101010] shadow-brand"
           >
             Back
           </MotionButton>
@@ -175,7 +175,7 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
             type="button"
             onClick={finish}
             disabled={submitting}
-            className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
+            className="flex-1 rounded-[100px] bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
           >
             {submitting ? "Saving..." : "Finish"}
           </MotionButton>
@@ -205,7 +205,7 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
       </div>
 
       <div className="mt-8 border-t border-[#E8E6E0] pt-6">
-        <label className="block text-sm font-medium text-[#1A1D1B]">
+        <label className="block text-sm font-medium text-[#101010]">
           Don&apos;t see something you eat a lot?
         </label>
         <p className="mt-1 text-xs text-[#6B7370]">
@@ -215,12 +215,12 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
           value={feedback}
           onChange={(e) => setFeedback(e.target.value)}
           rows={2}
-          className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+          className="mt-2 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
         />
       </div>
 
       <div className="mt-8 border-t border-[#E8E6E0] pt-6">
-        <label className="block text-sm font-medium text-[#1A1D1B]">
+        <label className="block text-sm font-medium text-[#101010]">
           Favorite cuisines
         </label>
         <p className="mt-1 text-xs text-[#6B7370]">

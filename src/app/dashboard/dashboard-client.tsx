@@ -125,7 +125,7 @@ function StarButton({
         </motion.svg>
       </MotionButton>
       {error ? (
-        <p className="absolute top-11 w-40 rounded-lg bg-[#1A1D1B] px-2 py-1 text-xs text-white shadow-sm">
+        <p className="absolute top-11 w-40 rounded-[100px] bg-[#101010] px-2 py-1 text-xs text-white shadow-sm">
           {error}
         </p>
       ) : null}
@@ -253,25 +253,25 @@ function RecipeCard({
           onSavedChange={(saved) => onSavedChange(recipe.id, saved)}
         />
         {recipe.isDiscovery ? (
-          <span className="absolute right-3 top-3 rounded-full bg-[#1B4332] px-2.5 py-1 text-[11px] font-medium text-white shadow-sm">
+          <span className="absolute right-3 top-3 rounded-full bg-[#1B4332] px-2.5 py-1 text-[11px] font-extralight text-white shadow-sm">
             Something new
           </span>
         ) : null}
       </div>
 
       <div className="p-5">
-        <p className="text-xs uppercase tracking-wide text-[#6B7370]">
+        <p className="text-xs font-extralight uppercase tracking-wide text-[#6B7370]">
           {recipe.cuisine}
         </p>
         {/* Truncated to a single line so every card in a row stays the same
             height regardless of title length — a long title wrapping to a
             2nd/3rd line was pushing cards out of alignment with their
             neighbors in the grid. */}
-        <h3 className="mt-1 truncate text-lg font-semibold text-[#1A1D1B]">
+        <h3 className="mt-1 truncate text-lg font-semibold text-[#101010]">
           {recipe.title}
         </h3>
         {recipe.ingredientItems.length > 0 && (
-          <p className="mt-1 line-clamp-2 text-sm text-[#6B7370]">
+          <p className="mt-1 line-clamp-2 text-sm font-extralight text-[#6B7370]">
             {recipe.ingredientItems.join(", ")}
           </p>
         )}
@@ -283,7 +283,7 @@ function RecipeCard({
             {emblems.map((diet) => (
               <span
                 key={diet}
-                className={`rounded-full px-2 py-1 text-[11px] font-medium ${dietEmblemClass(diet)}`}
+                className={`rounded-full px-2 py-1 text-[11px] font-extralight ${dietEmblemClass(diet)}`}
               >
                 {diet}
               </span>
@@ -294,7 +294,7 @@ function RecipeCard({
         {/* Time zone: attribute tag chips were moved off the card and are
             now shown only in a dropdown on the recipe detail page. */}
         <div className="mt-3 flex flex-nowrap items-center gap-2 overflow-hidden text-xs text-[#6B7370]">
-          <span className="shrink-0 font-medium text-[#1A1D1B]">
+          <span className="shrink-0 font-medium text-[#101010]">
             {formatMinutes(recipe.prepMinutes, recipe.cookMinutes)}
           </span>
         </div>
@@ -302,7 +302,7 @@ function RecipeCard({
         <div className="mt-4 flex items-center gap-2">
           <Link
             href={`/recipe/${recipe.slug}`}
-            className="flex-1 rounded-full bg-[#1B4332] px-4 py-2 text-center text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+            className="flex-1 rounded-full bg-[#1B4332] px-4 py-2 text-center text-sm font-medium text-white shadow-brand transition hover:-translate-y-0.5"
           >
             View Recipe
           </Link>
@@ -310,7 +310,7 @@ function RecipeCard({
             onClick={handleCookLater}
             disabled={cookLaterPending}
             whileHover={{ y: -2 }}
-            className="flex-1 rounded-full border border-[#E8E6E0] px-4 py-2 text-sm font-medium text-[#1A1D1B] transition-colors hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
+            className="flex-1 rounded-full border border-[#E8E6E0] px-4 py-2 text-sm font-medium text-[#101010] shadow-brand transition-colors hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
           >
             {cookLaterPending ? "Saving\u2026" : "Cook Later"}
           </MotionButton>
@@ -329,7 +329,7 @@ function RecipeCard({
       transition={{ type: "spring", stiffness: 300, damping: 28, delay: (index ?? 0) * 0.06 }}
       whileHover={{ y: -6 }}
       onClick={() => router.push(`/recipe/${recipe.slug}`)}
-      className="cursor-pointer overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-soft hover:shadow-lifted"
+      className="cursor-pointer overflow-hidden rounded-[100px] border border-[#E8E6E0] bg-white shadow-brand"
     >
       {popKey === undefined ? (
         innerContent
@@ -405,7 +405,7 @@ function FilterTagButton({
   // unlike the per-card diet emblems (dietEmblemClass), these don't need
   // per-tag coloring since there's no fixed, small palette to draw from
   // (12 food-group clusters vs. a handful of diets).
-  const activeClass = "bg-[#1A1D1B] text-white";
+  const activeClass = "bg-[#101010] text-white";
   return (
     // Each chip gets its own single-item liquid group. The blob is
     // transparent while inactive so it stays invisible, and pops in with a
@@ -463,7 +463,7 @@ function FilterBar({
         <button
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
-          className="flex items-center gap-1.5 rounded-full border border-[#E8E6E0] bg-white px-3 py-1.5 text-xs font-medium text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
+          className="flex items-center gap-1.5 rounded-full border border-[#E8E6E0] bg-white px-3 py-1.5 text-xs font-medium text-[#101010] shadow-brand transition hover:bg-[#EDF3EF]"
         >
           Filters
           {selected.size > 0 && (
@@ -501,7 +501,7 @@ function FilterBar({
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <div className="mt-3 space-y-3 rounded-2xl border border-[#E8E6E0] bg-white p-4 shadow-soft">
+            <div className="mt-3 space-y-3 rounded-[100px] border border-[#E8E6E0] bg-white p-4 shadow-soft">
               {foodGroupTags.length > 0 && (
                 <div>
                   <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[#6B7370]">
@@ -943,7 +943,7 @@ export function DashboardClient({
     return (
       <div>
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-[#1A1D1B]">{heading}</h1>
+          <h1 className="text-2xl font-bold text-[#101010]">{heading}</h1>
           <p className="mt-1 text-sm text-[#6B7370]">{CATEGORY_SUBTITLE[activeCategory]}</p>
           <div className="mt-6">
             <CategoryControl value={activeCategory} onChange={handleCategoryChange} disabled={categoryPending} />
@@ -960,7 +960,7 @@ export function DashboardClient({
   return (
     <div>
       <div className="text-center">
-        <h1 className="text-2xl font-bold text-[#1A1D1B]">{heading}</h1>
+        <h1 className="text-2xl font-bold text-[#101010]">{heading}</h1>
         <p className="mt-1 text-sm text-[#6B7370]">{CATEGORY_SUBTITLE[activeCategory]}</p>
 
         <div className="mt-6">
@@ -1050,7 +1050,7 @@ export function DashboardClient({
         <MotionButton
           onClick={handleRefresh}
           disabled={refreshDisabled}
-          className="flex items-center gap-2 rounded-full border border-[#E8E6E0] px-5 py-3 text-sm font-medium text-[#1A1D1B] transition-colors hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex items-center gap-2 rounded-full border border-[#E8E6E0] px-5 py-3 text-sm font-medium text-[#101010] shadow-brand transition-colors hover:bg-[#EDF3EF] disabled:cursor-not-allowed disabled:opacity-50"
         >
           {refreshPending ? (
             <LoadingOrb size={20} />
@@ -1086,7 +1086,7 @@ export function DashboardClient({
         <div className="mt-10 space-y-8">
           {cookbooksState.map((cookbook) => (
             <div key={cookbook.id}>
-              <h2 className="text-lg font-semibold text-[#1A1D1B]">{cookbook.name}</h2>
+              <h2 className="text-lg font-semibold text-[#101010]">{cookbook.name}</h2>
               <div className="mt-3 flex gap-4 overflow-x-auto pb-2">
                 {cookbook.recipes.map((recipe) => (
                   <div key={recipe.id} className="w-72 shrink-0">

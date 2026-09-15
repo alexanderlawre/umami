@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { compressImage } from "@/lib/image-compression";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
@@ -111,10 +112,15 @@ export default function SignupPage() {
   return (
     <main className="flex flex-1 items-center justify-center px-6 py-12">
       <PageTransition className="w-full max-w-sm">
-        <div className="rounded-2xl border border-[#E8E6E0] bg-white p-8 shadow-soft">
-          <h1 className="font-display text-2xl font-bold tracking-tight text-[#1A1D1B]">
-            umami
-          </h1>
+        <div className="rounded-[100px] border border-[#E8E6E0] bg-white p-8 shadow-soft">
+          <Image
+            src="/brand/svg/wordmark-black.svg"
+            alt="umami"
+            width={1698}
+            height={687}
+            className="h-10 w-auto"
+            priority
+          />
           <p className="mt-1 text-sm text-[#6B7370]">
             Recipes catered to you.
           </p>
@@ -150,12 +156,12 @@ export default function SignupPage() {
                 className="hidden"
               />
               <div>
-                <p className="text-sm font-medium text-[#1A1D1B]">Profile photo</p>
+                <p className="text-sm font-medium text-[#101010]">Profile photo</p>
                 <p className="text-xs text-[#6B7370]">Optional. You can add or change this anytime.</p>
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#1A1D1B]">
+              <label className="block text-sm font-medium text-[#101010]">
                 Full name
               </label>
               <input
@@ -163,11 +169,11 @@ export default function SignupPage() {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#1A1D1B]">
+              <label className="block text-sm font-medium text-[#101010]">
                 Email
               </label>
               <input
@@ -175,11 +181,11 @@ export default function SignupPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#1A1D1B]">
+              <label className="block text-sm font-medium text-[#101010]">
                 Password
               </label>
               <input
@@ -188,12 +194,12 @@ export default function SignupPage() {
                 minLength={10}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
               <p className="mt-1 text-xs text-[#6B7370]">At least 10 characters.</p>
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#1A1D1B]">
+              <label className="block text-sm font-medium text-[#101010]">
                 Retype password
               </label>
               <input
@@ -202,7 +208,7 @@ export default function SignupPage() {
                 minLength={10}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
               {/* Live feedback as the user types, instead of only surfacing
                   a mismatch after they submit. */}
@@ -217,7 +223,7 @@ export default function SignupPage() {
               )}
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#1A1D1B]">
+              <label className="block text-sm font-medium text-[#101010]">
                 Birthday
               </label>
               <BirthdayPicker value={birthday} onChange={setBirthday} />
@@ -240,7 +246,7 @@ export default function SignupPage() {
             <MotionButton
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
+              className="w-full rounded-[100px] bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
             >
               {loading ? (
                 <span className="inline-flex items-center justify-center gap-2">

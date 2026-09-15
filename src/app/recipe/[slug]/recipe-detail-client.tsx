@@ -224,7 +224,7 @@ export function RecipeDetailClient({
       {recipe.imageUrl ? (
         <div className="-mx-6 sm:mx-0">
           <motion.div
-            className="relative h-56 w-full overflow-hidden sm:rounded-2xl"
+            className="relative h-56 w-full overflow-hidden sm:rounded-[100px]"
             initial={{ opacity: 0, scale: 1.04 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -246,9 +246,9 @@ export function RecipeDetailClient({
         </div>
       ) : null}
 
-      <p className="mt-4 text-xs uppercase tracking-wide text-[#6B7370]">{recipe.cuisine}</p>
-      <h1 className="mt-1 text-2xl font-bold text-[#1A1D1B]">{recipe.title}</h1>
-      <p className="mt-2 text-sm text-[#1A1D1B]">{recipe.introCopy}</p>
+      <p className="mt-4 text-xs font-extralight uppercase tracking-wide text-[#6B7370]">{recipe.cuisine}</p>
+      <h1 className="mt-1 text-2xl font-bold text-[#101010]">{recipe.title}</h1>
+      <p className="mt-2 text-sm text-[#101010]">{recipe.introCopy}</p>
       <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.note}</p>
 
       <div className="mt-4 flex flex-wrap gap-2 text-xs text-[#6B7370]">
@@ -263,7 +263,7 @@ export function RecipeDetailClient({
           {dietEmblems.map((diet) => (
             <span
               key={diet}
-              className={`rounded-full px-2 py-1 font-medium ${dietEmblemClass(diet)}`}
+              className={`rounded-full px-2 py-1 font-extralight ${dietEmblemClass(diet)}`}
             >
               {diet}
             </span>
@@ -327,31 +327,31 @@ export function RecipeDetailClient({
       )}
 
       {hasMacros && (
-        <section className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-4">
+        <section className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm font-semibold text-[#1A1D1B]">Nutrition</h2>
-            <span className="text-[11px] text-[#6B7370]">
+            <h2 className="text-sm font-semibold text-[#101010]">Nutrition</h2>
+            <span className="text-[11px] font-extralight text-[#6B7370]">
               for {servings} serving{servings === 1 ? "" : "s"}
             </span>
           </div>
           <div className="mt-3 grid grid-cols-3 gap-2 text-center">
             <div>
-              <p className="text-base font-semibold text-[#1A1D1B]">
+              <p className="text-base font-semibold text-[#101010]">
                 {scaledMacro(recipe.caloriesPerServing) ?? "—"}
               </p>
-              <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Calories</p>
+              <p className="text-[10px] font-extralight uppercase tracking-wide text-[#6B7370]">Calories</p>
             </div>
             <div>
-              <p className="text-base font-semibold text-[#1A1D1B]">
+              <p className="text-base font-semibold text-[#101010]">
                 {scaledMacro(recipe.proteinGrams) ?? "—"}g
               </p>
-              <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Protein</p>
+              <p className="text-[10px] font-extralight uppercase tracking-wide text-[#6B7370]">Protein</p>
             </div>
             <div>
-              <p className="text-base font-semibold text-[#1A1D1B]">
+              <p className="text-base font-semibold text-[#101010]">
                 {scaledMacro(recipe.carbsGrams) ?? "—"}g
               </p>
-              <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Carbs</p>
+              <p className="text-[10px] font-extralight uppercase tracking-wide text-[#6B7370]">Carbs</p>
             </div>
           </div>
 
@@ -360,28 +360,28 @@ export function RecipeDetailClient({
               {isPremium ? (
                 <>
                   <div>
-                    <p className="text-base font-semibold text-[#1A1D1B]">
+                    <p className="text-base font-semibold text-[#101010]">
                       {scaledMacro(recipe.fatGrams) ?? "—"}g
                     </p>
-                    <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Fat</p>
+                    <p className="text-[10px] font-extralight uppercase tracking-wide text-[#6B7370]">Fat</p>
                   </div>
                   <div>
-                    <p className="text-base font-semibold text-[#1A1D1B]">
+                    <p className="text-base font-semibold text-[#101010]">
                       {scaledMacro(recipe.fiberGrams) ?? "—"}g
                     </p>
-                    <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">Fiber</p>
+                    <p className="text-[10px] font-extralight uppercase tracking-wide text-[#6B7370]">Fiber</p>
                   </div>
                   <div>
-                    <p className="text-base font-semibold text-[#1A1D1B]">
+                    <p className="text-base font-semibold text-[#101010]">
                       {scaledMacro(recipe.cholesterolMg) ?? "—"}mg
                     </p>
-                    <p className="text-[10px] uppercase tracking-wide text-[#6B7370]">
+                    <p className="text-[10px] font-extralight uppercase tracking-wide text-[#6B7370]">
                       Cholesterol
                     </p>
                   </div>
                 </>
               ) : (
-                <div className="col-span-3 flex items-center justify-center gap-1.5 rounded-xl bg-[#EDF3EF] px-2 py-2">
+                <div className="col-span-3 flex items-center justify-center gap-1.5 rounded-[100px] bg-[#EDF3EF] px-2 py-2">
                   <LockIcon className="h-3 w-3 shrink-0 text-[#6B7370]" />
                   <p className="text-[11px] text-[#6B7370]">
                     Unlock fat, fiber & cholesterol with Premium
@@ -395,7 +395,7 @@ export function RecipeDetailClient({
 
       <section className="mt-6">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-[#1A1D1B]">Ingredients</h2>
+          <h2 className="text-lg font-semibold text-[#101010]">Ingredients</h2>
           <div className="flex items-center gap-2">
             <MotionButton
               onClick={() => setServings((s) => Math.max(1, s - 1))}
@@ -409,7 +409,7 @@ export function RecipeDetailClient({
               initial={{ scale: 1.25, opacity: 0.5 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ type: "spring", stiffness: 500, damping: 24 }}
-              className="inline-block text-sm text-[#1A1D1B]"
+              className="inline-block text-sm text-[#101010]"
             >
               {servings} servings
             </motion.span>
@@ -444,7 +444,7 @@ export function RecipeDetailClient({
               {[...items]
                 .sort((a, b) => a.order - b.order)
                 .map((ing) => (
-                  <li key={ing.id} className="text-sm text-[#1A1D1B]">
+                  <li key={ing.id} className="text-sm text-[#101010]">
                     {scaleQuantity(ing.quantity, factor)} {ing.unit ?? ""} {ing.item}
                     {ing.optional && <span className="text-[#6B7370]"> (optional)</span>}
                     {ing.prepNote && (
@@ -490,18 +490,18 @@ export function RecipeDetailClient({
                       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="mt-2 rounded-xl border border-[#E8E6E0] bg-white p-3">
-                        <p className="text-sm font-semibold text-[#1A1D1B]">{sub.title}</p>
+                      <div className="mt-2 rounded-[100px] border border-[#E8E6E0] bg-white p-3">
+                        <p className="text-sm font-semibold text-[#101010]">{sub.title}</p>
                         <ul className="mt-2 space-y-1">
                           {sub.ingredients.map((ing, i) => (
-                            <li key={i} className="text-sm text-[#1A1D1B]">
+                            <li key={i} className="text-sm text-[#101010]">
                               {ing.quantity} {ing.unit ?? ""} {ing.item}
                             </li>
                           ))}
                         </ul>
                         <ol className="mt-3 space-y-2">
                           {sub.steps.map((text, i) => (
-                            <li key={i} className="text-sm text-[#1A1D1B]">
+                            <li key={i} className="text-sm text-[#101010]">
                               <span className="font-medium">{i + 1}.</span> {text}
                             </li>
                           ))}
@@ -517,7 +517,7 @@ export function RecipeDetailClient({
       )}
 
       <section className="mt-6">
-        <h2 className="text-lg font-semibold text-[#1A1D1B]">Method</h2>
+        <h2 className="text-lg font-semibold text-[#101010]">Method</h2>
         <ol className="mt-2 space-y-3">
           {[...recipe.steps]
             .sort((a, b) => a.order - b.order)
@@ -527,7 +527,7 @@ export function RecipeDetailClient({
                 initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.04 }}
-                className="text-sm text-[#1A1D1B]"
+                className="text-sm text-[#101010]"
               >
                 <span className="font-medium">{step.order}.</span> {step.text}
                 {step.durationMinutes && (
@@ -545,7 +545,7 @@ export function RecipeDetailClient({
       )}
 
       {(saveError || cookError) && (
-        <p className="fixed inset-x-0 bottom-20 mx-auto w-fit rounded-lg bg-[#1A1D1B] px-3 py-2 text-xs text-white shadow-sm">
+        <p className="fixed inset-x-0 bottom-20 mx-auto w-fit rounded-[100px] bg-[#101010] px-3 py-2 text-xs text-white shadow-sm">
           {saveError || cookError}
         </p>
       )}
@@ -554,10 +554,10 @@ export function RecipeDetailClient({
         <MotionButton
           onClick={toggleStar}
           whileTap={{ scale: 0.94 }}
-          className={`rounded-xl border px-4 py-3 text-sm font-medium ${
+          className={`rounded-[100px] border px-4 py-3 text-sm font-medium shadow-brand ${
             starred
               ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
-              : "border-[#E8E6E0] text-[#1A1D1B]"
+              : "border-[#E8E6E0] text-[#101010]"
           }`}
         >
           <motion.span
@@ -576,14 +576,14 @@ export function RecipeDetailClient({
           disabled={cooking}
           animate={justCooked ? { scale: [1, 1.08, 1] } : { scale: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="rounded-xl bg-[#1B4332] px-4 py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
+          className="rounded-[100px] bg-[#1B4332] px-4 py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
         >
           {cooking ? "Logging..." : justCooked ? "✓ Logged!" : "I cooked this"}
         </MotionButton>
       </div>
 
       <SheetModal open={showCosign} onClose={() => submitCosign(false)}>
-        <h3 className="text-lg font-semibold text-[#1A1D1B]">Nice cooking!</h3>
+        <h3 className="text-lg font-semibold text-[#101010]">Nice cooking!</h3>
         <p className="mt-1 text-sm text-[#6B7370]">
           Want to leave a note about how it went?
         </p>
@@ -591,19 +591,19 @@ export function RecipeDetailClient({
           value={cosignNote}
           onChange={(e) => setCosignNote(e.target.value)}
           rows={3}
-          className="mt-3 w-full rounded-xl border border-[#E8E6E0] p-2 text-base"
+          className="mt-3 w-full rounded-[100px] border border-[#E8E6E0] p-2 text-base"
           placeholder="Optional note..."
         />
         <div className="mt-4 flex justify-end gap-2">
           <MotionButton
             onClick={() => submitCosign(false)}
-            className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm text-[#1A1D1B]"
+            className="rounded-[100px] border border-[#E8E6E0] px-4 py-3 text-sm text-[#101010] shadow-brand"
           >
             Skip
           </MotionButton>
           <MotionButton
             onClick={() => submitCosign(true)}
-            className="rounded-xl bg-[#1B4332] px-4 py-3 text-sm font-medium text-white"
+            className="rounded-[100px] bg-[#1B4332] px-4 py-3 text-sm font-medium text-white shadow-brand"
           >
             Share cosign
           </MotionButton>

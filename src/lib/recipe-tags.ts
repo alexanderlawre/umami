@@ -108,7 +108,7 @@ export const DIET_COLORS: Record<string, string> = {
 
 export function dietEmblemClass(diet: string): string | null {
   if (diet === "Omnivore") return null;
-  return DIET_COLORS[diet] ?? "bg-[#EDF3EF] text-[#1A1D1B]";
+  return DIET_COLORS[diet] ?? "bg-[#EDF3EF] text-[#101010]";
 }
 
 // Diets that imply another, broader diet (e.g. Vegan is by definition also

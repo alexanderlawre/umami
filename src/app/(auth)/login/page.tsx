@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
 import { OAuthButtons } from "@/components/oauth-buttons";
@@ -43,10 +44,15 @@ export default function LoginPage() {
   return (
     <main className="flex flex-1 items-center justify-center px-6 py-12">
       <PageTransition className="w-full max-w-sm">
-        <div className="rounded-2xl border border-[#E8E6E0] bg-white p-8 shadow-soft">
-          <h1 className="font-display text-center text-2xl font-bold tracking-tight text-[#1A1D1B]">
-            umami
-          </h1>
+        <div className="rounded-[100px] border border-[#E8E6E0] bg-white p-8 shadow-soft">
+          <Image
+            src="/brand/svg/wordmark-black.svg"
+            alt="umami"
+            width={1698}
+            height={687}
+            className="mx-auto h-10 w-auto"
+            priority
+          />
           <p className="mt-1 text-center text-sm text-[#6B7370]">Welcome back.</p>
 
           <div className="mt-8">
@@ -55,7 +61,7 @@ export default function LoginPage() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-[#1A1D1B]">
+              <label className="block text-sm font-medium text-[#101010]">
                 Email
               </label>
               <input
@@ -63,12 +69,12 @@ export default function LoginPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
             <div>
               <div className="flex items-center justify-between">
-                <label className="block text-sm font-medium text-[#1A1D1B]">
+                <label className="block text-sm font-medium text-[#101010]">
                   Password
                 </label>
                 <Link href="/forgot-password" className="text-xs text-[#2C5A87] underline">
@@ -80,7 +86,7 @@ export default function LoginPage() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
 
@@ -98,7 +104,7 @@ export default function LoginPage() {
             <MotionButton
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
+              className="w-full rounded-[100px] bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
             >
               {loading ? (
                 <span className="inline-flex items-center justify-center gap-2">

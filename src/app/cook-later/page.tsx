@@ -92,7 +92,7 @@ export default async function CookLaterPage() {
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-10">
-      <h1 className="text-2xl font-bold text-[#1A1D1B]">Cook later</h1>
+      <h1 className="text-2xl font-bold text-[#101010]">Cook later</h1>
       <p className="mt-1 text-sm text-[#6B7370]">
         {saved.length}/{SAVED_RECIPE_CAP} saved. Cook one to make room for more.
       </p>

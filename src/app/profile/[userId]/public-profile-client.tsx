@@ -33,7 +33,7 @@ export function PublicProfileClient({
               getInitials(name)
             )}
           </div>
-          <h1 className="text-2xl font-bold text-[#1A1D1B]">{name}</h1>
+          <h1 className="text-2xl font-bold text-[#101010]">{name}</h1>
         </div>
 
         {cookbooks.length === 0 ? (
@@ -43,7 +43,7 @@ export function PublicProfileClient({
             <div key={cookbook.id} className="mt-10">
               <div className="flex items-center gap-3">
                 {cookbook.coverImageUrl && (
-                  <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl bg-[#EDF3EF]">
+                  <div className="h-12 w-12 shrink-0 overflow-hidden rounded-[100px] bg-[#EDF3EF]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={cookbook.coverImageUrl}
@@ -52,7 +52,7 @@ export function PublicProfileClient({
                     />
                   </div>
                 )}
-                <h2 className="text-lg font-semibold text-[#1A1D1B]">{cookbook.name}</h2>
+                <h2 className="text-lg font-semibold text-[#101010]">{cookbook.name}</h2>
               </div>
 
               {cookbook.recipes.length === 0 ? (

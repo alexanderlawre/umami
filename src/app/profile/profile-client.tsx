@@ -126,9 +126,9 @@ export function ProfileClient({
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-10">
       <PageTransition>
-        <h1 className="text-2xl font-bold text-[#1A1D1B]">Profile</h1>
+        <h1 className="text-2xl font-bold text-[#101010]">Profile</h1>
 
-        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
+        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <div className="flex items-center gap-4">
             <MotionButton
               type="button"
@@ -171,7 +171,7 @@ export function ProfileClient({
               className="hidden"
             />
             <div>
-              <p className="text-sm font-medium text-[#1A1D1B]">Profile photo</p>
+              <p className="text-sm font-medium text-[#101010]">Profile photo</p>
               <p className="flex items-center gap-2 text-xs text-[#6B7370]">
                 {uploadingPhoto ? (
                   <>
@@ -186,7 +186,7 @@ export function ProfileClient({
 
           <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <label className="block text-sm font-medium text-[#1A1D1B]">Name</label>
+              <label className="block text-sm font-medium text-[#101010]">Name</label>
               <input
                 type="text"
                 value={name}
@@ -194,11 +194,11 @@ export function ProfileClient({
                   setSaved(false);
                   setName(e.target.value);
                 }}
-                className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-2 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-[#1A1D1B]">Birthday</label>
+              <label className="block text-sm font-medium text-[#101010]">Birthday</label>
               <BirthdayPicker
                 value={birthday}
                 onChange={(next) => {
@@ -224,7 +224,7 @@ export function ProfileClient({
               type="button"
               onClick={save}
               disabled={saving}
-              className="shrink-0 rounded-xl bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+              className="shrink-0 rounded-[100px] bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
             >
               {saving ? (
                 <span className="inline-flex items-center justify-center gap-2">
@@ -242,7 +242,7 @@ export function ProfileClient({
         <CookbooksSection cookbooks={cookbooks} />
 
         <div className="mt-10">
-          <h2 className="text-lg font-semibold text-[#1A1D1B]">Cook archive</h2>
+          <h2 className="text-lg font-semibold text-[#101010]">Cook archive</h2>
           <p className="mt-1 text-sm text-[#6B7370]">
             Private — only you can see this. Recipes you&apos;ve marked as cooked show up here; add
             any of them to a public cookbook above.

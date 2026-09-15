@@ -106,8 +106,8 @@ function CatalogSection({
   }
 
   return (
-    <section className="rounded-2xl border border-[#E8E6E0] bg-white p-5">
-      <h2 className="text-lg font-semibold text-[#1A1D1B]">{title}</h2>
+    <section className="rounded-[100px] border border-[#E8E6E0] bg-white p-5">
+      <h2 className="text-lg font-semibold text-[#101010]">{title}</h2>
       <p className="mt-0.5 text-xs text-[#6B7370]">{description}</p>
 
       <ul className="mt-4 space-y-2">
@@ -116,10 +116,10 @@ function CatalogSection({
           return (
             <li
               key={row.id}
-              className="flex items-center justify-between gap-3 rounded-lg border border-[#E8E6E0] px-3 py-2"
+              className="flex items-center justify-between gap-3 rounded-[100px] border border-[#E8E6E0] px-3 py-2"
             >
               <div>
-                <span className="text-sm text-[#1A1D1B]">{row.name}</span>
+                <span className="text-sm text-[#101010]">{row.name}</span>
                 {inUse && (
                   <span className="ml-2 text-xs text-[#6B7370]">({usageLabel(row)})</span>
                 )}
@@ -138,7 +138,7 @@ function CatalogSection({
                       : "Still in use. Remove references first."
                     : "Remove"
                 }
-                className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
+                className="shrink-0 rounded-[100px] border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] shadow-brand hover:border-red-300 hover:text-red-600 disabled:opacity-50"
               >
                 {deletingId === row.id ? (
                   <span className="inline-flex items-center gap-1.5">
@@ -165,7 +165,7 @@ function CatalogSection({
           type="button"
           onClick={submit}
           disabled={adding || !name.trim()}
-          className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50"
+          className="shrink-0 rounded-[100px] border border-[#E8E6E0] px-3 py-2 text-xs text-[#101010] shadow-brand disabled:opacity-50"
         >
           {adding ? (
             <span className="inline-flex items-center gap-1.5">
@@ -246,8 +246,8 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
   }
 
   return (
-    <section className="rounded-2xl border border-[#E8E6E0] bg-white p-5">
-      <h2 className="text-lg font-semibold text-[#1A1D1B]">Food groups</h2>
+    <section className="rounded-[100px] border border-[#E8E6E0] bg-white p-5">
+      <h2 className="text-lg font-semibold text-[#101010]">Food groups</h2>
       <p className="mt-0.5 text-xs text-[#6B7370]">
         Used for recipe profiling and the onboarding/settings taste sliders. Note: the sliders
         cluster food groups into ~12 broad categories defined in code — a newly added group is
@@ -261,10 +261,10 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
           return (
             <li
               key={row.id}
-              className="flex items-center justify-between gap-3 rounded-lg border border-[#E8E6E0] px-3 py-2"
+              className="flex items-center justify-between gap-3 rounded-[100px] border border-[#E8E6E0] px-3 py-2"
             >
               <div>
-                <span className="text-sm text-[#1A1D1B]">{row.name}</span>
+                <span className="text-sm text-[#101010]">{row.name}</span>
                 <span className="ml-2 rounded-full bg-[#F4F2EC] px-2 py-0.5 text-[10px] uppercase tracking-wide text-[#6B7370]">
                   {row.category}
                 </span>
@@ -278,7 +278,7 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
                 onClick={() => remove(row.id)}
                 disabled={deletingId === row.id}
                 title={inUse ? "Still in use. Removing will also detach it from those references." : "Remove"}
-                className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
+                className="shrink-0 rounded-[100px] border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] shadow-brand hover:border-red-300 hover:text-red-600 disabled:opacity-50"
               >
                 {deletingId === row.id ? (
                   <span className="inline-flex items-center gap-1.5">
@@ -322,7 +322,7 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
           type="button"
           onClick={submit}
           disabled={adding || !name.trim() || !description.trim()}
-          className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50 sm:col-span-2 sm:w-fit"
+          className="shrink-0 rounded-[100px] border border-[#E8E6E0] px-3 py-2 text-xs text-[#101010] shadow-brand disabled:opacity-50 sm:col-span-2 sm:w-fit"
         >
           {adding ? (
             <span className="inline-flex items-center gap-1.5">

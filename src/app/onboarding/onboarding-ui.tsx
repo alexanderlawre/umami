@@ -38,12 +38,12 @@ export function OnboardingShell({
             transition={{ type: "spring", stiffness: 200, damping: 30 }}
           />
         </div>
-        <p className="mt-3 text-xs font-medium uppercase tracking-wide text-[#6B7370]">
+        <p className="mt-3 text-xs font-extralight uppercase tracking-wide text-[#6B7370]">
           Step {step} of {totalSteps}
         </p>
 
         <div className="mt-4 flex-1">
-          <h2 className="text-xl font-bold tracking-tight text-[#1A1D1B]">{title}</h2>
+          <h2 className="text-xl font-bold tracking-tight text-[#101010]">{title}</h2>
           {subtitle && <p className="mt-1 text-sm text-[#6B7370]">{subtitle}</p>}
           <div className="mt-6">{children}</div>
         </div>
@@ -76,7 +76,7 @@ export function ChipGrid({
             className={`rounded-full border px-4 py-2.5 text-sm transition ${
               active
                 ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
-                : "border-[#E8E6E0] bg-white text-[#1A1D1B]"
+                : "border-[#E8E6E0] bg-white text-[#101010]"
             }`}
           >
             {opt.label}
@@ -120,7 +120,7 @@ export function DietCommitmentSlider({
   };
 
   return (
-    <div className="mt-2 rounded-xl bg-[#EDF3EF] p-3">
+    <div className="mt-2 rounded-[100px] bg-[#EDF3EF] p-3">
       <input
         type="range"
         min={0}
@@ -131,14 +131,14 @@ export function DietCommitmentSlider({
         className="w-full accent-[#1B4332]"
         aria-label={`${dietName} commitment level`}
       />
-      <div className="flex justify-between text-[10px] text-[#6B7370]">
+      <div className="flex justify-between text-[10px] font-extralight text-[#6B7370]">
         {COMMITMENT_LEVELS.map((level) => (
           <span key={level} className={level === value ? "font-medium text-[#1B4332]" : ""}>
             {COMMITMENT_LABELS[level]}
           </span>
         ))}
       </div>
-      <p className="mt-1 text-xs text-[#6B7370]">{description[value]}</p>
+      <p className="mt-1 text-xs font-extralight text-[#6B7370]">{description[value]}</p>
     </div>
   );
 }
@@ -165,7 +165,7 @@ export function CategoryItemPicker({
       <select
         value={active?.label ?? ""}
         onChange={(e) => setActiveLabel(e.target.value)}
-        className="w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+        className="w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
       >
         {groups.map((g) => {
           const count = g.options.filter((o) => selected.includes(o.value)).length;
@@ -198,7 +198,7 @@ export function SliderRow({
   return (
     <div>
       <div className="flex items-center justify-between text-sm">
-        <span className="text-[#1A1D1B]">{label}</span>
+        <span className="text-[#101010]">{label}</span>
         <span className="text-[#6B7370]">{value}</span>
       </div>
       <input
@@ -233,12 +233,12 @@ export function CategoryAccordion({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-[#E8E6E0] bg-white p-4 shadow-soft">
+    <div className="rounded-[100px] border border-[#E8E6E0] bg-white p-4 shadow-soft">
       <button
         type="button"
         onClick={onToggleExpanded}
         aria-expanded={expanded}
-        className="flex items-center gap-1.5 text-sm font-semibold text-[#1A1D1B]"
+        className="flex items-center gap-1.5 text-sm font-semibold text-[#101010]"
       >
         <motion.span
           className="inline-block text-xs"
@@ -305,13 +305,13 @@ export function TagInput({
           }}
           placeholder={placeholder}
           disabled={cap !== undefined && value.length >= cap}
-          className="flex-1 rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332] disabled:opacity-50"
+          className="flex-1 rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332] disabled:opacity-50"
         />
         <MotionButton
           type="button"
           onClick={onAdd}
           disabled={cap !== undefined && value.length >= cap}
-          className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium disabled:opacity-50"
+          className="rounded-[100px] border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium shadow-brand disabled:opacity-50"
         >
           Add
         </MotionButton>
@@ -321,7 +321,7 @@ export function TagInput({
           {value.map((v) => (
             <span
               key={v}
-              className="flex items-center gap-1 rounded-full bg-[#EDF3EF] px-3 py-1 text-xs text-[#1A1D1B]"
+              className="flex items-center gap-1 rounded-full bg-[#EDF3EF] px-3 py-1 text-xs text-[#101010]"
             >
               {v}
               <MotionButton

@@ -67,7 +67,7 @@ export function ChartLegend({ series }: { series: { label: string; color: string
   return (
     <div className="mt-3 flex flex-wrap items-center gap-4">
       {series.map((s) => (
-        <span key={s.label} className="flex items-center gap-1.5 text-xs text-[#6B7370]">
+        <span key={s.label} className="flex items-center gap-1.5 text-xs font-extralight text-[#6B7370]">
           <span className="h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: s.color }} />
           {s.label}
         </span>

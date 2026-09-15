@@ -29,7 +29,7 @@ export default async function AdminPreferencesPage() {
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-10">
-      <h1 className="text-2xl font-bold text-[#1A1D1B]">Preferences</h1>
+      <h1 className="text-2xl font-bold text-[#101010]">Preferences</h1>
       <p className="mt-1 text-sm text-[#6B7370]">
         Manage the diet, allergen, cuisine, and food-group options users choose from during
         onboarding and in Settings. Adding an option here makes it available everywhere

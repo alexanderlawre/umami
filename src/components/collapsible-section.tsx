@@ -17,12 +17,12 @@ export function CollapsibleSection({
   const [expanded, setExpanded] = useState(defaultExpanded);
 
   return (
-    <div className="rounded-2xl border border-[#E8E6E0] bg-white">
+    <div className="rounded-[100px] border border-[#E8E6E0] bg-white">
       <button
         type="button"
         onClick={() => setExpanded((v) => !v)}
         aria-expanded={expanded}
-        className="flex w-full cursor-pointer items-center justify-between px-5 py-4 text-sm font-semibold text-[#1A1D1B]"
+        className="flex w-full cursor-pointer items-center justify-between px-5 py-4 text-sm font-semibold text-[#101010]"
       >
         <span>{title}</span>
         <span className="text-xs font-normal text-[#6B7370]">{expanded ? "Hide" : "Show"}</span>
