@@ -51,7 +51,7 @@ export function RecipeCardShell({
   return (
     <div
       onClick={() => router.push(`/recipe/${recipe.slug}`)}
-      className="cursor-pointer overflow-hidden rounded-[100px] border border-[#E8E6E0] bg-white shadow-brand transition"
+      className="cursor-pointer overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-brand transition"
     >
       <div className="relative">
         {recipe.imageUrl ? (

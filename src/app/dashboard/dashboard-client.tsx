@@ -329,7 +329,7 @@ function RecipeCard({
       transition={{ type: "spring", stiffness: 300, damping: 28, delay: (index ?? 0) * 0.06 }}
       whileHover={{ y: -6 }}
       onClick={() => router.push(`/recipe/${recipe.slug}`)}
-      className="cursor-pointer overflow-hidden rounded-[100px] border border-[#E8E6E0] bg-white shadow-brand"
+      className="cursor-pointer overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-brand"
     >
       {popKey === undefined ? (
         innerContent

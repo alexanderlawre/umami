@@ -155,7 +155,8 @@ body {
   background: linear-gradient(180deg, #efefef 0%, #f3f1ea 100%);
 }
 
-/* Signature offset shadow for all buttons and recipe cards. */
+/* Signature offset shadow for all buttons and recipe cards. Values are
+   1/3 of the original design spec (X:-4 Y:-6 Blur:5 Spread:4 Opacity:10%). */
 .shadow-brand {
-  box-shadow: -4px -6px 5px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: -1.33px -2px 1.67px 1.33px rgba(0, 0, 0, 0.033);
 }
