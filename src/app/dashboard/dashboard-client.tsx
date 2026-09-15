@@ -125,7 +125,7 @@ function StarButton({
         </motion.svg>
       </MotionButton>
       {error ? (
-        <p className="absolute top-11 w-40 rounded-lg bg-[#1A1D1B] px-2 py-1 text-xs text-white shadow-sm">
+        <p className="absolute top-11 w-40 rounded-lg bg-[#101010] px-2 py-1 text-xs text-white shadow-sm">
           {error}
         </p>
       ) : null}

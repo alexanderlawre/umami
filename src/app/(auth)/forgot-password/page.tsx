@@ -47,7 +47,7 @@ export default function ForgotPasswordPage() {
           </p>
 
           {submitted ? (
-            <p className="mt-8 rounded-xl border border-[#E8E6E0] bg-white px-4 py-3 text-sm text-[#1A1D1B]">
+            <p className="mt-8 rounded-xl border border-[#E8E6E0] bg-white px-4 py-3 text-sm text-[#101010]">
               If that email has an account, we&apos;ve sent a password reset link. Check your inbox.
             </p>
           ) : (
@@ -70,7 +70,7 @@ export default function ForgotPasswordPage() {
               <MotionButton
                 type="submit"
                 disabled={loading}
-                className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+                className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
               >
                 {loading ? (
                   <span className="inline-flex items-center justify-center gap-2">

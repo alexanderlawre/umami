@@ -160,7 +160,7 @@ export function SubmissionsClient({
 
       {reviewing && (
         <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/40 p-4 sm:p-8">
-          <div className="w-full max-w-2xl rounded-2xl bg-[#FBFAF7] p-6 shadow-xl">
+          <div className="w-full max-w-2xl rounded-2xl bg-[#EFEFEF] p-6 shadow-xl">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-semibold text-[#101010]">Review submission</h2>
               <button
@@ -199,7 +199,7 @@ export function SubmissionsClient({
                     type="button"
                     onClick={() => setRejecting(true)}
                     disabled={busy}
-                    className="flex-1 rounded-xl border border-red-300 py-3 text-sm font-medium text-red-700 disabled:opacity-50"
+                    className="flex-1 rounded-xl border border-red-300 py-3 text-sm font-medium text-red-700 shadow-brand disabled:opacity-50"
                   >
                     {busy ? <LoadingOrb size={20} /> : "Reject"}
                   </button>
@@ -207,7 +207,7 @@ export function SubmissionsClient({
                     type="button"
                     onClick={approve}
                     disabled={busy}
-                    className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white disabled:opacity-50"
+                    className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
                   >
                     {busy ? (
                       <span className="inline-flex items-center justify-center gap-2">
@@ -224,7 +224,7 @@ export function SubmissionsClient({
                     type="button"
                     onClick={() => setRejecting(false)}
                     disabled={busy}
-                    className="flex-1 rounded-xl border border-[#E8E6E0] py-3 text-sm font-medium text-[#1A1D1B] disabled:opacity-50"
+                    className="flex-1 rounded-xl border border-[#E8E6E0] py-3 text-sm font-medium text-[#101010] shadow-brand disabled:opacity-50"
                   >
                     {busy ? <LoadingOrb size={20} /> : "Back"}
                   </button>
@@ -232,7 +232,7 @@ export function SubmissionsClient({
                     type="button"
                     onClick={reject}
                     disabled={busy}
-                    className="flex-1 rounded-xl bg-red-700 py-3 text-sm font-medium text-white disabled:opacity-50"
+                    className="flex-1 rounded-xl bg-red-700 py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
                   >
                     {busy ? (
                       <span className="inline-flex items-center justify-center gap-2">

@@ -102,7 +102,7 @@ export function CookbooksSection({ cookbooks }: { cookbooks: CookbookSummary[] }
             type="button"
             onClick={createCookbook}
             disabled={saving || !name.trim()}
-            className="shrink-0 rounded-xl bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+            className="shrink-0 rounded-xl bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
           >
             {saving ? <LoadingOrb size={20} theme="dark" /> : "Create"}
           </MotionButton>
@@ -113,7 +113,7 @@ export function CookbooksSection({ cookbooks }: { cookbooks: CookbookSummary[] }
               setError(null);
               setName("");
             }}
-            className="shrink-0 rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#1A1D1B]"
+            className="shrink-0 rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#101010] shadow-brand"
           >
             Cancel
           </MotionButton>
@@ -122,7 +122,7 @@ export function CookbooksSection({ cookbooks }: { cookbooks: CookbookSummary[] }
         <MotionButton
           type="button"
           onClick={() => setCreating(true)}
-          className="mt-4 rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#1A1D1B]"
+          className="mt-4 rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#101010] shadow-brand"
         >
           + New cookbook
         </MotionButton>

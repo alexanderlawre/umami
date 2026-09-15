@@ -167,7 +167,7 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
           <MotionButton
             type="button"
             onClick={() => router.push("/onboarding/preferences")}
-            className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#1A1D1B]"
+            className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#101010] shadow-brand"
           >
             Back
           </MotionButton>
@@ -175,7 +175,7 @@ export function PersonalizeClient({ foodGroups }: { foodGroups: FoodGroup[] }) {
             type="button"
             onClick={finish}
             disabled={submitting}
-            className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
+            className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
           >
             {submitting ? "Saving..." : "Finish"}
           </MotionButton>

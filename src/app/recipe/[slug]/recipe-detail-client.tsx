@@ -545,7 +545,7 @@ export function RecipeDetailClient({
       )}
 
       {(saveError || cookError) && (
-        <p className="fixed inset-x-0 bottom-20 mx-auto w-fit rounded-lg bg-[#1A1D1B] px-3 py-2 text-xs text-white shadow-sm">
+        <p className="fixed inset-x-0 bottom-20 mx-auto w-fit rounded-lg bg-[#101010] px-3 py-2 text-xs text-white shadow-sm">
           {saveError || cookError}
         </p>
       )}
@@ -554,7 +554,7 @@ export function RecipeDetailClient({
         <MotionButton
           onClick={toggleStar}
           whileTap={{ scale: 0.94 }}
-          className={`rounded-xl border px-4 py-3 text-sm font-medium ${
+          className={`rounded-xl border px-4 py-3 text-sm font-medium shadow-brand ${
             starred
               ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
               : "border-[#E8E6E0] text-[#101010]"
@@ -576,7 +576,7 @@ export function RecipeDetailClient({
           disabled={cooking}
           animate={justCooked ? { scale: [1, 1.08, 1] } : { scale: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="rounded-xl bg-[#1B4332] px-4 py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
+          className="rounded-xl bg-[#1B4332] px-4 py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
         >
           {cooking ? "Logging..." : justCooked ? "✓ Logged!" : "I cooked this"}
         </MotionButton>
@@ -597,13 +597,13 @@ export function RecipeDetailClient({
         <div className="mt-4 flex justify-end gap-2">
           <MotionButton
             onClick={() => submitCosign(false)}
-            className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm text-[#1A1D1B]"
+            className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm text-[#101010] shadow-brand"
           >
             Skip
           </MotionButton>
           <MotionButton
             onClick={() => submitCosign(true)}
-            className="rounded-xl bg-[#1B4332] px-4 py-3 text-sm font-medium text-white"
+            className="rounded-xl bg-[#1B4332] px-4 py-3 text-sm font-medium text-white shadow-brand"
           >
             Share cosign
           </MotionButton>

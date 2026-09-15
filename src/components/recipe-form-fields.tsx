@@ -71,7 +71,7 @@ export function AddCuisineInline({ onCreated }: { onCreated: (cuisine: EditorCui
           type="button"
           onClick={submit}
           disabled={adding || !name.trim()}
-          className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50"
+          className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#101010] shadow-brand disabled:opacity-50"
         >
           {adding ? "Adding…" : "+ Add"}
         </button>
@@ -293,7 +293,7 @@ export function RecipeFormFields({
               type="button"
               onClick={onAddCuisine}
               disabled={addingCuisine || !newCuisineName.trim()}
-              className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50"
+              className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#101010] shadow-brand disabled:opacity-50"
             >
               {addingCuisine ? "Adding…" : "+ Add"}
             </button>

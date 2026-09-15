@@ -15,31 +15,31 @@ export default async function AdminLayout({ children }: { children: ReactNode })
         <nav className="mx-auto flex w-full max-w-3xl gap-2 px-6 py-3 text-sm font-medium text-[#6B7370]">
           <Link
             href="/admin"
-            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#101010]"
           >
             Overview
           </Link>
           <Link
             href="/admin/recipes"
-            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#101010]"
           >
             Recipes
           </Link>
           <Link
             href="/admin/preferences"
-            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#101010]"
           >
             Preferences
           </Link>
           <Link
             href="/admin/cookbooks"
-            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#101010]"
           >
             Cookbooks
           </Link>
           <Link
             href="/admin/users"
-            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#1A1D1B]"
+            className="rounded-lg px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:bg-[#EDF3EF] hover:text-[#101010]"
           >
             Users
           </Link>

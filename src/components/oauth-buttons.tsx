@@ -30,7 +30,7 @@ export function OAuthButtons() {
         type="button"
         disabled={pending !== null}
         onClick={() => handleClick("google")}
-        className="flex w-full items-center justify-center gap-2 rounded-xl border border-[#E8E6E0] bg-white py-3 text-sm font-medium text-[#1A1D1B] transition-colors hover:bg-[#EDF3EF] disabled:opacity-50"
+        className="flex w-full items-center justify-center gap-2 rounded-xl border border-[#E8E6E0] bg-white py-3 text-sm font-medium text-[#101010] shadow-brand transition-colors hover:bg-[#EDF3EF] disabled:opacity-50"
       >
         {pending === "google" ? <LoadingOrb size={20} /> : <GoogleIcon />}
         {pending === "google" ? "Redirecting..." : "Continue with Google"}
@@ -39,7 +39,7 @@ export function OAuthButtons() {
         type="button"
         disabled={pending !== null}
         onClick={() => handleClick("apple")}
-        className="flex w-full items-center justify-center gap-2 rounded-xl bg-black py-3 text-sm font-medium text-white transition-colors hover:bg-[#1A1D1B] disabled:opacity-50"
+        className="flex w-full items-center justify-center gap-2 rounded-xl bg-black py-3 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#101010] disabled:opacity-50"
       >
         {pending === "apple" ? <LoadingOrb size={20} theme="dark" /> : <AppleIcon />}
         {pending === "apple" ? "Redirecting..." : "Continue with Apple"}

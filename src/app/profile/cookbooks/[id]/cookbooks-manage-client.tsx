@@ -239,7 +239,7 @@ export function CookbookManageClient({
               type="button"
               onClick={saveName}
               disabled={savingName}
-              className="shrink-0 rounded-xl bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+              className="shrink-0 rounded-xl bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
             >
               {savingName ? "Saving..." : "Save name"}
             </MotionButton>
@@ -263,7 +263,7 @@ export function CookbookManageClient({
                     type="button"
                     onClick={() => addRecipe(recipe.id)}
                     disabled={addingRecipeId === recipe.id}
-                    className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-1.5 text-xs font-medium text-[#1A1D1B] disabled:opacity-50"
+                    className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-1.5 text-xs font-medium text-[#101010] shadow-brand disabled:opacity-50"
                   >
                     {addingRecipeId === recipe.id ? "Adding..." : "Add"}
                   </MotionButton>
@@ -298,7 +298,7 @@ export function CookbookManageClient({
             type="button"
             onClick={deleteCookbook}
             disabled={deleting}
-            className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#B23A32] transition-colors hover:bg-[#EDF3EF] disabled:opacity-50"
+            className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#B23A32] shadow-brand transition-colors hover:bg-[#EDF3EF] disabled:opacity-50"
           >
             {deleting ? "Deleting..." : "Delete cookbook"}
           </MotionButton>

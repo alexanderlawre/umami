@@ -311,7 +311,7 @@ export function TagInput({
           type="button"
           onClick={onAdd}
           disabled={cap !== undefined && value.length >= cap}
-          className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium disabled:opacity-50"
+          className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium shadow-brand disabled:opacity-50"
         >
           Add
         </MotionButton>

@@ -138,7 +138,7 @@ function CatalogSection({
                       : "Still in use. Remove references first."
                     : "Remove"
                 }
-                className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
+                className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] shadow-brand hover:border-red-300 hover:text-red-600 disabled:opacity-50"
               >
                 {deletingId === row.id ? (
                   <span className="inline-flex items-center gap-1.5">
@@ -165,7 +165,7 @@ function CatalogSection({
           type="button"
           onClick={submit}
           disabled={adding || !name.trim()}
-          className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50"
+          className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#101010] shadow-brand disabled:opacity-50"
         >
           {adding ? (
             <span className="inline-flex items-center gap-1.5">
@@ -278,7 +278,7 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
                 onClick={() => remove(row.id)}
                 disabled={deletingId === row.id}
                 title={inUse ? "Still in use. Removing will also detach it from those references." : "Remove"}
-                className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
+                className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] shadow-brand hover:border-red-300 hover:text-red-600 disabled:opacity-50"
               >
                 {deletingId === row.id ? (
                   <span className="inline-flex items-center gap-1.5">
@@ -322,7 +322,7 @@ function FoodGroupSection({ items }: { items: FoodGroupRow[] }) {
           type="button"
           onClick={submit}
           disabled={adding || !name.trim() || !description.trim()}
-          className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50 sm:col-span-2 sm:w-fit"
+          className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#101010] shadow-brand disabled:opacity-50 sm:col-span-2 sm:w-fit"
         >
           {adding ? (
             <span className="inline-flex items-center gap-1.5">

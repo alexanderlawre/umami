@@ -334,7 +334,7 @@ export function PersonalizationForm({
             type="button"
             onClick={save}
             disabled={saving}
-            className="rounded-xl bg-[#1B4332] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+            className="rounded-xl bg-[#1B4332] px-5 py-3 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
           >
             {saving ? "Saving..." : "Save changes"}
           </MotionButton>
