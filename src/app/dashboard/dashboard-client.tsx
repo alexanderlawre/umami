@@ -243,7 +243,7 @@ function RecipeCard({
           // browsers can drop a parent's border-radius clip on a
           // transformed/animating ancestor, which was letting the image's
           // top corners flash square during hover/enter.
-          <div className="relative h-40 w-full overflow-hidden rounded-t-lg">
+          <div className="relative h-40 w-full overflow-hidden rounded-t-[25px]">
             <Image
               src={recipe.imageUrl}
               alt={recipe.title}
@@ -335,7 +335,7 @@ function RecipeCard({
       transition={{ type: "spring", stiffness: 300, damping: 28, delay: (index ?? 0) * 0.06 }}
       whileHover={{ y: -6 }}
       onClick={() => router.push(`/recipe/${recipe.slug}`)}
-      className="cursor-pointer overflow-hidden rounded-lg border border-[#E8E6E0] bg-white shadow-brand"
+      className="cursor-pointer overflow-hidden rounded-[25px] border border-[#E8E6E0] bg-white shadow-brand"
     >
       {popKey === undefined ? (
         innerContent
