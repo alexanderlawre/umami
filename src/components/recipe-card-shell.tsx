@@ -51,11 +51,17 @@ export function RecipeCardShell({
   return (
     <div
       onClick={() => router.push(`/recipe/${recipe.slug}`)}
-      className="cursor-pointer overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white shadow-brand transition"
+      className="cursor-pointer overflow-hidden rounded-lg border border-[#E8E6E0] bg-white shadow-brand transition"
     >
       <div className="relative">
         {recipe.imageUrl ? (
-          <div className="relative h-40 w-full">
+          // overflow-hidden + rounded-t-lg applied directly here (not just
+          // relying on the outer card's overflow-hidden) because this card
+          // animates (Framer Motion hover-lift / enter transition) —
+          // browsers can drop a parent's border-radius clip on a
+          // transformed/animating ancestor, which was letting the image's
+          // top corners flash square during hover/enter.
+          <div className="relative h-40 w-full overflow-hidden rounded-t-lg">
             <Image
               src={recipe.imageUrl}
               alt={recipe.title}
