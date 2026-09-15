@@ -33,7 +33,7 @@ export function MySubmissions({ submissions }: { submissions: SubmissionRow[] })
   return (
     <div>
       <h2 className="text-sm font-semibold text-[#101010]">Your submissions</h2>
-      <div className="mt-2 rounded-[100px] border border-[#E8E6E0] bg-white px-4">
+      <div className="mt-2 rounded-2xl border border-[#E8E6E0] bg-white px-4">
         {submissions.map((s) => (
           <div
             key={s.id}

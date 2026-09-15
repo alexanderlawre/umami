@@ -31,7 +31,7 @@ export function SheetModal({
           onClick={onClose}
         >
           <motion.div
-            className={`w-full max-w-sm rounded-t-[100px] bg-white px-5 pt-5 pb-safe-5 shadow-lifted sm:rounded-[100px] ${panelClassName}`}
+            className={`w-full max-w-sm rounded-t-2xl bg-white px-5 pt-5 pb-safe-5 shadow-lifted sm:rounded-2xl ${panelClassName}`}
             onClick={(e) => e.stopPropagation()}
             initial={{ opacity: 0, y: 40, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}

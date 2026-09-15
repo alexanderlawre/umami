@@ -17,7 +17,7 @@ export function CollapsibleSection({
   const [expanded, setExpanded] = useState(defaultExpanded);
 
   return (
-    <div className="rounded-[100px] border border-[#E8E6E0] bg-white">
+    <div className="rounded-2xl border border-[#E8E6E0] bg-white">
       <button
         type="button"
         onClick={() => setExpanded((v) => !v)}

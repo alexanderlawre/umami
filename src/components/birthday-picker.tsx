@@ -18,7 +18,7 @@ const MONTHS = [
 ];
 
 const selectClass =
-  "mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]";
+  "mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]";
 const labelClass = "block text-sm font-medium text-[#101010]";
 
 function daysInMonth(year: number | null, month: number | null) {

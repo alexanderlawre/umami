@@ -63,9 +63,9 @@ export function CookbooksSection({ cookbooks }: { cookbooks: CookbookSummary[] }
             <Link
               key={cookbook.id}
               href={`/profile/cookbooks/${cookbook.id}`}
-              className="flex items-center gap-4 overflow-hidden rounded-[100px] border border-[#E8E6E0] bg-white p-4 shadow-soft transition hover:shadow-lifted"
+              className="flex items-center gap-4 overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white p-4 shadow-soft transition hover:shadow-lifted"
             >
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-[100px] bg-[#EDF3EF] text-xs text-[#6B7370]">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#EDF3EF] text-xs text-[#6B7370]">
                 {cookbook.coverImageUrl ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -96,13 +96,13 @@ export function CookbooksSection({ cookbooks }: { cookbooks: CookbookSummary[] }
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Cookbook name"
-            className="w-full max-w-xs rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+            className="w-full max-w-xs rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
           />
           <MotionButton
             type="button"
             onClick={createCookbook}
             disabled={saving || !name.trim()}
-            className="shrink-0 rounded-[100px] bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+            className="shrink-0 rounded-xl bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
           >
             {saving ? <LoadingOrb size={20} theme="dark" /> : "Create"}
           </MotionButton>
@@ -113,7 +113,7 @@ export function CookbooksSection({ cookbooks }: { cookbooks: CookbookSummary[] }
               setError(null);
               setName("");
             }}
-            className="shrink-0 rounded-[100px] border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#101010] shadow-brand"
+            className="shrink-0 rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#1A1D1B]"
           >
             Cancel
           </MotionButton>
@@ -122,7 +122,7 @@ export function CookbooksSection({ cookbooks }: { cookbooks: CookbookSummary[] }
         <MotionButton
           type="button"
           onClick={() => setCreating(true)}
-          className="mt-4 rounded-[100px] border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#101010] shadow-brand"
+          className="mt-4 rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#1A1D1B]"
         >
           + New cookbook
         </MotionButton>

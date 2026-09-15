@@ -20,7 +20,7 @@ export function ExtraInsights({
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white">
+    <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white">
       <button
         type="button"
         onClick={() => setExpanded((v) => !v)}

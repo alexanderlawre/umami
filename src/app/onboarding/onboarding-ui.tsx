@@ -120,7 +120,7 @@ export function DietCommitmentSlider({
   };
 
   return (
-    <div className="mt-2 rounded-[100px] bg-[#EDF3EF] p-3">
+    <div className="mt-2 rounded-xl bg-[#EDF3EF] p-3">
       <input
         type="range"
         min={0}
@@ -165,7 +165,7 @@ export function CategoryItemPicker({
       <select
         value={active?.label ?? ""}
         onChange={(e) => setActiveLabel(e.target.value)}
-        className="w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+        className="w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
       >
         {groups.map((g) => {
           const count = g.options.filter((o) => selected.includes(o.value)).length;
@@ -233,7 +233,7 @@ export function CategoryAccordion({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-[100px] border border-[#E8E6E0] bg-white p-4 shadow-soft">
+    <div className="rounded-2xl border border-[#E8E6E0] bg-white p-4 shadow-soft">
       <button
         type="button"
         onClick={onToggleExpanded}
@@ -305,13 +305,13 @@ export function TagInput({
           }}
           placeholder={placeholder}
           disabled={cap !== undefined && value.length >= cap}
-          className="flex-1 rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332] disabled:opacity-50"
+          className="flex-1 rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332] disabled:opacity-50"
         />
         <MotionButton
           type="button"
           onClick={onAdd}
           disabled={cap !== undefined && value.length >= cap}
-          className="rounded-[100px] border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium shadow-brand disabled:opacity-50"
+          className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium disabled:opacity-50"
         >
           Add
         </MotionButton>

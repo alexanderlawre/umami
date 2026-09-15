@@ -40,7 +40,7 @@ export function SubmissionPreview({ submission }: { submission: SubmissionPrevie
   return (
     <div className="space-y-5">
       {submission.imageUrl && (
-        <div className="h-48 w-full overflow-hidden rounded-[100px] bg-[#EDF3EF]">
+        <div className="h-48 w-full overflow-hidden rounded-xl bg-[#EDF3EF]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={submission.imageUrl} alt="" className="h-full w-full object-cover" />
         </div>

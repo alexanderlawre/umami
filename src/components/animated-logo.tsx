@@ -22,7 +22,7 @@ export function AnimatedLogo() {
   return (
     <Link
       href="/dashboard"
-      className={`-my-2 -ml-1 flex items-center rounded-[100px] px-1 py-2 ${
+      className={`font-display -my-2 -ml-1 rounded-lg px-1 py-2 text-lg font-bold text-[#1A1D1B] ${
         animate ? "animate-title-intro" : ""
       }`}
     >

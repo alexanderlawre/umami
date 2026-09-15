@@ -224,7 +224,7 @@ export function RecipeDetailClient({
       {recipe.imageUrl ? (
         <div className="-mx-6 sm:mx-0">
           <motion.div
-            className="relative h-56 w-full overflow-hidden sm:rounded-[100px]"
+            className="relative h-56 w-full overflow-hidden sm:rounded-2xl"
             initial={{ opacity: 0, scale: 1.04 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -327,7 +327,7 @@ export function RecipeDetailClient({
       )}
 
       {hasMacros && (
-        <section className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-4">
+        <section className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-4">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-semibold text-[#101010]">Nutrition</h2>
             <span className="text-[11px] font-extralight text-[#6B7370]">
@@ -381,7 +381,7 @@ export function RecipeDetailClient({
                   </div>
                 </>
               ) : (
-                <div className="col-span-3 flex items-center justify-center gap-1.5 rounded-[100px] bg-[#EDF3EF] px-2 py-2">
+                <div className="col-span-3 flex items-center justify-center gap-1.5 rounded-xl bg-[#EDF3EF] px-2 py-2">
                   <LockIcon className="h-3 w-3 shrink-0 text-[#6B7370]" />
                   <p className="text-[11px] text-[#6B7370]">
                     Unlock fat, fiber & cholesterol with Premium
@@ -490,7 +490,7 @@ export function RecipeDetailClient({
                       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="mt-2 rounded-[100px] border border-[#E8E6E0] bg-white p-3">
+                      <div className="mt-2 rounded-xl border border-[#E8E6E0] bg-white p-3">
                         <p className="text-sm font-semibold text-[#101010]">{sub.title}</p>
                         <ul className="mt-2 space-y-1">
                           {sub.ingredients.map((ing, i) => (
@@ -545,7 +545,7 @@ export function RecipeDetailClient({
       )}
 
       {(saveError || cookError) && (
-        <p className="fixed inset-x-0 bottom-20 mx-auto w-fit rounded-[100px] bg-[#101010] px-3 py-2 text-xs text-white shadow-sm">
+        <p className="fixed inset-x-0 bottom-20 mx-auto w-fit rounded-lg bg-[#1A1D1B] px-3 py-2 text-xs text-white shadow-sm">
           {saveError || cookError}
         </p>
       )}
@@ -554,7 +554,7 @@ export function RecipeDetailClient({
         <MotionButton
           onClick={toggleStar}
           whileTap={{ scale: 0.94 }}
-          className={`rounded-[100px] border px-4 py-3 text-sm font-medium shadow-brand ${
+          className={`rounded-xl border px-4 py-3 text-sm font-medium ${
             starred
               ? "border-[#1B4332] bg-[#EDF3EF] text-[#1B4332]"
               : "border-[#E8E6E0] text-[#101010]"
@@ -576,7 +576,7 @@ export function RecipeDetailClient({
           disabled={cooking}
           animate={justCooked ? { scale: [1, 1.08, 1] } : { scale: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="rounded-[100px] bg-[#1B4332] px-4 py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
+          className="rounded-xl bg-[#1B4332] px-4 py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
         >
           {cooking ? "Logging..." : justCooked ? "✓ Logged!" : "I cooked this"}
         </MotionButton>
@@ -591,19 +591,19 @@ export function RecipeDetailClient({
           value={cosignNote}
           onChange={(e) => setCosignNote(e.target.value)}
           rows={3}
-          className="mt-3 w-full rounded-[100px] border border-[#E8E6E0] p-2 text-base"
+          className="mt-3 w-full rounded-xl border border-[#E8E6E0] p-2 text-base"
           placeholder="Optional note..."
         />
         <div className="mt-4 flex justify-end gap-2">
           <MotionButton
             onClick={() => submitCosign(false)}
-            className="rounded-[100px] border border-[#E8E6E0] px-4 py-3 text-sm text-[#101010] shadow-brand"
+            className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm text-[#1A1D1B]"
           >
             Skip
           </MotionButton>
           <MotionButton
             onClick={() => submitCosign(true)}
-            className="rounded-[100px] bg-[#1B4332] px-4 py-3 text-sm font-medium text-white shadow-brand"
+            className="rounded-xl bg-[#1B4332] px-4 py-3 text-sm font-medium text-white"
           >
             Share cosign
           </MotionButton>

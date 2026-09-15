@@ -314,7 +314,7 @@ export function RecipeEditor({
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/40 p-4 sm:p-8">
-      <div className="w-full max-w-2xl rounded-[100px] bg-[#EFEFEF] p-6 shadow-xl">
+      <div className="w-full max-w-2xl rounded-2xl bg-[#FBFAF7] p-6 shadow-xl">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold text-[#101010]">
             {isCreate ? "New recipe" : `Edit ${recipe!.title}`}
@@ -334,7 +334,7 @@ export function RecipeEditor({
             <div>
               <label className={labelClass()}>Photo</label>
               <div className="flex items-center gap-3">
-                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-[100px] bg-[#EDF3EF]">
+                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-[#EDF3EF]">
                   {imageUrl && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={imageUrl} alt="" className="h-full w-full object-cover" />
@@ -403,7 +403,7 @@ export function RecipeEditor({
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 rounded-[100px] border border-[#E8E6E0] py-3 text-sm font-medium text-[#101010] shadow-brand"
+              className="flex-1 rounded-xl border border-[#E8E6E0] py-3 text-sm font-medium text-[#1A1D1B]"
             >
               Cancel
             </button>
@@ -411,7 +411,7 @@ export function RecipeEditor({
               type="button"
               onClick={handleSubmit}
               disabled={saving}
-              className="flex-1 rounded-[100px] bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
+              className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white disabled:opacity-50"
             >
               {saving ? "Saving…" : isCreate ? "Create recipe" : "Save changes"}
             </button>

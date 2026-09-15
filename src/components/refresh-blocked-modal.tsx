@@ -58,14 +58,14 @@ export function RefreshBlockedModal({
         <button
           type="button"
           onClick={onClose}
-          className="flex-1 rounded-[100px] border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#101010] shadow-brand transition hover:bg-[#EDF3EF]"
+          className="flex-1 rounded-lg border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#1A1D1B] transition hover:bg-[#EDF3EF]"
         >
           Got it
         </button>
         <Link
           href="/premium"
           onClick={onClose}
-          className="flex-1 rounded-[100px] bg-[#1B4332] px-4 py-2.5 text-center text-sm font-medium text-white shadow-brand transition hover:opacity-90"
+          className="flex-1 rounded-lg bg-[#1B4332] px-4 py-2.5 text-center text-sm font-medium text-white transition hover:opacity-90"
         >
           Go Umami+
         </Link>

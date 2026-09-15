@@ -88,7 +88,7 @@ export function AccountSettingsSection({
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
               placeholder="Current password"
-              className="w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+              className="w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
             />
           )}
           <input
@@ -96,7 +96,7 @@ export function AccountSettingsSection({
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
             placeholder="New password (min. 10 characters)"
-            className="w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+            className="w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
           />
         </div>
         <div className="mt-3 flex items-center gap-3">
@@ -104,7 +104,7 @@ export function AccountSettingsSection({
             type="button"
             onClick={changePassword}
             disabled={saving}
-            className="shrink-0 rounded-[100px] bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+            className="shrink-0 rounded-xl bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
           >
             {saving ? (
               <span className="inline-flex items-center justify-center gap-2">
@@ -133,7 +133,7 @@ export function AccountSettingsSection({
           type="button"
           onClick={() => signOut({ callbackUrl: "/login" })}
           whileHover={{ y: -2 }}
-          className="rounded-[100px] border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#B23A32] shadow-brand transition-colors hover:bg-[#EDF3EF]"
+          className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#B23A32] transition-colors hover:bg-[#EDF3EF]"
         >
           Sign out
         </MotionButton>

@@ -141,7 +141,7 @@ export function SubmissionForm({
 
   if (submitted) {
     return (
-      <div className="rounded-[100px] border border-[#E8E6E0] bg-white p-6 text-center">
+      <div className="rounded-2xl border border-[#E8E6E0] bg-white p-6 text-center">
         <p className="text-sm font-medium text-[#101010]">Thanks! Your recipe was submitted.</p>
         <p className="mt-1 text-sm text-[#6B7370]">
           An admin will review it soon. You can track its status above.
@@ -149,7 +149,7 @@ export function SubmissionForm({
         <button
           type="button"
           onClick={() => setSubmitted(false)}
-          className="mt-4 rounded-[100px] border border-[#E8E6E0] px-4 py-2 text-sm font-medium text-[#101010] shadow-brand"
+          className="mt-4 rounded-xl border border-[#E8E6E0] px-4 py-2 text-sm font-medium text-[#1A1D1B]"
         >
           Submit another recipe
         </button>
@@ -158,11 +158,11 @@ export function SubmissionForm({
   }
 
   return (
-    <div className="space-y-5 rounded-[100px] border border-[#E8E6E0] bg-white p-6">
+    <div className="space-y-5 rounded-2xl border border-[#E8E6E0] bg-white p-6">
       <div>
         <label className="mb-1 block text-xs font-medium text-[#6B7370]">Photo (optional)</label>
         <div className="flex items-center gap-3">
-          <div className="h-16 w-16 shrink-0 overflow-hidden rounded-[100px] bg-[#EDF3EF]">
+          <div className="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-[#EDF3EF]">
             {photoPreview && (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={photoPreview} alt="" className="h-full w-full object-cover" />
@@ -214,7 +214,7 @@ export function SubmissionForm({
           type="button"
           onClick={handleSubmit}
           disabled={saving}
-          className="w-full rounded-[100px] bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
+          className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white disabled:opacity-50"
         >
           {saving ? "Submitting…" : "Submit recipe"}
         </button>

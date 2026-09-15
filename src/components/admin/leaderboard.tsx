@@ -15,7 +15,7 @@ export function Leaderboard({
   emptyLabel: string;
 }) {
   return (
-    <section className="rounded-[100px] border border-[#E8E6E0] bg-white p-5">
+    <section className="rounded-2xl border border-[#E8E6E0] bg-white p-5">
       <h2 className="text-sm font-semibold text-[#101010]">{title}</h2>
       {rows.length === 0 ? (
         <p className="mt-3 text-xs text-[#6B7370]">{emptyLabel}</p>

@@ -167,7 +167,7 @@ export function PersonalizationForm({
           dashboard right away.
         </p>
 
-        <div className="mt-8 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+        <div className="mt-8 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <h3 className="text-sm font-semibold text-[#101010]">Any allergies?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
             Pick as many as apply. This is the main safeguard that keeps unsafe recipes off your
@@ -203,7 +203,7 @@ export function PersonalizationForm({
           </div>
         </div>
 
-        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <h3 className="text-sm font-semibold text-[#101010]">Any diets that apply to you?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
             Pick as many as you like. No restrictions is fine too, you can leave this blank.
@@ -236,7 +236,7 @@ export function PersonalizationForm({
           )}
         </div>
 
-        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <h3 className="text-sm font-semibold text-[#101010]">How much heat can you handle?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
             We won&rsquo;t surface anything spicier than this. Recipes we haven&rsquo;t rated for
@@ -255,7 +255,7 @@ export function PersonalizationForm({
           </div>
         </div>
 
-        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <h3 className="text-sm font-semibold text-[#101010]">How much do you eat these?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
             Rarely to constantly. This nudges which recipes we show you first, it never rules
@@ -290,7 +290,7 @@ export function PersonalizationForm({
           </div>
         </div>
 
-        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <label className="block text-sm font-medium text-[#101010]">
             Don&apos;t see something you eat a lot?
           </label>
@@ -302,11 +302,11 @@ export function PersonalizationForm({
               setFeedback(e.target.value);
             }}
             rows={2}
-            className="mt-2 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+            className="mt-2 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
           />
         </div>
 
-        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <label className="block text-sm font-medium text-[#101010]">Favorite cuisines</label>
           <p className="mt-1 text-xs text-[#6B7370]">
             Type at least {SUGGESTED_CUISINE_COUNT} if you can, more if you want. This shows
@@ -334,7 +334,7 @@ export function PersonalizationForm({
             type="button"
             onClick={save}
             disabled={saving}
-            className="rounded-[100px] bg-[#1B4332] px-5 py-3 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+            className="rounded-xl bg-[#1B4332] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
           >
             {saving ? "Saving..." : "Save changes"}
           </MotionButton>

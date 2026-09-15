@@ -112,7 +112,7 @@ export default function SignupPage() {
   return (
     <main className="flex flex-1 items-center justify-center px-6 py-12">
       <PageTransition className="w-full max-w-sm">
-        <div className="rounded-[100px] border border-[#E8E6E0] bg-white p-8 shadow-soft">
+        <div className="rounded-2xl border border-[#E8E6E0] bg-white p-8 shadow-soft">
           <Image
             src="/brand/svg/wordmark-black.svg"
             alt="umami"
@@ -169,7 +169,7 @@ export default function SignupPage() {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
             <div>
@@ -181,7 +181,7 @@ export default function SignupPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
             </div>
             <div>
@@ -194,7 +194,7 @@ export default function SignupPage() {
                 minLength={10}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
               <p className="mt-1 text-xs text-[#6B7370]">At least 10 characters.</p>
             </div>
@@ -208,7 +208,7 @@ export default function SignupPage() {
                 minLength={10}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="mt-1 w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+                className="mt-1 w-full rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base transition-shadow duration-200 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
               />
               {/* Live feedback as the user types, instead of only surfacing
                   a mismatch after they submit. */}
@@ -246,7 +246,7 @@ export default function SignupPage() {
             <MotionButton
               type="submit"
               disabled={loading}
-              className="w-full rounded-[100px] bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand disabled:opacity-50"
+              className="w-full rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow disabled:opacity-50"
             >
               {loading ? (
                 <span className="inline-flex items-center justify-center gap-2">

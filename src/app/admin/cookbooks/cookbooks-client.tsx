@@ -108,7 +108,7 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
   }
 
   return (
-    <section className="rounded-[100px] border border-[#E8E6E0] bg-white p-5">
+    <section className="rounded-2xl border border-[#E8E6E0] bg-white p-5">
       <h2 className="text-lg font-semibold text-[#101010]">Collections</h2>
       <p className="mt-0.5 text-xs text-[#6B7370]">
         Only cookbooks with at least one eligible recipe for a given user appear on their
@@ -119,7 +119,7 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
         {rows.map((row) => (
           <li
             key={row.id}
-            className="flex items-center justify-between gap-3 rounded-[100px] border border-[#E8E6E0] px-3 py-2"
+            className="flex items-center justify-between gap-3 rounded-lg border border-[#E8E6E0] px-3 py-2"
           >
             {editingId === row.id ? (
               <div className="flex flex-1 items-center gap-2">
@@ -137,14 +137,14 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
                   type="button"
                   onClick={() => saveRename(row.id)}
                   disabled={savingRename || !editingName.trim()}
-                  className="shrink-0 rounded-[100px] border border-[#1B4332] bg-[#EDF3EF] px-2 py-1 text-xs text-[#1B4332] shadow-brand disabled:opacity-50"
+                  className="shrink-0 rounded-lg border border-[#1B4332] bg-[#EDF3EF] px-2 py-1 text-xs text-[#1B4332] disabled:opacity-50"
                 >
                   {savingRename ? <LoadingOrb size={20} /> : "Save"}
                 </button>
                 <button
                   type="button"
                   onClick={() => setEditingId(null)}
-                  className="shrink-0 rounded-[100px] border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] shadow-brand"
+                  className="shrink-0 rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370]"
                 >
                   Cancel
                 </button>
@@ -168,7 +168,7 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
                 <button
                   type="button"
                   onClick={() => startEdit(row)}
-                  className="rounded-[100px] border border-[#E8E6E0] px-2 py-1 text-xs text-[#101010] shadow-brand"
+                  className="rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#1A1D1B]"
                 >
                   Rename
                 </button>
@@ -176,7 +176,7 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
                   type="button"
                   onClick={() => remove(row.id)}
                   disabled={deletingId === row.id}
-                  className="rounded-[100px] border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] shadow-brand hover:border-red-300 hover:text-red-600 disabled:opacity-50"
+                  className="rounded-lg border border-[#E8E6E0] px-2 py-1 text-xs text-[#6B7370] hover:border-red-300 hover:text-red-600 disabled:opacity-50"
                 >
                   {deletingId === row.id ? (
                     <span className="inline-flex items-center gap-1.5">
@@ -207,7 +207,7 @@ export function CookbooksClient({ cookbooks }: { cookbooks: CookbookRow[] }) {
           type="button"
           onClick={submit}
           disabled={adding || !name.trim()}
-          className="shrink-0 rounded-[100px] border border-[#E8E6E0] px-3 py-2 text-xs text-[#101010] shadow-brand disabled:opacity-50"
+          className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50"
         >
           {adding ? (
             <span className="inline-flex items-center gap-1.5">

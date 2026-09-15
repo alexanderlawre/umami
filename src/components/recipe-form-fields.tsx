@@ -16,7 +16,7 @@ import {
 } from "@/lib/recipe-form-shared";
 
 export function inputClass() {
-  return "w-full rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B4332]";
+  return "w-full rounded-lg border border-[#E8E6E0] bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B4332]";
 }
 
 export function labelClass() {
@@ -58,7 +58,7 @@ export function AddCuisineInline({ onCreated }: { onCreated: (cuisine: EditorCui
   }
 
   return (
-    <div className="rounded-[100px] border border-dashed border-[#E8E6E0] bg-white p-4">
+    <div className="rounded-2xl border border-dashed border-[#E8E6E0] bg-white p-4">
       <label className={labelClass()}>Add a new cuisine</label>
       <div className="flex gap-2">
         <input
@@ -71,7 +71,7 @@ export function AddCuisineInline({ onCreated }: { onCreated: (cuisine: EditorCui
           type="button"
           onClick={submit}
           disabled={adding || !name.trim()}
-          className="shrink-0 rounded-[100px] border border-[#E8E6E0] px-3 py-2 text-xs text-[#101010] shadow-brand disabled:opacity-50"
+          className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50"
         >
           {adding ? "Adding…" : "+ Add"}
         </button>
@@ -293,7 +293,7 @@ export function RecipeFormFields({
               type="button"
               onClick={onAddCuisine}
               disabled={addingCuisine || !newCuisineName.trim()}
-              className="shrink-0 rounded-[100px] border border-[#E8E6E0] px-3 py-2 text-xs text-[#101010] shadow-brand disabled:opacity-50"
+              className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-2 text-xs text-[#1A1D1B] disabled:opacity-50"
             >
               {addingCuisine ? "Adding…" : "+ Add"}
             </button>
@@ -447,7 +447,7 @@ export function RecipeFormFields({
         </div>
         <div className="space-y-2">
           {form.ingredients.map((ing, i) => (
-            <div key={i} className="rounded-[100px] border border-[#E8E6E0] bg-white p-2">
+            <div key={i} className="rounded-lg border border-[#E8E6E0] bg-white p-2">
               <div className="grid grid-cols-[1fr_1fr_2fr] gap-2">
                 <input
                   className={inputClass()}
@@ -516,7 +516,7 @@ export function RecipeFormFields({
         </div>
         <div className="space-y-2">
           {form.steps.map((step, i) => (
-            <div key={i} className="rounded-[100px] border border-[#E8E6E0] bg-white p-2">
+            <div key={i} className="rounded-lg border border-[#E8E6E0] bg-white p-2">
               <textarea
                 rows={2}
                 className={inputClass()}
@@ -566,7 +566,7 @@ export function RecipeFormFields({
         </div>
         <div className="space-y-3">
           {form.subRecipes.map((sub, subIdx) => (
-            <div key={subIdx} className="rounded-[100px] border border-[#E8E6E0] bg-white p-3">
+            <div key={subIdx} className="rounded-lg border border-[#E8E6E0] bg-white p-3">
               <div className="flex items-center gap-2">
                 <input
                   className={inputClass()}

@@ -86,7 +86,7 @@ export function RecipeCardShell({
           {recipe.title}
         </h3>
         {recipe.ingredientItems.length > 0 && (
-          <p className="mt-1 line-clamp-2 text-sm font-extralight text-[#6B7370]">
+          <p className="mt-1 line-clamp-2 text-sm font-normal text-[#6B7370]">
             {recipe.ingredientItems.join(", ")}
           </p>
         )}

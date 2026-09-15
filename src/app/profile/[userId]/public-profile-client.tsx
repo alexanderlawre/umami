@@ -43,7 +43,7 @@ export function PublicProfileClient({
             <div key={cookbook.id} className="mt-10">
               <div className="flex items-center gap-3">
                 {cookbook.coverImageUrl && (
-                  <div className="h-12 w-12 shrink-0 overflow-hidden rounded-[100px] bg-[#EDF3EF]">
+                  <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl bg-[#EDF3EF]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={cookbook.coverImageUrl}

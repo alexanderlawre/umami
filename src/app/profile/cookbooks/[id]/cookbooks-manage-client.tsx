@@ -166,14 +166,14 @@ export function CookbookManageClient({
           Public — visible to other signed-in users on your profile.
         </p>
 
-        <div className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5 shadow-soft">
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <div className="flex items-center gap-4">
             <MotionButton
               type="button"
               onClick={() => fileInputRef.current?.click()}
               disabled={uploadingCover}
               whileHover={{ y: -2 }}
-              className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-[100px] border border-[#E8E6E0] bg-[#EDF3EF] text-xs text-[#6B7370] disabled:opacity-50"
+              className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[#E8E6E0] bg-[#EDF3EF] text-xs text-[#6B7370] disabled:opacity-50"
               aria-label="Change cookbook cover"
             >
               <AnimatePresence mode="wait" initial={false}>
@@ -231,7 +231,7 @@ export function CookbookManageClient({
                 setNameSaved(false);
                 setName(e.target.value);
               }}
-              className="mt-2 w-full max-w-sm rounded-[100px] border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
+              className="mt-2 w-full max-w-sm rounded-xl border border-[#E8E6E0] bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
             />
           </div>
           <div className="mt-3 flex items-center gap-3">
@@ -239,7 +239,7 @@ export function CookbookManageClient({
               type="button"
               onClick={saveName}
               disabled={savingName}
-              className="shrink-0 rounded-[100px] bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white shadow-brand transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
+              className="shrink-0 rounded-xl bg-[#1B4332] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#2D6A4F] disabled:opacity-50"
             >
               {savingName ? "Saving..." : "Save name"}
             </MotionButton>
@@ -256,14 +256,14 @@ export function CookbookManageClient({
               {availableToAdd.map((recipe) => (
                 <div
                   key={recipe.id}
-                  className="flex items-center justify-between rounded-[100px] border border-[#E8E6E0] bg-white px-4 py-3"
+                  className="flex items-center justify-between rounded-xl border border-[#E8E6E0] bg-white px-4 py-3"
                 >
                   <span className="text-sm text-[#101010]">{recipe.title}</span>
                   <MotionButton
                     type="button"
                     onClick={() => addRecipe(recipe.id)}
                     disabled={addingRecipeId === recipe.id}
-                    className="shrink-0 rounded-[100px] border border-[#E8E6E0] px-3 py-1.5 text-xs font-medium text-[#101010] shadow-brand disabled:opacity-50"
+                    className="shrink-0 rounded-lg border border-[#E8E6E0] px-3 py-1.5 text-xs font-medium text-[#1A1D1B] disabled:opacity-50"
                   >
                     {addingRecipeId === recipe.id ? "Adding..." : "Add"}
                   </MotionButton>
@@ -298,7 +298,7 @@ export function CookbookManageClient({
             type="button"
             onClick={deleteCookbook}
             disabled={deleting}
-            className="rounded-[100px] border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#B23A32] shadow-brand transition-colors hover:bg-[#EDF3EF] disabled:opacity-50"
+            className="rounded-xl border border-[#E8E6E0] px-4 py-2.5 text-sm font-medium text-[#B23A32] transition-colors hover:bg-[#EDF3EF] disabled:opacity-50"
           >
             {deleting ? "Deleting..." : "Delete cookbook"}
           </MotionButton>

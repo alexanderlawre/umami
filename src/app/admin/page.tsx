@@ -149,7 +149,7 @@ export default async function AdminPage() {
       <h1 className="text-2xl font-bold text-[#101010]">Overview</h1>
       <p className="mt-1 text-sm text-[#6B7370]">Usage stats across the catalog and userbase.</p>
 
-      <section className="mt-6 rounded-[100px] border border-[#E8E6E0] bg-white p-5">
+      <section className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5">
         <div className="flex items-center justify-between gap-2">
           <h2 className="text-sm font-semibold text-[#101010]">Users</h2>
           <span className="text-xs text-[#6B7370]">Last {SIGNUP_WINDOW_DAYS} days</span>

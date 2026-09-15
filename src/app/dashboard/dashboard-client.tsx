@@ -125,7 +125,7 @@ function StarButton({
         </motion.svg>
       </MotionButton>
       {error ? (
-        <p className="absolute top-11 w-40 rounded-[100px] bg-[#101010] px-2 py-1 text-xs text-white shadow-sm">
+        <p className="absolute top-11 w-40 rounded-lg bg-[#1A1D1B] px-2 py-1 text-xs text-white shadow-sm">
           {error}
         </p>
       ) : null}
@@ -277,7 +277,7 @@ function RecipeCard({
           {recipe.title}
         </h3>
         {recipe.ingredientItems.length > 0 && (
-          <p className="mt-1 line-clamp-2 text-sm font-extralight text-[#6B7370]">
+          <p className="mt-1 line-clamp-2 text-sm font-normal text-[#6B7370]">
             {recipe.ingredientItems.join(", ")}
           </p>
         )}
@@ -507,7 +507,7 @@ function FilterBar({
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <div className="mt-3 space-y-3 rounded-[100px] border border-[#E8E6E0] bg-white p-4 shadow-soft">
+            <div className="mt-3 space-y-3 rounded-2xl border border-[#E8E6E0] bg-white p-4 shadow-soft">
               {foodGroupTags.length > 0 && (
                 <div>
                   <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[#6B7370]">

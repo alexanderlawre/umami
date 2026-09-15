@@ -88,14 +88,14 @@ export function PreferencesClient({
           <MotionButton
             type="button"
             onClick={() => router.back()}
-            className="rounded-[100px] border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#101010] shadow-brand"
+            className="rounded-xl border border-[#E8E6E0] px-4 py-3 text-sm font-medium text-[#1A1D1B]"
           >
             Back
           </MotionButton>
           <MotionButton
             type="button"
             onClick={handleContinue}
-            className="flex-1 rounded-[100px] bg-[#1B4332] py-3 text-sm font-medium text-white shadow-brand"
+            className="flex-1 rounded-xl bg-[#1B4332] py-3 text-sm font-medium text-white shadow-glow"
           >
             Continue
           </MotionButton>

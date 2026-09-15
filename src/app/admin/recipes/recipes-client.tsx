@@ -113,7 +113,7 @@ function CookbookMenu({
       </button>
 
       {open && (
-        <div className="absolute right-0 top-11 z-20 w-56 overflow-hidden rounded-[100px] border border-[#E8E6E0] bg-white py-1.5 shadow-lg">
+        <div className="absolute right-0 top-11 z-20 w-56 overflow-hidden rounded-2xl border border-[#E8E6E0] bg-white py-1.5 shadow-lg">
           {cookbooks.length === 0 && (
             <p className="px-4 py-2 text-xs text-[#6B7370]">No cookbooks yet.</p>
           )}
@@ -129,7 +129,7 @@ function CookbookMenu({
                     type="checkbox"
                     checked={checked}
                     onChange={() => onToggle(cb.id, !checked)}
-                    className="h-4 w-4 rounded-[100px] border-[#E8E6E0]"
+                    className="h-4 w-4 rounded border-[#E8E6E0]"
                   />
                   {cb.name}
                 </label>
@@ -250,7 +250,7 @@ function RecipeRow({
     <div className="flex flex-col gap-2 border-b border-[#E8E6E0] py-3 last:border-0">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <div className="flex min-w-0 flex-1 items-center gap-3">
-          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-[100px] bg-[#EDF3EF]">
+          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-[#EDF3EF]">
             {recipe.imageUrl && (
               <Image src={recipe.imageUrl} alt={recipe.title} fill sizes="48px" className="object-cover" />
             )}
@@ -488,7 +488,7 @@ export function RecipesClient({
             <details
               key={key}
               open={expandAll}
-              className="group rounded-[100px] border border-[#E8E6E0] bg-white"
+              className="group rounded-2xl border border-[#E8E6E0] bg-white"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-[#101010]">
                 <span className="flex items-center gap-2">
@@ -528,7 +528,7 @@ export function RecipesClient({
 
         <details
           open={expandAll}
-          className="group rounded-[100px] border border-[#E8E6E0] bg-white"
+          className="group rounded-2xl border border-[#E8E6E0] bg-white"
         >
           <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-[#101010]">
             <span>Archived</span>
