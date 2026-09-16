@@ -1507,6 +1507,33 @@
         "item": "Worcestershire sauce",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 17,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "steamed white rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 18,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "tajadas (fried sweet plantains)",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 19,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "black beans",
+        "prepNote": "cooked",
+        "optional": false
       }
     ],
     "steps": [
@@ -1574,7 +1601,8 @@
     ],
     "allergenTags": [
       "Sulphites"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with a cold Venezuelan beer (Polar) or a glass of red wine."
   },
   {
     "slug": "empanadas-venezolanas-carne",

@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { logInteraction } from "@/lib/log-interaction";
-import { attributeLabel, dietEmblemClass, visibleDietEmblems } from "@/lib/recipe-tags";
+import {
+  attributeLabel,
+  dietEmblemClass,
+  visibleDietEmblems,
+  COMPLETE_THE_MEAL_COMPONENT,
+} from "@/lib/recipe-tags";
 import { scaleQuantity } from "@/lib/quantity";
 import { MotionButton } from "@/components/motion-button";
 import { PageTransition } from "@/components/page-transition";
@@ -540,9 +545,23 @@ export function RecipeDetailClient({
         </ol>
       </section>
 
-      {recipe.pairingSuggestion && (
-        <p className="mt-4 text-xs italic text-[#6B7370]">{recipe.pairingSuggestion}</p>
-      )}
+      {(() => {
+        const completeItems = grouped[COMPLETE_THE_MEAL_COMPONENT];
+        if (!completeItems?.length && !recipe.pairingSuggestion) return null;
+        return (
+          <div className="mt-6 rounded-2xl bg-[#EDF3EF] p-4">
+            <h2 className="text-sm font-semibold text-[#101010]">Complete the Meal</h2>
+            {completeItems?.length ? (
+              <p className="mt-1 text-sm text-[#101010]">
+                {completeItems.map((i) => i.item).join(", ")}
+              </p>
+            ) : null}
+            {recipe.pairingSuggestion && (
+              <p className="mt-1 text-xs italic text-[#6B7370]">{recipe.pairingSuggestion}</p>
+            )}
+          </div>
+        );
+      })()}
 
       {(saveError || cookError) && (
         <p className="fixed inset-x-0 bottom-20 mx-auto w-fit rounded-lg bg-[#101010] px-3 py-2 text-xs text-white shadow-sm">

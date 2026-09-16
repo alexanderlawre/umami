@@ -251,6 +251,15 @@
         "item": "frites or mashed potatoes",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "simple green salad with vinaigrette",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -3103,6 +3112,24 @@
         "item": "roasted vegetables or salad",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "500",
+        "unit": "g",
+        "item": "green beans",
+        "prepNote": "sautéed with butter",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 11,
+        "quantity": "1",
+        "unit": null,
+        "item": "crusty baguette",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -3153,7 +3180,8 @@
     "dietTags": [],
     "allergenTags": [
       "Milk"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with a chilled white Burgundy."
   },
   {
     "slug": "oeufs-en-cocotte",

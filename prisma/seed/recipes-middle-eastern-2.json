@@ -296,6 +296,24 @@
         "item": "garlic sauce (toum)",
         "prepNote": null,
         "optional": true
+      },
+      {
+        "component": "To complete the meal",
+        "order": 12,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "fattoush salad",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 13,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "pickled turnips",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -348,7 +366,8 @@
     "allergenTags": [
       "Milk",
       "Wheat/gluten"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with a glass of ayran or a crisp white wine."
   },
   {
     "slug": "muhammara",
@@ -898,6 +917,24 @@
         "item": "tahini sauce",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 14,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "Lebanese rice pilaf with vermicelli",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 15,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "grilled tomatoes and peppers",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -956,7 +993,8 @@
     "allergenTags": [
       "Wheat/gluten",
       "Sesame"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with a glass of ayran or a light red wine."
   },
   {
     "slug": "mansaf-lamb-yogurt",

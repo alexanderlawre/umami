@@ -293,6 +293,7 @@
     "title": "Frango Piri-Piri",
     "shortDescription": "Fiery Portuguese piri-piri chicken with lemon and garlic",
     "note": "Marinate the chicken for at least 4 hours, or overnight for maximum flavor.",
+    "pairingSuggestion": "Pairs well with a chilled Vinho Verde or a cold beer.",
     "introCopy": "Born from Portugal's colonial ties to Africa, piri-piri chicken is an explosion of heat, citrus, and garlic. The marinade penetrates deeply into the chicken, which is then grilled or roasted until the skin is crispy and charred. This is Portuguese barbecue at its finest.",
     "servings": 4,
     "prepMinutes": 20,
@@ -404,6 +405,24 @@
         "unit": null,
         "item": "lemon",
         "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 12,
+        "quantity": "500",
+        "unit": "g",
+        "item": "Portuguese-style fries",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 13,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "simple side salad",
+        "prepNote": null,
         "optional": false
       }
     ],

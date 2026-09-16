@@ -5,6 +5,13 @@
 // styling for `dietTags`, and small formatters for the dashboard/cook-later
 // card chip row.
 
+// Reserved Ingredient.component value: ingredients tagged with this exact
+// string are additional items that complete the meal (sides, garnishes,
+// drinks) rather than the core dish — the recipe detail page pulls these
+// into a highlighted "Complete the Meal" callout at the bottom of the
+// page, in addition to their normal place in the ingredient list.
+export const COMPLETE_THE_MEAL_COMPONENT = "To complete the meal";
+
 export const ATTRIBUTE_LABELS: Record<string, string> = {
   HIGH_PROTEIN: "High protein",
   MAKE_AHEAD: "Meal prep",

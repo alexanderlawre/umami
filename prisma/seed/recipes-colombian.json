@@ -262,6 +262,7 @@
     "title": "Lechona Tolimense",
     "shortDescription": "Festive roasted pork stuffed with rice, peas, and spices",
     "note": "Colombia's ultimate celebration roast—crispy skin and savory filling.",
+    "pairingSuggestion": "Pairs well with a cold Colombian beer (Club Colombia or Águila).",
     "introCopy": "Lechona is a spectacular whole roasted pig stuffed with seasoned rice, peas, and pork, traditional to the Tolima region. It's the centerpiece of festivals and family celebrations, with crackling golden skin and a rich, spiced filling. Served with arepas and ají, it's pure Colombian joy.",
     "servings": 12,
     "prepMinutes": 60,
@@ -289,7 +290,8 @@
       { "component": "Pork", "order": 11, "quantity": "1", "unit": null, "item": "whole pork belly", "prepNote": "5–6 lb, skin on", "optional": false },
       { "component": "Pork", "order": 12, "quantity": "2", "unit": "tbsp", "item": "salt", "prepNote": null, "optional": false },
       { "component": "Pork", "order": 13, "quantity": "1", "unit": "tbsp", "item": "vegetable oil", "prepNote": null, "optional": false },
-      { "component": "For serving", "order": 14, "quantity": "12", "unit": null, "item": "arepas", "prepNote": null, "optional": false }
+      { "component": "For serving", "order": 14, "quantity": "12", "unit": null, "item": "arepas", "prepNote": null, "optional": false },
+      { "component": "To complete the meal", "order": 15, "quantity": "1", "unit": "cup", "item": "Colombian ají picante (tomato-cilantro hot sauce)", "prepNote": null, "optional": false }
     ],
     "steps": [
       { "order": 1, "text": "Make the filling: In a large pan, cook diced pork shoulder until browned and tender, about 20 minutes. Add onion and garlic, sauté until soft.", "durationMinutes": 25 },

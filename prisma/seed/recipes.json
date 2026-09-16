@@ -721,7 +721,7 @@
     "title": "Carne Asada",
     "shortDescription": "Skirt steak, lime, garlic, cilantro, orange",
     "note": "Slice against the grain — with skirt steak this matters more than almost anything else you do to it.",
-    "pairingSuggestion": "Pairs well with a cold Mexican lager or a glass of red wine.",
+    "pairingSuggestion": "Serve taco-style in warm tortillas with radish, salsa, and lime — pairs well with a cold Mexican lager or a glass of red wine.",
     "introCopy": "A weekend grill dish. Marinate in the morning, cook it fast and hot in the evening.",
     "servings": 4,
     "prepMinutes": 15,
@@ -795,6 +795,51 @@
         "item": "olive oil",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 7,
+        "quantity": "12",
+        "unit": null,
+        "item": "corn tortillas",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "2",
+        "unit": null,
+        "item": "extra limes",
+        "prepNote": "cut into wedges",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "6",
+        "unit": null,
+        "item": "radishes",
+        "prepNote": "thinly sliced",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "salsa of choice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 11,
+        "quantity": "4",
+        "unit": null,
+        "item": "Mexican lagers",
+        "prepNote": null,
+        "optional": true
       }
     ],
     "steps": [
@@ -2463,6 +2508,33 @@
         "quantity": "4",
         "unit": null,
         "item": "skewers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 7,
+        "quantity": "4",
+        "unit": null,
+        "item": "pita or flatbreads",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "cucumber-yogurt sauce",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "tomato and onion salad",
         "prepNote": null,
         "optional": false
       }
@@ -7201,6 +7273,33 @@
         "item": "ginger",
         "prepNote": "grated",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 7,
+        "quantity": "4",
+        "unit": null,
+        "item": "naan breads",
+        "prepNote": "warmed",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "mint-yogurt chutney",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "red onion",
+        "prepNote": "thinly sliced with lemon, for kachumber salad",
+        "optional": false
       }
     ],
     "steps": [
@@ -8824,6 +8923,24 @@
         "item": "dry couscous",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "1",
+        "unit": "loaf",
+        "item": "crusty bread or khobz",
+        "prepNote": "for scooping",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 11,
+        "quantity": "1",
+        "unit": "pot",
+        "item": "fresh mint tea",
+        "prepNote": null,
+        "optional": true
       }
     ],
     "steps": [
@@ -8885,7 +9002,8 @@
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/moroccan-chicken-tagine.jpg",
-    "imageCredit": "This Photo was taken by Timothy A. Gonsalves. Feel free to use my photos, but please mention me as the author. I would much appreciate if you send me an email tagooty@yahoo.com or write on my talk page, for my information. Please contact me before commercial use. Please do not upload an edited image here without consulting me. I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract. / Wikimedia Commons (CC BY-SA 4.0)"
+    "imageCredit": "This Photo was taken by Timothy A. Gonsalves. Feel free to use my photos, but please mention me as the author. I would much appreciate if you send me an email tagooty@yahoo.com or write on my talk page, for my information. Please contact me before commercial use. Please do not upload an edited image here without consulting me. I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract. / Wikimedia Commons (CC BY-SA 4.0)",
+    "pairingSuggestion": "Pairs well with fresh mint tea or a glass of light Moroccan rosé."
   },
   {
     "slug": "tabbouleh-salad",
@@ -11696,7 +11814,7 @@
     "title": "Korean Fried Chicken",
     "shortDescription": "Double-fried chicken wings, gochujang glaze, sesame",
     "note": "Fry twice — the first fry cooks the meat, the second makes the skin shatter-crisp.",
-    "pairingSuggestion": "Pairs well with a cold beer \u2014 the classic chimaek pairing.",
+    "pairingSuggestion": "Pairs well with a cold beer — the classic chimaek pairing.",
     "introCopy": "Double-frying is the whole trick here: it renders out extra fat so the skin stays crisp even under a sticky glaze.",
     "servings": 4,
     "prepMinutes": 20,
@@ -11779,6 +11897,33 @@
         "item": "neutral oil",
         "prepNote": "for frying",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "pickled daikon radish (chikin-mu)",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "2",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "thinly sliced, for garnish",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "4",
+        "unit": null,
+        "item": "cold beers",
+        "prepNote": null,
+        "optional": true
       }
     ],
     "steps": [
@@ -12236,6 +12381,33 @@
         "item": "ssamjang",
         "prepNote": null,
         "optional": true
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "3",
+        "unit": "cups",
+        "item": "steamed short-grain rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "kimchi",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "2",
+        "unit": null,
+        "item": "scallions",
+        "prepNote": "sliced, for garnish",
+        "optional": false
       }
     ],
     "steps": [
@@ -12283,7 +12455,8 @@
       "Soy"
     ],
     "imageUrl": "/recipe-photos/bulgogi-lettuce-wraps.jpg",
-    "imageCredit": "KOREA.NET / Wikimedia Commons (CC BY-SA 2.0)"
+    "imageCredit": "KOREA.NET / Wikimedia Commons (CC BY-SA 2.0)",
+    "pairingSuggestion": "Pairs well with a cold Korean lager or a glass of makgeolli."
   },
   {
     "slug": "korean-tofu-soup",
@@ -13748,6 +13921,24 @@
         "item": "tzatziki",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "Greek salad (tomato, cucumber, olives, feta)",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "1",
+        "unit": "lb",
+        "item": "lemon potatoes",
+        "prepNote": null,
+        "optional": true
       }
     ],
     "steps": [
@@ -14689,6 +14880,33 @@
         "item": "tomatoes",
         "prepNote": "sliced, for serving",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "4",
+        "unit": null,
+        "item": "agege bread or flatbread slices",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "2",
+        "unit": "tbsp",
+        "item": "extra yaji (suya spice)",
+        "prepNote": "for dusting",
+        "optional": true
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "4",
+        "unit": null,
+        "item": "cold Nigerian lagers",
+        "prepNote": null,
+        "optional": true
       }
     ],
     "steps": [
@@ -14739,7 +14957,8 @@
       "Peanuts"
     ],
     "imageUrl": "/recipe-photos/suya-skewers.jpg",
-    "imageCredit": "FischerFotos / Wikimedia Commons (CC BY-SA 4.0)"
+    "imageCredit": "FischerFotos / Wikimedia Commons (CC BY-SA 4.0)",
+    "pairingSuggestion": "Pairs well with a cold Nigerian lager (Star or Gulder) and extra yaji spice on the side."
   },
   {
     "slug": "feijoada",
@@ -14904,7 +15123,7 @@
     "title": "Brazilian Picanha",
     "shortDescription": "Beef sirloin cap, coarse salt, garlic, chimichurri",
     "note": "Leave the fat cap on and score it lightly — it's what bastes the meat and crisps up over the fire.",
-    "pairingSuggestion": "Pairs well with a cold beer or a caipirinha.",
+    "pairingSuggestion": "Pairs well with a cold beer or a caipirinha — round out the spread with extra grilled cuts for a full churrasco.",
     "introCopy": "A churrasco classic: beef sirloin cap seasoned with nothing but coarse salt and grilled hot for a deeply crusted exterior.",
     "servings": 4,
     "prepMinutes": 10,
@@ -14944,7 +15163,7 @@
         "optional": false
       },
       {
-        "component": "For the sides",
+        "component": "To complete the meal",
         "order": 3,
         "quantity": "1",
         "unit": "cup",
@@ -14953,7 +15172,7 @@
         "optional": false
       },
       {
-        "component": "For the sides",
+        "component": "To complete the meal",
         "order": 4,
         "quantity": "3",
         "unit": "cups",
@@ -14962,7 +15181,7 @@
         "optional": false
       },
       {
-        "component": "For the sides",
+        "component": "To complete the meal",
         "order": 5,
         "quantity": "2",
         "unit": "cups",
@@ -14971,7 +15190,7 @@
         "optional": false
       },
       {
-        "component": "For the sides",
+        "component": "To complete the meal",
         "order": 6,
         "quantity": "1",
         "unit": "cup",
@@ -14980,7 +15199,7 @@
         "optional": false
       },
       {
-        "component": null,
+        "component": "To complete the meal",
         "order": 7,
         "quantity": "1/2",
         "unit": "cup",
@@ -15394,6 +15613,33 @@
         "item": "flatbreads",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "bulgur or rice pilaf",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "grilled tomatoes and peppers",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "garlicky yogurt sauce (cacık)",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -15442,7 +15688,8 @@
       "Wheat/gluten"
     ],
     "imageUrl": "/recipe-photos/turkish-lamb-kebabs.jpg",
-    "imageCredit": "E4024 / Wikimedia Commons (CC BY-SA 4.0)"
+    "imageCredit": "E4024 / Wikimedia Commons (CC BY-SA 4.0)",
+    "pairingSuggestion": "Pairs well with a glass of ayran or a light Turkish red."
   },
   {
     "slug": "turkish-lentil-soup",
@@ -15927,6 +16174,33 @@
         "item": "sambal or chili paste",
         "prepNote": null,
         "optional": true
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "12",
+        "unit": null,
+        "item": "bamboo skewers",
+        "prepNote": "soaked in water",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "4",
+        "unit": null,
+        "item": "rice cakes (lontong) or steamed rice",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "cucumber and shallot pickle (acar)",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -15971,7 +16245,8 @@
       "Soy"
     ],
     "imageUrl": "/recipe-photos/chicken-satay.jpg",
-    "imageCredit": "Andy Li / Wikimedia Commons (CC0)"
+    "imageCredit": "Andy Li / Wikimedia Commons (CC0)",
+    "pairingSuggestion": "Pairs well with a cold beer or iced Thai tea."
   },
   {
     "slug": "nasi-goreng",
@@ -16209,6 +16484,33 @@
         "item": "steamed white rice",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "fried shallots",
+        "prepNote": "for garnish",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "cucumber and pineapple acar (pickle)",
+        "prepNote": null,
+        "optional": true
+      },
+      {
+        "component": "To complete the meal",
+        "order": 11,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "prawn crackers (kerupuk)",
+        "prepNote": null,
+        "optional": true
       }
     ],
     "steps": [
@@ -16263,7 +16565,8 @@
     ],
     "allergenTags": [],
     "imageUrl": "/recipe-photos/beef-rendang.jpg",
-    "imageCredit": "Miansari66 / Wikimedia Commons (CC0)"
+    "imageCredit": "Miansari66 / Wikimedia Commons (CC0)",
+    "pairingSuggestion": "Pairs well with a cold beer — the richness of the rendang can handle it."
   },
   {
     "slug": "gado-gado",

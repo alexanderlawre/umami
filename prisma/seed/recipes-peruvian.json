@@ -1277,6 +1277,15 @@
         "item": "extra marinade",
         "prepNote": "reserved and boiled for safety",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 13,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "ají verde (Peruvian green sauce)",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -1342,7 +1351,8 @@
     ],
     "allergenTags": [
       "Sulphites"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with a cold Peruvian lager (Cristal or Pilsen)."
   },
   {
     "slug": "arroz-con-pollo-peruano",
@@ -2469,6 +2479,15 @@
         "item": "thick-cut fries",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 14,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "simple green salad",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -2533,7 +2552,8 @@
       "Soy",
       "Sulphites",
       "Celery"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with a cold Cristal beer or a glass of Inca Kola."
   },
   {
     "slug": "tamales-peruanos",

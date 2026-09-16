@@ -117,11 +117,20 @@
         "optional": false
       },
       {
-        "component": "For serving",
+        "component": "To complete the meal",
         "order": 11,
         "quantity": "1",
         "unit": "loaf",
         "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 12,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "ensalada criolla (tomato, onion, red wine vinegar salad)",
         "prepNote": null,
         "optional": false
       }
@@ -379,11 +388,31 @@
       {
         "title": "Make your own empanada dough",
         "ingredients": [
-          { "quantity": "500", "unit": "g", "item": "all-purpose flour" },
-          { "quantity": "1", "unit": "teaspoon", "item": "salt" },
-          { "quantity": "100", "unit": "g", "item": "cold butter or lard, cubed" },
-          { "quantity": "1", "unit": null, "item": "egg" },
-          { "quantity": "150", "unit": "ml", "item": "warm water" }
+          {
+            "quantity": "500",
+            "unit": "g",
+            "item": "all-purpose flour"
+          },
+          {
+            "quantity": "1",
+            "unit": "teaspoon",
+            "item": "salt"
+          },
+          {
+            "quantity": "100",
+            "unit": "g",
+            "item": "cold butter or lard, cubed"
+          },
+          {
+            "quantity": "1",
+            "unit": null,
+            "item": "egg"
+          },
+          {
+            "quantity": "150",
+            "unit": "ml",
+            "item": "warm water"
+          }
         ],
         "steps": [
           "Whisk the flour and salt together in a large bowl. Cut in the cold butter with your fingers or a pastry cutter until the mixture resembles coarse crumbs.",

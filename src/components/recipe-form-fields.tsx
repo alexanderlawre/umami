@@ -500,6 +500,11 @@ export function RecipeFormFields({
             </div>
           ))}
         </div>
+        <p className="mt-1 text-[10px] text-[#6B7370]">
+          Tip: use &ldquo;To complete the meal&rdquo; as the component for sides/drinks that
+          round out the dish — they get their own highlighted callout at the bottom of the
+          recipe page.
+        </p>
       </div>
 
       {/* Steps */}

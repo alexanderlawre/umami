@@ -519,6 +519,24 @@
         "item": "white rice",
         "prepNote": "cooked",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 22,
+        "quantity": "1",
+        "unit": "cup",
+        "item": "black beans",
+        "prepNote": "cooked",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 23,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "maduros (sweet fried plantains)",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -597,7 +615,8 @@
     "allergenTags": [
       "Sulphites",
       "Nightshades"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with a Cuban mojito or a cold beer."
   },
   {
     "slug": "puerto-rican-mofongo",
@@ -1135,6 +1154,24 @@
         "item": "arroz con gandules",
         "prepNote": null,
         "optional": true
+      },
+      {
+        "component": "To complete the meal",
+        "order": 11,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "tostones (fried green plantains)",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 12,
+        "quantity": "1/2",
+        "unit": "cup",
+        "item": "pique criollo (Puerto Rican hot sauce)",
+        "prepNote": null,
+        "optional": true
       }
     ],
     "steps": [
@@ -1201,7 +1238,8 @@
       "Gluten-free",
       "Dairy-free"
     ],
-    "allergenTags": []
+    "allergenTags": [],
+    "pairingSuggestion": "Pairs well with a cold Medalla lager."
   },
   {
     "slug": "tostones",
@@ -1544,6 +1582,24 @@
         "item": "rice and peas",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 17,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "fried ripe plantain",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 18,
+        "quantity": "4",
+        "unit": null,
+        "item": "roti or hard dough bread",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -1620,7 +1676,8 @@
     ],
     "allergenTags": [
       "Nightshades"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with a cold Red Stripe."
   },
   {
     "slug": "ackee-and-saltfish",

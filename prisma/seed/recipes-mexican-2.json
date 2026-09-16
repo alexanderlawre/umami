@@ -269,6 +269,15 @@
         "item": "sesame seeds",
         "prepNote": "toasted",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 28,
+        "quantity": "12",
+        "unit": null,
+        "item": "warm corn tortillas",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -773,6 +782,15 @@
         "item": "habanero chiles",
         "prepNote": "sliced",
         "optional": true
+      },
+      {
+        "component": "To complete the meal",
+        "order": 19,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "refried black beans",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -845,7 +863,8 @@
     ],
     "allergenTags": [
       "Corn"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with an ice-cold Mexican lager."
   },
   {
     "slug": "tamales-rojos-pork",
@@ -1363,7 +1382,8 @@
     ],
     "allergenTags": [
       "Corn"
-    ]
+    ],
+    "pairingSuggestion": "Serve the consommé alongside for dipping — pairs well with an ice-cold Mexican beer."
   },
   {
     "slug": "sopes-beans-chorizo",

@@ -1375,7 +1375,7 @@
     "title": "Paella Valenciana",
     "shortDescription": "The original saffron rice dish from Valencia with chicken, rabbit, green beans, and lima beans cooked in a wide shallow pan.",
     "note": "Resist stirring the rice once the liquid is added — this allows the prized crispy socarrat to form on the bottom.",
-    "pairingSuggestion": "Pairs well with a chilled Spanish rosado or a crisp Albari\u00f1o.",
+    "pairingSuggestion": "Pairs well with a chilled Spanish rosado or a crisp Albariño.",
     "introCopy": "Paella Valenciana is the authentic ancestor of all paellas, born in the rice fields outside Valencia. Traditionalists insist on chicken, rabbit, and local beans rather than seafood, cooked over an open flame in a wide paellera.",
     "servings": 6,
     "prepMinutes": 25,
@@ -6357,6 +6357,24 @@
         "item": "white wine",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "simple green salad",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "1",
+        "unit": null,
+        "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -6396,7 +6414,8 @@
       "Dairy-free",
       "High-protein"
     ],
-    "allergenTags": []
+    "allergenTags": [],
+    "pairingSuggestion": "Pairs well with a Ribera del Duero red wine."
   },
   {
     "slug": "empanada-gallega",
@@ -7803,6 +7822,15 @@
         "item": "french fries",
         "prepNote": null,
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 10,
+        "quantity": "1",
+        "unit": null,
+        "item": "crusty bread",
+        "prepNote": "for the sauce",
+        "optional": false
       }
     ],
     "steps": [
@@ -7860,7 +7888,8 @@
       "Dairy-free",
       "High-protein"
     ],
-    "allergenTags": []
+    "allergenTags": [],
+    "pairingSuggestion": "Pairs well with a glass of Rioja."
   },
   {
     "slug": "pollo-al-ajillo",

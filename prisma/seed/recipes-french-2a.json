@@ -546,6 +546,15 @@
         "item": "waxy potatoes",
         "prepNote": "for sautéing",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 9,
+        "quantity": "4",
+        "unit": "cups",
+        "item": "frisée salad with mustard vinaigrette",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -606,7 +615,8 @@
       "Gluten-free",
       "Dairy-free"
     ],
-    "allergenTags": []
+    "allergenTags": [],
+    "pairingSuggestion": "Pairs well with a glass of red Bordeaux or Cahors."
   },
   {
     "slug": "choucroute-garnie",

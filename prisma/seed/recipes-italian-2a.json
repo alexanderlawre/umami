@@ -167,6 +167,24 @@
         "item": "lemon",
         "prepNote": "zest only",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 17,
+        "quantity": "500",
+        "unit": "g",
+        "item": "saffron risotto alla Milanese",
+        "prepNote": null,
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 18,
+        "quantity": "1",
+        "unit": null,
+        "item": "crusty bread",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -247,7 +265,8 @@
       "Wheat/gluten",
       "Celery",
       "Sulphites"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with a glass of Barolo or Barbaresco."
   },
   {
     "slug": "carbonara-romana",
@@ -2796,6 +2815,24 @@
         "item": "arugula",
         "prepNote": null,
         "optional": true
+      },
+      {
+        "component": "To complete the meal",
+        "order": 7,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "cannellini beans",
+        "prepNote": "dressed with olive oil (fagioli all'uccelletto)",
+        "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 8,
+        "quantity": "500",
+        "unit": "g",
+        "item": "roasted potatoes",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [

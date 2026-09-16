@@ -168,6 +168,15 @@
         "item": "couscous",
         "prepNote": "cooked",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 17,
+        "quantity": "1",
+        "unit": null,
+        "item": "warm khobz (Moroccan bread)",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -244,7 +253,8 @@
       "Tree nuts",
       "Wheat/gluten",
       "Sulphites"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with fresh mint tea or a glass of light red wine."
   },
   {
     "slug": "classic-moroccan-chicken-tagine-preserved-lemons",
@@ -378,6 +388,15 @@
         "item": "couscous",
         "prepNote": "cooked",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 13,
+        "quantity": "1",
+        "unit": null,
+        "item": "warm khobz (Moroccan bread)",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -436,7 +455,8 @@
     ],
     "allergenTags": [
       "Sulphites"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with fresh mint tea or a crisp white wine."
   },
   {
     "slug": "moroccan-vegetable-couscous",
@@ -1554,6 +1574,15 @@
         "item": "fresh coriander",
         "prepNote": "chopped",
         "optional": false
+      },
+      {
+        "component": "To complete the meal",
+        "order": 11,
+        "quantity": "2",
+        "unit": "cups",
+        "item": "couscous salad",
+        "prepNote": null,
+        "optional": false
       }
     ],
     "steps": [
@@ -1615,7 +1644,8 @@
     ],
     "allergenTags": [
       "Milk"
-    ]
+    ],
+    "pairingSuggestion": "Pairs well with a cold beer or a glass of rosé."
   },
   {
     "slug": "chermoula-baked-fish",
