@@ -88,6 +88,7 @@ export default async function CookLaterPage() {
       ingredientItems: s.recipe.ingredients.map((ing) => ing.item),
       imageUrl: s.recipe.imageUrl,
       imageCredit: s.recipe.imageCredit,
+      savedAt: s.savedAt.toISOString(),
     }));
 
   return (
