@@ -7,6 +7,7 @@ import { ChipGrid, TagInput, DietCommitmentSlider } from "../../onboarding/onboa
 import { FOOD_GROUP_CLUSTERS } from "@/lib/food-group-screens";
 import { PageTransition } from "@/components/page-transition";
 import { MotionButton } from "@/components/motion-button";
+import { HowItWorksModal } from "@/components/how-it-works-modal";
 
 const SUGGESTED_CUISINE_COUNT = 5;
 
@@ -62,6 +63,7 @@ export function PersonalizationForm({
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showHowItWorks, setShowHowItWorks] = useState(false);
 
   const foodGroupByName = useMemo(() => {
     const map = new Map<string, FoodGroup>();
@@ -168,6 +170,21 @@ export function PersonalizationForm({
         </p>
 
         <div className="mt-8 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
+          <h3 className="text-sm font-semibold text-[#101010]">How Umami learns you</h3>
+          <p className="mt-1 text-xs text-[#6B7370]">
+            Every rating, save, and skip below feeds your taste profile — recommendations sharpen
+            the more you use Umami.
+          </p>
+          <button
+            type="button"
+            onClick={() => setShowHowItWorks(true)}
+            className="mt-2 text-xs font-medium text-[#2C5A87] underline"
+          >
+            See how it works
+          </button>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-[#E8E6E0] bg-white p-5 shadow-soft">
           <h3 className="text-sm font-semibold text-[#101010]">Any allergies?</h3>
           <p className="mt-1 text-xs text-[#6B7370]">
             Pick as many as apply. This is the main safeguard that keeps unsafe recipes off your
@@ -341,6 +358,8 @@ export function PersonalizationForm({
           {saved && <span className="text-sm text-[#1B4332]">Saved!</span>}
         </div>
       </PageTransition>
+
+      <HowItWorksModal open={showHowItWorks} onClose={() => setShowHowItWorks(false)} />
     </main>
   );
 }

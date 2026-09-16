@@ -6,6 +6,7 @@ import { signOut } from "next-auth/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { getInitials } from "@/lib/avatar";
 import { MotionButton } from "@/components/motion-button";
+import { HowItWorksModal } from "@/components/how-it-works-modal";
 
 type MenuLink = { href: string; label: string };
 
@@ -25,6 +26,7 @@ export function ProfileMenu({
   isAdmin?: boolean;
 }) {
   const [open, setOpen] = useState(false);
+  const [showHowItWorks, setShowHowItWorks] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -82,6 +84,15 @@ export function ProfileMenu({
                 {link.label}
               </Link>
             ))}
+            <button
+              onClick={() => {
+                setShowHowItWorks(true);
+                setOpen(false);
+              }}
+              className="block w-full px-4 py-2 text-left text-sm text-[#101010] transition hover:bg-[#EDF3EF]"
+            >
+              How Umami works
+            </button>
             <div className="my-1.5 border-t border-[#E8E6E0]" />
             <button
               onClick={() => signOut({ callbackUrl: "/login" })}
@@ -92,6 +103,8 @@ export function ProfileMenu({
           </motion.div>
         )}
       </AnimatePresence>
+
+      <HowItWorksModal open={showHowItWorks} onClose={() => setShowHowItWorks(false)} />
     </div>
   );
 }
