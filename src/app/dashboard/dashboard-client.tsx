@@ -410,7 +410,7 @@ function FilterTagButton({
   // Food-group and attribute chips share the same neutral active style —
   // unlike the per-card diet emblems (dietEmblemClass), these don't need
   // per-tag coloring since there's no fixed, small palette to draw from
-  // (12 food-group clusters vs. a handful of diets).
+  // (11 food-group clusters vs. a handful of diets).
   const activeClass = "bg-[#101010] text-white";
   return (
     // Each chip gets its own single-item liquid group. The blob is

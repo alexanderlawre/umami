@@ -444,7 +444,7 @@ export function RecipeDetailClient({
               {[...items]
                 .sort((a, b) => a.order - b.order)
                 .map((ing) => (
-                  <li key={ing.id} className="text-sm text-[#101010]">
+                  <li key={ing.id} className="text-sm font-semibold text-[#101010]">
                     {scaleQuantity(ing.quantity, factor)} {ing.unit ?? ""} {ing.item}
                     {ing.optional && <span className="text-[#6B7370]"> (optional)</span>}
                     {ing.prepNote && (
@@ -494,7 +494,7 @@ export function RecipeDetailClient({
                         <p className="text-sm font-semibold text-[#101010]">{sub.title}</p>
                         <ul className="mt-2 space-y-1">
                           {sub.ingredients.map((ing, i) => (
-                            <li key={i} className="text-sm text-[#101010]">
+                            <li key={i} className="text-sm font-semibold text-[#101010]">
                               {ing.quantity} {ing.unit ?? ""} {ing.item}
                             </li>
                           ))}

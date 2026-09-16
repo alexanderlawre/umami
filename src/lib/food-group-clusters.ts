@@ -14,8 +14,8 @@ export const FOOD_GROUP_NAME_TO_CLUSTER: Map<string, string> = new Map(
 // .weight, 0-100) before that recipe counts as "more of" that food group's
 // cluster for dashboard filter-chip purposes. Measured against the full seed
 // catalog (2207 weight rows, median 25, p75 45): a threshold of 50 starves
-// several clusters (e.g. "Fruit" -> 9 recipes, "Spice & heat" -> 5), while 30
-// keeps every one of the 12 clusters usable (22-220 recipes each).
+// several clusters (e.g. "Fruit" -> 9 recipes), while 30 keeps every one of
+// the 11 clusters usable (22-220 recipes each).
 export const FOOD_GROUP_PROMINENCE_THRESHOLD = 30;
 
 /**

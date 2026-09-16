@@ -1,9 +1,14 @@
-// Onboarding shows one consolidated "personalize" screen with ~12 broad
+// Onboarding shows one consolidated "personalize" screen with ~11 broad
 // sliders instead of the full 27-row FoodGroup catalog spread across 5
 // screens — narrower/niche groups (e.g. "Nightshades", "Alliums") are
 // clustered under a broader, plain-language label so a new user isn't
 // stalled by unfamiliar categories. Moving a cluster's slider writes the
 // same declared value to every underlying FoodGroup id in that cluster.
+//
+// No "Spice & heat" cluster here (dropped, previously covered "Fresh
+// herbs"/"Warm spices"/"Chilli & heat") — it was redundant with the
+// personalization form's own dedicated "How much heat can you handle?"
+// spice-ceiling question, which already captures this preference.
 //
 // This clustering is a presentation-layer convenience only — the underlying
 // FoodGroup catalog (used for recipe profiling and admin aggregate views)
@@ -29,6 +34,5 @@ export const FOOD_GROUP_CLUSTERS: { title: string; groups: string[] }[] = [
   { title: "Fish & shellfish", groups: ["Oily fish", "White fish", "Shellfish"] },
   { title: "Eggs & dairy", groups: ["Eggs", "Dairy", "Fermented foods"] },
   { title: "Nuts, seeds & soy", groups: ["Nuts & seeds", "Soy & tofu"] },
-  { title: "Spice & heat", groups: ["Fresh herbs", "Warm spices", "Chilli & heat"] },
   { title: "Sweets & fried indulgence", groups: ["Added sugar", "Fried & rich"] },
 ];
